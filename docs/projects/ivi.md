@@ -6,6 +6,7 @@
 
 - `portfolio-shell/dist/data.js`: 분류 `Automotive UX Research`, 요약 “운전자의 주행 맥락을 고려한 차량 인터페이스 연구.”
 - `/work/ivi`는 제목과 준비 안내만 있는 상태다.
+- 메인 카드 표지는 사용자 제공 `C:/Users/SBS/Desktop/김성원/Car Screen UI Mockup.png`를 사용한다(2026-10-02). 원본은 기존 위치에 보존하고, 웹용 1920px·960px JPG를 `portfolio-shell/dist/assets/projects/ivi-*.jpg`로 만들었다. 목업에 표시된 UI를 연구 결과로 해석하지 않는다.
 
 ## 프로젝트 방향과 예외
 

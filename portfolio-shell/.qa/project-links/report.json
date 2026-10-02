@@ -1,0 +1,55 @@
+{
+  "date": "2026-09-29T05:29:19.177Z",
+  "checks": [
+    {
+      "width": 1440,
+      "slug": "cafekok",
+      "navigation": "pass",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "slug": "offer",
+      "navigation": "pass",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "slug": "cafekok",
+      "navigation": "pass",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "slug": "offer",
+      "navigation": "pass",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "slug": "cafekok",
+      "navigation": "pass",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "slug": "offer",
+      "navigation": "pass",
+      "overflow": false
+    },
+    {
+      "width": 375,
+      "slug": "cafekok",
+      "navigation": "pass",
+      "overflow": false
+    },
+    {
+      "width": 375,
+      "slug": "offer",
+      "navigation": "pass",
+      "overflow": false
+    }
+  ],
+  "keyboardSkip": "pass",
+  "redirects": "pass"
+}

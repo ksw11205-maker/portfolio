@@ -1,0 +1,6 @@
+/* Brand identity and current promotions; shared follow state remains unchanged. */
+offerReady.then(({brands,promotions})=>{
+const U=OFFER,b=brands.find(x=>x.id===new URLSearchParams(location.search).get('id'));if(!b){document.getElementById('main').innerHTML='<div class="container invalid-state"><h1>브랜드를 찾을 수 없습니다.</h1><p>링크를 확인하거나 다른 브랜드를 둘러보세요.</p><a class="button button-primary" href="favorites.html">브랜드 둘러보기 '+U.icon('arrow')+'</a></div>';return;}
+const current=promotions.filter(p=>p.brandId===b.id&&U.active(p));document.title=b.name+' — OFFER';
+document.getElementById('main').innerHTML='<div class="container page-content"><div class="brand-intro"><a class="text-link" href="favorites.html">Brands '+U.icon('arrow')+'</a><div class="brand-title">'+U.brandLogo(b)+'<h1>'+U.escape(b.name)+'</h1></div><div class="brand-description"><strong>'+U.escape(b.koreanName)+'</strong><p>'+U.escape(b.description)+'</p></div></div><div class="brand-overview">'+U.followButton(b)+'<p class="collection-count"><strong>'+current.length+'</strong>ACTIVE OFFERs</p></div><h2 class="brand-section-label">CURRENT OFFERs</h2>'+'<div class="brand-offers">'+(current.length?U.grid(current):U.empty('현재 진행 중인 OFFER가 없습니다.','브랜드를 팔로우하고 다음 혜택을 기다려보세요.'))+'</div></div>';
+});

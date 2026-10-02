@@ -1,0 +1,134 @@
+[
+  {
+    "id": "musinsa",
+    "name": "MUSINSA",
+    "koreanName": "무신사",
+    "category": "fashion",
+    "description": "취향을 발견하는 패션 스토어.",
+    "url": "https://www.musinsa.com",
+    "logo": "./assets/images/brands/musinsa.png",
+    "logoSource": "https://image.msscdn.net/display/images/2025/10/22/d9647c20f3cb47f8af1b7d4a360b936b.png",
+    "logoBackground": "#111111"
+  },
+  {
+    "id": "nike",
+    "name": "Nike",
+    "koreanName": "나이키",
+    "category": "fashion",
+    "description": "움직임을 위한 새로운 가능성.",
+    "url": "https://www.nike.com/kr",
+    "logo": "./assets/images/brands/nike.svg",
+    "logoSource": "https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/nike.svg",
+    "logoBackground": "#f1f1ef"
+  },
+  {
+    "id": "adidas",
+    "name": "adidas",
+    "koreanName": "아디다스",
+    "category": "fashion",
+    "description": "스포츠와 일상을 잇는 스타일.",
+    "url": "https://www.adidas.co.kr",
+    "logo": "./assets/images/brands/adidas.svg",
+    "logoSource": "https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/adidas.svg",
+    "logoBackground": "#eceeea"
+  },
+  {
+    "id": "new-balance",
+    "name": "New Balance",
+    "koreanName": "뉴발란스",
+    "category": "fashion",
+    "description": "매일의 균형을 위한 움직임.",
+    "url": "https://www.nbkorea.com",
+    "logo": "./assets/images/brands/new-balance.svg",
+    "logoSource": "https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/newbalance.svg",
+    "logoBackground": "#efefed"
+  },
+  {
+    "id": "29cm",
+    "name": "29CM",
+    "koreanName": "29CM",
+    "category": "fashion",
+    "description": "감도 깊은 취향 셀렉션.",
+    "url": "https://www.29cm.co.kr",
+    "logo": "./assets/images/brands/29cm.png",
+    "logoSource": "https://asset.29cm.co.kr/next-contents/2023/06/08/3f8131682d124d16b336774ba51c4a3e_20230608162823.png",
+    "logoBackground": "#f0efed"
+  },
+  {
+    "id": "oliveyoung",
+    "name": "OLIVE YOUNG",
+    "koreanName": "올리브영",
+    "category": "beauty",
+    "description": "나에게 맞는 뷰티를 발견하는 곳.",
+    "url": "https://www.oliveyoung.co.kr",
+    "logo": "./assets/images/brands/oliveyoung.png",
+    "logoSource": "https://static.oliveyoung.co.kr/pc-static-root/image/comm/h1_logo.png",
+    "logoBackground": "#f4f5ee"
+  },
+  {
+    "id": "innisfree",
+    "name": "innisfree",
+    "koreanName": "이니스프리",
+    "category": "beauty",
+    "description": "피부를 위한 자연스러운 루틴.",
+    "url": "https://www.innisfree.com",
+    "logo": "./assets/images/brands/innisfree.png",
+    "logoSource": "https://www.innisfree.com/kr/ko/dp",
+    "logoBackground": "#eef4e9"
+  },
+  {
+    "id": "tamburins",
+    "name": "TAMBURINS",
+    "koreanName": "탬버린즈",
+    "category": "beauty",
+    "description": "향으로 만나는 새로운 감각.",
+    "url": "https://www.tamburins.com",
+    "logo": "./assets/images/brands/tamburins.svg",
+    "logoSource": "https://www.tamburins.com/kr/",
+    "logoBackground": "#f4f0eb"
+  },
+  {
+    "id": "starbucks",
+    "name": "Starbucks",
+    "koreanName": "스타벅스",
+    "category": "food",
+    "description": "한 잔으로 즐기는 일상의 여유.",
+    "url": "https://www.starbucks.co.kr",
+    "logo": "./assets/images/brands/starbucks.png",
+    "logoSource": "https://image.istarbucks.co.kr/common/img/common/logo.png",
+    "logoBackground": "#edf3ef"
+  },
+  {
+    "id": "mega-coffee",
+    "name": "MEGA COFFEE",
+    "koreanName": "메가커피",
+    "category": "food",
+    "description": "매일 가볍게 즐기는 커피 한 잔.",
+    "url": "https://www.mega-mgccoffee.com",
+    "logo": "./assets/images/brands/mega-coffee.png",
+    "logoSource": "https://img.79plus.co.kr/megahp/common/img/new_logo_b.png",
+    "logoBackground": "#ffdf38"
+  },
+  {
+    "id": "ikea",
+    "name": "IKEA",
+    "koreanName": "이케아",
+    "category": "lifestyle",
+    "description": "더 나은 집, 더 나은 일상.",
+    "url": "https://www.ikea.com/kr/ko",
+    "logo": "./assets/images/brands/ikea.svg",
+    "logoSource": "https://www.ikea.com/global/assets/logos/brand/ikea.svg",
+    "logoBackground": "#f1f3f6"
+  },
+  {
+    "id": "muji",
+    "name": "MUJI",
+    "koreanName": "무인양품",
+    "category": "lifestyle",
+    "description": "기본에 충실한 생활의 도구.",
+    "url": "https://www.muji.com/kr",
+    "logo": "./assets/images/brands/muji.png",
+    "logoSource": "https://www.muji.com/img/logo_muji_b.png",
+    "logoBackground": "#f3eee8"
+  }
+]

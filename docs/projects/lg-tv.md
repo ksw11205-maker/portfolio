@@ -6,6 +6,7 @@
 
 - `portfolio-shell/dist/data.js`: 제목 `LG`, 분류 `Smart TV UX/UI`, 요약 “스마트 TV의 복잡한 탐색을 더 명확한 화면 구조로.”
 - 현재 경로는 `/work/lg`이며 제목과 준비 안내만 있다. 문서 이름 `lg-tv.md`는 웹 경로 변경을 뜻하지 않는다.
+- 메인 카드 표지는 사용자 제공 `C:/Users/SBS/Desktop/김성원/tv mockup.png`를 사용한다(2026-10-02). 원본은 기존 위치에 보존하고, 웹용 1920px·960px JPG를 `portfolio-shell/dist/assets/projects/lg-tv-*.jpg`로 만들었다. 표지 제공은 연구 내용이나 결과 검증을 뜻하지 않는다.
 
 ## 프로젝트 방향과 예외
 

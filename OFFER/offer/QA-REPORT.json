@@ -1,0 +1,30 @@
+{
+  "revision": "V3 brand logo refinement",
+  "passed": true,
+  "internalLinksChecked": 42,
+  "font": "Local Pretendard Variable",
+  "mobileHomeOrder": true,
+  "hiddenHomeCards": 0,
+  "touchTargets": "44px or greater",
+  "routes": 6,
+  "promotions": 18,
+  "responsiveChecks": 30,
+  "widths": [
+    360,
+    390,
+    768,
+    1024,
+    1440
+  ],
+  "consoleErrors": [],
+  "verified": [
+    "search, Korean aliases, category filter, sorting, URL state",
+    "save, remove, follow, unfollow and persistence after reload",
+    "empty states, malformed storage and invalid IDs",
+    "KST D-Day boundaries including expired and upcoming",
+    "image loading and responsive overflow",
+    "mobile menu and Escape keyboard behavior",
+    "official external CTA attributes"
+  ],
+  "webmcpNative": false
+}

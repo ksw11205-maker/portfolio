@@ -1,0 +1,262 @@
+{
+  "date": "2026-09-29T05:44:14.108Z",
+  "viewports": [
+    {
+      "width": 1440,
+      "sections": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10"
+      ],
+      "overflow": false,
+      "badAnchors": [],
+      "brokenImages": [],
+      "font": true,
+      "clipped": [],
+      "headings": [
+        {
+          "text": "사진만으로 알기 어려운좌석과 이용 조건",
+          "size": "36px"
+        },
+        {
+          "text": "후보마다 흩어진방문 조건을 다시 찾는 문제",
+          "size": "36px"
+        },
+        {
+          "text": "목적에 따라 달라지는정보의 우선순위",
+          "size": "36px"
+        },
+        {
+          "text": "취향은 남기고,이번 목적은 바꾸도록",
+          "size": "36px"
+        },
+        {
+          "text": "취향 입력부터후보 비교·저장까지",
+          "size": "36px"
+        },
+        {
+          "text": "사진과 정보를 구분하고,선택은 브라운으로",
+          "size": "36px"
+        },
+        {
+          "text": "입력한 기준을추천 이유로 보여주기",
+          "size": "36px"
+        },
+        {
+          "text": "추천 이유의 쓰임을확인할 세 가지 과제",
+          "size": "36px"
+        },
+        {
+          "text": "설계에서 남은 과제",
+          "size": "36px"
+        }
+      ],
+      "errors": [],
+      "anchors": true,
+      "keyboard": true,
+      "touch": false,
+      "reducedMotion": true,
+      "progress": true
+    },
+    {
+      "width": 390,
+      "sections": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10"
+      ],
+      "overflow": false,
+      "badAnchors": [],
+      "brokenImages": [],
+      "font": true,
+      "clipped": [],
+      "headings": [
+        {
+          "text": "사진만으로 알기 어려운좌석과 이용 조건",
+          "size": "26px"
+        },
+        {
+          "text": "후보마다 흩어진방문 조건을 다시 찾는 문제",
+          "size": "26px"
+        },
+        {
+          "text": "목적에 따라 달라지는정보의 우선순위",
+          "size": "26px"
+        },
+        {
+          "text": "취향은 남기고,이번 목적은 바꾸도록",
+          "size": "26px"
+        },
+        {
+          "text": "취향 입력부터후보 비교·저장까지",
+          "size": "26px"
+        },
+        {
+          "text": "사진과 정보를 구분하고,선택은 브라운으로",
+          "size": "26px"
+        },
+        {
+          "text": "입력한 기준을추천 이유로 보여주기",
+          "size": "26px"
+        },
+        {
+          "text": "추천 이유의 쓰임을확인할 세 가지 과제",
+          "size": "26px"
+        },
+        {
+          "text": "설계에서 남은 과제",
+          "size": "26px"
+        }
+      ],
+      "errors": [],
+      "anchors": true,
+      "keyboard": true,
+      "touch": true,
+      "reducedMotion": true,
+      "progress": true
+    },
+    {
+      "width": 768,
+      "sections": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10"
+      ],
+      "overflow": false,
+      "badAnchors": [],
+      "brokenImages": [],
+      "font": true,
+      "clipped": [],
+      "headings": [
+        {
+          "text": "사진만으로 알기 어려운좌석과 이용 조건",
+          "size": "30px"
+        },
+        {
+          "text": "후보마다 흩어진방문 조건을 다시 찾는 문제",
+          "size": "30px"
+        },
+        {
+          "text": "목적에 따라 달라지는정보의 우선순위",
+          "size": "30px"
+        },
+        {
+          "text": "취향은 남기고,이번 목적은 바꾸도록",
+          "size": "30px"
+        },
+        {
+          "text": "취향 입력부터후보 비교·저장까지",
+          "size": "30px"
+        },
+        {
+          "text": "사진과 정보를 구분하고,선택은 브라운으로",
+          "size": "30px"
+        },
+        {
+          "text": "입력한 기준을추천 이유로 보여주기",
+          "size": "30px"
+        },
+        {
+          "text": "추천 이유의 쓰임을확인할 세 가지 과제",
+          "size": "30px"
+        },
+        {
+          "text": "설계에서 남은 과제",
+          "size": "30px"
+        }
+      ],
+      "errors": [],
+      "anchors": true,
+      "keyboard": true,
+      "touch": false,
+      "reducedMotion": true,
+      "progress": true
+    },
+    {
+      "width": 375,
+      "sections": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10"
+      ],
+      "overflow": false,
+      "badAnchors": [],
+      "brokenImages": [],
+      "font": true,
+      "clipped": [],
+      "headings": [
+        {
+          "text": "사진만으로 알기 어려운좌석과 이용 조건",
+          "size": "26px"
+        },
+        {
+          "text": "후보마다 흩어진방문 조건을 다시 찾는 문제",
+          "size": "26px"
+        },
+        {
+          "text": "목적에 따라 달라지는정보의 우선순위",
+          "size": "26px"
+        },
+        {
+          "text": "취향은 남기고,이번 목적은 바꾸도록",
+          "size": "26px"
+        },
+        {
+          "text": "취향 입력부터후보 비교·저장까지",
+          "size": "26px"
+        },
+        {
+          "text": "사진과 정보를 구분하고,선택은 브라운으로",
+          "size": "26px"
+        },
+        {
+          "text": "입력한 기준을추천 이유로 보여주기",
+          "size": "26px"
+        },
+        {
+          "text": "추천 이유의 쓰임을확인할 세 가지 과제",
+          "size": "26px"
+        },
+        {
+          "text": "설계에서 남은 과제",
+          "size": "26px"
+        }
+      ],
+      "errors": [],
+      "anchors": true,
+      "keyboard": true,
+      "touch": true,
+      "reducedMotion": true,
+      "progress": true
+    }
+  ],
+  "noJavaScript": true
+}

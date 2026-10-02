@@ -1,0 +1,196 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F3F0E9">
+  <meta name="description" content="많은 카페 사이에서, 내 취향과 오늘의 목적에 맞는 한 곳을 찾는다. CAFÉKOK 신규 서비스 기획 · UX/UI 케이스 스터디.">
+  <title>CAFÉKOK — 취향이 머무는 곳</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%235C3826'/%3E%3Ctext x='8' y='24' font-size='24' fill='%23F3F0E9'%3Ec%3C/text%3E%3C/svg%3E">
+  <link rel="preload" href="assets/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="ck">
+<div class="ck-reading-progress" role="progressbar" aria-label="페이지 읽기 진행률" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" hidden><span></span></div>
+<a class="ck-skip" href="#background">본문으로 이동</a>
+<header class="ck-header">
+  <a href="/#work" class="ck-back"><span class="ck-shell-mark" aria-hidden="true">KS.</span><span>← 포트폴리오</span></a>
+  <a href="#top" class="ck-wordmark" aria-label="카페콕 표지"><span class="ck-brand-logo" role="img" aria-label="카페콕 CAFÉKOK"></span></a>
+  <span class="ck-header-note">UX/UI CASE STUDY</span>
+</header>
+<main id="main">
+  <section id="top" class="ck-cover" aria-labelledby="cover-title" data-section="01">
+    <div class="ck-hero-scene">
+      <figure class="ck-cover-photo">
+        <img src="assets/cafe-cover.webp" srcset="assets/cafe-cover-800.webp 800w, assets/cafe-cover.webp 1600w" sizes="100vw" width="1920" height="1280" fetchpriority="high" alt="밝은 외벽과 나무 벤치, 큰 창과 따뜻한 조명 앞에서 사람들이 머무는 카페">
+      </figure>
+      <div class="ck-cover-title ck-wrap">
+        <div><p class="ck-kicker">취향이 머무는 곳</p><h1 id="cover-title">CAFÉKOK</h1></div>
+        <span class="ck-cover-index"><span>NEW SERVICE</span><span>UX/UI DESIGN</span></span>
+      </div>
+      <div class="ck-hero-bottom ck-wrap">
+        <a class="ck-hero-scroll" href="#background"><span>프로젝트 살펴보기</span><span aria-hidden="true">↓</span></a>
+        <div class="ck-hero-intro">
+          <p class="ck-cover-copy">내 취향과 오늘의 목적에<br>맞는 카페를 찾다.</p>
+          <div class="ck-prototype-slot" data-prototype-url="">
+            <a class="ck-prototype-link" role="link" aria-disabled="true" aria-describedby="prototype-status"><span>VIEW PROTOTYPE</span><span aria-hidden="true">↗</span></a>
+            <span id="prototype-status" class="ck-prototype-status">반응형 웹 · 준비 중</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <dl class="ck-meta ck-wrap"><div><dt>PROJECT</dt><dd>신규 서비스 기획</dd></div><div><dt>FOCUS</dt><dd>취향 × 방문 목적</dd></div><div><dt>OUTPUT</dt><dd>UX 설계 · UI 콘셉트</dd></div></dl>
+  </section>
+  <nav class="ck-chapters" aria-label="프로젝트 목차"><div class="ck-wrap"><a href="#background">배경</a><a href="#users">사용자</a><a href="#strategy">설계</a><a href="#experience">UI</a><a href="#reflection">회고</a><span class="ck-reading-label" hidden aria-hidden="true"><span>읽은 분량</span> <b>0%</b></span><a href="#top" class="ck-to-top" aria-label="표지로 이동">↑</a></div></nav>
+
+  <section id="background" class="ck-section ck-wrap" aria-labelledby="background-title" data-section="02">
+    <p class="ck-label">02 / BACKGROUND</p>
+    <h2 id="background-title">가고 싶은 곳과,<br>오늘 가기 좋은 곳 사이.</h2>
+    <div class="ck-situations">
+      <article class="ck-situation-card"><div class="ck-situation-art"><img src="assets/scene-work.svg" alt="" width="480" height="240" loading="lazy"></div><p><span>상황 예시 01 / 공간의 인상과 이용 조건</span>사진은 마음에 드는데,<br>오래 앉아 작업하기도 괜찮을까?</p><div class="ck-situation-tags"><span>분위기</span><span>좌석</span><span>이용 조건</span></div></article>
+      <article class="ck-situation-card"><div class="ck-situation-art"><img src="assets/scene-compare.svg" alt="" width="480" height="240" loading="lazy"></div><p><span>상황 예시 02 / 흩어진 정보와 반복 비교</span>지도와 후기를 한참 봤는데,<br>아직 어디로 갈지 모르겠다.</p><div class="ck-situation-tags"><span>사진</span><span>위치</span><span>후기</span></div></article>
+    </div>
+    <div class="ck-background-bottom"><p class="ck-big-note">같은 카페도,<br><strong>누구와 무엇을 하느냐에 따라.</strong></p><p>공부, 데이트, 대화, 드라이브. 방문 목적은 달라지고 좋아하는 분위기와 좌석, 메뉴, 가격, 이동 거리도 사람마다 다릅니다. 카페콕은 이 기준들을 연결해 탐색과 비교의 부담을 줄이고자 기획했습니다.</p></div>
+  </section>
+
+  <section id="problem" class="ck-section ck-tinted" aria-labelledby="problem-title" data-section="03"><div class="ck-wrap">
+    <p class="ck-label">03 / PROBLEM</p>
+    <div class="ck-heading"><h2 id="problem-title">장소를 발견한 뒤에도,<br>선택을 위한 탐색은 계속됩니다.</h2><p>후보를 고르는 과정을 나누고,<br>각 단계에 필요한 판단을 살펴봤습니다.</p></div>
+    <p class="ck-caption ck-above">탐색 과정에 대한 설계 가설 · 조사 결과가 아닌 문제 정의의 출발점</p>
+    <ol class="ck-explore-flow">
+      <li><span class="ck-step">01</span><h3>후보 발견</h3><dl><dt>찾는 정보</dt><dd>사진 · 분위기 · 메뉴</dd><dt>판단 질문</dt><dd>내가 좋아하는 곳일까?</dd><dt>어려운 지점</dt><dd>인상만으로 취향 적합성을 판단하기 어려움</dd></dl></li>
+      <li><span class="ck-step">02</span><h3>방문 조건 확인</h3><dl><dt>찾는 정보</dt><dd>좌석 · 공간 · 이용 조건</dd><dt>판단 질문</dt><dd>오늘 하려는 일에 맞을까?</dd><dt>어려운 지점</dt><dd>사진에 드러나지 않는 조건을 추가로 확인</dd></dl></li>
+      <li><span class="ck-step">03</span><h3>후보 비교</h3><dl><dt>찾는 정보</dt><dd>가격 · 거리 · 주요 특징</dd><dt>판단 질문</dt><dd>어느 쪽이 더 나에게 맞을까?</dd><dt>어려운 지점</dt><dd>흩어진 정보를 같은 기준으로 다시 비교</dd></dl></li>
+      <li><span class="ck-step">04</span><h3>최종 선택</h3><dl><dt>찾는 정보</dt><dd>선택 이유 · 미확인 조건</dd><dt>판단 질문</dt><dd>지금 방문해도 괜찮을까?</dd><dt>어려운 지점</dt><dd>정보가 부족하면 앞선 탐색을 반복</dd></dl></li>
+    </ol>
+    <div class="ck-problem-conclusion"><p class="ck-label">좁혀진 설계 과제</p><p><b>취향을 판단하기 어렵고,</b><br><b>목적에 맞는지 확인해야 하며,</b><br>흩어진 정보를 반복해서 비교합니다.</p></div>
+  </div></section>
+
+  <section id="users" class="ck-section ck-wrap" aria-labelledby="users-title" data-section="04">
+    <p class="ck-label">04 / USER CONTEXT</p>
+    <div class="ck-heading"><h2 id="users-title">필요한 자리가 다르면,<br>먼저 보고 싶은 정보도 다릅니다.</h2><p>사용자 유형과 여정은 설계 가설입니다.<br>방문 목적에 따른 정보 요구를 비교했습니다.</p></div>
+    <div class="ck-personas">
+      <article class="ck-persona"><p class="ck-label">A / 공부·작업</p><h3>혼자 집중할 곳을 찾는 대학생</h3><p class="ck-persona-intro">수업 뒤, 과제를 이어갈 카페를 찾는 상황.</p><dl class="ck-user-needs"><div><dt>원하는 경험</dt><dd>무리 없이 머물며 집중하기</dd></div><div><dt>판단 기준</dt><dd>분위기 · 좌석 · 가격 · 이동 거리</dd></div><div><dt>핵심 불편</dt><dd>사진만으로 작업하기 편한 자리를 알기 어려움</dd></div><div><dt>필요한 도움</dt><dd>좌석과 이용 조건을 후보별로 함께 확인</dd></div></dl>
+        <ol class="ck-journey"><li><b>방문 계기</b><span>과제를 할 자리가 필요하다</span></li><li><b>탐색</b><span>갈 수 있는 거리에서 후보를 찾는다</span></li><li><b>비교</b><span>좌석과 가격을 같은 기준으로 본다</span></li><li><b>선택</b><span>작업 조건이 확인된 곳을 고른다</span></li><li><b>방문</b><span>실제 좌석과 분위기를 확인한다</span></li></ol>
+      </article>
+      <article class="ck-persona"><p class="ck-label">B / 친구와 대화</p><h3>편하게 만날 곳을 찾는 직장인</h3><p class="ck-persona-intro">퇴근 후, 친구와 이야기를 나눌 장소를 찾는 상황.</p><dl class="ck-user-needs"><div><dt>원하는 경험</dt><dd>서로 편하게 오고, 대화하며 머물기</dd></div><div><dt>판단 기준</dt><dd>분위기 · 공간 · 메뉴 · 접근성</dd></div><div><dt>핵심 불편</dt><dd>공간의 인상과 만남에 맞는 조건을 따로 확인</dd></div><div><dt>필요한 도움</dt><dd>함께 앉을 공간과 메뉴, 접근성을 우선 확인</dd></div></dl>
+        <ol class="ck-journey"><li><b>방문 계기</b><span>친구와 만날 장소를 정한다</span></li><li><b>탐색</b><span>서로 오기 편한 지역을 살펴본다</span></li><li><b>비교</b><span>함께 앉을 좌석과 메뉴를 본다</span></li><li><b>선택</b><span>만남에 맞는 이유를 보고 결정한다</span></li><li><b>방문</b><span>대화하기 편한 공간인지 확인한다</span></li></ol>
+      </article>
+    </div>
+    <div class="ck-insight"><p><span>공통 니즈</span>나에게 맞는 이유를 알고 선택하기</p><p><span>목적별 차이</span>작업과 대화에 필요한 공간 조건</p><strong>평소 취향과 이번 방문 목적을<br>분리해서 입력받습니다.</strong></div>
+  </section>
+
+  <section id="strategy" class="ck-section ck-tinted" aria-labelledby="strategy-title" data-section="05"><div class="ck-wrap">
+    <p class="ck-label">05 / STRATEGY</p><h2 id="strategy-title">취향은 기준으로,<br>목적은 오늘의 조건으로.</h2>
+    <div class="ck-strategy-table" role="table" aria-label="문제와 목표, 기능의 연결"><div class="ck-table-head" role="row"><span role="columnheader">문제</span><span role="columnheader">설계 목표</span><span role="columnheader">핵심 기능</span></div>
+      <div role="row"><span role="cell" data-label="문제">취향 판단의 어려움</span><span role="cell" data-label="목표">선호 기준 구체화</span><strong role="cell" data-label="기능">취향 퀴즈 · 프로필</strong></div>
+      <div role="row"><span role="cell" data-label="문제">목적 적합성의 불확실성</span><span role="cell" data-label="목표">현재 상황 반영</span><strong role="cell" data-label="기능">방문 목적 선택</strong></div>
+      <div role="row"><span role="cell" data-label="문제">반복 비교 부담</span><span role="cell" data-label="목표">선택 이유 제공</span><strong role="cell" data-label="기능">추천 이유 · 핵심 정보 비교</strong></div>
+    </div>
+    <div class="ck-concept"><div><span>지속적인 선호</span><strong>평소의 취향</strong></div><span class="ck-operator" aria-hidden="true">＋</span><div><span>탐색할 때마다</span><strong>오늘의 방문 목적</strong></div><span class="ck-operator" aria-hidden="true">→</span><div class="ck-concept-result"><span>설명이 있는 추천</span><strong>맞는 이유가 보이는 후보</strong></div></div>
+    <div class="ck-axes-heading"><h3>좋고 나쁨이 아닌,<br>서로 다른 취향의 여섯 축</h3><p>하나의 점수로 합치지 않습니다.<br>항목에 맞는 선택 방식으로 선호를 기록합니다.</p></div>
+    <dl class="ck-axes">
+      <div><dt><span>01</span>분위기</dt><dd>차분함 / 활기참 / 상관없음<small>선호 분위기 선택</small></dd></div>
+      <div><dt><span>02</span>공간</dt><dd>아늑함 / 개방감 / 상관없음<small>공간 특성 선택</small></dd></div>
+      <div><dt><span>03</span>좌석</dt><dd>1인석 / 테이블 / 소파<small>선호 좌석 복수 선택</small></dd></div>
+      <div><dt><span>04</span>메뉴</dt><dd>커피 / 비커피 / 디저트<small>관심 메뉴 복수 선택</small></dd></div>
+      <div><dt><span>05</span>가격</dt><dd>음료 한 잔에 쓸 예산<small>가격 범위 또는 상관없음</small></dd></div>
+      <div><dt><span>06</span>이동반경</dt><dd>기준 지역과 이동 가능 거리<small>반경 선택 · 탐색 시 변경</small></dd></div>
+    </dl>
+    <aside class="ck-data-note"><h3>모르는 정보는, 모른다고 표시합니다.</h3><p>분위기·좌석·메뉴·가격·위치·이용 조건과 정보의 출처·확인 시점이 필요합니다. 미확인 항목은 ‘확인 필요’로 분리하고 추천 근거에서 제외합니다. 영업 여부와 실제 이용 조건은 방문 전 확인하도록 안내하는 설계입니다.</p></aside>
+  </div></section>
+
+  <section id="structure" class="ck-section ck-wrap" aria-labelledby="structure-title" data-section="06">
+    <p class="ck-label">06 / STRUCTURE & FLOW</p><div class="ck-heading"><h2 id="structure-title">첫 탐색은 가볍게,<br>다음 탐색은 이어서.</h2><p>핵심 경험을 중심으로 묶은 구조입니다.<br>계정·저장과 예외 처리는 제안 정책입니다.</p></div>
+    <div class="ck-ia"><p class="ck-label">INFORMATION ARCHITECTURE</p><div class="ck-ia-root">CAFÉKOK</div><div class="ck-ia-branches"><div><h3>홈·탐색</h3><p>지역 · 방문 목적</p><p>추천 목록 ↔ 지도</p><p>카페 상세</p></div><div><h3>취향 프로필</h3><p>취향 퀴즈</p><p>선호 요약 · 수정</p></div><div><h3>저장</h3><p>저장한 카페</p><p>카페 상세 다시 보기</p></div><div><h3>설정</h3><p>지역 · 권한</p><p>계정 · 동기화</p></div></div></div>
+    <div class="ck-flow-area"><p class="ck-label">CORE USER FLOW</p><div class="ck-flow-row"><b>첫 방문</b><ol><li>취향 입력<br><small>또는 건너뛰기</small></li><li>목적 선택</li><li>추천·비교</li><li>상세 확인</li></ol></div><div class="ck-flow-row"><b>재방문</b><ol><li>기존 취향 활용<br><small>필요하면 수정</small></li><li>목적 선택·변경</li><li>추천·비교</li><li>상세 확인</li></ol></div></div>
+    <div class="ck-exceptions"><h3>흐름이 끊길 때의 다음 선택</h3><div class="ck-exception-list">
+      <details open><summary>취향 입력을 건너뛰면</summary><p>지역과 목적만으로 탐색합니다. 개인 취향이 반영되지 않았음을 표시하고, 이후 프로필에서 입력할 수 있습니다.</p></details>
+      <details><summary>위치 권한을 허용하지 않으면</summary><p>동네나 역 이름을 직접 입력합니다. 현재 위치를 요구하는 대신 선택한 지역을 거리의 기준으로 사용합니다.</p></details>
+      <details><summary>추천 결과가 없으면</summary><p>적용된 조건을 보여주고 이동반경이나 가격 범위를 하나씩 조정하게 합니다. 사용자의 동의 없이 조건을 바꾸지 않습니다.</p></details>
+      <details><summary>로그인하지 않았다면</summary><p>취향 입력·탐색·상세 확인과 기기 내 저장까지 가능합니다. 기기 간 취향·저장 목록을 동기화할 때만 계정을 제안합니다.</p></details>
+    </div></div>
+  </section>
+
+  <section id="design" class="ck-section ck-tinted" aria-labelledby="design-title" data-section="07"><div class="ck-wrap">
+    <p class="ck-label">07 / VISUAL DIRECTION</p><div class="ck-heading"><h2 id="design-title">여유로운 바탕 위에,<br>명확한 정보와 작은 온기.</h2><p>따뜻한 건축적 미니멀.<br>공간의 인상을 읽기 편한 UI 규칙으로 옮깁니다.</p></div>
+    <div class="ck-mood"><figure><img src="assets/cafe-cover-800.webp" width="800" height="533" loading="lazy" alt="색과 여백의 기준으로 삼은 카페 외관 사진"><figcaption>밝은 벽의 여백 · 창틀의 정렬 · 나무와 조명의 온기</figcaption></figure><div class="ck-palette">
+      <div style="--swatch:#F3F0E9"><span></span><p><b>Ivory</b>기본 배경<small>#F3F0E9</small></p></div>
+      <div style="--swatch:#FCFAF6"><span></span><p><b>Surface</b>정보 카드<small>#FCFAF6</small></p></div>
+      <div style="--swatch:#E5DFD4"><span></span><p><b>Stone</b>그룹 구분<small>#E5DFD4</small></p></div>
+      <div style="--swatch:#5C3826"><span></span><p><b>Brown</b>제목 · 선택<small>#5C3826</small></p></div>
+      <div style="--swatch:#2D2925"><span></span><p><b>Charcoal</b>본문<small>#2D2925</small></p></div>
+      <div style="--swatch:#C58B45"><span></span><p><b>Amber</b>작은 표시<small>#C58B45</small></p></div>
+    </div></div>
+    <div class="ck-brand-system"><figure class="ck-brand-board"><a href="assets/cafekok-logo.png" aria-label="카페콕 로고 원본 보기"><img src="assets/cafekok-logo.png" width="1536" height="1024" loading="lazy" alt="카페콕 한글·영문 로고, 커피잔 심볼과 앱 아이콘"></a><figcaption>커피잔과 둥근 획으로 연결한 카페콕의 브랜드 아이덴티티.</figcaption></figure><div class="ck-icon-system"><h3>ICON SYSTEM</h3><p>탐색과 취향, 방문 목적을 잇는 16개의 아이콘.</p><ul class="ck-icon-grid"><li><span class="ck-brand-icon" style="--icon-x:9.49%;--icon-y:17.22%" aria-hidden="true"></span><span>홈</span></li><li><span class="ck-brand-icon" style="--icon-x:36.24%;--icon-y:17.22%" aria-hidden="true"></span><span>탐색</span></li><li><span class="ck-brand-icon" style="--icon-x:63%;--icon-y:17.22%" aria-hidden="true"></span><span>저장</span></li><li><span class="ck-brand-icon" style="--icon-x:89.94%;--icon-y:17.22%" aria-hidden="true"></span><span>내 취향</span></li><li><span class="ck-brand-icon" style="--icon-x:9.49%;--icon-y:41.25%" aria-hidden="true"></span><span>분위기</span></li><li><span class="ck-brand-icon" style="--icon-x:36.24%;--icon-y:41.25%" aria-hidden="true"></span><span>공간</span></li><li><span class="ck-brand-icon" style="--icon-x:63%;--icon-y:41.25%" aria-hidden="true"></span><span>좌석</span></li><li><span class="ck-brand-icon" style="--icon-x:89.94%;--icon-y:41.25%" aria-hidden="true"></span><span>메뉴</span></li><li><span class="ck-brand-icon" style="--icon-x:9.49%;--icon-y:65.36%" aria-hidden="true"></span><span>가격</span></li><li><span class="ck-brand-icon" style="--icon-x:36.24%;--icon-y:65.36%" aria-hidden="true"></span><span>이동 거리</span></li><li><span class="ck-brand-icon" style="--icon-x:63%;--icon-y:65.36%" aria-hidden="true"></span><span>공부·작업</span></li><li><span class="ck-brand-icon" style="--icon-x:89.94%;--icon-y:65.36%" aria-hidden="true"></span><span>데이트</span></li><li><span class="ck-brand-icon" style="--icon-x:9.49%;--icon-y:89.38%" aria-hidden="true"></span><span>친구</span></li><li><span class="ck-brand-icon" style="--icon-x:36.24%;--icon-y:89.38%" aria-hidden="true"></span><span>드라이브</span></li><li><span class="ck-brand-icon" style="--icon-x:63%;--icon-y:89.38%" aria-hidden="true"></span><span>필터</span></li><li><span class="ck-brand-icon" style="--icon-x:89.94%;--icon-y:89.38%" aria-hidden="true"></span><span>비교</span></li></ul><a class="ck-icon-original" href="assets/cafekok-icon.png">아이콘 원본 보기 ↗</a></div></div><div class="ck-system"><div><p class="ck-label">TYPE & SPACE</p><div class="ck-type-title">취향을 담아, 오늘을 찾다.</div><p>Pretendard · 명확한 제목, 편안한 본문</p><p class="ck-caption">편집 제목 28–48px / 본문 16–18px / 보조 12–14px<br>본문 최대 1280px · 간격 8 / 16 / 24 / 32px 기반</p></div><div class="ck-ui ck-component-samples"><p class="ck-label">APP COMPONENTS · 정적 예시</p><div class="ck-ui-filters"><span class="is-selected">공부·작업</span><span>데이트</span><span>친구와 대화</span></div><div class="ck-component-actions"><span class="ck-ui-button">다음</span><span class="ck-ui-button is-disabled">응답을 선택해 주세요</span></div><p class="ck-caption">선택은 색과 체크로 구분 · 응답 전 다음 단계 비활성<br>앱 UI 제목 24px / 본문 16px / 보조 14px</p></div></div>
+  </div></section>
+
+  <section id="experience" class="ck-section ck-experience" aria-labelledby="experience-title" data-section="08"><div class="ck-wrap">
+    <p class="ck-label">08 / KEY EXPERIENCE</p><div class="ck-heading"><h2 id="experience-title">나의 기준이,<br>한 곳을 고르는 이유가 되도록.</h2><p>HTML/CSS로 제작한 UI 콘셉트입니다.<br>카페명과 정보는 가상 예시이며 조작되지 않는 데모입니다.</p></div>
+
+    <article class="ck-experience-a">
+      <div class="ck-feature-heading"><span class="ck-feature-letter">A</span><div><p class="ck-label">내 취향을 알아가기</p><h3>막연한 선호를,<br>다시 쓸 수 있는 탐색 기준으로.</h3><p>자신의 취향을 설명하기 어려운 첫 방문자에게, 익숙한 질문으로 시작하고 답변을 수정할 수 있는 요약을 제공합니다.</p></div></div>
+      <div class="ck-screen-pair">
+        <figure class="ck-screen-with-note"><div class="ck-device ck-ui">
+          <div class="ck-ui-status" aria-hidden="true"><span>9:41</span><span>••• ▰</span></div>
+          <div class="ck-ui-top"><span aria-hidden="true">←</span><b>취향 알아보기</b><span>1 / 6</span></div>
+          <div class="ck-ui-progress"><span></span></div>
+          <p class="ck-ui-overline ck-icon-label"><span class="ck-brand-icon" style="--icon-x:9.49%;--icon-y:41.25%" aria-hidden="true"></span>01. 분위기</p><h4>어떤 분위기에<br>마음이 가나요?</h4><p class="ck-ui-sub">가장 가까운 답을 하나 골라주세요.</p>
+          <div class="ck-ui-choices"><div class="is-selected"><span>조용하고 차분한 공간</span><b>✓</b></div><div><span>편안하고 활기찬 공간</span><span>○</span></div><div><span>분위기는 크게 상관없어요</span><span>○</span></div></div>
+          <p class="ck-ui-sub ck-ui-tip">지금 고른 답은 나중에 바꿀 수 있어요.</p><div class="ck-ui-button">다음 <span aria-hidden="true">→</span></div><p class="ck-ui-skip">나중에 알아보기</p>
+        </div><figcaption><b>01 / 한 번에 하나의 기준</b><p>진행 상태와 단일 질문으로 응답 범위를 명확히 합니다. ‘상관없음’과 건너뛰기로 선호를 억지로 정하지 않게 합니다.</p></figcaption></figure>
+        <figure class="ck-screen-with-note"><div class="ck-device ck-ui">
+          <div class="ck-ui-status" aria-hidden="true"><span>9:41</span><span>••• ▰</span></div><div class="ck-ui-top"><span class="ck-brand-logo" role="img" aria-label="카페콕 CAFÉKOK"></span><span>내 취향</span></div>
+          <p class="ck-ui-overline ck-icon-label"><span class="ck-brand-icon" style="--icon-x:89.94%;--icon-y:17.22%" aria-hidden="true"></span>MY TASTE</p><h4>이런 공간을<br>좋아하는군요.</h4><p class="ck-ui-sub">답변을 바탕으로 정리한 취향이에요.</p>
+          <dl class="ck-ui-profile"><div><dt>분위기</dt><dd>차분한</dd></div><div><dt>공간</dt><dd>개방감 있는</dd></div><div><dt>좌석</dt><dd>1인석 · 테이블</dd></div><div><dt>메뉴</dt><dd>커피 · 디저트</dd></div><div><dt>가격</dt><dd>음료 7,000원 이내</dd></div><div><dt>이동반경</dt><dd>선택 지역에서 2km</dd></div></dl>
+          <p class="ck-ui-edit">취향 수정하기 ↗</p><div class="ck-ui-button">이 취향으로 카페 찾기</div>
+        </div><figcaption><b>02 / 점수 대신 선호를 보여주기</b><p>여섯 축을 읽을 수 있는 말로 요약합니다. 결과를 확인하고 수정한 뒤 탐색에 적용하게 합니다.</p></figcaption></figure>
+      </div>
+    </article>
+
+    <article class="ck-experience-b">
+      <div class="ck-feature-heading"><span class="ck-feature-letter">B</span><div><p class="ck-label">오늘에 맞는 곳 찾기</p><h3>취향은 그대로여도,<br>오늘의 목적은 달라지니까.</h3><p>다시 방문한 사용자가 모든 질문에 답할 필요 없이, 이번에 필요한 시간과 장소를 정하도록 돕습니다.</p></div></div>
+      <div class="ck-focus-layout">
+        <div class="ck-device ck-device-wide ck-ui"><div class="ck-ui-status" aria-hidden="true"><span>9:41</span><span>••• ▰</span></div><div class="ck-ui-top"><span class="ck-brand-logo" role="img" aria-label="카페콕 CAFÉKOK"></span><span>연남동 ⌄</span></div><p class="ck-ui-overline">오늘의 발견</p><h4>오늘은 어떤 시간이<br>필요한가요?</h4>
+          <div class="ck-ui-taste"><span>내 취향</span><b>차분한 · 개방감 · 커피</b><span>수정 ↗</span></div>
+          <div class="ck-ui-filters ck-purpose-grid"><span class="is-selected">✓ 공부·작업</span><span>데이트</span><span>친구와 대화</span><span>드라이브</span></div>
+          <div class="ck-ui-result-title"><h5>집중할 자리를 찾아요</h5><span>목록 / 지도</span></div>
+          <div class="ck-ui-cafe"><div class="ck-ui-cafe-heading"><div><p class="ck-ui-overline">가상 카페</p><h5>오후의 자리</h5></div><span aria-hidden="true">♡</span></div><p class="ck-ui-sub">선택 지역에서 800m · 아메리카노 5,500원</p><div class="ck-ui-reason"><b>이런 점이 맞아요</b><p>취향 · 차분하고 개방감 있는 공간<br>목적 · 혼자 앉을 수 있는 테이블</p></div><div class="ck-ui-facts"><span>1인석</span><span>커피·디저트</span><span>콘센트 확인 필요</span></div></div>
+          <div class="ck-ui-bottom"><b>홈·탐색</b><span>내 취향</span><span>저장</span></div>
+        </div>
+        <div class="ck-callouts"><div><span class="ck-callout-number">01</span><h4>기존 기준을 먼저 확인</h4><p>적용된 취향과 지역을 상단에 보여줍니다. 추천이 어떤 조건에서 시작되는지 알 수 있고, 상황에 따라 바꿀 수 있습니다.</p></div><div><span class="ck-callout-number">02</span><h4>이번 방문 목적만 바꾸기</h4><p>공부·작업, 데이트, 친구와 대화, 드라이브를 취향과 분리합니다. ‘평소 좋아하는 것’과 ‘오늘 필요한 것’을 혼동하지 않게 합니다.</p></div><div><span class="ck-callout-number">03</span><h4>추천 이유를 목록에서 읽기</h4><p>취향과 목적에 맞는 근거를 나눠 설명합니다. 확인되지 않은 콘센트 정보는 추천 이유에 넣지 않습니다.</p></div></div>
+      </div>
+    </article>
+
+    <article class="ck-experience-c">
+      <div class="ck-feature-heading"><span class="ck-feature-letter">C</span><div><p class="ck-label">이유를 보고 선택하기</p><h3>같은 기준으로 비교하고,<br>남은 조건까지 확인합니다.</h3><p>후보를 좁힌 사용자가 거리, 가격, 공간 조건을 비교하고, 다음 탐색을 위해 선택을 남길 수 있게 합니다.</p></div></div>
+      <div class="ck-detail-layout">
+        <div class="ck-device ck-ui"><div class="ck-ui-status" aria-hidden="true"><span>9:41</span><span>••• ▰</span></div><div class="ck-ui-top"><span>← 탐색</span><span>♡ 저장</span></div><p class="ck-ui-overline">가상 카페 · 상세 화면 예시</p><h4>오후의 자리</h4><p class="ck-ui-sub">차분하게 머무는, 개방감 있는 공간</p><div class="ck-ui-reason"><b>내 기준과 맞는 이유</b><p>차분한 분위기 · 혼자 쓰는 테이블<br>선택한 가격 범위와 이동반경 안</p></div>
+          <h5 class="ck-ui-section-title">방문 전에 확인해요</h5><dl class="ck-ui-profile"><div><dt>거리</dt><dd>선택 지역에서 800m</dd></div><div><dt>대표 메뉴</dt><dd>아메리카노 5,500원</dd></div><div><dt>좌석</dt><dd>1인석 · 공용 테이블</dd></div><div><dt>콘센트</dt><dd class="ck-ui-unconfirmed">확인 필요</dd></div><div><dt>이용 시간 제한</dt><dd class="ck-ui-unconfirmed">확인 필요</dd></div></dl>
+          <p class="ck-ui-sub ck-ui-tip">영업 여부와 이용 조건은 방문 전에 확인해 주세요.</p><div class="ck-ui-button ck-ui-button-outline">♡ 이 카페 저장하기</div><p class="ck-ui-skip">이 기기에 저장 · 계정 연결 시 동기화</p>
+        </div>
+        <div class="ck-detail-enlargements">
+          <div class="ck-compare-panel ck-ui"><p class="ck-label">비교 정보 확대 · 가상 예시</p><h4>후보가 달라도,<br>비교하는 기준은 같게.</h4><div class="ck-comparison-grid"><span>주요 정보</span><b>오후의 자리</b><b>느린 테이블</b><span>거리</span><span>800m</span><span>1.4km</span><span>아메리카노</span><span>5,500원</span><span>6,000원</span><span>1인석</span><span>있음</span><span>확인 필요</span></div><p class="ck-caption">목록에서 같은 항목 순서를 유지해 후보를 다시 읽는 부담을 줄이는 설계입니다.</p></div>
+          <div class="ck-map-note"><div class="ck-map-schematic" role="img" aria-label="지도 배치 개념도: 선택 지역을 기준으로 후보 A와 B의 위치를 표시"><span class="ck-map-origin">선택 지역</span><span class="ck-map-pin ck-pin-a">A</span><span class="ck-map-pin ck-pin-b">B</span><small>지도 배치 개념 · 실제 지리 정보 아님</small></div><div><h4>위치는 지도에서,<br>조건은 같은 정보로.</h4><p>목록과 지도에서 동일한 후보를 유지합니다. 지도를 오가도 비교 기준이 바뀌지 않게 합니다.</p></div></div>
+          <div class="ck-save-note"><span aria-hidden="true">♡ → ♥</span><div><h4>다음 탐색을 위한 저장</h4><p>저장 여부를 명확히 표시하고, 같은 기기에서는 로그인 없이 다시 찾도록 제안합니다. 기기 간 동기화 시 계정을 연결합니다.</p></div></div>
+        </div>
+      </div>
+    </article>
+  </div></section>
+
+  <section id="validation" class="ck-section ck-tinted" aria-labelledby="validation-title" data-section="09"><div class="ck-wrap">
+    <p class="ck-label">09 / VALIDATION PLAN</p><div class="ck-heading"><h2 id="validation-title">설명한 이유가,<br>실제 선택에도 도움이 될까?</h2><p>사용성 검증은 아직 수행하지 않았습니다.<br>대표 과제를 수행하며 행동과 망설임,<br>추가로 필요한 정보를 관찰할 계획입니다.</p></div>
+    <ol class="ck-validation-list"><li><span>01</span><div><h3>취향 질문과 결과를 이해할 수 있는가?</h3><p>취향 입력 후 결과를 설명하고 수정하는 과제에서 질문 해석과 망설이는 지점을 관찰합니다.</p></div></li><li><span>02</span><div><h3>방문 목적에 맞는 후보를 찾을 수 있는가?</h3><p>작업 또는 대화할 곳을 찾는 과제에서 확인하는 정보와 조건 변경 과정을 살펴봅니다.</p></div></li><li><span>03</span><div><h3>추천 이유가 최종 선택에 도움이 되는가?</h3><p>후보를 비교하고 한 곳을 고른 뒤, 선택 근거와 추가로 확인하고 싶은 정보를 듣습니다.</p></div></li></ol>
+  </div></section>
+
+  <section id="reflection" class="ck-section ck-wrap" aria-labelledby="reflection-title" data-section="10">
+    <p class="ck-label">10 / REFLECTION & NEXT</p><h2 id="reflection-title">추천의 시작은 취향,<br>완성의 기준은 사용자의 선택.</h2>
+    <div class="ck-reflection-grid"><div><h3>지금의 설계 판단</h3><p>지속적인 취향과 상황별 목적을 분리했습니다. 같은 취향을 가진 사람도 오늘 하려는 일에 따라 다른 공간 조건이 필요하기 때문입니다.</p></div><div><h3>아직 확인할 부분</h3><p>추천에 필요한 정보가 충분히 확보되는지, 이유를 보여주는 방식이 실제 선택 부담을 줄이는지는 검증이 필요합니다.</p></div></div>
+    <div class="ck-next"><span>다음 우선순위</span><ol><li>핵심 흐름 검증</li><li>정보·추천 이유 보완</li><li>예외 흐름 개선</li></ol></div>
+    <p class="ck-closing">많은 카페 사이에서,<br>내 취향과 오늘의 목적에 맞는 한 곳을 찾는다.</p>
+  </section>
+</main>
+<footer class="ck-footer ck-wrap"><a href="/#work">↖ 프로젝트 목록으로</a><span>CAFÉKOK · UX/UI CASE STUDY</span><a href="#top">처음으로 ↑</a></footer>
+</body>
+</html>

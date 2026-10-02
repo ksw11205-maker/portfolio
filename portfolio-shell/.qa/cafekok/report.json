@@ -1,0 +1,201 @@
+{
+  "date": "2026-09-28T08:29:32.954Z",
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 1000,
+      "overflow": false,
+      "sections": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10"
+      ],
+      "brokenImages": [],
+      "font": true,
+      "badAnchors": [],
+      "oversized": [],
+      "errors": [],
+      "contrast": {
+        "minimum": 4.73,
+        "failures": [],
+        "photoHero": "visually reviewed separately"
+      },
+      "anchorTop": 81.953125,
+      "keyboardDetails": true,
+      "keyboardSkip": true,
+      "reducedMotion": true,
+      "touch": false,
+      "readingProgress": [
+        0,
+        50,
+        100
+      ],
+      "prototype": "unavailable, no fake link"
+    },
+    {
+      "width": 1920,
+      "height": 1000,
+      "overflow": false,
+      "sections": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10"
+      ],
+      "brokenImages": [],
+      "font": true,
+      "badAnchors": [],
+      "oversized": [],
+      "errors": [],
+      "contrast": {
+        "minimum": 4.73,
+        "failures": [],
+        "photoHero": "visually reviewed separately"
+      },
+      "anchorTop": 81.953125,
+      "keyboardDetails": true,
+      "keyboardSkip": true,
+      "reducedMotion": true,
+      "touch": false,
+      "readingProgress": [
+        0,
+        50,
+        100
+      ],
+      "prototype": "unavailable, no fake link"
+    },
+    {
+      "width": 390,
+      "height": 1000,
+      "overflow": false,
+      "sections": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10"
+      ],
+      "brokenImages": [],
+      "font": true,
+      "badAnchors": [],
+      "oversized": [],
+      "errors": [],
+      "contrast": {
+        "minimum": 4.73,
+        "failures": [],
+        "photoHero": "visually reviewed separately"
+      },
+      "anchorTop": 76.375,
+      "keyboardDetails": true,
+      "keyboardSkip": true,
+      "reducedMotion": true,
+      "touch": true,
+      "readingProgress": [
+        0,
+        50,
+        100
+      ],
+      "prototype": "unavailable, no fake link"
+    },
+    {
+      "width": 768,
+      "height": 1000,
+      "overflow": false,
+      "sections": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10"
+      ],
+      "brokenImages": [],
+      "font": true,
+      "badAnchors": [],
+      "oversized": [],
+      "errors": [],
+      "contrast": {
+        "minimum": 4.73,
+        "failures": [],
+        "photoHero": "visually reviewed separately"
+      },
+      "anchorTop": 81.609375,
+      "keyboardDetails": true,
+      "keyboardSkip": true,
+      "reducedMotion": true,
+      "touch": false,
+      "readingProgress": [
+        0,
+        50,
+        100
+      ],
+      "prototype": "unavailable, no fake link"
+    },
+    {
+      "width": 375,
+      "height": 1000,
+      "overflow": false,
+      "sections": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10"
+      ],
+      "brokenImages": [],
+      "font": true,
+      "badAnchors": [],
+      "oversized": [],
+      "errors": [],
+      "contrast": {
+        "minimum": 4.73,
+        "failures": [],
+        "photoHero": "visually reviewed separately"
+      },
+      "anchorTop": 75.640625,
+      "keyboardDetails": true,
+      "keyboardSkip": true,
+      "reducedMotion": true,
+      "touch": true,
+      "readingProgress": [
+        0,
+        50,
+        100
+      ],
+      "prototype": "unavailable, no fake link"
+    }
+  ],
+  "checks": [
+    "JavaScript disabled: ten sections, native anchor, native details",
+    "Main thumbnail image and case-study link; back link; four projects retained",
+    "Other existing project routes remain available",
+    "Canonical route redirect"
+  ]
+}

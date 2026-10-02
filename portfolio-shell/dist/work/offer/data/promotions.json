@@ -1,0 +1,1286 @@
+[
+  {
+    "id": "musinsa-chuseok-2026",
+    "brandId": "musinsa",
+    "brandName": "MUSINSA",
+    "title": "가을의 시작, 새로운 취향",
+    "category": "fashion",
+    "image": "./assets/images/brands/musinsa-panel.svg",
+    "imageAlt": "MUSINSA 대표 로고",
+    "discount": {
+      "max": 40,
+      "label": "UP TO 40%"
+    },
+    "period": {
+      "start": "2026-09-20",
+      "end": "2026-09-30"
+    },
+    "benefits": [
+      {
+        "label": "가을 셀렉션",
+        "text": "인기 브랜드 최대 40% 할인"
+      },
+      {
+        "label": "추가 혜택",
+        "text": "일부 상품 10% 쿠폰"
+      },
+      {
+        "label": "매일 새로운 발견",
+        "text": "기간 한정 데일리 특가"
+      }
+    ],
+    "participatingBrands": [
+      {
+        "name": "Nike",
+        "discount": 30
+      },
+      {
+        "name": "adidas",
+        "discount": 25
+      },
+      {
+        "name": "New Balance",
+        "discount": 20
+      },
+      {
+        "name": "Covernat",
+        "discount": 40
+      }
+    ],
+    "conditions": [
+      "일부 신상품 및 한정판 상품은 혜택에서 제외됩니다.",
+      "추가 쿠폰은 대상 상품에 한해 적용되며 중복 사용이 제한될 수 있습니다.",
+      "한정 수량 상품은 재고 소진 시 조기 종료될 수 있습니다."
+    ],
+    "tags": [
+      "fashion",
+      "autumn"
+    ],
+    "featured": true,
+    "createdAt": "2026-09-20",
+    "popularity": 1000,
+    "originalUrl": "https://www.musinsa.com",
+    "sourceType": "brand-homepage",
+    "demo": true,
+    "timeline": [
+      {
+        "label": "START",
+        "date": "2026-09-20",
+        "text": "혜택 시작"
+      },
+      {
+        "label": "SPECIAL DEAL",
+        "date": "2026-09-22",
+        "text": "기간 한정 특가"
+      },
+      {
+        "label": "END",
+        "date": "2026-09-30",
+        "text": "혜택 종료"
+      }
+    ],
+    "campaignImage": "./assets/images/promotions/fashion.jpg"
+  },
+  {
+    "id": "oliveyoung-beauty-sale",
+    "brandId": "oliveyoung",
+    "brandName": "OLIVE YOUNG",
+    "title": "환절기 피부를 위한 뷰티 위크",
+    "category": "beauty",
+    "image": "./assets/images/brands/oliveyoung-panel.svg",
+    "imageAlt": "OLIVE YOUNG 대표 로고",
+    "discount": {
+      "max": 50,
+      "label": "UP TO 50%"
+    },
+    "period": {
+      "start": "2026-09-18",
+      "end": "2026-09-27"
+    },
+    "benefits": [
+      {
+        "label": "뷰티 셀렉션",
+        "text": "기초·메이크업 최대 50% 할인"
+      },
+      {
+        "label": "함께 쓰는 즐거움",
+        "text": "선택 상품 기획 세트"
+      },
+      {
+        "label": "나만의 루틴",
+        "text": "일부 상품 추가 쿠폰"
+      }
+    ],
+    "participatingBrands": [
+      {
+        "name": "OLIVE YOUNG",
+        "discount": 50
+      }
+    ],
+    "conditions": [
+      "일부 신상품 및 한정판 상품은 혜택에서 제외됩니다.",
+      "추가 쿠폰은 대상 상품에 한해 적용되며 중복 사용이 제한될 수 있습니다.",
+      "한정 수량 상품은 재고 소진 시 조기 종료될 수 있습니다."
+    ],
+    "tags": [
+      "beauty",
+      "autumn"
+    ],
+    "featured": true,
+    "createdAt": "2026-09-18",
+    "popularity": 963,
+    "originalUrl": "https://www.oliveyoung.co.kr",
+    "sourceType": "brand-homepage",
+    "demo": true,
+    "timeline": [
+      {
+        "label": "START",
+        "date": "2026-09-18",
+        "text": "혜택 시작"
+      },
+      {
+        "label": "SPECIAL DEAL",
+        "date": "2026-09-20",
+        "text": "기간 한정 특가"
+      },
+      {
+        "label": "END",
+        "date": "2026-09-27",
+        "text": "혜택 종료"
+      }
+    ],
+    "campaignImage": "./assets/images/promotions/beauty.jpg"
+  },
+  {
+    "id": "nike-running-days",
+    "brandId": "nike",
+    "brandName": "Nike",
+    "title": "달리기 좋은 계절, 러닝 에센셜",
+    "category": "fashion",
+    "image": "./assets/images/brands/nike-panel.svg",
+    "imageAlt": "Nike 대표 로고",
+    "discount": {
+      "max": 30,
+      "label": "UP TO 30%"
+    },
+    "period": {
+      "start": "2026-09-19",
+      "end": "2026-09-29"
+    },
+    "benefits": [
+      {
+        "label": "가을 셀렉션",
+        "text": "인기 브랜드 최대 30% 할인"
+      },
+      {
+        "label": "추가 혜택",
+        "text": "일부 상품 10% 쿠폰"
+      },
+      {
+        "label": "매일 새로운 발견",
+        "text": "기간 한정 데일리 특가"
+      }
+    ],
+    "participatingBrands": [
+      {
+        "name": "Nike",
+        "discount": 30
+      }
+    ],
+    "conditions": [
+      "일부 신상품 및 한정판 상품은 혜택에서 제외됩니다.",
+      "추가 쿠폰은 대상 상품에 한해 적용되며 중복 사용이 제한될 수 있습니다.",
+      "한정 수량 상품은 재고 소진 시 조기 종료될 수 있습니다."
+    ],
+    "tags": [
+      "fashion",
+      "autumn"
+    ],
+    "featured": true,
+    "createdAt": "2026-09-19",
+    "popularity": 926,
+    "originalUrl": "https://www.nike.com/kr",
+    "sourceType": "brand-homepage",
+    "demo": true,
+    "timeline": [
+      {
+        "label": "START",
+        "date": "2026-09-19",
+        "text": "혜택 시작"
+      },
+      {
+        "label": "SPECIAL DEAL",
+        "date": "2026-09-21",
+        "text": "기간 한정 특가"
+      },
+      {
+        "label": "END",
+        "date": "2026-09-29",
+        "text": "혜택 종료"
+      }
+    ],
+    "campaignImage": "./assets/images/promotions/nike.jpg"
+  },
+  {
+    "id": "29cm-fall-edit",
+    "brandId": "29cm",
+    "brandName": "29CM",
+    "title": "일상을 바꾸는 가을의 한 조각",
+    "category": "fashion",
+    "image": "./assets/images/brands/29cm-panel.svg",
+    "imageAlt": "29CM 대표 로고",
+    "discount": {
+      "max": 20,
+      "label": "UP TO 20%"
+    },
+    "period": {
+      "start": "2026-09-21",
+      "end": "2026-09-30"
+    },
+    "benefits": [
+      {
+        "label": "가을 셀렉션",
+        "text": "인기 브랜드 최대 20% 할인"
+      },
+      {
+        "label": "추가 혜택",
+        "text": "일부 상품 10% 쿠폰"
+      },
+      {
+        "label": "매일 새로운 발견",
+        "text": "기간 한정 데일리 특가"
+      }
+    ],
+    "participatingBrands": [
+      {
+        "name": "29CM",
+        "discount": 20
+      }
+    ],
+    "conditions": [
+      "일부 신상품 및 한정판 상품은 혜택에서 제외됩니다.",
+      "추가 쿠폰은 대상 상품에 한해 적용되며 중복 사용이 제한될 수 있습니다.",
+      "한정 수량 상품은 재고 소진 시 조기 종료될 수 있습니다."
+    ],
+    "tags": [
+      "fashion",
+      "autumn"
+    ],
+    "featured": false,
+    "createdAt": "2026-09-21",
+    "popularity": 889,
+    "originalUrl": "https://www.29cm.co.kr",
+    "sourceType": "brand-homepage",
+    "demo": true,
+    "timeline": [
+      {
+        "label": "START",
+        "date": "2026-09-21",
+        "text": "혜택 시작"
+      },
+      {
+        "label": "SPECIAL DEAL",
+        "date": "2026-09-23",
+        "text": "기간 한정 특가"
+      },
+      {
+        "label": "END",
+        "date": "2026-09-30",
+        "text": "혜택 종료"
+      }
+    ],
+    "campaignImage": "./assets/images/promotions/fashion.jpg"
+  },
+  {
+    "id": "tamburins-scent",
+    "brandId": "tamburins",
+    "brandName": "TAMBURINS",
+    "title": "새로운 계절을 기억하는 향",
+    "category": "beauty",
+    "image": "./assets/images/brands/tamburins-panel.svg",
+    "imageAlt": "TAMBURINS 대표 로고",
+    "discount": {
+      "max": 15,
+      "label": "UP TO 15%"
+    },
+    "period": {
+      "start": "2026-09-21",
+      "end": "2026-09-28"
+    },
+    "benefits": [
+      {
+        "label": "뷰티 셀렉션",
+        "text": "기초·메이크업 최대 15% 할인"
+      },
+      {
+        "label": "함께 쓰는 즐거움",
+        "text": "선택 상품 기획 세트"
+      },
+      {
+        "label": "나만의 루틴",
+        "text": "일부 상품 추가 쿠폰"
+      }
+    ],
+    "participatingBrands": [
+      {
+        "name": "TAMBURINS",
+        "discount": 15
+      }
+    ],
+    "conditions": [
+      "일부 신상품 및 한정판 상품은 혜택에서 제외됩니다.",
+      "추가 쿠폰은 대상 상품에 한해 적용되며 중복 사용이 제한될 수 있습니다.",
+      "한정 수량 상품은 재고 소진 시 조기 종료될 수 있습니다."
+    ],
+    "tags": [
+      "beauty",
+      "autumn"
+    ],
+    "featured": false,
+    "createdAt": "2026-09-21",
+    "popularity": 852,
+    "originalUrl": "https://www.tamburins.com",
+    "sourceType": "brand-homepage",
+    "demo": true,
+    "timeline": [
+      {
+        "label": "START",
+        "date": "2026-09-21",
+        "text": "혜택 시작"
+      },
+      {
+        "label": "SPECIAL DEAL",
+        "date": "2026-09-23",
+        "text": "기간 한정 특가"
+      },
+      {
+        "label": "END",
+        "date": "2026-09-28",
+        "text": "혜택 종료"
+      }
+    ],
+    "campaignImage": "./assets/images/promotions/skincare.jpg"
+  },
+  {
+    "id": "ikea-living-week",
+    "brandId": "ikea",
+    "brandName": "IKEA",
+    "title": "내 방에 찾아온 작은 변화",
+    "category": "lifestyle",
+    "image": "./assets/images/brands/ikea-panel.svg",
+    "imageAlt": "IKEA 대표 로고",
+    "discount": {
+      "max": 25,
+      "label": "UP TO 25%"
+    },
+    "period": {
+      "start": "2026-09-21",
+      "end": "2026-09-30"
+    },
+    "benefits": [
+      {
+        "label": "생활의 기본",
+        "text": "선택 상품 최대 25% 할인"
+      },
+      {
+        "label": "공간의 변화",
+        "text": "시즌 컬렉션 특별가"
+      },
+      {
+        "label": "작은 발견",
+        "text": "기간 한정 추천 상품"
+      }
+    ],
+    "participatingBrands": [
+      {
+        "name": "IKEA",
+        "discount": 25
+      }
+    ],
+    "conditions": [
+      "일부 신상품 및 한정판 상품은 혜택에서 제외됩니다.",
+      "추가 쿠폰은 대상 상품에 한해 적용되며 중복 사용이 제한될 수 있습니다.",
+      "한정 수량 상품은 재고 소진 시 조기 종료될 수 있습니다."
+    ],
+    "tags": [
+      "lifestyle",
+      "autumn"
+    ],
+    "featured": false,
+    "createdAt": "2026-09-21",
+    "popularity": 815,
+    "originalUrl": "https://www.ikea.com/kr/ko",
+    "sourceType": "brand-homepage",
+    "demo": true,
+    "timeline": [
+      {
+        "label": "START",
+        "date": "2026-09-21",
+        "text": "혜택 시작"
+      },
+      {
+        "label": "SPECIAL DEAL",
+        "date": "2026-09-23",
+        "text": "기간 한정 특가"
+      },
+      {
+        "label": "END",
+        "date": "2026-09-30",
+        "text": "혜택 종료"
+      }
+    ],
+    "campaignImage": "./assets/images/promotions/chair.jpg"
+  },
+  {
+    "id": "starbucks-autumn",
+    "brandId": "starbucks",
+    "brandName": "Starbucks",
+    "title": "커피 한 잔, 가을 한 모금",
+    "category": "food",
+    "image": "./assets/images/brands/starbucks-panel.svg",
+    "imageAlt": "Starbucks 대표 로고",
+    "discount": {
+      "max": 20,
+      "label": "UP TO 20%"
+    },
+    "period": {
+      "start": "2026-09-20",
+      "end": "2026-09-22"
+    },
+    "benefits": [
+      {
+        "label": "시즌 메뉴",
+        "text": "선택 메뉴 최대 20% 혜택"
+      },
+      {
+        "label": "함께하는 시간",
+        "text": "일부 세트 메뉴 할인"
+      },
+      {
+        "label": "짧고 달콤하게",
+        "text": "기간 한정 멤버 혜택"
+      }
+    ],
+    "participatingBrands": [
+      {
+        "name": "Starbucks",
+        "discount": 20
+      }
+    ],
+    "conditions": [
+      "일부 신상품 및 한정판 상품은 혜택에서 제외됩니다.",
+      "추가 쿠폰은 대상 상품에 한해 적용되며 중복 사용이 제한될 수 있습니다.",
+      "한정 수량 상품은 재고 소진 시 조기 종료될 수 있습니다."
+    ],
+    "tags": [
+      "food",
+      "autumn"
+    ],
+    "featured": false,
+    "createdAt": "2026-09-20",
+    "popularity": 778,
+    "originalUrl": "https://www.starbucks.co.kr",
+    "sourceType": "brand-homepage",
+    "demo": true,
+    "timeline": [
+      {
+        "label": "START",
+        "date": "2026-09-20",
+        "text": "혜택 시작"
+      },
+      {
+        "label": "SPECIAL DEAL",
+        "date": "2026-09-21",
+        "text": "기간 한정 특가"
+      },
+      {
+        "label": "END",
+        "date": "2026-09-22",
+        "text": "혜택 종료"
+      }
+    ],
+    "campaignImage": "./assets/images/promotions/coffee.jpg"
+  },
+  {
+    "id": "adidas-weekend",
+    "brandId": "adidas",
+    "brandName": "adidas",
+    "title": "가볍게 시작하는 주말",
+    "category": "fashion",
+    "image": "./assets/images/brands/adidas-panel.svg",
+    "imageAlt": "adidas 대표 로고",
+    "discount": {
+      "max": 35,
+      "label": "UP TO 35%"
+    },
+    "period": {
+      "start": "2026-09-19",
+      "end": "2026-09-23"
+    },
+    "benefits": [
+      {
+        "label": "가을 셀렉션",
+        "text": "인기 브랜드 최대 35% 할인"
+      },
+      {
+        "label": "추가 혜택",
+        "text": "일부 상품 10% 쿠폰"
+      },
+      {
+        "label": "매일 새로운 발견",
+        "text": "기간 한정 데일리 특가"
+      }
+    ],
+    "participatingBrands": [
+      {
+        "name": "adidas",
+        "discount": 35
+      }
+    ],
+    "conditions": [
+      "일부 신상품 및 한정판 상품은 혜택에서 제외됩니다.",
+      "추가 쿠폰은 대상 상품에 한해 적용되며 중복 사용이 제한될 수 있습니다.",
+      "한정 수량 상품은 재고 소진 시 조기 종료될 수 있습니다."
+    ],
+    "tags": [
+      "fashion",
+      "autumn"
+    ],
+    "featured": false,
+    "createdAt": "2026-09-19",
+    "popularity": 741,
+    "originalUrl": "https://www.adidas.co.kr",
+    "sourceType": "brand-homepage",
+    "demo": true,
+    "timeline": [
+      {
+        "label": "START",
+        "date": "2026-09-19",
+        "text": "혜택 시작"
+      },
+      {
+        "label": "SPECIAL DEAL",
+        "date": "2026-09-21",
+        "text": "기간 한정 특가"
+      },
+      {
+        "label": "END",
+        "date": "2026-09-23",
+        "text": "혜택 종료"
+      }
+    ],
+    "campaignImage": "./assets/images/promotions/sneakers.jpg"
+  },
+  {
+    "id": "innisfree-green",
+    "brandId": "innisfree",
+    "brandName": "innisfree",
+    "title": "다시 채우는 수분 루틴",
+    "category": "beauty",
+    "image": "./assets/images/brands/innisfree-panel.svg",
+    "imageAlt": "innisfree 대표 로고",
+    "discount": {
+      "max": 30,
+      "label": "UP TO 30%"
+    },
+    "period": {
+      "start": "2026-09-18",
+      "end": "2026-09-24"
+    },
+    "benefits": [
+      {
+        "label": "뷰티 셀렉션",
+        "text": "기초·메이크업 최대 30% 할인"
+      },
+      {
+        "label": "함께 쓰는 즐거움",
+        "text": "선택 상품 기획 세트"
+      },
+      {
+        "label": "나만의 루틴",
+        "text": "일부 상품 추가 쿠폰"
+      }
+    ],
+    "participatingBrands": [
+      {
+        "name": "innisfree",
+        "discount": 30
+      }
+    ],
+    "conditions": [
+      "일부 신상품 및 한정판 상품은 혜택에서 제외됩니다.",
+      "추가 쿠폰은 대상 상품에 한해 적용되며 중복 사용이 제한될 수 있습니다.",
+      "한정 수량 상품은 재고 소진 시 조기 종료될 수 있습니다."
+    ],
+    "tags": [
+      "beauty",
+      "autumn"
+    ],
+    "featured": false,
+    "createdAt": "2026-09-18",
+    "popularity": 704,
+    "originalUrl": "https://www.innisfree.com",
+    "sourceType": "brand-homepage",
+    "demo": true,
+    "timeline": [
+      {
+        "label": "START",
+        "date": "2026-09-18",
+        "text": "혜택 시작"
+      },
+      {
+        "label": "SPECIAL DEAL",
+        "date": "2026-09-20",
+        "text": "기간 한정 특가"
+      },
+      {
+        "label": "END",
+        "date": "2026-09-24",
+        "text": "혜택 종료"
+      }
+    ],
+    "campaignImage": "./assets/images/promotions/skincare.jpg"
+  },
+  {
+    "id": "muji-everyday",
+    "brandId": "muji",
+    "brandName": "MUJI",
+    "title": "오래 곁에 둘 생활의 기본",
+    "category": "lifestyle",
+    "image": "./assets/images/brands/muji-panel.svg",
+    "imageAlt": "MUJI 대표 로고",
+    "discount": {
+      "max": 20,
+      "label": "UP TO 20%"
+    },
+    "period": {
+      "start": "2026-09-17",
+      "end": "2026-09-28"
+    },
+    "benefits": [
+      {
+        "label": "생활의 기본",
+        "text": "선택 상품 최대 20% 할인"
+      },
+      {
+        "label": "공간의 변화",
+        "text": "시즌 컬렉션 특별가"
+      },
+      {
+        "label": "작은 발견",
+        "text": "기간 한정 추천 상품"
+      }
+    ],
+    "participatingBrands": [
+      {
+        "name": "MUJI",
+        "discount": 20
+      }
+    ],
+    "conditions": [
+      "일부 신상품 및 한정판 상품은 혜택에서 제외됩니다.",
+      "추가 쿠폰은 대상 상품에 한해 적용되며 중복 사용이 제한될 수 있습니다.",
+      "한정 수량 상품은 재고 소진 시 조기 종료될 수 있습니다."
+    ],
+    "tags": [
+      "lifestyle",
+      "autumn"
+    ],
+    "featured": false,
+    "createdAt": "2026-09-17",
+    "popularity": 667,
+    "originalUrl": "https://www.muji.com/kr",
+    "sourceType": "brand-homepage",
+    "demo": true,
+    "timeline": [
+      {
+        "label": "START",
+        "date": "2026-09-17",
+        "text": "혜택 시작"
+      },
+      {
+        "label": "SPECIAL DEAL",
+        "date": "2026-09-19",
+        "text": "기간 한정 특가"
+      },
+      {
+        "label": "END",
+        "date": "2026-09-28",
+        "text": "혜택 종료"
+      }
+    ],
+    "campaignImage": "./assets/images/promotions/chair.jpg"
+  },
+  {
+    "id": "nb-everyday",
+    "brandId": "new-balance",
+    "brandName": "New Balance",
+    "title": "매일의 걸음에 새로운 균형",
+    "category": "fashion",
+    "image": "./assets/images/brands/new-balance-panel.svg",
+    "imageAlt": "New Balance 대표 로고",
+    "discount": {
+      "max": 25,
+      "label": "UP TO 25%"
+    },
+    "period": {
+      "start": "2026-09-20",
+      "end": "2026-09-30"
+    },
+    "benefits": [
+      {
+        "label": "가을 셀렉션",
+        "text": "인기 브랜드 최대 25% 할인"
+      },
+      {
+        "label": "추가 혜택",
+        "text": "일부 상품 10% 쿠폰"
+      },
+      {
+        "label": "매일 새로운 발견",
+        "text": "기간 한정 데일리 특가"
+      }
+    ],
+    "participatingBrands": [
+      {
+        "name": "New Balance",
+        "discount": 25
+      }
+    ],
+    "conditions": [
+      "일부 신상품 및 한정판 상품은 혜택에서 제외됩니다.",
+      "추가 쿠폰은 대상 상품에 한해 적용되며 중복 사용이 제한될 수 있습니다.",
+      "한정 수량 상품은 재고 소진 시 조기 종료될 수 있습니다."
+    ],
+    "tags": [
+      "fashion",
+      "autumn"
+    ],
+    "featured": false,
+    "createdAt": "2026-09-20",
+    "popularity": 630,
+    "originalUrl": "https://www.nbkorea.com",
+    "sourceType": "brand-homepage",
+    "demo": true,
+    "timeline": [
+      {
+        "label": "START",
+        "date": "2026-09-20",
+        "text": "혜택 시작"
+      },
+      {
+        "label": "SPECIAL DEAL",
+        "date": "2026-09-22",
+        "text": "기간 한정 특가"
+      },
+      {
+        "label": "END",
+        "date": "2026-09-30",
+        "text": "혜택 종료"
+      }
+    ],
+    "campaignImage": "./assets/images/promotions/sneakers.jpg"
+  },
+  {
+    "id": "mega-afternoon",
+    "brandId": "mega-coffee",
+    "brandName": "MEGA COFFEE",
+    "title": "오후를 깨우는 달콤한 한 잔",
+    "category": "food",
+    "image": "./assets/images/brands/mega-coffee-panel.svg",
+    "imageAlt": "MEGA COFFEE 대표 로고",
+    "discount": {
+      "max": 15,
+      "label": "UP TO 15%"
+    },
+    "period": {
+      "start": "2026-09-20",
+      "end": "2026-09-25"
+    },
+    "benefits": [
+      {
+        "label": "시즌 메뉴",
+        "text": "선택 메뉴 최대 15% 혜택"
+      },
+      {
+        "label": "함께하는 시간",
+        "text": "일부 세트 메뉴 할인"
+      },
+      {
+        "label": "짧고 달콤하게",
+        "text": "기간 한정 멤버 혜택"
+      }
+    ],
+    "participatingBrands": [
+      {
+        "name": "MEGA COFFEE",
+        "discount": 15
+      }
+    ],
+    "conditions": [
+      "일부 신상품 및 한정판 상품은 혜택에서 제외됩니다.",
+      "추가 쿠폰은 대상 상품에 한해 적용되며 중복 사용이 제한될 수 있습니다.",
+      "한정 수량 상품은 재고 소진 시 조기 종료될 수 있습니다."
+    ],
+    "tags": [
+      "food",
+      "autumn"
+    ],
+    "featured": false,
+    "createdAt": "2026-09-20",
+    "popularity": 593,
+    "originalUrl": "https://www.mega-mgccoffee.com",
+    "sourceType": "brand-homepage",
+    "demo": true,
+    "timeline": [
+      {
+        "label": "START",
+        "date": "2026-09-20",
+        "text": "혜택 시작"
+      },
+      {
+        "label": "SPECIAL DEAL",
+        "date": "2026-09-22",
+        "text": "기간 한정 특가"
+      },
+      {
+        "label": "END",
+        "date": "2026-09-25",
+        "text": "혜택 종료"
+      }
+    ],
+    "campaignImage": "./assets/images/promotions/coffee.jpg"
+  },
+  {
+    "id": "musinsa-basics",
+    "brandId": "musinsa",
+    "brandName": "MUSINSA",
+    "title": "지금 필요한 베이식 컬렉션",
+    "category": "fashion",
+    "image": "./assets/images/brands/musinsa-panel.svg",
+    "imageAlt": "MUSINSA 대표 로고",
+    "discount": {
+      "max": 35,
+      "label": "UP TO 35%"
+    },
+    "period": {
+      "start": "2026-09-19",
+      "end": "2026-09-27"
+    },
+    "benefits": [
+      {
+        "label": "가을 셀렉션",
+        "text": "인기 브랜드 최대 35% 할인"
+      },
+      {
+        "label": "추가 혜택",
+        "text": "일부 상품 10% 쿠폰"
+      },
+      {
+        "label": "매일 새로운 발견",
+        "text": "기간 한정 데일리 특가"
+      }
+    ],
+    "participatingBrands": [
+      {
+        "name": "Nike",
+        "discount": 30
+      },
+      {
+        "name": "adidas",
+        "discount": 25
+      },
+      {
+        "name": "New Balance",
+        "discount": 20
+      },
+      {
+        "name": "Covernat",
+        "discount": 35
+      }
+    ],
+    "conditions": [
+      "일부 신상품 및 한정판 상품은 혜택에서 제외됩니다.",
+      "추가 쿠폰은 대상 상품에 한해 적용되며 중복 사용이 제한될 수 있습니다.",
+      "한정 수량 상품은 재고 소진 시 조기 종료될 수 있습니다."
+    ],
+    "tags": [
+      "fashion",
+      "autumn"
+    ],
+    "featured": false,
+    "createdAt": "2026-09-19",
+    "popularity": 556,
+    "originalUrl": "https://www.musinsa.com",
+    "sourceType": "brand-homepage",
+    "demo": true,
+    "timeline": [
+      {
+        "label": "START",
+        "date": "2026-09-19",
+        "text": "혜택 시작"
+      },
+      {
+        "label": "SPECIAL DEAL",
+        "date": "2026-09-21",
+        "text": "기간 한정 특가"
+      },
+      {
+        "label": "END",
+        "date": "2026-09-27",
+        "text": "혜택 종료"
+      }
+    ],
+    "campaignImage": "./assets/images/promotions/fashion.jpg"
+  },
+  {
+    "id": "oliveyoung-routine",
+    "brandId": "oliveyoung",
+    "brandName": "OLIVE YOUNG",
+    "title": "가볍게 바꾸는 데일리 루틴",
+    "category": "beauty",
+    "image": "./assets/images/brands/oliveyoung-panel.svg",
+    "imageAlt": "OLIVE YOUNG 대표 로고",
+    "discount": {
+      "max": 40,
+      "label": "UP TO 40%"
+    },
+    "period": {
+      "start": "2026-09-20",
+      "end": "2026-09-29"
+    },
+    "benefits": [
+      {
+        "label": "뷰티 셀렉션",
+        "text": "기초·메이크업 최대 40% 할인"
+      },
+      {
+        "label": "함께 쓰는 즐거움",
+        "text": "선택 상품 기획 세트"
+      },
+      {
+        "label": "나만의 루틴",
+        "text": "일부 상품 추가 쿠폰"
+      }
+    ],
+    "participatingBrands": [
+      {
+        "name": "OLIVE YOUNG",
+        "discount": 40
+      }
+    ],
+    "conditions": [
+      "일부 신상품 및 한정판 상품은 혜택에서 제외됩니다.",
+      "추가 쿠폰은 대상 상품에 한해 적용되며 중복 사용이 제한될 수 있습니다.",
+      "한정 수량 상품은 재고 소진 시 조기 종료될 수 있습니다."
+    ],
+    "tags": [
+      "beauty",
+      "autumn"
+    ],
+    "featured": false,
+    "createdAt": "2026-09-20",
+    "popularity": 519,
+    "originalUrl": "https://www.oliveyoung.co.kr",
+    "sourceType": "brand-homepage",
+    "demo": true,
+    "timeline": [
+      {
+        "label": "START",
+        "date": "2026-09-20",
+        "text": "혜택 시작"
+      },
+      {
+        "label": "SPECIAL DEAL",
+        "date": "2026-09-22",
+        "text": "기간 한정 특가"
+      },
+      {
+        "label": "END",
+        "date": "2026-09-29",
+        "text": "혜택 종료"
+      }
+    ],
+    "campaignImage": "./assets/images/promotions/beauty.jpg"
+  },
+  {
+    "id": "29cm-weekend",
+    "brandId": "29cm",
+    "brandName": "29CM",
+    "title": "주말의 취향을 수집하다",
+    "category": "fashion",
+    "image": "./assets/images/brands/29cm-panel.svg",
+    "imageAlt": "29CM 대표 로고",
+    "discount": {
+      "max": 25,
+      "label": "UP TO 25%"
+    },
+    "period": {
+      "start": "2026-09-18",
+      "end": "2026-09-26"
+    },
+    "benefits": [
+      {
+        "label": "가을 셀렉션",
+        "text": "인기 브랜드 최대 25% 할인"
+      },
+      {
+        "label": "추가 혜택",
+        "text": "일부 상품 10% 쿠폰"
+      },
+      {
+        "label": "매일 새로운 발견",
+        "text": "기간 한정 데일리 특가"
+      }
+    ],
+    "participatingBrands": [
+      {
+        "name": "29CM",
+        "discount": 25
+      }
+    ],
+    "conditions": [
+      "일부 신상품 및 한정판 상품은 혜택에서 제외됩니다.",
+      "추가 쿠폰은 대상 상품에 한해 적용되며 중복 사용이 제한될 수 있습니다.",
+      "한정 수량 상품은 재고 소진 시 조기 종료될 수 있습니다."
+    ],
+    "tags": [
+      "fashion",
+      "autumn"
+    ],
+    "featured": false,
+    "createdAt": "2026-09-18",
+    "popularity": 482,
+    "originalUrl": "https://www.29cm.co.kr",
+    "sourceType": "brand-homepage",
+    "demo": true,
+    "timeline": [
+      {
+        "label": "START",
+        "date": "2026-09-18",
+        "text": "혜택 시작"
+      },
+      {
+        "label": "SPECIAL DEAL",
+        "date": "2026-09-20",
+        "text": "기간 한정 특가"
+      },
+      {
+        "label": "END",
+        "date": "2026-09-26",
+        "text": "혜택 종료"
+      }
+    ],
+    "campaignImage": "./assets/images/promotions/chair.jpg"
+  },
+  {
+    "id": "nike-members",
+    "brandId": "nike",
+    "brandName": "Nike",
+    "title": "멤버를 위한 스포츠 셀렉션",
+    "category": "fashion",
+    "image": "./assets/images/brands/nike-panel.svg",
+    "imageAlt": "Nike 대표 로고",
+    "discount": {
+      "max": 25,
+      "label": "UP TO 25%"
+    },
+    "period": {
+      "start": "2026-09-20",
+      "end": "2026-09-28"
+    },
+    "benefits": [
+      {
+        "label": "가을 셀렉션",
+        "text": "인기 브랜드 최대 25% 할인"
+      },
+      {
+        "label": "추가 혜택",
+        "text": "일부 상품 10% 쿠폰"
+      },
+      {
+        "label": "매일 새로운 발견",
+        "text": "기간 한정 데일리 특가"
+      }
+    ],
+    "participatingBrands": [
+      {
+        "name": "Nike",
+        "discount": 25
+      }
+    ],
+    "conditions": [
+      "일부 신상품 및 한정판 상품은 혜택에서 제외됩니다.",
+      "추가 쿠폰은 대상 상품에 한해 적용되며 중복 사용이 제한될 수 있습니다.",
+      "한정 수량 상품은 재고 소진 시 조기 종료될 수 있습니다."
+    ],
+    "tags": [
+      "fashion",
+      "autumn"
+    ],
+    "featured": false,
+    "createdAt": "2026-09-20",
+    "popularity": 445,
+    "originalUrl": "https://www.nike.com/kr",
+    "sourceType": "brand-homepage",
+    "demo": true,
+    "timeline": [
+      {
+        "label": "START",
+        "date": "2026-09-20",
+        "text": "혜택 시작"
+      },
+      {
+        "label": "SPECIAL DEAL",
+        "date": "2026-09-22",
+        "text": "기간 한정 특가"
+      },
+      {
+        "label": "END",
+        "date": "2026-09-28",
+        "text": "혜택 종료"
+      }
+    ],
+    "campaignImage": "./assets/images/promotions/nike.jpg"
+  },
+  {
+    "id": "muji-season",
+    "brandId": "muji",
+    "brandName": "MUJI",
+    "title": "계절을 정리하는 시간",
+    "category": "lifestyle",
+    "image": "./assets/images/brands/muji-panel.svg",
+    "imageAlt": "MUJI 대표 로고",
+    "discount": {
+      "max": 15,
+      "label": "UP TO 15%"
+    },
+    "period": {
+      "start": "2026-09-21",
+      "end": "2026-09-30"
+    },
+    "benefits": [
+      {
+        "label": "생활의 기본",
+        "text": "선택 상품 최대 15% 할인"
+      },
+      {
+        "label": "공간의 변화",
+        "text": "시즌 컬렉션 특별가"
+      },
+      {
+        "label": "작은 발견",
+        "text": "기간 한정 추천 상품"
+      }
+    ],
+    "participatingBrands": [
+      {
+        "name": "MUJI",
+        "discount": 15
+      }
+    ],
+    "conditions": [
+      "일부 신상품 및 한정판 상품은 혜택에서 제외됩니다.",
+      "추가 쿠폰은 대상 상품에 한해 적용되며 중복 사용이 제한될 수 있습니다.",
+      "한정 수량 상품은 재고 소진 시 조기 종료될 수 있습니다."
+    ],
+    "tags": [
+      "lifestyle",
+      "autumn"
+    ],
+    "featured": false,
+    "createdAt": "2026-09-21",
+    "popularity": 408,
+    "originalUrl": "https://www.muji.com/kr",
+    "sourceType": "brand-homepage",
+    "demo": true,
+    "timeline": [
+      {
+        "label": "START",
+        "date": "2026-09-21",
+        "text": "혜택 시작"
+      },
+      {
+        "label": "SPECIAL DEAL",
+        "date": "2026-09-23",
+        "text": "기간 한정 특가"
+      },
+      {
+        "label": "END",
+        "date": "2026-09-30",
+        "text": "혜택 종료"
+      }
+    ],
+    "campaignImage": "./assets/images/promotions/chair.jpg"
+  },
+  {
+    "id": "starbucks-coffee-time",
+    "brandId": "starbucks",
+    "brandName": "Starbucks",
+    "title": "나만의 커피 타임",
+    "category": "food",
+    "image": "./assets/images/brands/starbucks-panel.svg",
+    "imageAlt": "Starbucks 대표 로고",
+    "discount": {
+      "max": 10,
+      "label": "UP TO 10%"
+    },
+    "period": {
+      "start": "2026-09-19",
+      "end": "2026-09-26"
+    },
+    "benefits": [
+      {
+        "label": "시즌 메뉴",
+        "text": "선택 메뉴 최대 10% 혜택"
+      },
+      {
+        "label": "함께하는 시간",
+        "text": "일부 세트 메뉴 할인"
+      },
+      {
+        "label": "짧고 달콤하게",
+        "text": "기간 한정 멤버 혜택"
+      }
+    ],
+    "participatingBrands": [
+      {
+        "name": "Starbucks",
+        "discount": 10
+      }
+    ],
+    "conditions": [
+      "일부 신상품 및 한정판 상품은 혜택에서 제외됩니다.",
+      "추가 쿠폰은 대상 상품에 한해 적용되며 중복 사용이 제한될 수 있습니다.",
+      "한정 수량 상품은 재고 소진 시 조기 종료될 수 있습니다."
+    ],
+    "tags": [
+      "food",
+      "autumn"
+    ],
+    "featured": false,
+    "createdAt": "2026-09-19",
+    "popularity": 371,
+    "originalUrl": "https://www.starbucks.co.kr",
+    "sourceType": "brand-homepage",
+    "demo": true,
+    "timeline": [
+      {
+        "label": "START",
+        "date": "2026-09-19",
+        "text": "혜택 시작"
+      },
+      {
+        "label": "SPECIAL DEAL",
+        "date": "2026-09-21",
+        "text": "기간 한정 특가"
+      },
+      {
+        "label": "END",
+        "date": "2026-09-26",
+        "text": "혜택 종료"
+      }
+    ],
+    "campaignImage": "./assets/images/promotions/coffee.jpg"
+  }
+]
