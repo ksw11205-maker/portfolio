@@ -1,9 +1,16 @@
 ﻿const http = require('node:http');
 const fs = require('node:fs');
 const path = require('node:path');
-require('./build.cjs')();
 const root = path.join(__dirname, 'dist');
+// Full workspace checkouts rebuild editable CAFÉKOK/OFFER sources. A standalone
+// portfolio ZIP serves its already-built dist when those sibling sources are absent.
+const buildSources = [
+  path.resolve(__dirname, '../cafekok/cafekok-detail/cafekok'),
+  path.resolve(__dirname, '../OFFER/offer')
+];
+if (buildSources.every(source => fs.existsSync(source))) require('./build.cjs')();
 const mime = {'.html':'text/html; charset=utf-8', '.css':'text/css; charset=utf-8', '.js':'text/javascript; charset=utf-8', '.svg':'image/svg+xml', '.jpg':'image/jpeg', '.png':'image/png', '.webp':'image/webp', '.woff2':'font/woff2'};
+const port = Number(process.env.PORT) || 4173;
 http.createServer((req, res) => {
   let pathname;
   try { pathname = decodeURIComponent(new URL(req.url, 'http://localhost').pathname); }
@@ -22,4 +29,4 @@ http.createServer((req, res) => {
     res.setHeader('Content-Type', mime[path.extname(target)] || 'application/octet-stream');
     res.end(data);
   });
-}).listen(4173, '127.0.0.1', () => console.log('Local: http://localhost:4173/work/cafekok/'));
+}).listen(port, '127.0.0.1', () => console.log(`Local: http://localhost:${port}`));

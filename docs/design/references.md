@@ -1,5 +1,11 @@
 # 디자인 레퍼런스 출처와 적용 범위
 
+### 커서·스크롤 반응 — 2026-10-07
+
+- [Insplanet](https://www.insplanet.co.kr/)를 실제 Chrome에서 관찰했다. 기본 32px 반전 원형, 링크·메뉴의 약 80px 확대, 프로젝트의 96px 짙은 원과 문구, 지연 추종, 고정 구간의 단계적 진행을 확인했다. 로고·이미지·문구·소스는 가져오지 않았다.
+- 적용 범위는 메인 포트폴리오의 커서와 휠 반응이다. 링크 확대는 현재 메뉴 크기에 맞춰 64px로 줄이고 실제 클릭 지점에는 즉시 움직이는 점을 남겼다. 레퍼런스의 구간별 휠 고정은 적용하지 않고 기존 연속 스크롤·sticky 구성을 보존했다. 시간 상수의 수치적 동일성을 주장하지 않는다.
+- 스크롤 구현 의존성: [Lenis](https://github.com/darkroomengineering/lenis) 1.3.11, MIT. npm 배포본과 라이선스를 `portfolio-shell/dist/vendor/lenis/`에 보존했다. 런타임 외부 CDN 요청 없이 로컬 모듈 하나만 사용한다.
+
 외부 자료는 판단을 돕는 참고 자료다. 작업 절차는 [AGENTS.md](../../AGENTS.md), 공통 디자인은 [DESIGN.md](../../DESIGN.md), 제품별 적용은 `docs/projects/`가 기준이다.
 
 ## 실제 채택한 문서
@@ -109,7 +115,67 @@
 - 메인 Work 오른쪽 표지에만 같은 위치에서 다음 카드가 아래에서 올라와 이전 카드를 덮는 방식을 직접 구현했다. 기존 왼쪽 프로젝트 요약·진행 표시와 실제 표지 자산·링크를 유지했다. 사이트의 원본 코드·문구·이미지는 복사하지 않았다.
 - 1101px 이상, 높이 650px 이상에서 적용한다. 모바일·태블릿·낮은 화면·동작 축소는 기존 목록과 표지 아래 정보·링크를 사용한다.
 
+## Contact 메탈 명함 참고 — 2026-10-02
+
+- 사용자 지정 움직임 참고: [GreenSock — pointer move](https://codepen.io/GreenSock/pen/qBzaNQy). 영역 중심의 포인터 좌표로 이동과 기울기를 함께 갱신하고 부드럽게 복귀하는 인상을 참고했다. 기존 JavaScript의 단일 프레임 루프로 직접 구현했으며 GSAP을 추가하지 않았다.
+- 조명 인상 참고: [GreenSock — image sequence](https://codepen.io/GreenSock/pen/VwgevYW). 이미지 시퀀스의 소재·조명 인상만 참고했다. 원본 시퀀스나 에셋을 가져오지 않고 CSS 금속 결·넓은 반사광·모서리 하이라이트로 구현했다.
+- 적용 범위는 메인 Contact 명함이다. Q&A 배경은 기존 카드에 회색빛 CSS 그라디언트와 미세 질감을 직접 추가했다. 외부 코드·이미지·문구는 복제하지 않았다.
+
+## KSW 첫 진입 인트로 — 2026-10-02
+
+- 사용자 지정 참고: [GreenSock — MorphSVG convertToPath](https://codepen.io/GreenSock/pen/gagNeR). 도형에서 문자로 SVG 윤곽을 연속 변형하는 원리만 참고했다. 데모의 ABC, 색상, 반복 재생, 소스·이미지는 복제하지 않았다.
+- 메인 첫 탭 세션에만 적용한다. KSW 윤곽은 `portfolio-shell/dist/assets/ksw-intro.svg`에 직접 제작했고, 두 차콜 패널은 왼쪽 위에서 오른쪽 아래로 이어지는 경계를 기준으로 반대 방향으로 열린다.
+- [공식 설치 문서](https://gsap.com/docs/v3/Installation/)와 [MorphSVG 문서](https://gsap.com/docs/v3/Plugins/MorphSVGPlugin/), [공식 3.13.0 배포](https://github.com/greensock/GSAP/tree/3.13.0)를 확인했다. 공식 npm 3.13.0의 GSAP·MorphSVGPlugin 파일을 로컬 `dist/vendor/gsap/`에 원본 그대로 보관했다. 기존 GSAP 전역 객체가 있으면 재사용하며 인트로 생략 시 의존성을 로드하지 않는다.
+- 파일 헤더의 저작권·[GSAP Standard License](https://gsap.com/standard-license/) 고지를 보존하고 배포 경로를 vendor README에 기록했다. 이 라이선스를 MIT로 표시하지 않는다. CodePen 전용 체험 배포는 사용하지 않았다.
+
+## Tools 구성과 자체 제작 선화 — 2026-10-02
+
+- [DOA](https://e-doa.co.kr/)의 AI SOLUTION에서 작은 라벨, 중앙 비주얼, 아래 역량 문장으로 이어지는 구성을 참고했다. 웹 문서와 브라우저 DOM으로 구성은 확인했으나 해당 레퍼런스 화면 캡처는 시간 초과로 확보하지 못했다.
+- 적용 범위는 메인 기존 Tools 영역이다. 세 리본은 `portfolio-shell/dist/assets/method-ribbon.svg`에 직접 제작하고 CSS 입체 배치와 회전으로 구성했다. 원본 그래픽·색상·문구·코드를 복제하지 않았으며 라이브러리를 추가하지 않았다. 툴 로고는 기존 로컬 자산을 재사용한다.
+- About의 `ergonomic-proportions.svg`는 인체 비례와 두 가지 도달 범위를 직접 구성한 선화다. 특정 학회 로고나 기존 로고를 복제하지 않았다. 원·사각형과 인체 비례라는 개념을 활용하며 외부 이미지 자산을 사용하지 않는다.
+
+### Tools 그래픽 교체 — 2026-10-06
+
+- 사용자 요청에 따라 기존 세 리본 대신 표지 배경의 코발트 블루·크롬·유리 재질을 이어받은 단일 조형을 적용했다. 내장 image_gen으로 생성한 [투명 PNG](../../portfolio-shell/dist/assets/tools-chrome.png)를 그대로 사용하며, [최종 생성 프롬프트](../../portfolio-shell/dist/assets/tools-chrome.prompt.txt)를 함께 보존한다. 외부 원본 자산을 사용하지 않았다.
+- CSS의 느린 이동·기울기 모션을 사용한다. 화면 밖·탭 비활성·모션 일시정지 시 멈추고, 동작 축소 설정에서는 정적으로 표시한다. 이전 SVG 파일은 보존하되 현재 화면에서는 사용하지 않는다.
+
+### Tools 뫼비우스 모션과 메뉴 묶음 — 2026-10-06
+
+- 후속 요청의 VS Code 로고처럼 접히는 띠라는 방향을 바탕으로, 반 바퀴 비틀려 닫히는 뫼비우스 곡면을 `portfolio-shell/dist/mobius.js`에서 직접 계산한다. 공식 로고 자산을 사용하지 않았다. 앞서 생성한 PNG는 보존하지만 현재 표시하지 않는다.
+- 블루·크롬 반사는 기존 표지 배경과 코드로 정의한 조명을 사용한다. 실제 곡면의 회전을 WebGL로 렌더링하며 새 외부 라이브러리는 없다. 화면 밖·탭 비활성·일시정지·동작 축소 시 반복 렌더링을 멈춘다.
+- 정적 대체 이미지 `dist/assets/tools-mobius.svg`는 같은 곡면을 투영한 자체 제작 자산이다. `node portfolio-shell/render-mobius-poster.cjs`로 다시 생성한다. JavaScript/WebGL을 쓸 수 없을 때도 띠 형태를 제공한다.
+- 헤더 ABOUT은 `/#tools`로 이동해 작업 방식부터 프로필까지 이어진다. 기존 `/#about` 프로필 직접 링크도 유지하며 두 구간 모두 ABOUT 선택 상태를 표시한다.
+
+### 교차형 띠와 제목 등장 순서 — 2026-10-06
+
+- 원처럼 보인다는 후속 피드백에 따라 띠의 중심 경로를 네 직선과 둥근 접힘으로 재구성했다. 대각선 두 면이 다른 깊이에서 교차하며, 측면으로 완전히 돌아가는 회전 대신 작은 기울기 변화로 교차 실루엣을 유지한다. 기존 블루·크롬 재질과 자체 곡면 기반 정적 대체 이미지를 유지한다.
+- `section-flow.js`는 메인 HOW I WORK·About·Work·Q&A·Contact의 제목을 먼저 타이핑한 뒤 본문을 순차 등장시킨다. 원래 제목 레이아웃과 접근 가능한 전체 이름을 유지하고, 한 번 읽은 내용은 다시 숨기지 않는다. 빠른 스크롤·포커스 이동·동작 축소 설정에서는 대기 없이 내용을 노출한다.
+
 ## 갱신 방법
 
 - 원본 업데이트는 버전·출처·라이선스·해시를 함께 갱신한다. 원본 파일에 프로젝트 지침을 삽입하지 않는다.
 - 프로젝트 해석과 예외는 `docs/projects/`에 기록한다. 새로운 레퍼런스가 공통 기준을 자동으로 변경하지 않는다.
+
+## INSPLANET ? main portfolio transitions (2026-10-06)
+
+- User-selected reference: [INSPLANET](https://www.insplanet.co.kr/). The live page and desktop scroll states were inspected in Chrome. Observational captures are retained in ../../portfolio-shell/.qa/transitions-reference/.
+- Applied only to the main portfolio shell: small lower-right scroll track, dot/ring cursor, large title settling into its content position, and alternating ordinary scrolling with short sticky passages. Implementation uses the existing portfolio palette, native scroll and original local code; no source code, imagery, copy or branding was copied from the reference.
+- The final flow is Hero -> About -> How I Work -> Work -> Q&A -> Contact. This replaces the earlier Tools-first menu arrangement and title typing. ABOUT now targets /#about; /#tools remains available. Updated material and interaction checks are in ../../portfolio-shell/QA.md. Common DESIGN.md rules are unchanged.
+
+### Native project-page transitions ? implementation reference (2026-10-06)
+
+- [Chrome's cross-document View Transitions documentation](https://developer.chrome.com/docs/web-platform/view-transitions/cross-document) informed the same-origin CSS opt-in and the parser-blocking pagereveal listener. Shared files are local original code; no demo visuals or code bundle were copied. Normal links/history remain the navigation mechanism, and unsupported browsers retain ordinary navigation.
+- Scope: the portfolio shell and its generated project entries via portfolio-shell/build.cjs. This does not change the standalone CAF?KOK or OFFER design/source. The user's clarified request covers both section scrolling and actual project-page changes.
+
+## Local typography and project stage — 2026-10-07
+
+- Anton 400 uses the unmodified [official Google Fonts distribution](https://github.com/google/fonts/tree/main/ofl/anton) with SIL OFL 1.1. Pretendard Variable and its original OFL notice are reused from the existing OFFER assets. Files, hashes and upstream links: [local font provenance](../../portfolio-shell/dist/assets/fonts/README.md).
+- Applied only to portfolio headings, descriptions and navigation. Product UI fonts and text inside supplied images remain unchanged. Inter Tight, Noto Serif KR and remote Pretendard requests were removed from the shell.
+- User reference: [INSPLANET Our Projects](https://www.insplanet.co.kr/). The current public page content was fetched, but its live project motion was not observed in this revision. Implementation therefore follows the user's explicit specification: one sticky stage, left description, fixed right window, covers rising on native scroll and copy changing at half coverage. No source code or assets were copied.
+- This supersedes the earlier separate Work title entrance and sticky summary rail. One progress range handles title settling and LG → IVI → CAFÉKOK → OFFER. Mobile, low-height, reduced-motion and no-JS layouts expose all four projects vertically. Current browser evidence is in `portfolio-shell/.qa/type-stage/`; common DESIGN.md is unchanged.
+
+
+## User-supplied asymmetric cobalt/chrome ribbon — 2026-10-07
+
+- Unmodified user-supplied reference copy: [asymmetric-cobalt-ribbon.png](references/screenshots/asymmetric-cobalt-ribbon.png). SHA-256: `fe4e3bc72ff842d8025af11efc081b2723c439b14805bc89cf9013dce9ec2b2d`. Separate publication/license terms were not supplied.
+- Scope: How I Work geometry and cobalt/chrome material only. The PNG is not shipped as a moving image or sampled as a deformed full-image layer. Local WebGL code reconstructs a closed folded belt with stationary camera/light and 14-second longitudinal material transport. Hero environment imagery remains a separate stationary reflection source. No fonts, project layouts, cursor effects or capability text were changed. The sculpture entry translation/scale was removed to keep its geometry fixed.

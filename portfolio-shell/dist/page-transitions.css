@@ -1,0 +1,36 @@
+/* Shared only by the portfolio build. Links and history remain native. */
+:root[data-restoring-layout] { overflow-anchor:none;scroll-behavior:auto; }
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition { navigation: auto; }
+}
+::view-transition { background:#08090b; }
+::view-transition-group(root) { animation-duration:620ms; }
+::view-transition-image-pair(root) { isolation:isolate; }
+::view-transition-old(root) { animation:portfolio-page-away 440ms cubic-bezier(.22,1,.36,1) both;mix-blend-mode:normal; }
+::view-transition-new(root) { animation:portfolio-page-in 620ms cubic-bezier(.22,1,.36,1) both;mix-blend-mode:normal; }
+@keyframes portfolio-page-away {
+  from { opacity:1;transform:scale(1); }
+  to { opacity:0;transform:translateY(-24px) scale(.98); }
+}
+@keyframes portfolio-page-in {
+  from { clip-path:inset(100% 0 0);transform:translateY(32px); }
+  to { clip-path:inset(0);transform:none; }
+}
+:root[data-page-direction="back"]::view-transition-old(root) { animation-name:portfolio-page-back-away; }
+:root[data-page-direction="back"]::view-transition-new(root) { animation-name:portfolio-page-back-in; }
+@keyframes portfolio-page-back-away {
+  from { opacity:1;transform:none; }
+  to { opacity:0;transform:translateY(24px) scale(.98); }
+}
+@keyframes portfolio-page-back-in {
+  from { clip-path:inset(0 0 100%);transform:translateY(-24px); }
+  to { clip-path:inset(0);transform:none; }
+}
+@media (max-width:800px) {
+  ::view-transition-group(root),::view-transition-new(root) { animation-duration:440ms; }
+  ::view-transition-old(root) { animation-duration:300ms; }
+}
+@media (prefers-reduced-motion:reduce) {
+  @view-transition { navigation:none; }
+  ::view-transition-group(*),::view-transition-old(*),::view-transition-new(*) { animation:none!important; }
+}
