@@ -16,17 +16,21 @@ function loadScript(src,signal){
   });
   scriptLoads.set(src,promise);return promise;
 }
-export function preparePortfolioIntro({app,reduced}){
+export function preparePortfolioIntro({app,reduced,force=false}){
   const state={blocksHero:false};
   if(!document.querySelector('.hero')||location.pathname.startsWith('/work/'))return state;
   let seen;
-  try{seen=sessionStorage.getItem(SEEN_KEY);sessionStorage.setItem(SEEN_KEY,'1');}
-  catch{return state;} // Storage restrictions should never block the page.
+  try{
+    seen=sessionStorage.getItem(SEEN_KEY);
+    force ||= sessionStorage.getItem('ksw-replay-intro')==='1';
+    sessionStorage.removeItem('ksw-replay-intro');sessionStorage.setItem(SEEN_KEY,'1');
+  }
+  catch{if(!force)return state;} // Explicit replay also works without storage.
   const middleAnchor=location.hash&&!['#home','#main'].includes(location.hash);
   let returningFromProject=false;
   try{const referrer=new URL(document.referrer);returningFromProject=referrer.origin===location.origin&&referrer.pathname.startsWith('/work/');}catch{}
   const navigationType=performance.getEntriesByType('navigation')[0]?.type;
-  if(seen||middleAnchor||returningFromProject||navigationType==='reload'||navigationType==='back_forward'||scrollY>2||reduced.matches)return state;
+  if(reduced.matches||(!force&&(seen||middleAnchor||returningFromProject||navigationType==='reload'||navigationType==='back_forward'||scrollY>2)))return state;
 
   state.blocksHero=true;
   const overlay=document.createElement('div');

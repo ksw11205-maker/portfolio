@@ -1,0 +1,665 @@
+{
+  "cards": [
+    {
+      "width": 1440,
+      "height": 1000,
+      "layout": [
+        {
+          "i": 0,
+          "height": 660,
+          "questionTop": 62,
+          "answerTop": 538,
+          "lineCount": 2
+        },
+        {
+          "i": 1,
+          "height": 660,
+          "questionTop": 62,
+          "answerTop": 538,
+          "lineCount": 2
+        },
+        {
+          "i": 2,
+          "height": 660,
+          "questionTop": 62,
+          "answerTop": 538,
+          "lineCount": 2
+        },
+        {
+          "i": 3,
+          "height": 660,
+          "questionTop": 62,
+          "answerTop": 538,
+          "lineCount": 2
+        },
+        {
+          "i": 4,
+          "height": 660,
+          "questionTop": 62,
+          "answerTop": 538,
+          "lineCount": 2
+        }
+      ],
+      "answersComplete": true,
+      "imagesVerified": true
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "layout": [
+        {
+          "i": 0,
+          "height": 660,
+          "questionTop": 62,
+          "answerTop": 566,
+          "lineCount": 2
+        },
+        {
+          "i": 1,
+          "height": 660,
+          "questionTop": 62,
+          "answerTop": 566,
+          "lineCount": 2
+        },
+        {
+          "i": 2,
+          "height": 660,
+          "questionTop": 62,
+          "answerTop": 566,
+          "lineCount": 2
+        },
+        {
+          "i": 3,
+          "height": 660,
+          "questionTop": 62,
+          "answerTop": 566,
+          "lineCount": 2
+        },
+        {
+          "i": 4,
+          "height": 660,
+          "questionTop": 62,
+          "answerTop": 566,
+          "lineCount": 2
+        }
+      ],
+      "answersComplete": true,
+      "imagesVerified": true
+    },
+    {
+      "width": 1101,
+      "height": 760,
+      "layout": [
+        {
+          "i": 0,
+          "height": 660,
+          "questionTop": 62,
+          "answerTop": 510,
+          "lineCount": 2
+        },
+        {
+          "i": 1,
+          "height": 660,
+          "questionTop": 62,
+          "answerTop": 510,
+          "lineCount": 2
+        },
+        {
+          "i": 2,
+          "height": 660,
+          "questionTop": 62,
+          "answerTop": 510,
+          "lineCount": 2
+        },
+        {
+          "i": 3,
+          "height": 660,
+          "questionTop": 62,
+          "answerTop": 510,
+          "lineCount": 2
+        },
+        {
+          "i": 4,
+          "height": 660,
+          "questionTop": 62,
+          "answerTop": 510,
+          "lineCount": 2
+        }
+      ],
+      "answersComplete": true,
+      "imagesVerified": true
+    },
+    {
+      "width": 1280,
+      "height": 700,
+      "layout": [
+        {
+          "i": 0,
+          "height": 660,
+          "questionTop": 62,
+          "answerTop": 538,
+          "lineCount": 2
+        },
+        {
+          "i": 1,
+          "height": 660,
+          "questionTop": 62,
+          "answerTop": 538,
+          "lineCount": 2
+        },
+        {
+          "i": 2,
+          "height": 660,
+          "questionTop": 62,
+          "answerTop": 538,
+          "lineCount": 2
+        },
+        {
+          "i": 3,
+          "height": 660,
+          "questionTop": 62,
+          "answerTop": 538,
+          "lineCount": 2
+        },
+        {
+          "i": 4,
+          "height": 660,
+          "questionTop": 62,
+          "answerTop": 538,
+          "lineCount": 2
+        }
+      ],
+      "answersComplete": true,
+      "imagesVerified": true
+    },
+    {
+      "width": 768,
+      "height": 900,
+      "layout": [
+        {
+          "i": 0,
+          "height": 660,
+          "questionTop": 54,
+          "answerTop": 577,
+          "lineCount": 2
+        },
+        {
+          "i": 1,
+          "height": 660,
+          "questionTop": 54,
+          "answerTop": 577,
+          "lineCount": 2
+        },
+        {
+          "i": 2,
+          "height": 660,
+          "questionTop": 54,
+          "answerTop": 577,
+          "lineCount": 2
+        },
+        {
+          "i": 3,
+          "height": 660,
+          "questionTop": 54,
+          "answerTop": 577,
+          "lineCount": 2
+        },
+        {
+          "i": 4,
+          "height": 660,
+          "questionTop": 54,
+          "answerTop": 577,
+          "lineCount": 2
+        }
+      ],
+      "answersComplete": true,
+      "imagesVerified": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "layout": [
+        {
+          "i": 0,
+          "height": 660,
+          "questionTop": 54,
+          "answerTop": 524,
+          "lineCount": 2
+        },
+        {
+          "i": 1,
+          "height": 660,
+          "questionTop": 54,
+          "answerTop": 524,
+          "lineCount": 2
+        },
+        {
+          "i": 2,
+          "height": 660,
+          "questionTop": 54,
+          "answerTop": 524,
+          "lineCount": 2
+        },
+        {
+          "i": 3,
+          "height": 660,
+          "questionTop": 54,
+          "answerTop": 524,
+          "lineCount": 2
+        },
+        {
+          "i": 4,
+          "height": 660,
+          "questionTop": 54,
+          "answerTop": 524,
+          "lineCount": 2
+        }
+      ],
+      "answersComplete": true,
+      "imagesVerified": true
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "layout": [
+        {
+          "i": 0,
+          "height": 660,
+          "questionTop": 54,
+          "answerTop": 498,
+          "lineCount": 2
+        },
+        {
+          "i": 1,
+          "height": 660,
+          "questionTop": 54,
+          "answerTop": 498,
+          "lineCount": 2
+        },
+        {
+          "i": 2,
+          "height": 660,
+          "questionTop": 54,
+          "answerTop": 498,
+          "lineCount": 2
+        },
+        {
+          "i": 3,
+          "height": 660,
+          "questionTop": 54,
+          "answerTop": 498,
+          "lineCount": 2
+        },
+        {
+          "i": 4,
+          "height": 660,
+          "questionTop": 54,
+          "answerTop": 498,
+          "lineCount": 2
+        }
+      ],
+      "answersComplete": true,
+      "imagesVerified": true
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "motion": true,
+      "i": 0,
+      "layout": {
+        "height": 700,
+        "width": 403,
+        "questionTop": 62,
+        "answerTop": 550,
+        "answerBottom": 634,
+        "contentBottom": 666.32,
+        "gap": 24,
+        "lines": 2
+      }
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "motion": true,
+      "i": 1,
+      "layout": {
+        "height": 700,
+        "width": 403,
+        "questionTop": 62,
+        "answerTop": 550,
+        "answerBottom": 634,
+        "contentBottom": 666.32,
+        "gap": 24,
+        "lines": 2
+      }
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "motion": true,
+      "i": 2,
+      "layout": {
+        "height": 700,
+        "width": 403,
+        "questionTop": 62,
+        "answerTop": 550,
+        "answerBottom": 634,
+        "contentBottom": 666.32,
+        "gap": 24,
+        "lines": 2
+      }
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "motion": true,
+      "i": 3,
+      "layout": {
+        "height": 700,
+        "width": 403,
+        "questionTop": 62,
+        "answerTop": 550,
+        "answerBottom": 634,
+        "contentBottom": 666.32,
+        "gap": 24,
+        "lines": 2
+      }
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "motion": true,
+      "i": 4,
+      "layout": {
+        "height": 700,
+        "width": 403,
+        "questionTop": 62,
+        "answerTop": 550,
+        "answerBottom": 662,
+        "contentBottom": 666.32,
+        "gap": 24,
+        "lines": 2
+      }
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "motion": true,
+      "i": 0,
+      "layout": {
+        "height": 756,
+        "width": 500,
+        "questionTop": 72,
+        "answerTop": 624,
+        "answerBottom": 708,
+        "contentBottom": 712,
+        "gap": 24,
+        "lines": 2
+      }
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "motion": true,
+      "i": 1,
+      "layout": {
+        "height": 756,
+        "width": 500,
+        "questionTop": 72,
+        "answerTop": 624,
+        "answerBottom": 708,
+        "contentBottom": 712,
+        "gap": 24,
+        "lines": 2
+      }
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "motion": true,
+      "i": 2,
+      "layout": {
+        "height": 756,
+        "width": 500,
+        "questionTop": 72,
+        "answerTop": 624,
+        "answerBottom": 680,
+        "contentBottom": 712,
+        "gap": 24,
+        "lines": 2
+      }
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "motion": true,
+      "i": 3,
+      "layout": {
+        "height": 756,
+        "width": 500,
+        "questionTop": 72,
+        "answerTop": 624,
+        "answerBottom": 708,
+        "contentBottom": 712,
+        "gap": 24,
+        "lines": 2
+      }
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "motion": true,
+      "i": 4,
+      "layout": {
+        "height": 756,
+        "width": 500,
+        "questionTop": 72,
+        "answerTop": 624,
+        "answerBottom": 708,
+        "contentBottom": 712,
+        "gap": 24,
+        "lines": 2
+      }
+    },
+    {
+      "width": 1101,
+      "height": 760,
+      "motion": true,
+      "i": 0,
+      "layout": {
+        "height": 580,
+        "width": 320,
+        "questionTop": 56,
+        "answerTop": 408,
+        "answerBottom": 520,
+        "contentBottom": 552,
+        "gap": 24,
+        "lines": 2
+      }
+    },
+    {
+      "width": 1101,
+      "height": 760,
+      "motion": true,
+      "i": 1,
+      "layout": {
+        "height": 580,
+        "width": 320,
+        "questionTop": 56,
+        "answerTop": 408,
+        "answerBottom": 520,
+        "contentBottom": 552,
+        "gap": 24,
+        "lines": 2
+      }
+    },
+    {
+      "width": 1101,
+      "height": 760,
+      "motion": true,
+      "i": 2,
+      "layout": {
+        "height": 580,
+        "width": 320,
+        "questionTop": 56,
+        "answerTop": 408,
+        "answerBottom": 520,
+        "contentBottom": 552,
+        "gap": 24,
+        "lines": 2
+      }
+    },
+    {
+      "width": 1101,
+      "height": 760,
+      "motion": true,
+      "i": 3,
+      "layout": {
+        "height": 580,
+        "width": 320,
+        "questionTop": 56,
+        "answerTop": 408,
+        "answerBottom": 548,
+        "contentBottom": 552,
+        "gap": 24,
+        "lines": 2
+      }
+    },
+    {
+      "width": 1101,
+      "height": 760,
+      "motion": true,
+      "i": 4,
+      "layout": {
+        "height": 580,
+        "width": 320,
+        "questionTop": 56,
+        "answerTop": 408,
+        "answerBottom": 548,
+        "contentBottom": 552,
+        "gap": 24,
+        "lines": 2
+      }
+    },
+    {
+      "width": 1280,
+      "height": 700,
+      "motion": true,
+      "i": 0,
+      "layout": {
+        "height": 580,
+        "width": 358,
+        "questionTop": 58,
+        "answerTop": 434,
+        "answerBottom": 546,
+        "contentBottom": 549.84,
+        "gap": 24,
+        "lines": 2
+      }
+    },
+    {
+      "width": 1280,
+      "height": 700,
+      "motion": true,
+      "i": 1,
+      "layout": {
+        "height": 580,
+        "width": 358,
+        "questionTop": 58,
+        "answerTop": 434,
+        "answerBottom": 546,
+        "contentBottom": 549.84,
+        "gap": 24,
+        "lines": 2
+      }
+    },
+    {
+      "width": 1280,
+      "height": 700,
+      "motion": true,
+      "i": 2,
+      "layout": {
+        "height": 580,
+        "width": 358,
+        "questionTop": 58,
+        "answerTop": 434,
+        "answerBottom": 546,
+        "contentBottom": 549.84,
+        "gap": 24,
+        "lines": 2
+      }
+    },
+    {
+      "width": 1280,
+      "height": 700,
+      "motion": true,
+      "i": 3,
+      "layout": {
+        "height": 580,
+        "width": 358,
+        "questionTop": 58,
+        "answerTop": 434,
+        "answerBottom": 546,
+        "contentBottom": 549.84,
+        "gap": 24,
+        "lines": 2
+      }
+    },
+    {
+      "width": 1280,
+      "height": 700,
+      "motion": true,
+      "i": 4,
+      "layout": {
+        "height": 580,
+        "width": 358,
+        "questionTop": 58,
+        "answerTop": 434,
+        "answerBottom": 546,
+        "contentBottom": 549.84,
+        "gap": 24,
+        "lines": 2
+      }
+    }
+  ],
+  "snap": [
+    {
+      "position": 1,
+      "current": 1,
+      "centerY": 500,
+      "angle": "0.000deg",
+      "blur": "blur(0px)"
+    },
+    {
+      "position": 2,
+      "current": 2,
+      "centerY": 500,
+      "angle": "0.000deg",
+      "blur": "blur(0px)"
+    },
+    {
+      "position": 3,
+      "current": 3,
+      "centerY": 500,
+      "angle": "0.000deg",
+      "blur": "blur(0px)"
+    },
+    {
+      "reverse": true,
+      "position": 2
+    }
+  ],
+  "hierarchy": [
+    {
+      "section": "about",
+      "titleFirst": true,
+      "metadataDelayed": true
+    },
+    {
+      "section": "project",
+      "nameBeforeSummary": true
+    }
+  ],
+  "lastCardMotion": true,
+  "errors": []
+}

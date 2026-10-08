@@ -4,14 +4,19 @@ import Lenis from './vendor/lenis/lenis.js';
 export function initScrollMotion({reduced}){
   const fine=matchMedia('(hover:hover) and (pointer:fine)');
   const listeners=new Set();
-  let lenis=null,frame=0,hidden=false;
+  let lenis=null,frame=0,hidden=false,lastSize='',lastFrameTime=0,scrollTime=0,wheelHandler=null;
   const enabled=()=>fine.matches&&!reduced.matches&&!hidden&&!document.hidden&&
     !document.body.classList.contains('motion-paused')&&!document.body.classList.contains('intro-active');
   function update(time){
     frame=0;
-    lenis?.raf(time);
+    // Lenis expects a continuous clock. Our demand-driven RAF sleeps at rest;
+    // passing wall time after that sleep would finish the next wheel in one frame.
+    scrollTime+=lastFrameTime?Math.max(0,time-lastFrameTime):1000/60;
+    lastFrameTime=time;
+    lenis?.raf(scrollTime);
     listeners.forEach(listener=>listener());
     if(lenis?.isScrolling==='smooth')requestUpdate();
+    if(!frame)lastFrameTime=0;
   }
   function requestUpdate(){if(!frame&&!document.hidden)frame=requestAnimationFrame(update);}
   function cancelMomentum(){
@@ -26,18 +31,23 @@ export function initScrollMotion({reduced}){
           if(event.type!=='wheel'||event.ctrlKey||Math.abs(deltaX)>Math.abs(deltaY)){
             cancelMomentum();return false;
           }
+          if(wheelHandler?.({deltaX,deltaY,event}))return false;
           // Reverse from the displayed position, never from an old destination.
           const remaining=lenis.targetScroll-lenis.actualScroll;
           if(deltaY*remaining<0)cancelMomentum();
           requestUpdate();
         }
       });
+      lastSize='';
     }else if(!enabled()&&lenis){lenis.destroy();lenis=null;}
     requestUpdate();
   }
   function resize(){
-    // Resize only after both pinned spacers have settled. Cancel the old target first.
-    cancelMomentum();lenis?.resize();requestUpdate();
+    // Observers can report the same settled layout twice. Do not cancel a wheel
+    // gesture just because an image/font or sticky stage requested a refresh.
+    const size=[document.documentElement.clientWidth,document.documentElement.clientHeight,document.documentElement.scrollHeight].join(':');
+    if(size!==lastSize){lastSize=size;cancelMomentum();lenis?.resize();}
+    requestUpdate();
   }
   const nativeKeys=new Set(['ArrowDown','ArrowUp','PageDown','PageUp','Home','End',' ','Tab']);
   addEventListener('keydown',event=>{if(nativeKeys.has(event.key))cancelMomentum();},{capture:true});
@@ -49,7 +59,7 @@ export function initScrollMotion({reduced}){
     requestUpdate();
   },{passive:true});
   addEventListener('pageshow',()=>{hidden=false;sync();resize();});
-  addEventListener('pagehide',()=>{hidden=true;sync();cancelAnimationFrame(frame);frame=0;});
+  addEventListener('pagehide',()=>{hidden=true;sync();cancelAnimationFrame(frame);frame=0;lastFrameTime=0;});
   document.addEventListener('visibilitychange',sync);
   fine.addEventListener('change',sync);reduced.addEventListener('change',sync);
   let paused=false,intro=false;
@@ -67,8 +77,9 @@ export function initScrollMotion({reduced}){
   return {
     subscribe(listener){listeners.add(listener);requestUpdate();return ()=>listeners.delete(listener);},
     requestUpdate,resize,
-    scrollTo(top,{immediate=false}={}){
-      if(lenis){lenis.scrollTo(top,{immediate,lerp:.24});requestUpdate();}
+    setWheelHandler(handler){wheelHandler=handler;},
+    scrollTo(top,{immediate=false,duration,easing,onComplete}={}){
+      if(lenis){lenis.scrollTo(top,{immediate,lerp:.24,duration,easing,onComplete});requestUpdate();}
       else window.scrollTo({top,behavior:immediate||reduced.matches?'instant':'smooth'});
     }
   };

@@ -1,5 +1,21 @@
 # 디자인 레퍼런스 출처와 적용 범위
 
+### How I Think 카드 이미지 — 사용자 제공 최종본
+
+- 원본 ZIP: `C:/Users/SBS/Downloads/카드 내부 이미지들.zip`. 각 파일을 직접 확인했다. `1.png` 연결된 사각 판 구조물, `2.png` 어두운 전구와 노란 불빛, `3.png` 옆으로 기울어진 다이아몬드·바닥 반사, `4.png` 바닥에 눕힌 실버 AI 글자, `5.png` 맞물린 반투명 유리 퍼즐이다.
+- 다섯 원본 PNG(모두 1254×1254)를 `portfolio-shell/dist/assets/qa/`에 변경 없이 보존했다. ZIP 원본과 저장 파일의 SHA-256이 다섯 개 모두 일치한다. 3번은 검은 배경이며 나머지는 투명 이미지다. 별도 생성·해상도 변경 없이 메인 Q&A 카드의 질문과 답변 사이에 사용한다. 다이아몬드의 검은 바탕은 CSS lighten 합성과 바깥 가장자리 마스크로 카드에 섞으며, 전체 형상과 반사는 contain으로 유지한다. 이미지 자체에 흐림이나 낮은 opacity를 적용하지 않는다.
+
+### 줄 단위 텍스트 등장 — 2026-10-08
+
+- 사용자 지정 참고: [GreenSock · Masked Lines with SplitText](https://codepen.io/GreenSock/pen/LEYqezo). 줄을 마스킹하고 아래에서 위로 순차적으로 드러내는 움직임과 빠르게 시작해 부드럽게 감속하는 이징을 참고했다.
+- 히어로를 제외한 메인 섹션 제목·본문과 프로젝트 설명에 적용한다. 원본 소스·서체·배경·SplitText를 가져오지 않고 `portfolio-shell/dist/text-reveal.js`에서 실제 줄바꿈을 측정해 별도 구현했다. 큰 제목의 줄 전체가 나타난 뒤 소제목·설명·세부 정보·연락 문구를 의미 위계에 따라 순서대로 재생한다. 위치는 기존 스크롤 시계가 제어하고 텍스트는 유한한 브라우저 애니메이션으로 처리한다. 리사이즈·폰트 로딩 시 줄을 다시 계산하며 동작 축소에서는 정적으로 표시한다.
+
+### Q&A → CONTACT 곡선 전환 — 2026-10-08
+
+- 사용자 지정 참고: [GreenSock · SVG Shape Overlays](https://codepen.io/GreenSock/pen/qBedXpg). 원문은 Blake Bowen의 [SVG overlay 실험](https://codepen.io/osublake/pen/BYwgBg)을 기반으로 했다고 명시한다.
+- 적용 범위는 메인 CONTACT 진입 시 곡선이 시간차를 두고 올라오는 원리다. 원본 소스·그라데이션 자산은 복사하지 않고 `portfolio-shell/dist/contact-wave.js`에 별도 구현했다. 기존 블랙 `#08090b`, 블루 `#146bff`, CONTACT 화이트 `#f4f5f6` 사이에 연한 회색 그라데이션 `#c3cbd5` → `#e5e8ed` 층을 추가해 세 겹으로 전환한다.
+- 원본의 클릭·랜덤 지연·GSAP 타임라인 대신 결정적인 지연과 기존 스크롤 시계를 사용하며 역스크롤을 지원한다. 동작 축소·모션 정지 시 기존 흰색 CONTACT를 정적으로 표시한다. 새로운 외부 의존성은 없다.
+
 ### 커서·스크롤 반응 — 2026-10-07
 
 - [Insplanet](https://www.insplanet.co.kr/)를 실제 Chrome에서 관찰했다. 기본 32px 반전 원형, 링크·메뉴의 약 80px 확대, 프로젝트의 96px 짙은 원과 문구, 지연 추종, 고정 구간의 단계적 진행을 확인했다. 로고·이미지·문구·소스는 가져오지 않았다.

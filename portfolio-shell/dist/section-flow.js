@@ -1,22 +1,39 @@
 // A single scroll clock drives all title entrances and the existing Work/Q&A stages.
 // Ordinary sections have a short sticky shell; Work/Q&A reuse their own single pin.
+import {createContactWave} from './contact-wave.js';
+import {createProjectOrbit} from './project-orbit.js';
+import {createTextReveal} from './text-reveal.js';
+import {createProjectSnap} from './project-snap.js';
 export function initSectionFlow({reduced,scrollMotion}){
   const hero=document.querySelector('.hero');if(!hero)return;
   const sections=[...document.querySelectorAll('main > section[id]')];
   const header=document.querySelector('.header'),guide=document.querySelector('.scroll-guide');
   const work=document.querySelector('#work'),qa=document.querySelector('#qa'),contact=document.querySelector('#contact');
+  const contactWave=createContactWave(contact);
   const projects=[...work.querySelectorAll('.project')],cards=[...qa.querySelectorAll('.qa-card')];
+  const covers=projects.map(project=>project.querySelector('.project-visual'));
+  const projectInfo=projects.map(project=>({info:project.querySelector('.project-info'),cover:project.querySelector('.project-visual'),link:project.querySelector('.project-visual').getAttribute('href'),label:project.querySelector('h3').textContent+' 상세 보기'}));
   const workStage=work.querySelector('.work-stage'),qaStage=qa.querySelector('.qa-stage'),deck=qa.querySelector('.qa-deck');
   const coverLink=document.createElement('a');coverLink.className='work-current-link';workStage.append(coverLink);
+  const orbit=createProjectOrbit({work,stage:workStage,projects,covers,infos:projectInfo.map(p=>p.info),coverLink});
+  let listCurrent=0;
+  const visibleCovers=covers.map(()=>0);
+  const listObserver=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>visibleCovers[covers.indexOf(entry.target)]=entry.intersectionRatio);
+    if(work.classList.contains('is-pinned'))return;
+    const nearest=visibleCovers.reduce((best,ratio,index)=>ratio>visibleCovers[best]?index:best,listCurrent);
+    if(visibleCovers[nearest]>0&&nearest!==listCurrent){listCurrent=nearest;scrollMotion.requestUpdate();}
+  },{threshold:[0,.1,.25,.5,.75,1]});
+  covers.forEach(cover=>listObserver.observe(cover));
   const desktop=matchMedia('(min-width:1101px) and (min-height:760px)');
   const desktopQA=matchMedia('(min-width:801px) and (min-height:650px)');
   const clamp=(n,min=0,max=1)=>Math.max(min,Math.min(max,n)),smooth=n=>n*n*(3-2*n);
   const resting=()=>reduced.matches||document.body.classList.contains('motion-paused');
   const labels={home:'Hero',about:'Who I Am',tools:'How I Work',work:'Projects',qa:'How I Think',contact:'Contact'};
   const configs=[
-    {id:'about',heading:'.section-heading',content:'.about-graphic,.about-intro,.profile-details'},
+    {id:'about',heading:'.section-heading',content:'.about-intro,.profile-details'},
     {id:'tools',heading:'.tools-heading',content:'.tools-visual,.tools-capabilities'},
-    {id:'work',heading:'.work-heading',content:'.project-list'},
+    {id:'work',heading:'.work-heading',content:'.project-list,.work-gallery'},
     {id:'qa',heading:'.qa-heading',content:'.qa-deck'},
     {id:'contact',heading:'.contact-heading',content:'.contact-note,.contact-card-stage'}
   ];
@@ -31,7 +48,13 @@ export function initSectionFlow({reduced,scrollMotion}){
     return {...config,section,shell,heading,title,content};
   });
   const workEntry=entries.find(e=>e.id==='work'),qaEntry=entries.find(e=>e.id==='qa');
+  const textReveal=createTextReveal(entries,{requestUpdate:scrollMotion.requestUpdate});
+  const projectSnap=createProjectSnap({entry:workEntry,work,count:projects.length,scrollMotion,resting});
+  scrollMotion.setWheelHandler(projectSnap.handleWheel);
   let layoutFrame=0,active='',lastDestination='',headerLight=false,measured=false,pendingAnchor=null;
+  let headerGeometry,sectionStarts=[],qaGeometry=[],qaWidth=0,heroHeight=0,projectState='',layoutSize='';
+  // Avoid invalidating inherited styles for every offscreen section on every tick.
+  function property(node,key,value){if(node.style.getPropertyValue(key)!==value)node.style.setProperty(key,value);}
   // Measure actual painted text without changing its width, wrapping or final layout.
   function textBounds(title){
     const walker=document.createTreeWalker(title,NodeFilter.SHOW_TEXT),rects=[];let node;
@@ -46,22 +69,44 @@ export function initSectionFlow({reduced,scrollMotion}){
   }
   function measure(){
     layoutFrame=0;const enabled=!resting(),h=innerHeight,w=document.documentElement.clientWidth;
+    const size=w+':'+h,changedSize=layoutSize&&layoutSize!==size;
+    if(changedSize)projectSnap.cancel();
+    let restoreWork=null;
+    if(changedSize&&measured&&!pendingAnchor&&workEntry.enabled&&workEntry.mode==='work'&&scrollY>=workEntry.start&&scrollY<=workEntry.start+workEntry.run){
+      restoreWork=scrollY<workEntry.start+workEntry.intro
+        ?{intro:(scrollY-workEntry.start)/workEntry.intro}
+        :{slot:(scrollY-workEntry.start-workEntry.intro)/workEntry.slot,index:+work.dataset.current};
+    }else if(changedSize&&measured&&!pendingAnchor&&enabled&&desktop.matches&&!work.classList.contains('is-pinned')){
+      const bounds=work.getBoundingClientRect();
+      if(bounds.top<h&&bounds.bottom>header.getBoundingClientRect().bottom){
+        restoreWork={index:listCurrent};
+      }
+    }
+    layoutSize=size;
     const compact=w<=800||h<760;
     const intro=enabled?h*(compact?.42:.7):0;
+    headerGeometry=header.getBoundingClientRect();
     work.classList.toggle('is-pinned',enabled&&desktop.matches);
+    orbit.setPinned(enabled&&desktop.matches,headerGeometry.bottom);
+    if(restoreWork&&!work.classList.contains('is-pinned'))listCurrent=restoreWork.index||0;
     qa.classList.toggle('is-scroll-driven',enabled&&desktopQA.matches);
+    // Measure Q&A's settled heading before the reading track moves it sideways.
+    qa.style.removeProperty('--qa-x');
     entries.forEach(entry=>{
       const {section,shell,title}=entry;
       entry.mode=entry.id==='work'&&desktop.matches?'work':entry.id==='qa'&&desktopQA.matches?'qa':'flow';
-      entry.enabled=enabled;entry.intro=intro;
+      entry.enabled=enabled;entry.intro=entry.id==='contact'&&enabled?h*.95:intro;
+      entry.progress=null;entry.qaProgress=null;
       title.style.removeProperty('transform');
       section.classList.remove('is-entry-pinned');shell.classList.remove('has-entry-pin');
       shell.style.height='';shell.style.marginTop='';section.style.marginTop='';
       section.style.removeProperty('--entry-top');
       if(!enabled){section.style.setProperty('--section-content','1');}
     });
-    // Existing reading distances are unchanged; only the title phase is prepended.
-    workEntry.slot=h*.8;workEntry.run=intro+workEntry.slot*projects.length;
+    contactWave.setEnabled(enabled);
+    // Keep the title entrance; hold the first and last covers before releasing the pin.
+    workEntry.slot=h*.3;workEntry.hold=workEntry.slot*.25;
+    workEntry.run=intro+workEntry.hold*2+workEntry.slot*(projects.length-1);
     if(enabled&&workEntry.mode==='work')work.style.setProperty('--work-height',h+workEntry.run+'px');
     else work.style.removeProperty('--work-height');
     qaEntry.travel=Math.max(0,deck.scrollWidth-qaStage.clientWidth);
@@ -74,11 +119,13 @@ export function initSectionFlow({reduced,scrollMotion}){
       const {section,shell}=entry;
       const margin=getComputedStyle(section).marginTop;
       shell.style.marginTop=margin;section.style.marginTop='0px';
-      entry.pinTop=entry.id==='tools'?header.getBoundingClientRect().bottom+24:0;
+      entry.pinTop=entry.id==='tools'?headerGeometry.bottom+24:0;
       section.style.setProperty('--entry-top',entry.pinTop+'px');
       shell.classList.add('has-entry-pin');section.classList.add('is-entry-pinned');
-      shell.style.height=section.offsetHeight+intro+'px';
+      shell.style.height=section.offsetHeight+entry.intro+'px';
     });
+    textReveal.measure();
+    property(qa,'--qa-answer-size',(Math.ceil(Math.max(...cards.map(card=>card.querySelector('.qa-card-answer').offsetHeight)))+4)+'px');
     entries.forEach(entry=>{
       const {section,shell,title}=entry;
       const stage=entry.mode==='work'?workStage:entry.mode==='qa'?qaStage:section;
@@ -89,84 +136,107 @@ export function initSectionFlow({reduced,scrollMotion}){
       entry.scale=Math.max(1,Math.min(largeFont/font,(w-48)/text.width,h*.5/text.height));
       entry.x=w/2-(box.left+(text.left-box.left+text.width/2)*entry.scale);
       entry.y=h/2-(pinTop+box.top-stageBox.top+(text.top-box.top+text.height/2)*entry.scale);
-      section.dataset.entryStart=String(entry.start);section.dataset.entryDistance=String(intro);
+      section.dataset.entryStart=String(entry.start);section.dataset.entryDistance=String(entry.intro);
       section.dataset.entryMode=enabled?entry.mode:'static';
     });
-    work.dataset.intro=String(intro);work.dataset.slot=String(workEntry.slot);work.dataset.run=String(workEntry.run);
+    work.dataset.intro=String(intro);work.dataset.slot=String(workEntry.slot);work.dataset.hold=String(workEntry.hold);work.dataset.run=String(workEntry.run);
     qa.dataset.intro=String(intro);qa.dataset.run=String(qaEntry.run);
-    guide.style.setProperty('--guide-mobile-top',Math.max(0,hero.offsetTop+hero.offsetHeight-116)+'px');
+    sectionStarts=sections.map(section=>{
+      const entry=entries.find(entry=>entry.section===section);
+      return entry?entry.start+(entry.mode==='flow'?entry.pinTop||0:0):section.getBoundingClientRect().top+scrollY;
+    });
+    heroHeight=hero.offsetHeight;
+    // Geometry is stable during transform/opacity animation. Read only on layout changes.
+    qaWidth=qaStage.clientWidth;
+    qaGeometry=cards.map(card=>({center:card.offsetLeft+card.offsetWidth/2,height:card.offsetHeight}));
+    orbit.measure();
+    projectState='';
     measured=true;update();scrollMotion.resize();
     // Fonts/images may finish after an anchor click. Keep that destination exact
     // until deliberate input takes over; reload/back restoration has no pending anchor.
     if(pendingAnchor)scrollMotion.scrollTo(Math.max(0,anchorPosition(pendingAnchor)),{immediate:true});
+    else if(restoreWork){
+      const destination=workEntry.enabled&&workEntry.mode==='work'
+        ?workEntry.start+(restoreWork.intro!==undefined?workEntry.intro*restoreWork.intro:workEntry.intro+workEntry.slot*(restoreWork.slot??(.25+restoreWork.index)))
+        :covers[restoreWork.index||0].getBoundingClientRect().top+scrollY-headerGeometry.bottom-32;
+      scrollMotion.scrollTo(Math.max(0,destination),{immediate:true});
+    }
   }
   function scheduleLayout(){if(!layoutFrame)layoutFrame=requestAnimationFrame(measure);}
   function update(){
     if(!measured)return;
-    const h=innerHeight,headerBox=header.getBoundingClientRect(),line=Math.max(headerBox.bottom+24,h*.3);
+    const h=innerHeight,y=scrollY,line=Math.max(headerGeometry.bottom+24,h*.3);
     let current=sections[0];
-    sections.forEach(section=>{if(section.getBoundingClientRect().top<=line)current=section;});
+    sections.forEach((section,index)=>{if(sectionStarts[index]-y<=line)current=section;});
     if(current.id!==active){
       active=current.id;
       document.querySelectorAll('[data-nav]').forEach(a=>{
         if(a.dataset.nav===(active==='tools'?'about':active))a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');
       });
     }
-    const destination=sections[sections.indexOf(current)+1]?.id||'contact';
+    const destination=sections[sections.indexOf(current)+1]?.id||'home';
     if(destination!==lastDestination){guide.href='#'+destination;guide.setAttribute('aria-label',labels[destination]+' 섹션으로 이동');lastDestination=destination;}
-    guide.hidden=current===contact||(innerWidth<=800&&current!==hero);
-    const light=contact.getBoundingClientRect().top<=headerBox.top+headerBox.height/2;
-    if(light!==headerLight){headerLight=light;header.classList.toggle('is-light',light);dispatchEvent(new Event('portfolio:surface'));}
+    guide.hidden=false;guide.classList.toggle('is-end',destination==='home');
     const atRest=resting();
-    const heroProgress=smooth(clamp((scrollY-hero.offsetHeight*.18)/(hero.offsetHeight*.82)));
-    hero.style.setProperty('--hero-presence',atRest?'1':String(1-heroProgress*.82));
+    const heroProgress=smooth(clamp((y-heroHeight*.18)/(heroHeight*.82)));
+    property(hero,'--hero-presence',atRest?'1':String(1-heroProgress*.82));
     entries.forEach(entry=>{
-      const progress=entry.enabled?clamp((scrollY-entry.start)/entry.intro):1,p=smooth(progress);
-      const content=smooth(clamp((progress-.62)/.38));
+      const progress=entry.enabled?clamp((y-entry.start)/entry.intro):1;
+      const content=textReveal.renderEntry(entry,progress,atRest)?1:0;
+      // One reversible timeline, with overlap rather than completion timers.
+      const isContact=entry.id==='contact';
+      const opacity=progress>(isContact?.56:0)?1:0;
+      const p=smooth(clamp(isContact?(progress-.56)/.44:(progress-.2)/.65));
+      if(isContact)contactWave.render(progress);
       entry.progress=progress;
-      entry.title.style.transform=progress<1?`translate3d(${entry.x*(1-p)}px,${entry.y*(1-p)}px,0) scale(${entry.scale+(1-entry.scale)*p})`:'';
-      entry.section.style.setProperty('--section-content',String(content));
-      entry.section.style.setProperty('--entry-interaction',content>.05?'auto':'none');
+      entry.title.style.opacity=String(opacity);
+      entry.title.style.transform=p<1?`translate3d(${entry.x*(1-p)}px,${entry.y*(1-p)}px,0) scale(${entry.scale+(1-entry.scale)*p})`:'';
+      entry.title.style.willChange=progress>0&&progress<1?'transform, opacity':'auto';
+      property(entry.section,'--section-content',String(content));
+      property(entry.section,'--entry-interaction',content>.05?'auto':'none');
       entry.section.dataset.entryProgress=progress.toFixed(4);
     });
+    const light=contactWave.isLightAt(headerGeometry.left+headerGeometry.width/2,headerGeometry.top+headerGeometry.height/2);
+    if(light!==headerLight){headerLight=light;header.classList.toggle('is-light',light);dispatchEvent(new Event('portfolio:surface'));}
+    guide.classList.toggle('is-light',contactWave.isLightAt(innerWidth-48,innerHeight-80)||y+innerHeight>=document.documentElement.scrollHeight-8);
     const wp=workEntry.progress;
     if(workEntry.enabled&&workEntry.mode==='work'){
-      const distance=clamp(scrollY-workEntry.start-workEntry.intro,0,workEntry.run-workEntry.intro);
-      work.style.setProperty('--work-content',work.style.getPropertyValue('--section-content'));
-      let current=0;
-      projects.forEach((project,index)=>{
-        const cover=project.querySelector('.project-visual');
-        const fraction=index===0?1:clamp((distance-workEntry.slot*(index-1)-workEntry.slot*.55)/(workEntry.slot*.45));
-        cover.style.setProperty('--cover-inset',(1-fraction)*100+'%');cover.style.setProperty('--cover-y',(1-fraction)*100+'%');
-        if(fraction>=.5)current=index;
-      });
-      setProject(current,true,wp>=.999);
+      const distance=clamp(y-workEntry.start-workEntry.intro,0,workEntry.run-workEntry.intro);
+      property(work,'--work-content',work.style.getPropertyValue('--section-content'));
+      const rawPosition=clamp((distance-workEntry.hold)/workEntry.slot,0,projects.length-1),nearest=Math.round(rawPosition);
+      const position=Math.abs(rawPosition-nearest)*workEntry.slot<=1?nearest:rawPosition;
+      orbit.render(position);setProject(Math.round(position),true,wp>=.999);
+      textReveal.renderProjects(position,false);
     }else{
       work.style.removeProperty('--work-content');
-      projects.forEach(project=>{const cover=project.querySelector('.project-visual');cover.style.removeProperty('--cover-inset');cover.style.removeProperty('--cover-y');});
-      setProject(0,false);
+      setProject(listCurrent,false);
+      textReveal.renderProjects(0,atRest,false);
     }
     if(qaEntry.enabled&&qaEntry.mode==='qa'){
-      const progress=clamp((scrollY-qaEntry.start-qaEntry.intro)/qaEntry.run),shift=progress*qaEntry.travel;
-      qa.style.setProperty('--qa-x',-shift+'px');
-      qa.style.setProperty('--qa-heading-opacity',String(1-clamp((shift-qaStage.clientWidth*.06)/(qaStage.clientWidth*.28))));
-      cards.forEach((card,index)=>{
-        const center=card.offsetLeft+card.offsetWidth/2-shift;
-        const tilt=index===0?0:clamp((center-qaStage.clientWidth*.55)/(qaStage.clientWidth*.65))*(1-progress),direction=index%2?-1:1;
-        card.style.setProperty('--qa-angle',direction*3*tilt+'deg');card.style.setProperty('--qa-lift',direction*card.offsetHeight*.08*tilt+'px');
-      });
+      const progress=clamp((y-qaEntry.start-qaEntry.intro)/qaEntry.run),shift=progress*qaEntry.travel;
+      if(progress!==qaEntry.qaProgress){
+        qaEntry.qaProgress=progress;
+        property(qa,'--qa-x',-shift+'px');
+        cards.forEach((card,index)=>{
+          const center=qaGeometry[index].center-shift;
+          const tilt=index===0?0:clamp((center-qaWidth*.55)/(qaWidth*.65))*(1-progress),direction=index%2?-1:1;
+          property(card,'--qa-angle',direction*3*tilt+'deg');property(card,'--qa-lift',direction*qaGeometry[index].height*.08*tilt+'px');
+        });
+      }
     }else{
-      ['--qa-x','--qa-heading-opacity'].forEach(key=>qa.style.removeProperty(key));
+      qa.style.removeProperty('--qa-x');
       cards.forEach(card=>{card.style.removeProperty('--qa-angle');card.style.removeProperty('--qa-lift');});
     }
+    projectSnap.observe(y);
   }
   function setProject(current,pinned,ready=true){
+    const state=current+':'+pinned+':'+ready;if(state===projectState)return;projectState=state;
     work.dataset.current=String(current);
-    coverLink.href=projects[current].querySelector('.project-visual').getAttribute('href');
-    coverLink.setAttribute('aria-label',projects[current].querySelector('h3').textContent+' 상세 보기');coverLink.inert=!pinned||!ready;
-    const activeInfo=projects[current].querySelector('.project-info');activeInfo.inert=false;
+    coverLink.href=projectInfo[current].link;
+    coverLink.setAttribute('aria-label',projectInfo[current].label);coverLink.inert=!pinned||!ready;
+    const activeInfo=projectInfo[current].info;activeInfo.inert=false;
     projects.forEach((project,index)=>{
-      const info=project.querySelector('.project-info'),cover=project.querySelector('.project-visual'),inactive=pinned&&(index!==current||!ready);
+      const {info,cover}=projectInfo[index],inactive=pinned&&(index!==current||!ready);
       if(inactive&&info.contains(document.activeElement)){
         if(ready)activeInfo.querySelector('.liquid').focus({preventScroll:true});
         else{workEntry.title.tabIndex=-1;workEntry.title.focus({preventScroll:true});}
@@ -179,6 +249,7 @@ export function initSectionFlow({reduced,scrollMotion}){
   }
   const schedule=scrollMotion.requestUpdate;
   function anchorPosition(target){
+    if(target===hero)return 0;
     const entry=entries.find(entry=>entry.section===target);
     if(entry?.enabled)return entry.start;
     return target.getBoundingClientRect().top+scrollY-header.getBoundingClientRect().bottom-24;
@@ -194,6 +265,7 @@ export function initSectionFlow({reduced,scrollMotion}){
   // Keyboard focus reveals content by completing the same scroll phase.
   entries.forEach(entry=>entry.section.addEventListener('focusin',event=>{
     if(event.target===entry.section||event.target===entry.title||!entry.content.some(node=>node.contains(event.target)))return;
+    textReveal.finishEntry(entry);
     if(entry.enabled&&entry.progress<1)scrollMotion.scrollTo(entry.start+entry.intro,{immediate:true});
     if(entry===qaEntry&&entry.enabled&&entry.mode==='qa'){
       const card=event.target.closest('.qa-card');if(!card)return;
