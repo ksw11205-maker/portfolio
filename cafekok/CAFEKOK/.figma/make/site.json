@@ -1,0 +1,10 @@
+{
+  "description": "Personalized cafe recommendations based on user preferences and visit purposes with interactive filtering, saving, and detailed cafe comparisons.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

@@ -1,0 +1,17 @@
+@import "./styles/fonts.css";
+@import "tailwindcss";
+@import "./styles/theme.css";
+
+@layer base {
+  body { @apply bg-[#e5e0d7] text-foreground font-sans antialiased; word-break: keep-all; }
+  button, a, select { @apply touch-manipulation; }
+  button { @apply cursor-pointer; }
+  button:disabled { @apply cursor-not-allowed opacity-40; }
+  button, input, select { @apply focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary; }
+  ::selection { @apply bg-primary text-primary-foreground; }
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar { display: none; }
+}
