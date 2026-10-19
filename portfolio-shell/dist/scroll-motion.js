@@ -4,7 +4,7 @@ import Lenis from './vendor/lenis/lenis.js';
 export function initScrollMotion({reduced}){
   const fine=matchMedia('(hover:hover) and (pointer:fine)');
   const listeners=new Set();
-  let lenis=null,frame=0,hidden=false,lastSize='',lastFrameTime=0,scrollTime=0,wheelHandler=null;
+  let lenis=null,frame=0,hidden=false,lastSize='',lastFrameTime=0,scrollTime=0;
   const enabled=()=>fine.matches&&!reduced.matches&&!hidden&&!document.hidden&&
     !document.body.classList.contains('motion-paused')&&!document.body.classList.contains('intro-active');
   function update(time){
@@ -31,7 +31,6 @@ export function initScrollMotion({reduced}){
           if(event.type!=='wheel'||event.ctrlKey||Math.abs(deltaX)>Math.abs(deltaY)){
             cancelMomentum();return false;
           }
-          if(wheelHandler?.({deltaX,deltaY,event}))return false;
           // Reverse from the displayed position, never from an old destination.
           const remaining=lenis.targetScroll-lenis.actualScroll;
           if(deltaY*remaining<0)cancelMomentum();
@@ -77,7 +76,6 @@ export function initScrollMotion({reduced}){
   return {
     subscribe(listener){listeners.add(listener);requestUpdate();return ()=>listeners.delete(listener);},
     requestUpdate,resize,
-    setWheelHandler(handler){wheelHandler=handler;},
     scrollTo(top,{immediate=false,duration,easing,onComplete}={}){
       if(lenis){lenis.scrollTo(top,{immediate,lerp:.24,duration,easing,onComplete});requestUpdate();}
       else window.scrollTo({top,behavior:immediate||reduced.matches?'instant':'smooth'});

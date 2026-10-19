@@ -3,7 +3,6 @@
 import {createContactWave} from './contact-wave.js';
 import {createProjectOrbit} from './project-orbit.js';
 import {createTextReveal} from './text-reveal.js';
-import {createProjectSnap} from './project-snap.js';
 export function initSectionFlow({reduced,scrollMotion}){
   const hero=document.querySelector('.hero');if(!hero)return;
   const sections=[...document.querySelectorAll('main > section[id]')];
@@ -33,7 +32,7 @@ export function initSectionFlow({reduced,scrollMotion}){
   const configs=[
     {id:'about',heading:'.section-heading',content:'.about-intro,.profile-details'},
     {id:'tools',heading:'.tools-heading',content:'.tools-visual,.tools-capabilities'},
-    {id:'work',heading:'.work-heading',content:'.project-list,.work-gallery'},
+    {id:'work',heading:'.work-heading',content:'.project-list,.work-gallery,.project-info'},
     {id:'qa',heading:'.qa-heading',content:'.qa-deck'},
     {id:'contact',heading:'.contact-heading',content:'.contact-note,.contact-card-stage'}
   ];
@@ -41,16 +40,14 @@ export function initSectionFlow({reduced,scrollMotion}){
     const section=document.getElementById(config.id),heading=section.querySelector(config.heading),title=heading.querySelector('h2');
     const shell=document.createElement('div');shell.className='section-entry-shell';section.before(shell);shell.append(section);
     section.classList.add('entry-section');title.classList.add('entry-title');
-    const content=[...section.querySelectorAll(config.content),...heading.querySelectorAll('.eyebrow,.qa-scroll-hint')];
+    const content=[...section.querySelectorAll(config.content)];
     content.forEach(node=>node.classList.add('entry-content'));
-    // Scroll progress is the only owner of the entrance, including reverse scroll.
+    // The section owns a single, once-only two-group entrance.
     section.querySelectorAll('.reveal').forEach(node=>node.classList.remove('reveal','observed','visible'));
     return {...config,section,shell,heading,title,content};
   });
   const workEntry=entries.find(e=>e.id==='work'),qaEntry=entries.find(e=>e.id==='qa');
   const textReveal=createTextReveal(entries,{requestUpdate:scrollMotion.requestUpdate});
-  const projectSnap=createProjectSnap({entry:workEntry,work,count:projects.length,scrollMotion,resting});
-  scrollMotion.setWheelHandler(projectSnap.handleWheel);
   let layoutFrame=0,active='',lastDestination='',headerLight=false,measured=false,pendingAnchor=null;
   let headerGeometry,sectionStarts=[],qaGeometry=[],qaWidth=0,heroHeight=0,projectState='',layoutSize='';
   // Avoid invalidating inherited styles for every offscreen section on every tick.
@@ -70,7 +67,6 @@ export function initSectionFlow({reduced,scrollMotion}){
   function measure(){
     layoutFrame=0;const enabled=!resting(),h=innerHeight,w=document.documentElement.clientWidth;
     const size=w+':'+h,changedSize=layoutSize&&layoutSize!==size;
-    if(changedSize)projectSnap.cancel();
     let restoreWork=null;
     if(changedSize&&measured&&!pendingAnchor&&workEntry.enabled&&workEntry.mode==='work'&&scrollY>=workEntry.start&&scrollY<=workEntry.start+workEntry.run){
       restoreWork=scrollY<workEntry.start+workEntry.intro
@@ -105,8 +101,9 @@ export function initSectionFlow({reduced,scrollMotion}){
     });
     contactWave.setEnabled(enabled);
     // Keep the title entrance; hold the first and last covers before releasing the pin.
+    workEntry.intro=0; // The finite title entrance no longer consumes wheel distance.
     workEntry.slot=h*.3;workEntry.hold=workEntry.slot*.25;
-    workEntry.run=intro+workEntry.hold*2+workEntry.slot*(projects.length-1);
+    workEntry.run=workEntry.intro+workEntry.hold*2+workEntry.slot*(projects.length-1);
     if(enabled&&workEntry.mode==='work')work.style.setProperty('--work-height',h+workEntry.run+'px');
     else work.style.removeProperty('--work-height');
     qaEntry.travel=Math.max(0,deck.scrollWidth-qaStage.clientWidth);
@@ -139,7 +136,7 @@ export function initSectionFlow({reduced,scrollMotion}){
       section.dataset.entryStart=String(entry.start);section.dataset.entryDistance=String(entry.intro);
       section.dataset.entryMode=enabled?entry.mode:'static';
     });
-    work.dataset.intro=String(intro);work.dataset.slot=String(workEntry.slot);work.dataset.hold=String(workEntry.hold);work.dataset.run=String(workEntry.run);
+    work.dataset.intro=String(workEntry.intro);work.dataset.slot=String(workEntry.slot);work.dataset.hold=String(workEntry.hold);work.dataset.run=String(workEntry.run);
     qa.dataset.intro=String(intro);qa.dataset.run=String(qaEntry.run);
     sectionStarts=sections.map(section=>{
       const entry=entries.find(entry=>entry.section===section);
@@ -181,18 +178,21 @@ export function initSectionFlow({reduced,scrollMotion}){
     const heroProgress=smooth(clamp((y-heroHeight*.18)/(heroHeight*.82)));
     property(hero,'--hero-presence',atRest?'1':String(1-heroProgress*.82));
     entries.forEach(entry=>{
-      const progress=entry.enabled?clamp((y-entry.start)/entry.intro):1;
-      const content=textReveal.renderEntry(entry,progress,atRest)?1:0;
-      // One reversible timeline, with overlap rather than completion timers.
+      const progress=entry.enabled&&entry.intro?clamp((y-entry.start)/entry.intro):1;
+      const reveal=textReveal.renderEntry(entry,progress,atRest),content=reveal.content;
+      // Reuse the large title settling as group one; no second title animation.
       const isContact=entry.id==='contact';
-      const opacity=progress>(isContact?.56:0)?1:0;
-      const p=smooth(clamp(isContact?(progress-.56)/.44:(progress-.2)/.65));
+      const opacity=Math.min(1,reveal.title*4);
+      const p=1-Math.pow(1-reveal.title,4);
       if(isContact)contactWave.render(progress);
       entry.progress=progress;
       entry.title.style.opacity=String(opacity);
       entry.title.style.transform=p<1?`translate3d(${entry.x*(1-p)}px,${entry.y*(1-p)}px,0) scale(${entry.scale+(1-entry.scale)*p})`:'';
-      entry.title.style.willChange=progress>0&&progress<1?'transform, opacity':'auto';
+      entry.title.style.willChange=reveal.title>0&&reveal.title<1?'transform, opacity':'auto';
       property(entry.section,'--section-content',String(content));
+      property(entry.section,'--section-heading',String(opacity));
+      property(entry.section,'--entry-content-y',32*(1-content)+'px');
+      property(entry.section,'--entry-label-y',32*(1-p)+'px');
       property(entry.section,'--entry-interaction',content>.05?'auto':'none');
       entry.section.dataset.entryProgress=progress.toFixed(4);
     });
@@ -205,12 +205,10 @@ export function initSectionFlow({reduced,scrollMotion}){
       property(work,'--work-content',work.style.getPropertyValue('--section-content'));
       const rawPosition=clamp((distance-workEntry.hold)/workEntry.slot,0,projects.length-1),nearest=Math.round(rawPosition);
       const position=Math.abs(rawPosition-nearest)*workEntry.slot<=1?nearest:rawPosition;
-      orbit.render(position);setProject(Math.round(position),true,wp>=.999);
-      textReveal.renderProjects(position,false);
+      orbit.render(position);setProject(Math.round(position),true,work.style.getPropertyValue('--section-content')==='1');
     }else{
       work.style.removeProperty('--work-content');
       setProject(listCurrent,false);
-      textReveal.renderProjects(0,atRest,false);
     }
     if(qaEntry.enabled&&qaEntry.mode==='qa'){
       const progress=clamp((y-qaEntry.start-qaEntry.intro)/qaEntry.run),shift=progress*qaEntry.travel;
@@ -227,7 +225,6 @@ export function initSectionFlow({reduced,scrollMotion}){
       qa.style.removeProperty('--qa-x');
       cards.forEach(card=>{card.style.removeProperty('--qa-angle');card.style.removeProperty('--qa-lift');});
     }
-    projectSnap.observe(y);
   }
   function setProject(current,pinned,ready=true){
     const state=current+':'+pinned+':'+ready;if(state===projectState)return;projectState=state;
@@ -251,7 +248,7 @@ export function initSectionFlow({reduced,scrollMotion}){
   function anchorPosition(target){
     if(target===hero)return 0;
     const entry=entries.find(entry=>entry.section===target);
-    if(entry?.enabled)return entry.start;
+    if(entry?.enabled)return entry.start+(entry.id==='contact'?entry.intro:0);
     return target.getBoundingClientRect().top+scrollY-header.getBoundingClientRect().bottom-24;
   }
   document.addEventListener('click',event=>{
@@ -304,8 +301,8 @@ export function initSectionFlow({reduced,scrollMotion}){
 function initCursor({reduced,scrollMotion}){
   const cursor=document.querySelector('.site-cursor');if(!cursor||cursor.dataset.initialized)return;
   const fine=matchMedia('(hover:hover) and (pointer:fine)'),root=document.documentElement;
-  const dot=cursor.querySelector('.cursor-dot'),follower=cursor.querySelector('.cursor-follower');
-  if(!dot||!follower)return;
+  const follower=cursor.querySelector('.cursor-follower');
+  if(!follower)return;
   cursor.dataset.initialized='true';
   const projectTarget='.project-visual,.work-current-link';
   const fields='input,textarea,select,[contenteditable]:not([contenteditable="false"]),[data-native-cursor]';
@@ -337,7 +334,6 @@ function initCursor({reduced,scrollMotion}){
     }
     cursor.classList.toggle('is-link',!!interactive);
     cursor.classList.toggle('is-light',!!target.closest('#contact,.contact-card,.site-footer.is-light,.header.is-light'));
-    position(dot,x,y);
     if(!visible){
       rx=x;ry=y;position(follower,rx,ry);
       visible=true;cursor.classList.add('is-visible');root.classList.add('cursor-ready');
