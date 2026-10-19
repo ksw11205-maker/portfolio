@@ -47,6 +47,7 @@ check('build is deterministic and preserves product sources',()=>{
   const {document}=parseHTML(home);
   assert.equal(document.querySelectorAll('.project').length,4);
   assert.equal(document.querySelectorAll('.project-info .liquid').length,0);
+  assert.equal(document.querySelectorAll('.cover-action').length,0);
   assert.equal(document.querySelectorAll('.qa-card').length,5);
   assert.equal(document.querySelectorAll('link[rel="icon"]').length,1);
   assert.equal(document.querySelectorAll('script[src="/intro-boot.js"]').length,1);
@@ -95,15 +96,18 @@ check('Contact completion remains light after reverse scroll and mode changes',(
   assert.ok(contact.classList.contains('wave-complete'));assert.equal(contact.querySelector('svg').innerHTML,final);
   assert.equal(wave.isLightAt(500,100),true);assert.equal(wave.isLightAt(500,-100),false);
 });
-check('title and content finish as two groups and never restart on reverse scroll',()=>{
+check('content stays hidden until the title settles, then fades as one group',()=>{
   const e=env('<section><div class="heading"><h2>Who I Am</h2></div><div class="content"><p>첫 문장</p><p>둘째 문장</p></div></section>');
   const section=e.document.querySelector('section'),title=section.querySelector('h2');
   const entry={id:'about',section,title,heading:section.querySelector('.heading'),content:[section.querySelector('.content')],start:100,intro:700};
   const reveal=e.load('text-reveal.js','createTextReveal')([entry]);reveal.measure();
   e.context.scrollY=100;e.time(0);assert.equal(reveal.renderEntry(entry,0,false).title,0);
-  e.time(450);const middle=reveal.renderEntry(entry,.5,false);assert.ok(middle.title>0&&middle.title<1&&middle.content>0);
-  e.time(1000);assert.equal(reveal.renderEntry(entry,1,false).content,1);
-  e.context.scrollY=0;assert.equal(reveal.renderEntry(entry,0,false).title,1);
+  e.time(450);const middle=reveal.renderEntry(entry,.5,false);assert.ok(middle.title>0&&middle.title<1);assert.equal(middle.content,0);
+  e.time(1000);assert.equal(reveal.renderEntry(entry,.9,false).content,0);
+  e.time(1100);assert.equal(reveal.renderEntry(entry,1,false).content,0);
+  e.time(1400);const fading=reveal.renderEntry(entry,1,false).content;assert.ok(fading>0&&fading<1);
+  e.time(1800);assert.equal(reveal.renderEntry(entry,1,false).content,1);
+  e.context.scrollY=0;const reverse=reveal.renderEntry(entry,0,false);assert.equal(reverse.title,1);assert.equal(reverse.content,0);
   assert.equal(title.textContent.replace(/\u00a0/g,' '),'Who I Am');
   assert.equal(section.querySelectorAll('.entry-content').length,1);
   assert.equal(section.querySelectorAll('.content p[style]').length,0);

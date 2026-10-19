@@ -204,3 +204,5 @@
 - 동작 참고: [QWzZwxR](https://codepen.io/GreenSock/pen/QWzZwxR)의 스크램블, [LEYqezo](https://codepen.io/GreenSock/pen/LEYqezo)의 줄 마스크 상승, [dPMjJWv](https://codepen.io/GreenSock/pen/dPMjJWv)의 글자 회전. 이번에는 웹 문서/소스로 원리를 확인했으며 실제 브라우저에서 원본과 구현을 비교 재생하지 못했다. 첫 두 제목/Projects/Q&A에 맞춰 직접 구현했고 원본의 반복 타임라인이나 GSAP SplitText 의존성을 복사하지 않았다.
 - Figma·Photoshop·Illustrator·After Effects·HTML·CSS·JavaScript 표시는 [Devicon v2.17.0](https://github.com/devicons/devicon/tree/v2.17.0/icons)의 SVG를 `dist/assets/tools/`에 보관한다. 원본 경로는 해당 폴더 README, MIT LICENSE도 같은 폴더에 둔다. 상표 자체의 권리는 각 소유자에게 있다. GPT는 기존 공식 Blossom, Codex는 기존의 자체 터미널 기호를 유지했다.
 - 예전 섹션의 뫼비우스/링/KSW 기록은 과거 제작 이력이다. 현재 실행 코드는 새 심볼과 두 그룹 등장으로 교체됐다.
+
+- 2026-10-19 후속: Photoshop/Illustrator는 같은 Devicon 버전의 original SVG로 교체했다. After Effects는 원래 윤곽의 두 색을 보라/네이비로 조정했다. 심볼 앞면 반사 변화는 직접 작성한 셰이더 보완이며 외부 재질·텍스처를 사용하지 않는다.

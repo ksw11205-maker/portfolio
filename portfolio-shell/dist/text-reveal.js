@@ -22,7 +22,7 @@ export function createTextReveal(entries,{requestUpdate=()=>{}}={}){
         node.classList.add('title-mask');node.setAttribute('aria-hidden','true');node.replaceChildren(line);lines.push(line);
       });
     }
-    return [entry,{start:null,finished:false,glyphs,lines,duration:entry.id==='work'?920:760,lastStep:-1}];
+    return [entry,{start:null,finished:false,contentStart:null,contentComplete:false,glyphs,lines,duration:entry.id==='work'?920:760,lastStep:-1}];
   }));
   function paint(entry,p){
     const state=states.get(entry),step=Math.floor(p*22);if(step===state.lastStep&&p!==1&&!['qa','work'].includes(entry.id))return;state.lastStep=step;
@@ -63,14 +63,24 @@ export function createTextReveal(entries,{requestUpdate=()=>{}}={}){
     renderEntry(entry,progress,resting){
       const state=states.get(entry),now=performance.now();
       if(resting){finishEntry(entry);return {title:1,content:1};}
-      if(state.finished)return {title:1,content:1};
       const gate=entry.id==='contact'?entry.start+entry.intro*.56:entry.start-innerHeight*.12;
       if(state.start===null&&scrollY>=gate){state.start=now;entry.section.dataset.revealState='playing';}
       if(state.start===null)return {title:0,content:0};
-      const elapsed=now-state.start,p=clamp(elapsed/state.duration);paint(entry,p);
-      const content=1-Math.pow(1-clamp((elapsed-200)/600),4);
-      if(scrollY>entry.start+entry.intro+innerHeight||(p===1&&content===1)){finishEntry(entry);return {title:1,content:1};}
-      requestUpdate();return {title:p,content};
+      const p=state.finished?1:clamp((now-state.start)/state.duration);if(!state.finished)paint(entry,p);
+      if(p===1)state.finished=true;
+      // Only start the content clock after both the lettering and title placement finish.
+      if(progress<.998||p<1){
+        state.contentStart=null;state.contentComplete=false;
+        entry.section.dataset.revealState='title';
+        if(p<1)requestUpdate();
+        return {title:p,content:0};
+      }
+      if(state.contentStart===null)state.contentStart=now;
+      const q=clamp((now-state.contentStart)/620),content=1-Math.pow(1-q,3);
+      state.contentComplete=q===1;
+      entry.section.dataset.revealState=q===1?'shown':'content';
+      if(q<1)requestUpdate();
+      return {title:1,content};
     },
     finishEntry
   };

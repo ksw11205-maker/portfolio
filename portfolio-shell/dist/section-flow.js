@@ -13,7 +13,7 @@ export function initSectionFlow({reduced,scrollMotion}){
   const covers=projects.map(project=>project.querySelector('.project-visual'));
   const projectInfo=projects.map(project=>({info:project.querySelector('.project-info'),cover:project.querySelector('.project-visual'),link:project.querySelector('.project-visual').getAttribute('href'),label:project.querySelector('h3').textContent+' 상세 보기'}));
   const workStage=work.querySelector('.work-stage'),qaStage=qa.querySelector('.qa-stage'),deck=qa.querySelector('.qa-deck');
-  const coverLink=document.createElement('a');coverLink.className='work-current-link';coverLink.innerHTML='<span class="cover-action" aria-hidden="true"><span>VIEW<br>CASE STUDY</span><span class="cover-action-arrow">↗</span></span>';workStage.append(coverLink);
+  const coverLink=document.createElement('a');coverLink.className='work-current-link';workStage.append(coverLink);
   const orbit=createProjectOrbit({work,stage:workStage,projects,covers,infos:projectInfo.map(p=>p.info),coverLink});
   let listCurrent=0;
   const visibleCovers=covers.map(()=>0);
@@ -180,7 +180,7 @@ export function initSectionFlow({reduced,scrollMotion}){
     entries.forEach(entry=>{
       const progress=entry.id==='contact'&&entry.section.classList.contains('wave-complete')?1:entry.enabled&&entry.intro?clamp((y-entry.start)/entry.intro):1;
       const reveal=textReveal.renderEntry(entry,progress,atRest||!entry.enabled);
-      const content=reveal.content*(entry.enabled?smooth(clamp((progress-.42)/.58)):1);
+      const content=reveal.content;
       // Reuse the large title settling as group one; no second title animation.
       const isContact=entry.id==='contact';
       const opacity=smooth(clamp(reveal.title*1.65));
@@ -192,9 +192,9 @@ export function initSectionFlow({reduced,scrollMotion}){
       entry.title.style.transform=p<1?`translate3d(${entry.x*(1-p)}px,${entry.y*(1-p)}px,0) scale(${entry.scale+(1-entry.scale)*p})`:'';
       entry.title.style.willChange=settle>0&&settle<1?'transform, opacity':'auto';
       property(entry.section,'--section-content',String(content));
-      property(entry.section,'--section-heading',String(opacity));
+      property(entry.section,'--section-heading',String(content));
       property(entry.section,'--entry-content-y',32*(1-content)+'px');
-      property(entry.section,'--entry-label-y',32*(1-p)+'px');
+      property(entry.section,'--entry-label-y',20*(1-content)+'px');
       property(entry.section,'--entry-interaction',content>.05?'auto':'none');
       entry.section.dataset.entryProgress=progress.toFixed(4);
     });
@@ -235,7 +235,6 @@ export function initSectionFlow({reduced,scrollMotion}){
     work.dataset.current=String(current);
     coverLink.href=projectInfo[current].link;
     coverLink.setAttribute('aria-label',projectInfo[current].label);coverLink.inert=!pinned||!ready;
-    coverLink.querySelector('.cover-action>span').innerHTML=projects[current].classList.contains('project-offer')?'VIEW<br>PROJECT':'VIEW<br>CASE STUDY';
     const activeInfo=projectInfo[current].info;activeInfo.inert=false;
     projects.forEach((project,index)=>{
       const {info,cover}=projectInfo[index],inactive=pinned&&(index!==current||!ready);
@@ -325,7 +324,7 @@ function initCursor({reduced,scrollMotion}){
     if(!allowed()||!inside||!(target instanceof Element)||target.closest(fields)||getSelection()?.toString()){
       hide();return;
     }
-    const info=target.closest('.brand-experience');
+    const info=target.closest('.brand-trigger');
     const interactive=target.closest('a,button,[role="button"]')||info;
     // Native I-beam for readable copy, even when the page is otherwise enhanced.
     if(!interactive&&target.closest('p:not(.eyebrow):not(.art-word),.contact-card-name,.contact-card-role')){hide();return;}
