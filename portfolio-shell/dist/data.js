@@ -1,10 +1,10 @@
-// Replace before sharing with recruiters.
+// Keep the repository's existing placeholder until a public contact address is confirmed.
 export const CONTACT_EMAIL = 'hello@example.com';
 export const projects = [
-{slug:'lg',summary:"스마트 TV의 복잡한 탐색을 더 명확한 화면 구조로.",number:'01',title:'LG',category:'Smart TV UX/UI',label:'SMART TV',word:'A clearer view.',tone:'lg',cover:'lg-tv',coverAlt:'파란 조명 아래 TV에 표시된 LG 스마트 TV 사용성 평가 화면',coverHeight:1281},
-{slug:'ivi',summary:"운전자의 주행 맥락을 고려한 차량 인터페이스 연구.",number:'02',title:'IVI',category:'Automotive UX Research',label:'IN-VEHICLE EXPERIENCE',word:'In context.',tone:'ivi',cover:'ivi',coverAlt:'차량 중앙 디스플레이에 표시된 차량 제어와 내비게이션 화면 목업',coverHeight:1280},
-{slug:'cafekok',summary:"취향과 방문 목적을 연결해, 나에게 맞는 카페를 찾는 경험.",number:'03',title:'CAFÉKOK',category:'Cafe Recommendation UX/UI',label:'CAFE DISCOVERY',word:'Find your place.',tone:'cafekok'},
-{slug:'offer',summary:"흩어진 브랜드 혜택을 한곳에서 빠르게 비교하는 경험.",number:'04',title:'OFFER',category:'Brand Promotion Discovery Platform',label:'BRAND DISCOVERY',word:'Worth a look.',tone:'offer'}
+{slug:'lg',role:'UX Research · UI Design',period:'2025.03–2025.09',tools:[],summary:"스마트 TV의 복잡한 탐색을 더 명확한 화면 구조로.",number:'01',title:'LG',category:'Smart TV UX/UI',label:'SMART TV',word:'A clearer view.',tone:'lg',cover:'lg-tv',coverAlt:'파란 조명 아래 TV에 표시된 LG 스마트 TV 사용성 평가 화면',coverHeight:1281},
+{slug:'ivi',role:'UX Research · Usability Testing',period:null,tools:[],summary:"운전자의 주행 맥락을 고려한 차량 인터페이스 연구.",number:'02',title:'IVI',category:'Automotive UX Research',label:'IN-VEHICLE EXPERIENCE',word:'In context.',tone:'ivi',cover:'ivi',coverAlt:'차량 중앙 디스플레이에 표시된 차량 제어와 내비게이션 화면 목업',coverHeight:1280},
+{slug:'cafekok',role:'기획 · UI 디자인',period:'2026.07–2026.10',tools:[],summary:"취향과 방문 목적을 연결해, 나에게 맞는 카페를 찾는 경험.",number:'03',title:'CAFÉKOK',category:'Cafe Recommendation UX/UI',label:'CAFE DISCOVERY',word:'Find your place.',tone:'cafekok'},
+{slug:'offer',role:'UX/UI Design · Prototype',period:null,tools:['HTML','CSS','JavaScript'],summary:"흩어진 브랜드 혜택을 한곳에서 빠르게 비교하는 경험.",number:'04',title:'OFFER',category:'Brand Promotion Discovery Platform',label:'BRAND DISCOVERY',word:'Worth a look.',tone:'offer'}
 ];
 export const questions = [
 ['What kind of designer am I?','복잡한 정보와 문제를 사용자 관점에서 구조화하는 UX/UI 디자이너입니다. 사용자의 행동과 맥락을 이해하고, 정보 구조와 인터페이스를 연결합니다.'],

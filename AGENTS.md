@@ -2,6 +2,9 @@
 
 ## 문서 경로와 참조 순서
 
+- 재개할 때 `/PROGRESS.md`의 최신 날짜와 `/portfolio-shell/README.md`를 먼저 확인한다. 최신 구현·복구 기준과 미확정 콘텐츠를 과거 QA 기록과 혼동하지 않는다.
+- 메인 `portfolio-shell/dist/`는 이 저장소의 편집 원본도 포함한다. dist 전체를 지우거나 새 빌드 도구로 덮어쓰지 않는다. `build.cjs`가 생성하는 파일의 구분은 README를 따른다.
+
 - `/AGENTS.md`: Codex 작업 절차와 문서 참조 규칙의 단일 기준. 기존 OFFER 하위 AGENTS.md의 지침을 이 문서에 통합했다.
 - `/DESIGN.md`: 포트폴리오 공통 디자인 기준.
 - `/docs/design/references.md`: 출처·라이선스·참고 원칙·적용 범위. 외부 자료가 필요할 때 이 목록에서 관련 자료만 읽는다.

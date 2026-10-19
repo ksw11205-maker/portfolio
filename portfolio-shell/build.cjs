@@ -1,11 +1,21 @@
-﻿// Keep one editable CAFÉKOK source and copy it into the existing static output.
+// Keep one editable CAFÉKOK source and copy it into the existing static output.
 const fs = require('node:fs');
 const path = require('node:path');
 const vm = require('node:vm');
+require('./build-brand.cjs');
 // Add the shared navigation skin to generated pages, keeping product sources portable.
 function withPageTransitions(html) {
-  if (html.includes('src="/page-transitions.js"')) return html;
-  return html.replace('</head>', '<link rel="stylesheet" href="/page-transitions.css"><script src="/page-transitions.js"></script></head>');
+  if (!html.includes('src="/page-transitions.js"')) html=html.replace('</head>', '<link rel="stylesheet" href="/page-transitions.css"><script src="/page-transitions.js"></script></head>');
+  return html;
+}
+function withPortfolioBrand(html, shell=false) {
+  html=html.replace(/[ \t]*<link[^>]*rel="icon"[^>]*>[ \t]*(?:\r?\n)?/g,'');
+  const css=shell?'brand.css':'brand-base.css';
+  if(!html.includes('href="/'+css+'"'))html=html.replace('</head>','<link rel="stylesheet" href="/'+css+'"></head>');
+  html=html.replace('</head>','<link rel="icon" type="image/svg+xml" href="/assets/brand/favicon.svg"></head>');
+  // Only the portfolio return link is branded. Product logos remain untouched.
+  html=html.replace(/(<a[^>]*class="back"[^>]*>)(← 포트폴리오)(<\/a>)/, '$1<img class="brand-mark" src="/assets/brand/symbol.svg" width="28" height="28" alt="">$2$3');
+  return html;
 }
 // Bake the same home markup into HTML so content never depends on motion JS.
 function buildStaticHome() {
@@ -16,7 +26,7 @@ function buildStaticHome() {
     .replace(/^const (app|reduced|fine)=.*;\r?\n/gm, '');
   const markup = vm.runInNewContext(data + '\n' + template + '\nhome()', {}, {timeout:1000});
   const target = path.join(output, 'index.html');
-  let html = fs.readFileSync(target, 'utf8');
+  let html = fs.readFileSync(target, 'utf8').replace(/\r\n/g, '\n');
   if (!html.includes('<!--static-home:start-->')) {
     html = html.replace('<div id="app"></div>', '<div id="app"><!--static-home:start--><!--static-home:end--></div>')
       .replace(/<noscript>[\s\S]*?<\/noscript>/, '');
@@ -24,7 +34,8 @@ function buildStaticHome() {
   html = html.replace(/<!--static-home:start-->[\s\S]*?<!--static-home:end-->/,
     ()=>'<!--static-home:start-->'+markup+'<!--static-home:end-->');
   html = html.replace('<div id="app">', '<div id="app" class="static-home">');
-  fs.writeFileSync(target, withPageTransitions(html));
+  if(!html.includes('src="/intro-boot.js"'))html=html.replace('</head>','<script src="/intro-boot.js"></script></head>');
+  fs.writeFileSync(target, withPortfolioBrand(withPageTransitions(html),true));
 }
 function buildCaseStudy() {
   buildStaticHome();
@@ -44,7 +55,8 @@ function buildCaseStudy() {
   for (const directory of [output, offerOutput]) {
     for (const name of fs.readdirSync(directory).filter(name=>name.endsWith('.html'))) {
       const target=path.join(directory,name);
-      fs.writeFileSync(target,withPageTransitions(fs.readFileSync(target,'utf8')));
+      const html=withPageTransitions(fs.readFileSync(target,'utf8'));
+      fs.writeFileSync(target,directory===output?withPortfolioBrand(html):html);
     }
   }
   return {cafekok: output, offer: offerOutput};

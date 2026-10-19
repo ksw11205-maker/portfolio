@@ -11,7 +11,7 @@ export function initScrollMotion({reduced}){
     frame=0;
     // Lenis expects a continuous clock. Our demand-driven RAF sleeps at rest;
     // passing wall time after that sleep would finish the next wheel in one frame.
-    scrollTime+=lastFrameTime?Math.max(0,time-lastFrameTime):1000/60;
+    scrollTime+=lastFrameTime?Math.min(50,Math.max(0,time-lastFrameTime)):1000/60;
     lastFrameTime=time;
     lenis?.raf(scrollTime);
     listeners.forEach(listener=>listener());
@@ -39,6 +39,7 @@ export function initScrollMotion({reduced}){
       });
       lastSize='';
     }else if(!enabled()&&lenis){lenis.destroy();lenis=null;}
+    if(!enabled()){cancelAnimationFrame(frame);frame=0;lastFrameTime=0;}
     requestUpdate();
   }
   function resize(){

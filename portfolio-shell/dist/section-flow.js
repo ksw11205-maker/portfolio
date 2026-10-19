@@ -13,7 +13,7 @@ export function initSectionFlow({reduced,scrollMotion}){
   const covers=projects.map(project=>project.querySelector('.project-visual'));
   const projectInfo=projects.map(project=>({info:project.querySelector('.project-info'),cover:project.querySelector('.project-visual'),link:project.querySelector('.project-visual').getAttribute('href'),label:project.querySelector('h3').textContent+' 상세 보기'}));
   const workStage=work.querySelector('.work-stage'),qaStage=qa.querySelector('.qa-stage'),deck=qa.querySelector('.qa-deck');
-  const coverLink=document.createElement('a');coverLink.className='work-current-link';workStage.append(coverLink);
+  const coverLink=document.createElement('a');coverLink.className='work-current-link';coverLink.innerHTML='<span class="cover-action" aria-hidden="true"><span>VIEW<br>CASE STUDY</span><span class="cover-action-arrow">↗</span></span>';workStage.append(coverLink);
   const orbit=createProjectOrbit({work,stage:workStage,projects,covers,infos:projectInfo.map(p=>p.info),coverLink});
   let listCurrent=0;
   const visibleCovers=covers.map(()=>0);
@@ -24,8 +24,8 @@ export function initSectionFlow({reduced,scrollMotion}){
     if(visibleCovers[nearest]>0&&nearest!==listCurrent){listCurrent=nearest;scrollMotion.requestUpdate();}
   },{threshold:[0,.1,.25,.5,.75,1]});
   covers.forEach(cover=>listObserver.observe(cover));
-  const desktop=matchMedia('(min-width:1101px) and (min-height:760px)');
-  const desktopQA=matchMedia('(min-width:801px) and (min-height:650px)');
+  const desktop=matchMedia('(min-width:901px) and (min-height:700px)');
+  const desktopQA=matchMedia('(min-width:901px) and (min-height:700px) and (hover:hover) and (pointer:fine)');
   const clamp=(n,min=0,max=1)=>Math.max(min,Math.min(max,n)),smooth=n=>n*n*(3-2*n);
   const resting=()=>reduced.matches||document.body.classList.contains('motion-paused');
   const labels={home:'Hero',about:'Who I Am',tools:'How I Work',work:'Projects',qa:'How I Think',contact:'Contact'};
@@ -65,7 +65,7 @@ export function initSectionFlow({reduced,scrollMotion}){
     return {left,top,width:right-left,height:bottom-top};
   }
   function measure(){
-    layoutFrame=0;const enabled=!resting(),h=innerHeight,w=document.documentElement.clientWidth;
+    layoutFrame=0;const h=innerHeight,w=document.documentElement.clientWidth,enabled=!resting()&&w>600&&h>=650;
     const size=w+':'+h,changedSize=layoutSize&&layoutSize!==size;
     let restoreWork=null;
     if(changedSize&&measured&&!pendingAnchor&&workEntry.enabled&&workEntry.mode==='work'&&scrollY>=workEntry.start&&scrollY<=workEntry.start+workEntry.run){
@@ -101,8 +101,8 @@ export function initSectionFlow({reduced,scrollMotion}){
     });
     contactWave.setEnabled(enabled);
     // Keep the title entrance; hold the first and last covers before releasing the pin.
-    workEntry.intro=0; // The finite title entrance no longer consumes wheel distance.
-    workEntry.slot=h*.3;workEntry.hold=workEntry.slot*.25;
+    workEntry.intro=intro;
+    workEntry.slot=h*.65;workEntry.hold=h*.16;
     workEntry.run=workEntry.intro+workEntry.hold*2+workEntry.slot*(projects.length-1);
     if(enabled&&workEntry.mode==='work')work.style.setProperty('--work-height',h+workEntry.run+'px');
     else work.style.removeProperty('--work-height');
@@ -178,17 +178,19 @@ export function initSectionFlow({reduced,scrollMotion}){
     const heroProgress=smooth(clamp((y-heroHeight*.18)/(heroHeight*.82)));
     property(hero,'--hero-presence',atRest?'1':String(1-heroProgress*.82));
     entries.forEach(entry=>{
-      const progress=entry.enabled&&entry.intro?clamp((y-entry.start)/entry.intro):1;
-      const reveal=textReveal.renderEntry(entry,progress,atRest),content=reveal.content;
+      const progress=entry.id==='contact'&&entry.section.classList.contains('wave-complete')?1:entry.enabled&&entry.intro?clamp((y-entry.start)/entry.intro):1;
+      const reveal=textReveal.renderEntry(entry,progress,atRest||!entry.enabled);
+      const content=reveal.content*(entry.enabled?smooth(clamp((progress-.42)/.58)):1);
       // Reuse the large title settling as group one; no second title animation.
       const isContact=entry.id==='contact';
-      const opacity=Math.min(1,reveal.title*4);
-      const p=1-Math.pow(1-reveal.title,4);
+      const opacity=smooth(clamp(reveal.title*1.65));
+      const settle=entry.enabled?progress:1;
+      const p=1-Math.pow(1-settle,3);
       if(isContact)contactWave.render(progress);
       entry.progress=progress;
       entry.title.style.opacity=String(opacity);
       entry.title.style.transform=p<1?`translate3d(${entry.x*(1-p)}px,${entry.y*(1-p)}px,0) scale(${entry.scale+(1-entry.scale)*p})`:'';
-      entry.title.style.willChange=reveal.title>0&&reveal.title<1?'transform, opacity':'auto';
+      entry.title.style.willChange=settle>0&&settle<1?'transform, opacity':'auto';
       property(entry.section,'--section-content',String(content));
       property(entry.section,'--section-heading',String(opacity));
       property(entry.section,'--entry-content-y',32*(1-content)+'px');
@@ -203,8 +205,10 @@ export function initSectionFlow({reduced,scrollMotion}){
     if(workEntry.enabled&&workEntry.mode==='work'){
       const distance=clamp(y-workEntry.start-workEntry.intro,0,workEntry.run-workEntry.intro);
       property(work,'--work-content',work.style.getPropertyValue('--section-content'));
-      const rawPosition=clamp((distance-workEntry.hold)/workEntry.slot,0,projects.length-1),nearest=Math.round(rawPosition);
-      const position=Math.abs(rawPosition-nearest)*workEntry.slot<=1?nearest:rawPosition;
+      const rawPosition=clamp((distance-workEntry.hold)/workEntry.slot,0,projects.length-1);
+      // A continuous center dwell, not wheel snapping: every active cover rests level.
+      const whole=Math.floor(rawPosition),fraction=clamp((rawPosition-whole-.16)/.68);
+      const position=Math.min(projects.length-1,whole+smooth(fraction));
       orbit.render(position);setProject(Math.round(position),true,work.style.getPropertyValue('--section-content')==='1');
     }else{
       work.style.removeProperty('--work-content');
@@ -231,14 +235,15 @@ export function initSectionFlow({reduced,scrollMotion}){
     work.dataset.current=String(current);
     coverLink.href=projectInfo[current].link;
     coverLink.setAttribute('aria-label',projectInfo[current].label);coverLink.inert=!pinned||!ready;
+    coverLink.querySelector('.cover-action>span').innerHTML=projects[current].classList.contains('project-offer')?'VIEW<br>PROJECT':'VIEW<br>CASE STUDY';
     const activeInfo=projectInfo[current].info;activeInfo.inert=false;
     projects.forEach((project,index)=>{
       const {info,cover}=projectInfo[index],inactive=pinned&&(index!==current||!ready);
       if(inactive&&info.contains(document.activeElement)){
-        if(ready)activeInfo.querySelector('.liquid').focus({preventScroll:true});
+        if(ready)coverLink.focus({preventScroll:true});
         else{workEntry.title.tabIndex=-1;workEntry.title.focus({preventScroll:true});}
       }
-      project.classList.toggle('is-current',index===current);info.inert=inactive;cover.inert=pinned;
+      project.classList.toggle('is-current',index===current);cover.classList.toggle('is-active',index===current);info.inert=inactive;cover.inert=pinned;
       if(inactive)info.setAttribute('aria-hidden','true');else info.removeAttribute('aria-hidden');
       if(pinned)cover.setAttribute('aria-hidden','true');else cover.removeAttribute('aria-hidden');
       if(pinned&&index===current)info.setAttribute('aria-current','true');else info.removeAttribute('aria-current');
@@ -312,7 +317,7 @@ function initCursor({reduced,scrollMotion}){
   function position(element,px,py){element.style.transform='translate3d('+px+'px,'+py+'px,0)';}
   function hide(){
     visible=false;root.classList.remove('cursor-ready');
-    cursor.classList.remove('is-visible','is-project','is-link','is-light');
+    cursor.classList.remove('is-visible','is-project','is-link','is-light','is-info');
     cancelAnimationFrame(frame);frame=0;
   }
   function schedule(){if(!frame){last=performance.now();frame=requestAnimationFrame(tick);}}
@@ -320,15 +325,17 @@ function initCursor({reduced,scrollMotion}){
     if(!allowed()||!inside||!(target instanceof Element)||target.closest(fields)||getSelection()?.toString()){
       hide();return;
     }
-    const interactive=target.closest('a,button,[role="button"]');
+    const info=target.closest('.brand-experience');
+    const interactive=target.closest('a,button,[role="button"]')||info;
     // Native I-beam for readable copy, even when the page is otherwise enhanced.
     if(!interactive&&target.closest('p:not(.eyebrow):not(.art-word),.contact-card-name,.contact-card-role')){hide();return;}
     const project=target.closest(projectTarget);
-    cursor.classList.toggle('is-project',!!project);
+    cursor.classList.toggle('is-project',!!project);cursor.classList.toggle('is-info',!!info);
+    if(info)cursor.querySelector('.cursor-label').textContent='i';
     if(project){
       const owner=project.closest('.project')||document.querySelector('.project.is-current');
       const label=cursor.querySelector('.cursor-label');
-      const action=owner?.querySelector('.liquid > span')?.textContent||'VIEW CASE STUDY';
+      const action=owner?.classList.contains('project-offer')?'VIEW PROJECT':'VIEW CASE STUDY';
       const text=action.replace('VIEW ','VIEW\n')+' ↗';
       if(label.textContent!==text)label.textContent=text;
     }

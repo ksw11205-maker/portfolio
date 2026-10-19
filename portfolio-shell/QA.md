@@ -1,3 +1,27 @@
+# Current verification — 2026-10-19
+
+This section applies to the brand refinement branch. All records below “Historical verification” apply only to the versions and environments described there.
+
+Automated state/DOM checks: 7 passed. Run `npm ci --prefix portfolio-shell/qa` then `npm test --prefix portfolio-shell/qa` from the repository root. These check production syntax, reproducible HTML/assets, preserved product source, local resource resolution, intro unlock, permanent Contact completion, two-group title/content completion and scroll-clock lifecycle. The DOM harness has no layout or GPU and is not browser emulation.
+
+The actual browser preview could not be started: the supported managed preview reported `bwrap: Can't mount proc on /newroot/proc: Operation not permitted`. The connected browser could not reach the isolated localhost server. No current screenshots or claims of verified visual quality / 60fps are available.
+
+Manual release checks still required:
+
+| Viewport / input | Check |
+| --- | --- |
+| 1440×900 and 1920×1080 mouse | First load, F5, logo replay; title centering/settling; each cover reaches horizontal at center; LG → IVI → CAFÉKOK → OFFER → Q&A releases normally |
+| 1024×1366 and 768×1024 touch | Menu, profile two columns + awards, tool capability wrapping, static model explanation, project links, Q&A horizontal touch without blocking page scroll |
+| 390×844 and 375×812 touch | No horizontal page overflow, readable card answers, business-card email fits, section anchors clear header |
+| Keyboard | Visible focus, logo explanation Escape, cover link points at the visible project, all five Q&A cards reachable, menu closes and restores focus |
+| Reduced motion / no JS / WebGL unavailable | Static readable content and SVG symbol, no persistent overlay, all project links usable |
+| Contact forward then backward | Transition does not repeat after completion, light header contrast, engraved card readable |
+| Hidden tab / back navigation | No duplicate animation loops, project position preserved, WebGL resumes without a blank graphic |
+
+Unconfirmed content: `CONTACT_EMAIL` remains the existing placeholder. IVI/OFFER dates and project-specific tools for LG/IVI/CAFÉKOK are omitted. LG/IVI case studies and OFFER final cover are not completed by this change.
+
+# Historical verification
+
 # Verification
 
 - Browser widths: 375, 390, 1440, 1920. No document horizontal overflow.
