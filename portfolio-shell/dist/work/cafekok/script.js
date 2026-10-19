@@ -1,1 +1,1 @@
-// Static cover only. No JavaScript is required.
+const links=[...document.querySelectorAll('.chapters a')]; const sections=links.map(a=>document.querySelector(a.hash)); function update(){let current=sections[0];for(const s of sections){if(s.getBoundingClientRect().top<160)current=s}for(const a of links){if(a.hash==='#'+current.id)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current')}}addEventListener('scroll',update,{passive:true});update();
