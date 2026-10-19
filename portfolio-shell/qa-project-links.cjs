@@ -13,7 +13,7 @@ const assert = require('node:assert/strict');
    for(const slug of ['cafekok','offer']){
     await page.goto('http://localhost:4173/#work');
     const card=page.locator('.project-'+slug);
-    const expected='/work/'+slug+'/';
+    const expected='/work/'+slug+(slug==='offer'?'/case-study.html':'/');
     assert.equal(await card.locator('.project-visual').getAttribute('href'),expected);
     assert.equal(await card.locator('.project-info a').getAttribute('href'),expected);
     await card.locator('.project-visual').click();
@@ -28,6 +28,11 @@ const assert = require('node:assert/strict');
      await page.locator('.ck-brand-system').screenshot({path:path.join(out,slug+'-'+width+'.png')});
      await page.locator('.ck-back').click();
     } else {
+     await page.locator('#connection').waitFor();
+     assert.equal(await page.locator('.cover-copy a').getAttribute('href'),'index.html');
+     assert.equal(await page.locator('.cover-copy a').getAttribute('target'),'_blank');
+     await page.screenshot({path:path.join(out,'offer-case-study-'+width+'.png')});
+     await page.goto('http://localhost:4173/work/offer/');
      await page.locator('.offer-card').first().waitFor();
      await page.screenshot({path:path.join(out,slug+'-'+width+'.png')});
      await page.locator('.header-nav a[href="explore.html"]').evaluate(a=>a.click());

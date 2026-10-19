@@ -1,4 +1,4 @@
-﻿// Keep one editable CAFÉKOK source and copy it into the existing static output.
+// Keep one editable CAFÉKOK source and copy it into the existing static output.
 const fs = require('node:fs');
 const path = require('node:path');
 const vm = require('node:vm');
@@ -40,6 +40,10 @@ function buildCaseStudy() {
   fs.mkdirSync(offerOutput, {recursive: true});
   for (const name of ['index.html', 'explore.html', 'brand.html', 'offer.html', 'saved.html', 'favorites.html', 'css', 'js', 'data', 'assets']) {
     fs.cpSync(path.join(offerSource, name), path.join(offerOutput, name), {recursive: true});
+  }
+  // OFFER case-study source is separate from the unchanged product application.
+  for (const name of ['case-study.html', 'case-study.css', 'case-study.js']) {
+    fs.copyFileSync(path.resolve(__dirname, '../OFFER/case-study', name), path.join(offerOutput, name));
   }
   for (const directory of [output, offerOutput]) {
     for (const name of fs.readdirSync(directory).filter(name=>name.endsWith('.html'))) {
