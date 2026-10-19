@@ -15,6 +15,9 @@ function withPortfolioBrand(html, shell=false) {
   html=html.replace('</head>','<link rel="icon" type="image/svg+xml" href="/assets/brand/favicon.svg"></head>');
   // Only the portfolio return link is branded. Product logos remain untouched.
   html=html.replace(/(<a[^>]*class="back"[^>]*>)(← 포트폴리오)(<\/a>)/, '$1<img class="brand-mark" src="/assets/brand/symbol.svg" width="28" height="28" alt="">$2$3');
+  html=html.replace(/(<a[^>]*href="\/#work"[^>]*>)(← Portfolio)(<\/a>)/g, '$1<img class="brand-mark" src="/assets/brand/symbol.svg" width="28" height="28" alt="">$2$3');
+  html=html.replace(/(<a[^>]*class="wordmark"[^>]*href="\/#home"[^>]*>)KS<span>\.<\/span>(<\/a>)/, '$1<img class="brand-mark" src="/assets/brand/symbol.svg" width="28" height="28" alt="">$2');
+  html=html.replace(/(<a class="back" href="\/#work">)(<span aria-hidden="true">←<\/span>)/, '$1<img class="brand-mark brand-on-dark" src="/assets/brand/symbol.svg" width="28" height="28" alt="">$2');
   return html;
 }
 // Bake the same home markup into HTML so content never depends on motion JS.
@@ -52,12 +55,20 @@ function buildCaseStudy() {
   for (const name of ['index.html', 'explore.html', 'brand.html', 'offer.html', 'saved.html', 'favorites.html', 'css', 'js', 'data', 'assets']) {
     fs.cpSync(path.join(offerSource, name), path.join(offerOutput, name), {recursive: true});
   }
+  // OFFER case-study source is separate from the unchanged product application.
+  for (const name of ['case-study.html', 'case-study.css', 'case-study.js']) {
+    fs.copyFileSync(path.resolve(__dirname, '../OFFER/case-study', name), path.join(offerOutput, name));
+  }
   for (const directory of [output, offerOutput]) {
     for (const name of fs.readdirSync(directory).filter(name=>name.endsWith('.html'))) {
       const target=path.join(directory,name);
       const html=withPageTransitions(fs.readFileSync(target,'utf8'));
-      fs.writeFileSync(target,directory===output?withPortfolioBrand(html):html);
+      fs.writeFileSync(target,directory===output||name==='case-study.html'?withPortfolioBrand(html):html);
     }
+  }
+  for(const slug of ['lg','ivi']){
+    const target=path.join(__dirname,'dist/work',slug,'index.html');
+    fs.writeFileSync(target,withPortfolioBrand(withPageTransitions(fs.readFileSync(target,'utf8'))));
   }
   return {cafekok: output, offer: offerOutput};
 }

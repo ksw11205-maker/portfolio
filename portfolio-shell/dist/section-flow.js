@@ -334,7 +334,7 @@ function initCursor({reduced,scrollMotion}){
     if(project){
       const owner=project.closest('.project')||document.querySelector('.project.is-current');
       const label=cursor.querySelector('.cursor-label');
-      const action=owner?.classList.contains('project-offer')?'VIEW PROJECT':'VIEW CASE STUDY';
+      const action='VIEW CASE STUDY';
       const text=action.replace('VIEW ','VIEW\n')+' ↗';
       if(label.textContent!==text)label.textContent=text;
     }

@@ -15,7 +15,12 @@ export function preparePortfolioIntro({app,reduced,force=false}){
   state.blocksHero=true;
   const overlay=document.createElement('div');overlay.className='portfolio-intro';overlay.setAttribute('aria-hidden','true');
   const d=brandShape.commands.map(c=>c.join(' ')).join(' ');
-  overlay.innerHTML=`<div class="intro-panel intro-panel-lower"></div><div class="intro-panel intro-panel-upper"></div><div class="intro-logo"><svg viewBox="0 0 ${brandShape.width} ${brandShape.height}" focusable="false"><g class="intro-piece"><path fill="${brandShape.blue}" d="${d}"/></g><g class="intro-piece"><path fill="${brandShape.silver}" d="${d}" transform="rotate(180 ${brandShape.width/2} ${brandShape.height/2})"/></g></svg></div>`;
+  const width=window.innerWidth||1440,height=window.innerHeight||900;
+  const logoWidth=Math.min(180,Math.max(100,width*.13)),unit=logoWidth/brandShape.width;
+  const holeWidth=220*unit,holeHeight=180*unit;
+  // The backdrop and mark share one camera. Its central aperture reveals the real
+  // hero underneath; scaling the camera carries both logo edges out of view.
+  overlay.innerHTML=`<div class="intro-camera"><svg class="intro-scene" viewBox="${-width/2} ${-height/2} ${width} ${height}" preserveAspectRatio="none" focusable="false"><defs><mask id="intro-portal" maskUnits="userSpaceOnUse" x="${-width/2}" y="${-height/2}" width="${width}" height="${height}"><rect x="${-width/2}" y="${-height/2}" width="${width}" height="${height}" fill="white"/><rect class="intro-aperture" x="${-holeWidth/2}" y="${-holeHeight/2}" width="${holeWidth}" height="${holeHeight}" rx="${8*unit}" fill="black"/></mask></defs><rect x="${-width/2}" y="${-height/2}" width="${width}" height="${height}" fill="#0b0c0e" mask="url(#intro-portal)"/><svg x="${-logoWidth/2}" y="${-brandShape.height*unit/2}" width="${logoWidth}" height="${brandShape.height*unit}" viewBox="0 0 ${brandShape.width} ${brandShape.height}" overflow="visible"><g class="intro-piece"><path fill="${brandShape.blue}" d="${d}"/></g><g class="intro-piece"><path fill="${brandShape.silver}" d="${d}" transform="rotate(180 ${brandShape.width/2} ${brandShape.height/2})"/></g></svg></svg></div>`;
   const roots=[app,document.querySelector('.skip')].filter(Boolean),inert=roots.map(r=>r.inert);
   const previousOverflow=document.documentElement.style.overflow,previousBody=document.body.style.overflow;
   const animations=[];let finished=false,openTimer,watchdog;
@@ -35,9 +40,13 @@ export function preparePortfolioIntro({app,reduced,force=false}){
   ],{duration:780,delay:80+i*90,easing:'cubic-bezier(.22,1,.36,1)',fill:'both'})));
   openTimer=setTimeout(()=>{
     state.blocksHero=false;document.body.classList.remove('intro-closed');overlay.classList.add('is-opening');
-    animations.push(overlay.querySelector('.intro-logo').animate([{opacity:1},{opacity:0}],{duration:200,fill:'forwards'}));
-    const panels=[...overlay.querySelectorAll('.intro-panel')];
-    panels.forEach((panel,i)=>animations.push(panel.animate([{transform:'translate(0,0)'},{transform:`translate(${i?'102vw':'-102vw'},${i?'-102vh':'102vh'})`}],{duration:820,easing:'cubic-bezier(.76,0,.24,1)',fill:'forwards'})));
+    animations.push(overlay.querySelector('.intro-aperture').animate([
+      {transform:'scale(0)'},{transform:'scale(1)'}
+    ],{duration:280,easing:'cubic-bezier(.22,1,.36,1)',fill:'forwards'}));
+    const zoom=Math.max(width/holeWidth,height/holeHeight)*1.25;
+    animations.push(overlay.querySelector('.intro-camera').animate([
+      {transform:'scale(1)'},{transform:`scale(${zoom})`}
+    ],{duration:1250,easing:'cubic-bezier(.72,0,.22,1)',fill:'forwards'}));
     animations.at(-1).finished.then(finish).catch(()=>{});
   },1050);
   watchdog=setTimeout(finish,2600);

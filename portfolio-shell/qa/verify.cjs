@@ -72,6 +72,26 @@ check('home assets, local imports and CSS resources resolve',()=>{
     else for(const match of text.matchAll(/url\(\s*['"]?([^)'"\s]+)['"]?\s*\)/g))verify(match[1],file);
   }
 });
+check('all project covers lead to real case studies with valid local resources',()=>{
+  const {document}=parseHTML(fs.readFileSync(path.join(dist,'index.html'),'utf8'));
+  const routes=['/work/lg/','/work/ivi/','/work/cafekok/','/work/offer/case-study.html'];
+  assert.deepEqual([...document.querySelectorAll('.project-visual')].map(a=>a.getAttribute('href')),routes);
+  for(const route of routes){
+    const file=path.join(dist,route,route.endsWith('/')?'index.html':'');
+    const {document:page}=parseHTML(fs.readFileSync(file,'utf8'));
+    assert.ok(page.querySelector('a[href="/#work"]'),route+' return link');
+    assert.ok(!page.querySelector('.hero-marquee'),route+' must not return the shell');
+    for(const node of page.querySelectorAll('img[src],script[src],link[href]')){
+      const ref=node.getAttribute('src')||node.getAttribute('href');
+      if(/^(https?:|data:|#)/.test(ref))continue;
+      const asset=path.resolve(ref.startsWith('/')?dist:path.dirname(file),ref.replace(/^\//,'').split(/[?#]/)[0]);
+      assert.ok(fs.existsSync(asset),route+' → '+ref);
+      assert.ok(!fs.readFileSync(asset).subarray(0,50).toString().startsWith('version https://git-lfs'),route+' unresolved LFS image '+ref);
+    }
+  }
+  const {document:offer}=parseHTML(fs.readFileSync(path.join(dist,'work/offer/case-study.html'),'utf8'));
+  assert.ok(offer.querySelector('a[href="index.html"][target="_blank"]'));
+});
 check('reload intro unlocks content on Escape and watchdog; reduced motion skips',()=>{
   const e=env();e.context.brandShape=e.load('brand-shape.js','brandShape');
   const prepare=e.load('intro.js','preparePortfolioIntro'),app=e.document.querySelector('#app');
