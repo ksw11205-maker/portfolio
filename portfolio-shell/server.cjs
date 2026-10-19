@@ -1,4 +1,4 @@
-﻿const http = require('node:http');
+const http = require('node:http');
 const fs = require('node:fs');
 const path = require('node:path');
 const root = path.join(__dirname, 'dist');
@@ -17,7 +17,7 @@ http.createServer((req, res) => {
   catch { res.writeHead(400); return res.end(); }
   let target = path.resolve(root, '.' + pathname);
   if (!target.startsWith(root + path.sep) && target !== root) { res.writeHead(403); return res.end(); }
-  if (pathname === '/work/lg' || pathname === '/work/cafekok' || pathname === '/work/offer') {
+  if (pathname === '/work/lg' || pathname === '/work/cafekok' || pathname === '/work/offer' || pathname === '/work/ivi') {
     res.writeHead(308, {Location:pathname + '/' + new URL(req.url, 'http://localhost').search}); return res.end();
   }
   if (!path.extname(target)) {
