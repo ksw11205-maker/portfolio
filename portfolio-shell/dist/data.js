@@ -1,7 +1,7 @@
 // Replace before sharing with recruiters.
 export const CONTACT_EMAIL = 'hello@example.com';
 export const projects = [
-{slug:'lg',summary:"스마트 TV의 복잡한 탐색을 더 명확한 화면 구조로.",number:'01',title:'LG',category:'Smart TV UX/UI',label:'SMART TV',word:'A clearer view.',tone:'lg',cover:'lg-tv',coverAlt:'파란 조명 아래 TV에 표시된 LG 스마트 TV 사용성 평가 화면',coverHeight:1281},
+{slug:'lg',summary:"TV 화면의 사용성을 예측하고, 디자인 개선으로 연결하는 도구.",number:'01',title:'LG',category:'Smart TV UX/UI',label:'SMART TV',word:'A clearer view.',tone:'lg',cover:'lg-tv',coverAlt:'마젠타 조명의 거실에서 노트북의 TV UI 분석 도구와 TV 평가 화면을 함께 보여주는 목업',coverHeight:1081},
 {slug:'ivi',summary:"운전자의 주행 맥락을 고려한 차량 인터페이스 연구.",number:'02',title:'IVI',category:'Automotive UX Research',label:'IN-VEHICLE EXPERIENCE',word:'In context.',tone:'ivi',cover:'ivi',coverAlt:'차량 중앙 디스플레이에 표시된 차량 제어와 내비게이션 화면 목업',coverHeight:1280},
 {slug:'cafekok',summary:"취향과 방문 목적을 연결해, 나에게 맞는 카페를 찾는 경험.",number:'03',title:'CAFÉKOK',category:'Cafe Recommendation UX/UI',label:'CAFE DISCOVERY',word:'Find your place.',tone:'cafekok'},
 {slug:'offer',summary:"흩어진 브랜드 혜택을 한곳에서 빠르게 비교하는 경험.",number:'04',title:'OFFER',category:'Brand Promotion Discovery Platform',label:'BRAND DISCOVERY',word:'Worth a look.',tone:'offer'}
