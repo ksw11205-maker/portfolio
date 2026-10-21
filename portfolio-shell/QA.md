@@ -1,4 +1,10 @@
-# Current verification — 2026-10-19
+# 2026-10-21 — Teacher feedback
+
+Current implementation and evidence are summarized in root PROGRESS.md (2026-10-21). Ten DOM/build/state checks pass. Live connected Chrome was inspected at desktop 1440×1000, tablet 834×1194 and mobile 390×844. The internal browser has WebGL disabled, so GPU appearance was checked on the owner-private deployed preview instead. Existing manual history below is not evidence for this release. Physical touch hardware, Safari and sustained frame-time/thermal measurements are not covered.
+
+Final live recheck: revised material shaders render without console errors/warnings; the mobile home menu has no incorrect current section; OFFER's visible cover opens its case study and its portfolio return link works. Screenshots of the split project stage, Q&A motion state and mobile menu are in `.qa/teacher-feedback-20261021/`. These still images document appearance, not measured motion performance.
+
+# Previous verification — 2026-10-19
 
 This section applies to the brand refinement branch. All records below “Historical verification” apply only to the versions and environments described there.
 

@@ -1,7 +1,7 @@
 // A single scroll clock drives all title entrances and the existing Work/Q&A stages.
 // Ordinary sections have a short sticky shell; Work/Q&A reuse their own single pin.
 import {createContactWave} from './contact-wave.js';
-import {createProjectOrbit} from './project-orbit.js';
+import {createProjectShowcase} from './project-showcase.js';
 import {createTextReveal} from './text-reveal.js';
 export function initSectionFlow({reduced,scrollMotion}){
   const hero=document.querySelector('.hero');if(!hero)return;
@@ -14,7 +14,7 @@ export function initSectionFlow({reduced,scrollMotion}){
   const projectInfo=projects.map(project=>({info:project.querySelector('.project-info'),cover:project.querySelector('.project-visual'),link:project.querySelector('.project-visual').getAttribute('href'),label:project.querySelector('h3').textContent+' 상세 보기'}));
   const workStage=work.querySelector('.work-stage'),qaStage=qa.querySelector('.qa-stage'),deck=qa.querySelector('.qa-deck');
   const coverLink=document.createElement('a');coverLink.className='work-current-link';workStage.append(coverLink);
-  const orbit=createProjectOrbit({work,stage:workStage,projects,covers,infos:projectInfo.map(p=>p.info),coverLink});
+  const orbit=createProjectShowcase({work,stage:workStage,projects,covers,infos:projectInfo.map(p=>p.info),coverLink});
   let listCurrent=0;
   const visibleCovers=covers.map(()=>0);
   const listObserver=new IntersectionObserver(entries=>{
@@ -24,7 +24,7 @@ export function initSectionFlow({reduced,scrollMotion}){
     if(visibleCovers[nearest]>0&&nearest!==listCurrent){listCurrent=nearest;scrollMotion.requestUpdate();}
   },{threshold:[0,.1,.25,.5,.75,1]});
   covers.forEach(cover=>listObserver.observe(cover));
-  const desktop=matchMedia('(min-width:901px) and (min-height:700px)');
+  const desktop=matchMedia('(min-width:1101px) and (min-height:700px)');
   const desktopQA=matchMedia('(min-width:901px) and (min-height:700px) and (hover:hover) and (pointer:fine)');
   const clamp=(n,min=0,max=1)=>Math.max(min,Math.min(max,n)),smooth=n=>n*n*(3-2*n);
   const resting=()=>reduced.matches||document.body.classList.contains('motion-paused');
@@ -32,7 +32,7 @@ export function initSectionFlow({reduced,scrollMotion}){
   const configs=[
     {id:'about',heading:'.section-heading',content:'.about-intro,.profile-details'},
     {id:'tools',heading:'.tools-heading',content:'.tools-visual,.tools-capabilities'},
-    {id:'work',heading:'.work-heading',content:'.project-list,.work-gallery,.project-info'},
+    {id:'work',heading:'.work-heading',content:'.project-list,.work-gallery,.project-info,.work-object'},
     {id:'qa',heading:'.qa-heading',content:'.qa-deck'},
     {id:'contact',heading:'.contact-heading',content:'.contact-note,.contact-card-stage'}
   ];
@@ -127,8 +127,9 @@ export function initSectionFlow({reduced,scrollMotion}){
       const {section,shell,title}=entry;
       const stage=entry.mode==='work'?workStage:entry.mode==='qa'?qaStage:section;
       const stageBox=stage.getBoundingClientRect(),box=title.getBoundingClientRect(),text=textBounds(title);
-      const pinTop=entry.mode==='flow'?entry.pinTop||0:0;
-      entry.start=(entry.mode==='flow'?shell:section).getBoundingClientRect().top+scrollY-pinTop;
+      const pinTop=enabled&&entry.mode==='flow'?entry.pinTop||0:0;
+      // display:contents shells have no box on mobile or when motion is paused.
+      entry.start=(enabled&&entry.mode==='flow'?shell:section).getBoundingClientRect().top+scrollY-pinTop;
       const font=parseFloat(getComputedStyle(title).fontSize),largeFont=compact?Math.max(font*1.3,68):Math.min(160,w*.105);
       entry.scale=Math.max(1,Math.min(largeFont/font,(w-48)/text.width,h*.5/text.height));
       entry.x=w/2-(box.left+(text.left-box.left+text.width/2)*entry.scale);
@@ -140,7 +141,7 @@ export function initSectionFlow({reduced,scrollMotion}){
     qa.dataset.intro=String(intro);qa.dataset.run=String(qaEntry.run);
     sectionStarts=sections.map(section=>{
       const entry=entries.find(entry=>entry.section===section);
-      return entry?entry.start+(entry.mode==='flow'?entry.pinTop||0:0):section.getBoundingClientRect().top+scrollY;
+      return entry?entry.start+(entry.enabled&&entry.mode==='flow'?entry.pinTop||0:0):section.getBoundingClientRect().top+scrollY;
     });
     heroHeight=hero.offsetHeight;
     // Geometry is stable during transform/opacity animation. Read only on layout changes.

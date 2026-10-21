@@ -13,6 +13,7 @@ function withPortfolioBrand(html, shell=false) {
   const css=shell?'brand.css':'brand-base.css';
   if(!html.includes('href="/'+css+'"'))html=html.replace('</head>','<link rel="stylesheet" href="/'+css+'"></head>');
   html=html.replace('</head>','<link rel="icon" type="image/svg+xml" href="/assets/brand/favicon.svg"></head>');
+  if(shell){html=html.replace(/<link[^>]*href="\/feedback\.css"[^>]*>/g,'');html=html.replace('</head>','<link rel="stylesheet" href="/feedback.css"></head>');}
   // Only the portfolio return link is branded. Product logos remain untouched.
   html=html.replace(/(<a[^>]*class="back"[^>]*>)(← 포트폴리오)(<\/a>)/, '$1<img class="brand-mark" src="/assets/brand/symbol.svg" width="28" height="28" alt="">$2$3');
   html=html.replace(/(<a[^>]*href="\/#work"[^>]*>)(← Portfolio)(<\/a>)/g, '$1<img class="brand-mark" src="/assets/brand/symbol.svg" width="28" height="28" alt="">$2$3');

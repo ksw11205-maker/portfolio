@@ -1,7 +1,7 @@
 import {brandShape} from './brand-shape.js';
 
 // The symbol is a real, bevelled mesh. SVG and WebGL share the exact contour.
-export function initBrandModel({host,reduced}) {
+export function initBrandModel({host,reduced,tilt=false}) {
   if(!host || host.dataset.initialized)return;
   host.dataset.initialized='true';
   const trigger=host.querySelector('.brand-trigger'),panel=host.querySelector('.brand-description');
@@ -11,7 +11,10 @@ export function initBrandModel({host,reduced}) {
   let visible=false,hovered=false,focused=false,pinned=false,dismissed=false,opened=false;
   let renderer,scene,camera,group,meshes=[],environment,pmrem,resizeObserver;
   let running=0,previous=0,phase=0,assembly=0,mix=0,gap=.08,loading=false,failed=false,destroyed=false;
-  let pointerX=0,pointerY=0,pointerKnown=false;
+  let pointerX=0,pointerY=0,pointerKnown=false,tiltX=0,tiltY=0,targetTiltX=0,targetTiltY=0;
+  const pointerRegion=tilt?host.closest(".hero"):host;
+  pointerRegion.addEventListener("pointermove",e=>{if(!tilt||!fine.matches||e.pointerType==="touch")return;const box=pointerRegion.getBoundingClientRect();targetTiltX=(e.clientX-box.left)/box.width*2-1;targetTiltY=(e.clientY-box.top)/box.height*2-1;wake();});
+  pointerRegion.addEventListener("pointerleave",()=>{targetTiltX=targetTiltY=0;wake();});
   panel.dataset.initialized='true';
   const animationsAllowed=()=>!reduced.matches&&!document.hidden&&!document.body.classList.contains('motion-paused');
   function placePanel(){
@@ -32,7 +35,7 @@ export function initBrandModel({host,reduced}) {
     placePanel();
   }
   function updateDisclosure(){
-    const show=!fine.matches||((hovered||focused||pinned)&&!dismissed);
+    const show=fine.matches?((hovered||focused||pinned)&&!dismissed):(tilt?pinned:true);
     panel.setAttribute('aria-hidden',String(!show));
     if(show===opened)return;opened=show;
     host.classList.toggle('is-explaining',show);trigger.setAttribute('aria-expanded',String(show));
@@ -59,7 +62,9 @@ export function initBrandModel({host,reduced}) {
     const engaged=opened&&fine.matches;
     const targetGap=engaged?.004:animate?.045+.15*(.5-.5*Math.cos(phase*Math.PI*2/6)):.045;
     gap=animate?gap+(targetGap-gap)*(1-Math.exp(-(engaged?16:3.2)*dt)):targetGap;
-    group.rotation.set(.045+Math.sin(phase*Math.PI*2/9)*.025*idle,.32+Math.sin(phase*Math.PI*2/10)*.035*idle,0);
+    tiltX+=(targetTiltX-tiltX)*(1-Math.exp(-7*dt));tiltY+=(targetTiltY-tiltY)*(1-Math.exp(-7*dt));
+    group.rotation.set(.045+Math.sin(phase*Math.PI*2/9)*.025*idle+(animate&&tilt?-tiltY*.16:0),.32+Math.sin(phase*Math.PI*2/10)*.035*idle+(animate&&tilt?tiltX*.22:0),animate&&tilt?tiltX*.025:0);
+    group.position.set(animate&&tilt?tiltX*.1:0,animate&&tilt?-tiltY*.08:0,0);
     meshes.forEach((mesh,i)=>{
       const direction=i===0?-1:1;
       const distance=.3*(1-assembled)+gap;

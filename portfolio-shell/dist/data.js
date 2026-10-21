@@ -1,5 +1,5 @@
-// Keep the repository's existing placeholder until a public contact address is confirmed.
-export const CONTACT_EMAIL = 'hello@example.com';
+// Public portfolio contact confirmed by the owner on 2026-10-20.
+export const CONTACT_EMAIL = 'ksw11205@gmail.com';
 export const projects = [
 {slug:'lg',role:'UX Research · UI Design',period:'2025.03–2025.09',tools:[],summary:"TV 화면의 사용성을 예측하고, 디자인 개선으로 연결하는 도구.",number:'01',title:'LG',category:'Smart TV UX/UI',label:'SMART TV',word:'A clearer view.',tone:'lg',cover:'lg-tv',coverAlt:'마젠타 조명의 거실에서 노트북의 TV UI 분석 도구와 TV 평가 화면을 함께 보여주는 목업',coverHeight:1081},
 {slug:'ivi',role:'UX Research · Usability Testing',period:null,tools:[],summary:"운전자의 주행 맥락을 고려한 차량 인터페이스 연구.",number:'02',title:'IVI',category:'Automotive UX Research',label:'IN-VEHICLE EXPERIENCE',word:'In context.',tone:'ivi',cover:'ivi',coverAlt:'차량 중앙 디스플레이에 표시된 차량 제어와 내비게이션 화면 목업',coverHeight:1280},
