@@ -1,3 +1,12 @@
+# 2026-10-21 — PROJECT opposing cube and split arrival
+
+- Scope: existing PROJECT split layout plus HOW I WORK → PROJECT entry. A single scroll clock drives CSS 3D faces; no added wheel lock or WebGL scene. Left current face rotates downward, right current face upward; reverse scrolling reverses the same geometry. A short stable interval at each project keeps text readable.
+- Entry: over the previous section's last screen, the left mask fills downward and the right mask upward with a small corresponding face tilt. The stage remains at viewport top until normal pinning takes over. At the measured halfway state, arrival=0.5, logical work top=425px and painted stage top=0px. Header and previous section content remain independent.
+- Automated: 10 checks passed after the JS change. The lifecycle check now verifies original cover AND info node restoration over three mode cycles, opposing angle signs, two neighboring visible faces, the next front face and entry offset cleanup. This harness does not render geometry.
+- Actual connected Chrome 1440×1000: inspected two opposing perspective faces at a partial turn; all four project fronts, synchronized detail hrefs/progress, reverse OFFER→CAFÉKOK, entry forward/reverse and final pin release into Q&A. Errors/warnings were empty and no horizontal overflow was observed.
+- Resized during a turn to 834×1194: all four covers and infos restored to their original articles. At 390×844: four covers and infos accessible, zero aria-hidden infos, no horizontal overflow, no pinned state. These viewport overrides retain mouse input; physical touch and Safari were not tested.
+- Screenshots: `.qa/project-cube-20261021/`. Stills document representative visual states only. Sustained frame times, thermal behavior and OS reduced-motion rendering are not measured; reduced-motion/global-pause use the tested document-mode restoration path.
+
 # 2026-10-21 — PROJECT layout phase one
 
 Scope: PROJECT only. Full-viewport 50:50 split, fixed upper-left title, full-height left cover, right progress rail, upper number and lower copy/metadata. The previous project object and title entrance are removed. Project selection is discrete in this stage; opposing cube transitions are explicitly deferred.

@@ -29,11 +29,11 @@ node portfolio-shell/server.cjs
 | 2D·3D 공통 심볼 윤곽 | `dist/brand-shape.js` |
 | SVG·파비콘·정적 포스터 생성 | `build-brand.cjs` |
 | Hero 3D 로고·포인터 틸트·설명 패널 | `dist/brand-model.js` |
-| 공통 프리즘·Q&A 라이브 모델 / Hero 곡면 | `dist/object-motion.js` / `dist/hero-waves.js` |
+| HOW I WORK 프리즘·Q&A 라이브 모델 / Hero 곡면 | `dist/object-motion.js` / `dist/hero-waves.js` |
 | 강사 피드백 레이아웃·반응형 | `dist/feedback.css` |
 | 첫 진입·F5·로고 클릭 로딩 | `dist/intro-boot.js`, `dist/intro.js` |
 | 스크롤·섹션 고정·커서 | `dist/scroll-motion.js`, `dist/section-flow.js` |
-| 제목 내부 효과 / 프로젝트 분할 전환 | `dist/text-reveal.js` / `dist/project-showcase.js` |
+| 제목 내부 효과 / 프로젝트 역방향 큐브·진입 | `dist/text-reveal.js` / `dist/project-showcase.js` |
 | Contact 전환 | `dist/contact-wave.js` |
 | CAFÉKOK 원본 | `../cafekok/cafekok-detail/cafekok/` |
 | OFFER 제품 원본 | `../OFFER/offer/` |
@@ -43,7 +43,7 @@ node portfolio-shell/server.cjs
 ## 10/21 현재 기준
 
 - 3D 브랜드 로고는 Hero, 프리즘은 HOW I WORK에 있다. PROJECT의 프리즘은 제거했다. HOW I WORK 재구성은 후속 작업이다.
-- PROJECT 1단계: 데스크톱 전체 화면을 왼쪽 표지 50% / 오른쪽 진행 표시·번호·하단 설명 50%로 사용한다. 제목은 왼쪽 상단 고정. 스크롤 시 항목을 즉시 교체하며 역방향 큐브 전환은 다음 단계다. 모바일·태블릿은 문서형 목록이다.
+- PROJECT: 데스크톱 전체 화면을 왼쪽 표지 50% / 오른쪽 진행 표시·번호·하단 설명 50%로 사용한다. 제목은 왼쪽 상단 고정. 스크롤 시 표지는 아래로, 설명은 위로 큐브처럼 회전한다. HOW I WORK에서 들어올 때도 위·아래의 분할 진입으로 연결한다. 모바일·태블릿은 문서형 목록이다.
 - Q&A의 다섯 이미지에는 각 의미에 맞는 동작이 있다. 전역 정지·동작 축소·화면 밖 정지를 지원하며 원래 이미지가 실패 시 대체된다.
 - MENU 글자 없이 햄버거만 표시하며 1100px까지 접힌 헤더를 사용한다. hover와 키보드 focus에는 같은 블루 채움 효과가 있다.
 - 명함 연락처는 소유자가 지정한 `ksw11205@gmail.com`이다.

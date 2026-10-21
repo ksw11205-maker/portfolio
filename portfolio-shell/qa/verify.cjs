@@ -111,8 +111,15 @@ check('split project stage restores all original cover links after breakpoint ch
     controller.setPinned(true,80);controller.measure();
     for(const position of [0,.49,.51,1,2,3,1,0])controller.render(position);
     assert.equal(controller.gallery.querySelectorAll('.project-visual').length,4);
-    controller.setPinned(false,80);
-    projects.forEach((project,index)=>{assert.equal(project.firstElementChild,covers[index]);assert.equal(covers[index].getAttribute('href'),`/work/${index}/`);assert.equal(infos[index].style.getPropertyValue('--info-opacity'),'');});
+    assert.equal(controller.copyViewport.querySelectorAll('.project-info').length,4);
+    controller.render(.5);
+    assert.equal(covers.filter(n=>n.style.getPropertyValue('--cube-visible')==='visible').length,2);
+    assert.ok(parseFloat(covers[0].style.getPropertyValue('--cube-angle'))<0,'left current face must move down');
+    assert.equal(parseFloat(covers[0].style.getPropertyValue('--cube-angle')),-parseFloat(infos[0].style.getPropertyValue('--cube-angle')),'halves rotate in opposite directions');
+    controller.render(1);assert.equal(covers[1].style.getPropertyValue('--cube-angle'),'0.00000deg');
+    controller.renderEntry(.5,200);assert.equal(stage.style.getPropertyValue('--work-entry-offset'),'-200.000px');
+    controller.setPinned(false,80);assert.equal(stage.style.getPropertyValue('--work-entry-offset'),'');
+    projects.forEach((project,index)=>{assert.equal(project.firstElementChild,covers[index]);assert.equal(covers[index].getAttribute('href'),`/work/${index}/`);assert.equal(project.lastElementChild,infos[index]);assert.equal(infos[index].style.getPropertyValue('--cube-angle'),'');});
   }
 });
 check('reload intro unlocks content on Escape and watchdog; reduced motion skips',()=>{

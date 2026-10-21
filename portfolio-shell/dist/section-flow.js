@@ -32,7 +32,7 @@ export function initSectionFlow({reduced,scrollMotion}){
   const configs=[
     {id:'about',heading:'.section-heading',content:'.about-intro,.profile-details'},
     {id:'tools',heading:'.tools-heading',content:'.tools-visual,.tools-capabilities'},
-    {id:'work',heading:'.work-heading',content:'.project-list,.work-gallery,.project-info,.work-progress'},
+    {id:'work',heading:'.work-heading',content:'.project-list,.work-gallery,.work-copy-viewport,.work-progress'},
     {id:'qa',heading:'.qa-heading',content:'.qa-deck'},
     {id:'contact',heading:'.contact-heading',content:'.contact-note,.contact-card-stage'}
   ];
@@ -102,7 +102,7 @@ export function initSectionFlow({reduced,scrollMotion}){
     contactWave.setEnabled(enabled);
     // PROJECT starts in its final layout; hold the first and last covers before release.
     workEntry.intro=0;
-    workEntry.slot=h*.65;workEntry.hold=h*.16;
+    workEntry.slot=h*.9;workEntry.hold=h*.18;
     workEntry.run=workEntry.intro+workEntry.hold*2+workEntry.slot*(projects.length-1);
     if(enabled&&workEntry.mode==='work')work.style.setProperty('--work-height',h+workEntry.run+'px');
     else work.style.removeProperty('--work-height');
@@ -208,10 +208,13 @@ export function initSectionFlow({reduced,scrollMotion}){
       const distance=clamp(y-workEntry.start-workEntry.intro,0,workEntry.run-workEntry.intro);
       property(work,'--work-content',work.style.getPropertyValue('--section-content'));
       const rawPosition=clamp((distance-workEntry.hold)/workEntry.slot,0,projects.length-1);
-      // A continuous center dwell, not wheel snapping: every active cover rests level.
-      const whole=Math.floor(rawPosition),fraction=clamp((rawPosition-whole-.16)/.68);
+      const arrival=smooth(clamp((y-(workEntry.start-h*.85))/(h*.85)));
+      const arrivalOffset=clamp(workEntry.start-y,0,h);
+      orbit.renderEntry(arrival,arrivalOffset);
+      // Hold each face level for reading; rotate both halves on the same clock.
+      const whole=Math.floor(rawPosition),fraction=clamp((rawPosition-whole-.18)/.64);
       const position=Math.min(projects.length-1,whole+smooth(fraction));
-      orbit.render(position);setProject(Math.round(position),true,work.style.getPropertyValue('--section-content')==='1');
+      orbit.render(position,arrival);setProject(Math.round(position),true,arrival>.995);
     }else{
       work.style.removeProperty('--work-content');
       setProject(listCurrent,false);
@@ -251,7 +254,7 @@ export function initSectionFlow({reduced,scrollMotion}){
         if(ready)coverLink.focus({preventScroll:true});
         else{workEntry.title.tabIndex=-1;workEntry.title.focus({preventScroll:true});}
       }
-      project.classList.toggle('is-current',index===current);cover.classList.toggle('is-active',index===current);info.inert=inactive;cover.inert=pinned;
+      project.classList.toggle('is-current',index===current);info.classList.toggle('is-current',index===current);cover.classList.toggle('is-active',index===current);info.inert=inactive;cover.inert=pinned;
       if(inactive)info.setAttribute('aria-hidden','true');else info.removeAttribute('aria-hidden');
       if(pinned)cover.setAttribute('aria-hidden','true');else cover.removeAttribute('aria-hidden');
       if(pinned&&index===current)info.setAttribute('aria-current','true');else info.removeAttribute('aria-current');
