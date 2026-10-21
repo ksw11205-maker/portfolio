@@ -97,22 +97,20 @@ check('hero brand, shared object and contact remain in the intended sections',()
   assert.deepEqual([...document.querySelectorAll('main > section')].map(n=>n.id),['home','about','tools','work','qa','contact']);
   assert.equal(document.querySelectorAll('#home .brand-experience').length,1);
   assert.equal(document.querySelectorAll('#tools .brand-experience').length,0);
-  assert.deepEqual([...document.querySelectorAll('[data-motion-object="prism"]')].map(n=>n.closest('section').id),['tools','work']);
-  assert.equal(document.querySelectorAll('#work .work-object').length,1);
+  assert.deepEqual([...document.querySelectorAll('[data-motion-object="prism"]')].map(n=>n.closest('section').id),['tools']);
+  assert.equal(document.querySelectorAll('#work .work-object').length,0);
   assert.equal(document.querySelector('.menu').textContent.trim(),'');
   assert.equal(document.querySelector('.menu').getAttribute('aria-label'),'메뉴 열기');
   assert.equal(document.querySelector('.contact-card-link').getAttribute('href'),'mailto:ksw11205@gmail.com');
 });
 check('split project stage restores all original cover links after breakpoint changes',()=>{
-  const e=env('<section id="work"><div class="work-stage"><div class="work-object"></div><div class="project-list">'+[0,1,2,3].map(i=>`<article class="project"><a class="project-visual" href="/work/${i}/"></a><div class="project-info"></div></article>`).join('')+'</div></div></section>');
+  const e=env('<section id="work"><div class="work-stage"><div class="project-list">'+[0,1,2,3].map(i=>`<article class="project"><a class="project-visual" href="/work/${i}/"></a><div class="project-info"></div></article>`).join('')+'</div></div></section>');
   const work=e.document.querySelector('#work'),stage=work.querySelector('.work-stage'),projects=[...work.querySelectorAll('.project')],covers=projects.map(n=>n.querySelector('a')),infos=projects.map(n=>n.querySelector('.project-info')),coverLink=e.document.createElement('a');
-  const shared=stage.querySelector('.work-object');
   const controller=e.load('project-showcase.js','createProjectShowcase')({work,stage,projects,covers,infos,coverLink});
   for(let resize=0;resize<3;resize++){
     controller.setPinned(true,80);controller.measure();
     for(const position of [0,.49,.51,1,2,3,1,0])controller.render(position);
     assert.equal(controller.gallery.querySelectorAll('.project-visual').length,4);
-    assert.equal(stage.querySelector('.work-object'),shared);
     controller.setPinned(false,80);
     projects.forEach((project,index)=>{assert.equal(project.firstElementChild,covers[index]);assert.equal(covers[index].getAttribute('href'),`/work/${index}/`);assert.equal(infos[index].style.getPropertyValue('--info-opacity'),'');});
   }

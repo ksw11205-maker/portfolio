@@ -32,7 +32,7 @@ export function initSectionFlow({reduced,scrollMotion}){
   const configs=[
     {id:'about',heading:'.section-heading',content:'.about-intro,.profile-details'},
     {id:'tools',heading:'.tools-heading',content:'.tools-visual,.tools-capabilities'},
-    {id:'work',heading:'.work-heading',content:'.project-list,.work-gallery,.project-info,.work-object'},
+    {id:'work',heading:'.work-heading',content:'.project-list,.work-gallery,.project-info,.work-progress'},
     {id:'qa',heading:'.qa-heading',content:'.qa-deck'},
     {id:'contact',heading:'.contact-heading',content:'.contact-note,.contact-card-stage'}
   ];
@@ -100,8 +100,8 @@ export function initSectionFlow({reduced,scrollMotion}){
       if(!enabled){section.style.setProperty('--section-content','1');}
     });
     contactWave.setEnabled(enabled);
-    // Keep the title entrance; hold the first and last covers before releasing the pin.
-    workEntry.intro=intro;
+    // PROJECT starts in its final layout; hold the first and last covers before release.
+    workEntry.intro=0;
     workEntry.slot=h*.65;workEntry.hold=h*.16;
     workEntry.run=workEntry.intro+workEntry.hold*2+workEntry.slot*(projects.length-1);
     if(enabled&&workEntry.mode==='work')work.style.setProperty('--work-height',h+workEntry.run+'px');
@@ -112,7 +112,7 @@ export function initSectionFlow({reduced,scrollMotion}){
     else qa.style.removeProperty('--qa-height');
     // Set all spacer sizes before reading document positions of later sections.
     entries.forEach(entry=>{
-      if(!enabled||entry.mode!=='flow')return;
+      if(!enabled||entry.mode!=='flow'||entry.id==='work')return;
       const {section,shell}=entry;
       const margin=getComputedStyle(section).marginTop;
       shell.style.marginTop=margin;section.style.marginTop='0px';
@@ -127,9 +127,10 @@ export function initSectionFlow({reduced,scrollMotion}){
       const {section,shell,title}=entry;
       const stage=entry.mode==='work'?workStage:entry.mode==='qa'?qaStage:section;
       const stageBox=stage.getBoundingClientRect(),box=title.getBoundingClientRect(),text=textBounds(title);
-      const pinTop=enabled&&entry.mode==='flow'?entry.pinTop||0:0;
+      const hasFlowPin=enabled&&entry.mode==='flow'&&entry.id!=='work';
+      const pinTop=hasFlowPin?entry.pinTop||0:0;
       // display:contents shells have no box on mobile or when motion is paused.
-      entry.start=(enabled&&entry.mode==='flow'?shell:section).getBoundingClientRect().top+scrollY-pinTop;
+      entry.start=(hasFlowPin?shell:section).getBoundingClientRect().top+scrollY-pinTop;
       const font=parseFloat(getComputedStyle(title).fontSize),largeFont=compact?Math.max(font*1.3,68):Math.min(160,w*.105);
       entry.scale=Math.max(1,Math.min(largeFont/font,(w-48)/text.width,h*.5/text.height));
       entry.x=w/2-(box.left+(text.left-box.left+text.width/2)*entry.scale);
@@ -141,7 +142,7 @@ export function initSectionFlow({reduced,scrollMotion}){
     qa.dataset.intro=String(intro);qa.dataset.run=String(qaEntry.run);
     sectionStarts=sections.map(section=>{
       const entry=entries.find(entry=>entry.section===section);
-      return entry?entry.start+(entry.enabled&&entry.mode==='flow'?entry.pinTop||0:0):section.getBoundingClientRect().top+scrollY;
+      return entry?entry.start+(entry.enabled&&entry.mode==='flow'&&entry.id!=='work'?entry.pinTop||0:0):section.getBoundingClientRect().top+scrollY;
     });
     heroHeight=hero.offsetHeight;
     // Geometry is stable during transform/opacity animation. Read only on layout changes.
@@ -179,7 +180,7 @@ export function initSectionFlow({reduced,scrollMotion}){
     const heroProgress=smooth(clamp((y-heroHeight*.18)/(heroHeight*.82)));
     property(hero,'--hero-presence',atRest?'1':String(1-heroProgress*.82));
     entries.forEach(entry=>{
-      const progress=entry.id==='contact'&&entry.section.classList.contains('wave-complete')?1:entry.enabled&&entry.intro?clamp((y-entry.start)/entry.intro):1;
+      const progress=entry.id==='work'?1:entry.id==='contact'&&entry.section.classList.contains('wave-complete')?1:entry.enabled&&entry.intro?clamp((y-entry.start)/entry.intro):1;
       const reveal=textReveal.renderEntry(entry,progress,atRest||!entry.enabled);
       const content=reveal.content;
       // Reuse the large title settling as group one; no second title animation.
@@ -234,6 +235,13 @@ export function initSectionFlow({reduced,scrollMotion}){
   function setProject(current,pinned,ready=true){
     const state=current+':'+pinned+':'+ready;if(state===projectState)return;projectState=state;
     work.dataset.current=String(current);
+    const progress=work.querySelector('.work-progress');
+    if(progress){
+      const count=String(current+1).padStart(2,'0')+' / '+String(projects.length).padStart(2,'0');
+      progress.setAttribute('aria-label','현재 프로젝트 '+count);
+      progress.querySelector('.work-progress-count').textContent=count;
+      progress.querySelectorAll('[data-project-step]').forEach((step,index)=>step.classList.toggle('is-current',index===current));
+    }
     coverLink.href=projectInfo[current].link;
     coverLink.setAttribute('aria-label',projectInfo[current].label);coverLink.inert=!pinned||!ready;
     const activeInfo=projectInfo[current].info;activeInfo.inert=false;

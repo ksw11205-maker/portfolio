@@ -1,4 +1,5 @@
-// A single scroll-driven stage. Cover and copy change; the middle object persists.
+// Phase one: a full-bleed split layout with discrete project selection.
+// Cube rotation is deliberately reserved for the next implementation stage.
 export function createProjectShowcase({work,stage,projects,covers,infos,coverLink}) {
   const gallery=document.createElement('div');gallery.className='work-gallery';
   stage.append(gallery);gallery.append(coverLink);
@@ -24,15 +25,11 @@ export function createProjectShowcase({work,stage,projects,covers,infos,coverLin
     render(position){
       if(!pinned||position===lastPosition)return;
       lastPosition=position;
+      const current=Math.round(position);
       covers.forEach((cover,index)=>{
-        const d=index-position,distance=Math.abs(d);
-        property(cover,'--showcase-y',(d*105).toFixed(3)+'%');
-        property(cover,'--showcase-opacity',String(Math.max(0,1-distance*.22)));
-        property(cover,'--showcase-scale',String(1-Math.min(1,distance)*.045));
-        property(cover,'--showcase-order',String(10-index));
-        const opacity=Math.max(0,1-distance*2);
-        property(infos[index],'--info-opacity',opacity.toFixed(4));
-        property(infos[index],'--info-y',(d*48).toFixed(3)+'px');
+        property(cover,'--showcase-opacity',index===current?'1':'0');
+        property(cover,'--showcase-order',index===current?'2':'1');
+        property(infos[index],'--info-opacity',index===current?'1':'0');
       });
       work.dataset.position=position.toFixed(5);
     }

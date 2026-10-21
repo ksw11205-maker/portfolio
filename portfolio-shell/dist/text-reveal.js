@@ -15,12 +15,6 @@ export function createTextReveal(entries,{requestUpdate=()=>{}}={}){
         visual.append(span);glyphs.push({node:span,letter:span.textContent,index:i});
       });
       title.replaceChildren(visual);title.dataset.effect=entry.id==='qa'?'roll':'scramble';
-    }else if(entry.id==='work'){
-      title.setAttribute('aria-label',text);title.dataset.effect='lines';
-      [...title.children].forEach(node=>{
-        const line=document.createElement('span');line.className='title-line';line.textContent=node.textContent;
-        node.classList.add('title-mask');node.setAttribute('aria-hidden','true');node.replaceChildren(line);lines.push(line);
-      });
     }
     return [entry,{start:null,finished:false,contentStart:null,contentComplete:false,glyphs,lines,duration:entry.id==='work'?920:760,lastStep:-1}];
   }));
@@ -62,7 +56,7 @@ export function createTextReveal(entries,{requestUpdate=()=>{}}={}){
     },
     renderEntry(entry,progress,resting){
       const state=states.get(entry),now=performance.now();
-      if(resting){finishEntry(entry);return {title:1,content:1};}
+      if(resting||entry.id==='work'){finishEntry(entry);return {title:1,content:1};}
       const gate=entry.id==='contact'?entry.start+entry.intro*.56:entry.start-innerHeight*.12;
       if(state.start===null&&scrollY>=gate){state.start=now;entry.section.dataset.revealState='playing';}
       if(state.start===null)return {title:0,content:0};

@@ -1,3 +1,13 @@
+# 2026-10-21 — PROJECT layout phase one
+
+Scope: PROJECT only. Full-viewport 50:50 split, fixed upper-left title, full-height left cover, right progress rail, upper number and lower copy/metadata. The previous project object and title entrance are removed. Project selection is discrete in this stage; opposing cube transitions are explicitly deferred.
+
+- `npm test --prefix portfolio-shell/qa`: 10 passed after the final source change. Existing resize restoration test now covers the object-free stage. `git diff --check` passed.
+- Connected Chrome 1440×1000: gallery x=0/w=713, stage w=1425/h=1000 (browser scrollbar excludes 15px). No page horizontal overflow; title transform is empty. LG → IVI → CAFÉKOK → OFFER updates cover, info, progress label and current detail href together. Reverse to CAFÉKOK works. Scrolling onward releases the stage into Q&A.
+- 834×1194: menu PROJECT navigation targets the actual section start (5128.59px in this session), cover bottom and info top both 789px, no horizontal overflow. The old empty-wrapper measurement is bypassed for this non-pinned PROJECT layout.
+- 390×844: cover then description/meta, no pinned state, no horizontal overflow; all four original cover links and infos are available. Console errors/warnings were empty in the connected browser.
+- Screenshots: `.qa/project-layout-phase1-20261021/`. Viewports are browser overrides with mouse input, not physical touch device tests. Reduced-motion/no-JS layout paths are preserved in code, not newly tested under an OS setting. No new GPU materials are included in this phase.
+
 # 2026-10-21 — Teacher feedback
 
 Current implementation and evidence are summarized in root PROGRESS.md (2026-10-21). Ten DOM/build/state checks pass. Live connected Chrome was inspected at desktop 1440×1000, tablet 834×1194 and mobile 390×844. The internal browser has WebGL disabled, so GPU appearance was checked on the owner-private deployed preview instead. Existing manual history below is not evidence for this release. Physical touch hardware, Safari and sustained frame-time/thermal measurements are not covered.
