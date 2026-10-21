@@ -1,9 +1,8 @@
 // A single scroll clock drives all title entrances and the existing Work/Q&A stages.
 // Ordinary sections have a short sticky shell; Work/Q&A reuse their own single pin.
 import {createContactWave} from './contact-wave.js';
-import {createProjectOrbit} from './project-orbit.js';
+import {createProjectShowcase} from './project-showcase.js';
 import {createTextReveal} from './text-reveal.js';
-import {createProjectSnap} from './project-snap.js';
 export function initSectionFlow({reduced,scrollMotion}){
   const hero=document.querySelector('.hero');if(!hero)return;
   const sections=[...document.querySelectorAll('main > section[id]')];
@@ -15,7 +14,7 @@ export function initSectionFlow({reduced,scrollMotion}){
   const projectInfo=projects.map(project=>({info:project.querySelector('.project-info'),cover:project.querySelector('.project-visual'),link:project.querySelector('.project-visual').getAttribute('href'),label:project.querySelector('h3').textContent+' 상세 보기'}));
   const workStage=work.querySelector('.work-stage'),qaStage=qa.querySelector('.qa-stage'),deck=qa.querySelector('.qa-deck');
   const coverLink=document.createElement('a');coverLink.className='work-current-link';workStage.append(coverLink);
-  const orbit=createProjectOrbit({work,stage:workStage,projects,covers,infos:projectInfo.map(p=>p.info),coverLink});
+  const orbit=createProjectShowcase({work,stage:workStage,projects,covers,infos:projectInfo.map(p=>p.info),coverLink});
   let listCurrent=0;
   const visibleCovers=covers.map(()=>0);
   const listObserver=new IntersectionObserver(entries=>{
@@ -25,15 +24,15 @@ export function initSectionFlow({reduced,scrollMotion}){
     if(visibleCovers[nearest]>0&&nearest!==listCurrent){listCurrent=nearest;scrollMotion.requestUpdate();}
   },{threshold:[0,.1,.25,.5,.75,1]});
   covers.forEach(cover=>listObserver.observe(cover));
-  const desktop=matchMedia('(min-width:1101px) and (min-height:760px)');
-  const desktopQA=matchMedia('(min-width:801px) and (min-height:650px)');
+  const desktop=matchMedia('(min-width:1101px) and (min-height:700px)');
+  const desktopQA=matchMedia('(min-width:901px) and (min-height:700px) and (hover:hover) and (pointer:fine)');
   const clamp=(n,min=0,max=1)=>Math.max(min,Math.min(max,n)),smooth=n=>n*n*(3-2*n);
   const resting=()=>reduced.matches||document.body.classList.contains('motion-paused');
   const labels={home:'Hero',about:'Who I Am',tools:'How I Work',work:'Projects',qa:'How I Think',contact:'Contact'};
   const configs=[
     {id:'about',heading:'.section-heading',content:'.about-intro,.profile-details'},
     {id:'tools',heading:'.tools-heading',content:'.tools-visual,.tools-capabilities'},
-    {id:'work',heading:'.work-heading',content:'.project-list,.work-gallery'},
+    {id:'work',heading:'.work-heading',content:'.project-list,.work-gallery,.work-copy-viewport,.work-progress'},
     {id:'qa',heading:'.qa-heading',content:'.qa-deck'},
     {id:'contact',heading:'.contact-heading',content:'.contact-note,.contact-card-stage'}
   ];
@@ -41,16 +40,14 @@ export function initSectionFlow({reduced,scrollMotion}){
     const section=document.getElementById(config.id),heading=section.querySelector(config.heading),title=heading.querySelector('h2');
     const shell=document.createElement('div');shell.className='section-entry-shell';section.before(shell);shell.append(section);
     section.classList.add('entry-section');title.classList.add('entry-title');
-    const content=[...section.querySelectorAll(config.content),...heading.querySelectorAll('.eyebrow,.qa-scroll-hint')];
+    const content=[...section.querySelectorAll(config.content)];
     content.forEach(node=>node.classList.add('entry-content'));
-    // Scroll progress is the only owner of the entrance, including reverse scroll.
+    // The section owns a single, once-only two-group entrance.
     section.querySelectorAll('.reveal').forEach(node=>node.classList.remove('reveal','observed','visible'));
     return {...config,section,shell,heading,title,content};
   });
   const workEntry=entries.find(e=>e.id==='work'),qaEntry=entries.find(e=>e.id==='qa');
   const textReveal=createTextReveal(entries,{requestUpdate:scrollMotion.requestUpdate});
-  const projectSnap=createProjectSnap({entry:workEntry,work,count:projects.length,scrollMotion,resting});
-  scrollMotion.setWheelHandler(projectSnap.handleWheel);
   let layoutFrame=0,active='',lastDestination='',headerLight=false,measured=false,pendingAnchor=null;
   let headerGeometry,sectionStarts=[],qaGeometry=[],qaWidth=0,heroHeight=0,projectState='',layoutSize='';
   // Avoid invalidating inherited styles for every offscreen section on every tick.
@@ -68,9 +65,8 @@ export function initSectionFlow({reduced,scrollMotion}){
     return {left,top,width:right-left,height:bottom-top};
   }
   function measure(){
-    layoutFrame=0;const enabled=!resting(),h=innerHeight,w=document.documentElement.clientWidth;
+    layoutFrame=0;const h=innerHeight,w=document.documentElement.clientWidth,enabled=!resting()&&w>600&&h>=650;
     const size=w+':'+h,changedSize=layoutSize&&layoutSize!==size;
-    if(changedSize)projectSnap.cancel();
     let restoreWork=null;
     if(changedSize&&measured&&!pendingAnchor&&workEntry.enabled&&workEntry.mode==='work'&&scrollY>=workEntry.start&&scrollY<=workEntry.start+workEntry.run){
       restoreWork=scrollY<workEntry.start+workEntry.intro
@@ -104,9 +100,10 @@ export function initSectionFlow({reduced,scrollMotion}){
       if(!enabled){section.style.setProperty('--section-content','1');}
     });
     contactWave.setEnabled(enabled);
-    // Keep the title entrance; hold the first and last covers before releasing the pin.
-    workEntry.slot=h*.3;workEntry.hold=workEntry.slot*.25;
-    workEntry.run=intro+workEntry.hold*2+workEntry.slot*(projects.length-1);
+    // PROJECT starts in its final layout; hold the first and last covers before release.
+    workEntry.intro=0;
+    workEntry.slot=h*.9;workEntry.hold=h*.18;
+    workEntry.run=workEntry.intro+workEntry.hold*2+workEntry.slot*(projects.length-1);
     if(enabled&&workEntry.mode==='work')work.style.setProperty('--work-height',h+workEntry.run+'px');
     else work.style.removeProperty('--work-height');
     qaEntry.travel=Math.max(0,deck.scrollWidth-qaStage.clientWidth);
@@ -115,7 +112,7 @@ export function initSectionFlow({reduced,scrollMotion}){
     else qa.style.removeProperty('--qa-height');
     // Set all spacer sizes before reading document positions of later sections.
     entries.forEach(entry=>{
-      if(!enabled||entry.mode!=='flow')return;
+      if(!enabled||entry.mode!=='flow'||entry.id==='work')return;
       const {section,shell}=entry;
       const margin=getComputedStyle(section).marginTop;
       shell.style.marginTop=margin;section.style.marginTop='0px';
@@ -130,8 +127,10 @@ export function initSectionFlow({reduced,scrollMotion}){
       const {section,shell,title}=entry;
       const stage=entry.mode==='work'?workStage:entry.mode==='qa'?qaStage:section;
       const stageBox=stage.getBoundingClientRect(),box=title.getBoundingClientRect(),text=textBounds(title);
-      const pinTop=entry.mode==='flow'?entry.pinTop||0:0;
-      entry.start=(entry.mode==='flow'?shell:section).getBoundingClientRect().top+scrollY-pinTop;
+      const hasFlowPin=enabled&&entry.mode==='flow'&&entry.id!=='work';
+      const pinTop=hasFlowPin?entry.pinTop||0:0;
+      // display:contents shells have no box on mobile or when motion is paused.
+      entry.start=(hasFlowPin?shell:section).getBoundingClientRect().top+scrollY-pinTop;
       const font=parseFloat(getComputedStyle(title).fontSize),largeFont=compact?Math.max(font*1.3,68):Math.min(160,w*.105);
       entry.scale=Math.max(1,Math.min(largeFont/font,(w-48)/text.width,h*.5/text.height));
       entry.x=w/2-(box.left+(text.left-box.left+text.width/2)*entry.scale);
@@ -139,11 +138,11 @@ export function initSectionFlow({reduced,scrollMotion}){
       section.dataset.entryStart=String(entry.start);section.dataset.entryDistance=String(entry.intro);
       section.dataset.entryMode=enabled?entry.mode:'static';
     });
-    work.dataset.intro=String(intro);work.dataset.slot=String(workEntry.slot);work.dataset.hold=String(workEntry.hold);work.dataset.run=String(workEntry.run);
+    work.dataset.intro=String(workEntry.intro);work.dataset.slot=String(workEntry.slot);work.dataset.hold=String(workEntry.hold);work.dataset.run=String(workEntry.run);
     qa.dataset.intro=String(intro);qa.dataset.run=String(qaEntry.run);
     sectionStarts=sections.map(section=>{
       const entry=entries.find(entry=>entry.section===section);
-      return entry?entry.start+(entry.mode==='flow'?entry.pinTop||0:0):section.getBoundingClientRect().top+scrollY;
+      return entry?entry.start+(entry.enabled&&entry.mode==='flow'&&entry.id!=='work'?entry.pinTop||0:0):section.getBoundingClientRect().top+scrollY;
     });
     heroHeight=hero.offsetHeight;
     // Geometry is stable during transform/opacity animation. Read only on layout changes.
@@ -181,18 +180,23 @@ export function initSectionFlow({reduced,scrollMotion}){
     const heroProgress=smooth(clamp((y-heroHeight*.18)/(heroHeight*.82)));
     property(hero,'--hero-presence',atRest?'1':String(1-heroProgress*.82));
     entries.forEach(entry=>{
-      const progress=entry.enabled?clamp((y-entry.start)/entry.intro):1;
-      const content=textReveal.renderEntry(entry,progress,atRest)?1:0;
-      // One reversible timeline, with overlap rather than completion timers.
+      const progress=entry.id==='work'?1:entry.id==='contact'&&entry.section.classList.contains('wave-complete')?1:entry.enabled&&entry.intro?clamp((y-entry.start)/entry.intro):1;
+      const reveal=textReveal.renderEntry(entry,progress,atRest||!entry.enabled);
+      const content=reveal.content;
+      // Reuse the large title settling as group one; no second title animation.
       const isContact=entry.id==='contact';
-      const opacity=progress>(isContact?.56:0)?1:0;
-      const p=smooth(clamp(isContact?(progress-.56)/.44:(progress-.2)/.65));
+      const opacity=smooth(clamp(reveal.title*1.65));
+      const settle=entry.enabled?progress:1;
+      const p=1-Math.pow(1-settle,3);
       if(isContact)contactWave.render(progress);
       entry.progress=progress;
       entry.title.style.opacity=String(opacity);
       entry.title.style.transform=p<1?`translate3d(${entry.x*(1-p)}px,${entry.y*(1-p)}px,0) scale(${entry.scale+(1-entry.scale)*p})`:'';
-      entry.title.style.willChange=progress>0&&progress<1?'transform, opacity':'auto';
+      entry.title.style.willChange=settle>0&&settle<1?'transform, opacity':'auto';
       property(entry.section,'--section-content',String(content));
+      property(entry.section,'--section-heading',String(content));
+      property(entry.section,'--entry-content-y',32*(1-content)+'px');
+      property(entry.section,'--entry-label-y',20*(1-content)+'px');
       property(entry.section,'--entry-interaction',content>.05?'auto':'none');
       entry.section.dataset.entryProgress=progress.toFixed(4);
     });
@@ -203,14 +207,17 @@ export function initSectionFlow({reduced,scrollMotion}){
     if(workEntry.enabled&&workEntry.mode==='work'){
       const distance=clamp(y-workEntry.start-workEntry.intro,0,workEntry.run-workEntry.intro);
       property(work,'--work-content',work.style.getPropertyValue('--section-content'));
-      const rawPosition=clamp((distance-workEntry.hold)/workEntry.slot,0,projects.length-1),nearest=Math.round(rawPosition);
-      const position=Math.abs(rawPosition-nearest)*workEntry.slot<=1?nearest:rawPosition;
-      orbit.render(position);setProject(Math.round(position),true,wp>=.999);
-      textReveal.renderProjects(position,false);
+      const rawPosition=clamp((distance-workEntry.hold)/workEntry.slot,0,projects.length-1);
+      const arrival=smooth(clamp((y-(workEntry.start-h*.85))/(h*.85)));
+      const arrivalOffset=clamp(workEntry.start-y,0,h);
+      orbit.renderEntry(arrival,arrivalOffset);
+      // Hold each face level for reading; rotate both halves on the same clock.
+      const whole=Math.floor(rawPosition),fraction=clamp((rawPosition-whole-.18)/.64);
+      const position=Math.min(projects.length-1,whole+smooth(fraction));
+      orbit.render(position,arrival);setProject(Math.round(position),true,arrival>.995);
     }else{
       work.style.removeProperty('--work-content');
       setProject(listCurrent,false);
-      textReveal.renderProjects(0,atRest,false);
     }
     if(qaEntry.enabled&&qaEntry.mode==='qa'){
       const progress=clamp((y-qaEntry.start-qaEntry.intro)/qaEntry.run),shift=progress*qaEntry.travel;
@@ -227,21 +234,27 @@ export function initSectionFlow({reduced,scrollMotion}){
       qa.style.removeProperty('--qa-x');
       cards.forEach(card=>{card.style.removeProperty('--qa-angle');card.style.removeProperty('--qa-lift');});
     }
-    projectSnap.observe(y);
   }
   function setProject(current,pinned,ready=true){
     const state=current+':'+pinned+':'+ready;if(state===projectState)return;projectState=state;
     work.dataset.current=String(current);
+    const progress=work.querySelector('.work-progress');
+    if(progress){
+      const count=String(current+1).padStart(2,'0')+' / '+String(projects.length).padStart(2,'0');
+      progress.setAttribute('aria-label','현재 프로젝트 '+count);
+      progress.querySelector('.work-progress-count').textContent=count;
+      progress.querySelectorAll('[data-project-step]').forEach((step,index)=>step.classList.toggle('is-current',index===current));
+    }
     coverLink.href=projectInfo[current].link;
     coverLink.setAttribute('aria-label',projectInfo[current].label);coverLink.inert=!pinned||!ready;
     const activeInfo=projectInfo[current].info;activeInfo.inert=false;
     projects.forEach((project,index)=>{
       const {info,cover}=projectInfo[index],inactive=pinned&&(index!==current||!ready);
       if(inactive&&info.contains(document.activeElement)){
-        if(ready)activeInfo.querySelector('.liquid').focus({preventScroll:true});
+        if(ready)coverLink.focus({preventScroll:true});
         else{workEntry.title.tabIndex=-1;workEntry.title.focus({preventScroll:true});}
       }
-      project.classList.toggle('is-current',index===current);info.inert=inactive;cover.inert=pinned;
+      project.classList.toggle('is-current',index===current);info.classList.toggle('is-current',index===current);cover.classList.toggle('is-active',index===current);info.inert=inactive;cover.inert=pinned;
       if(inactive)info.setAttribute('aria-hidden','true');else info.removeAttribute('aria-hidden');
       if(pinned)cover.setAttribute('aria-hidden','true');else cover.removeAttribute('aria-hidden');
       if(pinned&&index===current)info.setAttribute('aria-current','true');else info.removeAttribute('aria-current');
@@ -251,7 +264,7 @@ export function initSectionFlow({reduced,scrollMotion}){
   function anchorPosition(target){
     if(target===hero)return 0;
     const entry=entries.find(entry=>entry.section===target);
-    if(entry?.enabled)return entry.start;
+    if(entry?.enabled)return entry.start+(entry.id==='contact'?entry.intro:0);
     return target.getBoundingClientRect().top+scrollY-header.getBoundingClientRect().bottom-24;
   }
   document.addEventListener('click',event=>{
@@ -304,8 +317,8 @@ export function initSectionFlow({reduced,scrollMotion}){
 function initCursor({reduced,scrollMotion}){
   const cursor=document.querySelector('.site-cursor');if(!cursor||cursor.dataset.initialized)return;
   const fine=matchMedia('(hover:hover) and (pointer:fine)'),root=document.documentElement;
-  const dot=cursor.querySelector('.cursor-dot'),follower=cursor.querySelector('.cursor-follower');
-  if(!dot||!follower)return;
+  const follower=cursor.querySelector('.cursor-follower');
+  if(!follower)return;
   cursor.dataset.initialized='true';
   const projectTarget='.project-visual,.work-current-link';
   const fields='input,textarea,select,[contenteditable]:not([contenteditable="false"]),[data-native-cursor]';
@@ -315,7 +328,7 @@ function initCursor({reduced,scrollMotion}){
   function position(element,px,py){element.style.transform='translate3d('+px+'px,'+py+'px,0)';}
   function hide(){
     visible=false;root.classList.remove('cursor-ready');
-    cursor.classList.remove('is-visible','is-project','is-link','is-light');
+    cursor.classList.remove('is-visible','is-project','is-link','is-light','is-info');
     cancelAnimationFrame(frame);frame=0;
   }
   function schedule(){if(!frame){last=performance.now();frame=requestAnimationFrame(tick);}}
@@ -323,21 +336,22 @@ function initCursor({reduced,scrollMotion}){
     if(!allowed()||!inside||!(target instanceof Element)||target.closest(fields)||getSelection()?.toString()){
       hide();return;
     }
-    const interactive=target.closest('a,button,[role="button"]');
+    const info=target.closest('.brand-trigger');
+    const interactive=target.closest('a,button,[role="button"]')||info;
     // Native I-beam for readable copy, even when the page is otherwise enhanced.
     if(!interactive&&target.closest('p:not(.eyebrow):not(.art-word),.contact-card-name,.contact-card-role')){hide();return;}
     const project=target.closest(projectTarget);
-    cursor.classList.toggle('is-project',!!project);
+    cursor.classList.toggle('is-project',!!project);cursor.classList.toggle('is-info',!!info);
+    if(info)cursor.querySelector('.cursor-label').textContent='i';
     if(project){
       const owner=project.closest('.project')||document.querySelector('.project.is-current');
       const label=cursor.querySelector('.cursor-label');
-      const action=owner?.querySelector('.liquid > span')?.textContent||'VIEW CASE STUDY';
+      const action='VIEW CASE STUDY';
       const text=action.replace('VIEW ','VIEW\n')+' ↗';
       if(label.textContent!==text)label.textContent=text;
     }
     cursor.classList.toggle('is-link',!!interactive);
     cursor.classList.toggle('is-light',!!target.closest('#contact,.contact-card,.site-footer.is-light,.header.is-light'));
-    position(dot,x,y);
     if(!visible){
       rx=x;ry=y;position(follower,rx,ry);
       visible=true;cursor.classList.add('is-visible');root.classList.add('cursor-ready');

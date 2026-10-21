@@ -1,3 +1,52 @@
+# 2026-10-21 — PROJECT opposing cube and split arrival
+
+- Scope: existing PROJECT split layout plus HOW I WORK → PROJECT entry. A single scroll clock drives CSS 3D faces; no added wheel lock or WebGL scene. Left current face rotates downward, right current face upward; reverse scrolling reverses the same geometry. A short stable interval at each project keeps text readable.
+- Entry: over the previous section's last screen, the left mask fills downward and the right mask upward with a small corresponding face tilt. The stage remains at viewport top until normal pinning takes over. At the measured halfway state, arrival=0.5, logical work top=425px and painted stage top=0px. Header and previous section content remain independent.
+- Automated: 10 checks passed after the JS change. The lifecycle check now verifies original cover AND info node restoration over three mode cycles, opposing angle signs, two neighboring visible faces, the next front face and entry offset cleanup. This harness does not render geometry.
+- Actual connected Chrome 1440×1000: inspected two opposing perspective faces at a partial turn; all four project fronts, synchronized detail hrefs/progress, reverse OFFER→CAFÉKOK, entry forward/reverse and final pin release into Q&A. Errors/warnings were empty and no horizontal overflow was observed.
+- Resized during a turn to 834×1194: all four covers and infos restored to their original articles. At 390×844: four covers and infos accessible, zero aria-hidden infos, no horizontal overflow, no pinned state. These viewport overrides retain mouse input; physical touch and Safari were not tested.
+- Screenshots: `.qa/project-cube-20261021/`. Stills document representative visual states only. Sustained frame times, thermal behavior and OS reduced-motion rendering are not measured; reduced-motion/global-pause use the tested document-mode restoration path.
+
+# 2026-10-21 — PROJECT layout phase one
+
+Scope: PROJECT only. Full-viewport 50:50 split, fixed upper-left title, full-height left cover, right progress rail, upper number and lower copy/metadata. The previous project object and title entrance are removed. Project selection is discrete in this stage; opposing cube transitions are explicitly deferred.
+
+- `npm test --prefix portfolio-shell/qa`: 10 passed after the final source change. Existing resize restoration test now covers the object-free stage. `git diff --check` passed.
+- Connected Chrome 1440×1000: gallery x=0/w=713, stage w=1425/h=1000 (browser scrollbar excludes 15px). No page horizontal overflow; title transform is empty. LG → IVI → CAFÉKOK → OFFER updates cover, info, progress label and current detail href together. Reverse to CAFÉKOK works. Scrolling onward releases the stage into Q&A.
+- 834×1194: menu PROJECT navigation targets the actual section start (5128.59px in this session), cover bottom and info top both 789px, no horizontal overflow. The old empty-wrapper measurement is bypassed for this non-pinned PROJECT layout.
+- 390×844: cover then description/meta, no pinned state, no horizontal overflow; all four original cover links and infos are available. Console errors/warnings were empty in the connected browser.
+- Screenshots: `.qa/project-layout-phase1-20261021/`. Viewports are browser overrides with mouse input, not physical touch device tests. Reduced-motion/no-JS layout paths are preserved in code, not newly tested under an OS setting. No new GPU materials are included in this phase.
+
+# 2026-10-21 — Teacher feedback
+
+Current implementation and evidence are summarized in root PROGRESS.md (2026-10-21). Ten DOM/build/state checks pass. Live connected Chrome was inspected at desktop 1440×1000, tablet 834×1194 and mobile 390×844. The internal browser has WebGL disabled, so GPU appearance was checked on the owner-private deployed preview instead. Existing manual history below is not evidence for this release. Physical touch hardware, Safari and sustained frame-time/thermal measurements are not covered.
+
+Final live recheck: revised material shaders render without console errors/warnings; the mobile home menu has no incorrect current section; OFFER's visible cover opens its case study and its portfolio return link works. Screenshots of the split project stage, Q&A motion state and mobile menu are in `.qa/teacher-feedback-20261021/`. These still images document appearance, not measured motion performance.
+
+# Previous verification — 2026-10-19
+
+This section applies to the brand refinement branch. All records below “Historical verification” apply only to the versions and environments described there.
+
+Automated state/DOM checks: 7 passed. Run `npm ci --prefix portfolio-shell/qa` then `npm test --prefix portfolio-shell/qa` from the repository root. These check production syntax, reproducible HTML/assets, preserved product source, local resource resolution, intro unlock, permanent Contact completion, two-group title/content completion and scroll-clock lifecycle. The DOM harness has no layout or GPU and is not browser emulation.
+
+The actual browser preview could not be started: the supported managed preview reported `bwrap: Can't mount proc on /newroot/proc: Operation not permitted`. The connected browser could not reach the isolated localhost server. No current screenshots or claims of verified visual quality / 60fps are available.
+
+Manual release checks still required:
+
+| Viewport / input | Check |
+| --- | --- |
+| 1440×900 and 1920×1080 mouse | First load, F5, logo replay; title centering/settling; each cover reaches horizontal at center; LG → IVI → CAFÉKOK → OFFER → Q&A releases normally |
+| 1024×1366 and 768×1024 touch | Menu, profile two columns + awards, tool capability wrapping, static model explanation, project links, Q&A horizontal touch without blocking page scroll |
+| 390×844 and 375×812 touch | No horizontal page overflow, readable card answers, business-card email fits, section anchors clear header |
+| Keyboard | Visible focus, logo explanation Escape, cover link points at the visible project, all five Q&A cards reachable, menu closes and restores focus |
+| Reduced motion / no JS / WebGL unavailable | Static readable content and SVG symbol, no persistent overlay, all project links usable |
+| Contact forward then backward | Transition does not repeat after completion, light header contrast, engraved card readable |
+| Hidden tab / back navigation | No duplicate animation loops, project position preserved, WebGL resumes without a blank graphic |
+
+Unconfirmed content: `CONTACT_EMAIL` remains the existing placeholder. IVI/OFFER dates and project-specific tools for LG/IVI/CAFÉKOK are omitted. LG/IVI case studies and OFFER final cover are not completed by this change.
+
+# Historical verification
+
 # Verification
 
 - Browser widths: 375, 390, 1440, 1920. No document horizontal overflow.

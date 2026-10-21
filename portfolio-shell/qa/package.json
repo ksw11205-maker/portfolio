@@ -1,0 +1,6 @@
+{
+  "private": true,
+  "description": "DOM and lifecycle regression checks; no browser or production dependency",
+  "scripts": { "test": "node verify.cjs" },
+  "devDependencies": { "linkedom": "0.18.13" }
+}

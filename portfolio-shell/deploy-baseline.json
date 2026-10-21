@@ -1,0 +1,237 @@
+{
+  "deployId": "6ac7a6bdac067a8f6e08b3cd",
+  "permalink": "https://6ac7a6bdac067a8f6e08b3cd--lighthearted-entremet-c64305.netlify.app/",
+  "retrievedAt": "2026-10-19",
+  "records": [
+    {
+      "path": "app.js",
+      "sha256": "41d0a665e7be58510b1a98e6592f80869adb71f81418b46e8739ef18747921e4",
+      "bytes": 22444,
+      "changed": true
+    },
+    {
+      "path": "assets/codex.svg",
+      "sha256": "131304d118e2149bb7ca431d82e2f88b858719b3a8fa4b06342cdaa5842d381e",
+      "bytes": 256,
+      "changed": false
+    },
+    {
+      "path": "assets/ergonomic-proportions.svg",
+      "sha256": "dbc1574b76592c8b8376e0ee949015ea34bedf6475d2e95e58ab3f785bfe2052",
+      "bytes": 2563,
+      "changed": false
+    },
+    {
+      "path": "assets/fonts/Anton-Regular.ttf",
+      "sha256": "a4ba3a92350ebb031da0cb47630ac49eb265082ca1bc0450442f4a83ab947cab",
+      "bytes": 170812,
+      "changed": false
+    },
+    {
+      "path": "assets/fonts/PretendardVariable.woff2",
+      "sha256": "9599f12fd42fc0bce1cd50b47a0c022e108d7aa64dd0d1bb0ed44f3282d900b4",
+      "bytes": 2057688,
+      "changed": false
+    },
+    {
+      "path": "assets/gpt.svg",
+      "sha256": "05f178fd45e3d126aed1a3f965175cfcaa0661dfc7236ea322765220ac4db770",
+      "bytes": 2976,
+      "changed": false
+    },
+    {
+      "path": "assets/hero/blue-chrome-original.png",
+      "sha256": "073f542ad2491f15a79af61fde41178cbd28bef59c3a8988c9b3ad60f9f4b100",
+      "bytes": 1608703,
+      "changed": false
+    },
+    {
+      "path": "assets/hero/blue-chrome.jpg",
+      "sha256": "9cc42ec4f4473147b9e93831357da31f3c929e45920fbd0d86c69d9cd2ed9ef1",
+      "bytes": 157571,
+      "changed": false
+    },
+    {
+      "path": "assets/ksw-intro.svg",
+      "sha256": "159598d52e65d6453d69e08b317210a6f849c7d7eebe3e87b4ff36715c9246a7",
+      "bytes": 1027,
+      "changed": false
+    },
+    {
+      "path": "assets/method-ribbon.svg",
+      "sha256": "43ba95884bbcf6e82dc1a6a387e07b8a5921a487a88c7f16c4aa3ea72391ee80",
+      "bytes": 1278,
+      "changed": false
+    },
+    {
+      "path": "assets/projects/ivi-1920.jpg",
+      "sha256": "fc8ba9a2ae080554bebf9924e550e6011ff69d3d3f18a60d4e065e1b7f8b1fdc",
+      "bytes": 198985,
+      "changed": false
+    },
+    {
+      "path": "assets/projects/ivi-960.jpg",
+      "sha256": "99b093147733185fff3e59d0227570840c739dbd36f84cd1993e82cd3c93c27a",
+      "bytes": 65240,
+      "changed": false
+    },
+    {
+      "path": "assets/projects/lg-tv-1920.jpg",
+      "sha256": "53b88417647019d2d2529d04de8440ae9acda3315d664807e321b795cee28fa3",
+      "bytes": 354906,
+      "changed": false
+    },
+    {
+      "path": "assets/projects/lg-tv-960.jpg",
+      "sha256": "6a52272e7c85f61534ef2bc8288f1b4e713dd3ba97008cc7b6ba009d5c44ffd4",
+      "bytes": 65210,
+      "changed": false
+    },
+    {
+      "path": "assets/qa/1.png",
+      "sha256": "37163303bb56c8a8a4ba22d140d2972464d59bc84d723fcac99d95341db6c16e",
+      "bytes": 1118770,
+      "changed": false
+    },
+    {
+      "path": "assets/qa/2.png",
+      "sha256": "54219473bf81f377558d1727c5f802378e0ba4a817a5851d8c4b0b0e95a2e9ee",
+      "bytes": 1177861,
+      "changed": false
+    },
+    {
+      "path": "assets/qa/3.png",
+      "sha256": "c3e62da26b5ce0915208be5f61937ea15d2272919658452b35170723348a0f66",
+      "bytes": 1697364,
+      "changed": false
+    },
+    {
+      "path": "assets/qa/4.png",
+      "sha256": "8fa6d0b124676f1ff3571bce2e03f68052134ddb8323d4028d918944c7fcfa63",
+      "bytes": 899863,
+      "changed": false
+    },
+    {
+      "path": "assets/qa/5.png",
+      "sha256": "452f635c1f9eac620a205571ba5dd69ec1d274485cf18b20542a54f18582b3ff",
+      "bytes": 1274635,
+      "changed": false
+    },
+    {
+      "path": "assets/tools-chrome.png",
+      "sha256": "bfb0796f74228476569078843ce65744fe4693a54b728c5be600f747675f93f1",
+      "bytes": 1266007,
+      "changed": false
+    },
+    {
+      "path": "assets/tools-mobius.svg",
+      "sha256": "b852a4a4c6f3ec60bc7e41cf54c4259a8f28eba3566aa7749f39e979b18536f5",
+      "bytes": 1359210,
+      "changed": false
+    },
+    {
+      "path": "contact-wave.js",
+      "sha256": "f7b6a183bbb0b0225324e86918197bbf74b533a57b639f9eb6cff5d38ab15142",
+      "bytes": 3295,
+      "changed": true
+    },
+    {
+      "path": "data.js",
+      "sha256": "649b1dc16e64138e460b440d1e1e5f66ea1b6fa8deefe773c8ada634cdfbbc4a",
+      "bytes": 2460,
+      "changed": false
+    },
+    {
+      "path": "index.html",
+      "sha256": "d2ab761a723d42e7f9efea74604396f970c94bf49bc8c90715f45bde423afc40",
+      "bytes": 18070,
+      "changed": true
+    },
+    {
+      "path": "intro.js",
+      "sha256": "ddeca8b8f09e1bee457e713637c9199bb112389334c930e775944d949c3e394f",
+      "bytes": 7235,
+      "changed": false
+    },
+    {
+      "path": "mobius.js",
+      "unavailable": "HTTP Error 404: Not Found"
+    },
+    {
+      "path": "page-transitions.css",
+      "sha256": "9c2048520fa5f5bf0db17b61057ac7d9cbaae0679645148cb076b8e9c1681603",
+      "bytes": 1822,
+      "changed": false
+    },
+    {
+      "path": "page-transitions.js",
+      "sha256": "a4357a1d25177c9bc642556661e8f6f4439f4eff08ba6c2cd15598d7fbb23c40",
+      "bytes": 1858,
+      "changed": false
+    },
+    {
+      "path": "project-orbit.js",
+      "sha256": "c87e03be24a93d5543309d92db8149d533d119b0c9c4ad949766568d1dcb3c23",
+      "bytes": 3075,
+      "changed": false
+    },
+    {
+      "path": "project-snap.js",
+      "unavailable": "HTTP Error 404: Not Found"
+    },
+    {
+      "path": "scroll-motion.js",
+      "sha256": "f3475d990f06dd59edd0e7781b501d73bb337ada202a327b48ea5c210fa253dc",
+      "bytes": 4482,
+      "changed": true
+    },
+    {
+      "path": "section-flow.js",
+      "sha256": "9252f2463fb8e21cc494e4824dde8b44263a582f8817c78f204d49ca12b481d1",
+      "bytes": 25716,
+      "changed": true
+    },
+    {
+      "path": "styles.css",
+      "sha256": "370b943a04297a2fcdd04a262e90ad914ca13ff3022a499ab4c6ec73628edcbd",
+      "bytes": 46774,
+      "changed": true
+    },
+    {
+      "path": "text-reveal.js",
+      "sha256": "2f2ccee7652f5ba62caa4af9e3c29ba9a864c58f97633e040fe74434ca50d943",
+      "bytes": 1826,
+      "changed": true
+    },
+    {
+      "path": "vendor/gsap/MorphSVGPlugin.min.js",
+      "sha256": "5d825a7274054dca034b3c881b28e9e3df56d9be4da20fd2e699ab5312cbc8a3",
+      "bytes": 16614,
+      "changed": false
+    },
+    {
+      "path": "vendor/gsap/gsap.min.js",
+      "sha256": "b9a1a5278724d88e1ce51ef057dd14ba54eaf108cf997dce1c6c9b9f0e234635",
+      "bytes": 72446,
+      "changed": false
+    },
+    {
+      "path": "vendor/lenis/lenis.js",
+      "sha256": "078e81f29f953f6a9ab4efebfe1d075a80dd851ea6868cbb596902ab5373df85",
+      "bytes": 33066,
+      "changed": false
+    },
+    {
+      "path": "assets/tools-reference-ring.png",
+      "sha256": "c63a868f361876f2f4e2d92eabe5005cc754b4c3909afdffcd76a835a2bd51fd",
+      "bytes": 1330991,
+      "changed": true
+    },
+    {
+      "path": "ring-motion.js",
+      "sha256": "ee1f7eabc3c2104325be2e4e95f3835941c03987dc9f742181130b980ce23ca1",
+      "bytes": 1809,
+      "changed": true
+    }
+  ]
+}

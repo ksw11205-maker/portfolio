@@ -195,3 +195,25 @@
 
 - Unmodified user-supplied reference copy: [asymmetric-cobalt-ribbon.png](references/screenshots/asymmetric-cobalt-ribbon.png). SHA-256: `fe4e3bc72ff842d8025af11efc081b2723c439b14805bc89cf9013dce9ec2b2d`. Separate publication/license terms were not supplied.
 - Scope: How I Work geometry and cobalt/chrome material only. The PNG is not shipped as a moving image or sampled as a deformed full-image layer. Local WebGL code reconstructs a closed folded belt with stationary camera/light and 14-second longitudinal material transport. Hero environment imagery remains a separate stationary reflection source. No fonts, project layouts, cursor effects or capability text were changed. The sculpture entry translation/scale was removed to keep its geometry fixed.
+
+
+## 새 브랜드 심볼과 제목 등장 — 2026-10-19
+
+- 사용자와 앞서 제작한 블루/실버 두 조각 심볼 시안을 바탕으로 SVG 윤곽을 직접 정리했다. `portfolio-shell/dist/brand-shape.js`가 2D, 첫 로딩, 3D의 공통 원본이다. 다른 브랜드 로고를 사용하지 않는다.
+- 모델은 [Three.js 0.180.0](https://github.com/mrdoob/three.js/tree/r180)의 ExtrudeGeometry와 MeshPhysicalMaterial로 구현했다. 공식 npm 배포의 `build/three.module.min.js`, `build/three.core.min.js`를 로컬 `dist/vendor/three/`에 보존했다. MIT 원문 LICENSE를 동봉했다. 환경 반사는 코드로 생성했으며 외부 HDRI·3D 모델·텍스처를 사용하지 않았다.
+- 동작 참고: [QWzZwxR](https://codepen.io/GreenSock/pen/QWzZwxR)의 스크램블, [LEYqezo](https://codepen.io/GreenSock/pen/LEYqezo)의 줄 마스크 상승, [dPMjJWv](https://codepen.io/GreenSock/pen/dPMjJWv)의 글자 회전. 이번에는 웹 문서/소스로 원리를 확인했으며 실제 브라우저에서 원본과 구현을 비교 재생하지 못했다. 첫 두 제목/Projects/Q&A에 맞춰 직접 구현했고 원본의 반복 타임라인이나 GSAP SplitText 의존성을 복사하지 않았다.
+- Figma·Photoshop·Illustrator·After Effects·HTML·CSS·JavaScript 표시는 [Devicon v2.17.0](https://github.com/devicons/devicon/tree/v2.17.0/icons)의 SVG를 `dist/assets/tools/`에 보관한다. 원본 경로는 해당 폴더 README, MIT LICENSE도 같은 폴더에 둔다. 상표 자체의 권리는 각 소유자에게 있다. GPT는 기존 공식 Blossom, Codex는 기존의 자체 터미널 기호를 유지했다.
+- 예전 섹션의 뫼비우스/링/KSW 기록은 과거 제작 이력이다. 현재 실행 코드는 새 심볼과 두 그룹 등장으로 교체됐다.
+
+- 2026-10-19 후속: Photoshop/Illustrator는 같은 Devicon 버전의 original SVG로 교체했다. After Effects는 원래 윤곽의 두 색을 보라/네이비로 조정했다. 심볼 앞면 반사 변화는 직접 작성한 셰이더 보완이며 외부 재질·텍스처를 사용하지 않는다.
+
+## 강사 피드백 — 2026-10-21
+
+- 사용자 지정 [Kinoria](https://kinoria.studio/): 브라우저에서 중앙 카메라의 3D 연출과 스크롤 진행을 관찰했다. 표지/공통 물체/설명의 분할 구성과 상승 전환은 사용자의 강사 피드백에 맞춰 새로 구현했다. 실제 화면의 수치·타이밍을 동일 복제했다고 주장하지 않는다. 원 사이트의 코드·카메라 자산·사진·문구는 사용하지 않았다.
+- 사용자 지정 [다이아몬드 회전 영상](https://www.shutterstock.com/ko/video/clip-6139574-4k-slowly-rotating-diamond-3d-animation-alpha)은 웹 조회로 재생할 수 없었다. 느린 회전과 반짝임이라는 사용자 설명에 따라 직접 모델링했고, 유료 영상은 다운로드하거나 사용하지 않았다.
+- 새 프리즘·Q&A 메쉬와 동작은 코드로 작성했다. 기존 Hero/다섯 카드의 원본 이미지는 보존했다.
+
+## 2026-10-21 — D.TRIBE / PROJECT 재구성 1단계
+
+- https://www.dtribe.co.kr/ 의 Core capabilities를 실제 브라우저에서 확인했다. 전체 폭 좌우 분할, 오른쪽 세로 레일·상단 번호·하단 설명의 정보 위계를 참고했다. 링크의 #works 목록과는 다른 섹션이다.
+- 실제 이미지·문구·브랜드 자산을 복제하지 않았다. 좌우 반대 방향의 큐브 회전은 사용자의 추가 모션 명세이며 레퍼런스에서 측정한 효과라고 주장하지 않는다. 이번 단계는 정적 배치와 항목 선택까지다.
