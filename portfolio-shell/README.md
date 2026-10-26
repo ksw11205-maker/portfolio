@@ -76,3 +76,9 @@ Hero/About now have an extra responsive gap: 112?176px on desktop (160px at a 10
 Shared document transitions live in dist/page-transitions.css and dist/page-transitions.js. build.cjs includes them in the shell and generated CAF?KOK/OFFER HTML; edit the build hook instead of generated product HTML. Standalone product sources remain unchanged. Native same-origin navigation reveals the new page upward, with the reverse direction on return. There is no click interception or navigation timer. Reduced motion and the global pause control skip the effect; unsupported browsers navigate normally. During history restoration, temporary scroll-anchor and scroll-behavior settings prevent the Work spacer from shifting the saved reading position.
 
 Follow-up browser checks: node .qa/verify-transitions.cjs --rhythm (or add --routes-only for navigation-only checks). Evidence is in .qa/rhythm/.
+
+## LG TV case study — 2026-10-26
+
+The approved Figma LG 01–14 design is implemented as native HTML at dist/work/lg/. Edit index.html, styles.css and script.js there; assets/README.md records the source nodes and local fonts. The existing home LG image and detail link already point to /work/lg/. Shared page-transitions files and native browser history are reused without changing the home design.
+
+Finite GSAP 3.13.0 + ScrollTrigger 3.13.0 reveals progressively enhance the HTML. The continuous CSS field spans the entire research/tool body, then transitions to the white reflection. Captures support an accessible native dialog with fit/original-size controls, Escape, and focus return. Portrait tablet/phone covers show the full two-device image above the introduction; mobile IA is a readable vertical flow. All research text remains visible without JavaScript. Model values are labelled adjusted R-squared, with 10 actual participants distinguished from 10 person-equivalent AI augmented data.

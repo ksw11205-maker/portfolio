@@ -306,3 +306,17 @@ Actual connected Chrome, mouse input, 1440×1000 and 390×844:
 Scope regression compared the cursor function byte-for-byte and verified hashes of the Mobius renderer, Hero asset and scroll-motion module. App.js differs from the task baseline only by removal of the superseded Q&A controller. JavaScript syntax checks and tracked-source diff checks passed. Hero typography, content, fonts, Mobius design/motion and business-card design are preserved for this title task.
 
 Limits: physical touch devices, Safari/Firefox, OS reduced-motion rendering, frame-by-frame velocity profiling and repeated back/BFCache cycles were not tested. The reference site was opened and scrolled; the supplied local MP4 was located but not decoded or motion-measured. Timing follows the user's specification, not a claimed measurement of that recording.
+
+## 2026-10-26 — LG Figma case study and shell connection
+
+Scope: `dist/work/lg/`, local content/font assets and the matching GSAP 3.13.0 ScrollTrigger plugin. The existing home page, shared transitions and other projects were preserved. Figma LG 01–14 remains the layout source; the original Figma frames were not edited.
+
+- Actual Chrome at 1363×936: the visible LG gallery cover opened `/work/lg/`; browser Back returned to the LG project in the shell. The detail return link also reached `/#work`. This is one navigation cycle, not a repeated BFCache or exact-pixel restoration test.
+- Reviewed the hero, research layouts, native IA SVG, tool capture and white reflection with the two original-report UI images. Native chapter links reach their sections. The SVG renders at its exported 1601×1149 ratio, without unresolved internal references.
+- Same-origin responsive iframe checks at 1440, 768, 390 and 375px verified layout, type, process columns and mobile vertical IA. The settled phone layout has no horizontal overflow. Portrait layouts preserve the full laptop-and-TV cover above the introduction. These are width checks in Chrome, not physical touch-device tests.
+- Capture dialog: fit/original-size toggle, Escape close, body unlock and focus return passed. Captures retain their native content; example tool scores are identified as prototype values.
+- A scripts-disabled iframe displayed all 14 chapter headings and body content. Default HTML is visible; motion is an enhancement. Reduced-motion code/CSS paths were inspected, but the OS preference was not emulated in this browser session.
+- Static checks: 14 source-node chapters, one h1, 19 local image references, all referenced files present, image dimensions verified, and SVG XML/reference checks passed. `node --check dist/work/lg/script.js`, `node build.cjs` and `git diff --check` passed.
+- Research copy was checked against final-report pp.12–13 and 17–20: principal factor names, actual 10 participants versus 10 person-equivalent AI augmentation, and adjusted R-squared values 65.81% / 79.20%. The report PDF and credential-bearing report page are excluded from published assets.
+
+Limits: Safari/Firefox, physical phones, touch/pinch behavior, runtime OS reduced-motion changes and prolonged performance profiling were not tested.
