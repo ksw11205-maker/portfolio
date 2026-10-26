@@ -8,9 +8,13 @@ const read=key=>{if(storageUnavailable)return memory[key]||[];try{const a=JSON.p
 const has=(key,id)=>read(key).includes(id);
 function toggle(key,id){let list=read(key);list=list.includes(id)?list.filter(x=>x!==id):[...list,id];memory[key]=list;let stored=true;try{localStorage.setItem(key,JSON.stringify(list));}catch{stored=false;storageUnavailable=true;}document.dispatchEvent(new CustomEvent('offer:storage',{detail:{key,id}}));toast(stored?(key==='savedOffers'?(list.includes(id)?'OFFER를 저장했습니다.':'저장을 해제했습니다.'):(list.includes(id)?'관심 브랜드에 추가했습니다.':'관심 브랜드에서 삭제했습니다.')):'브라우저 저장 공간을 사용할 수 없어 이 화면에서만 반영됩니다.');return list.includes(id);}
 const day=s=>{const [y,m,d]=s.split('-').map(Number);return Date.UTC(y,m-1,d);};
-function today(){const parts=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());const v=t=>parts.find(x=>x.type===t).value;return day(v('year')+'-'+v('month')+'-'+v('day'));}
+// A visible, fixed demo date keeps this fictional collection useful after publication.
+const demoDate='2026-09-24';
+function today(){return day(demoDate);}
 const remaining=p=>Math.round((day(p.period.end)-today())/86400000);
 const active=p=>day(p.period.start)<=today()&&remaining(p)>=0;
+const state=p=>remaining(p)<0?'ended':day(p.period.start)>today()?'upcoming':'active';
+const matchesState=(p,value)=>value==='all'||(value==='ending'?active(p)&&remaining(p)<=3:state(p)===value);
 function status(p){const d=remaining(p);if(d<0)return {text:'종료',urgent:false};if(day(p.period.start)>today())return {text:'예정',urgent:false};return {text:d===0?'D-DAY':'D-'+d,urgent:d<=3};}
 const date=s=>s.slice(5).replace('-','.');
 const badge=p=>{const s=status(p);return '<span class="status '+(s.urgent?'urgent':'')+'">'+s.text+'</span>';};
@@ -32,9 +36,10 @@ const menu=document.querySelector('.menu-toggle');menu.addEventListener('click',
 document.addEventListener('click',e=>{if(menu.getAttribute('aria-expanded')==='true'&&!document.getElementById('site-header').contains(e.target))menu.click();const save=e.target.closest('[data-save]'),follow=e.target.closest('[data-follow]');if(save)toggle('savedOffers',save.dataset.save);if(follow)toggle('favoriteBrands',follow.dataset.follow);});
 matchMedia('(min-width: 768px)').addEventListener('change',e=>{if(e.matches&&menu.getAttribute('aria-expanded')==='true')menu.click();});
 document.addEventListener('offer:storage',sync);window.addEventListener('storage',()=>{storageUnavailable=false;sync();document.dispatchEvent(new CustomEvent('offer:external-storage'));});}
-return {icon,escape,read,has,toggle,day,today,remaining,active,status,date,badge,card,grid,empty,searchForm,filters,brandLogo,followButton,toast,shell};
+return {icon,escape,read,has,toggle,day,today,remaining,active,state,matchesState,status,date,badge,card,grid,empty,searchForm,filters,brandLogo,followButton,toast,shell,demoDate};
 })();
 OFFER.shell();
+document.getElementById('site-header').insertAdjacentHTML('afterend','<div class="demo-banner"><div class="container"><span>DEMO COLLECTION</span><span>가상 혜택 · '+OFFER.demoDate.replaceAll('-','.')+' 기준</span></div></div>');
 /* Optional browser-native agent access to the same save action. */
 offerReady.then(({promotions})=>{
 if(!document.modelContext?.registerTool)return;

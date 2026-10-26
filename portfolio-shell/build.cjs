@@ -41,10 +41,11 @@ function buildCaseStudy() {
   for (const name of ['index.html', 'explore.html', 'brand.html', 'offer.html', 'saved.html', 'favorites.html', 'css', 'js', 'data', 'assets']) {
     fs.cpSync(path.join(offerSource, name), path.join(offerOutput, name), {recursive: true});
   }
-  // OFFER case-study source is separate from the unchanged product application.
+  // OFFER case study and its real browser captures have their own editable source.
   for (const name of ['case-study.html', 'case-study.css', 'case-study.js']) {
     fs.copyFileSync(path.resolve(__dirname, '../OFFER/case-study', name), path.join(offerOutput, name));
   }
+  fs.cpSync(path.resolve(__dirname, '../OFFER/case-study/case-study-assets'), path.join(offerOutput, 'case-study-assets'), {recursive: true});
   for (const directory of [output, offerOutput]) {
     for (const name of fs.readdirSync(directory).filter(name=>name.endsWith('.html'))) {
       const target=path.join(directory,name);
