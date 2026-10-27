@@ -1,3 +1,10 @@
+# 현재 실행 기준 · 2026-10-27
+
+- 최신 메인·상세페이지·실행 UI는 `portfolio-shell/dist/`를 직접 수정한다.
+- 카페콕 React 원본은 `portfolio-shell/prototypes/cafekok/`이며 빌드 결과를 `portfolio-shell/dist/work/cafekok/prototype/`로 복사한다.
+- 루트에서 `npm run dev`로 실행한다. 이전 `portfolio-shell/build.cjs`는 오래된 형제 폴더로 최신 dist를 덮어쓰므로 실행하지 않는다.
+- OFFER 실행 UI는 `portfolio-shell/dist/work/offer/`, 상세페이지는 그 안의 `case-study.html`이다.
+
 # 프로젝트 작업 지침
 
 ## 문서 경로와 참조 순서

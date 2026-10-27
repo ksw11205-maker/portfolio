@@ -4,14 +4,14 @@ import Lenis from './vendor/lenis/lenis.js';
 export function initScrollMotion({reduced}){
   const fine=matchMedia('(hover:hover) and (pointer:fine)');
   const listeners=new Set();
-  let lenis=null,frame=0,hidden=false,lastSize='',lastFrameTime=0,scrollTime=0,wheelHandler=null;
+  let lenis=null,frame=0,hidden=false,lastSize='',lastFrameTime=0,scrollTime=0;
   const enabled=()=>fine.matches&&!reduced.matches&&!hidden&&!document.hidden&&
     !document.body.classList.contains('motion-paused')&&!document.body.classList.contains('intro-active');
   function update(time){
     frame=0;
     // Lenis expects a continuous clock. Our demand-driven RAF sleeps at rest;
     // passing wall time after that sleep would finish the next wheel in one frame.
-    scrollTime+=lastFrameTime?Math.max(0,time-lastFrameTime):1000/60;
+    scrollTime+=lastFrameTime?Math.min(50,Math.max(0,time-lastFrameTime)):1000/60;
     lastFrameTime=time;
     lenis?.raf(scrollTime);
     listeners.forEach(listener=>listener());
@@ -31,7 +31,6 @@ export function initScrollMotion({reduced}){
           if(event.type!=='wheel'||event.ctrlKey||Math.abs(deltaX)>Math.abs(deltaY)){
             cancelMomentum();return false;
           }
-          if(wheelHandler?.({deltaX,deltaY,event}))return false;
           // Reverse from the displayed position, never from an old destination.
           const remaining=lenis.targetScroll-lenis.actualScroll;
           if(deltaY*remaining<0)cancelMomentum();
@@ -40,6 +39,7 @@ export function initScrollMotion({reduced}){
       });
       lastSize='';
     }else if(!enabled()&&lenis){lenis.destroy();lenis=null;}
+    if(!enabled()){cancelAnimationFrame(frame);frame=0;lastFrameTime=0;}
     requestUpdate();
   }
   function resize(){
@@ -77,7 +77,6 @@ export function initScrollMotion({reduced}){
   return {
     subscribe(listener){listeners.add(listener);requestUpdate();return ()=>listeners.delete(listener);},
     requestUpdate,resize,
-    setWheelHandler(handler){wheelHandler=handler;},
     scrollTo(top,{immediate=false,duration,easing,onComplete}={}){
       if(lenis){lenis.scrollTo(top,{immediate,lerp:.24,duration,easing,onComplete});requestUpdate();}
       else window.scrollTo({top,behavior:immediate||reduced.matches?'instant':'smooth'});

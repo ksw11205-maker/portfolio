@@ -1,0 +1,70 @@
+@import "./styles/fonts.css";
+@import "tailwindcss";
+@import "./styles/theme.css";
+
+@layer base {
+  body { @apply bg-[#e5e0d7] text-foreground font-sans antialiased; word-break: keep-all; }
+  button, a, select { @apply touch-manipulation; }
+  button { @apply cursor-pointer; }
+  button:disabled { @apply cursor-not-allowed opacity-40; }
+  button, input, select { @apply focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary; }
+  ::selection { @apply bg-primary text-primary-foreground; }
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar { display: none; }
+}
+
+/* Shared rhythm: preserve the original app's warm brown identity. */
+@layer base {
+  body { letter-spacing: -0.015em; }
+  h1, h2, h3 { text-wrap: balance; }
+  button { line-height: 1.4; }
+  img { display: block; }
+  input, select { min-width: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
+
+/* Mobile rhythm shared by every app screen. */
+:root { --app-gutter: clamp(20px, 5.5vw, 24px); }
+@layer base {
+  body { font-size: 15px; line-height: 1.6; }
+  h1, h2, h3 { letter-spacing: -.035em; font-weight: 700; }
+  .font-display { font-weight: 650; }
+  button, input, select { -webkit-tap-highlight-color: transparent; }
+}
+@layer utilities {
+  .px-6 { padding-inline: var(--app-gutter); }
+  .left-6 { left: var(--app-gutter); }
+  .right-6 { right: var(--app-gutter); }
+}
+.app-kicker { font-size: 11px; font-weight: 600; letter-spacing: .14em; color: var(--muted-foreground); }
+.app-title { font-size: clamp(26px, 7.2vw, 30px); line-height: 1.26; letter-spacing: -.045em; font-weight: 700; }
+.app-section-title { font-size: 20px; line-height: 1.35; font-weight: 700; }
+.app-note { font-size: 12px; line-height: 1.6; color: var(--muted-foreground); }
+.taste-scene { position: relative; width: 100%; aspect-ratio: 3/2; overflow: hidden; border-radius: 18px; background: #e8e0d4; isolation: isolate; }
+.taste-scene-room { position: absolute; inset: 0; background-image: url('/work/cafekok/prototype/images/taste-interiors-v2.webp'); background-size: 300% 300%; background-repeat: no-repeat; transition: filter .3s; }
+.taste-scene-empty { filter: saturate(.2); opacity: .65; }
+.taste-scene-menu { position: absolute; left: 45%; bottom: 5%; width: 30%; aspect-ratio: 1; background-image: url('/work/cafekok/prototype/images/taste-menus-v2.webp'); background-size: 200% 200%; background-repeat: no-repeat; transform: translateX(-50%); filter: drop-shadow(0 3px 2px #30251f12); }
+.taste-scene-shade { position: absolute; inset: 65% 0 0; background: linear-gradient(transparent, #21160c75); pointer-events: none; }
+.taste-scene-caption { position: absolute; bottom: 16px; left: 16px; color: #fff; font-size: 12px; font-weight: 600; letter-spacing: -.02em; }
+.taste-scene-note { position: absolute; bottom: 16px; right: 14px; color: #fff9; font-size: 10px; }
+.taste-choice { display: block; min-height: 69px; min-width: 0; padding: 13px 0; border-bottom: 1px solid var(--border); text-align: left; }
+.taste-choice-label { display: block; margin-bottom: 4px; color: var(--muted-foreground); font-size: 11px; line-height: 1.4; }
+.taste-choice-value { display: flex; align-items: center; justify-content: space-between; gap: 4px; color: var(--foreground); font-size: 14px; font-weight: 600; line-height: 1.5; }
+.taste-choice-value svg { flex-shrink: 0; width: 14px; height: 14px; stroke: #aaa094; stroke-width: 1.2; }
+.cafe-card { border: 1px solid var(--border); border-radius: 18px; overflow: hidden; background: var(--card); }
+.cafe-card-photo { aspect-ratio: 3/2; overflow: hidden; }
+.cafe-card-body { padding: 16px; }
+.cafe-card-title { font-size: 19px; line-height: 1.4; font-weight: 700; letter-spacing: -.03em; }
+.cafe-reason { font-size: 14px; line-height: 1.65; color: #6e6257; }
+.purpose-button { display: flex; align-items: center; gap: 9px; min-height: 50px; padding: 11px 13px; border: 1px solid var(--border); border-radius: 12px; text-align: left; color: var(--foreground); background: var(--card); font-size: 13px; font-weight: 600; }
+.purpose-button[aria-pressed=true] { background: #f0e4d7; border-color: #b89675; color: var(--primary); }
+.purpose-button svg { flex-shrink: 0; width: 19px; height: 19px; }
+.info-cell { min-width: 0; padding: 16px; background: var(--card); border: 1px solid var(--border); border-radius: 14px; }
+.info-cell dt { font-size: 11px; color: var(--muted-foreground); margin-bottom: 5px; }
+.info-cell dd { font-size: 14px; font-weight: 600; line-height: 1.55; }
+@media (max-width: 350px) { .cafe-card-body { padding: 14px; } .purpose-button { padding-inline: 10px; gap: 6px; } }

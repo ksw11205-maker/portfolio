@@ -40,17 +40,4 @@
     const update=()=>header.classList.toggle('is-light',reflection.getBoundingClientRect().top<=64);
     let ticking=false;addEventListener('scroll',()=>{if(!ticking){ticking=true;requestAnimationFrame(()=>{update();ticking=false;});}},{passive:true});addEventListener('pageshow',update);update();
   }
-  const dialog=document.querySelector('.image-dialog'),image=dialog?.querySelector('.zoom-image'),title=dialog?.querySelector('#image-dialog-title'),viewport=dialog?.querySelector('.zoom-viewport'),size=dialog?.querySelector('.zoom-size');
-  if(!dialog||!image||!viewport||!size||!title)return;
-  let opener;
-  document.querySelectorAll('[data-zoom]').forEach(button=>button.addEventListener('click',()=>{
-    opener=button;image.src=button.dataset.zoom;image.alt=button.dataset.zoomTitle||'화면 확대';title.textContent=image.alt;
-    viewport.classList.add('is-fit');size.setAttribute('aria-pressed','false');size.textContent='원본 크기';
-    document.body.classList.add('image-open');dialog.showModal();viewport.scrollTo(0,0);
-  }));
-  const close=()=>{if(dialog.open)dialog.close();};
-  dialog.querySelector('.dialog-close').addEventListener('click',close);
-  dialog.addEventListener('click',e=>{if(e.target===dialog)close();});
-  dialog.addEventListener('close',()=>{document.body.classList.remove('image-open');opener?.focus({preventScroll:true});});
-  size.addEventListener('click',()=>{const fit=viewport.classList.toggle('is-fit');size.setAttribute('aria-pressed',String(!fit));size.textContent=fit?'원본 크기':'화면에 맞추기';viewport.scrollTo(0,0);});
 })();

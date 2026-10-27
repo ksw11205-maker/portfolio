@@ -192,3 +192,6 @@ h1{max-width:900px;font-family:"Inter","Noto Sans KR",sans-serif;font-size:clamp
  .hero-scroll{bottom:24px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.hero-copy,.hero-image,[data-reveal],[data-reveal-item]{opacity:1!important;visibility:visible!important;transform:none!important}}
+
+/* Cover metadata and portfolio identity, retained from the current shell. */
+.meta-tools{display:flex;align-items:center;gap:12px;min-height:32px}.meta-tools img{width:24px;height:24px;object-fit:contain}.topbar.is-light .brand-mark{content:url("/assets/brand/symbol-on-light.svg")}

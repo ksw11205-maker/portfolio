@@ -205,3 +205,5 @@ iframe { display: block; border: 0; transform-origin: top left; pointer-events: 
 .device-stage { align-items:center; }
 .device.mobile .screen-capture { max-height:360px; object-fit:cover; object-position:top; }
 @media(max-width:767px) { .cover-copy h1 { font-size:clamp(48px,12.5vw,68px); }.device.mobile .screen-capture { max-height:190px; } }
+
+.cover-details{display:flex;flex-wrap:wrap;gap:24px 48px;margin:28px 0 0}.cover-details>div{display:grid;gap:8px}.cover-details dt{font-size:11px;letter-spacing:.1em;opacity:.7}.cover-details dd{margin:0;font-size:14px}.cover-details .cover-tools{display:flex;align-items:center;gap:12px}.cover-tools img{position:static;width:24px;height:24px;object-fit:contain}@media(max-width:600px){.cover-details{gap:20px 28px}.cover-details dd{font-size:13px}}

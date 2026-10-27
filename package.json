@@ -1,0 +1,9 @@
+{
+  "name": "kim-seongwon-portfolio",
+  "private": true,
+  "scripts": {
+    "dev": "node portfolio-shell/server.cjs",
+    "start": "node portfolio-shell/server.cjs"
+  },
+  "engines": { "node": ">=20" }
+}

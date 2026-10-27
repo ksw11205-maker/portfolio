@@ -17,3 +17,19 @@ function renderTask(key){
 }
 document.querySelectorAll('[data-task]').forEach(b=>b.addEventListener('click',()=>renderTask(b.dataset.task)));
 renderTask('climate');
+
+// Native scrolling stays uninterrupted. Content is visible if motion is unavailable.
+const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
+let revealObserver;
+if('IntersectionObserver' in window&&!reducedMotion.matches){
+ document.documentElement.classList.add('reveal-ready');
+ const targets=document.querySelectorAll('.section-intro,.comparison-images,.attention-layout,.research-question,.question-list,.research-strip,.layout-item,.task-grid article,.method-grid,.measure-row,.subjective,.concept-image,.principles,.reflection-notes');
+ targets.forEach(el=>el.classList.add('reveal'));
+ revealObserver=new IntersectionObserver(entries=>entries.forEach(({isIntersecting,target})=>{if(isIntersecting){target.classList.add('in-view');revealObserver.unobserve(target)}}),{threshold:.12});
+ targets.forEach(el=>revealObserver.observe(el));
+ const charts=new IntersectionObserver(entries=>entries.forEach(({isIntersecting,target})=>{if(isIntersecting){target.classList.add('chart-animate');charts.unobserve(target)}}),{threshold:.25});
+ charts.observe(document.getElementById('time-chart'));
+ reducedMotion.addEventListener('change',e=>{if(e.matches){document.documentElement.classList.remove('reveal-ready');revealObserver.disconnect()}});
+}
+// Native back navigation restores the shell's project position.
+document.querySelectorAll('a[href="/#work"]').forEach(a=>a.addEventListener('click',e=>{if(e.button||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;try{if(document.referrer&&new URL(document.referrer).origin===location.origin&&new URL(document.referrer).pathname==='/'){e.preventDefault();history.back()}}catch{}}));
