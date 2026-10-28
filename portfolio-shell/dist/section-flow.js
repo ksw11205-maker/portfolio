@@ -315,7 +315,7 @@ export function initSectionFlow({reduced,scrollMotion}){
   measure();
   const loaded=document.readyState==='complete'?Promise.resolve():new Promise(resolve=>addEventListener('load',resolve,{once:true}));
   Promise.all([loaded,document.fonts?.ready]).then(()=>requestAnimationFrame(()=>requestAnimationFrame(()=>{measure();restoreInitialAnchor();})));
-  readingSnap=initReadingSnap({header,move:top=>scrollMotion.scrollTo(top,{immediate:true}),getPoints:offset=>{
+  readingSnap=initReadingSnap({header,getPoints:offset=>{
     if(!measured)return [];
     const points=[0];
     entries.forEach(entry=>{
@@ -323,10 +323,23 @@ export function initSectionFlow({reduced,scrollMotion}){
         // Snap to settled reading poses; never to the middle of a title or wave.
         if(entry.mode==='work'){
           projects.forEach((_,i)=>points.push(entry.start+entry.hold+i*entry.slot));
+        }else if(entry.mode==='qa'&&entry.travel>0){
+          qaGeometry.forEach(card=>{
+            const shift=clamp(card.center-qaWidth*.5,0,entry.travel);
+            points.push(entry.start+entry.intro+entry.run*shift/entry.travel);
+          });
         }else points.push(entry.start+entry.intro);
       }else{
-        points.push(layoutTop(entry.heading)-offset);
+        const start=layoutTop(entry.heading)-offset,available=innerHeight-offset-48;
+        points.push(start);
         if(entry.id==='work')projects.forEach(project=>points.push(layoutTop(project)-offset));
+        else entry.content.forEach(block=>{
+          const blocks=block.offsetHeight>available?[...block.children]:[block];
+          blocks.forEach(part=>{
+            const top=layoutTop(part)-offset;
+            if(top>start+available*.25&&top+part.offsetHeight>start+available)points.push(top);
+          });
+        });
       }
     });
     return points;

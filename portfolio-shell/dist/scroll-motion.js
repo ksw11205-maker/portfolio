@@ -6,6 +6,7 @@ export function initScrollMotion({reduced}){
   const listeners=new Set();
   let lenis=null,frame=0,hidden=false,lastSize='',lastFrameTime=0,scrollTime=0;
   const enabled=()=>fine.matches&&!reduced.matches&&!hidden&&!document.hidden&&
+    !['enabled','scripted'].includes(document.documentElement.dataset.readingSnap)&&
     !document.body.classList.contains('motion-paused')&&!document.body.classList.contains('intro-active');
   function update(time){
     frame=0;
@@ -62,6 +63,7 @@ export function initScrollMotion({reduced}){
   addEventListener('pagehide',()=>{hidden=true;sync();cancelAnimationFrame(frame);frame=0;lastFrameTime=0;});
   document.addEventListener('visibilitychange',sync);
   fine.addEventListener('change',sync);reduced.addEventListener('change',sync);
+  new MutationObserver(sync).observe(document.documentElement,{attributes:true,attributeFilter:['data-reading-snap']});
   let paused=false,intro=false;
   new MutationObserver(()=>{
     const nextPause=document.body.classList.contains('motion-paused');

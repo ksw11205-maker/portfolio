@@ -85,3 +85,29 @@ header.case-shared{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
 @media(max-width:600px){.case-cover-actions{margin-top:24px}.case-action{min-height:48px;padding-inline:20px;font-size:10px;gap:20px}}
 @media(max-width:480px){.case-float-action{right:16px;bottom:82px;min-height:44px;padding-inline:16px;gap:14px}}
 @media(prefers-reduced-motion:reduce){.case-action,.case-action::before,.case-action .case-arrow{transition:none}.case-float-action{animation:none}}
+
+/* Give each chapter a distinct reading screen and room within its content. */
+main section[id]:not(.hero):not(.cover){padding-block:clamp(96px,10vh,144px);margin-block-start:clamp(64px,7vw,120px)}
+main .chapter-heading{margin-block:clamp(64px,8vh,96px);gap:36px}
+main .section-intro,main .section-head{margin-bottom:clamp(64px,8vh,96px)}
+main .chapter-heading .lead,main .section-intro .lead,main .section-head>p{max-width:52em;line-height:1.85}
+@media(max-width:600px){
+ main section[id]:not(.hero):not(.cover){padding-block:64px;margin-block-start:48px}
+ main .chapter-heading{margin-block:48px;gap:28px}
+ main .section-intro,main .section-head{margin-bottom:48px}
+}
+
+main .usage-context{column-gap:clamp(48px,4vw,80px)}
+main .observations{gap:40px}
+main .observations article+article{padding-top:32px}
+main .steps{gap:clamp(32px,3.5vw,64px)}
+@media(min-width:1101px){main .steps-four{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:80px;row-gap:56px}}
+
+/* Separate a chapter's message from its detailed evidence on large screens. */
+@media(min-width:901px) and (min-height:700px){
+ main .chapter-heading{min-height:calc(100svh - 340px);align-content:start}
+ main .section-intro,main .section-head{min-height:calc(100svh - 240px)}
+}
+
+/* Complete reading panels preserve the title/evidence hierarchy. */
+.case-reading-intro{display:flow-root}

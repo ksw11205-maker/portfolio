@@ -1,115 +1,109 @@
-// Gentle proximity snapping. A single controller works with native scrolling
-// and the shell's Lenis clock, without competing CSS snap or wheel interception.
+// Reading navigation: section transitions and overlapping views of tall evidence.
 export function layoutTop(element){
- let top=0;
- for(let node=element;node;node=node.offsetParent)top+=node.offsetTop;
- return top;
+ let top=0;for(let node=element;node;node=node.offsetParent)top+=node.offsetTop;return top;
 }
-
-export function initReadingSnap({header,getPoints,move=(top)=>window.scrollTo({top,behavior:'instant'})}){
- const reduced=matchMedia('(prefers-reduced-motion: reduce)');
- let points=[],timer=0,frame=0,armed=false,pressed=false,touch=null,direction=0,lastSnap=null;
- let offset=0;
- const blocked=()=>reduced.matches||document.hidden||document.body.classList.contains('intro-active')||
-  document.body.classList.contains('motion-paused')||!!window.getSelection()?.toString().trim();
- function cancel(){clearTimeout(timer);cancelAnimationFrame(frame);timer=frame=0;}
- function disarm(){cancel();armed=false;}
+export function initReadingSnap({header,getPoints}){
+ const root=document.documentElement,reduced=matchMedia('(prefers-reduced-motion: reduce)');
+ let points=[],frame=0,refreshFrame=0,lastWheel=-Infinity;
+ const blocked=()=>reduced.matches||document.body.classList.contains('motion-paused')||document.body.classList.contains('intro-active');
+ function sync(){root.dataset.readingSnap=blocked()?'disabled':'scripted';}
  function refresh(){
-  disarm();
-  const gap=Math.round(Math.max(24,Math.min(36,innerWidth*.025)));
-  offset=Math.max(0,header?.getBoundingClientRect().bottom||0)+gap;
-  document.documentElement.style.scrollPaddingTop=offset+'px';
-  points=getPoints(offset).filter(Number.isFinite).sort((a,b)=>a-b);
+  refreshFrame=0;const gap=innerWidth<=600?40:Math.round(Math.max(56,Math.min(80,innerWidth*.045)));
+  const offset=Math.max(0,header?.getBoundingClientRect().bottom||0)+gap;
+  root.style.scrollPaddingTop=offset+'px';
+  const max=Math.max(0,root.scrollHeight-innerHeight);
+  const candidates=[...new Set([0,...getPoints(offset),max].filter(Number.isFinite).map(p=>Math.round(Math.max(0,Math.min(max,p)))))].sort((a,b)=>a-b);
+  points=[];
+  const minStep=Math.min(160,innerHeight*.18);
+  candidates.forEach(point=>{if(!points.length||point-points.at(-1)>=minStep||point===Math.round(max))points.push(point);});
+  sync();
  }
- function settle(){
-  timer=0;
-  if(!armed||pressed||blocked())return;
-  armed=false;
-  const y=scrollY,max=Math.max(0,document.documentElement.scrollHeight-innerHeight);
-  const radius=Math.min(innerWidth<=600?48:80,innerHeight*.1);
-  if(lastSnap!==null&&Math.abs(y-lastSnap)>radius*2)lastSnap=null;
-  const candidates=points.map(p=>Math.max(0,Math.min(max,p)))
-   .filter(p=>Math.abs(p-y)>2&&Math.abs(p-y)<=radius&&direction*(p-y)>=-8&&p!==lastSnap);
-  const target=candidates.sort((a,b)=>Math.abs(a-y)-Math.abs(b-y))[0];
-  if(target===undefined)return;
-  const start=performance.now(),duration=320;
+ function schedule(){if(!refreshFrame)refreshFrame=requestAnimationFrame(refresh);}
+ function cancel(){cancelAnimationFrame(frame);frame=0;}
+ function nested(target,delta){
+  for(let node=target;node&&node!==document.body&&node!==root;node=node.parentElement){
+   if(/auto|scroll/.test(getComputedStyle(node).overflowY)&&node.scrollHeight>node.clientHeight+1&&(delta>0?node.scrollTop+node.clientHeight<node.scrollHeight-1:node.scrollTop>0))return true;
+  }return false;
+ }
+ function navigate(dir){
+  if(frame||blocked())return;
+  refresh();const ordered=dir>0?points:[...points].reverse();
+  const target=ordered.find(point=>dir*(point-scrollY)>8);if(target===undefined)return;
+  const origin=scrollY,start=performance.now();
   function tick(time){
-   if(blocked()){disarm();return;}
-   const p=Math.min(1,(time-start)/duration),ease=1-Math.pow(1-p,3);
-   move(y+(target-y)*ease);
-   if(p<1)frame=requestAnimationFrame(tick);
-   else{frame=0;lastSnap=target;}
-  }
-  frame=requestAnimationFrame(tick);
+   if(blocked()){cancel();return;}
+   const p=Math.min(1,(time-start)/650);
+   window.scrollTo({top:origin+(target-origin)*(1-Math.pow(1-p,3)),behavior:'instant'});
+   if(p<1)frame=requestAnimationFrame(tick);else frame=0;
+  }frame=requestAnimationFrame(tick);
  }
- function schedule(){clearTimeout(timer);if(armed&&!frame&&!pressed)timer=setTimeout(settle,220);}
- function nestedScroll(target,delta){
-  for(let node=target;node&&node!==document.body;node=node.parentElement){
-   if(node.scrollHeight>node.clientHeight+1&&/(auto|scroll)/.test(getComputedStyle(node).overflowY)&&
-    (delta>0?node.scrollTop+node.clientHeight<node.scrollHeight-1:node.scrollTop>0))return true;
-  }
-  return false;
- }
- function input(target,delta){
-  cancel();
-  if(!delta||blocked()||target?.closest?.('input,textarea,select,[contenteditable="true"],dialog')||nestedScroll(target,delta)){
-   armed=false;return;
-  }
-  direction=Math.sign(delta);armed=true;schedule();
- }
+ const fields='input,textarea,select,[contenteditable],dialog';
  addEventListener('wheel',event=>{
-  if(event.ctrlKey||event.metaKey||Math.abs(event.deltaX)>=Math.abs(event.deltaY)){disarm();return;}
-  input(event.target,event.deltaY);
- },{passive:true});
- addEventListener('scroll',schedule,{passive:true});
- addEventListener('pointerdown',()=>{pressed=true;disarm();},{passive:true});
- addEventListener('pointerup',()=>{pressed=false;schedule();},{passive:true});
- addEventListener('pointercancel',()=>{pressed=false;disarm();},{passive:true});
+  if(blocked()||event.ctrlKey||event.metaKey||Math.abs(event.deltaX)>=Math.abs(event.deltaY)||event.target.closest(fields)||nested(event.target,event.deltaY)||getSelection()?.toString())return;
+  event.preventDefault();event.stopImmediatePropagation();
+  const now=performance.now(),ongoing=now-lastWheel<650;lastWheel=now;
+  if(!ongoing)navigate(Math.sign(event.deltaY));
+ },{capture:true,passive:false});
+ addEventListener('keydown',event=>{
+  if(blocked()||event.ctrlKey||event.metaKey||event.altKey||event.target.closest(fields+',a,button')||getSelection()?.toString())return;
+  const dir={ArrowDown:1,ArrowUp:-1,PageDown:1,PageUp:-1,' ':event.shiftKey?-1:1}[event.key];
+  if(!dir||nested(event.target,dir))return;
+  event.preventDefault();event.stopImmediatePropagation();if(!event.repeat)navigate(dir);
+ },{capture:true});
+ let touch=null;
  addEventListener('touchstart',event=>{
-  disarm();pressed=true;const p=event.touches[0];touch=p?{x:p.clientX,y:p.clientY}:null;
+  cancel();touch=null;
+  if(blocked()||event.touches.length!==1||event.target.closest(fields))return;
+  const p=event.touches[0];touch={x:p.clientX,y:p.clientY,dy:0,swiping:false};
  },{passive:true});
  addEventListener('touchmove',event=>{
-  const p=event.touches[0];if(!p||!touch||event.touches.length!==1){disarm();return;}
-  const dx=touch.x-p.clientX,dy=touch.y-p.clientY;
-  if(Math.abs(dy)>Math.abs(dx)&&Math.abs(dy)>3)input(event.target,dy);
-  else if(Math.abs(dx)>3)disarm();
- },{passive:true});
- addEventListener('touchend',()=>{touch=null;pressed=false;schedule();},{passive:true});
- addEventListener('touchcancel',()=>{touch=null;pressed=false;disarm();},{passive:true});
- addEventListener('keydown',event=>{
-  const delta={ArrowDown:1,ArrowUp:-1,PageDown:1,PageUp:-1,' ':event.shiftKey?-1:1}[event.key];
-  if(delta&&!event.ctrlKey&&!event.metaKey&&!event.altKey)input(event.target,delta);
-  else disarm();
- });
- // Anchor navigation, focus, TOP, restoration and text selection keep control.
- document.addEventListener('click',disarm,true);
- document.addEventListener('focusin',disarm);
- document.addEventListener('selectionchange',()=>{if(window.getSelection()?.toString().trim())disarm();});
- document.addEventListener('visibilitychange',disarm);
- reduced.addEventListener('change',refresh);
- addEventListener('resize',refresh);addEventListener('pageshow',refresh);addEventListener('pagehide',disarm);
- document.fonts?.ready.then(refresh);document.fonts?.addEventListener('loadingdone',refresh);
- refresh();
- return {refresh};
+  if(!touch||event.touches.length!==1||blocked()){touch=null;return;}
+  const p=event.touches[0],dx=touch.x-p.clientX,dy=touch.y-p.clientY;
+  if(Math.abs(dx)>Math.abs(dy)||nested(event.target,dy)){touch=null;return;}
+  if(Math.abs(dy)>8){event.preventDefault();touch.dy=dy;touch.swiping=true;}
+ },{passive:false});
+ addEventListener('touchend',event=>{
+  if(touch?.swiping){event.preventDefault();if(Math.abs(touch.dy)>28)navigate(Math.sign(touch.dy));}
+  touch=null;
+ },{passive:false});
+ addEventListener('touchcancel',()=>{touch=null;},{passive:true});
+ addEventListener('pointerdown',cancel,{passive:true});document.addEventListener('click',cancel,true);
+ addEventListener('keydown',e=>{if(['Home','End','Tab','Escape'].includes(e.key))cancel();});
+ new MutationObserver(sync).observe(document.body,{attributes:true,attributeFilter:['class']});
+ reduced.addEventListener('change',()=>{cancel();sync();});
+ addEventListener('resize',schedule);addEventListener('pageshow',schedule);
+ document.fonts?.ready.then(schedule);document.fonts?.addEventListener('loadingdone',schedule);
+ refresh();return {refresh:schedule};
 }
-
 export function initCaseReadingSnap(){
  const header=document.querySelector('.case-shared');if(!header)return;
- const chapters=[...document.querySelectorAll('main section[id]')]
-  .filter(section=>!section.matches('.hero,.cover'));
- const anchors=chapters.map(section=>({section,anchor:section.querySelector('.chapter-label,.section-intro,.section-head,.eyebrow')||section}));
- const ending=document.querySelector('.case-end');
- const controller=initReadingSnap({header,getPoints:offset=>[
-  0,...anchors.map(({section,anchor})=>{
-   const top=layoutTop(anchor),leading=top-layoutTop(section);
-   // Hash links to a chapter align its content rather than its large top padding.
-   section.style.scrollMarginTop=-leading+'px';
-   return top-offset;
-  }),...(ending?[layoutTop(ending)+parseFloat(getComputedStyle(ending).paddingTop)-offset]:[])
- ]});
- // Cache settled geometry, including lazy images and tab-dependent chart height.
- if('ResizeObserver' in window){
-  const observer=new ResizeObserver(controller.refresh);observer.observe(document.body);observer.observe(header);
- }
- document.addEventListener('load',event=>{if(event.target instanceof HTMLImageElement)controller.refresh();},true);
+ const sections=[...document.querySelectorAll('main section[id],main section.hero:not([id]),main section.cover:not([id])')];
+ sections.forEach(section=>{
+  let container=section;
+  if(section.children.length===1&&section.firstElementChild.matches('.wrap,.container'))container=section.firstElementChild;
+  const label=container.querySelector(':scope > .chapter-label'),heading=container.querySelector(':scope > .chapter-heading');
+  if(label&&heading){
+   const intro=document.createElement('div');intro.className='case-reading-intro';
+   label.before(intro);intro.append(label,heading);
+  }
+  const children=[...container.children].filter(node=>!node.matches('script,nav'));
+  if(section.matches('.hero,.cover'))section.classList.add('case-reading-panel');
+  else children.forEach(node=>node.classList.add('case-reading-panel'));
+ });
+ document.querySelector('.case-end')?.classList.add('case-reading-panel');
+ document.querySelector('main > .overview')?.classList.add('case-reading-panel');
+ const controller=initReadingSnap({header,getPoints:offset=>{
+  const points=[0],available=Math.max(240,innerHeight-offset-48);
+  document.querySelectorAll('.case-reading-panel').forEach(panel=>{
+   if(panel.matches('.hero,.cover'))return;
+   const top=layoutTop(panel)-offset,height=panel.offsetHeight;
+   points.push(top);
+   // Overlap successive views of tall evidence, rather than skip its middle.
+   const travel=height-available;
+   if(travel>48){const count=Math.ceil(travel/(available*.85));for(let i=1;i<=count;i++)points.push(top+travel*i/count);}
+  });
+  return points;
+ }});
+ if('ResizeObserver' in window){const observer=new ResizeObserver(controller.refresh);observer.observe(document.body);observer.observe(header);}
+ document.addEventListener('load',e=>{if(e.target instanceof HTMLImageElement)controller.refresh();},true);
 }
