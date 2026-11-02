@@ -1,5 +1,10 @@
-import { useEffect, useMemo, useRef, useState } from "react"
-import TasteScene, { tasteLabel } from "./TasteScene"
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react"
+import { moodPhotos, type MoodPhotoData } from "../data/moodPhotos"
+import cafePhotoSources from "../data/cafePhotoSources.json"
+import { getTastePhotos, tastePhotos } from "../data/tastePhotos"
+import TasteSlideshow from "./TasteSlideshow"
+import DragCarousel from "./DragCarousel"
+import { nearestSampleArea } from "../data/location"
 
 type Purpose = "study" | "date" | "friends" | "drive"
 type Cafe = {
@@ -24,32 +29,32 @@ type Prefs = Record<string, string | undefined>
 const QUESTIONS = [
   [
     "atmosphere",
-    "어떤 분위기가 좋아요?",
+    "어떤 분위기에 더 마음이 가나요?",
     ["조용하고 차분한", "적당히 활기찬", "활기찬 공간"],
   ],
   [
     "space",
-    "어떤 공간이 편해요?",
+    "어떤 공간에서 편안함을 느끼나요?",
     ["아늑하고 작은", "균형 있는", "넓고 개방적인"],
   ],
   [
     "seat",
-    "어떤 자리가 좋아요?",
+    "어떤 자리를 선호하나요?",
     ["혼자 앉는 자리", "둘이 앉는 자리", "여럿이 앉는 자리"],
   ],
   [
     "menu",
-    "어떤 메뉴를 찾나요?",
+    "카페에서 가장 기대하는 것은 무엇인가요?",
     ["커피", "디저트", "차·논커피", "브런치"],
   ],
   [
     "price",
-    "한 잔 예산은 얼마인가요?",
+    "음료 한 잔의 예산은 어느 정도인가요?",
     ["5,000원 이하", "6,500원 이하", "8,000원 이하", "상관없음"],
   ],
   [
     "distance",
-    "어디까지 둘러볼까요?",
+    "얼마나 가까운 카페를 찾고 있나요?",
     ["1km 이내", "3km 이내", "5km 이내", "거리 상관없음"],
   ],
 ] as const
@@ -60,7 +65,7 @@ const PURPOSES: {
 }[] = [
   { id: "study", title: "공부·작업", desc: "혼자 집중할 공간" },
   { id: "date", title: "데이트", desc: "천천히 이야기할 분위기" },
-  { id: "friends", title: "친구와 만남", desc: "함께 머물기 좋은 자리" },
+  { id: "friends", title: "친구와", desc: "함께 머물기 좋은 자리" },
   { id: "drive", title: "드라이브", desc: "가볍게 쉬어가기 좋은 곳" },
 ]
 const cafes: Cafe[] = [
@@ -268,6 +273,330 @@ const cafes: Cafe[] = [
     samplePosition: "서면 샘플 기준점에서 남쪽 4.1km",
     unknownInfo: "예약 가능 여부는 확인이 필요해요.",
   },
+  {
+    id: "j-5",
+    name: "오후의 창",
+    neighborhood: "부산 전포",
+    image:
+      "https://images.unsplash.com/photo-1740813626378-b690093fcbe6?auto=format&fit=crop&w=1000&q=80",
+    atmosphere: "조용하고 차분한",
+    space: "아늑하고 작은",
+    seatTypes: ["혼자 앉는 자리", "창가"],
+    menuTypes: ["커피", "디저트"],
+    representativeDrinkPrice: 4500,
+    sampleDistance: 0.4,
+    suitablePurposes: ["study", "date"],
+    amenities: ["Wi‑Fi", "콘센트"],
+    sampleHours: "09:00 – 20:00",
+    samplePosition: "전포 샘플 기준점에서 동쪽 0.4km",
+    unknownInfo: "혼잡도와 좌석 가능 여부는 방문 전 확인이 필요해요.",
+  },
+  {
+    id: "j-6",
+    name: "모서리 서재",
+    neighborhood: "부산 전포",
+    image:
+      "https://images.unsplash.com/photo-1769184618290-3306edcc3b02?auto=format&fit=crop&w=1000&q=80",
+    atmosphere: "적당히 활기찬",
+    space: "균형 있는",
+    seatTypes: ["둘이 앉는 자리", "소파"],
+    menuTypes: ["차·논커피", "디저트"],
+    representativeDrinkPrice: 4900,
+    sampleDistance: 0.9,
+    suitablePurposes: ["date", "friends"],
+    amenities: ["Wi‑Fi"],
+    sampleHours: "10:00 – 21:00",
+    samplePosition: "전포 샘플 기준점에서 서쪽 0.9km",
+    unknownInfo: "혼잡도와 좌석 가능 여부는 방문 전 확인이 필요해요.",
+  },
+  {
+    id: "j-7",
+    name: "브릭 커먼",
+    neighborhood: "부산 전포",
+    image:
+      "https://images.unsplash.com/photo-1769184613600-1a309a70196b?auto=format&fit=crop&w=1000&q=80",
+    atmosphere: "활기찬 공간",
+    space: "넓고 개방적인",
+    seatTypes: ["여럿이 앉는 자리", "테이블"],
+    menuTypes: ["브런치", "커피"],
+    representativeDrinkPrice: 5800,
+    sampleDistance: 1.4,
+    suitablePurposes: ["friends", "drive"],
+    amenities: ["주차", "Wi‑Fi"],
+    sampleHours: "08:30 – 19:30",
+    samplePosition: "전포 샘플 기준점에서 남쪽 1.4km",
+    unknownInfo: "혼잡도와 좌석 가능 여부는 방문 전 확인이 필요해요.",
+  },
+  {
+    id: "j-8",
+    name: "작은 온실",
+    neighborhood: "부산 전포",
+    image:
+      "https://images.unsplash.com/photo-1771673871892-217da71a8a75?auto=format&fit=crop&w=1000&q=80",
+    atmosphere: "조용하고 차분한",
+    space: "아늑하고 작은",
+    seatTypes: ["혼자 앉는 자리", "둘이 앉는 자리"],
+    menuTypes: ["차·논커피", "브런치"],
+    representativeDrinkPrice: 6200,
+    sampleDistance: 2.3,
+    suitablePurposes: ["study", "date"],
+    amenities: ["콘센트"],
+    sampleHours: "11:00 – 22:00",
+    samplePosition: "전포 샘플 기준점에서 북쪽 2.3km",
+    unknownInfo: "혼잡도와 좌석 가능 여부는 방문 전 확인이 필요해요.",
+  },
+  {
+    id: "j-9",
+    name: "느린 로스터리",
+    neighborhood: "부산 전포",
+    image:
+      "https://images.unsplash.com/photo-1760844893062-d68f86c8c0ff?auto=format&fit=crop&w=1000&q=80",
+    atmosphere: "적당히 활기찬",
+    space: "균형 있는",
+    seatTypes: ["둘이 앉는 자리", "여럿이 앉는 자리"],
+    menuTypes: ["커피", "브런치", "디저트"],
+    representativeDrinkPrice: 7400,
+    sampleDistance: 3.4,
+    suitablePurposes: ["friends", "date"],
+    amenities: ["Wi‑Fi", "주차"],
+    sampleHours: "10:00 – 23:00",
+    samplePosition: "전포 샘플 기준점에서 동쪽 3.4km",
+    unknownInfo: "혼잡도와 좌석 가능 여부는 방문 전 확인이 필요해요.",
+  },
+  {
+    id: "j-10",
+    name: "포레스트 테이블",
+    neighborhood: "부산 전포",
+    image:
+      "https://images.unsplash.com/photo-1764964048064-a48368fe7c3e?auto=format&fit=crop&w=1000&q=80",
+    atmosphere: "활기찬 공간",
+    space: "넓고 개방적인",
+    seatTypes: ["혼자 앉는 자리", "바 테이블"],
+    menuTypes: ["커피", "차·논커피"],
+    representativeDrinkPrice: 8500,
+    sampleDistance: 4.6,
+    suitablePurposes: ["study", "drive"],
+    amenities: ["Wi‑Fi", "콘센트", "주차"],
+    sampleHours: "12:00 – 24:00",
+    samplePosition: "전포 샘플 기준점에서 서쪽 4.6km",
+    unknownInfo: "혼잡도와 좌석 가능 여부는 방문 전 확인이 필요해요.",
+  },
+  {
+    id: "g-5",
+    name: "파도와 잔",
+    neighborhood: "부산 광안리",
+    image:
+      "https://images.unsplash.com/photo-1771344143490-87e02ecc75d2?auto=format&fit=crop&w=1000&q=80",
+    atmosphere: "적당히 활기찬",
+    space: "아늑하고 작은",
+    seatTypes: ["혼자 앉는 자리", "창가"],
+    menuTypes: ["커피", "디저트"],
+    representativeDrinkPrice: 4600,
+    sampleDistance: 0.4,
+    suitablePurposes: ["study", "date"],
+    amenities: ["Wi‑Fi", "콘센트"],
+    sampleHours: "09:00 – 20:00",
+    samplePosition: "광안리 샘플 기준점에서 동쪽 0.4km",
+    unknownInfo: "혼잡도와 좌석 가능 여부는 방문 전 확인이 필요해요.",
+  },
+  {
+    id: "g-6",
+    name: "모닝 코스트",
+    neighborhood: "부산 광안리",
+    image:
+      "https://images.unsplash.com/photo-1751151015757-5f3aac54d2ad?auto=format&fit=crop&w=1000&q=80",
+    atmosphere: "활기찬 공간",
+    space: "균형 있는",
+    seatTypes: ["둘이 앉는 자리", "소파"],
+    menuTypes: ["차·논커피", "디저트"],
+    representativeDrinkPrice: 5000,
+    sampleDistance: 0.9,
+    suitablePurposes: ["date", "friends"],
+    amenities: ["Wi‑Fi"],
+    sampleHours: "10:00 – 21:00",
+    samplePosition: "광안리 샘플 기준점에서 서쪽 0.9km",
+    unknownInfo: "혼잡도와 좌석 가능 여부는 방문 전 확인이 필요해요.",
+  },
+  {
+    id: "g-7",
+    name: "샌드 베이크",
+    neighborhood: "부산 광안리",
+    image:
+      "https://images.unsplash.com/photo-1777709352854-ca94b4564d22?auto=format&fit=crop&w=1000&q=80",
+    atmosphere: "조용하고 차분한",
+    space: "넓고 개방적인",
+    seatTypes: ["여럿이 앉는 자리", "테이블"],
+    menuTypes: ["브런치", "커피"],
+    representativeDrinkPrice: 5900,
+    sampleDistance: 1.4,
+    suitablePurposes: ["friends", "drive"],
+    amenities: ["주차", "Wi‑Fi"],
+    sampleHours: "08:30 – 19:30",
+    samplePosition: "광안리 샘플 기준점에서 남쪽 1.4km",
+    unknownInfo: "혼잡도와 좌석 가능 여부는 방문 전 확인이 필요해요.",
+  },
+  {
+    id: "g-8",
+    name: "해질녘 다락",
+    neighborhood: "부산 광안리",
+    image:
+      "https://images.unsplash.com/photo-1762770622112-4a708ce0d731?auto=format&fit=crop&w=1000&q=80",
+    atmosphere: "적당히 활기찬",
+    space: "아늑하고 작은",
+    seatTypes: ["혼자 앉는 자리", "둘이 앉는 자리"],
+    menuTypes: ["차·논커피", "브런치"],
+    representativeDrinkPrice: 6300,
+    sampleDistance: 2.3,
+    suitablePurposes: ["study", "date"],
+    amenities: ["콘센트"],
+    sampleHours: "11:00 – 22:00",
+    samplePosition: "광안리 샘플 기준점에서 북쪽 2.3km",
+    unknownInfo: "혼잡도와 좌석 가능 여부는 방문 전 확인이 필요해요.",
+  },
+  {
+    id: "g-9",
+    name: "블루 가든",
+    neighborhood: "부산 광안리",
+    image:
+      "https://images.unsplash.com/photo-1748369745378-7ea545d386d7?auto=format&fit=crop&w=1000&q=80",
+    atmosphere: "활기찬 공간",
+    space: "균형 있는",
+    seatTypes: ["둘이 앉는 자리", "여럿이 앉는 자리"],
+    menuTypes: ["커피", "브런치", "디저트"],
+    representativeDrinkPrice: 7500,
+    sampleDistance: 3.4,
+    suitablePurposes: ["friends", "date"],
+    amenities: ["Wi‑Fi", "주차"],
+    sampleHours: "10:00 – 23:00",
+    samplePosition: "광안리 샘플 기준점에서 동쪽 3.4km",
+    unknownInfo: "혼잡도와 좌석 가능 여부는 방문 전 확인이 필요해요.",
+  },
+  {
+    id: "g-10",
+    name: "코럴 살롱",
+    neighborhood: "부산 광안리",
+    image:
+      "https://images.unsplash.com/photo-1771532447027-e826e58cc93d?auto=format&fit=crop&w=1000&q=80",
+    atmosphere: "조용하고 차분한",
+    space: "넓고 개방적인",
+    seatTypes: ["혼자 앉는 자리", "바 테이블"],
+    menuTypes: ["커피", "차·논커피"],
+    representativeDrinkPrice: 8600,
+    sampleDistance: 4.6,
+    suitablePurposes: ["study", "drive"],
+    amenities: ["Wi‑Fi", "콘센트", "주차"],
+    sampleHours: "12:00 – 24:00",
+    samplePosition: "광안리 샘플 기준점에서 서쪽 4.6km",
+    unknownInfo: "혼잡도와 좌석 가능 여부는 방문 전 확인이 필요해요.",
+  },
+  {
+    id: "s-5",
+    name: "사이 골목",
+    neighborhood: "부산 서면",
+    image:
+      "https://images.unsplash.com/photo-1772521341005-04ee0a9286d3?auto=format&fit=crop&w=1000&q=80",
+    atmosphere: "활기찬 공간",
+    space: "균형 있는",
+    seatTypes: ["혼자 앉는 자리", "창가"],
+    menuTypes: ["커피", "디저트"],
+    representativeDrinkPrice: 4700,
+    sampleDistance: 0.4,
+    suitablePurposes: ["study", "date"],
+    amenities: ["Wi‑Fi", "콘센트"],
+    sampleHours: "09:00 – 20:00",
+    samplePosition: "서면 샘플 기준점에서 동쪽 0.4km",
+    unknownInfo: "혼잡도와 좌석 가능 여부는 방문 전 확인이 필요해요.",
+  },
+  {
+    id: "s-6",
+    name: "페이지 원",
+    neighborhood: "부산 서면",
+    image:
+      "https://images.unsplash.com/photo-1768400777008-148b0aae6346?auto=format&fit=crop&w=1000&q=80",
+    atmosphere: "조용하고 차분한",
+    space: "넓고 개방적인",
+    seatTypes: ["둘이 앉는 자리", "소파"],
+    menuTypes: ["차·논커피", "디저트"],
+    representativeDrinkPrice: 5100,
+    sampleDistance: 0.9,
+    suitablePurposes: ["date", "friends"],
+    amenities: ["Wi‑Fi"],
+    sampleHours: "10:00 – 21:00",
+    samplePosition: "서면 샘플 기준점에서 서쪽 0.9km",
+    unknownInfo: "혼잡도와 좌석 가능 여부는 방문 전 확인이 필요해요.",
+  },
+  {
+    id: "s-7",
+    name: "테라스 모닝",
+    neighborhood: "부산 서면",
+    image:
+      "https://images.unsplash.com/photo-1761695939616-1c03087c1ce4?auto=format&fit=crop&w=1000&q=80",
+    atmosphere: "적당히 활기찬",
+    space: "아늑하고 작은",
+    seatTypes: ["여럿이 앉는 자리", "테이블"],
+    menuTypes: ["브런치", "커피"],
+    representativeDrinkPrice: 6000,
+    sampleDistance: 1.4,
+    suitablePurposes: ["friends", "drive"],
+    amenities: ["주차", "Wi‑Fi"],
+    sampleHours: "08:30 – 19:30",
+    samplePosition: "서면 샘플 기준점에서 남쪽 1.4km",
+    unknownInfo: "혼잡도와 좌석 가능 여부는 방문 전 확인이 필요해요.",
+  },
+  {
+    id: "s-8",
+    name: "라이트 커먼",
+    neighborhood: "부산 서면",
+    image:
+      "https://images.unsplash.com/photo-1781786047465-6fb2eb2815d8?auto=format&fit=crop&w=1000&q=80",
+    atmosphere: "활기찬 공간",
+    space: "균형 있는",
+    seatTypes: ["혼자 앉는 자리", "둘이 앉는 자리"],
+    menuTypes: ["차·논커피", "브런치"],
+    representativeDrinkPrice: 6400,
+    sampleDistance: 2.3,
+    suitablePurposes: ["study", "date"],
+    amenities: ["콘센트"],
+    sampleHours: "11:00 – 22:00",
+    samplePosition: "서면 샘플 기준점에서 북쪽 2.3km",
+    unknownInfo: "혼잡도와 좌석 가능 여부는 방문 전 확인이 필요해요.",
+  },
+  {
+    id: "s-9",
+    name: "버터 스튜디오",
+    neighborhood: "부산 서면",
+    image:
+      "https://images.unsplash.com/photo-1774684047575-34200538f435?auto=format&fit=crop&w=1000&q=80",
+    atmosphere: "조용하고 차분한",
+    space: "넓고 개방적인",
+    seatTypes: ["둘이 앉는 자리", "여럿이 앉는 자리"],
+    menuTypes: ["커피", "브런치", "디저트"],
+    representativeDrinkPrice: 7600,
+    sampleDistance: 3.4,
+    suitablePurposes: ["friends", "date"],
+    amenities: ["Wi‑Fi", "주차"],
+    sampleHours: "10:00 – 23:00",
+    samplePosition: "서면 샘플 기준점에서 동쪽 3.4km",
+    unknownInfo: "혼잡도와 좌석 가능 여부는 방문 전 확인이 필요해요.",
+  },
+  {
+    id: "s-10",
+    name: "밤의 서가",
+    neighborhood: "부산 서면",
+    image:
+      "https://images.unsplash.com/photo-1767522248372-67930aef699f?auto=format&fit=crop&w=1000&q=80",
+    atmosphere: "적당히 활기찬",
+    space: "아늑하고 작은",
+    seatTypes: ["혼자 앉는 자리", "바 테이블"],
+    menuTypes: ["커피", "차·논커피"],
+    representativeDrinkPrice: 8700,
+    sampleDistance: 4.6,
+    suitablePurposes: ["study", "drive"],
+    amenities: ["Wi‑Fi", "콘센트", "주차"],
+    sampleHours: "12:00 – 24:00",
+    samplePosition: "서면 샘플 기준점에서 서쪽 4.6km",
+    unknownInfo: "혼잡도와 좌석 가능 여부는 방문 전 확인이 필요해요.",
+  },
 ]
 const priceLimit = (x?: string) =>
   x === "5,000원 이하"
@@ -281,21 +610,17 @@ const distLimit = (x?: string) =>
   x === "1km 이내" ? 1 : x === "3km 이내" ? 3 : x === "5km 이내" ? 5 : Infinity
 type Screen = "onboard" | "quiz" | "profile" | "home" | "explore" | "saved" | "detail" | "settings"
 const DIMENSIONS = ["분위기", "공간", "좌석", "메뉴", "가격", "이동반경"]
-const primary =
-  "min-h-[52px] rounded-[12px] bg-primary px-5 py-3 text-[15px] font-semibold text-primary-foreground transition-colors hover:bg-[#462919] active:translate-y-px"
-const secondary =
-  "min-h-[52px] rounded-[12px] border border-border bg-card px-5 py-3 text-[15px] font-semibold text-primary transition-colors hover:bg-secondary"
-const heading = "app-title"
-const label = "text-[12px] font-bold tracking-[0.06em] text-primary"
-const sectionHeading = "app-section-title"
+const primary = "btn-primary"
+const secondary = "btn-secondary"
+const heading = "page-title"
 
 function Logo({ className = "text-[26px]" }: { className?: string }) {
   return (
     <span
-      className={`inline-flex items-center font-brand leading-none text-primary ${className}`}
+      className={`cafekok-logo inline-flex items-center font-sans font-[850] leading-none tracking-[-0.065em] text-primary ${className}`}
     >
-      CAFÉ
-      <span className="ml-1 rounded-[4px] bg-primary px-[0.28em] py-[0.12em] text-primary-foreground">
+      <span>CAFÉ</span>
+      <span className="cafekok-logo-mark ml-[0.18em] rounded-[3px] bg-primary px-[0.24em] pb-[0.14em] pt-[0.12em] font-[800] tracking-[-0.055em] text-primary-foreground">
         KOK
       </span>
     </span>
@@ -304,20 +629,24 @@ function Logo({ className = "text-[26px]" }: { className?: string }) {
 
 function MiniMap() {
   return (
-    <div className="relative isolate h-36 overflow-hidden rounded-[8px] bg-[#e6e1d6]">
+    <div className="relative isolate h-36 overflow-hidden rounded-[8px] bg-[#ede9e1]">
       <svg
         className="absolute inset-0 h-full w-full"
         viewBox="0 0 350 144"
         preserveAspectRatio="none"
         aria-hidden="true"
       >
-        <path d="M270 0h80v144H310L290 70Z" fill="#d1d8d0" />
+        <path d="M270 0h80v144H310L290 70Z" fill="#d5d2c9" />
         <path
           d="M-20 40 350 100M80-20 145 160M-20 130 380 30"
-          stroke="#f8f5ef"
+          stroke="#fcfaf6"
           strokeWidth="18"
         />
-        <path d="M0 20h250M0 80h290M60 0v144M210 0v144" stroke="#d4ccbe" strokeWidth="2" />
+        <path
+          d="M0 20h250M0 80h290M60 0v144M210 0v144"
+          stroke="#d6d1c8"
+          strokeWidth="2"
+        />
       </svg>
       <span className="absolute left-[46%] top-[34%] flex size-9 items-center justify-center rounded-full border-[3px] border-background bg-primary text-primary-foreground">
         <Icon name="coffee" className="size-4" />
@@ -336,88 +665,120 @@ function Icon({
   name: string
   className?: string
 }) {
-  const paths: Record<string, React.ReactNode> = {
-    home: (
-      <>
-        <path d="m3 10 9-7 9 7v10H3Z" />
-        <path d="M9 20v-7h6v7" />
-      </>
-    ),
-    search: (
-      <>
-        <circle cx="10.5" cy="10.5" r="6.5" />
-        <path d="m16 16 5 5" />
-      </>
-    ),
-    saved: <path d="M6 3h12v18l-6-4-6 4Z" />,
-    profile: (
-      <>
-        <circle cx="12" cy="8" r="4" />
-        <path d="M4 21v-2a8 8 0 0 1 16 0v2" />
-      </>
-    ),
-    arrow: <path d="M4 12h16m-6-6 6 6-6 6" />,
-    back: <path d="m14 5-7 7 7 7" />,
-    chevron: <path d="m9 5 7 7-7 7" />,
-    down: <path d="m6 9 6 6 6-6" />,
-    check: <path d="m5 12 4 4L19 6" />,
-    close: <path d="m6 6 12 12M6 18 18 6" />,
-    map: (
-      <>
-        <path d="m3 5 6-2 6 2 6-2v16l-6 2-6-2-6 2Zm6-2v16m6-14v16" />
-      </>
-    ),
-    pin: (
-      <>
-        <path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 0 1 14 0Z" />
-        <circle cx="12" cy="10" r="2" />
-      </>
-    ),
-    filter: (
-      <>
-        <path d="M3 6h18M3 12h18M3 18h18" />
-        <path d="M8 3v6m8 0v6m-7 0v6" />
-      </>
-    ),
-    study: (
-      <>
-        <path d="M3 4h7l2 2 2-2h7v15h-7l-2 2-2-2H3Z" />
-        <path d="M12 6v15" />
-      </>
-    ),
-    date: (
-      <path d="M20 5a5 5 0 0 0-8 1 5 5 0 0 0-8-1c-6 6 8 15 8 15S26 11 20 5Z" />
-    ),
-    friends: (
-      <>
-        <circle cx="8" cy="8" r="3" />
-        <path d="M2 20v-2a6 6 0 0 1 12 0v2M16 5a3 3 0 0 1 0 6m2 3a5 5 0 0 1 4 5v1" />
-      </>
-    ),
-    drive: (
-      <>
-        <path d="m4 10 2-6h12l2 6v9H4Zm0 0h16M6 19v2m12-2v2M7 14h2m6 0h2" />
-      </>
-    ),
-    coffee: (
-      <>
-        <path d="M4 8h12v7a6 6 0 0 1-12 0Zm12 1h2a3 3 0 0 1 0 6h-2M3 22h15M7 2v3m5-3v3" />
-      </>
-    ),
+  const icons: Record<string, string> = {
+    home: "house",
+    search: "search",
+    explore: "search",
+    saved: "bookmark",
+    profile: "user-round",
+    arrow: "arrow-right",
+    back: "chevron-left",
+    chevron: "chevron-right",
+    down: "chevron-down",
+    check: "check",
+    close: "x",
+    map: "map",
+    pin: "map-pin",
+    filter: "sliders-horizontal",
+    settings: "settings",
+    study: "book-open",
+    date: "heart",
+    friends: "users",
+    drive: "car",
+    coffee: "coffee",
+    edit: "pencil-line",
+    bean: "coffee-bean",
+    bell: "bell",
   }
+  const mask = `url("/work/cafekok/prototype/icons/${icons[name] || "coffee"}.svg") center / contain no-repeat`
   return (
-    <svg
-      className={className}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+    <span
       aria-hidden="true"
-    >
-      {paths[name === "explore" ? "search" : name] || paths.coffee}
-    </svg>
+      className={`inline-block shrink-0 ${className}`}
+      style={{ backgroundColor: "currentColor", mask, WebkitMask: mask }}
+    />
+  )
+}
+
+function MoodPhoto({
+  photo,
+  className = "",
+  eager = false,
+}: {
+  photo: MoodPhotoData
+  className?: string
+  eager?: boolean
+}) {
+  const [failed, setFailed] = useState(false)
+  return (
+    <div className={`overflow-hidden bg-secondary ${className}`}>
+      <img
+        src={failed ? photo.fallback : photo.src}
+        alt={failed ? "카페 분위기 참고 사진" : photo.alt}
+        className="h-full w-full object-cover"
+        loading={eager ? "eager" : "lazy"}
+        referrerPolicy="no-referrer"
+        onError={() => setFailed(true)}
+      />
+    </div>
+  )
+}
+
+function OnboardCover() {
+  return (
+    <div className="onboard-cover">
+      <div
+        className="absolute inset-0"
+        role="img"
+        aria-label="햇살이 드는 카페와 아늑한 카페의 분위기 사진"
+      >
+        {[moodPhotos.sunlit, moodPhotos.cozy, moodPhotos.green].map(
+          (photo, index) => (
+            <div
+              key={photo.src}
+              className="home-hero-slide"
+              style={{ animationDelay: `${[0, -12, -6][index]}s` }}
+              aria-hidden="true"
+            >
+              <MoodPhoto photo={photo} className="h-full w-full" eager />
+            </div>
+          ),
+        )}
+      </div>
+    </div>
+  )
+}
+
+function HomeBanner() {
+  return (
+    <section className="home-hero" aria-label="오늘의 카페 영감">
+      <div className="page-intro">
+        <h1 className="home-banner">
+          오늘은 어떤 카페가
+          <br />
+          끌리나요?
+        </h1>
+        <p className="page-subtitle">잠깐의 쉼도, 나의 취향대로.</p>
+      </div>
+      <div
+        className="home-hero-photos"
+        role="img"
+        aria-label="서로 다른 분위기의 카페 사진"
+      >
+        {[moodPhotos.sunlit, moodPhotos.cozy, moodPhotos.green].map(
+          (photo, index) => (
+            <div
+              key={photo.src}
+              className="home-hero-slide"
+              style={{ animationDelay: `${[0, -12, -6][index]}s` }}
+              aria-hidden="true"
+            >
+              <MoodPhoto photo={photo} className="h-full w-full" eager />
+            </div>
+          ),
+        )}
+      </div>
+    </section>
   )
 }
 
@@ -443,15 +804,11 @@ function Photo({
       ) : (
         <>
           <img
-            className={`h-full w-full object-cover [filter:saturate(.9)] ${imgClass}`}
+            className={`h-full w-full object-cover ${imgClass}`}
             src={cafe.image}
             alt={`${cafe.name} 분위기 참고 사진 · 실제 카페 사진이 아닙니다`}
             loading={eager ? "eager" : "lazy"}
             onError={() => setFailed(true)}
-          />
-          <span
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-0 bg-transparent"
           />
         </>
       )}
@@ -512,9 +869,7 @@ function Modal({
   }, [])
   return (
     <div
-      className={`fixed inset-0 z-40 flex justify-center bg-[#30281f]/40 ${
-        sheet ? "items-end" : "items-center px-6"
-      }`}
+      className={`modal-backdrop ${sheet ? "is-sheet" : ""}`}
       onMouseDown={(event) => {
         if (event.target === event.currentTarget) onClose()
       }}
@@ -525,11 +880,7 @@ function Modal({
         aria-modal="true"
         aria-label={title}
         tabIndex={-1}
-        className={`max-h-[88dvh] w-full max-w-[440px] overflow-y-auto bg-background p-6 ${
-          sheet
-            ? "rounded-t-[12px] pb-[max(24px,env(safe-area-inset-bottom))]"
-            : "max-w-[350px] rounded-[12px]"
-        }`}
+        className={`modal-panel ${sheet ? "is-sheet" : ""}`}
       >
         {children}
       </div>
@@ -537,17 +888,21 @@ function Modal({
   )
 }
 
-
 export default function App() {
   const [loaded, setLoaded] = useState(false)
-  const [screen, setScreen] = useState<Screen>("onboard")
+  const [quizCompleted, setQuizCompleted] = useState(false)
+  const [screen, setScreen] = useState<Screen>(new URLSearchParams(window.location.search).get("preview") === "home" ? "home" : "onboard")
   const [tab, setTab] = useState<Screen>("home")
   const [prefs, setPrefs] = useState<Prefs>({})
   const [purpose, setPurpose] = useState<Purpose | undefined>()
   const [region, setRegion] = useState("부산 전포")
+  const [locationState, setLocationState] =
+    useState<"idle" | "loading" | "ready">("idle")
+  const [locationLabel, setLocationLabel] = useState("현재 위치로 설정")
+  const [locationMessage, setLocationMessage] = useState("")
+  const locationRequest = useRef(0)
   const [saved, setSaved] = useState<string[]>([])
   const [quiz, setQuiz] = useState(0)
-  const [editingTaste, setEditingTaste] = useState(false)
   const [detail, setDetail] = useState<string | undefined>()
   const [query, setQuery] = useState("")
   const [sort, setSort] = useState("추천순")
@@ -555,67 +910,38 @@ export default function App() {
   const [filters, setFilters] = useState<Prefs>({})
   const [sheet, setSheet] = useState(false)
   const [confirm, setConfirm] = useState(false)
+  const [notificationsOpen, setNotificationsOpen] = useState(false)
+  const [notificationsEnabled, setNotificationsEnabled] = useState(false)
+  const [notificationMessage, setNotificationMessage] = useState("")
+  const [editingTaste, setEditingTaste] = useState<number | null>(null)
   const [toast, setToast] = useState("")
   const [storageError, setStorageError] = useState("")
   const timer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined)
 
   useEffect(() => {
+    // Every new visit starts with empty prototype state. Ignore legacy answers.
     try {
-      const data = localStorage.getItem("cafekok-state")
-      if (data) {
-        const state = JSON.parse(data)
-        if (!state || typeof state !== "object" || Array.isArray(state))
-          throw new Error("Invalid state")
-        const restored: Prefs = {}
-        QUESTIONS.forEach(([key, , options]) => {
-          if ((options as readonly string[]).includes(state.prefs?.[key]))
-            restored[key] = state.prefs[key]
-        })
-        setPrefs(restored)
-        setSaved(
-          Array.isArray(state.saved)
-            ? state.saved.filter((id: unknown) =>
-                cafes.some((c) => c.id === id),
-              )
-            : [],
-        )
-        setPurpose(
-          PURPOSES.some((p) => p.id === state.purpose)
-            ? state.purpose
-            : undefined,
-        )
-        setRegion(
-          ["부산 전포", "부산 광안리", "부산 서면"].includes(state.region)
-            ? state.region
-            : "부산 전포",
-        )
-        setScreen("home")
-      }
+      localStorage.removeItem("cafekok-state")
     } catch {
-      setStorageError("저장된 상태를 불러오지 못했어요. 새로 설정해주세요.")
+      /* State stays in memory even when storage is unavailable. */
+    }
+    try {
+      setNotificationsEnabled(
+        localStorage.getItem("cafekok-notifications") === "on" &&
+          "Notification" in window &&
+          Notification.permission === "granted",
+      )
+    } catch {
+      /* Notifications remain off for this visit. */
     }
     setLoaded(true)
     return () => {
       if (timer.current) clearTimeout(timer.current)
     }
   }, [])
-  useEffect(() => {
-    if (loaded) {
-      try {
-        localStorage.setItem(
-          "cafekok-state",
-          JSON.stringify({ prefs, saved, purpose, region }),
-        )
-      } catch {
-        setStorageError(
-          "기기 저장 공간을 사용할 수 없어 변경 사항이 새로고침 후 유지되지 않을 수 있어요.",
-        )
-      }
-    }
-  }, [prefs, saved, purpose, region, loaded])
-  useEffect(() => {
-    window.scrollTo({ top: 0 })
-  }, [screen, map])
+  useLayoutEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" })
+  }, [screen, map, quiz, detail])
 
   const score = (c: Cafe) =>
     (purpose && c.suitablePurposes.includes(purpose) ? 5 : 0) +
@@ -660,7 +986,6 @@ export default function App() {
   const purposeTitle = PURPOSES.find((p) => p.id === purpose)?.title
   const nav = (next: Screen, nextTab?: Screen) => {
     setScreen(next)
-    if (next !== "quiz") setEditingTaste(false)
     if (nextTab) setTab(nextTab)
     else if (["home", "explore", "saved", "profile"].includes(next))
       setTab(next)
@@ -675,6 +1000,21 @@ export default function App() {
     const exists = saved.includes(id)
     setSaved(exists ? saved.filter((item) => item !== id) : [...saved, id])
     notify(exists ? "저장을 취소했어요" : "저장한 카페에 담았어요")
+    if (
+      !exists &&
+      notificationsEnabled &&
+      "Notification" in window &&
+      Notification.permission === "granted"
+    ) {
+      try {
+        const name = cafes.find((c) => c.id === id)?.name || "카페"
+        new Notification("카페콕", { body: `${name}을 저장했어요.` })
+      } catch {
+        setNotificationMessage(
+          "이 브라우저에서는 기기 알림을 표시할 수 없어요.",
+        )
+      }
+    }
   }
   const open = (id: string) => {
     setDetail(id)
@@ -735,15 +1075,6 @@ export default function App() {
     if (prefs.menu && c.menuTypes.includes(prefs.menu)) t.push(prefs.menu)
     return t.slice(0, 4)
   }
-  const tasteLine = () => {
-    const parts = [
-      prefs.atmosphere && `${prefs.atmosphere} 분위기`,
-      prefs.space && `${prefs.space} 공간`,
-      prefs.seat,
-      prefs.menu && `${prefs.menu} 메뉴`,
-    ].filter(Boolean) as string[]
-    return parts.length ? `${parts.slice(0, 2).join(", ")}.` : ""
-  }
   const matchLabel = (c: Cafe) =>
     match(c) === undefined ? "취향 비교 전" : `${match(c)}% 취향 일치`
   const resetConditions = () => {
@@ -752,164 +1083,380 @@ export default function App() {
     setPrefs({ ...prefs, price: undefined, distance: undefined })
   }
 
-  const Header = (title?: string, right?: React.ReactNode) => (
-    <header className="flex min-h-[76px] items-center justify-between gap-3 px-6 py-3">
-      {title ? (
-        <div className="flex items-center gap-2">
-          <button
-            className="-ml-2 flex size-11 items-center justify-center text-primary"
-            onClick={() => nav(tab)}
-            aria-label="뒤로 가기"
-          >
-            <Icon name="back" />
-          </button>
-          <span className="font-display text-[20px]">{title}</span>
-        </div>
-      ) : (
-        <div>
-          <Logo className="text-[28px]" />
-          <div className="mt-2 flex items-center gap-1 text-[14px] font-semibold text-primary">
-            <Icon name="pin" className="size-4" />
-            <select
-              aria-label="탐색 지역"
-              className="max-w-32 bg-transparent py-1 font-semibold text-foreground"
-              value={region}
-              onChange={(event) => setRegion(event.target.value)}
-            >
-              {["부산 전포", "부산 광안리", "부산 서면"].map((value) => (
-                <option key={value}>{value}</option>
-              ))}
-            </select>
-          </div>
-        </div>
-      )}
-      {right || (
+  const setCurrentLocation = () => {
+    if (locationState === "loading") return
+    if (!window.isSecureContext || !("geolocation" in navigator)) {
+      setLocationMessage("이 브라우저에서는 현재 위치를 사용할 수 없어요.")
+      return
+    }
+    const request = ++locationRequest.current
+    setLocationState("loading")
+    setLocationMessage("")
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        if (request !== locationRequest.current) return
+        const area = nearestSampleArea(
+          position.coords.latitude,
+          position.coords.longitude,
+        )
+        setLocationState("ready")
+        if (area) {
+          setRegion(area)
+          setLocationLabel(`현재 위치 · ${area.replace("부산 ", "")}`)
+          setLocationMessage(
+            "현재 위치와 가까운 지역의 가상 카페를 보여드려요.",
+          )
+        } else {
+          setLocationLabel("현재 위치 설정됨")
+          setLocationMessage(
+            "현재 위치는 샘플 지역 밖이에요. 부산 가상 카페를 보여드려요.",
+          )
+        }
+      },
+      (error) => {
+        if (request !== locationRequest.current) return
+        setLocationState("idle")
+        setLocationLabel("현재 위치로 설정")
+        setLocationMessage(
+          error.code === 1
+            ? "위치 권한이 꺼져 있어요. 브라우저에서 허용한 뒤 다시 눌러주세요."
+            : error.code === 3
+              ? "위치 확인 시간이 길어지고 있어요. 다시 눌러주세요."
+              : "현재 위치를 확인하지 못했어요. 다시 눌러주세요.",
+        )
+      },
+      { enableHighAccuracy: false, timeout: 10000, maximumAge: 300000 },
+    )
+  }
+  const BellButton = () => (
+    <button
+      type="button"
+      aria-label="알림 설정"
+      aria-haspopup="dialog"
+      onClick={() => setNotificationsOpen(true)}
+      className="icon-button"
+    >
+      <Icon name="bell" />
+    </button>
+  )
+  const Header = (title?: string) => (
+    <header className="app-header">
+      <button
+        type="button"
+        className="header-brand brand-button"
+        aria-label={quizCompleted ? "CAFÉKOK 홈" : "CAFÉKOK 첫 화면"}
+        onClick={() => nav(quizCompleted ? "home" : "onboard")}
+      >
+        <Logo className="text-[24px]" />
+      </button>
+      <div className="header-actions">
         <button
-          aria-label="내 취향 보기"
-          className="flex size-11 items-center justify-center rounded-[8px] border-[1.5px] border-primary text-primary"
-          onClick={() => nav("profile")}
+          type="button"
+          className="icon-button"
+          aria-label="설정"
+          aria-current={screen === "settings" ? "page" : undefined}
+          onClick={() => nav("settings")}
         >
-          <Icon name="profile" />
+          <Icon name="settings" />
         </button>
+        <BellButton />
+      </div>
+      {!title && (
+        <div className="header-location">
+          <Icon name="pin" className="size-4" />
+          <button
+            type="button"
+            className="location-button"
+            disabled={locationState === "loading"}
+            aria-label="현재 위치로 탐색 지역 설정"
+            aria-busy={locationState === "loading"}
+            onClick={setCurrentLocation}
+          >
+            {locationState === "loading" ? "위치 확인 중…" : locationLabel}
+          </button>
+          {locationMessage && (
+            <p className="location-message" role="status">
+              {locationMessage}
+            </p>
+          )}
+        </div>
       )}
     </header>
   )
-  const SaveButton = (c: Cafe, photo = true, small = false) => (
+  const SaveButton = (c: Cafe, photo = true) => (
     <button
+      type="button"
       aria-label={`${c.name} ${saved.includes(c.id) ? "저장 취소" : "저장"}`}
       aria-pressed={saved.includes(c.id)}
       onClick={() => toggle(c.id)}
-      className={`flex items-center justify-center text-primary ${
-        small ? "size-10" : "size-11"
-      } ${photo ? `absolute right-2.5 top-2.5 rounded-[8px] bg-background` : ""}`}
+      className={`icon-button save-button ${photo ? "on-photo" : ""}`}
     >
       <svg
+        aria-hidden="true"
         className="size-5"
         viewBox="0 0 24 24"
         fill={saved.includes(c.id) ? "currentColor" : "none"}
         stroke="currentColor"
-        strokeWidth="1.8"
+        strokeWidth="1.7"
+        strokeLinejoin="round"
       >
         <path d="M6 3h12v18l-6-4-6 4Z" />
       </svg>
     </button>
   )
-  const MatchBlock = (c: Cafe, size: "xl" | "md" = "xl") => {
+  const MatchBlock = (c: Cafe) => {
     const m = match(c)
-    return <span className={`inline-flex items-baseline gap-1.5 rounded-full bg-primary text-primary-foreground ${size === "xl" ? "px-3.5 py-2" : "px-3 py-1.5"}`}>
-      {m === undefined ? <span className="text-[12px] font-semibold">취향 비교 전</span> : <><b className="text-[18px] leading-none tabular-nums">{m}<span className="ml-0.5 text-[11px]">%</span></b><span className="text-[10px] font-medium">취향 일치</span></>}
-    </span>
+    if (m === undefined) return null
+    const tone = m >= 75 ? "matcha" : m >= 40 ? "oat" : "blue-gray"
+    return (
+      <span
+        className={`match-badge match-badge--${tone}`}
+        aria-label={`취향 일치 ${m}%`}
+      >
+        <b>{m}%</b>
+      </span>
+    )
   }
-  const Card = (c: Cafe, mode: "list" | "tile" = "list", _index = 0) => (
-    <article key={c.id} className={mode === "tile" ? "min-w-0" : "cafe-card"}>
+  const Card = (c: Cafe, mode: "list" | "tile" = "list") => (
+    <article
+      key={c.id}
+      className={`cafe-card ${mode === "tile" ? "cafe-card-small" : ""}`}
+    >
       <div className="relative">
-        <button className="block w-full text-left" onClick={() => open(c.id)} aria-label={`${c.name} 상세 보기`}>
-          <Photo cafe={c} className={mode === "tile" ? "aspect-[4/5] rounded-[14px]" : "cafe-card-photo"} />
+        <button
+          className="photo-button"
+          onClick={() => open(c.id)}
+          aria-label={`${c.name} 상세 보기`}
+        >
+          <Photo cafe={c} className="cafe-card-photo" />
         </button>
-        {SaveButton(c, mode === "tile", true)}
-        {mode === "list" && <div className="absolute bottom-3 left-3">{MatchBlock(c, "md")}</div>}
+        {SaveButton(c)}
+        <div className="photo-badge">{MatchBlock(c)}</div>
       </div>
-      <div className={mode === "tile" ? "pt-3" : "cafe-card-body"}>
-        <p className="app-note">{c.neighborhood.replace("부산 ", "")} · {c.sampleDistance}km</p>
-        <button className="mt-1 block text-left" onClick={() => open(c.id)}><h3 className={mode === "tile" ? "text-[16px] font-semibold leading-snug" : "cafe-card-title"}>{c.name}</h3></button>
-        {mode === "list" && <p className="cafe-reason mt-2">{reason(c, 1)}</p>}
-        <p className="app-note mt-2">{c.menuTypes[0]} · {c.representativeDrinkPrice.toLocaleString()}원~</p>
+      <div className="cafe-card-body">
+        <p className="cafe-card-meta">
+          {c.neighborhood.replace("부산 ", "")} · {c.menuTypes[0]}
+        </p>
+        <button className="cafe-card-name" onClick={() => open(c.id)}>
+          <h3>{c.name}</h3>
+        </button>
+        <p className="cafe-card-price">
+          {c.representativeDrinkPrice.toLocaleString()}원~
+        </p>
+        {mode === "list" && <p className="cafe-card-note">{reason(c, 1)}</p>}
       </div>
     </article>
   )
 
   const Empty = () => (
-    <div className="py-12">
-      <Icon name="coffee" className="mb-5 size-10 text-primary" />
-      <h2 className="font-display text-[26px] leading-snug">
-        맞는 카페가
-        <br />
-        아직 없어요
-      </h2>
-      <p className="mt-3 text-[15px] leading-6 text-muted-foreground">
-        검색어나 거리·가격을 넓혀보세요.
-      </p>
-      <button className={`${secondary} mt-6`} onClick={resetConditions}>
+    <div className="empty-state">
+      <Icon name="coffee" className="size-8" />
+      <h2 className="section-title">맞는 카페가 아직 없어요</h2>
+      <p className="page-subtitle">검색어나 거리·가격 조건을 넓혀보세요.</p>
+      <button className={secondary} onClick={resetConditions}>
         검색·조건 초기화
       </button>
     </div>
   )
   const PurposeButtons = (compact = false) => (
-    <div className={compact ? "no-scrollbar flex gap-2 overflow-x-auto pb-1" : "grid grid-cols-2 gap-2"}>
-      {PURPOSES.map(p => <button key={p.id} aria-pressed={purpose === p.id} onClick={() => setPurpose(purpose === p.id ? undefined : p.id)} className={`purpose-button ${compact ? "shrink-0" : ""}`}>
-        <Icon name={purpose === p.id ? "check" : p.id} /><span>{p.title}</span>
-      </button>)}
+    <div className={compact ? "purpose-strip no-scrollbar" : "purpose-grid"}>
+      {PURPOSES.map((p) => (
+        <button
+          key={p.id}
+          aria-pressed={purpose === p.id}
+          onClick={() => setPurpose(purpose === p.id ? undefined : p.id)}
+          className={compact ? "purpose-chip" : "purpose-option"}
+        >
+          <span className="purpose-icon">
+            <Icon name={p.id} />
+          </span>
+          <span className="purpose-label">{p.title}</span>
+        </button>
+      ))}
     </div>
   )
 
   const Home = () => {
-    const top = list[0]
+    const eligible = cafes.filter(
+      (c) =>
+        c.neighborhood === region &&
+        c.representativeDrinkPrice <= priceLimit(prefs.price) &&
+        c.sampleDistance <= distLimit(prefs.distance),
+    )
+    const picks = [...eligible].sort(
+      (a, b) => score(b) - score(a) || a.sampleDistance - b.sampleDistance,
+    )
+    const moodOrder = ["조용하고 차분한", "적당히 활기찬", "활기찬 공간"]
+    const referenceMood = prefs.atmosphere || picks[0]?.atmosphere
+    const referenceSpace = prefs.space || picks[0]?.space
+    const novelty = (c: Cafe) =>
+      Math.abs(
+        moodOrder.indexOf(c.atmosphere) -
+          moodOrder.indexOf(referenceMood || ""),
+      ) *
+        3 +
+      (c.space !== referenceSpace ? 1 : 0)
+    const discoveries = eligible
+      .filter(
+        (c) => c.atmosphere !== referenceMood || c.space !== referenceSpace,
+      )
+      .sort((a, b) => novelty(b) - novelty(a) || score(a) - score(b))
+
     const hasPrefs = Object.values(prefs).some(Boolean)
-    return <>
-      {Header()}
-      <main className="px-6 pb-28">
-        <p className="app-kicker pt-1">FIND YOUR CAFÉ</p>
-        <h1 className="app-title mt-2">오늘 가고 싶은<br />카페를 찾아요.</h1>
-        <section aria-label="오늘의 방문 목적" className="pt-6">
-          <h2 className="mb-3 text-[14px] font-semibold">오늘은 무엇을 할까요?</h2>
-          {PurposeButtons()}
-        </section>
-        <section className="pt-7">
-          <div className="mb-3 flex items-center justify-between gap-3"><h2 className={sectionHeading}>{purposeTitle ? `${purposeTitle} 추천` : "오늘의 추천"}</h2><button className="min-h-11 text-[12px] font-semibold text-primary" onClick={() => nav("explore")}>전체 보기 →</button></div>
-          {top ? Card(top) : Empty()}
-        </section>
-        {list.length > 1 && <section className="pt-8"><h2 className={`${sectionHeading} mb-4`}>함께 둘러볼 곳</h2><div className="grid grid-cols-2 gap-3">{list.slice(1,3).map(c => Card(c,"tile"))}</div></section>}
-        <button className="mt-7 flex w-full items-center justify-between gap-4 rounded-[16px] bg-secondary p-5 text-left" onClick={() => nav(hasPrefs ? "profile" : "quiz")}>
-          <span><span className="app-kicker block">MY TASTE</span><span className="mt-1 block text-[16px] font-semibold">{hasPrefs ? "내 취향 다시 보기" : "어떤 카페를 좋아하세요?"}</span></span><Icon name="arrow" className="size-5 shrink-0 text-primary" />
-        </button>
-        <p className="app-note mt-5">가상 카페 12곳으로 만든 시연용 앱입니다.</p>
-      </main>
-    </>
+    return (
+      <>
+        {Header()}
+        <main className="home-screen pb-32">
+          <HomeBanner />
+          <section
+            aria-label="오늘의 방문 목적"
+            className="section-block purpose-section"
+          >
+            <h2 className="section-title">카페 방문 목적</h2>
+            {PurposeButtons()}
+          </section>
+          <section
+            className="section-block picks-section"
+            aria-labelledby="today-picks-title"
+          >
+            <div className="section-heading">
+              <h2 id="today-picks-title" className="section-title">
+                {hasPrefs || purpose ? "취향 일치순 추천" : "추천 카페"}
+              </h2>
+            </div>
+            {picks.length ? (
+              <DragCarousel
+                className="home-picks"
+                label="취향 추천 카페, 드래그 또는 좌우 방향키로 넘겨보기"
+              >
+                {picks.map((c) => (
+                  <article key={c.id} className="cafe-card home-pick-card">
+                    <div className="relative">
+                      <button
+                        className="photo-button"
+                        onClick={() => open(c.id)}
+                        aria-label={`${c.name} 상세 보기`}
+                      >
+                        <Photo cafe={c} className="cafe-card-photo" />
+                      </button>
+                      {SaveButton(c)}
+                      <div className="photo-badge">{MatchBlock(c)}</div>
+                    </div>
+                    <div className="cafe-card-body">
+                      <p className="cafe-card-meta">
+                        {c.neighborhood} · {c.menuTypes[0]}
+                      </p>
+                      <button
+                        className="cafe-card-name"
+                        onClick={() => open(c.id)}
+                      >
+                        <h3>{c.name}</h3>
+                      </button>
+                      <p className="cafe-card-note">{reason(c, 1)}</p>
+                      <p className="cafe-card-price">
+                        {c.representativeDrinkPrice.toLocaleString()}원~
+                      </p>
+                    </div>
+                  </article>
+                ))}
+              </DragCarousel>
+            ) : (
+              <div className="empty-state">
+                <p>이 지역에 예산과 이동 범위가 맞는 카페가 없어요.</p>
+                <button className={secondary} onClick={() => nav("profile")}>
+                  취향 조건 수정하기
+                </button>
+              </div>
+            )}
+          </section>
+          <section
+            className="section-block discoveries-section"
+            aria-labelledby="discover-title"
+          >
+            <div className="section-heading">
+              <h2 id="discover-title" className="section-title">
+                다른 분위기의 카페
+              </h2>
+            </div>
+            {discoveries.length ? (
+              <DragCarousel
+                className="discovery-carousel"
+                label="다른 분위기의 카페, 드래그 또는 좌우 방향키로 넘겨보기"
+              >
+                {discoveries.map((c) => (
+                  <article key={c.id} className="cafe-card">
+                    <div className="relative">
+                      <button
+                        className="photo-button"
+                        onClick={() => open(c.id)}
+                        aria-label={`${c.name} 상세 보기`}
+                      >
+                        <Photo cafe={c} className="cafe-card-photo" />
+                      </button>
+                      {SaveButton(c)}
+                    </div>
+                    <div className="cafe-card-body">
+                      <p className="cafe-card-meta">
+                        {c.neighborhood.replace("부산 ", "")}
+                      </p>
+                      <button
+                        className="cafe-card-name"
+                        onClick={() => open(c.id)}
+                      >
+                        <h3>{c.name}</h3>
+                      </button>
+                      <p className="cafe-card-meta">{c.atmosphere}</p>
+                    </div>
+                  </article>
+                ))}
+              </DragCarousel>
+            ) : (
+              <p className="metadata">
+                지금 조건에 다른 분위기의 카페가 없어요.
+                <br />
+                지역이나 취향 조건을 바꿔보세요.
+              </p>
+            )}
+          </section>
+          <section className="taste-banner">
+            <Icon name="bean" className="size-7" />
+            <h2 className="section-title">내 카페 취향 설정</h2>
+            <button
+              className={secondary}
+              onClick={() => nav(hasPrefs ? "profile" : "quiz")}
+            >
+              {hasPrefs ? "내 취향 보기" : "내 취향 등록하기"}
+              <Icon name="arrow" />
+            </button>
+          </section>
+        </main>
+      </>
+    )
   }
 
   const Map = () => (
     <div>
-      <div className="relative isolate h-[360px] overflow-hidden rounded-[8px] border border-border bg-[#e6e1d6]">
+      <div className="relative isolate h-[360px] overflow-hidden rounded-[18px] bg-secondary">
         <svg
           className="absolute inset-0 h-full w-full"
           viewBox="0 0 350 360"
           preserveAspectRatio="none"
           aria-hidden="true"
         >
-          <path d="M270 0h80v360H310L290 180Z" fill="#d1d8d0" />
+          <path d="M270 0h80v360H310L290 180Z" fill="#d5d2c9" />
           <path
             d="M-20 100 350 250M80-20 145 380M-20 320 380 90"
-            stroke="#f8f5ef"
+            stroke="#fcfaf6"
             strokeWidth="22"
           />
           <path
             d="M-20 100 350 250M80-20 145 380M-20 320 380 90"
-            stroke="#ccc3b3"
+            stroke="#d3ccc0"
             strokeWidth="1"
           />
           <path
             d="M0 50h250M0 175h290M20 0v360M210 0v360"
-            stroke="#d4ccbe"
+            stroke="#d6d1c8"
             strokeWidth="2"
           />
         </svg>
@@ -923,7 +1470,11 @@ export default function App() {
           <button
             key={c.id}
             aria-label={`${c.name} 상세 보기`}
-            className={`absolute z-10 flex size-11 items-center justify-center rounded-full border-[3px] border-background bg-primary text-sm font-semibold text-primary-foreground ${["left-[20%] top-[32%]", "left-[57%] top-[45%]", "left-[33%] top-[67%]", "left-[70%] top-[73%]"][index]}`}
+            className="map-marker"
+            style={{
+              left: `${12 + (index % 3) * 30}%`,
+              top: `${18 + Math.floor(index / 3) * 20}%`,
+            }}
             onClick={() => open(c.id)}
           >
             {index + 1}
@@ -934,14 +1485,14 @@ export default function App() {
         샘플 지도입니다. 실제 위치·GPS·길 안내는 제공하지 않아요.
       </p>
       {list.length ? (
-        <div className="divide-y divide-border">
+        <div className="map-results">
           {list.map((c, index) => (
             <button
               key={c.id}
-              className="flex w-full items-center gap-3 py-4 text-left"
+              className="map-result"
               onClick={() => open(c.id)}
             >
-              <span className="w-6 font-display text-[28px] text-primary">
+              <span className="w-5 text-[14px] text-muted-foreground">
                 {index + 1}
               </span>
               <Photo cafe={c} className="size-16 shrink-0 rounded-[6px]" />
@@ -962,178 +1513,446 @@ export default function App() {
   )
   const Explore = () => (
     <>
-      {Header(
-        undefined,
-        <button
-          className="flex min-h-11 items-center gap-1.5 rounded-[8px] border-[1.5px] border-primary px-3 text-[14px] font-bold text-primary"
-          onClick={() => setSheet(true)}
-        >
-          <Icon name="filter" className="size-4" />
-          필터{activeFilters.length > 0 && ` ${activeFilters.length}`}
-        </button>,
-      )}
-      <main className="px-6 pb-32">
-        <p className="app-kicker">EXPLORE</p>
-        <h1 className="app-title mt-2">카페 탐색</h1>
-        <div className="mb-4 mt-6 flex h-14 items-center gap-3 rounded-[8px] border-[1.5px] border-primary/30 bg-card px-4 focus-within:border-primary">
-          <Icon name="search" className="size-5 shrink-0 text-primary" />
+      {Header()}
+      <main className="explore-screen pb-32">
+        <div className="page-intro">
+          <h1 className="page-title">카페 탐색</h1>
+        </div>
+        <div className="search-field">
+          <Icon name="search" />
           <input
             aria-label="카페 이름 검색"
-            className="min-w-0 flex-1 bg-transparent text-[16px] placeholder:text-muted-foreground"
             value={query}
             onChange={(event) => setQuery(event.target.value)}
-            placeholder="카페 이름 검색"
+            placeholder="카페 이름으로 검색"
           />
           {query && (
             <button
+              className="icon-button"
               aria-label="검색어 지우기"
-              className="flex size-8 items-center justify-center"
               onClick={() => setQuery("")}
             >
-              <Icon name="close" className="size-4" />
+              <Icon name="close" />
             </button>
           )}
+          <button
+            className="icon-button"
+            aria-label="카페 필터"
+            aria-haspopup="dialog"
+            onClick={() => setSheet(true)}
+          >
+            <Icon name="filter" />
+          </button>
         </div>
         {PurposeButtons(true)}
         {(prefs.price || prefs.distance || activeFilters.length > 0) && (
-          <div className="flex flex-wrap gap-2 pt-4">
+          <div className="filter-chips">
             {["price", "distance"]
               .filter((key) => prefs[key])
               .map((key) => (
                 <button
                   key={key}
-                  className="flex min-h-11 items-center gap-1 rounded-full bg-secondary px-2.5 text-[13px] font-semibold text-primary"
+                  className="purpose-chip"
                   onClick={() => setPrefs({ ...prefs, [key]: undefined })}
                   aria-label={`${prefs[key]} 취향 조건 해제`}
                 >
                   {prefs[key]}
-                  <Icon name="close" className="size-3" />
+                  <Icon name="close" className="size-4" />
                 </button>
               ))}
             {activeFilters.map(([key, value]) => (
               <button
                 key={key}
-                className="flex min-h-11 items-center gap-1 rounded-full bg-secondary px-2.5 text-[13px] font-semibold text-primary"
+                className="purpose-chip"
                 onClick={() => setFilters({ ...filters, [key]: undefined })}
                 aria-label={`${value} 필터 해제`}
               >
                 {value}
-                <Icon name="close" className="size-3" />
+                <Icon name="close" className="size-4" />
               </button>
             ))}
           </div>
         )}
-        <div className="flex flex-wrap items-center justify-between gap-3 pb-5 pt-5">
-          <span className="flex items-baseline gap-1 text-[15px]">
-            <b className="font-display text-[22px] font-semibold leading-none text-primary">
-              {list.length}
-            </b>
-            곳
-            <span className="ml-1.5 text-[13px] text-muted-foreground">
-              {purposeTitle || "목적 미선택"}
-            </span>
-          </span>
-          <div className="flex items-center gap-3">
-            <select
-              aria-label="카페 정렬"
-              className="max-w-28 bg-transparent text-[14px] font-semibold"
-              value={sort}
-              onChange={(event) => setSort(event.target.value)}
-            >
-              {["추천순", "가까운 순", "가격 낮은 순"].map((value) => (
-                <option key={value}>{value}</option>
-              ))}
-            </select>
-            <button
-              aria-pressed={map}
-              className="flex min-h-11 items-center gap-1 text-[14px] font-bold text-primary"
-              onClick={() => setMap(!map)}
-            >
-              <Icon name={map ? "home" : "map"} className="size-4" />
-              {map ? "목록" : "지도"}
-            </button>
-          </div>
+        <div className="explore-controls">
+          <p className="metadata">
+            카페 <b>{list.length}</b>곳
+          </p>
+          <select
+            aria-label="카페 정렬"
+            value={sort}
+            onChange={(event) => setSort(event.target.value)}
+          >
+            {["추천순", "가까운 순", "가격 낮은 순"].map((value) => (
+              <option key={value}>{value}</option>
+            ))}
+          </select>
+          <button
+            className="purpose-chip"
+            aria-pressed={map}
+            onClick={() => setMap(!map)}
+          >
+            <Icon name={map ? "home" : "map"} />
+            {map ? "목록" : "지도"}
+          </button>
         </div>
         {map ? (
           Map()
         ) : list.length ? (
-          <div className="space-y-5">{list.map((c, i) => Card(c, "list", i))}</div>
+          <div className="card-grid">{list.map((c) => Card(c, "tile"))}</div>
         ) : (
           Empty()
         )}
-        <p className="mt-10 text-[12px] leading-5 text-muted-foreground">
-          시연용 추천 결과 · 실제 카페 정보가 아닙니다.
+        <p className="metadata mt-8">
+          일치율은 목적·분위기·공간·좌석·메뉴 기준이에요.
+          <br />
+          가격과 이동반경은 검색 조건에 반영해요.
         </p>
       </main>
     </>
   )
 
-  const Profile = () => <>
-    {Header("내 취향", <button className="min-h-11 text-[13px] font-medium text-muted-foreground" onClick={() => nav("settings")}>설정</button>)}
-    <main className="pb-28">
-      <div className="px-6 pt-1"><p className="app-kicker">MY CAFÉ TASTE</p><h1 className="app-title mt-2">취향이 담긴 공간</h1><p className="mt-2 text-[14px] text-muted-foreground">좋아하는 공간을 한 장면으로 모았어요.</p></div>
-      <TasteScene prefs={prefs} onEdit={index => {setEditingTaste(true); setQuiz(index); setScreen("quiz")}} />
-      <div className="px-6 pt-6"><button className={`${primary} flex w-full items-center justify-between`} onClick={() => nav("home")}>이 취향으로 카페 찾기<Icon name="arrow" className="size-4" /></button><button className="mt-2 min-h-11 w-full text-[13px] font-medium text-muted-foreground" onClick={() => {setEditingTaste(false); setQuiz(0); setScreen("quiz")}}>취향 전체 다시 고르기</button></div>
-    </main>
-  </>
-
+  const Profile = () => {
+    const keywords = (["atmosphere", "space", "seat", "menu"] as const)
+      .map((key) => prefs[key])
+      .filter(Boolean) as string[]
+    const photos = getTastePhotos(prefs)
+    return (
+      <>
+        {Header("내 취향")}
+        <main className="pb-32">
+          <section className="profile-summary">
+            <div className="profile-summary-copy">
+              <p className="eyebrow">MY CAFÉ TASTE</p>
+              <h1 className="page-title">나의 카페 취향</h1>
+              {keywords.length > 0 && (
+                <div className="taste-keywords">
+                  {keywords.map((word) => (
+                    <span key={word}>{word}</span>
+                  ))}
+                </div>
+              )}
+            </div>
+            <TasteSlideshow
+              key={photos.map((photo) => photo.src).join("|")}
+              photos={photos}
+            />
+          </section>
+          <section className="taste-fields" aria-label="항목별 취향 수정">
+            {QUESTIONS.map(([key], index) => (
+              <button
+                key={key}
+                className="taste-field"
+                aria-haspopup="dialog"
+                aria-label={`${DIMENSIONS[index]}: ${prefs[key] || "미선택"}. 수정하기`}
+                onClick={() => setEditingTaste(index)}
+              >
+                <span>{DIMENSIONS[index]}</span>
+                <strong>{prefs[key] || "미선택"}</strong>
+                <Icon name="edit" />
+              </button>
+            ))}
+          </section>
+          <div className="taste-actions">
+            <button
+              className={secondary}
+              onClick={() => {
+                setQuiz(0)
+                setScreen("quiz")
+              }}
+            >
+              취향 다시 고르기
+              <Icon name="edit" />
+            </button>
+            <button className={primary} onClick={() => nav("home")}>
+              나에게 맞는 카페 찾기
+              <Icon name="arrow" />
+            </button>
+          </div>
+        </main>
+      </>
+    )
+  }
   const Quiz = () => {
     const [key, question, options] = QUESTIONS[quiz]
-    const next = () => editingTaste || quiz === 5 ? nav("profile") : setQuiz(quiz + 1)
-    return <main className="flex min-h-[100svh] flex-col px-6 pb-[max(24px,env(safe-area-inset-bottom))] pt-4">
-      <div className="flex items-center justify-between gap-3"><button className="-ml-2 flex size-11 items-center justify-center" aria-label="이전 화면" onClick={() => editingTaste ? nav("profile") : quiz ? setQuiz(quiz-1) : nav("home")}><Icon name="back" className="size-5" /></button><span className="text-[14px] font-semibold">{editingTaste ? "취향 수정" : "내 취향 찾기"}</span><button className="min-h-11 text-[12px] text-muted-foreground" onClick={() => editingTaste ? nav("profile") : quiz < 5 ? setQuiz(quiz + 1) : nav("profile")}>{editingTaste ? "닫기" : "건너뛰기"}</button></div>
-      {!editingTaste && <div className="mt-3 grid grid-cols-6 gap-1.5" aria-label={`${quiz+1} / 6단계`}>{QUESTIONS.map((_, i)=><span key={i} className={`h-[3px] rounded-full ${i <= quiz ? "bg-primary" : "bg-border"}`} />)}</div>}
-      <div className="pb-7 pt-10"><p className="app-kicker">{DIMENSIONS[quiz]}{!editingTaste && ` · 0${quiz+1} / 06`}</p><h1 className="app-title mt-3">{question}</h1><p className="mt-3 text-[14px] text-muted-foreground">가장 마음에 드는 하나를 골라주세요.</p></div>
-      <div className="mb-8 space-y-3">{options.map(option => {
-        const on=prefs[key] === option
-        return <button key={option} aria-pressed={on} className={`flex min-h-[64px] w-full items-center gap-3 rounded-[14px] border px-4 text-left text-[16px] font-medium transition-colors ${on ? "border-primary bg-secondary text-primary" : "border-border bg-card text-foreground"}`} onClick={()=>setPrefs({...prefs,[key]:option})}><span className={`flex size-5 shrink-0 items-center justify-center rounded-full border ${on ? "border-primary bg-primary text-primary-foreground" : "border-border"}`}>{on && <Icon name="check" className="size-3" />}</span><span>{tasteLabel(option)}</span></button>
-      })}</div>
-      <button disabled={!prefs[key]} className={`${primary} mt-auto flex items-center justify-between`} onClick={next}>{editingTaste ? "변경 완료" : quiz === 5 ? "내 취향 보기" : "다음"}<Icon name="arrow" className="size-4" /></button>
-    </main>
+    return (
+      <main className="quiz-screen">
+        <header className="quiz-header">
+          <button
+            className="brand-button"
+            aria-label={quizCompleted ? "CAFÉKOK 홈" : "CAFÉKOK 첫 화면"}
+            onClick={() => nav(quizCompleted ? "home" : "onboard")}
+          >
+            <Logo className="text-[24px]" />
+          </button>
+        </header>
+        <div
+          className="quiz-progress"
+          aria-label={`취향 설정 ${quiz + 1}단계, 총 6단계`}
+        >
+          {QUESTIONS.map((_, index) => (
+            <span key={index} className={index <= quiz ? "is-complete" : ""} />
+          ))}
+        </div>
+        <div className="quiz-intro">
+          <p className="quiz-step">{String(quiz + 1).padStart(2, "0")} / 06</p>
+          <h1 className="page-title">{question}</h1>
+        </div>
+        <div className="quiz-options">
+          {options.map((option, i) => (
+            <button
+              key={option}
+              aria-pressed={prefs[key] === option}
+              className="choice-option"
+              onClick={() => setPrefs({ ...prefs, [key]: option })}
+            >
+              <span className="choice-letter">{"ABCD"[i]}</span>
+              <span>{option}</span>
+              <span className="choice-check">
+                {prefs[key] === option && <Icon name="check" />}
+              </span>
+            </button>
+          ))}
+        </div>
+        <div className="quiz-footer">
+          <div className="quiz-navigation">
+            <button
+              type="button"
+              className={secondary}
+              disabled={quiz === 0}
+              onClick={() => setQuiz((previous) => Math.max(0, previous - 1))}
+            >
+              <Icon name="back" />
+              이전
+            </button>
+            <button
+              disabled={!prefs[key]}
+              className={primary}
+              onClick={() => {
+                if (quiz < QUESTIONS.length - 1) setQuiz(quiz + 1)
+                else {
+                  setQuizCompleted(true)
+                  nav("profile")
+                }
+              }}
+            >
+              {quiz === 5 ? "내 취향 보기" : "다음"}
+              <Icon name="arrow" />
+            </button>
+          </div>
+          <p className="metadata">취향은 언제든 바꿀 수 있어요.</p>
+        </div>
+      </main>
+    )
   }
 
   const Saved = () => {
-    const items=saved.map(id=>cafes.find(c=>c.id===id)).filter((c):c is Cafe=>Boolean(c))
-    return <>{Header()}<main className="px-6 pb-28"><p className="app-kicker">SAVED CAFÉS</p><div className="mt-2 flex items-baseline justify-between gap-3"><h1 className="app-title">저장한 카페</h1><span className="text-[14px] font-semibold text-primary">{items.length}곳</span></div><p className="mt-2 text-[14px] text-muted-foreground">다음에 가고 싶은 곳을 모아두었어요.</p>
-      {items.length ? <div className="mt-6 grid grid-cols-2 gap-x-3 gap-y-7">{items.map(c=>Card(c,"tile"))}</div> : <div className="mt-7 rounded-[18px] bg-secondary p-6 py-9"><Icon name="saved" className="mb-4 size-7 text-primary" /><h2 className="text-[20px] font-semibold">첫 카페를 저장해보세요.</h2><p className="mt-2 text-[14px] text-muted-foreground">마음에 드는 곳을 다시 찾기 쉬워져요.</p><button className={`${primary} mt-6 w-full`} onClick={()=>nav("explore")}>카페 둘러보기</button></div>}
-      <p className="app-note mt-6">이 브라우저에 저장됩니다.</p></main></>
+    const items = saved
+      .map((id) => cafes.find((c) => c.id === id))
+      .filter((c): c is Cafe => Boolean(c))
+    return (
+      <>
+        {Header()}
+        <main className="saved-screen pb-32">
+          <div className="page-intro">
+            <h1 className="page-title">저장한 카페</h1>
+            <p className="page-subtitle">마음에 담은 카페 {saved.length}곳</p>
+          </div>
+          {items.length ? (
+            <div className="card-grid">{items.map((c) => Card(c, "tile"))}</div>
+          ) : (
+            <div className="empty-state">
+              <Icon name="saved" className="size-8" />
+              <h2 className="section-title">첫 번째 카페를 담아보세요</h2>
+              <p className="page-subtitle">
+                사진 위 저장 버튼을 누르면
+                <br />
+                마음에 드는 공간이 여기에 모여요.
+              </p>
+              <button className={primary} onClick={() => nav("explore")}>
+                카페 둘러보기
+              </button>
+            </div>
+          )}
+          <p className="metadata mt-8">저장 목록은 새로고침하면 초기화돼요.</p>
+        </main>
+      </>
+    )
   }
 
   const Detail = () => {
     if (!cafe) return null
-    const isSaved=saved.includes(cafe.id)
-    return <>
-      <main className="pb-28">
-        <div className="relative"><Photo cafe={cafe} eager className="h-[min(42dvh,340px)] min-h-[240px]" /><div className="absolute inset-x-0 top-0 flex justify-between p-4"><button className="flex size-11 items-center justify-center rounded-full bg-card/95 text-primary" aria-label="뒤로 가기" onClick={()=>nav(tab)}><Icon name="back" className="size-5" /></button><button className="flex size-11 items-center justify-center rounded-full bg-card/95 text-primary" aria-label={isSaved ? "저장 취소" : "카페 저장"} aria-pressed={isSaved} onClick={()=>toggle(cafe.id)}><Icon name="saved" className="size-5" /></button></div></div>
-        <div className="px-6 pt-6"><div className="flex items-center justify-between gap-3"><p className="app-note">{cafe.neighborhood} · {cafe.sampleDistance}km</p>{MatchBlock(cafe,"md")}</div><h1 className="app-title mt-2">{cafe.name}</h1><p className="mt-2 text-[14px] text-muted-foreground">{tasteLabel(cafe.atmosphere)} · {tasteLabel(cafe.space)}</p>
-          <section className="mt-5 rounded-[16px] bg-secondary p-4" aria-label="추천 이유"><p className="text-[12px] font-semibold text-primary">{match(cafe)===undefined ? "이런 공간이에요" : "이런 점이 잘 맞아요"}</p><p className="mt-2 text-[14px] leading-6">{reason(cafe,1)}</p></section>
-          <section className="pt-7"><h2 className="app-section-title">방문 전 살펴봐요</h2><dl className="mt-4 grid grid-cols-2 gap-3"><div className="info-cell"><dt>대표 음료</dt><dd>{cafe.representativeDrinkPrice.toLocaleString()}원~</dd></div><div className="info-cell"><dt>운영 시간</dt><dd>{cafe.sampleHours}</dd></div><div className="info-cell"><dt>자리</dt><dd>{cafe.seatTypes.map(tasteLabel).join(" · ")}</dd></div><div className="info-cell"><dt>메뉴</dt><dd>{cafe.menuTypes.join(" · ")}</dd></div></dl><p className="mt-4 text-[13px] leading-6"><span className="mr-3 text-muted-foreground">편의 시설</span>{cafe.amenities.join(" · ") || "확인 필요"}</p></section>
-          <section className="pt-7"><h2 className="app-section-title mb-4">위치</h2><MiniMap /><p className="app-note mt-3">{cafe.samplePosition}</p><p className="mt-4 border-l-2 border-accent pl-3 text-[13px] leading-6 text-muted-foreground">{cafe.unknownInfo}</p></section>
-          <details className="mt-6 border-t border-border py-4 text-[12px] text-muted-foreground"><summary className="cursor-pointer font-medium">취향 일치율 기준</summary><p className="mt-2 leading-6">목적·분위기·공간·자리·메뉴를 비교한 예시 점수입니다. 가격과 거리는 목록 조건으로 반영합니다.</p></details><p className="app-note">가상 카페 · 사진과 정보는 시연용 예시입니다.</p>
+    const isSaved = saved.includes(cafe.id)
+    const why = tags(cafe)
+    return (
+      <>
+        <main className="detail-screen pb-32">
+          <div className="detail-toolbar">
+            <button
+              className="icon-button"
+              onClick={() => nav(tab)}
+              aria-label="뒤로 가기"
+            >
+              <Icon name="back" />
+            </button>
+            {SaveButton(cafe, false)}
+          </div>
+          <div className="detail-hero">
+            <Photo cafe={cafe} className="aspect-square" eager />
+            <div className="photo-badge">{MatchBlock(cafe)}</div>
+          </div>
+          <div className="detail-summary">
+            <p className="metadata">
+              {cafe.neighborhood} · {cafe.menuTypes[0]}
+            </p>
+            <h1 className="page-title">{cafe.name}</h1>
+            <div className="detail-facts">
+              <div>
+                <Icon name="coffee" />
+                <span>대표 음료</span>
+                <strong>
+                  {cafe.representativeDrinkPrice.toLocaleString()}원~
+                </strong>
+              </div>
+              <div>
+                <Icon name="pin" />
+                <span>샘플 거리</span>
+                <strong>{cafe.sampleDistance}km</strong>
+              </div>
+              <div>
+                <Icon name="friends" />
+                <span>추천 좌석</span>
+                <strong>{cafe.seatTypes[0]}</strong>
+              </div>
+            </div>
+          </div>
+          <section className="detail-reason">
+            <h2 className="section-title">
+              {match(cafe) === undefined
+                ? "이런 공간이에요"
+                : "이 카페를 고른 이유"}
+            </h2>
+            <p>{reason(cafe)}</p>
+            {why.length > 0 && (
+              <div className="detail-tags">
+                {why.map((t) => (
+                  <span key={t}>{t}</span>
+                ))}
+              </div>
+            )}
+          </section>
+          <section className="detail-section">
+            <h2 className="detail-section-title">공간과 자리</h2>
+            <p>
+              {cafe.atmosphere} 분위기,
+              <br />
+              {cafe.space} 공간.
+            </p>
+            <div className="detail-tags">
+              {cafe.seatTypes.map((t) => (
+                <span key={t}>{t}</span>
+              ))}
+            </div>
+            <p className="metadata">
+              {cafe.amenities.length
+                ? cafe.amenities.join(" · ")
+                : "등록된 시설 정보가 없어요"}
+            </p>
+          </section>
+          <section className="detail-section">
+            <h2 className="detail-section-title">메뉴</h2>
+            <p className="detail-price">
+              {cafe.representativeDrinkPrice.toLocaleString()}
+              <small>원부터</small>
+            </p>
+            <div className="detail-tags">
+              {cafe.menuTypes.map((m) => (
+                <span key={m}>{m}</span>
+              ))}
+            </div>
+          </section>
+          <section className="detail-section">
+            <h2 className="detail-section-title">찾아가는 길</h2>
+            <MiniMap />
+            <p className="mt-4">{cafe.sampleHours}</p>
+            <p className="metadata">{cafe.samplePosition}</p>
+            <p className="detail-notice">{cafe.unknownInfo}</p>
+          </section>
+          <p className="metadata px-6 mt-8">
+            가상의 카페와 샘플 정보예요.
+            <br />
+            사진은 분위기 참고용이며 실제 장소와 무관해요.
+          </p>
+        </main>
+        <div className="detail-actions">
+          <button
+            className={secondary}
+            onClick={() => {
+              nav("explore")
+              setMap(true)
+            }}
+          >
+            <Icon name="map" />
+            샘플 지도
+          </button>
+          <button className={primary} onClick={() => toggle(cafe.id)}>
+            <Icon name={isSaved ? "check" : "saved"} />
+            {isSaved ? "저장 취소" : "카페 저장"}
+          </button>
         </div>
-      </main>
-      <div className="fixed bottom-0 z-20 flex w-full max-w-[440px] gap-3 border-t border-border bg-background/95 px-6 pb-[max(14px,env(safe-area-inset-bottom))] pt-3 backdrop-blur-xl"><button className={`${secondary} flex-1 px-2`} onClick={()=>{nav("explore");setMap(true)}}>지도 보기</button><button className={`${primary} flex-[1.6]`} onClick={()=>toggle(cafe.id)}>{isSaved ? "저장됨 · 취소" : "카페 저장하기"}</button></div>
-    </>
+      </>
+    )
   }
-  const Onboard = () => <main className="flex min-h-[100svh] flex-col">
-    <div className="relative"><Photo cafe={cafes[1]} eager className="h-[42dvh] min-h-[220px] max-h-[360px]" /><div className="absolute left-6 top-6 rounded-full bg-card/95 px-4 py-2.5"><Logo className="text-[23px]" /></div></div>
-    <div className="flex flex-1 flex-col px-6 pb-[max(20px,env(safe-area-inset-bottom))] pt-7"><p className="app-kicker">A CAFÉ THAT FEELS LIKE YOU</p><h1 className="app-title mt-3">내 취향에 맞는<br />카페를 찾아요.</h1><p className="mb-6 mt-3 text-[14px] text-muted-foreground">좋아하는 공간에, 오늘의 목적을 더해요.</p><div className="mt-auto"><button className={`${primary} flex w-full items-center justify-between`} onClick={()=>{setEditingTaste(false);setQuiz(0);setScreen("quiz")}}>내 취향 찾기<Icon name="arrow" className="size-4" /></button><button className="min-h-11 w-full pt-2 text-[13px] font-medium text-muted-foreground" onClick={()=>nav("home")}>먼저 둘러보기</button></div><p className="app-note mt-4">부산의 가상 카페로 구성한 프로토타입</p></div>
-  </main>
+
+  const Onboard = () => (
+    <main className="onboard-screen">
+      <OnboardCover />
+      <div className="onboard-content">
+        <div aria-hidden="true" className="onboard-bean">
+          <Icon name="bean" className="size-[210px]" />
+        </div>
+        <div className="onboard-logo">
+          <Logo className="text-[38px]" />
+        </div>
+        <h1 className="onboard-tagline">
+          가까운 카페 말고,
+          <br />
+          나와 맞는 카페.
+        </h1>
+        <div className="onboard-action">
+          <button
+            className={primary}
+            onClick={() => {
+              setPrefs({})
+              setQuizCompleted(false)
+              setQuiz(0)
+              nav("quiz")
+            }}
+          >
+            내 취향으로 시작하기
+            <Icon name="arrow" />
+          </button>
+        </div>
+      </div>
+    </main>
+  )
 
   const Settings = () => (
     <>
-      {Header("설정", <Logo className="text-[18px]" />)}
-      <main className="px-6 pb-32">
-        <h1 className={heading}>데모 안내</h1>
-        <section className="mt-7 border-y border-primary/20 py-6">
+      {Header("설정")}
+      <main className="settings-screen pb-32">
+        <div className="page-intro">
+          <h1 className={heading}>설정과 안내</h1>
+        </div>
+        <section className="settings-info">
           <h2 className="font-display text-[19px]">이 프로토타입은</h2>
           <p className="mt-3 text-[15px] leading-7 text-muted-foreground">
-            부산 전포·광안리·서면의 가상 카페를 둘러봐요. 위치 권한이나 계정은
-            필요 없고, 취향과 저장 목록은 이 브라우저에만 보관돼요.
+            부산 전포·광안리·서면의 가상 카페를 둘러봐요. 현재 위치를 설정할 때
+            위치 권한을 요청해요. 좌표는 저장하거나 외부로 보내지 않고, 취향과
+            저장 목록은 새로고침하면 초기화돼요.
           </p>
         </section>
         <button
-          className="mt-5 flex min-h-14 w-full items-center justify-between border-b border-primary/20 text-left text-[15px] font-bold text-primary"
+          className="btn-secondary mt-5 w-full"
           onClick={() => setConfirm(true)}
         >
           데모 데이터 초기화
@@ -1142,44 +1961,243 @@ export default function App() {
         <p className="mt-3 text-[13px] leading-6 text-muted-foreground">
           취향·저장 목록·목적·지역을 지우고 처음 화면으로 돌아가요.
         </p>
+        <details className="settings-sources mt-8 text-[13px] text-muted-foreground">
+          <summary className="cursor-pointer font-semibold text-primary">
+            사진과 아이콘 출처
+          </summary>
+          <div className="mt-4 space-y-2 leading-6">
+            <p>
+              사진:{" "}
+              <a
+                href="https://unsplash.com/license"
+                target="_blank"
+                rel="noreferrer"
+                className="underline underline-offset-4"
+              >
+                Unsplash License
+              </a>
+            </p>
+            {Object.values(moodPhotos).map((photo) => (
+              <a
+                key={photo.source}
+                href={photo.source}
+                target="_blank"
+                rel="noreferrer"
+                className="block underline underline-offset-4"
+              >
+                {photo.author} · Unsplash
+              </a>
+            ))}
+            <div className="pt-2">
+              <p className="font-semibold">취향 키워드 사진</p>
+              {tastePhotos.map((photo) => (
+                <a
+                  key={photo.source}
+                  href={photo.source}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block underline underline-offset-4"
+                >
+                  {photo.author} · Unsplash
+                </a>
+              ))}
+            </div>
+            <div className="pt-2">
+              <p className="font-semibold">추가 카페 사진</p>
+              {cafePhotoSources.map((photo) => (
+                <a
+                  key={photo.id}
+                  href={photo.source}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block underline underline-offset-4"
+                >
+                  {cafes.find((c) => c.id === photo.id)?.name} · {photo.author}
+                </a>
+              ))}
+            </div>
+            <p>
+              커피 원두:{" "}
+              <a
+                href="https://phosphoricons.com"
+                target="_blank"
+                rel="noreferrer"
+                className="underline underline-offset-4"
+              >
+                Phosphor Icons
+              </a>{" "}
+              ·{" "}
+              <a
+                href="/work/cafekok/prototype/licenses/phosphor-LICENSE.txt"
+                target="_blank"
+                rel="noreferrer"
+                className="underline underline-offset-4"
+              >
+                MIT 라이선스
+              </a>
+            </p>
+            <p className="pt-2">
+              아이콘:{" "}
+              <a
+                href="https://lucide.dev"
+                target="_blank"
+                rel="noreferrer"
+                className="underline underline-offset-4"
+              >
+                Lucide
+              </a>{" "}
+              ·{" "}
+              <a
+                href="/work/cafekok/prototype/licenses/lucide-LICENSE.txt"
+                target="_blank"
+                rel="noreferrer"
+                className="underline underline-offset-4"
+              >
+                ISC 라이선스
+              </a>
+            </p>
+          </div>
+        </details>
       </main>
     </>
   )
+  const NotificationSheet = () => (
+    <Modal title="알림 설정" sheet onClose={() => setNotificationsOpen(false)}>
+      <div className="modal-heading">
+        <h2 className="section-title">알림</h2>
+        <button
+          type="button"
+          aria-label="알림 설정 닫기"
+          className="icon-button modal-close"
+          onClick={() => setNotificationsOpen(false)}
+        >
+          <Icon name="close" />
+        </button>
+      </div>
+      <p className="mt-3 text-[15px] leading-6 text-muted-foreground">
+        카페를 저장하면 기기 알림을 받을 수 있어요. 카페콕을 열어 둔 동안
+        작동해요.
+      </p>
+      {notificationMessage && (
+        <p role="status" className="mt-3 text-[14px] leading-6 text-primary">
+          {notificationMessage}
+        </p>
+      )}
+      <button
+        type="button"
+        className={`${primary} mt-6 w-full`}
+        onClick={async () => {
+          if (notificationsEnabled) {
+            setNotificationsEnabled(false)
+            try {
+              localStorage.setItem("cafekok-notifications", "off")
+            } catch {
+              /* In-memory setting remains active for this visit. */
+            }
+            setNotificationMessage("알림을 껐어요.")
+            return
+          }
+          if (!("Notification" in window)) {
+            setNotificationMessage(
+              "이 브라우저에서는 기기 알림을 지원하지 않아요.",
+            )
+            return
+          }
+          try {
+            const permission = await Notification.requestPermission()
+            if (permission !== "granted") {
+              setNotificationMessage(
+                permission === "denied"
+                  ? "브라우저 설정에서 알림 권한을 허용해 주세요."
+                  : "알림 권한을 허용하면 알림을 받을 수 있어요.",
+              )
+              return
+            }
+            setNotificationsEnabled(true)
+            try {
+              localStorage.setItem("cafekok-notifications", "on")
+            } catch {
+              /* In-memory setting remains active for this visit. */
+            }
+            setNotificationMessage("알림이 켜졌어요.")
+          } catch {
+            setNotificationMessage(
+              "이 브라우저에서는 알림 권한을 요청할 수 없어요.",
+            )
+          }
+        }}
+      >
+        {notificationsEnabled ? "알림 끄기" : "알림 켜기"}
+      </button>
+    </Modal>
+  )
+  const TasteEditSheet = () => {
+    if (editingTaste === null) return null
+    const [key, question, options] = QUESTIONS[editingTaste]
+    return (
+      <Modal
+        title={`${DIMENSIONS[editingTaste]} 수정`}
+        sheet
+        onClose={() => setEditingTaste(null)}
+      >
+        <div className="modal-heading">
+          <h2 className="section-title">{question}</h2>
+          <button
+            className="icon-button modal-close"
+            aria-label="취향 수정 닫기"
+            onClick={() => setEditingTaste(null)}
+          >
+            <Icon name="close" />
+          </button>
+        </div>
+        <div className="quiz-options">
+          {options.map((option, i) => (
+            <button
+              key={option}
+              aria-pressed={prefs[key] === option}
+              className="choice-option"
+              onClick={() => {
+                setPrefs((previous) => ({ ...previous, [key]: option }))
+                setEditingTaste(null)
+              }}
+            >
+              <span className="choice-letter">{"ABCD"[i]}</span>
+              <span>{option}</span>
+              <span className="choice-check">
+                {prefs[key] === option && <Icon name="check" />}
+              </span>
+            </button>
+          ))}
+        </div>
+      </Modal>
+    )
+  }
   const FilterSheet = () => (
     <Modal title="카페 필터" sheet onClose={() => setSheet(false)}>
-      <div className="mb-6 flex items-center justify-between">
-        <h2 className={sectionHeading}>나에게 맞는 조건</h2>
+      <div className="modal-heading">
+        <h2 className="section-title">나에게 맞는 조건</h2>
         <button
-          className="flex size-11 items-center justify-center"
+          className="icon-button modal-close"
           aria-label="필터 닫기"
           onClick={() => setSheet(false)}
         >
           <Icon name="close" />
         </button>
       </div>
-      <button
-        className="mb-3 min-h-8 text-[14px] font-bold text-primary underline underline-offset-4"
-        onClick={() => setFilters({})}
-      >
+      <button className="purpose-chip" onClick={() => setFilters({})}>
         추가 필터 초기화
       </button>
       {[0, 2, 3, 4, 5].map((index) => {
         const [key, , options] = QUESTIONS[index]
         return (
-          <section key={key} className="border-t border-border py-5">
-            <h3 className="mb-3 text-[15px] font-bold">
-              {DIMENSIONS[index]}
-            </h3>
-            <div className="flex flex-wrap gap-2">
+          <section key={key} className="filter-group">
+            <h3>{DIMENSIONS[index]}</h3>
+            <div className="filter-chips">
               {options.map((option) => (
                 <button
                   key={option}
                   aria-pressed={filters[key] === option}
-                  className={`min-h-10 rounded-[6px] border px-3.5 py-2 text-[14px] font-medium ${
-                    filters[key] === option
-                      ? "border-primary bg-primary text-primary-foreground"
-                      : "border-border text-muted-foreground"
-                  }`}
+                  className="purpose-chip"
                   onClick={() =>
                     setFilters({
                       ...filters,
@@ -1202,11 +2220,11 @@ export default function App() {
 
   if (!loaded) return <div className="min-h-[100dvh] bg-background" />
   return (
-    <div className="relative mx-auto min-h-[100dvh] w-full max-w-[440px] bg-background min-[1000px]:border-x min-[1000px]:border-border">
+    <div className="app-shell">
       {storageError && (
         <div
           role="alert"
-          className="flex items-start gap-2 border-b border-border bg-secondary p-4 text-[12px] leading-5 text-primary"
+          className="flex items-center gap-2 bg-secondary p-4 text-[13px] leading-5 text-primary"
         >
           <p className="flex-1">{storageError}</p>
           <button
@@ -1217,26 +2235,30 @@ export default function App() {
           </button>
         </div>
       )}
-      {screen === "onboard"
-        ? Onboard()
-        : screen === "quiz"
-          ? Quiz()
-          : screen === "home"
-            ? Home()
-            : screen === "explore"
-              ? Explore()
-              : screen === "saved"
-                ? Saved()
-                : screen === "profile"
-                  ? Profile()
-                  : screen === "detail"
-                    ? Detail()
-                    : Settings()}
+      <div
+        key={`${screen}:${
+          screen === "quiz" ? quiz : screen === "detail" ? detail : ""
+        }`}
+        className="screen-enter"
+      >
+        {screen === "onboard"
+          ? Onboard()
+          : screen === "quiz"
+            ? Quiz()
+            : screen === "home"
+              ? Home()
+              : screen === "explore"
+                ? Explore()
+                : screen === "saved"
+                  ? Saved()
+                  : screen === "profile"
+                    ? Profile()
+                    : screen === "detail"
+                      ? Detail()
+                      : Settings()}
+      </div>
       {!["onboard", "quiz", "detail"].includes(screen) && (
-        <nav
-          aria-label="주요 메뉴"
-          className="fixed bottom-0 z-20 flex w-full max-w-[440px] justify-around px-3 border-t border-primary/15 bg-card/95 pb-[max(10px,env(safe-area-inset-bottom))] pt-2 backdrop-blur-xl"
-        >
+        <nav aria-label="주요 메뉴" className="bottom-nav">
           {([
             ["home", "홈"],
             ["explore", "탐색"],
@@ -1246,24 +2268,25 @@ export default function App() {
             <button
               key={id}
               aria-current={tab === id ? "page" : undefined}
-              className={`relative flex min-h-14 min-w-0 flex-1 flex-col items-center justify-center gap-1 text-[11px] ${
-                tab === id ? "font-bold text-primary" : "text-muted-foreground"
-              }`}
+              className="nav-item"
               onClick={() => nav(id)}
             >
-              {tab === id && (
-                <span className="absolute top-0 h-[3px] w-3 rounded-full bg-primary" />
-              )}
-              <Icon name={id} className="size-[21px]" />
+              <Icon name={id} />
               {title}
             </button>
           ))}
         </nav>
       )}
       {sheet && FilterSheet()}
+      {notificationsOpen && NotificationSheet()}
+      {editingTaste !== null && TasteEditSheet()}
       {confirm && (
         <Modal title="데모 초기화 확인" onClose={() => setConfirm(false)}>
-          <h2 className="font-display text-[24px] leading-snug">처음부터 다시<br />시작할까요?</h2>
+          <h2 className="section-title">
+            처음부터 다시
+            <br />
+            시작할까요?
+          </h2>
           <p className="mt-4 text-[14px] leading-7 text-muted-foreground">
             취향과 저장 목록, 방문 목적과 지역을 현재 브라우저에서 초기화합니다.
           </p>
@@ -1285,9 +2308,14 @@ export default function App() {
                   )
                 }
                 setPrefs({})
+                setQuizCompleted(false)
                 setSaved([])
                 setPurpose(undefined)
                 setRegion("부산 전포")
+                locationRequest.current += 1
+                setLocationState("idle")
+                setLocationLabel("현재 위치로 설정")
+                setLocationMessage("")
                 setFilters({})
                 setQuery("")
                 setSort("추천순")
@@ -1304,11 +2332,7 @@ export default function App() {
         </Modal>
       )}
       {toast && (
-        <div
-          role="status"
-          aria-live="polite"
-          className="fixed bottom-24 left-1/2 z-50 -translate-x-1/2 whitespace-nowrap rounded-[8px] bg-primary px-5 py-3 text-[14px] font-semibold text-primary-foreground"
-        >
+        <div role="status" aria-live="polite" className="toast-message">
           {toast}
         </div>
       )}

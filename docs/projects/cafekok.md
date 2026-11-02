@@ -1,3 +1,7 @@
+## 최신 프로토타입 통합 · 2026-11-02
+
+Sites 최종 버전을 portfolio-shell/prototypes/cafekok으로 통합하고 쉘 하위 경로에 빌드한다. 실제 앱을 보여주는 mockup.html을 표지에 연결했다. 이미지 캡처 파일은 아니며, 브라우저 캡처/내보내기는 후속 작업이다. 기존 수정본은 /workspace/cafekok-portfolio-before-sync-20261102.tar.gz에 별도 보관했다.
+
 # CAFÉKOK
 
 ## 상세페이지 공간 재구성 — 2026-10-19

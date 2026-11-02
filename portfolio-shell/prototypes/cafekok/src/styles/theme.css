@@ -1,21 +1,25 @@
 :root {
-  --background: #faf8f4;
-  --foreground: #302a25;
-  --card: #fffefd;
-  --card-foreground: #302a25;
-  --primary: #5c3826;
-  --primary-foreground: #fffefd;
-  --secondary: #f0ebe3;
-  --secondary-foreground: #5c3826;
-  --muted: #f0ebe3;
-  --muted-foreground: #80766d;
-  --accent: #eedbc9;
-  --accent-foreground: #5c3826;
-  --border: #e7e0d7;
-  --ring: #5c3826;
-  --radius: 0.5rem;
+  --background: #ffffff;
+  --foreground: #36332f;
+  --card: #ffffff;
+  --card-foreground: #36332f;
+  --primary: #36332f;
+  --primary-foreground: #ffffff;
+  --secondary: #f5f5f4;
+  --secondary-foreground: #36332f;
+  --muted: #f5f5f4;
+  --muted-foreground: #756f67;
+  --accent: #e8e8e6;
+  --highlight: #655e55;
+  --accent-foreground: #36332f;
+  --border: #e7e2da;
+  --ring: #655e55;
+  --radius: 1rem;
+  --header-background: #4b382d;
+  --matcha: #56663e;
+  --oat-milk: #806a49;
+  --blue-gray: #526c7a;
 }
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -31,10 +35,10 @@
   --color-accent-foreground: var(--accent-foreground);
   --color-border: var(--border);
   --color-ring: var(--ring);
-  --radius-sm: 0.375rem;
-  --radius-md: 0.5rem;
-  --radius-lg: 0.75rem;
+  --radius-sm: .75rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
   --font-sans: "Pretendard", system-ui, sans-serif;
   --font-display: "Pretendard", system-ui, sans-serif;
-  --font-brand: "Cafe24 Ssurround", "Pretendard", sans-serif;
+  --color-highlight: var(--highlight);
 }
