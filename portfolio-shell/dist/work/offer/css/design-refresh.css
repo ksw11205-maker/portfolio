@@ -288,3 +288,118 @@ body { background:#fff; }
  .brand-marquee__group[aria-hidden=true] { display:none; }
  .brand-marquee__group { padding-block:4px; }
 }
+
+/* Product actions share the same orange. Brand artwork keeps its own colors. */
+:root {
+  --color-accent-pressed: #a62b0d;
+  --color-accent-wash: #fff1eb;
+}
+
+.hero h1 em, .footer-brand-dot { color:var(--color-accent); }
+.section-heading h2 { letter-spacing:-.04em; }
+
+a, button, input, select { -webkit-tap-highlight-color:rgb(255 77 34 / 16%); }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible,
+.brand-marquee__tile:focus-visible, .marquee-toggle:focus-visible,
+.offer-card:focus-within .card-image-link { outline-color:var(--color-accent); }
+
+a:focus-visible, button:focus-visible,
+.header-nav a[aria-current=page], .marquee-toggle[aria-pressed=true] { color:var(--color-accent-readable); }
+.header-nav a::after { background-color:var(--color-accent); }
+.header-nav a:focus-visible::after { right:0; }
+
+.search-form:focus-within { border-color:var(--color-accent); box-shadow:0 0 0 4px rgb(255 77 34 / 9%); }
+.search-form input:focus-visible { outline:0; }
+.search-form input { caret-color:var(--color-accent-readable); }
+.refine-row select:has(option:checked:not(:first-child)) {
+  color:var(--color-accent-readable);
+  border-color:var(--color-accent-readable);
+  background-color:var(--color-accent-wash);
+}
+
+:is(.button, .filter, .brand-chip)[aria-pressed=true],
+:is(.button-primary, .search-form .icon-button, .skip-link):focus-visible,
+.search-form:focus-within .icon-button {
+  color:white; background:var(--color-accent-readable); border-color:var(--color-accent-readable);
+}
+:is(.button-secondary, .filter, .brand-chip, .hero-shortcuts a):focus-visible:not([aria-pressed=true]),
+.header-actions .icon-button:focus-visible, .header-actions .menu-toggle[aria-expanded=true],
+.card-save:is([aria-pressed=true], :focus-visible) {
+  color:var(--color-accent-readable); background:var(--color-accent-wash); border-color:var(--color-accent-readable);
+}
+.card-save[aria-pressed=true] .icon { fill:currentColor; }
+.brand-marquee__tile { position:relative; }
+.brand-marquee__tile::after {
+  content:""; position:absolute; inset:auto 12% 3px; height:2px;
+  background:var(--color-accent); opacity:0; transition:opacity 160ms ease;
+}
+.brand-marquee__tile:is(:focus-visible,:active)::after { opacity:1; }
+.card-image-link:active { outline:2px solid var(--color-accent); outline-offset:-2px; }
+.skip-link:focus-visible { color:white; }
+
+@media (hover:hover) {
+  a:hover, button:hover, .offer-card:hover .card-title a, .brand-row:hover h3 a { color:var(--color-accent-readable); }
+  .category-link:hover { border-color:var(--color-accent); }
+  .brand-marquee__tile:hover::after { opacity:1; }
+  .card-image-link:hover { outline:2px solid var(--color-accent); outline-offset:-2px; }
+  .refine-row select:hover { border-color:var(--color-accent-readable); }
+  :is(.button-secondary, .filter, .brand-chip, .hero-shortcuts a):hover:not([aria-pressed=true]),
+  .card-save:hover, .header-actions .icon-button:hover, .marquee-toggle:hover {
+    color:var(--color-accent-readable); background:var(--color-accent-wash); border-color:var(--color-accent-readable);
+  }
+  :is(.button-primary, .search-form .icon-button, .skip-link):hover {
+    color:white; background:var(--color-accent-readable); border-color:var(--color-accent-readable);
+  }
+  :is(.button, .brand-chip, .filter)[aria-pressed=true]:hover {
+    color:white; background:var(--color-accent-pressed); border-color:var(--color-accent-pressed);
+  }
+  .participating-row:hover { background:var(--color-accent-wash); }
+}
+
+a:active, button:active, .offer-card .card-title a:active, .brand-row h3 a:active { color:var(--color-accent-pressed); }
+:is(.button-primary, .search-form .icon-button, .skip-link):active,
+:is(.button, .filter, .brand-chip)[aria-pressed=true]:active {
+  color:white; background:var(--color-accent-pressed); border-color:var(--color-accent-pressed);
+}
+:is(.button-secondary, .filter, .brand-chip, .hero-shortcuts a):active:not([aria-pressed=true]),
+.header-actions .icon-button:active, .card-save:active, .marquee-toggle:active {
+  color:var(--color-accent-pressed); background:var(--color-accent-wash); border-color:var(--color-accent-pressed);
+}
+.refine-row select:is(:focus,:active) { border-color:var(--color-accent); }
+.toast { background:var(--color-accent-readable); }
+
+/* The brand, service directory and operator share one footer on all six pages. */
+.site-footer { border-top:1px solid var(--color-border); }
+.footer-top {
+  display:grid; grid-template-columns:minmax(0,1.6fr) minmax(140px,.68fr) minmax(0,1fr);
+  align-items:start; gap:48px; padding-block:58px 42px;
+}
+.footer-top .wordmark { font-size:clamp(44px,4.4vw,64px); }
+.footer-top .footer-brand p { margin-top:16px; font-size:15px; color:var(--color-text-secondary); }
+.footer-top h2 { font-size:12px; font-weight:700; line-height:1.5; letter-spacing:.09em; margin-bottom:12px; }
+.footer-links { display:flex; flex-direction:column; align-items:flex-start; gap:0; margin:0; }
+.footer-links a, .footer-contact a, .footer-bottom a {
+  min-height:44px; width:fit-content; display:inline-flex; align-items:center; gap:8px;
+}
+.footer-links a, .footer-contact address { font-size:14px; }
+.footer-contact address { font-style:normal; }
+.footer-contact address p { display:flex; align-items:center; gap:9px; min-height:44px; margin:0; color:var(--color-text-primary); }
+.footer-contact address p span { color:var(--color-text-secondary); }
+.footer-contact a { overflow-wrap:anywhere; }
+.site-footer .icon { width:15px; height:15px; }
+.footer-bottom { align-items:center; flex-wrap:wrap; padding-block:12px; }
+.footer-bottom small, .footer-bottom a { font-size:12px; }
+.footer-bottom a { font-weight:600; }
+
+@media (max-width:900px) {
+  .footer-top { grid-template-columns:minmax(0,1.2fr) minmax(120px,.65fr) minmax(0,1fr); gap:24px; }
+}
+@media (max-width:767px) {
+  .footer-top { grid-template-columns:minmax(0,.85fr) minmax(0,1.4fr); gap:30px 18px; padding-block:36px 22px; }
+  .footer-brand { grid-column:1 / -1; }
+  .footer-top .footer-brand p { margin-top:10px; font-size:14px; }
+  .footer-top h2 { margin-bottom:6px; }
+  .footer-links a, .footer-contact a { font-size:13px; }
+  .footer-contact a { gap:4px; }
+  .footer-bottom { flex-direction:row; justify-content:space-between; gap:0 12px; }
+}

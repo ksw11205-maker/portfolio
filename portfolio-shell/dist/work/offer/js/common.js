@@ -29,8 +29,33 @@ function followButton(b,chip=false){const on=has('favoriteBrands',b.id);return '
 let timer;
 function toast(message){const el=document.getElementById('toast');if(!el)return;el.textContent=message;el.classList.add('visible');clearTimeout(timer);timer=setTimeout(()=>el.classList.remove('visible'),3200);}
 function sync(){document.querySelectorAll('[data-save]').forEach(el=>{const on=has('savedOffers',el.dataset.save);el.setAttribute('aria-pressed',on);const p=OFFER_DATA.promotions.find(p=>p.id===el.dataset.save);el.setAttribute('aria-label',(p?.title||'OFFER')+(on?' 저장 해제':' 저장'));if(el.classList.contains('detail-save'))el.querySelector('span').textContent=on?'저장한 OFFER':'OFFER 저장하기';});document.querySelectorAll('[data-follow]').forEach(el=>{const b=OFFER_DATA.brands.find(b=>b.id===el.dataset.follow);if(b){const replacement=document.createElement('template');replacement.innerHTML=followButton(b,el.classList.contains('brand-chip'));const n=replacement.content.firstChild;el.innerHTML=n.innerHTML;el.setAttribute('aria-pressed',n.getAttribute('aria-pressed'));el.setAttribute('aria-label',n.getAttribute('aria-label'));}});}
-function shell(){const page=document.body.dataset.page;document.getElementById('site-header').innerHTML='<div class="container header-inner"><a class="wordmark" href="index.html" aria-label="OFFER 홈">OFFER</a><nav class="header-nav" id="main-nav" aria-label="주 메뉴">'+[['explore','Explore'],['saved','Saved'],['favorites','Favorites']].map(([id,label])=>'<a href="'+id+'.html" '+(page===id?'aria-current="page"':'')+'>'+label+'</a>').join('')+'</nav><div class="header-actions"><a class="icon-button" href="explore.html?focus=search" aria-label="검색 열기">'+icon('search')+'</a><button class="icon-button menu-toggle" aria-label="메뉴 열기" aria-controls="main-nav" aria-expanded="false">'+icon('menu')+'</button></div></div>';
-document.getElementById('site-footer').innerHTML='<div class="container"><div class="footer-top"><div><a class="wordmark" href="index.html">OFFER</a><p>Different brands. Better discoveries.</p></div><nav class="footer-links" aria-label="하단 메뉴"><a href="/#work">← 포트폴리오</a><a href="explore.html">Explore</a><a href="saved.html">Saved OFFERs</a><a href="favorites.html">Favorite Brands</a></nav></div><div class="footer-bottom"><p>Different brands. One place.</p><p>© 2026 OFFER — A discovery project.</p></div></div>';
+function shell(){const page=document.body.dataset.page;document.getElementById('site-header').innerHTML='<div class="container header-inner"><a class="wordmark" href="index.html" aria-label="OFFER 홈">OFFER</a><nav class="header-nav" id="main-nav" aria-label="주 메뉴">'+[['explore','Explore'],['saved','Saved'],['favorites','Follow']].map(([id,label])=>'<a href="'+id+'.html" '+(page===id?'aria-current="page"':'')+'>'+label+'</a>').join('')+'</nav><div class="header-actions"><a class="icon-button" href="explore.html?focus=search" aria-label="검색 열기">'+icon('search')+'</a><button class="icon-button menu-toggle" aria-label="메뉴 열기" aria-controls="main-nav" aria-expanded="false">'+icon('menu')+'</button></div></div>';
+document.getElementById('site-footer').innerHTML = `
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="wordmark" href="index.html" aria-label="OFFER 홈">OFFER<span class="footer-brand-dot" aria-hidden="true">.</span></a>
+        <p>여러 브랜드의 할인과 이벤트를 한곳에서.</p>
+      </div>
+      <nav class="footer-links" aria-labelledby="footer-service-title">
+        <h2 id="footer-service-title">SERVICE</h2>
+        <a href="explore.html">혜택 탐색</a>
+        <a href="saved.html">저장한 혜택</a>
+        <a href="favorites.html">팔로우한 브랜드</a>
+      </nav>
+      <section class="footer-contact" aria-labelledby="footer-contact-title">
+        <h2 id="footer-contact-title">CONTACT</h2>
+        <address>
+          <p><span>기획·운영</span> 김성원</p>
+          <a href="mailto:ksw11205@gmail.com">ksw11205@gmail.com ${icon('up')}</a>
+        </address>
+      </section>
+    </div>
+    <div class="footer-bottom">
+      <small>© ${OFFER_DATES.referenceDate.slice(0,4)} OFFER. All rights reserved.</small>
+      <a href="/#work">김성원 포트폴리오 ${icon('arrow')}</a>
+    </div>
+  </div>`;
 const menu=document.querySelector('.menu-toggle');menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',open);menu.setAttribute('aria-label',open?'메뉴 닫기':'메뉴 열기');document.getElementById('main-nav').classList.toggle('is-open',open);});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&menu.getAttribute('aria-expanded')==='true'){menu.click();menu.focus();}});window.addEventListener('scroll',()=>document.getElementById('site-header').classList.toggle('scrolled',scrollY>16),{passive:true});
 document.addEventListener('click',e=>{if(menu.getAttribute('aria-expanded')==='true'&&!document.getElementById('site-header').contains(e.target))menu.click();const save=e.target.closest('[data-save]'),follow=e.target.closest('[data-follow]');if(save)toggle('savedOffers',save.dataset.save);if(follow)toggle('favoriteBrands',follow.dataset.follow);});
 matchMedia('(min-width: 768px)').addEventListener('change',e=>{if(e.matches&&menu.getAttribute('aria-expanded')==='true')menu.click();});
