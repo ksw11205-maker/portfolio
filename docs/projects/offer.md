@@ -1,3 +1,10 @@
+## 제품 화면 정리 · 2026-11-02
+
+- 최신 실행 소스는 `portfolio-shell/dist/work/offer/`를 직접 편집한다. 이전 형제 폴더에서 덮어쓰는 빌드는 실행하지 않는다.
+- 사용자 요청에 따라 제품 여섯 화면의 가상·샘플·실제 데이터 아님 안내, 공통 상단 배너와 푸터 안내를 제거했다. 포트폴리오 케이스 스터디와 Figma는 이번 범위에서 수정하지 않았다. 원본 데이터의 `demo` 등 출처 속성은 보존하며, 실시간 수집·검증을 추가한 것은 아니다.
+- 브랜드 20개, 컬렉션 26개로 확장했다. 추가 브랜드는 UNIQLO, H&M, PUMA, THE NORTH FACE, BURGER KING, McDonald’s, KFC, FILA다. 브랜드 컬러를 로고와 썸네일에 적용하며 기존 원본 파일을 보존했다. 출처는 제품의 `ASSET-CREDITS.md`에 기록했다.
+- 홈 오른쪽 히어로의 기울기를 제거했다. 세 행이 좌·우·좌로 흐르는 CSS 반복 모션과 완전한 복제 그룹을 사용한다. 중복 그룹은 `aria-hidden`·`inert`로 처리하며, 일시정지·재생, 호버 정지, 키보드 포커스 시 정적 탐색, 화면 밖 정지와 `prefers-reduced-motion` 정적 배치를 제공한다. 움직이는 로고는 사전 로딩한다.
+
 # OFFER
 
 공통 기준은 [DESIGN.md](../../DESIGN.md), 출처와 채택 범위는 [references.md](../design/references.md)를 따른다. 기존 `OFFER/offer/DESIGN.md`의 제품 전용 내용을 이 문서로 통합했다.

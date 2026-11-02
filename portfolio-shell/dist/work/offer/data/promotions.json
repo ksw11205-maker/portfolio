@@ -196,7 +196,7 @@
       "fashion",
       "autumn"
     ],
-    "featured": true,
+    "featured": false,
     "createdAt": "2026-09-19",
     "popularity": 926,
     "originalUrl": "https://www.nike.com/kr",
@@ -1282,5 +1282,565 @@
       }
     ],
     "campaignImage": "./assets/images/promotions/coffee.jpg"
+  },
+  {
+    "id": "uniqlo-autumn-2026",
+    "brandId": "uniqlo",
+    "brandName": "UNIQLO",
+    "title": "일상의 기본을 새롭게",
+    "category": "fashion",
+    "image": "./assets/images/brands/uniqlo-panel.svg",
+    "imageAlt": "UNIQLO 브랜드 로고",
+    "discount": {
+      "max": 20,
+      "label": "UP TO 20%"
+    },
+    "period": {
+      "start": "2026-09-22",
+      "end": "2026-09-30"
+    },
+    "benefits": [
+      {
+        "label": "브랜드 셀렉션",
+        "text": "선택 상품 최대 20% 혜택"
+      },
+      {
+        "label": "취향에 맞는 선택",
+        "text": "카테고리별 추천 상품"
+      },
+      {
+        "label": "기간 한정",
+        "text": "시즌 셀렉션 특별 혜택"
+      }
+    ],
+    "participatingBrands": [
+      {
+        "name": "UNIQLO",
+        "discount": 20
+      }
+    ],
+    "conditions": [
+      "일부 신상품 및 한정판 상품은 혜택에서 제외됩니다.",
+      "추가 쿠폰은 대상 상품에 한해 적용되며 중복 사용이 제한될 수 있습니다.",
+      "한정 수량 상품은 재고 소진 시 조기 종료될 수 있습니다."
+    ],
+    "tags": [
+      "fashion",
+      "autumn",
+      "유니클로"
+    ],
+    "featured": true,
+    "createdAt": "2026-09-24",
+    "popularity": 980,
+    "originalUrl": "https://www.uniqlo.com/kr/ko/",
+    "sourceType": "brand-homepage",
+    "demo": true,
+    "timeline": [
+      {
+        "label": "START",
+        "date": "2026-09-22",
+        "text": "혜택 시작"
+      },
+      {
+        "label": "SPECIAL DEAL",
+        "date": "2026-09-25",
+        "text": "기간 한정 혜택"
+      },
+      {
+        "label": "END",
+        "date": "2026-09-30",
+        "text": "혜택 종료"
+      }
+    ]
+  },
+  {
+    "id": "burgerking-autumn-2026",
+    "brandId": "burgerking",
+    "brandName": "BURGER KING",
+    "title": "취향대로 고르는 한 끼",
+    "category": "food",
+    "image": "./assets/images/brands/burgerking-panel.svg",
+    "imageAlt": "BURGER KING 브랜드 로고",
+    "discount": {
+      "max": 15,
+      "label": "UP TO 15%"
+    },
+    "period": {
+      "start": "2026-09-22",
+      "end": "2026-09-30"
+    },
+    "benefits": [
+      {
+        "label": "브랜드 셀렉션",
+        "text": "선택 상품 최대 15% 혜택"
+      },
+      {
+        "label": "취향에 맞는 선택",
+        "text": "카테고리별 추천 상품"
+      },
+      {
+        "label": "기간 한정",
+        "text": "시즌 셀렉션 특별 혜택"
+      }
+    ],
+    "participatingBrands": [
+      {
+        "name": "BURGER KING",
+        "discount": 15
+      }
+    ],
+    "conditions": [
+      "일부 신상품 및 한정판 상품은 혜택에서 제외됩니다.",
+      "추가 쿠폰은 대상 상품에 한해 적용되며 중복 사용이 제한될 수 있습니다.",
+      "한정 수량 상품은 재고 소진 시 조기 종료될 수 있습니다."
+    ],
+    "tags": [
+      "food",
+      "autumn",
+      "버거킹"
+    ],
+    "featured": false,
+    "createdAt": "2026-09-24",
+    "popularity": 939,
+    "originalUrl": "https://www.burgerking.co.kr",
+    "sourceType": "brand-homepage",
+    "demo": true,
+    "timeline": [
+      {
+        "label": "START",
+        "date": "2026-09-22",
+        "text": "혜택 시작"
+      },
+      {
+        "label": "SPECIAL DEAL",
+        "date": "2026-09-25",
+        "text": "기간 한정 혜택"
+      },
+      {
+        "label": "END",
+        "date": "2026-09-30",
+        "text": "혜택 종료"
+      }
+    ]
+  },
+  {
+    "id": "hm-autumn-2026",
+    "brandId": "hm",
+    "brandName": "H&M",
+    "title": "새 계절에 더하는 스타일",
+    "category": "fashion",
+    "image": "./assets/images/brands/hm-panel.svg",
+    "imageAlt": "H&M 브랜드 로고",
+    "discount": {
+      "max": 30,
+      "label": "UP TO 30%"
+    },
+    "period": {
+      "start": "2026-09-22",
+      "end": "2026-09-30"
+    },
+    "benefits": [
+      {
+        "label": "브랜드 셀렉션",
+        "text": "선택 상품 최대 30% 혜택"
+      },
+      {
+        "label": "취향에 맞는 선택",
+        "text": "카테고리별 추천 상품"
+      },
+      {
+        "label": "기간 한정",
+        "text": "시즌 셀렉션 특별 혜택"
+      }
+    ],
+    "participatingBrands": [
+      {
+        "name": "H&M",
+        "discount": 30
+      }
+    ],
+    "conditions": [
+      "일부 신상품 및 한정판 상품은 혜택에서 제외됩니다.",
+      "추가 쿠폰은 대상 상품에 한해 적용되며 중복 사용이 제한될 수 있습니다.",
+      "한정 수량 상품은 재고 소진 시 조기 종료될 수 있습니다."
+    ],
+    "tags": [
+      "fashion",
+      "autumn",
+      "에이치앤엠"
+    ],
+    "featured": false,
+    "createdAt": "2026-09-23",
+    "popularity": 898,
+    "originalUrl": "https://www2.hm.com/ko_kr/index.html",
+    "sourceType": "brand-homepage",
+    "demo": true,
+    "timeline": [
+      {
+        "label": "START",
+        "date": "2026-09-22",
+        "text": "혜택 시작"
+      },
+      {
+        "label": "SPECIAL DEAL",
+        "date": "2026-09-25",
+        "text": "기간 한정 혜택"
+      },
+      {
+        "label": "END",
+        "date": "2026-09-30",
+        "text": "혜택 종료"
+      }
+    ]
+  },
+  {
+    "id": "fila-autumn-2026",
+    "brandId": "fila",
+    "brandName": "FILA",
+    "title": "매일의 움직임을 가볍게",
+    "category": "fashion",
+    "image": "./assets/images/brands/fila-panel.svg",
+    "imageAlt": "FILA 브랜드 로고",
+    "discount": {
+      "max": 25,
+      "label": "UP TO 25%"
+    },
+    "period": {
+      "start": "2026-09-22",
+      "end": "2026-09-30"
+    },
+    "benefits": [
+      {
+        "label": "브랜드 셀렉션",
+        "text": "선택 상품 최대 25% 혜택"
+      },
+      {
+        "label": "취향에 맞는 선택",
+        "text": "카테고리별 추천 상품"
+      },
+      {
+        "label": "기간 한정",
+        "text": "시즌 셀렉션 특별 혜택"
+      }
+    ],
+    "participatingBrands": [
+      {
+        "name": "FILA",
+        "discount": 25
+      }
+    ],
+    "conditions": [
+      "일부 신상품 및 한정판 상품은 혜택에서 제외됩니다.",
+      "추가 쿠폰은 대상 상품에 한해 적용되며 중복 사용이 제한될 수 있습니다.",
+      "한정 수량 상품은 재고 소진 시 조기 종료될 수 있습니다."
+    ],
+    "tags": [
+      "fashion",
+      "autumn",
+      "휠라"
+    ],
+    "featured": false,
+    "createdAt": "2026-09-23",
+    "popularity": 857,
+    "originalUrl": "https://www.fila.co.kr",
+    "sourceType": "brand-homepage",
+    "demo": true,
+    "timeline": [
+      {
+        "label": "START",
+        "date": "2026-09-22",
+        "text": "혜택 시작"
+      },
+      {
+        "label": "SPECIAL DEAL",
+        "date": "2026-09-25",
+        "text": "기간 한정 혜택"
+      },
+      {
+        "label": "END",
+        "date": "2026-09-30",
+        "text": "혜택 종료"
+      }
+    ]
+  },
+  {
+    "id": "mcdonalds-autumn-2026",
+    "brandId": "mcdonalds",
+    "brandName": "McDonald’s",
+    "title": "기분 좋은 한 끼의 순간",
+    "category": "food",
+    "image": "./assets/images/brands/mcdonalds-panel.svg",
+    "imageAlt": "McDonald’s 브랜드 로고",
+    "discount": {
+      "max": 10,
+      "label": "UP TO 10%"
+    },
+    "period": {
+      "start": "2026-09-22",
+      "end": "2026-09-30"
+    },
+    "benefits": [
+      {
+        "label": "브랜드 셀렉션",
+        "text": "선택 상품 최대 10% 혜택"
+      },
+      {
+        "label": "취향에 맞는 선택",
+        "text": "카테고리별 추천 상품"
+      },
+      {
+        "label": "기간 한정",
+        "text": "시즌 셀렉션 특별 혜택"
+      }
+    ],
+    "participatingBrands": [
+      {
+        "name": "McDonald’s",
+        "discount": 10
+      }
+    ],
+    "conditions": [
+      "일부 신상품 및 한정판 상품은 혜택에서 제외됩니다.",
+      "추가 쿠폰은 대상 상품에 한해 적용되며 중복 사용이 제한될 수 있습니다.",
+      "한정 수량 상품은 재고 소진 시 조기 종료될 수 있습니다."
+    ],
+    "tags": [
+      "food",
+      "autumn",
+      "맥도날드"
+    ],
+    "featured": false,
+    "createdAt": "2026-09-22",
+    "popularity": 816,
+    "originalUrl": "https://www.mcdonalds.co.kr",
+    "sourceType": "brand-homepage",
+    "demo": true,
+    "timeline": [
+      {
+        "label": "START",
+        "date": "2026-09-22",
+        "text": "혜택 시작"
+      },
+      {
+        "label": "SPECIAL DEAL",
+        "date": "2026-09-25",
+        "text": "기간 한정 혜택"
+      },
+      {
+        "label": "END",
+        "date": "2026-09-30",
+        "text": "혜택 종료"
+      }
+    ]
+  },
+  {
+    "id": "puma-autumn-2026",
+    "brandId": "puma",
+    "brandName": "PUMA",
+    "title": "움직이는 하루를 위한 선택",
+    "category": "fashion",
+    "image": "./assets/images/brands/puma-panel.svg",
+    "imageAlt": "PUMA 브랜드 로고",
+    "discount": {
+      "max": 25,
+      "label": "UP TO 25%"
+    },
+    "period": {
+      "start": "2026-09-22",
+      "end": "2026-09-30"
+    },
+    "benefits": [
+      {
+        "label": "브랜드 셀렉션",
+        "text": "선택 상품 최대 25% 혜택"
+      },
+      {
+        "label": "취향에 맞는 선택",
+        "text": "카테고리별 추천 상품"
+      },
+      {
+        "label": "기간 한정",
+        "text": "시즌 셀렉션 특별 혜택"
+      }
+    ],
+    "participatingBrands": [
+      {
+        "name": "PUMA",
+        "discount": 25
+      }
+    ],
+    "conditions": [
+      "일부 신상품 및 한정판 상품은 혜택에서 제외됩니다.",
+      "추가 쿠폰은 대상 상품에 한해 적용되며 중복 사용이 제한될 수 있습니다.",
+      "한정 수량 상품은 재고 소진 시 조기 종료될 수 있습니다."
+    ],
+    "tags": [
+      "fashion",
+      "autumn",
+      "푸마"
+    ],
+    "featured": false,
+    "createdAt": "2026-09-22",
+    "popularity": 775,
+    "originalUrl": "https://kr.puma.com",
+    "sourceType": "brand-homepage",
+    "demo": true,
+    "timeline": [
+      {
+        "label": "START",
+        "date": "2026-09-22",
+        "text": "혜택 시작"
+      },
+      {
+        "label": "SPECIAL DEAL",
+        "date": "2026-09-25",
+        "text": "기간 한정 혜택"
+      },
+      {
+        "label": "END",
+        "date": "2026-09-30",
+        "text": "혜택 종료"
+      }
+    ]
+  },
+  {
+    "id": "kfc-autumn-2026",
+    "brandId": "kfc",
+    "brandName": "KFC",
+    "title": "바삭하게 채우는 오늘",
+    "category": "food",
+    "image": "./assets/images/brands/kfc-panel.svg",
+    "imageAlt": "KFC 브랜드 로고",
+    "discount": {
+      "max": 20,
+      "label": "UP TO 20%"
+    },
+    "period": {
+      "start": "2026-09-22",
+      "end": "2026-09-30"
+    },
+    "benefits": [
+      {
+        "label": "브랜드 셀렉션",
+        "text": "선택 상품 최대 20% 혜택"
+      },
+      {
+        "label": "취향에 맞는 선택",
+        "text": "카테고리별 추천 상품"
+      },
+      {
+        "label": "기간 한정",
+        "text": "시즌 셀렉션 특별 혜택"
+      }
+    ],
+    "participatingBrands": [
+      {
+        "name": "KFC",
+        "discount": 20
+      }
+    ],
+    "conditions": [
+      "일부 신상품 및 한정판 상품은 혜택에서 제외됩니다.",
+      "추가 쿠폰은 대상 상품에 한해 적용되며 중복 사용이 제한될 수 있습니다.",
+      "한정 수량 상품은 재고 소진 시 조기 종료될 수 있습니다."
+    ],
+    "tags": [
+      "food",
+      "autumn",
+      "케이에프씨"
+    ],
+    "featured": false,
+    "createdAt": "2026-09-21",
+    "popularity": 734,
+    "originalUrl": "https://www.kfckorea.com",
+    "sourceType": "brand-homepage",
+    "demo": true,
+    "timeline": [
+      {
+        "label": "START",
+        "date": "2026-09-22",
+        "text": "혜택 시작"
+      },
+      {
+        "label": "SPECIAL DEAL",
+        "date": "2026-09-25",
+        "text": "기간 한정 혜택"
+      },
+      {
+        "label": "END",
+        "date": "2026-09-30",
+        "text": "혜택 종료"
+      }
+    ]
+  },
+  {
+    "id": "northface-autumn-2026",
+    "brandId": "northface",
+    "brandName": "THE NORTH FACE",
+    "title": "도시 밖으로 향하는 가을",
+    "category": "fashion",
+    "image": "./assets/images/brands/northface-panel.svg",
+    "imageAlt": "THE NORTH FACE 브랜드 로고",
+    "discount": {
+      "max": 20,
+      "label": "UP TO 20%"
+    },
+    "period": {
+      "start": "2026-09-22",
+      "end": "2026-09-30"
+    },
+    "benefits": [
+      {
+        "label": "브랜드 셀렉션",
+        "text": "선택 상품 최대 20% 혜택"
+      },
+      {
+        "label": "취향에 맞는 선택",
+        "text": "카테고리별 추천 상품"
+      },
+      {
+        "label": "기간 한정",
+        "text": "시즌 셀렉션 특별 혜택"
+      }
+    ],
+    "participatingBrands": [
+      {
+        "name": "THE NORTH FACE",
+        "discount": 20
+      }
+    ],
+    "conditions": [
+      "일부 신상품 및 한정판 상품은 혜택에서 제외됩니다.",
+      "추가 쿠폰은 대상 상품에 한해 적용되며 중복 사용이 제한될 수 있습니다.",
+      "한정 수량 상품은 재고 소진 시 조기 종료될 수 있습니다."
+    ],
+    "tags": [
+      "fashion",
+      "autumn",
+      "노스페이스"
+    ],
+    "featured": false,
+    "createdAt": "2026-09-21",
+    "popularity": 693,
+    "originalUrl": "https://www.thenorthfacekorea.co.kr",
+    "sourceType": "brand-homepage",
+    "demo": true,
+    "timeline": [
+      {
+        "label": "START",
+        "date": "2026-09-22",
+        "text": "혜택 시작"
+      },
+      {
+        "label": "SPECIAL DEAL",
+        "date": "2026-09-25",
+        "text": "기간 한정 혜택"
+      },
+      {
+        "label": "END",
+        "date": "2026-09-30",
+        "text": "혜택 종료"
+      }
+    ]
   }
 ]

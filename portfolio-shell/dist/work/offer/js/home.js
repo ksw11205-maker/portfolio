@@ -8,7 +8,24 @@ function renderFollowing(){const followed=U.read('favoriteBrands');const items=p
 // Reorder the actual DOM so keyboard and visual reading order agree on mobile.
 const hero=main.querySelector('#home-hero');
 const existing=[...hero.children];const copy=document.createElement('div');copy.className='hero-main';existing.forEach(el=>copy.appendChild(el));hero.appendChild(copy);
-hero.insertAdjacentHTML('beforeend','<aside class="hero-brands" aria-label="대표 브랜드"><div class="hero-brand-caption"><span>YOUR BRANDS. ONE PLACE.</span><span>'+brands.length+' BRANDS ↗</span></div><div class="hero-brand-grid">'+brands.filter(b=>['musinsa','nike','29cm','oliveyoung','tamburins','muji'].includes(b.id)).map(b=>'<a href="brand.html?id='+b.id+'" aria-label="'+U.escape(b.name)+' 혜택 보기">'+U.brandLogo(b)+'</a>').join('')+'</div><p>취향은 다르게. 발견은 한곳에서.</p></aside>');
+const brandRows=[
+ ['musinsa','uniqlo','nike','hm','adidas','puma','northface'],
+ ['oliveyoung','starbucks','ikea','innisfree','mega-coffee','burgerking','mcdonalds'],
+ ['29cm','new-balance','muji','tamburins','fila','kfc']
+];
+const rowMarkup=(ids,index)=>{
+ const entries=ids.map(id=>brands.find(b=>b.id===id)).filter(Boolean);
+ const group=duplicate=>'<div class="brand-marquee__group"'+(duplicate?' aria-hidden="true" inert':'')+'>'+entries.map(b=>'<a class="brand-marquee__tile" href="brand.html?id='+b.id+'" aria-label="'+U.escape(b.name)+' 혜택 보기"'+(duplicate?' tabindex="-1"':'')+'>'+U.brandLogo(b,true)+'</a>').join('')+'</div>';
+ return '<div class="brand-marquee'+(index%2?' brand-marquee--reverse':'')+'" style="--marquee-duration:'+(32+index*5)+'s"><div class="brand-marquee__track">'+group(false)+group(true)+'</div></div>';
+};
+hero.insertAdjacentHTML('beforeend','<aside class="hero-brands" aria-label="다양한 브랜드 둘러보기"><div class="hero-brand-caption"><span>YOUR BRANDS. ONE PLACE.</span><a href="favorites.html#all-brands">'+brands.length+' BRANDS '+U.icon('up')+'</a></div><div class="brand-marquees">'+brandRows.map(rowMarkup).join('')+'</div><div class="hero-brand-bottom"><p>취향은 다르게. 발견은 한곳에서.</p><button class="marquee-toggle" type="button" aria-label="브랜드 모션 일시정지" aria-pressed="false"><svg viewBox="0 0 20 20" aria-hidden="true"><path class="pause-symbol" d="M7 5v10M13 5v10"/><path class="play-symbol" d="m7 5 8 5-8 5Z"/></svg></button></div></aside>');
+const brandPanel=hero.querySelector('.hero-brands'),motionButton=hero.querySelector('.marquee-toggle'),reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
+motionButton.addEventListener('click',()=>{const paused=brandPanel.classList.toggle('is-paused');motionButton.setAttribute('aria-pressed',String(paused));motionButton.setAttribute('aria-label',paused?'브랜드 모션 재생':'브랜드 모션 일시정지');});
+function syncMotionPreference(){motionButton.hidden=reducedMotion.matches;}
+syncMotionPreference();reducedMotion.addEventListener('change',syncMotionPreference);
+if('IntersectionObserver' in window){const observer=new IntersectionObserver(([entry])=>brandPanel.classList.toggle('is-offscreen',!entry.isIntersecting));observer.observe(brandPanel);}
+document.addEventListener('visibilitychange',()=>brandPanel.classList.toggle('is-document-hidden',document.hidden));
+hero.querySelectorAll('.brand-marquee').forEach(row=>row.addEventListener('focusout',()=>requestAnimationFrame(()=>{if(!row.matches(':focus-within'))row.scrollLeft=0;})));
 const mobile=matchMedia('(max-width: 767px)');
 function arrangeSections(){const focused=document.activeElement;const order=mobile.matches?['hero','popular','ending','categories','new','following']:['hero','popular','new','ending','categories','following'];order.forEach(name=>main.appendChild(document.getElementById('home-'+name)));if(focused&&main.contains(focused))focused.focus({preventScroll:true});}
 arrangeSections();mobile.addEventListener('change',arrangeSections);
