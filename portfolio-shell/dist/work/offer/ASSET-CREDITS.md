@@ -4,7 +4,7 @@ Brand marks identify their respective owners. Original local assets are retained
 
 ## Added on 2026-11-02
 
-Vector paths from the Simple Icons v15 distribution (CC0 collection; marks remain subject to their owners’ rights). Color metadata and owner sources are retained below. Generated `-mark.svg` wrappers and `-panel.svg` thumbnails use these assets; no remote image requests are required at runtime.
+Vector paths from the Simple Icons v15 distribution (CC0 collection; marks remain subject to their owners’ rights). Color metadata and owner sources are retained below. Generated `-mark.svg` wrappers, `-panel.svg` thumbnails and transparent `-hero.svg` logo variants use these assets; no remote image requests are required at runtime.
 
 - UNIQLO · https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/uniqlo.svg · owner source: https://www.uniqlo.com
 - H&M · https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/handm.svg · owner source: https://www2.hm.com/en_gb/index.html

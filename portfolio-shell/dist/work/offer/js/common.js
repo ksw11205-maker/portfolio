@@ -8,9 +8,8 @@ const read=key=>{if(storageUnavailable)return memory[key]||[];try{const a=JSON.p
 const has=(key,id)=>read(key).includes(id);
 function toggle(key,id){let list=read(key);list=list.includes(id)?list.filter(x=>x!==id):[...list,id];memory[key]=list;let stored=true;try{localStorage.setItem(key,JSON.stringify(list));}catch{stored=false;storageUnavailable=true;}document.dispatchEvent(new CustomEvent('offer:storage',{detail:{key,id}}));toast(stored?(key==='savedOffers'?(list.includes(id)?'OFFER를 저장했습니다.':'저장을 해제했습니다.'):(list.includes(id)?'관심 브랜드에 추가했습니다.':'관심 브랜드에서 삭제했습니다.')):'브라우저 저장 공간을 사용할 수 없어 이 화면에서만 반영됩니다.');return list.includes(id);}
 const day=s=>{const [y,m,d]=s.split('-').map(Number);return Date.UTC(y,m-1,d);};
-// Reference date for the stored collection; the data provenance stays in the source.
-const demoDate='2026-09-24';
-function today(){return day(demoDate);}
+// All date-dependent UI uses the same KST opening date as the collection.
+function today(){return day(OFFER_DATES.referenceDate);}
 const remaining=p=>Math.round((day(p.period.end)-today())/86400000);
 const active=p=>day(p.period.start)<=today()&&remaining(p)>=0;
 const state=p=>remaining(p)<0?'ended':day(p.period.start)>today()?'upcoming':'active';
@@ -36,7 +35,7 @@ const menu=document.querySelector('.menu-toggle');menu.addEventListener('click',
 document.addEventListener('click',e=>{if(menu.getAttribute('aria-expanded')==='true'&&!document.getElementById('site-header').contains(e.target))menu.click();const save=e.target.closest('[data-save]'),follow=e.target.closest('[data-follow]');if(save)toggle('savedOffers',save.dataset.save);if(follow)toggle('favoriteBrands',follow.dataset.follow);});
 matchMedia('(min-width: 768px)').addEventListener('change',e=>{if(e.matches&&menu.getAttribute('aria-expanded')==='true')menu.click();});
 document.addEventListener('offer:storage',sync);window.addEventListener('storage',()=>{storageUnavailable=false;sync();document.dispatchEvent(new CustomEvent('offer:external-storage'));});}
-return {icon,escape,read,has,toggle,day,today,remaining,active,state,matchesState,status,date,badge,card,grid,empty,searchForm,filters,brandLogo,followButton,toast,shell,demoDate};
+return {icon,escape,read,has,toggle,day,today,remaining,active,state,matchesState,status,date,badge,card,grid,empty,searchForm,filters,brandLogo,followButton,toast,shell};
 })();
 OFFER.shell();
 /* Optional browser-native agent access to the same save action. */
