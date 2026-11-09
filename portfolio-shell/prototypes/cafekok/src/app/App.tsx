@@ -598,6 +598,20 @@ const cafes: Cafe[] = [
     unknownInfo: "혼잡도와 좌석 가능 여부는 방문 전 확인이 필요해요.",
   },
 ]
+function menuItems(cafe: Cafe) {
+  const options: Record<string, string[]> = {
+    커피: ["아메리카노", "카페 라떼", "바닐라 라떼", "카푸치노", "콜드브루"],
+    "차·논커피": ["허브티", "밀크티", "레몬 에이드", "초콜릿 라떼", "과일차"],
+    디저트: ["치즈 케이크", "크루아상", "초콜릿 케이크", "스콘", "쿠키"],
+    브런치: ["브런치 플레이트", "프렌치 토스트", "샌드위치", "샐러드", "수프"],
+  }
+  const names = options[cafe.menuTypes[0]] || options["커피"]
+  return names.map((name, index) => ({
+    name,
+    price: cafe.representativeDrinkPrice + [0, 500, 1000, 1200, 1500][index],
+  }))
+}
+
 const priceLimit = (x?: string) =>
   x === "5,000원 이하"
     ? 5000
@@ -627,33 +641,44 @@ function Logo({ className = "text-[26px]" }: { className?: string }) {
   )
 }
 
-function MiniMap() {
+const MAP_BOUNDS: Record<string, string> = {
+  "부산 전포": "129.048,35.147,129.081,35.166",
+  "부산 광안리": "129.101,35.143,129.135,35.162",
+  "부산 서면": "129.042,35.149,129.075,35.168",
+}
+function areaMapUrl(region: string) {
+  return `https://www.openstreetmap.org/export/embed.html?bbox=${MAP_BOUNDS[region] || MAP_BOUNDS["부산 전포"]}&layer=mapnik`
+}
+function MiniMap({ region, hours }: { region: string; hours: string }) {
   return (
-    <div className="relative isolate h-36 overflow-hidden rounded-[8px] bg-[#ede9e1]">
-      <svg
-        className="absolute inset-0 h-full w-full"
-        viewBox="0 0 350 144"
-        preserveAspectRatio="none"
+    <div className="sample-map detail-map">
+      <iframe
+        className="sample-map-frame"
+        title={`${region} 지역 지도`}
+        src={areaMapUrl(region)}
+        loading="lazy"
+        tabIndex={-1}
         aria-hidden="true"
+      />
+      <span className="sample-map-label">{region} · 정확한 위치 정보 없음</span>
+      <div className="map-info-overlay">
+        <p>
+          <span>영업시간</span>
+          <strong>{hours}</strong>
+        </p>
+        <p>
+          <span>전화번호</span>
+          <strong>정보 없음</strong>
+        </p>
+      </div>
+      <a
+        className="sample-map-attribution"
+        href="https://www.openstreetmap.org/copyright"
+        target="_blank"
+        rel="noreferrer"
       >
-        <path d="M270 0h80v144H310L290 70Z" fill="#d5d2c9" />
-        <path
-          d="M-20 40 350 100M80-20 145 160M-20 130 380 30"
-          stroke="#fcfaf6"
-          strokeWidth="18"
-        />
-        <path
-          d="M0 20h250M0 80h290M60 0v144M210 0v144"
-          stroke="#d6d1c8"
-          strokeWidth="2"
-        />
-      </svg>
-      <span className="absolute left-[46%] top-[34%] flex size-9 items-center justify-center rounded-full border-[3px] border-background bg-primary text-primary-foreground">
-        <Icon name="coffee" className="size-4" />
-      </span>
-      <span className="absolute bottom-2 right-3 text-[12px] text-muted-foreground">
-        샘플 지도 · 위치 비례 아님
-      </span>
+        © OpenStreetMap 기여자
+      </a>
     </div>
   )
 }
@@ -1103,13 +1128,11 @@ export default function App() {
         if (area) {
           setRegion(area)
           setLocationLabel(`현재 위치 · ${area.replace("부산 ", "")}`)
-          setLocationMessage(
-            "현재 위치와 가까운 지역의 가상 카페를 보여드려요.",
-          )
+          setLocationMessage("선택한 지역의 카페를 보여드려요.")
         } else {
           setLocationLabel("현재 위치 설정됨")
           setLocationMessage(
-            "현재 위치는 샘플 지역 밖이에요. 부산 가상 카페를 보여드려요.",
+            "현재 위치는 제공 지역 밖이에요. 부산 지역을 보여드려요.",
           )
         }
       },
@@ -1312,7 +1335,7 @@ export default function App() {
             aria-label="오늘의 방문 목적"
             className="section-block purpose-section"
           >
-            <h2 className="section-title">카페 방문 목적</h2>
+            <h2 className="section-title">오늘은 어떤 목적으로 가세요?</h2>
             {PurposeButtons()}
           </section>
           <section
@@ -1321,7 +1344,9 @@ export default function App() {
           >
             <div className="section-heading">
               <h2 id="today-picks-title" className="section-title">
-                {hasPrefs || purpose ? "취향 일치순 추천" : "추천 카페"}
+                {hasPrefs || purpose
+                  ? "내 취향에 맞는 카페"
+                  : "추천 카페를 둘러보세요"}
               </h2>
             </div>
             {picks.length ? (
@@ -1375,7 +1400,7 @@ export default function App() {
           >
             <div className="section-heading">
               <h2 id="discover-title" className="section-title">
-                다른 분위기의 카페
+                다른 분위기의 카페도 만나보세요
               </h2>
             </div>
             {discoveries.length ? (
@@ -1418,106 +1443,117 @@ export default function App() {
               </p>
             )}
           </section>
-          <section className="taste-banner">
-            <Icon name="bean" className="size-7" />
-            <h2 className="section-title">내 카페 취향 설정</h2>
-            <button
-              className={secondary}
-              onClick={() => nav(hasPrefs ? "profile" : "quiz")}
-            >
-              {hasPrefs ? "내 취향 보기" : "내 취향 등록하기"}
-              <Icon name="arrow" />
-            </button>
+          <section
+            className="community-browse"
+            aria-labelledby="community-browse-title"
+          >
+            <h2 id="community-browse-title" className="section-title">
+              다양한 카페를 둘러보세요
+            </h2>
+            <div className="community-buttons">
+              <button type="button" className="community-button">
+                <Icon name="friends" />
+                <span>인기순</span>
+              </button>
+              <button type="button" className="community-button">
+                <Icon name="saved" />
+                <span>저장순</span>
+              </button>
+              <button type="button" className="community-button">
+                <Icon name="coffee" />
+                <span>최근 오픈</span>
+              </button>
+            </div>
           </section>
         </main>
       </>
     )
   }
 
-  const Map = () => (
-    <div>
-      <div className="relative isolate h-[360px] overflow-hidden rounded-[18px] bg-secondary">
-        <svg
-          className="absolute inset-0 h-full w-full"
-          viewBox="0 0 350 360"
-          preserveAspectRatio="none"
-          aria-hidden="true"
-        >
-          <path d="M270 0h80v360H310L290 180Z" fill="#d5d2c9" />
-          <path
-            d="M-20 100 350 250M80-20 145 380M-20 320 380 90"
-            stroke="#fcfaf6"
-            strokeWidth="22"
+  const Map = () => {
+    const pins = [
+      [18, 22],
+      [52, 14],
+      [73, 26],
+      [31, 40],
+      [61, 46],
+      [12, 61],
+      [42, 65],
+      [73, 68],
+      [24, 79],
+      [57, 82],
+    ]
+    const mapUrl = areaMapUrl(region)
+    return (
+      <div>
+        <div className="sample-map">
+          <iframe
+            className="sample-map-frame"
+            title={`${region} 주변 지도`}
+            src={mapUrl}
+            loading="lazy"
+            tabIndex={-1}
+            aria-hidden="true"
           />
-          <path
-            d="M-20 100 350 250M80-20 145 380M-20 320 380 90"
-            stroke="#d3ccc0"
-            strokeWidth="1"
-          />
-          <path
-            d="M0 50h250M0 175h290M20 0v360M210 0v360"
-            stroke="#d6d1c8"
-            strokeWidth="2"
-          />
-        </svg>
-        <p className="absolute left-4 top-4 text-[12px] tracking-[0.06em] font-bold text-primary">
-          {region.replace("부산 ", "")} · SAMPLE MAP
-        </p>
-        <span className="absolute bottom-4 right-4 text-[12px] text-muted-foreground">
-          위치 비례 아님
-        </span>
-        {list.map((c, index) => (
-          <button
-            key={c.id}
-            aria-label={`${c.name} 상세 보기`}
-            className="map-marker"
-            style={{
-              left: `${12 + (index % 3) * 30}%`,
-              top: `${18 + Math.floor(index / 3) * 20}%`,
-            }}
-            onClick={() => open(c.id)}
-          >
-            {index + 1}
-          </button>
-        ))}
-      </div>
-      <p className="my-4 text-[12px] leading-5 text-muted-foreground">
-        샘플 지도입니다. 실제 위치·GPS·길 안내는 제공하지 않아요.
-      </p>
-      {list.length ? (
-        <div className="map-results">
+          <span className="sample-map-label">
+            {region.replace("부산 ", "")} · 위치 미확인
+          </span>
           {list.map((c, index) => (
             <button
               key={c.id}
-              className="map-result"
+              aria-label={`${c.name} 상세 보기 · 위치는 임의 배치`}
+              className="map-marker"
+              style={{
+                left: `${pins[index % pins.length][0]}%`,
+                top: `${pins[index % pins.length][1]}%`,
+              }}
               onClick={() => open(c.id)}
             >
-              <span className="w-5 text-[14px] text-muted-foreground">
-                {index + 1}
-              </span>
-              <Photo cafe={c} className="size-16 shrink-0 rounded-[6px]" />
-              <div className="min-w-0 flex-1">
-                <h3 className="font-display text-[18px]">{c.name}</h3>
-                <p className="mt-1 text-[12px] text-muted-foreground">
-                  {matchLabel(c)} · 샘플 {c.sampleDistance}km
-                </p>
-              </div>
-              <Icon name="chevron" className="size-4" />
+              {index + 1}
             </button>
           ))}
+          <a
+            className="sample-map-attribution"
+            href="https://www.openstreetmap.org/copyright"
+            target="_blank"
+            rel="noreferrer"
+          >
+            © OpenStreetMap 기여자
+          </a>
         </div>
-      ) : (
-        Empty()
-      )}
-    </div>
-  )
+
+        {list.length ? (
+          <div className="map-results">
+            {list.map((c, index) => (
+              <button
+                key={c.id}
+                className="map-result"
+                onClick={() => open(c.id)}
+              >
+                <span className="w-5 text-[14px] text-muted-foreground">
+                  {index + 1}
+                </span>
+                <Photo cafe={c} className="size-16 shrink-0 rounded-[6px]" />
+                <div className="min-w-0 flex-1">
+                  <h3 className="font-display text-[18px]">{c.name}</h3>
+                  <p className="mt-1 text-[12px] text-muted-foreground">
+                    {matchLabel(c)}
+                  </p>
+                </div>
+                <Icon name="chevron" className="size-4" />
+              </button>
+            ))}
+          </div>
+        ) : (
+          Empty()
+        )}
+      </div>
+    )
+  }
   const Explore = () => (
     <>
       {Header()}
-      <main className="explore-screen pb-32">
-        <div className="page-intro">
-          <h1 className="page-title">카페 탐색</h1>
-        </div>
+      <main className="explore-screen pb-32" aria-label="카페 탐색">
         <div className="search-field">
           <Icon name="search" />
           <input
@@ -1577,23 +1613,25 @@ export default function App() {
           <p className="metadata">
             카페 <b>{list.length}</b>곳
           </p>
-          <select
-            aria-label="카페 정렬"
-            value={sort}
-            onChange={(event) => setSort(event.target.value)}
-          >
-            {["추천순", "가까운 순", "가격 낮은 순"].map((value) => (
-              <option key={value}>{value}</option>
-            ))}
-          </select>
-          <button
-            className="purpose-chip"
-            aria-pressed={map}
-            onClick={() => setMap(!map)}
-          >
-            <Icon name={map ? "home" : "map"} />
-            {map ? "목록" : "지도"}
-          </button>
+          <div className="explore-control-actions">
+            <button
+              className="purpose-chip"
+              aria-pressed={map}
+              onClick={() => setMap(!map)}
+            >
+              <Icon name={map ? "home" : "map"} />
+              {map ? "목록" : "지도"}
+            </button>
+            <select
+              aria-label="카페 정렬"
+              value={sort}
+              onChange={(event) => setSort(event.target.value)}
+            >
+              {["추천순", "가까운 순", "가격 낮은 순"].map((value) => (
+                <option key={value}>{value}</option>
+              ))}
+            </select>
+          </div>
         </div>
         {map ? (
           Map()
@@ -1619,7 +1657,7 @@ export default function App() {
     return (
       <>
         {Header("내 취향")}
-        <main className="pb-32">
+        <main className="profile-screen">
           <section className="profile-summary">
             <div className="profile-summary-copy">
               <p className="eyebrow">MY CAFÉ TASTE</p>
@@ -1652,22 +1690,6 @@ export default function App() {
               </button>
             ))}
           </section>
-          <div className="taste-actions">
-            <button
-              className={secondary}
-              onClick={() => {
-                setQuiz(0)
-                setScreen("quiz")
-              }}
-            >
-              취향 다시 고르기
-              <Icon name="edit" />
-            </button>
-            <button className={primary} onClick={() => nav("home")}>
-              나에게 맞는 카페 찾기
-              <Icon name="arrow" />
-            </button>
-          </div>
         </main>
       </>
     )
@@ -1714,6 +1736,7 @@ export default function App() {
           ))}
         </div>
         <div className="quiz-footer">
+          <p className="metadata">취향은 언제든 바꿀 수 있어요.</p>
           <div className="quiz-navigation">
             <button
               type="button"
@@ -1739,7 +1762,6 @@ export default function App() {
               <Icon name="arrow" />
             </button>
           </div>
-          <p className="metadata">취향은 언제든 바꿀 수 있어요.</p>
         </div>
       </main>
     )
@@ -1794,6 +1816,7 @@ export default function App() {
             >
               <Icon name="back" />
             </button>
+            <span className="detail-toolbar-title">{cafe.name}</span>
             {SaveButton(cafe, false)}
           </div>
           <div className="detail-hero">
@@ -1805,27 +1828,9 @@ export default function App() {
               {cafe.neighborhood} · {cafe.menuTypes[0]}
             </p>
             <h1 className="page-title">{cafe.name}</h1>
-            <div className="detail-facts">
-              <div>
-                <Icon name="coffee" />
-                <span>대표 음료</span>
-                <strong>
-                  {cafe.representativeDrinkPrice.toLocaleString()}원~
-                </strong>
-              </div>
-              <div>
-                <Icon name="pin" />
-                <span>샘플 거리</span>
-                <strong>{cafe.sampleDistance}km</strong>
-              </div>
-              <div>
-                <Icon name="friends" />
-                <span>추천 좌석</span>
-                <strong>{cafe.seatTypes[0]}</strong>
-              </div>
-            </div>
           </div>
           <section className="detail-reason">
+            <Icon name="date" className="detail-ornament" />
             <h2 className="section-title">
               {match(cafe) === undefined
                 ? "이런 공간이에요"
@@ -1840,48 +1845,35 @@ export default function App() {
               </div>
             )}
           </section>
-          <section className="detail-section">
-            <h2 className="detail-section-title">공간과 자리</h2>
-            <p>
-              {cafe.atmosphere} 분위기,
-              <br />
-              {cafe.space} 공간.
-            </p>
-            <div className="detail-tags">
-              {cafe.seatTypes.map((t) => (
-                <span key={t}>{t}</span>
-              ))}
-            </div>
-            <p className="metadata">
-              {cafe.amenities.length
-                ? cafe.amenities.join(" · ")
-                : "등록된 시설 정보가 없어요"}
-            </p>
+          <section className="detail-section detail-interior-section">
+            <h2 className="detail-section-title">카페 내부</h2>
+            <Photo
+              cafe={cafe}
+              className="detail-interior-photo"
+              imgClass="detail-interior-crop"
+            />
           </section>
-          <section className="detail-section">
+          <section className="detail-section detail-menu-section">
             <h2 className="detail-section-title">메뉴</h2>
-            <p className="detail-price">
-              {cafe.representativeDrinkPrice.toLocaleString()}
-              <small>원부터</small>
-            </p>
-            <div className="detail-tags">
-              {cafe.menuTypes.map((m) => (
-                <span key={m}>{m}</span>
+            <ul className="detail-menu-list">
+              {menuItems(cafe).map((item) => (
+                <li key={item.name}>
+                  <span>{item.name}</span>
+                  <span className="menu-dots" aria-hidden="true" />
+                  <span>{item.price.toLocaleString()}원</span>
+                </li>
               ))}
+            </ul>
+            <div className="menu-more-row">
+              <button type="button" className="menu-more">
+                메뉴 더보기 <Icon name="chevron" className="size-4" />
+              </button>
             </div>
           </section>
-          <section className="detail-section">
-            <h2 className="detail-section-title">찾아가는 길</h2>
-            <MiniMap />
-            <p className="mt-4">{cafe.sampleHours}</p>
-            <p className="metadata">{cafe.samplePosition}</p>
-            <p className="detail-notice">{cafe.unknownInfo}</p>
+          <section className="detail-section detail-map-section">
+            <h2 className="detail-section-title">카페 위치</h2>
+            <MiniMap region={cafe.neighborhood} hours={cafe.sampleHours} />
           </section>
-          <p className="metadata px-6 mt-8">
-            가상의 카페와 샘플 정보예요.
-            <br />
-            사진은 분위기 참고용이며 실제 장소와 무관해요.
-          </p>
         </main>
         <div className="detail-actions">
           <button
@@ -1892,7 +1884,7 @@ export default function App() {
             }}
           >
             <Icon name="map" />
-            샘플 지도
+            지도 보기
           </button>
           <button className={primary} onClick={() => toggle(cafe.id)}>
             <Icon name={isSaved ? "check" : "saved"} />
@@ -1907,9 +1899,6 @@ export default function App() {
     <main className="onboard-screen">
       <OnboardCover />
       <div className="onboard-content">
-        <div aria-hidden="true" className="onboard-bean">
-          <Icon name="bean" className="size-[210px]" />
-        </div>
         <div className="onboard-logo">
           <Logo className="text-[38px]" />
         </div>
@@ -1944,18 +1933,18 @@ export default function App() {
           <h1 className={heading}>설정과 안내</h1>
         </div>
         <section className="settings-info">
-          <h2 className="font-display text-[19px]">이 프로토타입은</h2>
+          <h2 className="font-display text-[19px]">이용 안내</h2>
           <p className="mt-3 text-[15px] leading-7 text-muted-foreground">
-            부산 전포·광안리·서면의 가상 카페를 둘러봐요. 현재 위치를 설정할 때
-            위치 권한을 요청해요. 좌표는 저장하거나 외부로 보내지 않고, 취향과
-            저장 목록은 새로고침하면 초기화돼요.
+            부산 전포·광안리·서면의 카페를 둘러봐요. 현재 위치를 설정할 때 위치
+            권한을 요청해요. 좌표는 저장하거나 외부로 보내지 않고, 취향과 저장
+            목록은 새로고침하면 초기화돼요.
           </p>
         </section>
         <button
           className="btn-secondary mt-5 w-full"
           onClick={() => setConfirm(true)}
         >
-          데모 데이터 초기화
+          데이터 초기화
           <Icon name="arrow" className="size-4" />
         </button>
         <p className="mt-3 text-[13px] leading-6 text-muted-foreground">
@@ -2281,7 +2270,7 @@ export default function App() {
       {notificationsOpen && NotificationSheet()}
       {editingTaste !== null && TasteEditSheet()}
       {confirm && (
-        <Modal title="데모 초기화 확인" onClose={() => setConfirm(false)}>
+        <Modal title="초기화 확인" onClose={() => setConfirm(false)}>
           <h2 className="section-title">
             처음부터 다시
             <br />

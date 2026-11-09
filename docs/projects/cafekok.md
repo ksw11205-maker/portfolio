@@ -1,3 +1,9 @@
+## 최신 프로토타입 동기화 · 2026-11-09
+
+- Sites 소스 `a9e887e`를 쉘의 `/work/cafekok/prototype/` 경로에 반영했다. 기존 표지 목업의 홈 미리보기 쿼리와 중첩 경로의 로컬 자산 경로를 유지한다.
+- 표지에 실제 프로토타입 시작·홈 화면을 기기 프레임으로 캡처한 `assets/cafekok-prototype-mockup.png`를 사용한다. 캡처 환경의 외부 사진 접근 제한 때문에 앱에 내장된 대체 사진을 표시한 결과다. 실행형 목업은 `mockup.html`에 남겨두었다.
+- 390×844 Chromium에서 시작 → 6단계 퀴즈 → 내 취향 → 홈 → 탐색 흐름, 상세 페이지에서 프로토타입 링크 및 두 목업 프레임 로딩을 확인했다.
+
 ## 최신 프로토타입 통합 · 2026-11-02
 
 Sites 최종 버전을 portfolio-shell/prototypes/cafekok으로 통합하고 쉘 하위 경로에 빌드한다. 실제 앱을 보여주는 mockup.html을 표지에 연결했다. 이미지 캡처 파일은 아니며, 브라우저 캡처/내보내기는 후속 작업이다. 기존 수정본은 /workspace/cafekok-portfolio-before-sync-20261102.tar.gz에 별도 보관했다.
