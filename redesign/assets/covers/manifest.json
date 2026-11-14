@@ -1,7 +1,8 @@
 {
   "created": "2026-11-15",
+  "revision": "Project-specific studio refresh",
   "generator": "scripts/create-cover-assets.cjs",
-  "outputType": "Self-contained SVG. Original UI pixels remain intact; WebP inputs use lossless PNG encoding for portable SVG support. Other image bytes are embedded unchanged. Hardware, gradients and shadows are native vectors.",
+  "outputType": "Self-contained SVG, original UI bytes, Devices.css-derived vector hardware and native studio lighting.",
   "sources": [
     {
       "path": "portfolio-shell/dist/work/lg/assets/02-analysis.webp",
@@ -13,7 +14,7 @@
       "embeddedMime": "image/png",
       "embeddedBytes": 532592,
       "embeddedSha256": "9b4f085874212866c9a5c82c3e75fb6665545cf7de704dfe6751f62e0e86ec82",
-      "pixelTreatment": "Lossless PNG encoding of decoded source pixels; no resize, crop or retouch in the embedded source."
+      "pixelTreatment": "Lossless PNG encoding; decoded pixels unchanged."
     },
     {
       "path": "portfolio-shell/dist/work/lg/assets/tv-sports.webp",
@@ -25,7 +26,7 @@
       "embeddedMime": "image/png",
       "embeddedBytes": 322530,
       "embeddedSha256": "499992ab98323885ae40b9d004b3831400ea01e98ef943f1a361886c465d11f3",
-      "pixelTreatment": "Lossless PNG encoding of decoded source pixels; no resize, crop or retouch in the embedded source."
+      "pixelTreatment": "Lossless PNG encoding; decoded pixels unchanged."
     },
     {
       "path": "portfolio-shell/dist/work/cafekok/assets/cafe-cover.jpg",
@@ -37,7 +38,7 @@
       "embeddedMime": "image/jpeg",
       "embeddedBytes": 585963,
       "embeddedSha256": "fb5729cc23461dc48474e1a7a019fe0d3cf23ad961ebacffdbaaae6d7761a060",
-      "pixelTreatment": "Original source bytes unchanged."
+      "pixelTreatment": "Original bytes unchanged."
     },
     {
       "path": "portfolio-shell/dist/work/cafekok/assets/latest/home.png",
@@ -49,7 +50,7 @@
       "embeddedMime": "image/png",
       "embeddedBytes": 833241,
       "embeddedSha256": "fb3d61f4e462f9b5e56cadf4e289d697e602e65af7597b88ba31152b7d0bf9c9",
-      "pixelTreatment": "Original source bytes unchanged."
+      "pixelTreatment": "Original bytes unchanged."
     },
     {
       "path": "portfolio-shell/dist/work/offer/case-study-assets/editorial/explore.jpg",
@@ -61,7 +62,7 @@
       "embeddedMime": "image/jpeg",
       "embeddedBytes": 104216,
       "embeddedSha256": "09da4f07da1072314b7771a2629a18911d76420c155899590870af4a02b7ca68",
-      "pixelTreatment": "Original source bytes unchanged."
+      "pixelTreatment": "Original bytes unchanged."
     },
     {
       "path": "portfolio-shell/dist/work/offer/case-study-assets/editorial/tablet.jpg",
@@ -73,7 +74,7 @@
       "embeddedMime": "image/jpeg",
       "embeddedBytes": 64221,
       "embeddedSha256": "7fb7e47eacea361b6eb814d18bfeae76635439e87d42f46b79cc6d9b4c7d4d43",
-      "pixelTreatment": "Original source bytes unchanged."
+      "pixelTreatment": "Original bytes unchanged."
     },
     {
       "path": "portfolio-shell/dist/work/offer/case-study-assets/editorial/mobile.jpg",
@@ -85,7 +86,7 @@
       "embeddedMime": "image/jpeg",
       "embeddedBytes": 33252,
       "embeddedSha256": "bd79f866ef498e0bd769b92948b1515d16144d10a63890afe3484c700989bd3f",
-      "pixelTreatment": "Original source bytes unchanged."
+      "pixelTreatment": "Original bytes unchanged."
     }
   ],
   "outputs": [
@@ -93,40 +94,49 @@
       "path": "redesign/assets/covers/lg.svg",
       "width": 2400,
       "height": 1350,
-      "bytes": 1145097,
-      "sha256": "14fc3f80c1632cc7c95e1de7a38e6e1b90fba02106a69e37905deb9cad9f75d7"
+      "bytes": 1146253,
+      "sha256": "f3a61224f05a363aa65512e32ad7989712637657992a6191184ce96e8c279698"
     },
     {
       "path": "redesign/assets/covers/cafekok.svg",
       "width": 2400,
       "height": 1350,
-      "bytes": 1896173,
-      "sha256": "7d91dc919d9508fd1934167100b4cdfd224d36ff43d8965442118e934d318620"
+      "bytes": 1897023,
+      "sha256": "9ea0053fc20f8e59ba34193aa37e84d691a55759d06056fb8ba0fd1e2fbefacb"
     },
     {
       "path": "redesign/assets/covers/offer.svg",
       "width": 2400,
       "height": 1350,
-      "bytes": 274384,
-      "sha256": "915243a3c6f20fb124458cdcc6321eaecc7ce9539e797506ad262448cbf96af4"
+      "bytes": 275293,
+      "sha256": "6e5a22c718a98528c66e25191788984e20f2333d4a12832793f2ce883dcd84c3"
     }
   ],
+  "thirdParty": {
+    "repository": "https://github.com/picturepan2/devices.css",
+    "pinnedCommit": "11846244977a4905a4fb9ac12bb2121e068d6147",
+    "license": "MIT",
+    "copyright": "Copyright (c) 2017 Yan Zhu",
+    "sourceFolder": "docs/design/references/mockup-refresh-20261115/devices.css",
+    "runtimeLicense": "redesign/assets/covers/Devices-css-LICENSE.txt",
+    "adaptation": "SCSS geometry converted to SVG primitives. MacBook frame/viewport/camera/lip proportions, iPad frame/bezel/sensors, iPhone frame/edge/buttons/camera island, Pro Display frame/stand retained. Phone extended vertically to reserve camera safe area without cutting into original UI. Tablet screenshot aspect ratio preserved with white continuation beneath capture. Material gradients and studio compositions authored for these project palettes."
+  },
   "compositions": {
     "lg": {
       "sources": [
         "work/lg/assets/02-analysis.webp",
         "work/lg/assets/tv-sports.webp"
       ],
-      "treatment": "Original full-width screenshots, uniformly scaled and top-cropped inside widescreen device viewports. Native laptop foreground and TV background.",
-      "limitations": "TV source is 776 × 653. It is intentionally secondary; at a 1200px-wide cover its visible screen is 497px wide. No detail enhancement or text regeneration. Desktop source is tall, so only its upper analysis section is shown."
+      "treatment": "TV behind laptop; actual full-width source UI top-cropped in viewport. Graphite space, violet rim lighting, magenta floor reflection. Laptop uses Devices.css geometry.",
+      "limitations": "TV source native776x653, secondary screen. No source UI text modified."
     },
     "cafekok": {
       "sources": [
         "work/cafekok/assets/cafe-cover.jpg",
         "work/cafekok/assets/latest/home.png"
       ],
-      "treatment": "Original facade photograph, centered vertical crop; warm translucent overlay. Exact home screenshot in a large, upright phone continuing beneath the cover canvas.",
-      "limitations": "The canvas shows the upper home screen through the purpose controls. The lower recommendation region with its pre-existing loading placeholder remains below the canvas. No UI patching, reconstruction or text invention."
+      "treatment": "Existing cafe photograph retained. Large gently rotated gold phone, original UI beneath camera safe area. Phone extends beyond canvas and lower placeholder remains outside cover.",
+      "limitations": "Original loading placeholder is not retouched; off-canvas crop only."
     },
     "offer": {
       "sources": [
@@ -134,13 +144,12 @@
         "work/offer/case-study-assets/editorial/tablet.jpg",
         "work/offer/case-study-assets/editorial/mobile.jpg"
       ],
-      "treatment": "Same Explore page at 4 / 2 / 1 columns. Desktop centered, tablet overlaps left foreground, mobile overlaps right foreground. Desktop top-cropped uniformly in monitor; full aspect ratios preserved on smaller devices, with the lower device edges slightly outside the canvas.",
-      "limitations": "These are existing editorial captures, not evidence that a live responsive implementation was tested in this session."
+      "treatment": "Centered Pro Display, left overlapping iPad, right overlapping iPhone; same Explore page4/2/1columns. Warmgrayblack with restrained orange studio wash.",
+      "limitations": "Desktop source top-cropped. Native tablet aspect ratio preserved; no live website claim."
     },
     "ivi": {
       "unchanged": true,
-      "path": "portfolio-shell/dist/assets/projects/ivi-cover-clean-1920.jpg",
-      "treatment": "Reuse original concept cover unchanged. No derivative output generated."
+      "path": "portfolio-shell/dist/assets/projects/ivi-cover-clean-1920.jpg"
     }
   },
   "verification": {

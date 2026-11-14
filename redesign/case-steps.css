@@ -1,0 +1,26 @@
+.chapter-step-layout{position:relative}
+.chapter-step-stage,.chapter-step-heading,.chapter-step-content{min-width:0}
+.chapter-step-content{overflow:clip;position:relative}
+.chapter-step-layer{position:relative;display:flow-root!important;max-width:100%;box-sizing:border-box;background:var(--step-background);margin:0!important;padding:20px 16px 40px!important}
+.chapter-step-layer>*{max-width:100%;box-sizing:border-box}
+.chapter-step-layout [data-reveal],.chapter-step-layout [data-reveal-item],.chapter-step-layout .reveal{opacity:1!important;visibility:visible!important;transform:none!important}
+.chapter-step-nav{display:none;align-items:center;gap:20px;margin-top:28px;font-size:13px}
+.chapter-step-nav button{width:44px;height:44px;border:1px solid currentColor;border-radius:50%;color:inherit;background:transparent;font:inherit;cursor:pointer}
+.chapter-step-nav button:disabled{opacity:.3;cursor:default}
+.chapter-step-pinned>.chapter-step-stage{position:sticky;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.7fr);gap:clamp(32px,4vw,64px);align-items:start}
+.chapter-step-pinned .chapter-step-layer{position:absolute;inset:0 0 auto;min-height:100%;width:100%;will-change:transform}
+.chapter-step-pinned .chapter-step-nav{display:flex}
+.chapter-step-pinned .chapter-step-heading h2{font-size:clamp(27px,2.4vw,38px);line-height:1.3}
+.chapter-step-pinned .chapter-step-heading .chapter-label{font-size:11px;gap:12px}
+.chapter-step-pinned .chapter-step-heading .chapter-label span:last-child{display:none}
+.chapter-step-pinned .chapter-step-heading .chapter-heading{margin-block:24px 0!important}
+.chapter-step-pinned .chapter-step-heading p{font-size:16px;line-height:1.75}
+.chapter-step-pinned .screen-row,.chapter-step-pinned .screen-evidence,.chapter-step-pinned .method-grid{grid-template-columns:minmax(0,1fr)}
+.chapter-step-pinned .screen-row{width:100%;margin-inline:0}
+.chapter-step-pinned .browser,.chapter-step-pinned .screen-decisions{min-width:0;max-width:100%}
+.chapter-step-pinned .section-intro,.chapter-step-pinned .section-head{min-height:0!important}
+@media(max-width:1099px),(prefers-reduced-motion:reduce){.chapter-step-layer{transform:none!important}.chapter-step-content{overflow:visible}}
+main .case-slide-surface > section.chapter-step-layout:has(.section-head){max-width:1280px;margin-inline:auto;padding-inline:5vw}
+.chapter-step-pinned .feature-list>article{display:block;padding-block:24px}
+.chapter-step-pinned .feature-list>article h3{margin-block:24px 18px}
+.chapter-step-pinned .chapter-step-heading>.split{display:block}

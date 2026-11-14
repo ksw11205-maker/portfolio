@@ -17,7 +17,7 @@ const line = (text, index) => text.slice(0, index).split('\n').length;
 const decode = value => value.replace(/&amp;/gi, '&').replace(/&quot;/gi, '"').replace(/&#39;|&apos;/gi, "'").replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n))).replace(/&#x([\da-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n, 16)));
 const scope = file => {
   const p = rel(file);
-  if (PORTFOLIO_PAGES.has(p) || /^(?:scripts|styles|assets|vendor)\//.test(p)) return 'portfolio';
+  if (PORTFOLIO_PAGES.has(p) || /^(?:scripts|styles|assets|vendor)\//.test(p) || /^[^/]+\.(?:css|js)$/.test(p)) return 'portfolio';
   if (/^work\/[^/]+\/assets\//.test(p) || /^work\/offer\/case-study-assets\//.test(p)) return 'original-assets';
   return 'prototype';
 };
@@ -167,7 +167,7 @@ const sourceNotes = issues.filter(item => item.severity === 'source-note');
 const uniqueExternals = [...new Map(externals.map(item => [[item.file, item.context, item.url].join('\0'), item])).values()];
 const report = {
   generatedAt: new Date().toISOString(), siteRoot: 'redesign', mode: 'Static source inspection only', status: errors.length ? 'failed' : 'passed',
-  execution: { websiteStarted: false, serverStarted: false, browserStarted: false, prototypeExecuted: false, deployed: false, javascriptParsedWithNodeCheckOnly: true },
+  execution: { scope: 'Actions performed by this static validator, not prior user-authorized preview sessions', websiteStarted: false, serverStarted: false, browserStarted: false, prototypeExecuted: false, deployed: false, javascriptParsedWithNodeCheckOnly: true },
   counts, portfolioErrors: errors, prototypeAndOriginalAssetNotes: sourceNotes, prototypeCtaChecks: ctaChecks,
   externalReferences: { portfolio: uniqueExternals.filter(item => item.scope === 'portfolio'), prototypesAndOriginalAssets: uniqueExternals.filter(item => item.scope !== 'portfolio') },
   limitations: ['Static inspection cannot establish responsive layout quality, animation behavior, interaction correctness, focus order or rendered image fidelity.', 'External websites, Figma prototype targets, CDN dependencies and original prototype API behavior were not fetched or executed.', 'Original prototypes and original source assets are reported separately and do not fail the newly built portfolio checks.']

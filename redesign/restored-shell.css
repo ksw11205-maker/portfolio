@@ -1,0 +1,20 @@
+/* Only factual-content layout and the new exact-UI covers extend the restored shell. */
+.profile-anchor{position:absolute;width:1px;height:1px;pointer-events:none;top:0}
+.about{position:relative}
+.profile-category{display:block;font-size:11px;color:#8c99ad;margin-bottom:8px}
+.about .profile-details .profile-list{display:flex;flex-direction:column;gap:28px}
+.about .profile-details .profile-list>li{margin:0}
+.about .profile-details .profile-list h3{font-size:18px}
+.about .profile-details .profile-role{font-size:13px;line-height:1.8}
+.profile-research{margin-top:16px;color:#a2abba;font-size:12px;line-height:1.8}
+.profile-research summary{cursor:pointer;padding:6px 0;color:#d2d9e4}
+.profile-research ul{padding:12px 0 0 14px;border-left:1px solid #61728a50;list-style:none}
+.profile-research li+li{margin-top:20px}
+.profile-research strong{color:#d6dce6;font-weight:600}
+.profile-research .profile-date{font-size:10px}
+.restored-underline{position:absolute;left:0;right:0;bottom:-.14em;height:4px;border-radius:3px;background:#2d63ed;transform:rotate(-.7deg)}
+.project-visual .mockup-preview{width:100%;height:100%;padding:0}
+.project-visual .mockup-preview>img{width:100%;height:100%;object-fit:cover;display:block}
+.project-cafekok .project-visual{background:#d9c9b6}
+.contact-heading .contact-title-end{font-size:.85em}
+@media(max-width:700px){.about .profile-details .profile-list{gap:23px}.profile-research{font-size:12px}.project-visual .mockup-preview>img{object-fit:contain}.project-offer .project-visual{background:#eae7e2}.contact-heading .contact-title-end{font-size:.8em}}

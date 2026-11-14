@@ -4,3 +4,4 @@
 !**/.env.example
 **/.DS_Store
 portfolio-shell/prototypes/cafekok/dist/
+preview-local*.log

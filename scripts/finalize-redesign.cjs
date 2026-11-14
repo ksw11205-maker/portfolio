@@ -8,6 +8,8 @@ for (const relative of cases) {
   let text = fs.readFileSync(file, 'utf8').replace(/<header class="site-header">[\s\S]*?<\/header>/, header);
   if (!text.includes('rel="icon"')) text = text.replace('</head>', '  <link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">\n</head>');
   if (!text.includes('rel="preload"')) text = text.replace('</head>', '  <link rel="preload" href="/assets/fonts/SUIT-Variable.woff2" as="font" type="font/woff2" crossorigin>\n</head>');
+  if (!text.includes('case-cursor.css')) text = text.replace('</head>', '  <link rel="stylesheet" href="/case-cursor.css"><script defer src="/case-cursor.js"></script>\n</head>');
+  text = text.replaceAll('href="/#profile"','href="/#about"');
   text = text.replace(/(src="\/assets\/covers\/(?:lg|cafekok|offer)\.svg"[^>]*?)width="1920" height="1080"/g, '$1width="2400" height="1350"');
   fs.writeFileSync(file, text.replace(/\r\n/g, '\n'));
 }

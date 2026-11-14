@@ -1,0 +1,4 @@
+.brand-mark{display:block;width:28px;height:28px;object-fit:contain;flex-shrink:0;content:url('/assets/brand/symbol-on-light.svg')}
+a:has(>.brand-mark){display:inline-flex;align-items:center;gap:12px}
+
+.brand-mark.brand-on-dark{content:url('/assets/brand/symbol.svg')}

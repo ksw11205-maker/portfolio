@@ -1,0 +1,231 @@
+/* KSW Editorial Remaster · pass 01 · 2026-11-12
+   Authored for the KSW case studies. No wholesale template copied.
+   Licensed ecosystem already present: GSAP + Lenis; see REMASTER_SOURCES.md.
+   Sections keep their own palettes and existing research/UI evidence.
+*/
+/* Common: Korean headline rhythm and accessible editorial hierarchy. */
+body[data-ksw-remaster] { font-kerning: normal; }
+body[data-ksw-remaster] :is(h1,h2,h3) { text-wrap: balance; }
+body[data-ksw-remaster] :is(p,li,dd) { overflow-wrap: break-word; }
+body[data-ksw-remaster] a:focus-visible,body[data-ksw-remaster] button:focus-visible {outline:2px solid currentColor;outline-offset:4px}
+
+/* LG · research in a visual evidence journal, not a gradient/card template. */
+body[data-ksw-remaster="lg"] #background .chapter-label {
+  padding-block:0 19px;border-bottom:1px solid rgba(220,131,175,.42);
+  margin-bottom:33px;
+}
+body[data-ksw-remaster="lg"] #background .chapter-heading {
+  max-width:none;grid-template-columns:minmax(0,1.28fr) minmax(280px,.72fr);
+  align-items:end;gap:clamp(35px,5vw,78px);margin-bottom:58px;
+}
+body[data-ksw-remaster="lg"] #background .chapter-heading h2 {
+  font-size:clamp(39px,3.85vw,59px);line-height:1.18;
+  letter-spacing:-.035em;font-weight:620;
+}
+body[data-ksw-remaster="lg"] #background .chapter-heading .lead {
+  margin:0 0 5px;padding-left:20px;
+  border-left:1px solid rgba(220,131,175,.48);
+  color:#cbc0cc;font-size:15px;line-height:1.95;
+}
+body[data-ksw-remaster="lg"] #background .usage-context {
+  grid-template-columns:minmax(0,1.85fr) minmax(240px,.8fr);
+  gap:clamp(34px,4.5vw,78px);align-items:stretch;
+}
+body[data-ksw-remaster="lg"] #background .context-image {
+  position:relative;align-self:start;
+}
+body[data-ksw-remaster="lg"] #background .context-image::after {
+  content:"FIG.01  /  TV SCREEN CONTEXT";display:block;margin-top:12px;
+  font:500 10px/1.5 Inter,sans-serif;letter-spacing:.12em;color:#a79aa9;
+}
+body[data-ksw-remaster="lg"] #background .context-image img {border:0}
+body[data-ksw-remaster="lg"] #background .observations {
+  align-content:center;gap:0;border-left:1px solid rgba(210,168,197,.24);padding-left:25px;
+}
+body[data-ksw-remaster="lg"] #background .observations article {
+  position:relative;padding:25px 0 22px;border-top:1px solid rgba(210,168,197,.16);
+}
+body[data-ksw-remaster="lg"] #background .observations article:first-child{border-top:0}
+body[data-ksw-remaster="lg"] #background .observations article::before {
+  content:"";position:absolute;left:-29px;top:32px;width:7px;height:7px;
+  border-radius:50%;background:#dc83af;border:2px solid #0b0a0e;
+  box-shadow:0 0 0 1px rgba(220,131,175,.6);
+}
+body[data-ksw-remaster="lg"] #background .observations h3{font-size:16px;letter-spacing:-.015em}
+body[data-ksw-remaster="lg"] #background .observations p{font-size:13px;line-height:1.9}
+
+/* IVI · analytical automotive spread, photographic hierarchy 62/38. */
+body[data-ksw-remaster="ivi"] #background .section-intro {
+  display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);
+  gap:clamp(24px,5vw,70px);align-items:end;max-width:none;
+  padding-top:0;margin-bottom:48px;
+}
+body[data-ksw-remaster="ivi"] #background .section-intro .eyebrow {
+  grid-column:1 / -1;margin-bottom:3px;padding-bottom:15px;
+  border-bottom:1px solid rgba(99,217,234,.45);
+}
+body[data-ksw-remaster="ivi"] #background .section-intro h2 {
+  grid-column:1;font-size:clamp(38px,3.65vw,55px);
+  line-height:1.19;letter-spacing:-.035em;
+}
+body[data-ksw-remaster="ivi"] #background .section-intro .lead {
+  grid-column:2;border-left:1px solid rgba(99,217,234,.35);
+  padding-left:21px;margin-bottom:4px;line-height:1.9;
+}
+body[data-ksw-remaster="ivi"] #background .comparison-images {
+  display:grid;grid-template-columns:minmax(0,1.17fr) minmax(0,.83fr);
+  gap:18px;align-items:start;
+}
+body[data-ksw-remaster="ivi"] #background .comparison-images figure:nth-child(2){margin-top:58px}
+body[data-ksw-remaster="ivi"] #background .comparison-images figure figcaption{
+  font-size:12px;letter-spacing:-.01em;padding-top:12px;border-top:1px solid rgba(99,217,234,.25);
+}
+
+/* CAFEKOK · genuine place photography and softer asymmetric magazine layout. */
+body[data-ksw-remaster="cafekok"] #overview .ed-wrap {
+  display:grid;grid-template-columns:minmax(0,.94fr) minmax(0,1.06fr);
+  column-gap:clamp(30px,5.5vw,88px);align-items:center;
+}
+body[data-ksw-remaster="cafekok"] #overview .ed-intro{
+  margin:0!important;max-width:none;min-width:0;
+}
+body[data-ksw-remaster="cafekok"] #overview .ed-kicker {
+  display:inline-block;padding-bottom:12px;border-bottom:1px solid #b88065;
+  margin-bottom:clamp(34px,4vw,60px);
+}
+body[data-ksw-remaster="cafekok"] #overview .ed-intro h2{
+  font-size:clamp(38px,3.8vw,58px);line-height:1.18;
+  letter-spacing:-.048em;
+}
+body[data-ksw-remaster="cafekok"] #overview .ed-lead {
+  max-width:32em;font-size:16px;line-height:1.85;
+  margin-top:31px;padding-left:16px;border-left:1px solid rgba(145,99,71,.48);
+}
+body[data-ksw-remaster="cafekok"] #overview .ksw-cafe-photo {
+  position:relative;overflow:hidden;margin:0;min-width:0;
+  height:min(560px,43vw);background:#c7b9a5;
+}
+body[data-ksw-remaster="cafekok"] #overview .ksw-cafe-photo img {
+  width:100%;height:100%;object-fit:cover;object-position:51% 45%;
+  filter:saturate(.77) contrast(.98);
+}
+body[data-ksw-remaster="cafekok"] #overview .ksw-cafe-photo figcaption {
+  position:absolute;bottom:0;right:0;min-width:195px;background:#fff8ec;
+  padding:13px 17px;font:500 11px/1.6 'Pretendard',sans-serif;
+  letter-spacing:-.025em;color:#4f4033;
+}
+
+/* OFFER · typographic archive instead of another left-aligned card group. */
+body[data-ksw-remaster="offer"] #overview .ed-wrap{
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(290px,.78fr);
+  gap:clamp(25px,4vw,60px) clamp(30px,6vw,96px);
+  align-items:start;
+}
+body[data-ksw-remaster="offer"] #overview .ed-intro{
+  grid-column:1;max-width:none;margin:0!important;padding-top:25px;
+}
+body[data-ksw-remaster="offer"] #overview .ed-kicker{
+  padding-bottom:15px;border-bottom:1px solid rgba(255,77,34,.75);
+  margin-bottom:38px;
+}
+body[data-ksw-remaster="offer"] #overview .ed-intro h2{
+  font-size:clamp(39px,3.9vw,61px);line-height:1.16;
+  letter-spacing:-.043em;
+}
+body[data-ksw-remaster="offer"] #overview .ed-lead{
+  max-width:36em;line-height:1.9;margin-top:28px;font-size:15px;
+}
+body[data-ksw-remaster="offer"] #overview .ksw-offer-index{
+  min-width:0;margin-top:25px;border-top:1px solid #151515;
+  border-bottom:1px solid #151515;padding:17px 0 24px;
+}
+body[data-ksw-remaster="offer"] #overview .ksw-offer-index>p{
+  font:600 10px/1.7 Inter,sans-serif;letter-spacing:.1em;
+  color:#e45430;margin:0 0 24px;
+}
+body[data-ksw-remaster="offer"] #overview .ksw-offer-index ol{
+  margin:0;padding:0;list-style:none;counter-reset:feature;
+}
+body[data-ksw-remaster="offer"] #overview .ksw-offer-index li{
+  counter-increment:feature;display:flex;align-items:baseline;
+  border-top:1px solid #d9d5cc;padding:15px 3px 13px;
+  font:500 clamp(22px,2.4vw,36px)/1.2 Inter,'Pretendard',sans-serif;
+  letter-spacing:-.05em;color:#202020;
+}
+body[data-ksw-remaster="offer"] #overview .ksw-offer-index li::before{
+  content:"0" counter(feature);margin-right:auto;flex:none;
+  font:500 11px/1 Inter,sans-serif;color:#e45430;
+  padding-right:24px;letter-spacing:0;
+}
+body[data-ksw-remaster="offer"] #overview .ed-facts{
+  grid-column:1 / -1;margin-top:12px!important;
+  padding-top:22px;border-top:1px solid #a9a49b;
+}
+
+/* LG Tool Guide · remove speculative glow from evidence pages and clarify reading rhythm. */
+body[data-ksw-remaster="lg-guide"] .guide-stage--soft{
+  background:#110e14;
+}
+body[data-ksw-remaster="lg-guide"] #workspace{
+  background:#0b0a0e;
+}
+body[data-ksw-remaster="lg-guide"] .stage-head{
+  padding-top:24px;border-top:1px solid rgba(228,145,187,.34);
+}
+body[data-ksw-remaster="lg-guide"] .stage-head h2{
+  letter-spacing:-.036em;line-height:1.23;
+}
+body[data-ksw-remaster="lg-guide"] .ui-legend--linked li{
+  border-left:1px solid rgba(228,145,187,.25);
+}
+
+@media(max-width:900px){
+  body[data-ksw-remaster="lg"] #background .chapter-heading,
+  body[data-ksw-remaster="ivi"] #background .section-intro,
+  body[data-ksw-remaster="cafekok"] #overview .ed-wrap,
+  body[data-ksw-remaster="offer"] #overview .ed-wrap{
+    grid-template-columns:minmax(0,1fr);gap:24px;
+  }
+  body[data-ksw-remaster="lg"] #background .chapter-heading h2,
+  body[data-ksw-remaster="ivi"] #background .section-intro h2 {font-size:clamp(30px,5.2vw,45px)}
+  body[data-ksw-remaster="lg"] #background .chapter-heading .lead,
+  body[data-ksw-remaster="ivi"] #background .section-intro .lead{
+    grid-column:1;max-width:48em;
+  }
+  body[data-ksw-remaster="cafekok"] #overview .ksw-cafe-photo{
+    height:min(520px,60vw);
+  }
+  body[data-ksw-remaster="offer"] #overview .ed-facts{grid-column:1}
+  body[data-ksw-remaster="offer"] #overview .ksw-offer-index{margin-top:0}
+}
+@media(max-width:600px){
+  body[data-ksw-remaster="lg"] #background .chapter-label{margin-bottom:25px}
+  body[data-ksw-remaster="lg"] #background .chapter-heading{margin-bottom:27px;gap:17px}
+  body[data-ksw-remaster="lg"] #background .chapter-heading h2{font-size:30px;line-height:1.24}
+  body[data-ksw-remaster="lg"] #background .chapter-heading .lead{
+    font-size:13px;padding-left:13px;line-height:1.8;
+  }
+  body[data-ksw-remaster="lg"] #background .usage-context{grid-template-columns:1fr;gap:20px}
+  body[data-ksw-remaster="lg"] #background .observations{padding-left:18px}
+  body[data-ksw-remaster="lg"] #background .observations article::before{left:-22px}
+  body[data-ksw-remaster="ivi"] #background .section-intro h2{font-size:30px;line-height:1.25}
+  body[data-ksw-remaster="ivi"] #background .section-intro .lead{padding-left:14px;font-size:13px}
+  body[data-ksw-remaster="ivi"] #background .comparison-images{grid-template-columns:1fr;gap:24px}
+  body[data-ksw-remaster="ivi"] #background .comparison-images figure:nth-child(2){margin-top:0}
+  body[data-ksw-remaster="cafekok"] #overview .ed-wrap{gap:30px}
+  body[data-ksw-remaster="cafekok"] #overview .ed-intro h2{font-size:34px}
+  body[data-ksw-remaster="cafekok"] #overview .ed-lead{font-size:14px;padding-left:13px;margin-top:20px}
+  body[data-ksw-remaster="cafekok"] #overview .ksw-cafe-photo{height:92vw;max-height:440px}
+  body[data-ksw-remaster="offer"] #overview .ed-intro h2{font-size:34px}
+  body[data-ksw-remaster="offer"] #overview .ed-intro{padding-top:0}
+  body[data-ksw-remaster="offer"] #overview .ed-kicker{margin-bottom:22px}
+  body[data-ksw-remaster="offer"] #overview .ksw-offer-index li{font-size:23px}
+  body[data-ksw-remaster="lg-guide"] .ui-legend--linked li{border-left:0}
+}
+@media(prefers-reduced-motion:reduce){
+  body[data-ksw-remaster] *{scroll-behavior:auto!important}
+}
+/* CAFEKOK photography must paint above section-level ::after atmosphere overlays. */
+body[data-ksw-remaster="cafekok"] #overview .ksw-cafe-photo {isolation:isolate;z-index:1}
+body[data-ksw-remaster="cafekok"] #overview .ksw-cafe-photo img {position:relative;z-index:1}
+body[data-ksw-remaster="cafekok"] #overview .ksw-cafe-photo figcaption {z-index:2}

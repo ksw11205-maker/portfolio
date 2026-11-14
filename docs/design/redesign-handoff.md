@@ -1,5 +1,13 @@
 # 리디자인 구현 인계
 
+## 최신 사용자 수정 · 2026-11-15
+
+로컬 실행 승인 후 사용자 피드백을 반영했다. 기존 `portfolio-shell/dist`의 쉘과 커서를 `redesign/`에 복원하고 최신 프로필·SBS 교육 경험·Q&A·Contact 문구를 유지했다. `scripts/restore-shell.cjs`가 복원 빌드의 원본이며 `build-redesign-home.cjs`는 이 스크립트로 위임한다. 기존 원본은 변경하지 않는다.
+
+상세는 쉬운 설명을 유지하고 실제 UI 영역에 번호 마커·해당 번호의 세부 설계 판단을 추가했다. 회고 Q&A를 복원하고 다음 프로젝트 하나로 순환한다(LG→IVI→CAFEKOK→OFFER→LG). 스타일은 LG 다크 테크·마젠타/바이올렛, IVI 차콜·시안, 카페콕 크림·브라운·살구, OFFER 웜그레이·블랙·오렌지다. 목업은 MIT Devices.css 공식 기기 프레임 소스를 참고·이식한 SVG에 실제 UI를 합성한다. 출처와 라이선스는 `docs/design/references/mockup-refresh-20261115/`에 보관한다.
+
+현재 로컬 서버는 4175번 포트로 동작한다. HTTP와 소스 검사를 수행했다. Windows Computer Use로 기존 화면을 확인한 뒤 새로고침을 시도했으나, 도구가 현재 URL을 안전하게 판별하지 못해 자동조작을 중단했다. 따라서 수정 이후 실제 화면·모바일·모션 검수는 완료하지 못했다. 이후 기록은 최초 구현 당시의 상태다.
+
 2026-11-15: 사용자가 Sol Ultra로 새 포트폴리오 구현 시작을 지시했다. 새 구현은 `redesign/`, 브랜치는 `redesign/implementation-20261115`다. 기존 완성본은 `archive/pre-redesign-20261114`, 직전 준비 자료는 `redesign/preparation-20261114`에 보존한다. 기존 dist와 사용자 다운로드 원본을 변경하지 않았다.
 
 ## 현재 결과

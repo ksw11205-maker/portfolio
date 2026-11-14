@@ -1,0 +1,35 @@
+// Restore the owner's original shell and interactions, retaining curated facts.
+const fs=require('node:fs'),p=require('node:path');
+const root=p.resolve(__dirname,'..'),source=p.join(root,'portfolio-shell/dist'),out=p.join(root,'redesign');
+const read=f=>fs.readFileSync(f,'utf8'),write=(f,s)=>fs.writeFileSync(f,s.replace(/\r\n/g,'\n'));
+for(const name of fs.readdirSync(source)){if(/\.(css|js)$/.test(name))fs.copyFileSync(p.join(source,name),p.join(out,name));}
+fs.cpSync(p.join(source,'vendor'),p.join(out,'vendor'),{recursive:true});
+const profile=JSON.parse(read(p.join(root,'docs/projects/profile-content-20261115.json')));
+const qa=JSON.parse(read(p.join(root,'docs/design/qa-content-20261115.json'))).cards;
+const esc=s=>String(s||'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
+const experience=profile.experience.map(e=>`<li><span class="profile-category">${esc(e.category)}</span><h3>${esc(e.institution)}</h3><p class="profile-role">${esc(e.title)}</p><p class="profile-date">${esc(e.start?e.start+'–'+(e.end||'현재'):e.periodLabel)}${e.status?' · '+esc(e.status):''}</p>${e.projects?'<details class="profile-research"><summary>참여 연구와 맡은 역할</summary><ul>'+e.projects.map(x=>`<li><strong>${esc(x.partner)}</strong><p>${esc(x.title)}</p><p class="profile-date">${esc(x.start+'–'+x.end)}</p><p>${esc(x.contribution)}</p></li>`).join('')+'</ul></details>':''}</li>`).join('');
+const education=`<li><h3>동의대학교</h3><p class="profile-role">인간·시스템디자인공학<br>산업ICT공학 부전공</p><p class="profile-date">2020.03–2026.02 · 졸업</p></li>`;
+const certs=profile.certifications.filter(x=>x.priority==='primary').map(x=>`<li><h3>${esc(x.name)}${x.grade==='1급'?' 1급':''}</h3><p class="profile-date">${esc(x.date)} · ${esc(x.issuer)}</p></li>`).join('');
+const awards=profile.awards.map(x=>`<li><h3>${esc(x.award)}</h3><p class="award-event">${esc(x.name)}</p><p class="profile-date">${esc(x.date)} · ${esc(x.issuer)}</p></li>`).join('');
+let about=read(p.join(source,'profile-sections.js')).split('export function aboutSection(){return `')[1].split('`;}',1)[0];
+about=about.replace("${keyword('명확한 경험')}",'<em class="statement-keyword">명확한 경험<span class="restored-underline" aria-hidden="true"></span></em>');
+about=about.replace('<div class="about-grid profile-details">', '<span id="profile" class="profile-anchor" aria-hidden="true"></span><div class="about-grid profile-details">');
+const start=about.indexOf('<div class="about-grid profile-details">');
+about=about.slice(0,start)+`<div class="about-grid profile-details"><div class="reveal"><p class="eyebrow">EXPERIENCE</p><ul class="profile-list">${experience}</ul></div><div class="reveal"><p class="eyebrow">EDUCATION & CERTIFICATIONS</p><ul class="profile-list">${education}${certs}</ul></div><div class="reveal"><p class="eyebrow">AWARDS</p><ul class="profile-list">${awards}</ul></div></div></section>`;
+let sections=read(p.join(out,'profile-sections.js'));
+sections=sections.replace(/export function aboutSection\(\)\{[\s\S]*?\nexport function toolsSection/,`export function aboutSection(){return ${JSON.stringify(about)};}\n\nexport function toolsSection`);
+sections=sections.replace("keyword('빠르게 검증')","keyword('빠르게 구체화')");write(p.join(out,'profile-sections.js'),sections);
+let data=read(p.join(out,'data.js'));data=data.slice(0,data.indexOf('export const questions ='))+'export const questions = '+JSON.stringify(qa.map(x=>[x.question,x.answer]),null,2)+';\n';write(p.join(out,'data.js'),data);
+const cover=(slug)=>slug==='ivi'?'/assets/projects/ivi-cover-clean-1920.jpg':`/assets/covers/${slug}.svg`;
+const preview="const preview=p=>`<article class=\"project project-${p.slug}\"><a class=\"project-visual ${p.tone}\" href=\"/work/${p.slug}${p.slug==='offer'?'/case-study.html':'/'}\" aria-label=\"${p.title} case study\"><div class=\"art mockup-preview\"><img src=\"${p.slug==='ivi'?'/assets/projects/ivi-cover-clean-1920.jpg':'/assets/covers/'+p.slug+'.svg'}\" alt=\"${p.coverAlt||'실제 카페콕 화면을 넣은 휴대폰 목업'}\" width=\"2400\" height=\"1350\" loading=\"lazy\" style=\"view-transition-name:cover-${p.slug}\"></div></a><div class=\"project-info\"><span class=\"project-number\">${p.number}</span><div class=\"project-copy\"><h3>${p.title}</h3><p>${p.category}</p><p class=\"project-summary\" lang=\"ko\">${p.summary}</p></div>${projectMetadata(p)}</div></article>`;\n";
+let app=read(p.join(out,'app.js'));app=app.slice(0,app.indexOf('const preview='))+preview+app.slice(app.indexOf('const footer='));
+const qaEnglish=[['How do I make','complexity clear?'],['How do ideas','become tangible?'],['What makes','a crafted interface?'],['Where does AI','fit in my work?'],['How do we','work as one?']];
+let n=0;app=app.replace(/\{lines:\[[^\]]+\],alt:/g,()=>'{lines:'+JSON.stringify(qaEnglish[n++])+',alt:');
+app=app.replace('Let’s Make','Let’s Shape').replace('It Clear.','What’s Next.');write(p.join(out,'app.js'),app);
+let html=read(p.join(source,'index.html'));html=html.replace(/<section id="about"[\s\S]*?<\/section>/,about);
+html=html.replace(/(<article class="project project-(lg|ivi|cafekok|offer)">)<a[\s\S]*?<\/a>/g,(_,prefix,slug)=>`${prefix}<a class="project-visual ${slug}" href="/work/${slug}${slug==='offer'?'/case-study.html':'/'}" aria-label="${slug} 프로젝트 상세"><div class="art mockup-preview"><img src="${cover(slug)}" alt="${slug} 실제 프로젝트 화면 목업" width="2400" height="1350" loading="lazy" style="view-transition-name:cover-${slug}"></div></a>`);
+let q=0,a=0;html=html.replace(/(<h3 id="qa-question-\d">)[\s\S]*?<\/h3>/g,(_,head)=>head+qaEnglish[q++].map(x=>`<span class="qa-question-line">${x}</span>`).join(' ')+'</h3>');
+html=html.replace(/(<p class="qa-card-answer" lang="ko">)[\s\S]*?<\/p>/g,(_,head)=>head+esc(qa[a++].answer)+'</p>');
+html=html.replace('Let’s Make','Let’s Shape').replace('It Clear.','What’s Next.').replace('빠르게 검증','빠르게 구체화');
+html=html.replace('</head>','<link rel="stylesheet" href="/restored-shell.css"></head>');write(p.join(out,'index.html'),html);
+console.log('Original shell, cursor and motion restored with curated profile, Q&A and new cover destinations.');

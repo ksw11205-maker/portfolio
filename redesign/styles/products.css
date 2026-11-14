@@ -1,6 +1,6 @@
 /* CAFÉKOK and OFFER case-study layouts. Original product interfaces stay intact. */
-body[data-project="cafekok"] { --product-bg:#f3f0e9; --product-ink:#2d2925; --product-muted:#655e56; --product-line:#d7d0c4; --product-accent:#5c3826; background:var(--product-bg); }
-body[data-project="offer"] { --product-bg:#fff; --product-ink:#171717; --product-muted:#5e5e5a; --product-line:#deded8; --product-accent:#c73512; background:var(--product-bg); }
+body[data-project="cafekok"] { --product-bg:#f7f0e6; --product-ink:#38291f; --product-muted:#706052; --product-line:#dbc9b7; --product-accent:#75462d; --product-soft:#efceb2; background:var(--product-bg); }
+body[data-project="offer"] { --product-bg:#f1f0eb; --product-ink:#171717; --product-muted:#65615b; --product-line:#d5d1c9; --product-accent:#c73512; --product-soft:#e8e4dc; background:var(--product-bg); }
 :is([data-project="cafekok"],[data-project="offer"]) .product-story { background:var(--product-bg); color:var(--product-ink); }
 :is([data-project="cafekok"],[data-project="offer"]) .product-story > .case-section { width:100%; max-width:1440px; margin-inline:auto; padding:clamp(72px,8vw,128px) clamp(24px,5vw,80px); }
 :is([data-project="cafekok"],[data-project="offer"]) .product-story > .case-section + .case-section { border-top:1px solid var(--product-line); }
@@ -29,7 +29,7 @@ body[data-project="offer"] { --product-bg:#fff; --product-ink:#171717; --product
 
 /* Café: quiet architectural space, warm materials, generous mobile evidence. */
 [data-project="cafekok"] .product-opening .case-heading { max-width:18ch; font-size:clamp(40px,5.3vw,78px); }
-.cafe-serif { font-weight:350; }
+.cafe-serif { font-weight:400; color:#905735; }
 .product-opening-copy { display:grid; grid-template-columns:1.1fr 1fr; gap:16px 72px; margin-top:48px; align-items:start; }
 .product-opening-copy .case-lead { margin:0; grid-row:span 2; }
 .product-opening-copy p:not(.case-lead) { margin:0; }
@@ -287,4 +287,62 @@ body[data-project="offer"] { --product-bg:#fff; --product-ink:#171717; --product
 }
 @media (prefers-reduced-motion:reduce) {
   :is([data-project="cafekok"],[data-project="offer"]) .product-story * { animation:none !important; transition:none !important; }
+}
+
+/* Art direction and numbered, source-aligned UI commentary. */
+[data-project="cafekok"] .product-opening { background:radial-gradient(ellipse at 100% 0,#f1d7bf80,transparent 60%); }
+[data-project="cafekok"] .cafe-taste { background:#f9f4ec; }
+[data-project="cafekok"] .cafe-purpose::after { background:linear-gradient(90deg,#f1d8bfeF,#f7f0e6db 55%,#f7f0e65c); }
+[data-project="cafekok"] .cafe-return { background:#f2e4d5; }
+[data-project="cafekok"] .purpose-list span { border-color:#be9979; background:#f5dfca; color:#65432d; }
+[data-project="cafekok"] .taste-axes li { background:#f2e2d1; border-color:#d8bea4; }
+[data-project="cafekok"] .decision-number { color:#8b5434; }
+[data-project="cafekok"] .product-reflection { background:#f5e9da; }
+[data-project="offer"] .offer-opening { background:#e8e5dd; }
+[data-project="offer"] .offer-compare { background:#eae7df; }
+[data-project="offer"] .offer-return { background:#f7f6f2; }
+[data-project="offer"] .offer-responsive-section { background:#e9e6de; }
+[data-project="offer"] .offer-browser { border-color:#d2cec5; background:#faf9f6; }
+[data-project="offer"] .browser-bar { background:#e5e2da; border-color:#d2cec5; }
+[data-project="offer"] .offer-responsive { background:#ddd8cd; }
+[data-project="offer"] .offer-manifesto > span { color:var(--product-ink); text-decoration:underline; text-decoration-color:#d64520; text-decoration-thickness:4px; text-underline-offset:.12em; }
+[data-project="offer"] .offer-principles span { color:var(--product-accent); }
+:is([data-project="cafekok"],[data-project="offer"]) .ui-annotated { position:relative; width:100%; isolation:isolate; }
+:is([data-project="cafekok"],[data-project="offer"]) .ui-annotated > .screen { display:block; width:100%; height:auto; }
+:is([data-project="cafekok"],[data-project="offer"]) .ui-focus { position:absolute; left:var(--x); top:var(--y); width:var(--w); height:var(--h); border:1.5px solid var(--product-accent); border-radius:5px; pointer-events:none; box-shadow:0 0 0 2px #fff8; }
+:is([data-project="cafekok"],[data-project="offer"]) .ui-focus > b { position:absolute; left:-9px; top:-12px; display:grid; place-items:center; width:25px; height:25px; border-radius:50%; border:2px solid #fff9; background:var(--product-accent); color:#fff9f3; font-size:10px; line-height:1; font-weight:700; font-variant-numeric:tabular-nums; letter-spacing:0; box-shadow:0 2px 5px #20160e1c; }
+:is([data-project="cafekok"],[data-project="offer"]) .screen-notes { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; margin-top:25px; padding-top:23px; border-top:1px solid var(--product-line); list-style:none; text-align:left; }
+:is([data-project="cafekok"],[data-project="offer"]) .screen-notes > li { display:grid; grid-template-columns:26px 1fr; gap:12px; min-width:0; }
+:is([data-project="cafekok"],[data-project="offer"]) .screen-note-number { display:grid; place-items:center; width:25px; height:25px; border-radius:50%; background:var(--product-accent); color:#fff9f3; font-size:10px; line-height:1; font-weight:650; letter-spacing:0; }
+:is([data-project="cafekok"],[data-project="offer"]) .screen-notes strong { display:block; font-size:15px; line-height:1.65; color:var(--product-ink); font-weight:650; letter-spacing:-.025em; }
+:is([data-project="cafekok"],[data-project="offer"]) .product-story .screen-notes p { margin:8px 0 0; font-size:13px; font-weight:400; line-height:1.85; color:var(--product-muted); letter-spacing:-.015em; }
+[data-project="cafekok"] .screen-notes { grid-template-columns:1fr; gap:22px; }
+[data-project="cafekok"] .phone-stage .ui-annotated { border-radius:27px; }
+[data-project="cafekok"] .phone-crop--home .ui-annotated { width:100%; }
+[data-project="offer"] .offer-interest-grid .screen-notes,
+[data-project="offer"] .offer-compare-detail .screen-notes,
+[data-project="offer"] .offer-brand-context .screen-notes { grid-template-columns:1fr; }
+:is([data-project="cafekok"],[data-project="offer"]) .reflection-qa { margin-top:54px; border-top:1px solid var(--product-ink); }
+:is([data-project="cafekok"],[data-project="offer"]) .reflection-qa article { display:grid; grid-template-columns:80px 1fr; gap:30px; padding:32px 0 35px; border-bottom:1px solid var(--product-line); }
+:is([data-project="cafekok"],[data-project="offer"]) .reflection-qno { font-size:13px; font-weight:650; padding-top:5px; letter-spacing:.03em; color:var(--product-accent); }
+:is([data-project="cafekok"],[data-project="offer"]) .reflection-qa h3 { font-size:24px; line-height:1.5; letter-spacing:-.035em; font-weight:600; }
+:is([data-project="cafekok"],[data-project="offer"]) .reflection-qa p { max-width:850px; font-size:16px; line-height:1.9; margin:18px 0 0; color:var(--product-muted); }
+:is([data-project="cafekok"],[data-project="offer"]) .reflection-answer { font-weight:700; color:var(--product-accent); margin-right:5px; }
+@media(max-width:900px){
+  [data-project="offer"] .screen-notes { gap:20px; }
+  :is([data-project="cafekok"],[data-project="offer"]) .screen-notes strong { font-size:14px; }
+}
+@media(max-width:760px){
+  :is([data-project="cafekok"],[data-project="offer"]) .screen-notes { grid-template-columns:1fr; gap:20px; margin-top:21px; padding-top:21px; }
+  :is([data-project="cafekok"],[data-project="offer"]) .reflection-qa { margin-top:35px; }
+  :is([data-project="cafekok"],[data-project="offer"]) .reflection-qa article { grid-template-columns:36px 1fr; gap:15px; padding:26px 0; }
+  :is([data-project="cafekok"],[data-project="offer"]) .reflection-qa h3 { font-size:20px; }
+  :is([data-project="cafekok"],[data-project="offer"]) .reflection-qa p { font-size:15px; margin-top:13px; }
+  [data-project="cafekok"] .cafe-purpose::after { background:linear-gradient(180deg,#f1d8bfea,#f7f0e6b5); }
+}
+@media(max-width:600px){
+  [data-project="offer"] .offer-browser--pan .screen-viewport > .ui-annotated { width:960px; min-width:100%; max-width:none; }
+  [data-project="offer"] .offer-browser--pan .screen-viewport > .ui-annotated > .screen { width:100%; min-width:0; max-width:100%; }
+  :is([data-project="cafekok"],[data-project="offer"]) .ui-focus { border-width:1px; }
+  :is([data-project="cafekok"],[data-project="offer"]) .ui-focus > b { width:23px; height:23px; font-size:9px; top:-11px; left:-7px; }
 }

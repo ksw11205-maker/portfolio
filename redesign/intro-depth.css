@@ -1,0 +1,6 @@
+/* Reverse the original expanding portal into a continuous depth entrance. */
+.portfolio-intro--depth{overflow:hidden;pointer-events:none}
+.intro-depth-backdrop{position:absolute;inset:0;background:#08090b}
+.intro-depth-mark{position:absolute;transform-origin:50% 50%;will-change:transform,opacity;pointer-events:none}
+.intro-depth-mark svg{display:block;width:100%;height:100%;overflow:visible}
+@media(prefers-reduced-motion:reduce){.portfolio-intro--depth{display:none}}

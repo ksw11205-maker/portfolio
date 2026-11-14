@@ -1,0 +1,17 @@
+/* Moving light fields continue the existing blue/pearl Q&A → CONTACT wave. */
+#contact .contact-atmosphere{position:absolute;inset:0;overflow:hidden;pointer-events:none;isolation:isolate;contain:paint}
+#contact .contact-atmosphere__field{position:absolute;pointer-events:none;border-radius:50%;animation-play-state:paused;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-direction:alternate;transform-origin:center;will-change:auto}
+#contact .contact-atmosphere__field--blue{left:8%;top:22%;width:78%;height:112%;background:radial-gradient(ellipse at center,#4299eb55 0%,#68b8ed30 40%,#68b8ed00 72%);animation-name:contact-blue-drift;animation-duration:15s;transform:translate3d(-18%,5%,0) rotate(-16deg) scale(1.04)}
+#contact .contact-atmosphere__field--pearl{left:35%;top:-44%;width:90%;height:112%;background:radial-gradient(ellipse at center,#fffef5b8 0%,#e8f7f66b 36%,#fff0 70%);animation-name:contact-pearl-drift;animation-duration:19s;animation-delay:-8s;transform:translate3d(8%,8%,0) rotate(12deg)}
+#contact .contact-atmosphere__field--cyan{left:-30%;top:-35%;width:130%;height:160%;background:radial-gradient(ellipse 56% 40% at center,#b5e8df00 47%,#7bcac83d 58%,#a4dce22e 64%,#fff0 75%);animation-name:contact-cyan-current;animation-duration:23s;animation-delay:-11s;transform:translate3d(-8%,-3%,0) rotate(-25deg)}
+#contact[data-atmosphere-active="true"] .contact-atmosphere__field{animation-play-state:running;will-change:transform}
+@keyframes contact-blue-drift{to{transform:translate3d(22%,-14%,0) rotate(16deg) scale(1.18)}}
+@keyframes contact-pearl-drift{to{transform:translate3d(-25%,20%,0) rotate(-17deg) scale(1.1)}}
+@keyframes contact-cyan-current{to{transform:translate3d(16%,10%,0) rotate(22deg) scale(1.12)}}
+@media(max-width:600px){
+ #contact .contact-atmosphere__field--blue{width:145%;left:-30%;animation-duration:19s}
+ #contact .contact-atmosphere__field--pearl{width:170%;left:-15%}
+ #contact .contact-atmosphere__field--cyan{width:180%;left:-45%;opacity:.7}
+}
+.motion-paused #contact .contact-atmosphere__field{animation-play-state:paused!important;will-change:auto}
+@media(prefers-reduced-motion:reduce){#contact .contact-atmosphere__field{animation:none!important;will-change:auto!important}}
