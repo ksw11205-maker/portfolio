@@ -1,0 +1,404 @@
+{
+  "checkedAt": "2026-11-14T14:35:44.677Z",
+  "websiteBuilt": false,
+  "websiteStarted": false,
+  "visualQaPerformed": false,
+  "archiveBranch": "archive/pre-redesign-20261114",
+  "archiveCommit": "6d4f90923c214d64da3e7e0e6f8a188fe998252f",
+  "archiveFilesVerified": 527,
+  "pages": 5,
+  "contentBlocks": 623,
+  "tables": 2,
+  "imageReferences": 99,
+  "missingImages": 0,
+  "imageHashMismatches": 0,
+  "projects": 4,
+  "questions": 5,
+  "iviTasks": 3,
+  "referenceRepositories": 12,
+  "referenceFontBinaries": 2,
+  "iconSvgFiles": 11,
+  "runtimeDiff": [],
+  "referenceFiles": [
+    {
+      "path": "docs/design/references/redesign-20261114/adobe-fonts/source-serif/LICENSE.md",
+      "bytes": 4491,
+      "sha256": "c21d7293d87b6d7ab1d0229a2f55b77f33a7613a6a4e66f6693d68d7d8d09464"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/adobe-fonts/source-serif/README.md",
+      "bytes": 1570,
+      "sha256": "41f06d06d419f49f04f74f878114bbde6c7ad0c43788ca6c05cbfed38392df32"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/fonts/SourceSerif4Variable-Roman.woff2",
+      "bytes": 429100,
+      "sha256": "940a76eda1388de39d38c8e7a79bf6ea058a387faee0a9f33c8d25c6ba05e1be"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/fonts/SUIT-Variable.woff2",
+      "bytes": 624536,
+      "sha256": "aa894a204d5a6fbae259dac6868d350cbd373a390caee0313f92946af741df23"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/FOUNDATIONS.json",
+      "bytes": 6482,
+      "sha256": "75a4b544e1e8d773302f1497286d69386f39b2a4cdecff45530799175c1e9861"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/CASE_STUDY_STRUCTURE.md",
+      "bytes": 3344,
+      "sha256": "e87e4565e284e4b86b6d4a7d496629b5efbcf087f6fdba55c3028377347ee90d"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/FILE_INTEGRITY.json",
+      "bytes": 9192,
+      "sha256": "4776bbf5271b1cab5048d903209bfd302f81286c98c6980cc6f05427f33f2b86"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/INTEGRATION_PLAN.md",
+      "bytes": 7065,
+      "sha256": "9fb383ad0dffc2f8aea7f2c995962df24d413ad6f461149ca5bea3a0c295b735"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/README.md",
+      "bytes": 4184,
+      "sha256": "b9b1e8550fda8e63e763c75fab6b0a0ba4631c85941a090ec2e104e4d6cc1266"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/argyleink/open-props/LICENSE",
+      "bytes": 1068,
+      "sha256": "fed3aa342094f6bb33701d09133c159a4c124e509ede255a889dd2c28ec3ab6e"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/argyleink/open-props/readme.md",
+      "bytes": 2270,
+      "sha256": "552c700d787a50409f71d833fde0249bfae8264af7f31d366d949aa45af1e7ae"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/argyleink/open-props/src/props.easing.css",
+      "bytes": 6415,
+      "sha256": "0767db9d3c7a630d21cd399cf9797357713a4b675e48c8281af62cddd8f01ee0"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/argyleink/open-props/src/props.fonts.css",
+      "bytes": 2805,
+      "sha256": "ba041962ded7cb37a69021fc8ebb84ca586269bb36e6a4a8b4de34630068727b"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/argyleink/open-props/src/props.shadows.css",
+      "bytes": 4347,
+      "sha256": "305767180c329828bc298f467f619c0064a15281e5ac651fd846bbd94058a60e"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/argyleink/open-props/src/props.sizes.css",
+      "bytes": 1935,
+      "sha256": "9df4d9369105ef74288efcf9c0261d2ef9893e09669f25637e46a87f8109d583"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/codrops/ScrollBasedLayoutAnimations/css/base.css",
+      "bytes": 39094,
+      "sha256": "94635460be019ec6c277803a4f8b5440bf177958a5ccd9b7f47c42126a8d0c60"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/codrops/ScrollBasedLayoutAnimations/index.html",
+      "bytes": 25880,
+      "sha256": "574e58ae77b2b9cc0aadecc92a364cce2a31761e987b8ab3d858addf27caddc2"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/codrops/ScrollBasedLayoutAnimations/js/index.js",
+      "bytes": 13020,
+      "sha256": "f5a36f29c6297f2c72e22769d6016e890e7fad9b5c2f94c6a48b854791abc150"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/codrops/ScrollBasedLayoutAnimations/js/utils.js",
+      "bytes": 680,
+      "sha256": "d32f581f7420a86129a0d846f375c6f89e06f68f8d7f07c48ff527417b1fc193"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/codrops/ScrollBasedLayoutAnimations/LICENSE",
+      "bytes": 1103,
+      "sha256": "85131f2bb7714dc895ff5d7d68db65acc5ad0e5dfd72162869fc8d63dec06056"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/codrops/ScrollBasedLayoutAnimations/README.md",
+      "bytes": 1822,
+      "sha256": "ab1ab8c2101a56152cfed3520bccb582dee78af868ed1f73b49b26d18fc82c15"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/d3/d3-shape/LICENSE",
+      "bytes": 731,
+      "sha256": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/d3/d3-shape/README.md",
+      "bytes": 605,
+      "sha256": "2d13c83b4371ee00ed991f6106383bcbb916b00bf00da07ba8972915d9825200"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/d3/d3-shape/src/area.js",
+      "bytes": 3218,
+      "sha256": "a2b2a221aaac4ed5715ff22d5a8d2264dd2992bd7ba22b0973e1555f6c3fd85a"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/d3/d3-shape/src/curve/linear.js",
+      "bytes": 744,
+      "sha256": "e377d1440cd2547ad2e38050898e2cd765eb9d248cc5702f287763353ac43b87"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/d3/d3-shape/src/line.js",
+      "bytes": 1733,
+      "sha256": "90eac879faa69aa2178a21e4ed2838c8f975e3d3282936dcc415b48573352da6"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/darkroomengineering/lenis/LICENSE",
+      "bytes": 1089,
+      "sha256": "aa0646bd5431b4828d8e4c3312417bd516c6c6b5c96cdc2842700dde31572f50"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/darkroomengineering/lenis/packages/core/lenis.css",
+      "bytes": 513,
+      "sha256": "2f668ae84a668327f246faf8a770383a2bf69196d214290fbc4d5548910606c5"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/darkroomengineering/lenis/packages/core/src/lenis.ts",
+      "bytes": 33448,
+      "sha256": "b7c7561611816af5383047cca7867ddaea30363aae878a33aff62914dc4f74a1"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/darkroomengineering/lenis/README.md",
+      "bytes": 34587,
+      "sha256": "fe6aaa35a243c4e0a124a23e7149ffe66e83789fc7a55b01a2042fa14e8baa54"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/dimsemenov/PhotoSwipe/docs/getting-started.md",
+      "bytes": 6715,
+      "sha256": "782f089bc8ee86777c7da880b2c67362ad8406d02c2efa0b64e770461e677aae"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/dimsemenov/PhotoSwipe/LICENSE",
+      "bytes": 1110,
+      "sha256": "41924a489f374dcc647db30916c6de47c4eb8c9a995de6a4c08629696096db3e"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/dimsemenov/PhotoSwipe/README.md",
+      "bytes": 1672,
+      "sha256": "b54b8dd7246e834a835853fc9eaf6a5cdae77e834c908541f1f68124ceb38f69"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/dimsemenov/PhotoSwipe/src/js/lightbox/lightbox.js",
+      "bytes": 8924,
+      "sha256": "05a710ba48f5315d4123735bf403d64242ecf3d75d825972e66d7a0929db7da5"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/dimsemenov/PhotoSwipe/src/photoswipe.css",
+      "bytes": 7003,
+      "sha256": "bb5e956812a813e1bd5be5d7641cc78d05d7e7d3f7ab10187bc2725d70b52c94"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/motiondivision/motion/dev/html/public/examples/stagger.html",
+      "bytes": 6826,
+      "sha256": "e9fc653397a566c72ed3ab8b5fc34a8a51450d940fbef76aa3b572486ad72a76"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/motiondivision/motion/dev/html/public/playwright/animate/timeline.html",
+      "bytes": 428,
+      "sha256": "3ba8b15fb595b384bcfc602d469c1967c1dd3785f6ba6d48f0a3c12eb17d4014"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/motiondivision/motion/dev/html/public/playwright/scroll/scroll-callback-progress.html",
+      "bytes": 3073,
+      "sha256": "0eb935b663478220a1035bfaa16d41de8e6d3c2b33586f9de3b1d5cdd442bd84"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/motiondivision/motion/dev/html/src/imports/view.js",
+      "bytes": 70,
+      "sha256": "ed88341b85d2aded8899ca6b5974f54ed0ef8f9f147fc83cd6d1d8db2bd1f068"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/motiondivision/motion/dev/html/src/inc.js",
+      "bytes": 137,
+      "sha256": "6405a41e95087e21f83b6bdc3376fd3fa1f4a2e552095195b34d2aa75715e0de"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/motiondivision/motion/LICENSE.md",
+      "bytes": 1100,
+      "sha256": "1bf0dc3f7727723e5a032ed12164a47cf92c05204cb1a3485f123c24e2833ed1"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/motiondivision/motion/packages/framer-motion/src/animation/animate/sequence.ts",
+      "bytes": 2054,
+      "sha256": "790afe78ac6ce6dd9a3afa5e08fa8a7607e4cceca169b3dad3610e5464be3b1f"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/motiondivision/motion/packages/framer-motion/src/render/dom/scroll/index.ts",
+      "bytes": 1006,
+      "sha256": "3ef6e5247c9b847f53610aaa82e512c2b797483708a2d679d9f04900ed503b02"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/motiondivision/motion/packages/motion-dom/src/animation/animate/element.ts",
+      "bytes": 4641,
+      "sha256": "c273fb513a122a5be3f22fa5ff7587c21ce225f8c3db4761cff93e2bfab8e555"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/motiondivision/motion/README.md",
+      "bytes": 7475,
+      "sha256": "08915bb5254a4bc1fd47e8d7ea8fff0dcb470461f6fd6b59fb6d2f0bef0400df"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/russellsamora/scrollama/docs/progress/index.html",
+      "bytes": 4275,
+      "sha256": "7e339035f340ecf5780e95d848d5aeea3d9215cb1ab893459443ad886693358e"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/russellsamora/scrollama/docs/sticky-side/index.html",
+      "bytes": 5750,
+      "sha256": "3c2e4d9ca8dba410438757c64acd362403f2405d280be1652794afe43d90d1a8"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/russellsamora/scrollama/LICENSE",
+      "bytes": 1071,
+      "sha256": "c0b658fd38a5a7c8d38634dffaf0a66fd82843c2e8fb08aec372b21e4d0f3a89"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/russellsamora/scrollama/README.md",
+      "bytes": 11620,
+      "sha256": "094ced37a3c807c961c6ba5783ba617e78e6f17b2a12b6fb5754935401b92236"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/russellsamora/scrollama/src/entry.js",
+      "bytes": 8162,
+      "sha256": "275039aec1e36b9cd228bd29ca45e52f5e2d90eb639a8a37557ab46ed52ff3ad"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/russellsamora/scrollama/src/parseOffset.js",
+      "bytes": 579,
+      "sha256": "333b17da2de74eb42a455a98992495e784c6b84334ebd14ef6fadc911ee3db16"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/sneas/img-comparison-slider/LICENSE",
+      "bytes": 1074,
+      "sha256": "7ea86ea7d6b3bf7d1368064512d24bdbe8a5c7c66dd7e0e55f608ec3c39cc2b3"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/sneas/img-comparison-slider/packages/img-comparison-slider/README.md",
+      "bytes": 6230,
+      "sha256": "9c825a9c124c2bc42ea741e961fb7f651622851cfbbcd8ac1b25cc44c12d37c9"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/sneas/img-comparison-slider/packages/img-comparison-slider/src/index.ts",
+      "bytes": 11678,
+      "sha256": "aef230a1c894bfef4369052cd9ce0919746b4a90c8bffad5d13795b80eba6f48"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/sneas/img-comparison-slider/packages/img-comparison-slider/src/styles.scss",
+      "bytes": 3390,
+      "sha256": "ab0c3b3fcd2b7ad380c594e2b7de0c6f4b182770c22389f0b4bd35f4e7cfceb1"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/sneas/img-comparison-slider/packages/img-comparison-slider/src/template.html",
+      "bytes": 778,
+      "sha256": "a722e7397a246e67d7397792ba2716c0b50d200599c62df67cfd80b95aa7b2e5"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/sources/sneas/img-comparison-slider/README.md",
+      "bytes": 6230,
+      "sha256": "9c825a9c124c2bc42ea741e961fb7f651622851cfbbcd8ac1b25cc44c12d37c9"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/interaction-collection/SOURCES.json",
+      "bytes": 12717,
+      "sha256": "98eba8096aa635eabd93d17d6482de06953d30240417f785baf3c0b501253fc6"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/lucide-icons/lucide/icons/arrow-right.svg",
+      "bytes": 261,
+      "sha256": "288397fdb73bb4f783cf9eabb726ff47357df1d4e3f1201dd748090579f108b9"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/lucide-icons/lucide/icons/arrow-up-right.svg",
+      "bytes": 260,
+      "sha256": "50b2503b9d11881142255466b7e3461d022b919735841c321d72003ac9959fe1"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/lucide-icons/lucide/icons/check.svg",
+      "bytes": 239,
+      "sha256": "7f33acc9a77a61659531044525fc008edebe215bf4dcf1c789c8674ad3277db0"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/lucide-icons/lucide/icons/chevron-down.svg",
+      "bytes": 236,
+      "sha256": "66ea878e72ed3488bb3b464c39dfdccee8d1f78e560dccea40e5e12da0e87e87"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/lucide-icons/lucide/icons/external-link.svg",
+      "bytes": 332,
+      "sha256": "3891241b8c3bfc3a8a930078f26ffc5a7e9763da6d0162ace2050b28d4c1d1fe"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/lucide-icons/lucide/icons/menu.svg",
+      "bytes": 279,
+      "sha256": "af6491988ac1ba30dc5414f485bc48713e957e1edb0fbef4a0dd8691c3c21598"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/lucide-icons/lucide/icons/minus.svg",
+      "bytes": 232,
+      "sha256": "a0c743ab6dbf545d8a6e19ef3874f48ede686ce68d25e231bd81f540d97b1f19"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/lucide-icons/lucide/icons/pause.svg",
+      "bytes": 313,
+      "sha256": "f122ec4ea7f5693a0b1baafa9c708b53980dc87b4aacb297c6e6f71c1a4c115c"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/lucide-icons/lucide/icons/play.svg",
+      "bytes": 306,
+      "sha256": "d7c34786135922a92b6896f6c2384ceeb0346afbf6041dc79982011411409833"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/lucide-icons/lucide/icons/plus.svg",
+      "bytes": 256,
+      "sha256": "7f6af73bf1ff6c4bca3f18351c8d1bdec6749c0c2530c4de5da85d520c21df17"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/lucide-icons/lucide/icons/x.svg",
+      "bytes": 260,
+      "sha256": "4a9cdab38fbb96162e7dace28e33f4ca0e49d8963a6162abc3d4691b7d675117"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/lucide-icons/lucide/LICENSE",
+      "bytes": 3208,
+      "sha256": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/orioncactus/pretendard/LICENSE",
+      "bytes": 4816,
+      "sha256": "82e9c8a4b203261f10ddba1296422d64914ff3d4b7bd8a12896d03f0f088d70a"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/orioncactus/pretendard/packages/pretendard/dist/LICENSE.txt",
+      "bytes": 4816,
+      "sha256": "82e9c8a4b203261f10ddba1296422d64914ff3d4b7bd8a12896d03f0f088d70a"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/orioncactus/pretendard/packages/pretendard/dist/web/variable/pretendardvariable.css",
+      "bytes": 481,
+      "sha256": "fe6327fb0c977a46a1b7fb5eecf778af89d78c5177ac0d5a2bf29d93899aa415"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/sun-typeface/SUIT/fonts/variable/woff2/SUIT-Variable.css",
+      "bytes": 132,
+      "sha256": "e54f4fba5d326c42e05c2f3eeb4fb8dbe28816654c4f784f81b28e3aa9bbbcf9"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/sun-typeface/SUIT/LICENSE",
+      "bytes": 4381,
+      "sha256": "0730b6fb96310d8bae05be869d999aee4716cd798e8df74f16278dc575e3b46f"
+    },
+    {
+      "path": "docs/design/references/redesign-20261114/sun-typeface/SUIT/README.md",
+      "bytes": 1259,
+      "sha256": "5349309c377dfe65de6ea14a5d2ee2fa53f9ff6d1b73f460fc38a5c926ebc9c4"
+    }
+  ]
+}

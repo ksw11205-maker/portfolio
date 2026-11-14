@@ -1,0 +1,48 @@
+{
+  "pages": [
+    {
+      "slug": "home",
+      "source": "index.html",
+      "blocks": 111,
+      "tables": 0,
+      "images": 23,
+      "missingImages": 0
+    },
+    {
+      "slug": "lg",
+      "source": "work/lg/index.html",
+      "blocks": 100,
+      "tables": 0,
+      "images": 17,
+      "missingImages": 0
+    },
+    {
+      "slug": "ivi",
+      "source": "work/ivi/index.html",
+      "blocks": 127,
+      "tables": 2,
+      "images": 31,
+      "missingImages": 0
+    },
+    {
+      "slug": "cafekok",
+      "source": "work/cafekok/index.html",
+      "blocks": 131,
+      "tables": 0,
+      "images": 13,
+      "missingImages": 0
+    },
+    {
+      "slug": "offer",
+      "source": "work/offer/case-study.html",
+      "blocks": 154,
+      "tables": 0,
+      "images": 15,
+      "missingImages": 0
+    }
+  ],
+  "projects": 4,
+  "questions": 5,
+  "iviTasks": 3,
+  "websiteExecuted": false
+}

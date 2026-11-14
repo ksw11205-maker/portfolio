@@ -1,3 +1,9 @@
+## 리디자인용 현재 콘텐츠 · 2026-11-14
+
+[원문 추출 JSON](content-snapshot-20261114/lg.json) · [읽기용 본문](content-snapshot-20261114/lg.md) · [공통 데이터](content-snapshot-20261114/structured-data.json)
+보관 브랜치의 최신 페이지에서 추출했다. 아래 과거 기록과 최신 페이지의 차이를 덮어 합치지 않았다. 연구 사실·역할·성과 확인은 이 프로젝트 문서와 실제 원자료를 함께 사용한다. CSS·배치·모션은 새 디자인의 고정 조건이 아니며 공통 표현은 새 DESIGN.md를 따른다.
+
+
 # LG TV
 
 공통 기준은 [DESIGN.md](../../DESIGN.md)를 따른다. 이 문서는 LG TV의 콘텐츠와 디자인 차이만 기록한다.

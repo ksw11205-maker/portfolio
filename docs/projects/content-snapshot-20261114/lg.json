@@ -1,0 +1,927 @@
+{
+  "slug": "lg",
+  "sourceFile": "work/lg/index.html",
+  "sourceSha256": "4daf7bffafa8e5ed7f319fa6f9e9facce72d222bb2b1f8b5b8c31a782c3566a1",
+  "sourceStatus": "Extracted from current page; claims not independently revalidated",
+  "title": "LG TV Usability — AI Design Tool | KSW",
+  "plainText": "본문으로 건너뛰기 RESEARCH EVIDENCE INTERFACE ALL WORK PROJECT 01 / UX RESEARCH × UI DESIGN 2025.03 — 2025.09 LG ELECTRONICS · TV USABILITY TV 사용성 연구에서 AI Design Tool 까지 . 원거리에서 조작하는 TV UI를 정량적으로 이해하고, 연구 결과를 디자인 의사결정을 지원하는 화면으로 구체화한 프로젝트. VIEW PROTOTYPE TV USABILITY RESEARCH TO DESIGN ROLE UX Research Collaboration · UI Prototype Design SCROLL TO EXPLORE 01 / THE QUESTION BACKGROUND THE PROBLEM 멀리서 조작하고, 한 화면에 더 많은 기능이 쌓인다. TV는 화면에서 떨어진 거리에서 리모컨으로 조작합니다. 콘텐츠와 설정 기능이 복잡해질수록, UI의 사용성을 직관만으로 판단하기 어려워집니다. 따라서 디자인 요소가 사용성에 어떤 영향을 주는지 실험으로 확인하고, 이를 설계에 활용할 수 있는 정량적 기준이 필요했습니다. 01 — ACTUAL TV UI CONTEXT CONTEXT 01 원거리 조작 환경 시청 거리와 리모컨 입력을 고려한 가독성·조작성 CONTEXT 02 복잡한 정보 밀도 콘텐츠·카테고리·설정 기능이 하나의 화면에 공존 CONTEXT 03 정량적 근거의 필요 감각이 아닌 실험 데이터로 설계 판단을 지원 MY CONTRIBUTION 연구 전체의 성과와 내가 만든 화면을 구분합니다. 대표 시퀀스 선정, 사용성 실험, 요인 분석 및 예측 모델 개발은 연구팀의 공동 작업 입니다. 저는 연구진의 요구사항을 바탕으로 AI Design Tool UI 프로토타입을 제작·수정 하고, 검토와 보고를 위한 시각 자료를 구성했습니다. 본 페이지의 연구 수치는 팀 연구 기록의 결과이며, 개인이 단독 산출하거나 별도로 재검증한 값이 아닙니다. 02 / THE APPROACH RESEARCH PROCESS FROM RESEARCH TO INTERFACE 사용성의 근거를 찾고, 디자인을 판단하는 도구로 연결하다. 실험으로 요인을 선별하고 예측 모델을 구축한 뒤, 그 결과를 AI Design Tool의 평가 흐름으로 구체화했습니다. 01 대표 시퀀스 선정 webOS 기능과 사용자 목적을 분석해 평가 대상 정의 DEFINE 02 1차 실험 · 요인 도출 2수준 설계로 주요 사용성 요인 선별 SCREEN 03 2차 실험 · 예측 모델 3수준 실험 데이터로 사용성 예측 모델 개발 MODEL 04 AI Design Tool 구현 입력·분석·대안·비교가 이어지는 UI 프로토타입 제작 DESIGN 03 / THE SCENARIOS KEY SEQUENCES USER PURPOSE 많은 기능을 세 가지 이용 목적 으로 좁혔다. 검색·시청·제어 목적을 기준으로 TV 사용 흐름을 정리하고, 대표 화면을 선정했습니다. SEARCH 검색 목적 음성 검색 · 앱 검색 · AI 검색 WATCH 시청 목적 OTT · 스포츠 · 위시리스트 등 CONTROL 제어 목적 외부입력 · 퀵설정 · 쉬운 사용 등 01 탐색형 이동 스포츠 콘텐츠를 탐색하며 관심 항목 선택 02 탐색형·목적형 이동 통합 유사한 Q카드 레이아웃을 기준으로 정리 03 설정 / 조작 밝기·소리·화면 등 주요 기능 조정 04 / FINDING VARIABLES USABILITY FACTORS EVIDENCE SELECTION 53개 후보에서 9개 측정 요인 까지. 선행 문헌·가이드라인 검토를 거쳐 핵심 요인을 압축하고, 실제 TV UI에서 측정할 수 있는 변수를 정의했습니다. 53 개 초기 후보 22 개 출현 빈도 기반 선별 09 개 전문가 검토·중복 정리 Screen Category Count Image Size Text Font Size Thumbnail Item Count Icon Item Count Text Item Count Thumbnail Item Size Icon Item Size Text Item Size 탐색형 이동 — 썸네일 개수와 화면 구성 설정·조작 — 텍스트와 아이콘 크기 05 / THE EVIDENCE EXPERIMENTS & MODEL TWO ROUNDS OF EXPERIMENTS 실험 결과를 예측 가능한 기준 으로. 1차 실험은 영향 요인 선별, 2차 실험은 사용성 점수를 예측하는 모델 개발에 초점을 두었습니다. EXPERIMENT 01 / SCREENING 주요 요인 도출 Plackett–Burman 2수준 설계로 대표 시퀀스별 요인을 실험하고 주효과를 확인했습니다. 24 실험 대안 조합 시퀀스별 12개 10 참여자 20–30대·40–50대 1–7 사용성 평가 척도 탐색형: 썸네일 항목 수 등 / 설정·조작형: 텍스트·아이콘 크기 등 EXPERIMENT 02 / MODELING 예측 모델 개발 3수준 설계와 다항 회귀를 활용해 주요 요인의 곡선 반응 및 교호작용을 모델링했습니다. 27 탐색형 이동 부분요인설계 09 설정·조작 완전요인설계 10+10 실제 평가 10명 + AI 증강 데이터 10명분 연구 기록에 포함된 모델 개발 과정이며 개인 단독 분석 결과가 아닙니다. MODEL EXPLANATORY POWER / ADJUSTED R² 아래 수치는 모델의 설명력 이며, 예측 정확도나 실제 사용성 개선율이 아닙니다. EXPLORATORY NAVIGATION 65.81 % 탐색형 이동 모델 · 수정 결정계수 SETTINGS & CONTROL 79.20 % 설정·조작 모델 · 수정 결정계수 연구 기록의 회귀식 및 변수 보기 탐색형 이동 y = −8.31 + 0.613X₁ − 0.00089X₂ + 0.0477X₃ + … − 0.0963X₄X₆ X₁ 화면 카테고리 수 · X₂ 이미지 크기 · X₃ 텍스트 글꼴 크기 · X₄ 텍스트 항목 수 · X₅ 텍스트 항목 크기 · X₆ 썸네일 항목 수 설정·조작 y = −9.45 + 0.11377X₁ + 0.1302X₂ − 0.000311X₁² − 0.001714X₂² + 0.000264X₁X₂ X₁ 텍스트 항목 크기 · X₂ 아이콘 항목 크기 06 / THE TRANSLATION RESEARCH → DESIGN DESIGN CONNECTION 데이터에서 끝나지 않고, 실제로 조정할 수 있는 화면 으로. RESEARCH FINDINGS 탐색형 이동 썸네일 항목 수 화면 카테고리 수 설정·조작 텍스트 항목 크기 아이콘 항목 크기 DESIGN TOOL FLOW 요인 확인 → 분석 UI 요소의 값을 확인하고 영향도를 해석 대안 생성 → 비교 조정할 항목을 선택하고 예상 점수를 비교 연구 결과를 프로토타입의 기능 구조로 연결한 설명이며, 별도의 사용자 검증 또는 실사용 개선 효과를 의미하지 않습니다. 07 / INFORMATION ARCHITECTURE DESIGN SYSTEM LOGIC TOOL INFORMATION FLOW 하나의 평가 작업이 다음 판단으로 이어지도록. 실제 도구의 주요 입력·분석·대안·비교 흐름과 기록 및 설정 기능을 구분해 구조화했습니다. 01 화면 입력 이미지 업로드 요인 확인 02 사용성 분석 예측 점수 요인 영향도 03 대안 추천 개선안 제시 요인값 조정 04 결과 비교 As-Is / To-Be 점수·변경 사항 SUPPORTING FUNCTIONS 작업 이력 · 분석 로그 · API 및 모델 설정 · 대안 재조정 08 / THE ACTUAL UI AI DESIGN TOOL INTERFACE DEEP DIVE 화면은 크게. 설명은 명확하게. 실제 프로토타입 화면으로 살펴보는 입력 → 분석 → 대안 → 비교의 네 단계. AI Design Tool 상세 해설 01 / INPUT 평가할 TV UI를 입력하고 사용성 요인값을 확인합니다. TV 화면을 업로드한 뒤 평가 유형과 화면 요소를 검토·조정합니다. ACTUAL PROTOTYPE / INPUT 01 오른쪽 패널에서 사용성 요인값을 확인·조정 02 / ANALYZE 점수만 보여주지 않고 영향 요인까지 살펴봅니다. 사용성 점수·등급을 읽고 우선적으로 검토할 UI 요소를 확인합니다. ACTUAL PROTOTYPE / ANALYSIS 02 사용성 점수·등급과 요인별 영향을 분석 03 / ALTERNATIVE 바꿀 요인을 선택하고 AI 권장안을 검토합니다. 변경 항목과 권장 내용을 확인해 디자인 대안을 생성하는 단계입니다. ACTUAL PROTOTYPE / RECOMMENDATION 03 오른쪽 권장 패널에서 변경 항목과 제안을 검토 04 / COMPARE 기존 화면과 개선 대안을 나란히 비교합니다. As-Is/To-Be 화면과 요인값·예측 점수의 차이를 검토합니다. ACTUAL PROTOTYPE / COMPARISON 04 비교 화면의 점수 변화는 프로토타입 예시값 캡처에 표시된 53점·61점은 프로토타입 화면의 예시값이며 실제 사용자 개선 효과를 뜻하지 않습니다. 09 / SUPPORTING FEATURES SETTINGS BEHIND THE INTERFACE 분석 흐름 밖의 설정도 한곳에 모았습니다. API 연결, 모델, 평가 기준, 저장·보안 옵션을 사용자가 확인할 수 있도록 분류했습니다. WORKSPACE / LEFT NAVIGATION 01 / API 연결 키와 요청 제한 02 / MODEL 기본 모델과 응답 정밀도 03 / CRITERIA 시청 거리 가중치와 평가 기준 04 / STORAGE 자동 저장과 민감정보 마스킹 10 / REFLECTION WHAT I LEARNED THINKING BEYOND SCREENS 좋은 화면은 예쁘기 전에, 설명 가능해야 한다. Q. 무엇을 배웠나요? LG전자 UI/UX 부서와 소통하며 진행한 산학 연구를 통해, 실험과 분석의 결과가 실무에서 어떻게 논의되고 구체화되는지 경험했습니다. 일정에 맞춰 중간 결과를 공유하고 피드백을 반영하는 과정에서, 시각적 완성도만큼 판단 근거를 명확히 전달하는 일이 중요함을 배웠습니다. Q. 무엇이 아쉬웠나요? 학부연구생으로 참여하며 복잡한 연구 내용을 충분히 이해하면서도 짧은 일정에 맞춰 정리해야 했습니다. 다음에는 작업 목적을 먼저 구조화하고, 궁금한 부분을 더 적극적으로 확인해 연구의 맥락을 스스로 설명하고 제안하는 역량을 기르고자 합니다. KSW / SELECTED WORK 01 실험의 근거를 이해하고, 디자인으로 구체화하는 사람. ALL PROJECTS ↗ LG TV USABILITY — AI DESIGN TOOL © KSW 2026",
+  "blocks": [
+    {
+      "order": 0,
+      "kind": "p",
+      "section": null,
+      "id": null,
+      "text": "LG ELECTRONICS · TV USABILITY"
+    },
+    {
+      "order": 1,
+      "kind": "h1",
+      "section": null,
+      "id": "title",
+      "text": "TV 사용성 연구에서 AI Design Tool 까지 ."
+    },
+    {
+      "order": 2,
+      "kind": "p",
+      "section": null,
+      "id": null,
+      "text": "원거리에서 조작하는 TV UI를 정량적으로 이해하고, 연구 결과를 디자인 의사결정을 지원하는 화면으로 구체화한 프로젝트."
+    },
+    {
+      "order": 3,
+      "kind": "figcaption",
+      "section": null,
+      "id": null,
+      "text": "TV USABILITY RESEARCH TO DESIGN"
+    },
+    {
+      "order": 4,
+      "kind": "p",
+      "section": "background",
+      "id": null,
+      "text": "THE PROBLEM"
+    },
+    {
+      "order": 5,
+      "kind": "h2",
+      "section": "background",
+      "id": "context-title",
+      "text": "멀리서 조작하고, 한 화면에 더 많은 기능이 쌓인다."
+    },
+    {
+      "order": 6,
+      "kind": "p",
+      "section": "background",
+      "id": null,
+      "text": "TV는 화면에서 떨어진 거리에서 리모컨으로 조작합니다. 콘텐츠와 설정 기능이 복잡해질수록, UI의 사용성을 직관만으로 판단하기 어려워집니다."
+    },
+    {
+      "order": 7,
+      "kind": "p",
+      "section": "background",
+      "id": null,
+      "text": "따라서 디자인 요소가 사용성에 어떤 영향을 주는지 실험으로 확인하고, 이를 설계에 활용할 수 있는 정량적 기준이 필요했습니다."
+    },
+    {
+      "order": 8,
+      "kind": "figcaption",
+      "section": "background",
+      "id": null,
+      "text": "01 — ACTUAL TV UI CONTEXT"
+    },
+    {
+      "order": 9,
+      "kind": "p",
+      "section": "background",
+      "id": null,
+      "text": "시청 거리와 리모컨 입력을 고려한 가독성·조작성"
+    },
+    {
+      "order": 10,
+      "kind": "p",
+      "section": "background",
+      "id": null,
+      "text": "콘텐츠·카테고리·설정 기능이 하나의 화면에 공존"
+    },
+    {
+      "order": 11,
+      "kind": "p",
+      "section": "background",
+      "id": null,
+      "text": "감각이 아닌 실험 데이터로 설계 판단을 지원"
+    },
+    {
+      "order": 12,
+      "kind": "h2",
+      "section": "role",
+      "id": "role-title",
+      "text": "연구 전체의 성과와 내가 만든 화면을 구분합니다."
+    },
+    {
+      "order": 13,
+      "kind": "p",
+      "section": "role",
+      "id": null,
+      "text": "대표 시퀀스 선정, 사용성 실험, 요인 분석 및 예측 모델 개발은 연구팀의 공동 작업 입니다."
+    },
+    {
+      "order": 14,
+      "kind": "p",
+      "section": "role",
+      "id": null,
+      "text": "저는 연구진의 요구사항을 바탕으로 AI Design Tool UI 프로토타입을 제작·수정 하고, 검토와 보고를 위한 시각 자료를 구성했습니다."
+    },
+    {
+      "order": 15,
+      "kind": "p",
+      "section": "role",
+      "id": null,
+      "text": "본 페이지의 연구 수치는 팀 연구 기록의 결과이며, 개인이 단독 산출하거나 별도로 재검증한 값이 아닙니다."
+    },
+    {
+      "order": 16,
+      "kind": "p",
+      "section": "research",
+      "id": null,
+      "text": "FROM RESEARCH TO INTERFACE"
+    },
+    {
+      "order": 17,
+      "kind": "h2",
+      "section": "research",
+      "id": "research-title",
+      "text": "사용성의 근거를 찾고, 디자인을 판단하는 도구로 연결하다."
+    },
+    {
+      "order": 18,
+      "kind": "p",
+      "section": "research",
+      "id": null,
+      "text": "실험으로 요인을 선별하고 예측 모델을 구축한 뒤, 그 결과를 AI Design Tool의 평가 흐름으로 구체화했습니다."
+    },
+    {
+      "order": 19,
+      "kind": "li",
+      "section": "research",
+      "id": null,
+      "text": "01 대표 시퀀스 선정 webOS 기능과 사용자 목적을 분석해 평가 대상 정의 DEFINE"
+    },
+    {
+      "order": 20,
+      "kind": "p",
+      "section": "research",
+      "id": null,
+      "text": "webOS 기능과 사용자 목적을 분석해 평가 대상 정의"
+    },
+    {
+      "order": 21,
+      "kind": "li",
+      "section": "research",
+      "id": null,
+      "text": "02 1차 실험 · 요인 도출 2수준 설계로 주요 사용성 요인 선별 SCREEN"
+    },
+    {
+      "order": 22,
+      "kind": "p",
+      "section": "research",
+      "id": null,
+      "text": "2수준 설계로 주요 사용성 요인 선별"
+    },
+    {
+      "order": 23,
+      "kind": "li",
+      "section": "research",
+      "id": null,
+      "text": "03 2차 실험 · 예측 모델 3수준 실험 데이터로 사용성 예측 모델 개발 MODEL"
+    },
+    {
+      "order": 24,
+      "kind": "p",
+      "section": "research",
+      "id": null,
+      "text": "3수준 실험 데이터로 사용성 예측 모델 개발"
+    },
+    {
+      "order": 25,
+      "kind": "li",
+      "section": "research",
+      "id": null,
+      "text": "04 AI Design Tool 구현 입력·분석·대안·비교가 이어지는 UI 프로토타입 제작 DESIGN"
+    },
+    {
+      "order": 26,
+      "kind": "p",
+      "section": "research",
+      "id": null,
+      "text": "입력·분석·대안·비교가 이어지는 UI 프로토타입 제작"
+    },
+    {
+      "order": 27,
+      "kind": "p",
+      "section": "sequences",
+      "id": null,
+      "text": "USER PURPOSE"
+    },
+    {
+      "order": 28,
+      "kind": "h2",
+      "section": "sequences",
+      "id": "sequence-title",
+      "text": "많은 기능을 세 가지 이용 목적 으로 좁혔다."
+    },
+    {
+      "order": 29,
+      "kind": "p",
+      "section": "sequences",
+      "id": null,
+      "text": "검색·시청·제어 목적을 기준으로 TV 사용 흐름을 정리하고, 대표 화면을 선정했습니다."
+    },
+    {
+      "order": 30,
+      "kind": "p",
+      "section": "sequences",
+      "id": null,
+      "text": "음성 검색 · 앱 검색 · AI 검색"
+    },
+    {
+      "order": 31,
+      "kind": "p",
+      "section": "sequences",
+      "id": null,
+      "text": "OTT · 스포츠 · 위시리스트 등"
+    },
+    {
+      "order": 32,
+      "kind": "p",
+      "section": "sequences",
+      "id": null,
+      "text": "외부입력 · 퀵설정 · 쉬운 사용 등"
+    },
+    {
+      "order": 33,
+      "kind": "figcaption",
+      "section": "sequences",
+      "id": null,
+      "text": "01 탐색형 이동 스포츠 콘텐츠를 탐색하며 관심 항목 선택"
+    },
+    {
+      "order": 34,
+      "kind": "figcaption",
+      "section": "sequences",
+      "id": null,
+      "text": "02 탐색형·목적형 이동 통합 유사한 Q카드 레이아웃을 기준으로 정리"
+    },
+    {
+      "order": 35,
+      "kind": "figcaption",
+      "section": "sequences",
+      "id": null,
+      "text": "03 설정 / 조작 밝기·소리·화면 등 주요 기능 조정"
+    },
+    {
+      "order": 36,
+      "kind": "p",
+      "section": "factors",
+      "id": null,
+      "text": "EVIDENCE SELECTION"
+    },
+    {
+      "order": 37,
+      "kind": "h2",
+      "section": "factors",
+      "id": "factor-title",
+      "text": "53개 후보에서 9개 측정 요인 까지."
+    },
+    {
+      "order": 38,
+      "kind": "p",
+      "section": "factors",
+      "id": null,
+      "text": "선행 문헌·가이드라인 검토를 거쳐 핵심 요인을 압축하고, 실제 TV UI에서 측정할 수 있는 변수를 정의했습니다."
+    },
+    {
+      "order": 39,
+      "kind": "p",
+      "section": "factors",
+      "id": null,
+      "text": "초기 후보"
+    },
+    {
+      "order": 40,
+      "kind": "p",
+      "section": "factors",
+      "id": null,
+      "text": "출현 빈도 기반 선별"
+    },
+    {
+      "order": 41,
+      "kind": "p",
+      "section": "factors",
+      "id": null,
+      "text": "전문가 검토·중복 정리"
+    },
+    {
+      "order": 42,
+      "kind": "figcaption",
+      "section": "factors",
+      "id": null,
+      "text": "탐색형 이동 — 썸네일 개수와 화면 구성"
+    },
+    {
+      "order": 43,
+      "kind": "figcaption",
+      "section": "factors",
+      "id": null,
+      "text": "설정·조작 — 텍스트와 아이콘 크기"
+    },
+    {
+      "order": 44,
+      "kind": "p",
+      "section": "evidence",
+      "id": null,
+      "text": "TWO ROUNDS OF EXPERIMENTS"
+    },
+    {
+      "order": 45,
+      "kind": "h2",
+      "section": "evidence",
+      "id": "evidence-title",
+      "text": "실험 결과를 예측 가능한 기준 으로."
+    },
+    {
+      "order": 46,
+      "kind": "p",
+      "section": "evidence",
+      "id": null,
+      "text": "1차 실험은 영향 요인 선별, 2차 실험은 사용성 점수를 예측하는 모델 개발에 초점을 두었습니다."
+    },
+    {
+      "order": 47,
+      "kind": "h3",
+      "section": "evidence",
+      "id": null,
+      "text": "주요 요인 도출"
+    },
+    {
+      "order": 48,
+      "kind": "p",
+      "section": "evidence",
+      "id": null,
+      "text": "Plackett–Burman 2수준 설계로 대표 시퀀스별 요인을 실험하고 주효과를 확인했습니다."
+    },
+    {
+      "order": 49,
+      "kind": "p",
+      "section": "evidence",
+      "id": null,
+      "text": "탐색형: 썸네일 항목 수 등 / 설정·조작형: 텍스트·아이콘 크기 등"
+    },
+    {
+      "order": 50,
+      "kind": "h3",
+      "section": "evidence",
+      "id": null,
+      "text": "예측 모델 개발"
+    },
+    {
+      "order": 51,
+      "kind": "p",
+      "section": "evidence",
+      "id": null,
+      "text": "3수준 설계와 다항 회귀를 활용해 주요 요인의 곡선 반응 및 교호작용을 모델링했습니다."
+    },
+    {
+      "order": 52,
+      "kind": "p",
+      "section": "evidence",
+      "id": null,
+      "text": "연구 기록에 포함된 모델 개발 과정이며 개인 단독 분석 결과가 아닙니다."
+    },
+    {
+      "order": 53,
+      "kind": "p",
+      "section": "evidence",
+      "id": null,
+      "text": "아래 수치는 모델의 설명력 이며, 예측 정확도나 실제 사용성 개선율이 아닙니다."
+    },
+    {
+      "order": 54,
+      "kind": "p",
+      "section": "evidence",
+      "id": null,
+      "text": "탐색형 이동 모델 · 수정 결정계수"
+    },
+    {
+      "order": 55,
+      "kind": "p",
+      "section": "evidence",
+      "id": null,
+      "text": "설정·조작 모델 · 수정 결정계수"
+    },
+    {
+      "order": 56,
+      "kind": "p",
+      "section": "evidence",
+      "id": null,
+      "text": "y = −8.31 + 0.613X₁ − 0.00089X₂ + 0.0477X₃ + … − 0.0963X₄X₆"
+    },
+    {
+      "order": 57,
+      "kind": "p",
+      "section": "evidence",
+      "id": null,
+      "text": "y = −9.45 + 0.11377X₁ + 0.1302X₂ − 0.000311X₁² − 0.001714X₂² + 0.000264X₁X₂"
+    },
+    {
+      "order": 58,
+      "kind": "p",
+      "section": "bridge",
+      "id": null,
+      "text": "DESIGN CONNECTION"
+    },
+    {
+      "order": 59,
+      "kind": "h2",
+      "section": "bridge",
+      "id": "bridge-title",
+      "text": "데이터에서 끝나지 않고, 실제로 조정할 수 있는 화면 으로."
+    },
+    {
+      "order": 60,
+      "kind": "p",
+      "section": "bridge",
+      "id": null,
+      "text": "썸네일 항목 수 화면 카테고리 수"
+    },
+    {
+      "order": 61,
+      "kind": "p",
+      "section": "bridge",
+      "id": null,
+      "text": "텍스트 항목 크기 아이콘 항목 크기"
+    },
+    {
+      "order": 62,
+      "kind": "p",
+      "section": "bridge",
+      "id": null,
+      "text": "UI 요소의 값을 확인하고 영향도를 해석"
+    },
+    {
+      "order": 63,
+      "kind": "p",
+      "section": "bridge",
+      "id": null,
+      "text": "조정할 항목을 선택하고 예상 점수를 비교"
+    },
+    {
+      "order": 64,
+      "kind": "p",
+      "section": "bridge",
+      "id": null,
+      "text": "연구 결과를 프로토타입의 기능 구조로 연결한 설명이며, 별도의 사용자 검증 또는 실사용 개선 효과를 의미하지 않습니다."
+    },
+    {
+      "order": 65,
+      "kind": "p",
+      "section": "architecture",
+      "id": null,
+      "text": "TOOL INFORMATION FLOW"
+    },
+    {
+      "order": 66,
+      "kind": "h2",
+      "section": "architecture",
+      "id": "architecture-title",
+      "text": "하나의 평가 작업이 다음 판단으로 이어지도록."
+    },
+    {
+      "order": 67,
+      "kind": "p",
+      "section": "architecture",
+      "id": null,
+      "text": "실제 도구의 주요 입력·분석·대안·비교 흐름과 기록 및 설정 기능을 구분해 구조화했습니다."
+    },
+    {
+      "order": 68,
+      "kind": "p",
+      "section": "architecture",
+      "id": null,
+      "text": "작업 이력 · 분석 로그 · API 및 모델 설정 · 대안 재조정"
+    },
+    {
+      "order": 69,
+      "kind": "h2",
+      "section": "interface",
+      "id": "interface-title",
+      "text": "화면은 크게. 설명은 명확하게."
+    },
+    {
+      "order": 70,
+      "kind": "p",
+      "section": "interface",
+      "id": null,
+      "text": "실제 프로토타입 화면으로 살펴보는 입력 → 분석 → 대안 → 비교의 네 단계."
+    },
+    {
+      "order": 71,
+      "kind": "h3",
+      "section": "tool-input",
+      "id": null,
+      "text": "평가할 TV UI를 입력하고 사용성 요인값을 확인합니다."
+    },
+    {
+      "order": 72,
+      "kind": "p",
+      "section": "tool-input",
+      "id": null,
+      "text": "TV 화면을 업로드한 뒤 평가 유형과 화면 요소를 검토·조정합니다."
+    },
+    {
+      "order": 73,
+      "kind": "figcaption",
+      "section": "tool-input",
+      "id": null,
+      "text": "ACTUAL PROTOTYPE / INPUT"
+    },
+    {
+      "order": 74,
+      "kind": "p",
+      "section": "tool-input",
+      "id": null,
+      "text": "01 오른쪽 패널에서 사용성 요인값을 확인·조정"
+    },
+    {
+      "order": 75,
+      "kind": "h3",
+      "section": "tool-analysis",
+      "id": null,
+      "text": "점수만 보여주지 않고 영향 요인까지 살펴봅니다."
+    },
+    {
+      "order": 76,
+      "kind": "p",
+      "section": "tool-analysis",
+      "id": null,
+      "text": "사용성 점수·등급을 읽고 우선적으로 검토할 UI 요소를 확인합니다."
+    },
+    {
+      "order": 77,
+      "kind": "figcaption",
+      "section": "tool-analysis",
+      "id": null,
+      "text": "ACTUAL PROTOTYPE / ANALYSIS"
+    },
+    {
+      "order": 78,
+      "kind": "p",
+      "section": "tool-analysis",
+      "id": null,
+      "text": "02 사용성 점수·등급과 요인별 영향을 분석"
+    },
+    {
+      "order": 79,
+      "kind": "h3",
+      "section": "tool-alternatives",
+      "id": null,
+      "text": "바꿀 요인을 선택하고 AI 권장안을 검토합니다."
+    },
+    {
+      "order": 80,
+      "kind": "p",
+      "section": "tool-alternatives",
+      "id": null,
+      "text": "변경 항목과 권장 내용을 확인해 디자인 대안을 생성하는 단계입니다."
+    },
+    {
+      "order": 81,
+      "kind": "figcaption",
+      "section": "tool-alternatives",
+      "id": null,
+      "text": "ACTUAL PROTOTYPE / RECOMMENDATION"
+    },
+    {
+      "order": 82,
+      "kind": "p",
+      "section": "tool-alternatives",
+      "id": null,
+      "text": "03 오른쪽 권장 패널에서 변경 항목과 제안을 검토"
+    },
+    {
+      "order": 83,
+      "kind": "h3",
+      "section": "tool-comparison",
+      "id": null,
+      "text": "기존 화면과 개선 대안을 나란히 비교합니다."
+    },
+    {
+      "order": 84,
+      "kind": "p",
+      "section": "tool-comparison",
+      "id": null,
+      "text": "As-Is/To-Be 화면과 요인값·예측 점수의 차이를 검토합니다."
+    },
+    {
+      "order": 85,
+      "kind": "figcaption",
+      "section": "tool-comparison",
+      "id": null,
+      "text": "ACTUAL PROTOTYPE / COMPARISON"
+    },
+    {
+      "order": 86,
+      "kind": "p",
+      "section": "tool-comparison",
+      "id": null,
+      "text": "04 비교 화면의 점수 변화는 프로토타입 예시값"
+    },
+    {
+      "order": 87,
+      "kind": "p",
+      "section": "tool-comparison",
+      "id": null,
+      "text": "캡처에 표시된 53점·61점은 프로토타입 화면의 예시값이며 실제 사용자 개선 효과를 뜻하지 않습니다."
+    },
+    {
+      "order": 88,
+      "kind": "p",
+      "section": "tool-settings",
+      "id": null,
+      "text": "BEHIND THE INTERFACE"
+    },
+    {
+      "order": 89,
+      "kind": "h2",
+      "section": "tool-settings",
+      "id": "settings-title",
+      "text": "분석 흐름 밖의 설정도 한곳에 모았습니다."
+    },
+    {
+      "order": 90,
+      "kind": "p",
+      "section": "tool-settings",
+      "id": null,
+      "text": "API 연결, 모델, 평가 기준, 저장·보안 옵션을 사용자가 확인할 수 있도록 분류했습니다."
+    },
+    {
+      "order": 91,
+      "kind": "figcaption",
+      "section": "tool-settings",
+      "id": null,
+      "text": "WORKSPACE / LEFT NAVIGATION"
+    },
+    {
+      "order": 92,
+      "kind": "p",
+      "section": "tool-settings",
+      "id": null,
+      "text": "연결 키와 요청 제한"
+    },
+    {
+      "order": 93,
+      "kind": "p",
+      "section": "tool-settings",
+      "id": null,
+      "text": "기본 모델과 응답 정밀도"
+    },
+    {
+      "order": 94,
+      "kind": "p",
+      "section": "tool-settings",
+      "id": null,
+      "text": "시청 거리 가중치와 평가 기준"
+    },
+    {
+      "order": 95,
+      "kind": "p",
+      "section": "tool-settings",
+      "id": null,
+      "text": "자동 저장과 민감정보 마스킹"
+    },
+    {
+      "order": 96,
+      "kind": "h2",
+      "section": "reflection",
+      "id": "reflection-title",
+      "text": "좋은 화면은 예쁘기 전에, 설명 가능해야 한다."
+    },
+    {
+      "order": 97,
+      "kind": "p",
+      "section": "reflection",
+      "id": null,
+      "text": "LG전자 UI/UX 부서와 소통하며 진행한 산학 연구를 통해, 실험과 분석의 결과가 실무에서 어떻게 논의되고 구체화되는지 경험했습니다. 일정에 맞춰 중간 결과를 공유하고 피드백을 반영하는 과정에서, 시각적 완성도만큼 판단 근거를 명확히 전달하는 일이 중요함을 배웠습니다."
+    },
+    {
+      "order": 98,
+      "kind": "p",
+      "section": "reflection",
+      "id": null,
+      "text": "학부연구생으로 참여하며 복잡한 연구 내용을 충분히 이해하면서도 짧은 일정에 맞춰 정리해야 했습니다. 다음에는 작업 목적을 먼저 구조화하고, 궁금한 부분을 더 적극적으로 확인해 연구의 맥락을 스스로 설명하고 제안하는 역량을 기르고자 합니다."
+    },
+    {
+      "order": 99,
+      "kind": "p",
+      "section": null,
+      "id": null,
+      "text": "실험의 근거를 이해하고, 디자인으로 구체화하는 사람."
+    }
+  ],
+  "tables": [],
+  "images": [
+    {
+      "source": "/assets/brand/symbol.svg",
+      "alt": "",
+      "caption": "",
+      "section": null,
+      "figmaNode": null,
+      "intrinsicWidth": 38,
+      "intrinsicHeight": 38,
+      "localAsset": "assets/brand/symbol.svg",
+      "sha256": "0a037d082b5923d7add84e07082bd48b1d1da991e9fb5528d7de3034f171392e"
+    },
+    {
+      "source": "assets/01-input.webp",
+      "alt": "실제 LG AI Design Tool 프로토타입의 화면 이미지 업로드 UI 원본",
+      "caption": "TV USABILITY RESEARCH TO DESIGN",
+      "section": null,
+      "figmaNode": null,
+      "intrinsicWidth": 1600,
+      "intrinsicHeight": 1000,
+      "localAsset": "work/lg/assets/01-input.webp",
+      "sha256": "c56b0b2941203d99149eecb22f3e18b04cefbf61c335f05734f436260547aa8b"
+    },
+    {
+      "source": "assets/tv-context.webp",
+      "alt": "스포츠, 앱, 콘텐츠가 함께 표시되는 webOS TV 홈 화면",
+      "caption": "01 — ACTUAL TV UI CONTEXT",
+      "section": "background",
+      "figmaNode": null,
+      "intrinsicWidth": 1180,
+      "intrinsicHeight": 664,
+      "localAsset": "work/lg/assets/tv-context.webp",
+      "sha256": "333d3743dbd272d365495cb0f3ad09f91ff1ada5551355852126448340220e23"
+    },
+    {
+      "source": "assets/tv-sports.webp",
+      "alt": "스포츠 경기와 팀별 콘텐츠를 탐색하는 TV 화면",
+      "caption": "01 탐색형 이동 스포츠 콘텐츠를 탐색하며 관심 항목 선택",
+      "section": "sequences",
+      "figmaNode": null,
+      "intrinsicWidth": 776,
+      "intrinsicHeight": 653,
+      "localAsset": "work/lg/assets/tv-sports.webp",
+      "sha256": "61c7aba7d9210df02893e222e452f5dd00ec688d2086e5f7ef222016bc3990ae"
+    },
+    {
+      "source": "assets/tv-qcard.webp",
+      "alt": "TV 검색 및 목적형 탐색 화면",
+      "caption": "02 탐색형·목적형 이동 통합 유사한 Q카드 레이아웃을 기준으로 정리",
+      "section": "sequences",
+      "figmaNode": null,
+      "intrinsicWidth": 661,
+      "intrinsicHeight": 373,
+      "localAsset": "work/lg/assets/tv-qcard.webp",
+      "sha256": "5faca167388cd514ebf66a3bd2cc0d193d29c364f395669f90ce120ffefb6cbd"
+    },
+    {
+      "source": "assets/tv-control.webp",
+      "alt": "밝기와 소리 등을 조정하는 TV 퀵 설정 화면",
+      "caption": "03 설정 / 조작 밝기·소리·화면 등 주요 기능 조정",
+      "section": "sequences",
+      "figmaNode": null,
+      "intrinsicWidth": 776,
+      "intrinsicHeight": 438,
+      "localAsset": "work/lg/assets/tv-control.webp",
+      "sha256": "5fd4b89bfb2b08b7313d843f6fde7aecd486f334873cd37497e3abeb3ddc01e5"
+    },
+    {
+      "source": "assets/tv-factors-browse.webp",
+      "alt": "탐색형 TV 화면에서 화면 카테고리와 썸네일 항목을 보여 주는 분석 이미지",
+      "caption": "탐색형 이동 — 썸네일 개수와 화면 구성",
+      "section": "factors",
+      "figmaNode": null,
+      "intrinsicWidth": 885,
+      "intrinsicHeight": 1273,
+      "localAsset": "work/lg/assets/tv-factors-browse.webp",
+      "sha256": "f0a9acf78a86c20f73cb1541a49898b32b04e6b045e0f85aa01f7594672f0a8d"
+    },
+    {
+      "source": "assets/tv-factors-control.webp",
+      "alt": "퀵 설정 화면의 텍스트 및 아이콘 요소 분석 이미지",
+      "caption": "설정·조작 — 텍스트와 아이콘 크기",
+      "section": "factors",
+      "figmaNode": null,
+      "intrinsicWidth": 1000,
+      "intrinsicHeight": 601,
+      "localAsset": "work/lg/assets/tv-factors-control.webp",
+      "sha256": "b403c95bfd79d4d5d22d8a3f5b289e38dda69c2c4ae293ab4615c60d0c5d7695"
+    },
+    {
+      "source": "assets/01-input.webp",
+      "alt": "AI Design Tool의 입력 단계: TV UI 미리보기와 오른쪽 요인값 설정 패널",
+      "caption": "ACTUAL PROTOTYPE / INPUT",
+      "section": "tool-input",
+      "figmaNode": null,
+      "intrinsicWidth": 1600,
+      "intrinsicHeight": 1000,
+      "localAsset": "work/lg/assets/01-input.webp",
+      "sha256": "c56b0b2941203d99149eecb22f3e18b04cefbf61c335f05734f436260547aa8b"
+    },
+    {
+      "source": "assets/02-analysis.webp",
+      "alt": "AI Design Tool 사용성 분석 화면: 점수와 요인별 분석 결과",
+      "caption": "ACTUAL PROTOTYPE / ANALYSIS",
+      "section": "tool-analysis",
+      "figmaNode": null,
+      "intrinsicWidth": 1600,
+      "intrinsicHeight": 1535,
+      "localAsset": "work/lg/assets/02-analysis.webp",
+      "sha256": "d4be90b20ae6e701d34d578428613a53aca97fa8511c3034ec63006c40b632d3"
+    },
+    {
+      "source": "assets/03-alternative.webp",
+      "alt": "AI Design Tool의 대안 추천 화면: 가운데 조정 영역과 오른쪽 AI 권장 패널",
+      "caption": "ACTUAL PROTOTYPE / RECOMMENDATION",
+      "section": "tool-alternatives",
+      "figmaNode": null,
+      "intrinsicWidth": 1600,
+      "intrinsicHeight": 1000,
+      "localAsset": "work/lg/assets/03-alternative.webp",
+      "sha256": "4244b501411f4e9460fcd80e062bd6e516f96424acc040b0b9693cd9288d0fc9"
+    },
+    {
+      "source": "assets/04-comparison.webp",
+      "alt": "AI Design Tool의 기존 화면과 개선 대안 비교 화면",
+      "caption": "ACTUAL PROTOTYPE / COMPARISON",
+      "section": "tool-comparison",
+      "figmaNode": null,
+      "intrinsicWidth": 1600,
+      "intrinsicHeight": 1137,
+      "localAsset": "work/lg/assets/04-comparison.webp",
+      "sha256": "9d9ec384d2b91ea57e3254af93c03e4cd970728c39f715754484548ba65876a5"
+    },
+    {
+      "source": "assets/settings-latest/workspace.png",
+      "alt": "AI Design Tool의 작업내역 화면과 좌측 탐색 및 상단 내비게이션",
+      "caption": "WORKSPACE / LEFT NAVIGATION",
+      "section": "tool-settings",
+      "figmaNode": null,
+      "intrinsicWidth": null,
+      "intrinsicHeight": null,
+      "localAsset": "work/lg/assets/settings-latest/workspace.png",
+      "sha256": "ff086babfcbd15c66b66357dc5041beee426a92270714d4282062b8a8a9ac568"
+    },
+    {
+      "source": "assets/settings-latest/api-panel.png",
+      "alt": "API 키 및 분석 요청 제한 설정 패널",
+      "caption": "",
+      "section": "tool-settings",
+      "figmaNode": null,
+      "intrinsicWidth": null,
+      "intrinsicHeight": null,
+      "localAsset": "work/lg/assets/settings-latest/api-panel.png",
+      "sha256": "afc1aac30aba478a91ba1498c18035dbf58f6649f7f34495b1a5f7537c110c01"
+    },
+    {
+      "source": "assets/settings-latest/model-panel.png",
+      "alt": "기본 AI 모델 및 응답 정밀도 설정 패널",
+      "caption": "",
+      "section": "tool-settings",
+      "figmaNode": null,
+      "intrinsicWidth": null,
+      "intrinsicHeight": null,
+      "localAsset": "work/lg/assets/settings-latest/model-panel.png",
+      "sha256": "0c22aadf245145bcd9dbdb80aa1f2215f9b697c6dcde1b8be3ea421980fcc066"
+    },
+    {
+      "source": "assets/settings-latest/score-panel.png",
+      "alt": "TV 시청 거리 가중치 및 개선 권장 기준 패널",
+      "caption": "",
+      "section": "tool-settings",
+      "figmaNode": null,
+      "intrinsicWidth": null,
+      "intrinsicHeight": null,
+      "localAsset": "work/lg/assets/settings-latest/score-panel.png",
+      "sha256": "798395d99f2c5b1c77d127b1944ef950c67ba43f998b6c3327ebf6bb4626d91e"
+    },
+    {
+      "source": "assets/settings-latest/storage-panel.png",
+      "alt": "자동 저장 및 민감정보 마스킹 설정 패널",
+      "caption": "",
+      "section": "tool-settings",
+      "figmaNode": null,
+      "intrinsicWidth": null,
+      "intrinsicHeight": null,
+      "localAsset": "work/lg/assets/settings-latest/storage-panel.png",
+      "sha256": "e067115351fde5c2d590983a6145c7d6c3da6dfce01fbb44965800b323e17b3d"
+    }
+  ],
+  "links": [
+    {
+      "text": "김성원 포트폴리오 홈",
+      "target": "/#home",
+      "section": null
+    },
+    {
+      "text": "ALL WORK",
+      "target": "/#work",
+      "section": null
+    },
+    {
+      "text": "VIEW PROTOTYPE",
+      "target": "prototype/",
+      "section": null
+    },
+    {
+      "text": "AI Design Tool 상세 해설",
+      "target": "tool-guide/",
+      "section": "interface"
+    },
+    {
+      "text": "ALL PROJECTS ↗",
+      "target": "/#work",
+      "section": null
+    }
+  ]
+}

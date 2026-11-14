@@ -1,5 +1,22 @@
 # 디자인 레퍼런스 출처와 적용 범위
 
+## 전면 리디자인 준비 · 2026-11-14
+
+사용자의 새 디자인 요청에 따라 준비한 자원이다. 실행 페이지에 적용하거나 새 사이트를 실행하지 않았다.
+- 콘텐츠 원본: [내용 추출본](../projects/content-snapshot-20261114/README.md)
+- 공통 제안: [DESIGN.md](../../DESIGN.md), [구현 인계](redesign-handoff.md)
+- [자원 인덱스](references/redesign-20261114/FOUNDATIONS.json): 4개 폰트·아이콘 저장소 고정 커밋/라이선스/파일 URL.
+- [인터랙션 수집본](references/redesign-20261114/interaction-collection/README.md): 기존에 선정한 8개 저장소의 코드·예제·문서 48개와 적용 판단.
+- [SUIT](https://github.com/sun-typeface/SUIT): 한글·영문 기본 서체 후보. OFL 1.1 원문과 Variable WOFF2/CSS를 수집.
+- [Pretendard](https://github.com/orioncactus/pretendard): 기존 로컬 파일 재사용 후보. 배포 폰트 라이선스와 CSS를 수집.
+- [Source Serif 4](https://github.com/adobe-fonts/source-serif): 제한된 영문 강조 후보. OFL 원문과 Roman Variable WOFF2를 수집.
+- [Lucide](https://github.com/lucide-icons/lucide): 아이콘 11개 SVG와 전체 라이선스 고지를 수집. 기업 로고 대체용이 아님.
+- 버튼·포커스·호버는 의미 있는 HTML/CSS를 기본으로 한다. [hover](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/hover), [focus-visible](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible), [dialog](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog)의 공식 문서를 확인했다.
+- 새 디자인에서는 수집한 라이브러리를 모두 설치하지 않는다. CSS/WAAPI → 필요할 때 Motion, native dialog → 필요할 때 PhotoSwipe 순으로 선택한다. Lenis와 Codrops 연출은 목적과 충돌 검토 후의 후보다.
+- 수집 원문은 상대 import·CSS URL을 수정하지 않았다. 선택 소스 스냅샷이므로 독립 실행본이 아니다. 폰트·아이콘·동작은 실제 시각·키보드·터치 검수 후 최종 채택한다.
+- 디자인 후보와 구현 준비 상태를 명시한 것이며, 브랜드 화면·사진·성과의 사용 권한이나 연구 결과를 새로 검증한 기록은 아니다.
+
+
 ### How I Think 카드 이미지 — 사용자 제공 최종본
 
 - 원본 ZIP: `C:/Users/SBS/Downloads/카드 내부 이미지들.zip`. 각 파일을 직접 확인했다. `1.png` 연결된 사각 판 구조물, `2.png` 어두운 전구와 노란 불빛, `3.png` 옆으로 기울어진 다이아몬드·바닥 반사, `4.png` 바닥에 눕힌 실버 AI 글자, `5.png` 맞물린 반투명 유리 퍼즐이다.

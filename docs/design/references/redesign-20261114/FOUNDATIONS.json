@@ -1,0 +1,153 @@
+{
+  "collectedOn": "2026-11-14",
+  "status": "Implementation preparation only; not wired to any page",
+  "typographyDecision": "SUIT Variable primary candidate; Source Serif 4 optional Latin accent; existing Pretendard is fallback candidate. Final selection after visual comparison.",
+  "repositories": [
+    {
+      "repo": "sun-typeface/SUIT",
+      "sha": "55118d981336d8fce005eb62888c12c0568ef7b0",
+      "branch": "main",
+      "license": "OFL-1.1",
+      "verifiedLicense": "SIL Open Font License 1.1",
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/sun-typeface/SUIT/55118d981336d8fce005eb62888c12c0568ef7b0/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/sun-typeface/SUIT/55118d981336d8fce005eb62888c12c0568ef7b0/README.md"
+        },
+        {
+          "path": "fonts/variable/woff2/SUIT-Variable.css",
+          "url": "https://raw.githubusercontent.com/sun-typeface/SUIT/55118d981336d8fce005eb62888c12c0568ef7b0/fonts/variable/woff2/SUIT-Variable.css"
+        }
+      ]
+    },
+    {
+      "repo": "orioncactus/pretendard",
+      "sha": "7aeb0698819be2b4097dae8ec8fe6a795e5cf3ae",
+      "branch": "main",
+      "license": "NOASSERTION",
+      "verifiedLicense": "SIL Open Font License 1.1",
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/orioncactus/pretendard/7aeb0698819be2b4097dae8ec8fe6a795e5cf3ae/LICENSE"
+        },
+        {
+          "path": "packages/pretendard/dist/LICENSE.txt",
+          "url": "https://raw.githubusercontent.com/orioncactus/pretendard/7aeb0698819be2b4097dae8ec8fe6a795e5cf3ae/packages/pretendard/dist/LICENSE.txt"
+        },
+        {
+          "path": "packages/pretendard/dist/web/variable/pretendardvariable.css",
+          "url": "https://raw.githubusercontent.com/orioncactus/pretendard/7aeb0698819be2b4097dae8ec8fe6a795e5cf3ae/packages/pretendard/dist/web/variable/pretendardvariable.css"
+        }
+      ]
+    },
+    {
+      "repo": "adobe-fonts/source-serif",
+      "sha": "80d3f8894c09c937bebfa9011247d2e1c79fd6f4",
+      "branch": "release",
+      "license": "OFL-1.1",
+      "verifiedLicense": "SIL Open Font License 1.1",
+      "files": [
+        {
+          "path": "LICENSE.md",
+          "url": "https://raw.githubusercontent.com/adobe-fonts/source-serif/80d3f8894c09c937bebfa9011247d2e1c79fd6f4/LICENSE.md"
+        },
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/adobe-fonts/source-serif/80d3f8894c09c937bebfa9011247d2e1c79fd6f4/README.md"
+        }
+      ]
+    },
+    {
+      "repo": "lucide-icons/lucide",
+      "sha": "55782beff3a0133df79c417eb68f96e8f19e2404",
+      "branch": "main",
+      "license": "NOASSERTION",
+      "verifiedLicense": "ISC with included MIT/Feather notices",
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/lucide-icons/lucide/55782beff3a0133df79c417eb68f96e8f19e2404/LICENSE"
+        },
+        {
+          "path": "icons/arrow-up-right.svg",
+          "url": "https://raw.githubusercontent.com/lucide-icons/lucide/55782beff3a0133df79c417eb68f96e8f19e2404/icons/arrow-up-right.svg"
+        },
+        {
+          "path": "icons/arrow-right.svg",
+          "url": "https://raw.githubusercontent.com/lucide-icons/lucide/55782beff3a0133df79c417eb68f96e8f19e2404/icons/arrow-right.svg"
+        },
+        {
+          "path": "icons/chevron-down.svg",
+          "url": "https://raw.githubusercontent.com/lucide-icons/lucide/55782beff3a0133df79c417eb68f96e8f19e2404/icons/chevron-down.svg"
+        },
+        {
+          "path": "icons/x.svg",
+          "url": "https://raw.githubusercontent.com/lucide-icons/lucide/55782beff3a0133df79c417eb68f96e8f19e2404/icons/x.svg"
+        },
+        {
+          "path": "icons/menu.svg",
+          "url": "https://raw.githubusercontent.com/lucide-icons/lucide/55782beff3a0133df79c417eb68f96e8f19e2404/icons/menu.svg"
+        },
+        {
+          "path": "icons/external-link.svg",
+          "url": "https://raw.githubusercontent.com/lucide-icons/lucide/55782beff3a0133df79c417eb68f96e8f19e2404/icons/external-link.svg"
+        },
+        {
+          "path": "icons/play.svg",
+          "url": "https://raw.githubusercontent.com/lucide-icons/lucide/55782beff3a0133df79c417eb68f96e8f19e2404/icons/play.svg"
+        },
+        {
+          "path": "icons/pause.svg",
+          "url": "https://raw.githubusercontent.com/lucide-icons/lucide/55782beff3a0133df79c417eb68f96e8f19e2404/icons/pause.svg"
+        },
+        {
+          "path": "icons/check.svg",
+          "url": "https://raw.githubusercontent.com/lucide-icons/lucide/55782beff3a0133df79c417eb68f96e8f19e2404/icons/check.svg"
+        },
+        {
+          "path": "icons/plus.svg",
+          "url": "https://raw.githubusercontent.com/lucide-icons/lucide/55782beff3a0133df79c417eb68f96e8f19e2404/icons/plus.svg"
+        },
+        {
+          "path": "icons/minus.svg",
+          "url": "https://raw.githubusercontent.com/lucide-icons/lucide/55782beff3a0133df79c417eb68f96e8f19e2404/icons/minus.svg"
+        }
+      ]
+    }
+  ],
+  "fontBinaries": [
+    {
+      "repo": "sun-typeface/SUIT",
+      "path": "fonts/variable/woff2/SUIT-Variable.woff2",
+      "name": "SUIT-Variable.woff2",
+      "url": "https://raw.githubusercontent.com/sun-typeface/SUIT/55118d981336d8fce005eb62888c12c0568ef7b0/fonts/variable/woff2/SUIT-Variable.woff2"
+    },
+    {
+      "repo": "adobe-fonts/source-serif",
+      "path": "WOFF2/VAR/SourceSerif4Variable-Roman.ttf.woff2",
+      "name": "SourceSerif4Variable-Roman.woff2",
+      "url": "https://raw.githubusercontent.com/adobe-fonts/source-serif/80d3f8894c09c937bebfa9011247d2e1c79fd6f4/WOFF2/VAR/SourceSerif4Variable-Roman.ttf.woff2"
+    }
+  ],
+  "nativeReferences": [
+    {
+      "purpose": "Hover input detection",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/hover"
+    },
+    {
+      "purpose": "Visible keyboard focus",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible"
+    },
+    {
+      "purpose": "Dialog and focus semantics",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog"
+    }
+  ],
+  "existingCollection": "interaction-collection/SOURCES.json",
+  "productionStatus": "Reference code snapshots, not installed libraries or a dependency-complete app."
+}
