@@ -1,3 +1,8 @@
+## 최신 표지와 상세 방향 · 2026-11-15
+
+메인과 상세 표지는 중앙 데스크톱·왼쪽 태블릿·오른쪽 모바일을 조금 겹쳐 배치한다. 세 기기는 같은 Explore 페이지의 실제 4열·2열·1열 화면을 사용한다. 현재의 이전 버전 표지 UI 대신 최신 editorial/explore.jpg·tablet.jpg·mobile.jpg를 원본으로 삼는다. cover-studies-20261115/offer-cover-study-v1.png는 구도 연구 시안이며 생성된 작은 글자·날짜는 최종 원본으로 교체해야 한다.
+상세 표지 CTA와 오른쪽 하단 플로팅 CTA만 프로토타입·사이트 진입으로 남긴다. 본문 이미지별 확대·직접 보기 버튼은 제거하고, 이전·다음 표지 내비게이션과 작은 공통 푸터로 마무리한다. 구체 기준은 [쉘·상세 명세](../design/shell-direction-20261115.md)를 따른다.
+
 ## 리디자인용 현재 콘텐츠 · 2026-11-14
 
 [원문 추출 JSON](content-snapshot-20261114/offer.json) · [읽기용 본문](content-snapshot-20261114/offer.md) · [공통 데이터](content-snapshot-20261114/structured-data.json)

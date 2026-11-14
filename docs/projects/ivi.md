@@ -1,3 +1,8 @@
+## 최신 표지와 상세 방향 · 2026-11-15
+
+메인 및 상세 표지는 portfolio-shell/dist/assets/projects/ivi-cover-clean-1920.jpg의 기존 디자인 컨셉 목업을 함께 사용한다. 상세 히어로를 통합형 실험 화면으로 바꾸지 않는다. 컨셉 목업·과거 실험 캡처·최신 지도 갱신 캡처·미검증 하이브리드 제안은 구분한다.
+상세 표지 CTA와 오른쪽 하단 플로팅 CTA만 프로토타입·사이트 진입으로 남긴다. 본문 이미지별 확대·직접 보기 버튼은 제거하고, 이전·다음 표지 내비게이션과 작은 공통 푸터로 마무리한다. 구체 기준은 [쉘·상세 명세](../design/shell-direction-20261115.md)를 따른다.
+
 ## 리디자인용 현재 콘텐츠 · 2026-11-14
 
 [원문 추출 JSON](content-snapshot-20261114/ivi.json) · [읽기용 본문](content-snapshot-20261114/ivi.md) · [공통 데이터](content-snapshot-20261114/structured-data.json)

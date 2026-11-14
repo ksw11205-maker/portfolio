@@ -1,4 +1,5 @@
 # 리디자인 구현 인계
+최신 지시(2026-11-15): shell-direction-20261115.md, qa-content-20261115.json, docs/projects/profile.md를 함께 읽는다. 메인 흐름은 인트로·히어로→이름·이력→HOW I WORK→프로젝트→Q&A→파도 전환→Contact다. 새 표지 3개는 구도 시안이며 정확한 원본 UI 합성과 최종 해상도 검수가 남아 있다. 웹사이트는 아직 구현·실행하지 않았다.
 상태: 준비 완료, 새 사이트 미구현·미실행. 기존 완성도 보관은 archive/pre-redesign-20261114, 준비 자료는 redesign/preparation-20261114.
 
 ## 반드시 읽을 파일
