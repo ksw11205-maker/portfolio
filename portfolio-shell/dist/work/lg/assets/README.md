@@ -16,3 +16,5 @@ Source: user-owned LG portfolio design, Figma file lmP0Ar9RfHciiN22KNxClC, secti
 ## Fonts
 
 Locally hosted Noto Sans KR 400/700 (Korean and Latin subsets) and Inter 500/700 (Latin). Original font files and their OFL licenses are preserved in fonts/. Source: official Fontsource npm packages already used in the design-render workflow and @fontsource/inter 5.3.0.
+
+- actual-upload.png: 2026-11-09 local prototype #page-upload component captured at 1600×1000; API-ready flag enabled only in browser memory to display the upload view, no key and no API request. Product source unchanged.

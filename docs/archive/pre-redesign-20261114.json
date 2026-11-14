@@ -1,0 +1,2645 @@
+{
+  "date": "2026-11-14",
+  "source": "C:\\Users\\USER\\Downloads\\KSW_Portfolio_Cycle65_Integrated_IVI_Alt_Dedup_20261114\\portfolio-vscode",
+  "branch": "archive/pre-redesign-20261114",
+  "description": "Cycle65 portfolio with refreshed Figma IVI images. Original images retained in portfolio-shell/backups. No site build or browser run.",
+  "fileCount": 527,
+  "distFiles": 486,
+  "files": [
+    {
+      "path": "portfolio-shell/#U221e#U00ef#U00f1#U03c6#U00fb#U00eb#U03b4#U2591#U2310#U03b4#U2593#U00f2.txt",
+      "bytes": 990,
+      "sha256": "541eeca039c3ebc5c67f3c074be10dcd7450e9c0648720f4c8ab11b49b38bfba"
+    },
+    {
+      "path": "portfolio-shell/backups/ivi-map-2026-11-14T13-54-05-000Z/climate.png",
+      "bytes": 145817,
+      "sha256": "717f8715f4ad736030e0f5e8b9d5e438dae83b372e22c41490100ca85dd7bc9e"
+    },
+    {
+      "path": "portfolio-shell/backups/ivi-map-2026-11-14T13-54-05-000Z/double.png",
+      "bytes": 150418,
+      "sha256": "9c592c971fc15fe70de5e5faadc17b680095c2ef9c120318fdf7d5030826fac0"
+    },
+    {
+      "path": "portfolio-shell/backups/ivi-map-2026-11-14T13-54-05-000Z/menu.png",
+      "bytes": 142875,
+      "sha256": "b4c1153b164ea9da13bff2b79b617a9e6594c5a25e84b31e78fd788ed1793f86"
+    },
+    {
+      "path": "portfolio-shell/backups/ivi-map-2026-11-14T13-54-05-000Z/phone.png",
+      "bytes": 113139,
+      "sha256": "4b9b30a256cb26dd08d1a3419a1db030b81ccdc5b03427db6929442762d6e1b9"
+    },
+    {
+      "path": "portfolio-shell/backups/ivi-map-2026-11-14T13-54-05-000Z/side.png",
+      "bytes": 151257,
+      "sha256": "adfa249d66fea73147bc21f39a09208d369b3332a7d4b40154795ac7e2e736b7"
+    },
+    {
+      "path": "portfolio-shell/backups/ivi-map-2026-11-14T13-54-05-000Z/top.png",
+      "bytes": 149471,
+      "sha256": "b14a1c3ad32bb757c19d395aed3638143d9226e961d5cb9b92af25c9114a7069"
+    },
+    {
+      "path": "portfolio-shell/backups/ivi-map-2026-11-14T13-54-05-000Z/unified.png",
+      "bytes": 149355,
+      "sha256": "8472abb70be859c89df7aba2b73edbc2c52a273cd988fea54f10e9c8e8ed1836"
+    },
+    {
+      "path": "portfolio-shell/backups/ivi-map-2026-11-14T13-54-05-000Z/update-report.json",
+      "bytes": 1531,
+      "sha256": "04d72c19c25e2a06a8b54cc31fe5237e5ee3b707175b9a72bcee7d17a55e9bf7"
+    },
+    {
+      "path": "portfolio-shell/dist/ai-metal.js",
+      "bytes": 7925,
+      "sha256": "43877cf8899bcb777c36b7dca85b89b8c6a498a6537c4976090dfabec43c6dd8"
+    },
+    {
+      "path": "portfolio-shell/dist/ai-weld-overlay.js",
+      "bytes": 2957,
+      "sha256": "8e64b095852da32fdd2fa54ecfda4a0ad74113e038fa2e769ebfd8af8c1e0300"
+    },
+    {
+      "path": "portfolio-shell/dist/app.js",
+      "bytes": 20293,
+      "sha256": "0da906116a8716264889b5b1ef66188af2faa4ea7eeaeaba6207b5466648c7c0"
+    },
+    {
+      "path": "portfolio-shell/dist/artwork-motion.js",
+      "bytes": 5711,
+      "sha256": "667bc5c85a08aebb09b129a9c0cbedaffd0c0873141f20034d82f5b7d86be2ad"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/brand/favicon.svg",
+      "bytes": 591,
+      "sha256": "0a037d082b5923d7add84e07082bd48b1d1da991e9fb5528d7de3034f171392e"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/brand/poster.svg",
+      "bytes": 14574,
+      "sha256": "c541a08c11e36da39fba3ed1ffeb252b7d6e35faf215222ba067766d4046a2d5"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/brand/prism.svg",
+      "bytes": 1537,
+      "sha256": "8cbf376f3f86ff2752a90205f4a0e2d6d06738727286060b575aeb1ced007bfb"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/brand/symbol-on-light.svg",
+      "bytes": 591,
+      "sha256": "f03f97d058bcf54cc98bfcb855a7f1de42dd941f208d1ec8e883e2a1ad877cbe"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/brand/symbol.svg",
+      "bytes": 591,
+      "sha256": "0a037d082b5923d7add84e07082bd48b1d1da991e9fb5528d7de3034f171392e"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/codex.svg",
+      "bytes": 256,
+      "sha256": "131304d118e2149bb7ca431d82e2f88b858719b3a8fa4b06342cdaa5842d381e"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/ergonomic-proportions.svg",
+      "bytes": 2540,
+      "sha256": "c7623538a1dd224af96ed5ae8e69b164d6b85c26214f7ea71a7dccda8a0f8204"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/fonts/Anton-OFL.txt",
+      "bytes": 4391,
+      "sha256": "eee1d24ff8f553eb732237c7dd9b945a78313ed49ad6de02872a47277741b44a"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/fonts/Anton-Regular.ttf",
+      "bytes": 170812,
+      "sha256": "a4ba3a92350ebb031da0cb47630ac49eb265082ca1bc0450442f4a83ab947cab"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/fonts/Pretendard-OFL.txt",
+      "bytes": 4418,
+      "sha256": "d31ddd9f2bed32fd7e302a205cf2380ba0de6529152d239ef99cfb6f261bfc04"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/fonts/PretendardVariable.woff2",
+      "bytes": 2057688,
+      "sha256": "9599f12fd42fc0bce1cd50b47a0c022e108d7aa64dd0d1bb0ed44f3282d900b4"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/fonts/README.md",
+      "bytes": 968,
+      "sha256": "700fdb193988a9c05010a498aa6839dfbcc4f227a96dc97a9cdd923f0ec67994"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/gpt.svg",
+      "bytes": 2961,
+      "sha256": "b94ea61d860fae6f82f43571f36f17111fcf5d348e8e9cc22ae4b441c7560011"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/hero/blue-chrome-original.png",
+      "bytes": 1608703,
+      "sha256": "073f542ad2491f15a79af61fde41178cbd28bef59c3a8988c9b3ad60f9f4b100"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/hero/blue-chrome.jpg",
+      "bytes": 157571,
+      "sha256": "9cc42ec4f4473147b9e93831357da31f3c929e45920fbd0d86c69d9cd2ed9ef1"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/hero/README.md",
+      "bytes": 2040,
+      "sha256": "c833cffb7ec024e4c2727901fe52fa3fd76af0077ad965cc131669ad28fa1430"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/ksw-intro.svg",
+      "bytes": 1016,
+      "sha256": "d54417dc0bdd7ac20884d5a52030de1361b6d59f2cce6c7feb05f57c18327ee3"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/method-ribbon.svg",
+      "bytes": 1263,
+      "sha256": "d3b9b073c210512db50b8e5f76bd3655791e8fbdc588f5789d4a486ada4c43e8"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/profile/logo-corner-blue.svg",
+      "bytes": 363,
+      "sha256": "6e64c5b168c098c1bfd533670c549760774b6d7a32a32ae5212daf7a6b6e5846"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/profile/logo-corner-white.svg",
+      "bytes": 363,
+      "sha256": "03bd2c10aedf523298cabd7b8af15964354e621d6aff7099cd2faef1c0fc0593"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/profile/logo-outline.svg",
+      "bytes": 684,
+      "sha256": "286aaf793af8b7d082a4659234a59ca74135e941180de026ce3723d84e8c44c5"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/profile/seongwon-portrait.webp",
+      "bytes": 131330,
+      "sha256": "41147136d4f8fffff8380c7347ea2fdd3c44af915e1268a56b994fcffda3c787"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/projects/ivi-1920.jpg",
+      "bytes": 305098,
+      "sha256": "b8fb4aa458bff5368608c094ff578101a8dcc3cb87888871eb6fa25871709c47"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/projects/ivi-960.jpg",
+      "bytes": 105285,
+      "sha256": "9e08695024849c71938d2b24d03111224d8cd8fd5a486d4b2bb18cbbe2463cff"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/projects/ivi-cover-1920.jpg",
+      "bytes": 267293,
+      "sha256": "4e8e372cc9f65bf5c9292c1e2dceae786b18693547c0eae3766b6eb78d217ac0"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/projects/ivi-cover-960.jpg",
+      "bytes": 92891,
+      "sha256": "e3f639426ff6a4e40c189df85f2d322e71ccd943a29968a41a57ffeb3d0ec01f"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/projects/ivi-cover-clean-1920.jpg",
+      "bytes": 335821,
+      "sha256": "3a929d5cadd4c2243c656381ab775ea173a73339f52ca53205ab7a837c1d84f2"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/projects/ivi-cover-clean-960.jpg",
+      "bytes": 115057,
+      "sha256": "2ec52157b9e8b41cd24a6a987f483f3c2c85e18ebcee3a3dc8abb3905b5456d8"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/projects/lg-cover-1920.jpg",
+      "bytes": 380669,
+      "sha256": "cc62ffadf2a26eb7f88927564b778462abf1397e0e244ca18070f7c0cf870bd3"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/projects/lg-cover-960.jpg",
+      "bytes": 133214,
+      "sha256": "82ce2520c222958105630f9fdb07565580fd345a9360d9b40375e818778bfbb3"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/projects/lg-tv-1920.jpg",
+      "bytes": 334244,
+      "sha256": "aecb3eeb9284487e68d3162181ba933a49a89f25f22a521ebb8a73a29a0ce989"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/projects/lg-tv-960.jpg",
+      "bytes": 118882,
+      "sha256": "d0ae328879782357d8a67edce16e11de59a8b0a4b21921470356e99d883c82e4"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/projects/offer-cover-1920.jpg",
+      "bytes": 254897,
+      "sha256": "8a8a6ed7550a3b5ce4b6b9d3cbaee74eb2fb80286935822a7f830aebcec51a24"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/projects/offer-cover-960.jpg",
+      "bytes": 91644,
+      "sha256": "b88f92ab150d4196acad99f16f7c7282c9c6af13f2ea34c0ea2299300c261347"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/qa/1.png",
+      "bytes": 1118770,
+      "sha256": "37163303bb56c8a8a4ba22d140d2972464d59bc84d723fcac99d95341db6c16e"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/qa/2.png",
+      "bytes": 1177861,
+      "sha256": "54219473bf81f377558d1727c5f802378e0ba4a817a5851d8c4b0b0e95a2e9ee"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/qa/3.png",
+      "bytes": 1697364,
+      "sha256": "c3e62da26b5ce0915208be5f61937ea15d2272919658452b35170723348a0f66"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/qa/4.png",
+      "bytes": 1021808,
+      "sha256": "74a913ad872f54727d27f992f4e6f454b1281b4fc290966345da37cfdff08957"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/qa/5.png",
+      "bytes": 1480309,
+      "sha256": "a558673492951dce862bedd25e0645a2ec926692829e6503ae6f5a8151a3c480"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/tools/aftereffects.svg",
+      "bytes": 490,
+      "sha256": "856b4ea74a124a300051bff44dcd81eafc2d398df48c554a0db1d942912e8cbb"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/tools/css3.svg",
+      "bytes": 778,
+      "sha256": "36b7d94b657d571d3f94042acbf6a4c86a5301a222f83f4b4583ad2acf6e297d"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/tools/figma.svg",
+      "bytes": 585,
+      "sha256": "d37c2bf1a1d4f10aeffb224e44da672cb8b9510f6e5a2e24b61758262995805e"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/tools/html5.svg",
+      "bytes": 607,
+      "sha256": "34826e5b3315daadf4fa15f723a3c1d5ba4a89277bfd94e22ac4d7d3d54338c5"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/tools/illustrator.svg",
+      "bytes": 929,
+      "sha256": "09f05a7af7975a77c5077d86f27ca33746f59cd54d51e85bf374147760dbec75"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/tools/javascript.svg",
+      "bytes": 1144,
+      "sha256": "0656ff65fc8eeacda5c78d7f9ffe91ec1eb919db64f56e0b7dcd460af4bbd36c"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/tools/LICENSE",
+      "bytes": 1072,
+      "sha256": "121194741d4a915b9f5890fdd6dd95121f9b1f816517c792358d72d7c838d664"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/tools/maze.svg",
+      "bytes": 197,
+      "sha256": "32e6963c1fd061ee8250e9218164e1425922156843e681d07f1e3cb448068daa"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/tools/photoshop.svg",
+      "bytes": 2234,
+      "sha256": "4242c73530668189563cbf1ca1c1ceadc6886751c6df188c2a6425e9faa4acaf"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/tools/README.md",
+      "bytes": 825,
+      "sha256": "eaf705bb73bfde15b4c7a7172c2c0b38e8e2d57f96c2e93eac9b3e56f1ce19f8"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/tools-chrome.png",
+      "bytes": 1266007,
+      "sha256": "bfb0796f74228476569078843ce65744fe4693a54b728c5be600f747675f93f1"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/tools-chrome.prompt.txt",
+      "bytes": 1413,
+      "sha256": "d508459b8de236b3e989e7f6af997acede8603ab3911692c5dc874ac6345bc22"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/tools-mobius.svg",
+      "bytes": 1359209,
+      "sha256": "e0a2dbacd1287fb75be8e83846131b84536cca3a6c019e4bc5a24b0fc9141d40"
+    },
+    {
+      "path": "portfolio-shell/dist/assets/tools-reference-ring.png",
+      "bytes": 1330991,
+      "sha256": "c63a868f361876f2f4e2d92eabe5005cc754b4c3909afdffcd76a835a2bd51fd"
+    },
+    {
+      "path": "portfolio-shell/dist/brand-base.css",
+      "bytes": 269,
+      "sha256": "53a4ddc53d12353377e84ebe469ea41ab78e70bd2dcd12bbfd2d90954eca915c"
+    },
+    {
+      "path": "portfolio-shell/dist/brand-model.js",
+      "bytes": 13430,
+      "sha256": "25863c52f0e20e13c8898020858b174f9e98b3a0f96a6662e13f66da4c18e00c"
+    },
+    {
+      "path": "portfolio-shell/dist/brand-shape.js",
+      "bytes": 492,
+      "sha256": "6a3857232f37ed043892c9d74b1ab9876bf63e37720ea37e480ef9aee7541a7a"
+    },
+    {
+      "path": "portfolio-shell/dist/brand.css",
+      "bytes": 13180,
+      "sha256": "259ea09628537028a245d6dc31cdb3e5b4c869c367b656854ec10ada704be673"
+    },
+    {
+      "path": "portfolio-shell/dist/cafe-callouts.js",
+      "bytes": 4706,
+      "sha256": "f745883858a236e13a2ba75a82f88dbe078beb23b12ce5db563be8fb9de06738"
+    },
+    {
+      "path": "portfolio-shell/dist/cafekok-cover.css",
+      "bytes": 2247,
+      "sha256": "a289f42252608f78a76861b283ffa99790c9829da6b3c3dfba7fd6fb87c0549f"
+    },
+    {
+      "path": "portfolio-shell/dist/case-chapter-layout.css",
+      "bytes": 2516,
+      "sha256": "ee35274e1430e83fd97ff8e6c80c642894a556a65284705f086c9a4c096dcb00"
+    },
+    {
+      "path": "portfolio-shell/dist/case-controls-lg.js",
+      "bytes": 1961,
+      "sha256": "d50fa8e923ac08b5f8df19268a37d69bda6ba6cd75e97334b0ec1d82e73d35eb"
+    },
+    {
+      "path": "portfolio-shell/dist/case-controls.css",
+      "bytes": 7417,
+      "sha256": "4206f2f1ccbce0eb95c28984922d0ffdba317047e17e01d46cf83ac0bd653c70"
+    },
+    {
+      "path": "portfolio-shell/dist/case-cursor.css",
+      "bytes": 2208,
+      "sha256": "f1fa3f2d11ae5ae83bba8e66bf3db14874885b04e2c6ee5b9c8d9dbfb8f4e423"
+    },
+    {
+      "path": "portfolio-shell/dist/case-cursor.js",
+      "bytes": 5483,
+      "sha256": "76626c8c8123177a234be2dc7541031618b17ed59eb01607d57e92e5dc84cdaf"
+    },
+    {
+      "path": "portfolio-shell/dist/case-image-preview.css",
+      "bytes": 2736,
+      "sha256": "486900af9178ecad10bbe7640da4d75e6568d1aea4e5408594f53fd1c69b3f7c"
+    },
+    {
+      "path": "portfolio-shell/dist/case-image-preview.js",
+      "bytes": 2964,
+      "sha256": "a8f68cd08b3b3b50ce907a788a3e57c0275d2badb29be14266ae88b03f5e9f35"
+    },
+    {
+      "path": "portfolio-shell/dist/case-navigation.css",
+      "bytes": 12265,
+      "sha256": "bd92f30e090c354ff6f2d2c95474e1aa1fe32daa6e2ad73f983325364a8531fc"
+    },
+    {
+      "path": "portfolio-shell/dist/case-navigation.js",
+      "bytes": 2786,
+      "sha256": "fda3e698a9bd3ff0eab856d151b161e9897be52217a4993ffae71acba91e08af"
+    },
+    {
+      "path": "portfolio-shell/dist/case-slides.css",
+      "bytes": 971,
+      "sha256": "54e9a079e766625b9f0a305def6f842b416d287f35d78510b9b442efa5bf1ff1"
+    },
+    {
+      "path": "portfolio-shell/dist/case-slides.js",
+      "bytes": 11768,
+      "sha256": "67c6c5f6bb31fc119eaf449c155335a55b0e5158fa603ab3d06a0af0c6d755eb"
+    },
+    {
+      "path": "portfolio-shell/dist/case-steps.css",
+      "bytes": 2575,
+      "sha256": "f4ec7324a48397951cef84a29ffbcfdc6f728c0f6c79d7bd9408e337a625f18e"
+    },
+    {
+      "path": "portfolio-shell/dist/case-steps.js",
+      "bytes": 6751,
+      "sha256": "e9800d033dc19dac4f281f6f163fdf890b1c59202236c30bc8a7edd7871689f7"
+    },
+    {
+      "path": "portfolio-shell/dist/contact-atmosphere.css",
+      "bytes": 2262,
+      "sha256": "c56f15e16efaa2d61fef8a67d84789b48d9038b9a49b4d7ef298c2747a7cc680"
+    },
+    {
+      "path": "portfolio-shell/dist/contact-atmosphere.js",
+      "bytes": 1896,
+      "sha256": "e68e28689fbe5dccde62c135646f5ffe643fa896381f5a93e980467174f8c746"
+    },
+    {
+      "path": "portfolio-shell/dist/contact-wave.js",
+      "bytes": 3382,
+      "sha256": "b685e1f36dd6dc18dfce6b5c0bf6afc85368cf1a84e7a2eb5beb2ce7c95d63a9"
+    },
+    {
+      "path": "portfolio-shell/dist/data.js",
+      "bytes": 3119,
+      "sha256": "d47434e7ffd00e8334e5f0880ee3b1c894945e513e427a85a25462ca556cbc9c"
+    },
+    {
+      "path": "portfolio-shell/dist/diamond-model.js",
+      "bytes": 6186,
+      "sha256": "b1a8700e855301bddafdbc0bfb599c0bbd2cceee8d2c707843feab42b9a348c7"
+    },
+    {
+      "path": "portfolio-shell/dist/editorial-cases.css",
+      "bytes": 21759,
+      "sha256": "dd0610b19ea303cf6ad1937e752a62cfc72dee860f7b9385df0e0fb459bed4d8"
+    },
+    {
+      "path": "portfolio-shell/dist/editorial-cases.js",
+      "bytes": 3282,
+      "sha256": "a227045f282d82569245b38ea0e61081017c2c9f67a91278f1b81d6a4b81cba0"
+    },
+    {
+      "path": "portfolio-shell/dist/editorial-remaster-2026.css",
+      "bytes": 11158,
+      "sha256": "ff532d4bd06b10e6067b4edaa8be9b9e1350b59f3698bf5ac8cf74db31fa8758"
+    },
+    {
+      "path": "portfolio-shell/dist/feedback.css",
+      "bytes": 16688,
+      "sha256": "8e1dbb5be6cd82b44cc4e6e5b0329d8267fbe7a048b6fda8d8a038a8fbabbb2f"
+    },
+    {
+      "path": "portfolio-shell/dist/hero-logo-reveal.js",
+      "bytes": 1567,
+      "sha256": "3c6ceb5d81d14ba671456ada9595397bf0541ac08ff73cde943a4d575fcf262b"
+    },
+    {
+      "path": "portfolio-shell/dist/hero-waves.js",
+      "bytes": 4231,
+      "sha256": "d89ace3124f2362c1d503fbf2d680b74ab8dc591ef1c663ae441ca0b48025646"
+    },
+    {
+      "path": "portfolio-shell/dist/index.html",
+      "bytes": 25903,
+      "sha256": "5d9c39f4aa29a570381112bdd683e9f77c4b7bc676b91e582504f5c941dbe70e"
+    },
+    {
+      "path": "portfolio-shell/dist/intro-boot.js",
+      "bytes": 642,
+      "sha256": "0bbb1cf98150f52c7396be4dc543ca639f38ca166dc5ed39c192346830d57d39"
+    },
+    {
+      "path": "portfolio-shell/dist/intro-depth.css",
+      "bytes": 473,
+      "sha256": "c09ce8c5315973f6afd483f7c16e30f1ec186784fae59d52990637dbfa106b14"
+    },
+    {
+      "path": "portfolio-shell/dist/intro-readiness.js",
+      "bytes": 1432,
+      "sha256": "3d011592c906dcf6760d5cc5633b8bc3aa675e5b37b732bad1b6a503217fa8cf"
+    },
+    {
+      "path": "portfolio-shell/dist/intro.js",
+      "bytes": 5449,
+      "sha256": "255b1dfa416b371e8b8680136efb6331ee3b7c1df3825edbbce0ed92de5f9dac"
+    },
+    {
+      "path": "portfolio-shell/dist/laptop-layout.css",
+      "bytes": 3772,
+      "sha256": "2b2befd493233d89b96183cca02537d990fd53c2ebc5a343e67892ea307f1415"
+    },
+    {
+      "path": "portfolio-shell/dist/object-motion.js",
+      "bytes": 12721,
+      "sha256": "8c513d5514cd9907d77a977bf0c9f9db344af654ac72ab2b4fba394bf5964317"
+    },
+    {
+      "path": "portfolio-shell/dist/page-transitions.css",
+      "bytes": 1975,
+      "sha256": "21c12cda0649b0d26d984514362a21a0fe0ad2e21317126cc2f9b5ca1fea117a"
+    },
+    {
+      "path": "portfolio-shell/dist/page-transitions.js",
+      "bytes": 1827,
+      "sha256": "8f823bceeb6b07ad57381ff1b4be63f2279c9c220dad05249e53faef418b88c5"
+    },
+    {
+      "path": "portfolio-shell/dist/profile-portrait.css",
+      "bytes": 1316,
+      "sha256": "eff8b997dedef6119c4a0156ad2499ca12b4b0ce9632b3e003b290c41fa8fb43"
+    },
+    {
+      "path": "portfolio-shell/dist/profile-sections.js",
+      "bytes": 3990,
+      "sha256": "0a304cb2a22c4232ec2cf216bb75d4740a10e578a65afdf47bc470368d4c750f"
+    },
+    {
+      "path": "portfolio-shell/dist/profile-work.css",
+      "bytes": 9060,
+      "sha256": "06ab2f1f8e9081f991fc2396425e10dafbbc8e2d097e47b8d844ed019f633e0e"
+    },
+    {
+      "path": "portfolio-shell/dist/project-covers.css",
+      "bytes": 8446,
+      "sha256": "efaf7a8d7d047f33f438a91b3399c6bf770556f7065c26404ab4a9643ea379fc"
+    },
+    {
+      "path": "portfolio-shell/dist/project-orbit.js",
+      "bytes": 3016,
+      "sha256": "b4315ed5f6198e015f7ade59fe3b3dfcb97798695ff7b02ae9a98664fd8ec3cd"
+    },
+    {
+      "path": "portfolio-shell/dist/project-showcase.js",
+      "bytes": 3386,
+      "sha256": "3f22877623762de977f4002cd6b637e3797d4601de205c7903950ca7f5e84faa"
+    },
+    {
+      "path": "portfolio-shell/dist/reading-gate.js",
+      "bytes": 2262,
+      "sha256": "20cb2cb2b42a89c2abb532f3113284eb9049dfb99ee9ac0d942bda229fa761b7"
+    },
+    {
+      "path": "portfolio-shell/dist/reading-snap.js",
+      "bytes": 8134,
+      "sha256": "b22dc3a984a5ea63f1dc9185bce29d1b7281ab79b62957602ff72b97f2965a72"
+    },
+    {
+      "path": "portfolio-shell/dist/research-refinements.css",
+      "bytes": 4424,
+      "sha256": "9c0982d6ef9946f672970851b09de8939b13f90cc7f9950e5fd1815ca39d14f9"
+    },
+    {
+      "path": "portfolio-shell/dist/research-refinements.js",
+      "bytes": 2770,
+      "sha256": "8b2cda9e2d85ee56c7a75fe31b923d79759e361ff5a9d364d7bc0900d60d8e2d"
+    },
+    {
+      "path": "portfolio-shell/dist/scroll-motion.js",
+      "bytes": 5470,
+      "sha256": "abd0eb949d8b85981665276064140167749c91b1e8cb3bbc44be40f435a54616"
+    },
+    {
+      "path": "portfolio-shell/dist/section-flow.js",
+      "bytes": 30459,
+      "sha256": "861693dea7877816625d79c4797e97c31138e2b6638e380637da15298b6dbee0"
+    },
+    {
+      "path": "portfolio-shell/dist/shell-motion.css",
+      "bytes": 2424,
+      "sha256": "4662a057e5328ee3e3f7ee93abb212617c9ef8b26273ee7de7e9ca1f85435739"
+    },
+    {
+      "path": "portfolio-shell/dist/shell-motion.js",
+      "bytes": 1457,
+      "sha256": "526f85bf7d13c7984b62371a6415ab9e2efcf070cb39b451060850acda16e87c"
+    },
+    {
+      "path": "portfolio-shell/dist/statement-mark.js",
+      "bytes": 886,
+      "sha256": "90a683f37029c8b7b0ae68d2074138aed32ff25c8760d15525241488bb84bd58"
+    },
+    {
+      "path": "portfolio-shell/dist/statement-motion.js",
+      "bytes": 2168,
+      "sha256": "42744be7dadacb4f3d7ba1570be1a0dcd37ee9b113955830009b33283c807a66"
+    },
+    {
+      "path": "portfolio-shell/dist/styles.css",
+      "bytes": 46873,
+      "sha256": "ca9b0f57265d63868ee73cc74ed32dae7268477e86793cdc437f2b8badbb9561"
+    },
+    {
+      "path": "portfolio-shell/dist/text-reveal.js",
+      "bytes": 4824,
+      "sha256": "30038804750fcfe235bb581ad0ec0bd4074ab93bf8c26cf67fc640470c3845ae"
+    },
+    {
+      "path": "portfolio-shell/dist/vendor/gsap/gsap.min.js",
+      "bytes": 72435,
+      "sha256": "96c01b81f44a3290e2b4532f55e2c9534b2adc43273a19f3756b2cb41f0fd0b6"
+    },
+    {
+      "path": "portfolio-shell/dist/vendor/gsap/MorphSVGPlugin.min.js",
+      "bytes": 16603,
+      "sha256": "fe638800184406468075bdb59ef41ea264d5d3568fff5f68f3ce46bb132a02fe"
+    },
+    {
+      "path": "portfolio-shell/dist/vendor/gsap/README.md",
+      "bytes": 934,
+      "sha256": "4eba410a3954f71063a4379d0d3f93debe77499832288495c3cd41b8121bac9f"
+    },
+    {
+      "path": "portfolio-shell/dist/vendor/gsap/ScrollTrigger.min.js",
+      "bytes": 44155,
+      "sha256": "a3c80b65976721ec6ff3cf72cd4a9b30a8ef4c2f24d9fca821b693c674b246ed"
+    },
+    {
+      "path": "portfolio-shell/dist/vendor/lenis/lenis.js",
+      "bytes": 31986,
+      "sha256": "cae3e8e19647cc469b5f059f1c5585715ffa918dc63ec68701879383a658e6c1"
+    },
+    {
+      "path": "portfolio-shell/dist/vendor/lenis/LICENSE",
+      "bytes": 1088,
+      "sha256": "7d1896b31f2eed9f286b05faca067c4e35b2f109ae7c4ed5105220e2d2820228"
+    },
+    {
+      "path": "portfolio-shell/dist/vendor/lenis/README.md",
+      "bytes": 505,
+      "sha256": "9b625651054b064206736dffe06dd9cb6daf7bde3747ade1ab0381a550bdb3a9"
+    },
+    {
+      "path": "portfolio-shell/dist/vendor/slides-pinning/LICENSE.txt",
+      "bytes": 1114,
+      "sha256": "5a7b3e3421caa7e9a6c20adaffd7907e479a74dec99c2f29594283ffc283388b"
+    },
+    {
+      "path": "portfolio-shell/dist/vendor/slides-pinning/README.md",
+      "bytes": 168,
+      "sha256": "8150db6fd769bc8a15c0b6cf42dead023e5ed5e3c1c8b2807b7986ba24418528"
+    },
+    {
+      "path": "portfolio-shell/dist/vendor/three/LICENSE",
+      "bytes": 1081,
+      "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601"
+    },
+    {
+      "path": "portfolio-shell/dist/vendor/three/README.md",
+      "bytes": 354,
+      "sha256": "3e8f619ae2bab1000c2b91cc938bd797dca3568cfc49e2204837191600723af3"
+    },
+    {
+      "path": "portfolio-shell/dist/vendor/three/three.core.min.js",
+      "bytes": 381124,
+      "sha256": "61ba0df005b05991361d040d8ff670e1aadfd0ce7aeebd1fdb0725957a8957de"
+    },
+    {
+      "path": "portfolio-shell/dist/vendor/three/three.module.min.js",
+      "bytes": 338908,
+      "sha256": "e2b5ee6bccd38fd6d8a2428546b83c5f2426d84b152ef82be8055556e3b40eb6"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/assets/cafe-cover-800.webp",
+      "bytes": 55492,
+      "sha256": "967e370d1913a0a1221735e752e37609b39c42b9d4e5999e51e3676acd33b88d"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/assets/cafe-cover.jpg",
+      "bytes": 585963,
+      "sha256": "fb5729cc23461dc48474e1a7a019fe0d3cf23ad961ebacffdbaaae6d7761a060"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/assets/cafe-cover.webp",
+      "bytes": 343174,
+      "sha256": "41fc509267d75ad11e225de672a748871b5543d960f9e4540166d6bacc8a19bf"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/assets/cafekok-cover.png",
+      "bytes": 1450332,
+      "sha256": "60ee7c4908ed600de3a73873216cb3ab3e36885ad7ccaac056d1224f0cc7a7d2"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/assets/cafekok-device-frame.png",
+      "bytes": 293508,
+      "sha256": "bb4a5ce4759b9b90ebe4ed40575ceb5932adbfebb5af75c90c5404c55946c77e"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/assets/cafekok-first-screen-fullbleed.jpg",
+      "bytes": 47561,
+      "sha256": "071b6601ab7ce665d228f6b693ee03c6a9da019bc6887bc9ebb28957c389fc69"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/assets/cafekok-first-screen-spaced.jpg",
+      "bytes": 50856,
+      "sha256": "7af13da6dd4c206170a1724c1fdd60018afd18770ded8b3ef6cb7ec1d51c3d7b"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/assets/cafekok-first-screen.jpg",
+      "bytes": 49906,
+      "sha256": "1da760acfb22a71c5082c0c71959a05b87bbcc9ae75f10caa2a86fd72fa9ae18"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/assets/cafekok-icon.png",
+      "bytes": 1021041,
+      "sha256": "e9e517e819fe67186687ffb147a6f3967027833adbf5d53954afc0b23865a1be"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/assets/cafekok-logo.png",
+      "bytes": 1137619,
+      "sha256": "ba5b5d7922d1345d4d3a1ac0c0b0c067d2be7534f3935d8e485f8775373ed1c0"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/assets/cover-table.webp",
+      "bytes": 177104,
+      "sha256": "18051bfc745ef77a3456d9ff66cae25c9f1258b755860d8ebcae9ca1e5f70c00"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/assets/editorial/background.png",
+      "bytes": 218818,
+      "sha256": "98f9f34f6e20f4523e4c4ce412c1151a403dbc48d8441215e89ae5037f1f2fc8"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/assets/editorial/concept.png",
+      "bytes": 266451,
+      "sha256": "3a6150faa233e7eea1d0185c3cedd1d764664e495418b51896707998c9fe32f0"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/assets/editorial/concept.svg",
+      "bytes": 516,
+      "sha256": "f309f79f222abd347647e708c4690a7f58358fe950ccdbbcc877c4b17c44e9f5"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/assets/editorial/detail.png",
+      "bytes": 909348,
+      "sha256": "de58dbc0362ea1d1c893989d07daa31bce3a743529e1053db7f7312b363a714f"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/assets/editorial/explore.png",
+      "bytes": 338017,
+      "sha256": "af1a7d9e06a59769d310b449e22856ab3ce5ec97a246405c5f99abff9a745b68"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/assets/editorial/flow.png",
+      "bytes": 296739,
+      "sha256": "e4e48beb6b6a57f4b4cb7993ca33e079dcfa80adb3417b97c9856a906f6db226"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/assets/editorial/home.png",
+      "bytes": 734369,
+      "sha256": "2a520c96b2b9da9a25bc84c9e70c2a8e99f6f1e632059d6d4439fda7cb824589"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/assets/editorial/logo.png",
+      "bytes": 5041,
+      "sha256": "9b9e269aa4efe9c14ef63aea3d11e1673b223be05f766e403209014c2611b31f"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/assets/editorial/onboarding.png",
+      "bytes": 791289,
+      "sha256": "07a6ec9141fa560bbbd9d3d06dc2b7b3eb919a081a18e2db231462afd6093a65"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/assets/editorial/overview.png",
+      "bytes": 492006,
+      "sha256": "a16e96f3ab47196ade52190bfe8b463bf99e0bc81918c8da69a74df28b1d9e96"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/assets/editorial/profile.png",
+      "bytes": 504570,
+      "sha256": "750a7421c8ed0f804dd077614195f036e63c72027cbd18383e8edec42c54a467"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/assets/editorial/quiz.png",
+      "bytes": 45694,
+      "sha256": "d0462b0c8328886f3e18d635ce5bc7d2284436f0500036734fc353691ad02baa"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/assets/editorial/reflection.png",
+      "bytes": 163691,
+      "sha256": "ed6485ef75a43ec33822bea1fe31c1b78cd3f20d451a8a56d35ee3ee4508e31a"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/assets/editorial/saved-empty.png",
+      "bytes": 67700,
+      "sha256": "b35ad7f6bb9f5242dfced0f7a1b96d7ed9b4fcb00a683a1541af40ae6eb48515"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/assets/editorial/saved.png",
+      "bytes": 318230,
+      "sha256": "ec2f70b2a967bdf566af7c83412cb2d9eeeb060fc0c2766dd761536f38f2d20d"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/assets/editorial/system.png",
+      "bytes": 199938,
+      "sha256": "c5df306027735a2e99211d4856f538507190d0d2b3770baea52a123148d4e81d"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/assets/g-1.jpg",
+      "bytes": 173889,
+      "sha256": "394a2f3f2556327e7894336d085397a0ba22095d8cc7099990a59e648653697a"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/assets/j-2.jpg",
+      "bytes": 135616,
+      "sha256": "e86a83e0680efdfc42f563ba9aa75811c94da5c430e49734d23b5e7ec339325a"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/assets/latest/captures.json",
+      "bytes": 28498,
+      "sha256": "491dd5b111b56b028492d1a9515cf1cb0b4b21390955d12d895254fcd1dc085c"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/assets/latest/detail.png",
+      "bytes": 909405,
+      "sha256": "9272aee942bf905a8490863822992bba9435247c6911c6a436de92e4e5826e59"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/assets/latest/explore.png",
+      "bytes": 336306,
+      "sha256": "85f4d6d3d96c00be1a27260c84d1a2dc2d2d201b930f6548fef1e0e7d0d5c84a"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/assets/latest/home.png",
+      "bytes": 833241,
+      "sha256": "fb3d61f4e462f9b5e56cadf4e289d697e602e65af7597b88ba31152b7d0bf9c9"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/assets/latest/onboarding.png",
+      "bytes": 791289,
+      "sha256": "07a6ec9141fa560bbbd9d3d06dc2b7b3eb919a081a18e2db231462afd6093a65"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/assets/latest/profile.png",
+      "bytes": 587638,
+      "sha256": "a0046d307ffd724b1bd4bada2ea7a24190b92f8527c54272ab0f791ea31ba589"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/assets/latest/quiz.png",
+      "bytes": 45547,
+      "sha256": "d230a48e0651ceb6b57881b11ed970fef54be358ceed5d74f843b0eebf0419e3"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/assets/latest/saved-empty.png",
+      "bytes": 67754,
+      "sha256": "4a2b8d4626e66efe8d9fac1f5b4862d109765f461d77dbcf5e8d177833cbe1f1"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/assets/latest/saved.png",
+      "bytes": 312563,
+      "sha256": "c986b553ce6c281c3a5f9e3d70554d4393406d7c04a96e4104d9c746f2a37ace"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/assets/Pretendard-LICENSE.txt",
+      "bytes": 4418,
+      "sha256": "d31ddd9f2bed32fd7e302a205cf2380ba0de6529152d239ef99cfb6f261bfc04"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/assets/PretendardVariable.woff2",
+      "bytes": 2057688,
+      "sha256": "9599f12fd42fc0bce1cd50b47a0c022e108d7aa64dd0d1bb0ed44f3282d900b4"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/assets/s-2.jpg",
+      "bytes": 104543,
+      "sha256": "f94ad0356a3df2688967d0d0df07e7f3b2f4c74f31599e7335020ea900a2efc2"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/assets/scene-compare.svg",
+      "bytes": 1567,
+      "sha256": "6ed2cb7bf2fe6e1a8421495b6df594c16ade0cfbbdbeb2fee4fb329f02829e61"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/assets/scene-work.svg",
+      "bytes": 1245,
+      "sha256": "65ad1ad42580b59472d8e4be55acf39818e7ffc140b3f8f50d5679f6ea51592c"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/index.html",
+      "bytes": 19095,
+      "sha256": "8e5ed476b52554c30ccdeb873fe5c629520bf48379691a387abdb69a9ed2454e"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/motion.css",
+      "bytes": 9237,
+      "sha256": "804c21293bb882f57e1fdc499239c5b3d93242897e44bee495c3c09f8dcf6661"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/motion.js",
+      "bytes": 5105,
+      "sha256": "b325a49d967e2f8c399cfbeeb04465c06954b4ba57bb30a939653358a4ec50fb"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/assets/index-BdHdcJpo.js",
+      "bytes": 288150,
+      "sha256": "758f19a1de34cf2f1a2984cb67cd7bb946e11613deed3ad04100461d18bd2fdb"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/assets/index-Be_G1aZz.css",
+      "bytes": 26044,
+      "sha256": "8587012c6303563ab5d7b6bdc886597dc21503fd292e34d7e517861500b23461"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/assets/index-Bz_ZnJTj.css",
+      "bytes": 34716,
+      "sha256": "2e07b5f01cc9ec5c86f88c47feace6b8cb42c0e3f68736743af7594a447137e5"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/assets/index-CFMF6itg.js",
+      "bytes": 265709,
+      "sha256": "74c4faf67493bd24c1106f6364b75fdda5f7d9a9958e1c7b0049ebfc608a4795"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/assets/index-DD0ZFB7Y.js",
+      "bytes": 287504,
+      "sha256": "1126267101d3720365260971839f47bb4d1c2006aa820188f1db6e882ac714e2"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/assets/index-RSuHC6m1.css",
+      "bytes": 39821,
+      "sha256": "cead0dd5c2aea5814297799245f3afe08d1602e809c42d7cba858f4a1aeebcfb"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/fonts/Cafe24Ssurround.woff",
+      "bytes": 407568,
+      "sha256": "a23ffb04c098fba24e3e96186a9d5e4c3b9ba9b34ab0b3b91bddd9d313c6d39b"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/fonts/Pretendard-LICENSE.txt",
+      "bytes": 4418,
+      "sha256": "d31ddd9f2bed32fd7e302a205cf2380ba0de6529152d239ef99cfb6f261bfc04"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/fonts/pretendard-variable.woff2",
+      "bytes": 2057688,
+      "sha256": "9599f12fd42fc0bce1cd50b47a0c022e108d7aa64dd0d1bb0ed44f3282d900b4"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/icons/arrow-right.svg",
+      "bytes": 344,
+      "sha256": "12b97a4d2821da556ce7df95f89df46deb94aa711d46b36a848be0de0ac2a7f0"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/icons/bean.svg",
+      "bytes": 480,
+      "sha256": "318c4fadd6c725f239d0618f310ae739cda7dadeff6cabfd276db8a2d00c2eb4"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/icons/bell.svg",
+      "bytes": 469,
+      "sha256": "129a018bd5025fc992a510e9c95e7868300d888b69c38c69a3466d310919ea13"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/icons/book-open.svg",
+      "bytes": 459,
+      "sha256": "510affae1044e8637c7a85972bd192df3c762f69a38c8c7dd2097387d7fe91d2"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/icons/bookmark.svg",
+      "bytes": 355,
+      "sha256": "241aeb7d7e27ff9bd3ffca766820c9c080418d62b0bfb0e56458ed3ec48316c4"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/icons/car.svg",
+      "bytes": 561,
+      "sha256": "c88a521219c42a1c97d63cf41a7ea240856d724741c39bb56177beca9664f0b5"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/icons/check.svg",
+      "bytes": 316,
+      "sha256": "538432eec072ceeccf5a7aacf347a2ad2bff9937d203dbd0b4f4245d7accd93c"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/icons/chevron-down.svg",
+      "bytes": 320,
+      "sha256": "04458777b8a99214cd167dc9a8c8a1e35dcc9373b7577f74d5b5da6418ffcf67"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/icons/chevron-left.svg",
+      "bytes": 322,
+      "sha256": "a185985349089649d06747570c72f47fe1f5eb293a9a0f11278f6442b0b9d25c"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/icons/chevron-right.svg",
+      "bytes": 322,
+      "sha256": "fea488a3b60fd7738bbbf8ca98826ef5c0381347c5fd1048d45ee70a75a51cfe"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/icons/coffee-bean.svg",
+      "bytes": 800,
+      "sha256": "3e0ae6ef6a7f49f3239b035ced95d9f3f948834b1ed2e687855a1105aafdf645"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/icons/coffee.svg",
+      "bytes": 457,
+      "sha256": "e920d9dbbaaaf46de5375ba0a4519906b99ff9ae36d0537c5d260dc19e98c42a"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/icons/heart.svg",
+      "bytes": 437,
+      "sha256": "3e0ea938f896725eb5d9f1440bec881671761a6864f8d0eb1948065f3de99aae"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/icons/house.svg",
+      "bytes": 468,
+      "sha256": "2c13f570d9b9727c9b6c23400c95acfa9737e91884ed926332edb18fd47a2a76"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/icons/map-pin.svg",
+      "bytes": 438,
+      "sha256": "ad781fbeaaa4c67a1a0c2144c6b3472877fc06c2dddf230bffcbe61a6adce984"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/icons/map.svg",
+      "bytes": 591,
+      "sha256": "d816154f3511bda716e38f53837babcb9925812f7ba43d6d264dd7b41564c3d1"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/icons/pencil-line.svg",
+      "bytes": 485,
+      "sha256": "478e83528357416244f4f673999c5d9ceccb5ba5a10e58f8f496de14dbc264f7"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/icons/search.svg",
+      "bytes": 351,
+      "sha256": "e11a04d51c122a8a759211424920efc65fa36b7ab06237c34ef90317d920ddf9"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/icons/settings.svg",
+      "bytes": 904,
+      "sha256": "ceea1a72d04b112291222ba9ad0779a12d47d816079fe4174900c724f360b55c"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/icons/sliders-horizontal.svg",
+      "bytes": 673,
+      "sha256": "995507595c7c24deffef382bacc452a24b40a2efc4aa54908563a0f09b6a75aa"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/icons/user-round.svg",
+      "bytes": 361,
+      "sha256": "d7390d374551a27503c64a6c4232753f0f5ad5dc03aefa760b52c9347e5474c3"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/icons/users.svg",
+      "bytes": 458,
+      "sha256": "b3ed379df6aea1aa451ff4bbf8b2884c210849ed30fc220484eced85f5d53c2c"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/icons/x.svg",
+      "bytes": 333,
+      "sha256": "0f38855d9d5775c10960ae53e46b745f77914b43f78c43bf8abc39f4d5e06de1"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/images/g-1.jpg",
+      "bytes": 173889,
+      "sha256": "394a2f3f2556327e7894336d085397a0ba22095d8cc7099990a59e648653697a"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/images/g-2.jpg",
+      "bytes": 94065,
+      "sha256": "775d0f3c524c9cd34476e926262bc89bc5a6cbd9fd3c0788315edf950903f6be"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/images/g-3.jpg",
+      "bytes": 79079,
+      "sha256": "447413aa982acd8d34f1cdb48f1b8d8d450f972bae470e239db777f7bac6ac5e"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/images/g-4.jpg",
+      "bytes": 99763,
+      "sha256": "21af58f9ca83fde88b94a6a67c3eecbfdb3aaeefc854ba410367a08dfb7d4915"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/images/j-1.jpg",
+      "bytes": 199925,
+      "sha256": "f32416f363419b54442e1cc096f3eff712176939134e234651306cc9628b1885"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/images/j-2.jpg",
+      "bytes": 135616,
+      "sha256": "e86a83e0680efdfc42f563ba9aa75811c94da5c430e49734d23b5e7ec339325a"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/images/j-3.jpg",
+      "bytes": 134815,
+      "sha256": "073c015ed8ae7d1699fb3d39862351e60e4e032899e1122506ddb5df55971757"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/images/j-4.jpg",
+      "bytes": 88214,
+      "sha256": "8f1217a8f23a9f5b54dfca8d23a1b7b8708b02b8d6764d94b989f42e14295ebd"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/images/s-1.jpg",
+      "bytes": 146819,
+      "sha256": "a30adaa40afff05f3505ead8c68d0d35cfd5256c02ffbf2ca8ead3aca0da4b88"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/images/s-2.jpg",
+      "bytes": 104543,
+      "sha256": "f94ad0356a3df2688967d0d0df07e7f3b2f4c74f31599e7335020ea900a2efc2"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/images/s-3.jpg",
+      "bytes": 80159,
+      "sha256": "391ffc6020756c6ffa5d32247d6e9b2cc82688d627c1631a6a5cb1580295a2e9"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/images/s-4.jpg",
+      "bytes": 165989,
+      "sha256": "1aef3e9f3480313e05a06dccfe00a1aee07e41054103484f40c8d876e3125586"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/images/taste-interiors-v2.webp",
+      "bytes": 381502,
+      "sha256": "195e28ce8c03c0a0eba9c7f784963d866e643b3ee00d274e0dc0234cad33d384"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/images/taste-menus-v2.webp",
+      "bytes": 1074352,
+      "sha256": "c1cec508590c576417277e9e8fa2b9b193cdb63d0b9edad8121e438ade45a5fc"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/index.html",
+      "bytes": 575,
+      "sha256": "50228049418a3128a59a5f8072b90fb4f6eb111adffa256a45b32388a9d63c9b"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/licenses/lucide-LICENSE.txt",
+      "bytes": 880,
+      "sha256": "1e7290b35280a048667bbf0ebabac1c7fd52a75300e8b2946ac165715997f2bc"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/licenses/phosphor-LICENSE.txt",
+      "bytes": 1092,
+      "sha256": "ddbe6082ec3cf979db47e5af549d2849c5d6182b3e005ef91ce1dbb9eb122f11"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/prototype/mobile-spacing.css",
+      "bytes": 1340,
+      "sha256": "9f59a9923b28dbb5801eb9f3781421043435552a741317b0f09f267fc576642b"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/screens.css",
+      "bytes": 8257,
+      "sha256": "a6c54da7c2811d6888c36925e5d36e561e47228a3932f6860d6cd4d89bce3aac"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/script.js",
+      "bytes": 423,
+      "sha256": "d5ee55c2700cd68e932b4a76d79faca84a698bfc015d78316bcd047ad83ea8b8"
+    },
+    {
+      "path": "portfolio-shell/dist/work/cafekok/styles.css",
+      "bytes": 9691,
+      "sha256": "552ec726f3dd042f8e2b5d9ea3e4ff5d83664f59a3ac106e4d1fbb4cca953156"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/bmw-background.jpg",
+      "bytes": 566784,
+      "sha256": "7129ee85869f59ee5b25147d66163e667b4ddf2d8e8e12b63ec1abc04c0a6728"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/experiment.webp",
+      "bytes": 29478,
+      "sha256": "602899e15ba7c2810b624ddbbd9d1505353e793e79aacd4cd46b0972a99682ae"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/figma/724-84-imgSourceCar.png",
+      "bytes": 334548,
+      "sha256": "0efb9cf5d42aa4677b0f08e649385359b775342cadc374dca2141d480a779e78"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/figma/724-84-imgSourceOldcar.png",
+      "bytes": 250926,
+      "sha256": "86fd1fcdfc811ecf96d54be44af5095c1c39cd8fadef36c44d02f2e87a550ccc"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/figma/724-86-imgSourceDouble.png",
+      "bytes": 121432,
+      "sha256": "d0ac6ef2543dadc0bf08d8cb9b0d688efcdc19e18a670bbddc4bc32095992362"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/figma/724-86-imgSourceSide.png",
+      "bytes": 121681,
+      "sha256": "8333c958e7ab03374cbdfbbf8bca0600c281050e89ed1e396067b62437e725f2"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/figma/724-86-imgSourceTop.png",
+      "bytes": 119944,
+      "sha256": "515c0152192bdbc43bf71d7dea986b0bcaabbaef8376c19ceeff0a17940a4335"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/figma/724-86-imgSourceUnified.png",
+      "bytes": 128691,
+      "sha256": "6a68d95ef0da914df85170bd2aec737259e9983f09d3f977effd804dbdc9be8e"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/figma/724-87-imgSourceClimate.png",
+      "bytes": 478171,
+      "sha256": "9ebab290c0cdbddcff79fac70723d44ab59865bb463e535faf5d54bac55a2d95"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/figma/724-87-imgSourceMenu2.png",
+      "bytes": 260580,
+      "sha256": "1c8c49ff811ba520144b2fa1020a6e0565860560c2d9f2bad331aadbef38deed"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/figma/724-87-imgSourcePhone.png",
+      "bytes": 100224,
+      "sha256": "bb7572c848785378950c1ff76b4275bb2f37486d17f76cdcb4cb11e5ee171f82"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/figma/724-88-imgIllustrationSimulatorConfiguration.png",
+      "bytes": 1861380,
+      "sha256": "cdf154ce86aa7f57c6f81896c2f0e8b7c680552e322d01236a8ccde198d11019"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/figma/724-90-imgSourceClimate.png",
+      "bytes": 478171,
+      "sha256": "9ebab290c0cdbddcff79fac70723d44ab59865bb463e535faf5d54bac55a2d95"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/figma/724-91-imgSourceMenu2.png",
+      "bytes": 260580,
+      "sha256": "1c8c49ff811ba520144b2fa1020a6e0565860560c2d9f2bad331aadbef38deed"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/figma/724-92-imgSourcePhone.png",
+      "bytes": 100224,
+      "sha256": "bb7572c848785378950c1ff76b4275bb2f37486d17f76cdcb4cb11e5ee171f82"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/figma/724-94-imgSourceHeatSide.png",
+      "bytes": 467894,
+      "sha256": "d824fa746c7d7e957c7e390a58e1b9ea8af359e5748d64c3aabef73790b92799"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/figma/724-94-imgSourceHeatTop.png",
+      "bytes": 447960,
+      "sha256": "e59a5a00a78206e12caca275855287c31a897a7b69da18faad0a452b66ea1740"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/figma/concept-clean.png",
+      "bytes": 1631948,
+      "sha256": "70b5aa7eea86bfc0dc920439b9c15461879830234f1ad8b5e376b4ca1fe1171a"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/figma/concept.png",
+      "bytes": 1788481,
+      "sha256": "0fa2f0f4120cb0a99cdc8239ef5b871998944c6bc6893d51f7e88200b92a89a5"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/figma/hero.png",
+      "bytes": 1704075,
+      "sha256": "588886943cc37adc8ecc4e25afac52419abd3e30e9110cb3f44cfa5ea48762f7"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/hero.webp",
+      "bytes": 119792,
+      "sha256": "12f3eafe57dacfb0736c332f23756c9cf4d3a588ed9276f687847d35d26d26b9"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/latest/climate.png",
+      "bytes": 117658,
+      "sha256": "fcded96bb77b5f5f619b09cb8f5a6b1adfb82b2a5a014cca69512bd80b2ee724"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/latest/double.png",
+      "bytes": 122554,
+      "sha256": "9ad3b4d683e984f01a6abcadbbfad1afef2638690a3e8d9de5d6dc4163865729"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/latest/menu.png",
+      "bytes": 122413,
+      "sha256": "1ed2ac8fbd863aa7a76a10b7df35ba4cbc16bdf45b418f1d761a043a2be9b3d3"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/latest/phone.png",
+      "bytes": 111901,
+      "sha256": "23526ba649b07bf2bc220d23e42f9437fe485603c4a3e67d86fa3fa6138d728b"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/latest/side.png",
+      "bytes": 1047973,
+      "sha256": "4c6fd8001188d6710851cfafb8df3f4e7e8fa0132966b9037c23bb927f5888e8"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/latest/source.json",
+      "bytes": 289,
+      "sha256": "9df405e9b4abab5282b9d0cfd85aef4145d96dc5dca361e99aba3529292f958a"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/latest/top.png",
+      "bytes": 123475,
+      "sha256": "01165f67712b0636f14e767394f3b219a40194b946af99ff00137076fd2ceb00"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/latest/unified.png",
+      "bytes": 121335,
+      "sha256": "b000b18b950a9d418708773d2373dfbfd650852baa58d24eef229ae8bbd91c5c"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/prototypes/climate.png",
+      "bytes": 2970901,
+      "sha256": "6f26f4c8a69e2e1f076f115078a1cb5cedcdfe46de8717629796cdd334f7897c"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/prototypes/double.png",
+      "bytes": 2912146,
+      "sha256": "d19a35d1b8862a1c9485348dfb1691016066bace7d5ee6b04dfc4cb9d3ea9cce"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/prototypes/menu.png",
+      "bytes": 2389230,
+      "sha256": "c3cf9e9bff46c48af0992ced1f5e08036273442edd62a1b7ed254acf75438487"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/prototypes/phone.png",
+      "bytes": 1118376,
+      "sha256": "4cd0cca54d6080b1c92c8bec1eed4932c3336ce343c9318924e51800020a1691"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/prototypes/side.png",
+      "bytes": 2930492,
+      "sha256": "94115442eae8528f34e9c3adae17b495a0006592e8643ce23488ffaf848b62d0"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/prototypes/top.png",
+      "bytes": 2877726,
+      "sha256": "a1c6f711c845faffe8c7219dbbebebf7ccec0688cf19d54ac4d28bc9bcd5569c"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/prototypes/unified.png",
+      "bytes": 3019838,
+      "sha256": "4146795ec1547ed5545ef8f568daf468c4cf9e7b7eb35658aab4692e622e13e9"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/references/double-01.jpg",
+      "bytes": 17166,
+      "sha256": "6fbec05104b49439cc32b228627bd186494b2b096694cc7ae6bbc464f3f0b5ee"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/references/double-02.jpg",
+      "bytes": 13976,
+      "sha256": "3a4da6428c8e867e06cc763007c0deb30a1a4dc6fa5179703585977e8763e35a"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/references/double-03.jpg",
+      "bytes": 9313,
+      "sha256": "a4bea77bd53fb049d0b3c48e1c5758df30bde806c2a05e19c8ec39da09c482c3"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/references/double-04.jpg",
+      "bytes": 16853,
+      "sha256": "0f94d757a83494fa60bbf9f03d61b92fcda4a8b6611401106dbd35d44be917b5"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/references/metadata.json",
+      "bytes": 4621,
+      "sha256": "443b9474d7b9c8cb825fb31762446aef389bb16f04b191f51c5f5fb451c19ee9"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/references/side-01.jpg",
+      "bytes": 30934,
+      "sha256": "672500760980dc56f1911caec384d819a0ebba0152e56764e6b4aff8ea5d9702"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/references/side-02.jpg",
+      "bytes": 26201,
+      "sha256": "f960a4218a334a559274909be31797f73538a0ae21e9aad929936ba285784893"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/references/side-03.jpg",
+      "bytes": 34626,
+      "sha256": "36eef39d2c0965a6d4fcaf9164e553537a0a750078819d91176d19a2ad1b412b"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/references/side-04.jpg",
+      "bytes": 18355,
+      "sha256": "1541d8d395136a2c293d0b74526e4198f6129a78c86fcaa46d86ce6dff93bc09"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/references/top-01.jpg",
+      "bytes": 24914,
+      "sha256": "bc5f1052025bcd810b5a57781ab0efb2f5a0b5b05080e4807a6eb61822044f77"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/references/unified-01.jpg",
+      "bytes": 22395,
+      "sha256": "262c7ccd600b04340643bbec77a2a87795f6067e26ac7e6589d4389740d25926"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/references/unified-02.jpg",
+      "bytes": 18008,
+      "sha256": "c653740549b5c4a47226d66f99c397bd9270345cdc76c2f63dce82abb1042ba6"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/references/unified-03.jpg",
+      "bytes": 19214,
+      "sha256": "139f67a473a856843fad2de9509205917506698d92d49929fa262d8676d4e3c2"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/references/unified-04.jpg",
+      "bytes": 16291,
+      "sha256": "74afaa4fce25c0f8f6a0edbb195b57bc99f4188d2a7abf588c1045db84215d3a"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/references/unified-05.jpg",
+      "bytes": 22164,
+      "sha256": "bfb9f1c5a0c28d0e361404c61d6e6120b6a1aa9cc4158723a1ea29a2c1bb5896"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/references/unified-06.jpg",
+      "bytes": 22043,
+      "sha256": "ea5e842016c9ac885422c7c3a5e8a900d5de7dddfeda2fda73cb849faf254b5e"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/research-landscape.webp",
+      "bytes": 75444,
+      "sha256": "8c986afd0746c6c964e817cc3d3bea040d78256fa99f1dab0fd00777dd9ae42e"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/task-menu.webp",
+      "bytes": 44136,
+      "sha256": "692a2f871f30873e30455b124efc18efd8e03d9cc1d8cee90ab60c7f1ed7703c"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/assets/tesla-background.png",
+      "bytes": 424799,
+      "sha256": "e4da26e52d6052f91102a7750c2e8017bf663c36c15b906cacbcd4cb2afd0586"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/editorial.css",
+      "bytes": 22609,
+      "sha256": "25fc58db07dd3006ec94ce436df0d626554bacd63589c5dcff10f53ccdf9d2a8"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/editorial.js",
+      "bytes": 7277,
+      "sha256": "f0cd1e36b2bbf8b3c85111b8bc3f84f507dc8dd743e477df2b979a83b28e4a51"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/index.html",
+      "bytes": 30051,
+      "sha256": "892bd7aff75d6b7b6f9beadd9aebe3625e3ed30756d20e397257bc59dfe8a8fa"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/motion.css",
+      "bytes": 2620,
+      "sha256": "3896c113e652bd6131b1853aa20ecbf917908bf6d243ed87dbbec9cbafb43e5a"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/motion.js",
+      "bytes": 1975,
+      "sha256": "bcf56f33be1a0f0010aa3271de8dfc96948b4d9edbad23a249479746c0ba2216"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/results.css",
+      "bytes": 5647,
+      "sha256": "777c5bc50cddce444076e8dd107f871098cb7b6d3fefe7f8d8ed052bc6175d58"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/results.js",
+      "bytes": 3615,
+      "sha256": "0b5aeefe62b6e229e037e9f211ed3ae613bae518691660d476a77c85659c77b8"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/script.js",
+      "bytes": 4152,
+      "sha256": "d15eb8aa33adaa1b22c686a98d8605ebe749ede659ba6382deda4d6fd29f4886"
+    },
+    {
+      "path": "portfolio-shell/dist/work/ivi/style.css",
+      "bytes": 26024,
+      "sha256": "a4eb406138715577020a5370e5fc157a24c411ad1e099352a1c2173949158ce2"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/assets/01-input.webp",
+      "bytes": 85980,
+      "sha256": "c56b0b2941203d99149eecb22f3e18b04cefbf61c335f05734f436260547aa8b"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/assets/02-analysis.webp",
+      "bytes": 106106,
+      "sha256": "d4be90b20ae6e701d34d578428613a53aca97fa8511c3034ec63006c40b632d3"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/assets/03-alternative.webp",
+      "bytes": 103366,
+      "sha256": "4244b501411f4e9460fcd80e062bd6e516f96424acc040b0b9693cd9288d0fc9"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/assets/04-comparison.webp",
+      "bytes": 95372,
+      "sha256": "9d9ec384d2b91ea57e3254af93c03e4cd970728c39f715754484548ba65876a5"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/assets/05-settings.webp",
+      "bytes": 32318,
+      "sha256": "2be8a02d8168f90259ca8b417f5f40bb429a7fb0f68eac532474e7d02e12c733"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/assets/06-settings-model.webp",
+      "bytes": 12604,
+      "sha256": "c7173907ac498859a9c5e0b428afb4136f8ef5681cec7e79500bbac45913ec89"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/assets/07-settings-score.webp",
+      "bytes": 12032,
+      "sha256": "3436972c1bbfaaacdfd6e0ab843c40e3a56d02da90816912f1523235f7a03661"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/assets/08-settings-storage.webp",
+      "bytes": 13272,
+      "sha256": "17e5be83de7220a7b0c96d5013a4784fe3fe619485563979b5c8fc79dbb67f29"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/assets/actual-upload.png",
+      "bytes": 56416,
+      "sha256": "ed703cae8c53baee14c1f232211aec15388f64cf1f918024f778f2aa7f4c1517"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/assets/cover.webp",
+      "bytes": 178528,
+      "sha256": "cf8a9f920b8b246b14d2c85820280894a6a57f4db3e7f34af2df0ed2f5fc3708"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/assets/fonts/fonts.css",
+      "bytes": 1256,
+      "sha256": "7f3bbd4dc9ed53342d9014976eb64ed1706c5d4e4747d3bbd23ceb2b7f28908f"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/assets/fonts/inter-latin-500-normal.woff2",
+      "bytes": 24272,
+      "sha256": "f3779f1efccc4bdcdf9c0a02ab95bf6bd092ed09c48c08cedc725889edd1d19f"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/assets/fonts/inter-latin-700-normal.woff2",
+      "bytes": 24356,
+      "sha256": "6f56409fd3d64bb85f7d070bce20749db2d66b6d63cec586cc22d1c761be2491"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/assets/fonts/Inter-LICENSE.txt",
+      "bytes": 4477,
+      "sha256": "3b0a5fca3d17942cde889069889dedbbbd075e9b599968c82a95f4d944e9b345"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/assets/fonts/noto-sans-kr-korean-400-normal.woff2",
+      "bytes": 542264,
+      "sha256": "809450f0b886d49a453c91a95908834ddff32a1b4ffea610a4a23128002a7296"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/assets/fonts/noto-sans-kr-korean-700-normal.woff2",
+      "bytes": 559392,
+      "sha256": "419a46fa75b0c492aa18218ff8c2d36221ad182cfa3db96a535c0e734961228b"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/assets/fonts/noto-sans-kr-latin-400-normal.woff2",
+      "bytes": 13716,
+      "sha256": "d45129ae032c4b94cd598f26d69bd0ce11e72b423a77883f01f481b39e8d3ac1"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/assets/fonts/noto-sans-kr-latin-700-normal.woff2",
+      "bytes": 13812,
+      "sha256": "2e07c0443f54ec3e9096dd64274234304bc351f68b2a610013c1841f83734852"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/assets/fonts/Noto-Sans-KR-LICENSE.txt",
+      "bytes": 4314,
+      "sha256": "18aabf190848725e2576eefb5c29ba06aac1029d02132252a7f312eac2e50cf3"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/assets/previous-analysis.webp",
+      "bytes": 38640,
+      "sha256": "bb1d513648c623901cbf203607ef1e70b9eb8ad5a84beda87d6df545a38392fd"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/assets/previous-input.webp",
+      "bytes": 51242,
+      "sha256": "b2f3da97b6cc2bac75921a6e8b78a0e9c9c141fd40d4c60e880495e5d4715ecb"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/assets/README.md",
+      "bytes": 2143,
+      "sha256": "9f9273634e94c0a5e573fae6d16c457120f299123c95a9248215830f55a41f29"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/assets/settings-latest/api-panel.png",
+      "bytes": 27400,
+      "sha256": "afc1aac30aba478a91ba1498c18035dbf58f6649f7f34495b1a5f7537c110c01"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/assets/settings-latest/api.png",
+      "bytes": 53408,
+      "sha256": "4574ca7793eb11a4a5206d706b8b5b6a2dd07cc411e4f8883eee395811b41a0b"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/assets/settings-latest/captures.json",
+      "bytes": 14923,
+      "sha256": "abb18d23f9ae271d1da38179d442a448faad5dcf255cc726692b457bd7b9bc57"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/assets/settings-latest/model-panel.png",
+      "bytes": 27824,
+      "sha256": "0c22aadf245145bcd9dbdb80aa1f2215f9b697c6dcde1b8be3ea421980fcc066"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/assets/settings-latest/model.png",
+      "bytes": 53937,
+      "sha256": "22afe966d80318c171fb2afd8a21c634c2f7765dd21ab9329d21da1429cc7c36"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/assets/settings-latest/score-panel.png",
+      "bytes": 27677,
+      "sha256": "798395d99f2c5b1c77d127b1944ef950c67ba43f998b6c3327ebf6bb4626d91e"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/assets/settings-latest/score.png",
+      "bytes": 53742,
+      "sha256": "aeb711b5daa309b1290e3da9a811b002bf40d1fb3f5775937631f4761cbcf5d2"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/assets/settings-latest/storage-panel.png",
+      "bytes": 27511,
+      "sha256": "e067115351fde5c2d590983a6145c7d6c3da6dfce01fbb44965800b323e17b3d"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/assets/settings-latest/storage.png",
+      "bytes": 53936,
+      "sha256": "a0a56abd11f58ca65e0b11f785cd354eed596361a31d48edd7544b611658f551"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/assets/settings-latest/workspace.png",
+      "bytes": 72843,
+      "sha256": "ff086babfcbd15c66b66357dc5041beee426a92270714d4282062b8a8a9ac568"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/assets/tool-architecture.svg",
+      "bytes": 231713,
+      "sha256": "2610f9c1a971af148042ee12c146064a64263d226d5d9b8c880bc6dc5031f57f"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/assets/tv-context.webp",
+      "bytes": 102192,
+      "sha256": "333d3743dbd272d365495cb0f3ad09f91ff1ada5551355852126448340220e23"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/assets/tv-control.webp",
+      "bytes": 54416,
+      "sha256": "5fd4b89bfb2b08b7313d843f6fde7aecd486f334873cd37497e3abeb3ddc01e5"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/assets/tv-factors-browse.webp",
+      "bytes": 149170,
+      "sha256": "f0a9acf78a86c20f73cb1541a49898b32b04e6b045e0f85aa01f7594672f0a8d"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/assets/tv-factors-context.webp",
+      "bytes": 61934,
+      "sha256": "2da786d8a12ae974ad2d04eae12abc2a8b49a5f703ae82bdc1c93ef9270b3254"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/assets/tv-factors-control.webp",
+      "bytes": 68938,
+      "sha256": "b403c95bfd79d4d5d22d8a3f5b289e38dda69c2c4ae293ab4615c60d0c5d7695"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/assets/tv-qcard.webp",
+      "bytes": 26188,
+      "sha256": "5faca167388cd514ebf66a3bd2cc0d193d29c364f395669f90ce120ffefb6cbd"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/assets/tv-sports.webp",
+      "bytes": 66078,
+      "sha256": "61c7aba7d9210df02893e222e452f5dd00ec688d2086e5f7ef222016bc3990ae"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/editorial.css",
+      "bytes": 28741,
+      "sha256": "5113e51a7cc45c6c630a4350f639dafac55a279da91fc0cf502fd49ef49cf865"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/editorial.js",
+      "bytes": 1708,
+      "sha256": "21564380f2f0a34b7a325c371a01f6fee57b5d725cb638f7b4277926253ccccc"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/factors.css",
+      "bytes": 11427,
+      "sha256": "38823f26a9c385318c3d02bf9bd2fd4df66460ca6d712fe0111983aab961924d"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/factors.js",
+      "bytes": 4672,
+      "sha256": "110f75f7f0825590461a9c2b78dc23c2f7fa952965532c697e9937b65f57a524"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/index.html",
+      "bytes": 24496,
+      "sha256": "4daf7bffafa8e5ed7f319fa6f9e9facce72d222bb2b1f8b5b8c31a782c3566a1"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/overview.css",
+      "bytes": 10477,
+      "sha256": "0ef4ba7b123085dce940c9309e14dd2ae545a0726e8aab6484872b7c2fb5f438"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/overview.js",
+      "bytes": 1198,
+      "sha256": "ab52e00baf82bfb14d54f6e5eac02e1849b88d964275b5232752b8e81f1bf03d"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/process.css",
+      "bytes": 11244,
+      "sha256": "ae144354b7774369ce8fdbb120b64ea7f3bfb061f32ea9d4d7542a3a3b273db8"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/process.js",
+      "bytes": 6285,
+      "sha256": "ba3afe8415104e2522fba6e9aa051b7256b3119a5a43ab31be5ea534c289a369"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/prototype/index.html",
+      "bytes": 122223,
+      "sha256": "3ab9063541c1d8952b623d49cf61c34d28466526269afc5a2d3759db3d1c91bc"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/refined.css",
+      "bytes": 6098,
+      "sha256": "dea1ddced444ea986b0720e563129bcbe3ef5646357a39ba7bdaaa84859535e8"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/refined.js",
+      "bytes": 3396,
+      "sha256": "595b7558f6f3bb7576f83bf3a530f4c40f5336ae82947f3f9816764addd26bf9"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/remaster.css",
+      "bytes": 34244,
+      "sha256": "79b3b8f73be84b2d25df522dae2fa2c3c6b16da351e9784d961423cb5ec2ce05"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/remaster.js",
+      "bytes": 1985,
+      "sha256": "13f72b53b18b6d5d61e8800d4d4b96f5f3dd1bec940a90b969d85a819fb6b201"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/script.js",
+      "bytes": 520,
+      "sha256": "6143bb07a6f630181df0a49f3dd2ca5bcdc314eb89f934ad1ecd9ec977e705ce"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/showcase.css",
+      "bytes": 4340,
+      "sha256": "2094d80de04e0a7d4552eaaf11d15bab924a68c1066969febef9a4d92c922655"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/showcase.js",
+      "bytes": 1930,
+      "sha256": "682e4a11d50086408f5135b61fe41a4ae4fc70dd502e5544e11d2fa9a86ab847"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/styles.css",
+      "bytes": 25556,
+      "sha256": "9adba174df89581e2ffa02cc039ecb4e1bfeae37d60ffae0b3c56c3cb10a3827"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/tool-guide/guide.css",
+      "bytes": 23639,
+      "sha256": "909a25e06a13fcc5b8832e460745dc01fa9b734d8af6d2053974b30a2554b46e"
+    },
+    {
+      "path": "portfolio-shell/dist/work/lg/tool-guide/index.html",
+      "bytes": 24331,
+      "sha256": "6d05078d7786d6dc8919b713c34ef15f6f22ad0daf6ebf3b54033f8dcd61289b"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/ASSET-CREDITS.md",
+      "bytes": 1497,
+      "sha256": "e533b9251aee499a9d120fb0c46032afd9d1bf0a6a1f22df2a13757c64be57a1"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/fonts/LICENSE.txt",
+      "bytes": 4418,
+      "sha256": "d31ddd9f2bed32fd7e302a205cf2380ba0de6529152d239ef99cfb6f261bfc04"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/fonts/PretendardVariable.woff2",
+      "bytes": 2057688,
+      "sha256": "9599f12fd42fc0bce1cd50b47a0c022e108d7aa64dd0d1bb0ed44f3282d900b4"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/29cm-hero.svg",
+      "bytes": 3844,
+      "sha256": "ea3bb4dcff408e9a4e86319b850b3a2dca644cb2b5358c9776c1f29fc94354fe"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/29cm-mark.svg",
+      "bytes": 3846,
+      "sha256": "a5d0d35b71075d48ec0ad91603549e54f8bba54c08a794e79a878634325a55e8"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/29cm-panel.svg",
+      "bytes": 5387,
+      "sha256": "17a9a4e83d7c6e13ab2bf98b491cb35a6b9a1f787f72570b6bf3594e073583d7"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/29cm.png",
+      "bytes": 2656,
+      "sha256": "baaacb981d27f2a3ce86d5215f92714b2a32b5a63933e2d7ea1d30ff8dcc79ba"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/adidas-hero.svg",
+      "bytes": 259,
+      "sha256": "78caf0a1993332e1c7007369350974cff6f0dc1aa52e5c74ee810110d16c60bf"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/adidas-mark.svg",
+      "bytes": 259,
+      "sha256": "78caf0a1993332e1c7007369350974cff6f0dc1aa52e5c74ee810110d16c60bf"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/adidas-panel.svg",
+      "bytes": 571,
+      "sha256": "563c13f03a838b7b5fdc112af39708ce5018cf70c5e851b02f9c28f5418db562"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/adidas.svg",
+      "bytes": 243,
+      "sha256": "914191458c0f416cfb1e5ad5750c55e87bd9a6cdc38259cfba70932b30a9237b"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/burgerking-hero.svg",
+      "bytes": 4371,
+      "sha256": "583d4d6a44295866a94d26f077d5dc96d6d28b70f9ecf698858f37c79fbdde30"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/burgerking-mark.svg",
+      "bytes": 4371,
+      "sha256": "583d4d6a44295866a94d26f077d5dc96d6d28b70f9ecf698858f37c79fbdde30"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/burgerking-panel.svg",
+      "bytes": 6051,
+      "sha256": "fa8c6a3765036c43d565ac91ecd7021f26b9ea7261583c8927ff8e95a29ef4d1"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/burgerking-source.svg",
+      "bytes": 4355,
+      "sha256": "f5eaca1a07de55966d05662d77f4e038cb04511d3369b8578f764fc6d66fc102"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/fila-hero.svg",
+      "bytes": 949,
+      "sha256": "b62b024038a13a9359530fdcbc410d2826c5ade301884ec1a9065f095528f944"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/fila-mark.svg",
+      "bytes": 949,
+      "sha256": "ad29e6a4cea32162cb143bcbffc4ad8865645d7db2948e6515294e176e899e5e"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/fila-panel.svg",
+      "bytes": 1491,
+      "sha256": "0c4b3d07020c7103983d0149fe7043f6572804694fe83958149bbb119b55840b"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/fila-source.svg",
+      "bytes": 933,
+      "sha256": "0414210c827d11f3ac60c1d885387a8e462097fb8a679b28b97de595f6aeb0d9"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/hm-hero.svg",
+      "bytes": 2113,
+      "sha256": "2595c7eb61ab64e70738245fc630e6afa3d409f1b8b56a45d4f17ed53732862a"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/hm-mark.svg",
+      "bytes": 2113,
+      "sha256": "a25967a42864a5e894a3389caf17f34281e06a4482bc8cc869770d192af50c46"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/hm-panel.svg",
+      "bytes": 3043,
+      "sha256": "5fe0764c70c5fd2ab26e13ff3c2d0751b33f156111082cd0069b743ce6964652"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/hm-source.svg",
+      "bytes": 2097,
+      "sha256": "bb3f396b2289c3e3a018c3bd03153bb3ed58dddd918a2886a1e58a0d822a55f7"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/ikea-hero.svg",
+      "bytes": 1523,
+      "sha256": "33f9cb7bcead68db1a8bc9c8332adece921d0276f19308c50dccf8db50cf6110"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/ikea-mark.svg",
+      "bytes": 1523,
+      "sha256": "33f9cb7bcead68db1a8bc9c8332adece921d0276f19308c50dccf8db50cf6110"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/ikea-panel.svg",
+      "bytes": 2255,
+      "sha256": "545746faf2b96e118cce1e9217d0937421b086ad9ed73c2708acb4cf886223ab"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/ikea.svg",
+      "bytes": 1521,
+      "sha256": "e4f93deb71f7099a91265abfe4d4e09447fb4c098f5a3f2af235d2109c345d83"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/innisfree-hero.svg",
+      "bytes": 3792,
+      "sha256": "c004f370b75deb781e994eb610cb39f1765c97c3b68db6a95a58e72845ae036c"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/innisfree-mark.svg",
+      "bytes": 3794,
+      "sha256": "d23c2eaceabedc949ce8931a5ea13d5b271bb96bfb53b21c33f9e54f6913014e"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/innisfree-panel.svg",
+      "bytes": 5319,
+      "sha256": "a7f0f7c1b6fba8d1dc762d9e1d24e97dc0cadc5220fba2054854470f63413c85"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/innisfree.png",
+      "bytes": 2618,
+      "sha256": "49cf5ced5019d1c291f62c0cbf0fb736b41effd55ac49c13599cc540b28fed54"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/kfc-hero.svg",
+      "bytes": 1712,
+      "sha256": "54de41d3071f83a768d5bcfa72bb3a8a39313797a04d0ed0c93f933ed3a587c4"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/kfc-mark.svg",
+      "bytes": 1712,
+      "sha256": "f13d6302c640601beb383d6ba99b38c70d0f7e168495e4937bade4da43be822f"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/kfc-panel.svg",
+      "bytes": 2507,
+      "sha256": "1dacc3221f5b4eb8587b9776f85f0ffb8a0820a0600e0eb9aecdfeab90963709"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/kfc-source.svg",
+      "bytes": 1696,
+      "sha256": "40633083f981957fcb5ee91642785474c188e4c6468143c5e5d240448e3f4b9e"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/mcdonalds-hero.svg",
+      "bytes": 418,
+      "sha256": "0341674136196a679670be6ff65f08e9d46dddd4130e660f127f17c3b339e6a1"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/mcdonalds-mark.svg",
+      "bytes": 418,
+      "sha256": "0341674136196a679670be6ff65f08e9d46dddd4130e660f127f17c3b339e6a1"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/mcdonalds-panel.svg",
+      "bytes": 783,
+      "sha256": "147d995faf2c8d087067a4c0b9ae27ad1005d2f9350c84e3a2c5df181eeb5180"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/mcdonalds-source.svg",
+      "bytes": 402,
+      "sha256": "35c203615d2d5d61184ea1f4ded91ebbf329a59e7e2d52e0a640f3b8fd8b740a"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/mega-coffee-hero.svg",
+      "bytes": 11781,
+      "sha256": "0f8d120274dc5200c3ff66317139dc56a1dd92a00650479bae742a31f6dcf47b"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/mega-coffee-mark.svg",
+      "bytes": 11781,
+      "sha256": "0f8d120274dc5200c3ff66317139dc56a1dd92a00650479bae742a31f6dcf47b"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/mega-coffee-panel.svg",
+      "bytes": 15967,
+      "sha256": "17505755c02d72a3d535a225c37e5522bedc4c108d5cd0a94ed69af26b69b42b"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/mega-coffee.png",
+      "bytes": 8738,
+      "sha256": "9d7d0f3e3dae94c2b1f3b187e6281eee0907ad56b2602667b4b88b31e4c58b82"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/muji-hero.svg",
+      "bytes": 6492,
+      "sha256": "a384a913edf4f2561ffc71a3458d287e2715fc11b05a5c2534873df1470286b9"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/muji-mark.svg",
+      "bytes": 6494,
+      "sha256": "83b97ccfb1840933f18c904566395cb1e16056f6a622786b49d17b3a8c29060f"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/muji-panel.svg",
+      "bytes": 8919,
+      "sha256": "49c0d86e6e7cb24aeac00774c19944760b2bdf871023f8d15cc14ef7ceca1c72"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/muji.png",
+      "bytes": 4643,
+      "sha256": "547ea9639d710d2c03cc469993b2d029888260c35ffba5698d9557f0d47bce81"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/musinsa-hero.svg",
+      "bytes": 3428,
+      "sha256": "9c38b324f5c08ad4812ea2503865e95cf633f34c0c4c116e1bab5dc88bde7c5f"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/musinsa-mark.svg",
+      "bytes": 3257,
+      "sha256": "91f0853370e56c18fddc52062d58359ec5b613f6b27d1c9b818438dbb0943091"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/musinsa-panel.svg",
+      "bytes": 4603,
+      "sha256": "682c8d9822eda5cf10ab55969dbc0e8e55d854daf0ca7e9d8731b54398774e01"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/musinsa.png",
+      "bytes": 2345,
+      "sha256": "c215264522bae2126f8f369df6985ffcc2bc3844b8f381916c7b1764101d5953"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/new-balance-hero.svg",
+      "bytes": 860,
+      "sha256": "384ee27c096fdd1641bff4ad7f04d9b92150b404b3a2bb92a2d6d4cce452e65d"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/new-balance-mark.svg",
+      "bytes": 860,
+      "sha256": "1669ed595f8bcf0a5580f34de3d09cf50f025204c36ea10a7a6109d7d8343833"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/new-balance-panel.svg",
+      "bytes": 1371,
+      "sha256": "ca2182ed0120205d5dbea372e1e4fda31e46920519c49de1da074d56cd7c612c"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/new-balance.svg",
+      "bytes": 844,
+      "sha256": "d8996468a6716a21df0db1b02378bdeecc772f6e66e633f76478970548c8e781"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/nike-hero.svg",
+      "bytes": 413,
+      "sha256": "ca3a0e89e4bd6367f5f49bba3d7a84a78b6f13396a646eda1a2d3382f7384cb9"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/nike-mark.svg",
+      "bytes": 413,
+      "sha256": "ed3ae90ce59250f4d47f0379155a711aa340955419798b7ae6bccbc7f3bc4708"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/nike-panel.svg",
+      "bytes": 775,
+      "sha256": "23d88039c21025f1562aa469ce28181ebf604c978efeabb582368ba559c69899"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/nike.svg",
+      "bytes": 397,
+      "sha256": "1792451e1b6393bd1d7153830f8aa55a0a49eddd1c3b65ed6fa13c68d7d5a547"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/northface-hero.svg",
+      "bytes": 2138,
+      "sha256": "ef90f926e585626b543d42356afaaf7719a4874f865c840dd762637cdadbc2b0"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/northface-mark.svg",
+      "bytes": 2138,
+      "sha256": "863b97f00851a2e0e81953bf419730c0903c95628bce013e9976d87550ae8a85"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/northface-panel.svg",
+      "bytes": 3075,
+      "sha256": "c5dbbea7f68ea6634cecaf27b611278fcd9b5d37be9f6ff653d544c218cbcdc1"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/northface-source.svg",
+      "bytes": 2122,
+      "sha256": "fbcb2a20eb4ca93a32d1bba6edd128a0a717b088417ee62bd5788dc5e6e187e8"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/oliveyoung-hero.svg",
+      "bytes": 6240,
+      "sha256": "066f417e1c6544313d77ebcba08f3ecddf19a3401ce152e7deb465a05cf366e3"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/oliveyoung-mark.svg",
+      "bytes": 6242,
+      "sha256": "417e2f470607dd9783b6a1e03ed9b5e1149066fee33d5a90b92a3150a17e4b56"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/oliveyoung-panel.svg",
+      "bytes": 8583,
+      "sha256": "1fa605fa4739ad48fa1c3c49675176d5f5cd4b9ca36db8a2f6b57789924db5d3"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/oliveyoung.png",
+      "bytes": 4454,
+      "sha256": "6e7d69e923e5c4c9d7170df901898e858083ca0ed2da0ad2fd4eab476b8cea7b"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/puma-hero.svg",
+      "bytes": 1386,
+      "sha256": "36024292fe136693fb5ecfd2da8cccb6beaa7dde7102e04e0bb939bee909160e"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/puma-mark.svg",
+      "bytes": 1386,
+      "sha256": "d0a900f37495eff4e3db9211d2a09668b1be6be0095ae148d14eec590dec1d69"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/puma-panel.svg",
+      "bytes": 2071,
+      "sha256": "7ebb3a0e16fb1058d50818f9843eecaeed06bcb3d42104a6a964f1b7237e7e90"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/puma-source.svg",
+      "bytes": 1370,
+      "sha256": "67a04c6aae392c014fd410d2e9df0bfbc6bab2bfc8171d46373a0b39c98a605d"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/starbucks-hero.svg",
+      "bytes": 15739,
+      "sha256": "6439bbf03e9275e239b59b263be7c2bd7e95c3f6f1746eb6fc6977e76948d703"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/starbucks-mark.svg",
+      "bytes": 15739,
+      "sha256": "6439bbf03e9275e239b59b263be7c2bd7e95c3f6f1746eb6fc6977e76948d703"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/starbucks-panel.svg",
+      "bytes": 21247,
+      "sha256": "dd0f4fe0bd4db2340bff4f588a610b6c91f63c6d94385d291b5f174ada22cf5d"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/starbucks.png",
+      "bytes": 11707,
+      "sha256": "4451548cc899e914deb7842229633a3914b093f8caf5b52201fe3de85ca42af4"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/tamburins-hero.svg",
+      "bytes": 6305,
+      "sha256": "cb3576211e1f8a1ad443f5e6b3566e1257dc8fa6114ed6a0cb2b4a5980aa5163"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/tamburins-mark.svg",
+      "bytes": 6305,
+      "sha256": "cb3576211e1f8a1ad443f5e6b3566e1257dc8fa6114ed6a0cb2b4a5980aa5163"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/tamburins-panel.svg",
+      "bytes": 8631,
+      "sha256": "fd6fe1b7543fae359e25d9e2636e93e3c4a871208b011aef247e325caee34fa0"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/tamburins.png",
+      "bytes": 1720,
+      "sha256": "1901aad4426c4dd41c9e52027a69ae7c3cb5d8f5b617411fb7890dc447887881"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/tamburins.svg",
+      "bytes": 6355,
+      "sha256": "fd6e01716b559bd335ae23bbc14ee9f40e617ce1cd3e108cd5ff9d7c4a10566e"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/uniqlo-hero.svg",
+      "bytes": 1012,
+      "sha256": "bdc07e4507c72b71cd31edc3c3e29f3866b5f1d42fda508b44974da49e16114a"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/uniqlo-mark.svg",
+      "bytes": 1058,
+      "sha256": "493d4f42500a5855869653cadf0bc29e621342b08354d215e89eb3d47b2ab3c4"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/uniqlo-panel.svg",
+      "bytes": 1635,
+      "sha256": "f65df60ee1e004939b52b0dc5d9ff8cb10e4b32a50f94cb5e89ae8bb514a2190"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/brands/uniqlo-source.svg",
+      "bytes": 996,
+      "sha256": "1c2e38f6f883f579f22d276a87692fef3b0d127d956434315204c89b2483ae0a"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/promotions/beauty.jpg",
+      "bytes": 89165,
+      "sha256": "f5659931eb9186d70a9fd6300e506ac42781f04b19b0039aa9e5a2e1760a66da"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/promotions/chair.jpg",
+      "bytes": 63980,
+      "sha256": "a433598e2e705ea141fbe732f4db495a97f240d929b6ef74e176634d6abf73d0"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/promotions/coffee.jpg",
+      "bytes": 242051,
+      "sha256": "2977b516218a1171bdbb49706506fd97b8873e724ea9803b9567dc52e1794310"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/promotions/fashion.jpg",
+      "bytes": 94533,
+      "sha256": "592e89b577da1fdd51b88d54d32c4350227dcad45b4d3c600634c495e63f0fad"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/promotions/nike.jpg",
+      "bytes": 192027,
+      "sha256": "c46897a8035d58b3d7fd1a69ea5790e446aa5ec7a08e287253874fac874a9283"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/promotions/skincare.jpg",
+      "bytes": 69603,
+      "sha256": "bcb150ed3bff9fd7df1bd85f580c6cc8c54cf3c981178f92f5d9ee0f2f49e3d2"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/assets/images/promotions/sneakers.jpg",
+      "bytes": 190531,
+      "sha256": "f33950e69ae218c79fbc09bb07d14b2bc33c8acf6150d75762201310ff5e76d7"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/brand.html",
+      "bytes": 1495,
+      "sha256": "ad663efb6875c81cf665a980321357d3ce309e01e125736b93da07a6cd822d2d"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/case-motion.css",
+      "bytes": 2140,
+      "sha256": "45c74e835344c90361a3e2894731aa000e4ff73b5ca3b696c3a7700604bf0111"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/case-motion.js",
+      "bytes": 2354,
+      "sha256": "28763883eeb9bb62226d7eee877eec44c7f1b1228ebd895a62e75962ac538d7c"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/case-study-assets/brand.jpg",
+      "bytes": 53799,
+      "sha256": "ab1ca8c5eff3c8877580b6e1da7039a3982d504eda85c23308c81373a5e61c10"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/case-study-assets/desktop.jpg",
+      "bytes": 76865,
+      "sha256": "6bb73d2ac6b16d4e6c4a362f1f80d3531f2fc10103445b8081539094752649ba"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/case-study-assets/detail.jpg",
+      "bytes": 62861,
+      "sha256": "4945a4172f714bb0b7b070d4e52edba6cac0b44444fda1fc38dc87d3e7096e2f"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/case-study-assets/editorial/brand.jpg",
+      "bytes": 84675,
+      "sha256": "e5b0b6dade4bf884f0a52abddb4d389351e2361c50f41ea865b86c7c93a62fa8"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/case-study-assets/editorial/detail.jpg",
+      "bytes": 71291,
+      "sha256": "c55ce0f02ac9ae67d3b51ade41feb6ac295dbfa1cbc7546e196be4e9799dcb38"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/case-study-assets/editorial/explore.jpg",
+      "bytes": 104216,
+      "sha256": "09da4f07da1072314b7771a2629a18911d76420c155899590870af4a02b7ca68"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/case-study-assets/editorial/favorites.jpg",
+      "bytes": 76123,
+      "sha256": "428ec3233cf8e1ac5f02fa93f0dd63717a76ffc505249f5282bf867ee1da3f77"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/case-study-assets/editorial/filtered.jpg",
+      "bytes": 101508,
+      "sha256": "ecc01e7a38b0decc15df5d035d87a3021408ba9b0ae00ac877b449a4db788f0e"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/case-study-assets/editorial/home.jpg",
+      "bytes": 117024,
+      "sha256": "8faca93078dae69b097add7fb5789455a879e82d3a1eae8eedb1d7cba28c45c5"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/case-study-assets/editorial/mobile.jpg",
+      "bytes": 33252,
+      "sha256": "bd79f866ef498e0bd769b92948b1515d16144d10a63890afe3484c700989bd3f"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/case-study-assets/editorial/saved.jpg",
+      "bytes": 59669,
+      "sha256": "d73f4c019b662c06b008f69ff7f0a8a1e34d3dad6913ec3958d92b474f52f7ba"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/case-study-assets/editorial/tablet.jpg",
+      "bytes": 64221,
+      "sha256": "7fb7e47eacea361b6eb814d18bfeae76635439e87d42f46b79cc6d9b4c7d4d43"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/case-study-assets/favorites.jpg",
+      "bytes": 64180,
+      "sha256": "5b5d26ceb026b520331ce172ecf84a3136552206555adcc7a4f3b12b1bf459fb"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/case-study-assets/home.jpg",
+      "bytes": 69973,
+      "sha256": "5e29883aa245df4430605adeeacef92697fde0376a1917fd4e6eecb0a1c6a214"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/case-study-assets/mobile.jpg",
+      "bytes": 34470,
+      "sha256": "086dbb370bdb7163ec5c0c470986b9de44ccde198c55e9f0d841c265a83667d7"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/case-study-assets/saved.jpg",
+      "bytes": 77436,
+      "sha256": "6cc24f33dc52a3fb1018bbab982411d1f0cded9728c8a49ab4a7d183ba413a9d"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/case-study-assets/tablet.jpg",
+      "bytes": 62435,
+      "sha256": "9e01d16f570e3c9e916280ab36f36fcbd7e8c4178f095e04ecbbab4e65b2134f"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/case-study.css",
+      "bytes": 19055,
+      "sha256": "83b4d8f4ddca5f362e9d114d9a3741778d9e06d3d1cd20e16f6380a0cc18e99c"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/case-study.html",
+      "bytes": 21083,
+      "sha256": "158f1ce5879a47219e4de552da1c30da77fa9fceb8dfb842ca1dfc6aca3b66cc"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/case-study.js",
+      "bytes": 551,
+      "sha256": "e7a8f8cdf5f62b351ae4158ea82b97deb7d68d2adc78905e29a31d33f2defc3b"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/css/common.css",
+      "bytes": 7544,
+      "sha256": "e551bf1112bb5285a09492aa12cc0310188cd696f1274fe4a2fa5edbd4bf6d4a"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/css/components.css",
+      "bytes": 16735,
+      "sha256": "556d0944c7ef61c6c630dd9573390731c66f3c16e4a705c853c679d7b3deae6a"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/css/design-refresh.css",
+      "bytes": 26676,
+      "sha256": "19bb87d7a84c744edcfca6717565302c7d1c791f003702fd631716d4d696ccaa"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/css/reset.css",
+      "bytes": 365,
+      "sha256": "3012b46999a3ea5fa715609879f5e357cba38272a952084333886a07572853ec"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/css/responsive.css",
+      "bytes": 15338,
+      "sha256": "94d0daff6e6a882898144d7aa7b7c4fcab2d9ca7b9a1c85980c8f9b40e02585e"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/css/variables.css",
+      "bytes": 1117,
+      "sha256": "5a373cf5c24fea4a310fb5136359898b18daebfde1e818d61c580dee0facb7a5"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/data/brands.json",
+      "bytes": 9871,
+      "sha256": "e0dc03daf75585de31a9f9a91b78408229ae9bc1b2ee6a64d93842a2cbd30d79"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/data/promotions.json",
+      "bytes": 46812,
+      "sha256": "c7abb4945e3ea15fe5387695492d75c37757bbcefab5d4bcd4a28d3cecef6a74"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/explore.html",
+      "bytes": 1501,
+      "sha256": "8249797efb35370350a578c466e4ed6ac1d5ddcd473497cafba879f719300717"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/favorites.html",
+      "bytes": 1504,
+      "sha256": "e12ea1b0d100cf6376baaaba2d6939386ee6d7c46042e3378ad55866ea40ce8b"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/index.html",
+      "bytes": 1528,
+      "sha256": "87c49c669921ae5fff2aa6876c66d5401f596911fafaf7238f7a2b5a8cb0e594"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/js/brand.js",
+      "bytes": 2850,
+      "sha256": "8666d6e1b70cce69624b864da1fb443d311399d76ff9dbf475b5a712f2ee327c"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/js/common.js",
+      "bytes": 11256,
+      "sha256": "71e73f90348ff35a4f008af4e8a86d8331e6da06de2fe649988e1231f823ef96"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/js/data.js",
+      "bytes": 43731,
+      "sha256": "bb8f47e04da1e54314c1e962c85aa5d1466f93606298036c04d0ccae02ca3e4b"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/js/explore.js",
+      "bytes": 5322,
+      "sha256": "0a3b8e8f7c35cf92c258db44eb29cb9e9074650ad83da8296e32510196ed24e4"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/js/favorites.js",
+      "bytes": 2526,
+      "sha256": "a19aa438abf5d960563ca5c692a134543e2bf37c00f97b896166851d8d17b640"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/js/home.js",
+      "bytes": 7367,
+      "sha256": "1bbde5c411a84eb7135802c5b22272e2bce78a56ba0cbf9094e88e6a57028f9c"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/js/offer.js",
+      "bytes": 4076,
+      "sha256": "84751d935ef21c3846b9a806cb01361d2b24b668903308edde87508b9e59f93d"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/js/saved.js",
+      "bytes": 3076,
+      "sha256": "be8caf6fb73fc5605cec86a8b7a66ba6290d805114e12448a1be546a8fbf7070"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/offer.html",
+      "bytes": 1502,
+      "sha256": "09527a324b72e7e3e37483a6235c3c7f727d616107fa01a0e92bb266cfbb992b"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/responsive-evidence.css",
+      "bytes": 5011,
+      "sha256": "cf15b7eba77bca7703904c89077891c48ed4771e188f7f56b467f7d3aaa4b025"
+    },
+    {
+      "path": "portfolio-shell/dist/work/offer/saved.html",
+      "bytes": 1495,
+      "sha256": "80a786bf512f75a894186cf1cd1b9298943a096b9a69fe64dd195ea366c2bdfa"
+    },
+    {
+      "path": "portfolio-shell/KSW_Cycle42_QA.md",
+      "bytes": 1742,
+      "sha256": "9f7f419e5597fe850783afb13b3e540b513ada6d81bb3d7efd56d1702cd07d47"
+    },
+    {
+      "path": "portfolio-shell/KSW_Cycle43_QA.md",
+      "bytes": 2505,
+      "sha256": "b7d0456cf6968fab383f49ae022755648219a53942a1aa839c8207f31a01dc1b"
+    },
+    {
+      "path": "portfolio-shell/KSW_Cycle44_QA.md",
+      "bytes": 1476,
+      "sha256": "c98cfe9070150bb8acb2d034fc42df37a554721dd99b1326ea71b6d83fc0dcda"
+    },
+    {
+      "path": "portfolio-shell/KSW_Cycle45_QA.md",
+      "bytes": 1609,
+      "sha256": "76155854358a8d93f4b242e8d48f2784301a19fccf5cc7641386ae803aa9a9b1"
+    },
+    {
+      "path": "portfolio-shell/KSW_Cycle46_QA.md",
+      "bytes": 1773,
+      "sha256": "9539f3f527bfa35208e419b30639c41f51dc466afd71483808be9e587638826a"
+    },
+    {
+      "path": "portfolio-shell/KSW_Cycle47_QA.md",
+      "bytes": 1251,
+      "sha256": "76e13d6dc673122f947e5f60616b90a0b719a93f522f809bcf2b1300259522b9"
+    },
+    {
+      "path": "portfolio-shell/KSW_Cycle48_QA.md",
+      "bytes": 1188,
+      "sha256": "be361be09530bb2e6dac5456a6c802d4aef666220418aa6c9e7ef1c62aa71e3b"
+    },
+    {
+      "path": "portfolio-shell/KSW_Cycle49_QA.md",
+      "bytes": 1739,
+      "sha256": "e0896dbebd3ad4e3947345f67c908b408c6ac28907e106208e3aa9fb3a90b9a6"
+    },
+    {
+      "path": "portfolio-shell/KSW_Cycle50_QA.md",
+      "bytes": 1531,
+      "sha256": "f18a024fe9c03e80c75611f062820f31eb066bb03f5913e05fc17aa0e00c88f6"
+    },
+    {
+      "path": "portfolio-shell/KSW_Cycle51_QA.md",
+      "bytes": 1703,
+      "sha256": "cc446b9ece9cb38043bb4d3aa528256c9c0833df35936ed6fd1500ee8c3165f3"
+    },
+    {
+      "path": "portfolio-shell/KSW_Cycle52_QA.md",
+      "bytes": 2059,
+      "sha256": "af61b6f3ddb02dc5c73ce505bfa8c3462fc4145a03201242f4115bb26ffa4a55"
+    },
+    {
+      "path": "portfolio-shell/KSW_Cycle53_QA.md",
+      "bytes": 1579,
+      "sha256": "af08ed8a5d350924c6269e39f614817b56f2f432f8b300f5895185011a049e2b"
+    },
+    {
+      "path": "portfolio-shell/KSW_Cycle53_Static_QA.log",
+      "bytes": 537,
+      "sha256": "a2f75010b532fa68b9e4a6588cdd2fd6603e2c643ee5b52bc57e0202b7daea27"
+    },
+    {
+      "path": "portfolio-shell/KSW_Cycle54_QA.md",
+      "bytes": 1282,
+      "sha256": "12737f788cd8bd5c40b5598f2721f29a0eb4133984c846b34183dc8543ffd3a7"
+    },
+    {
+      "path": "portfolio-shell/KSW_Cycle55_QA.md",
+      "bytes": 1347,
+      "sha256": "90a230f04012e72a7be2a870735be1f9629b74e472d633ff8bf1108b4312cbf3"
+    },
+    {
+      "path": "portfolio-shell/KSW_Cycle56_QA.md",
+      "bytes": 1435,
+      "sha256": "0f54ca9c7283abec31646988cf3fb90e821f5f76bf7dd190ebb1bd8b65f7c297"
+    },
+    {
+      "path": "portfolio-shell/KSW_Cycle57_QA.md",
+      "bytes": 1752,
+      "sha256": "b5365ea41f753d5c96081a014d12ba0cea44627cecad1f85458c193be23707d1"
+    },
+    {
+      "path": "portfolio-shell/KSW_Cycle58_QA.md",
+      "bytes": 1406,
+      "sha256": "3a1937c154450ffc699ead11528ebca263a5071773c4b78edc190f861de51957"
+    },
+    {
+      "path": "portfolio-shell/KSW_Cycle59_QA.md",
+      "bytes": 1134,
+      "sha256": "887aa5e6ff878e4e1007f712748ebb049074f16734f817c601de3bd4881ca56b"
+    },
+    {
+      "path": "portfolio-shell/KSW_Cycle60_QA.md",
+      "bytes": 1757,
+      "sha256": "d2c5d064a6cd2785bbac5807627a08351b74eb1e078d05d4fe8abaaff6f86e6d"
+    },
+    {
+      "path": "portfolio-shell/KSW_Cycle61_QA.md",
+      "bytes": 1991,
+      "sha256": "6a3826208e2a856d7c3dd8f1d1dda6dbfa5a9ed40de3d440784882f4f2dcb929"
+    },
+    {
+      "path": "portfolio-shell/KSW_Cycle62_QA.md",
+      "bytes": 1699,
+      "sha256": "302c2d835f038fd2faaac88c40ca9ecae3d5eb25195799951ffbf9e454c9e2cc"
+    },
+    {
+      "path": "portfolio-shell/KSW_Cycle63_QA.md",
+      "bytes": 1757,
+      "sha256": "079e3c04639c9f38e52e3b08cc5b840742a83bcfa1d13649b2eeb0d239708593"
+    },
+    {
+      "path": "portfolio-shell/KSW_Cycle64_QA.md",
+      "bytes": 1589,
+      "sha256": "9a0c457a52e2db240f2e90992833f0ef8c583d743402debc27fd9b9c12c6adc7"
+    },
+    {
+      "path": "portfolio-shell/KSW_Cycle65_QA.md",
+      "bytes": 2079,
+      "sha256": "71cebbee3eeec6c0fb041a9c146482417fdb2174822a7a9a14044543362e54bb"
+    },
+    {
+      "path": "portfolio-shell/qa-browser-results/results.json",
+      "bytes": 5022,
+      "sha256": "6fa0fe287f47703d8c0cfbc4e58f18b1f9336c4ace602c623ba4b4e4ea614929"
+    },
+    {
+      "path": "portfolio-shell/qa-browser.py",
+      "bytes": 4297,
+      "sha256": "4314c33ccdc19b235a316efec0dd8b3ea73e146256e3dcd306f66206a78ef34c"
+    },
+    {
+      "path": "portfolio-shell/qa-static-results.json",
+      "bytes": 536,
+      "sha256": "2e9512654708477927b7ce036fda983b501423c941fb20ffd448022f26f821af"
+    },
+    {
+      "path": "portfolio-shell/qa-static.py",
+      "bytes": 4181,
+      "sha256": "c1f9f00767da5917de2db453f13ff741ca9988e21f5b59a934a1b4361eccdce7"
+    },
+    {
+      "path": "portfolio-shell/QA_BROWSER_README.md",
+      "bytes": 1635,
+      "sha256": "14ed8cb9b6a064c1c8031acb341eba1c1450c169627456a7d00d6c47be05eec9"
+    },
+    {
+      "path": "portfolio-shell/QA_INTEGRATION_REPORT.md",
+      "bytes": 5611,
+      "sha256": "71e50dcc03e4e38082934edea1777b4db97285088037d60d8c80a7d19666517c"
+    },
+    {
+      "path": "portfolio-shell/README_#U03b4#U00aa#U00bc#U03b4#U00f6#U00f6#U221e#U20a7#U00c9#U221e#U00a5#U2555_#U221e#U00e1#U00fc#U221e#U00dc#U2310#U221e#U00f2#U00ea#U03b4#U00e9#U2524.md",
+      "bytes": 1554,
+      "sha256": "99812d502162f39c863809d02c7520f94658416f753286943cd29b02dfd619c3"
+    }
+  ]
+}

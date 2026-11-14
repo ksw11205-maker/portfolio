@@ -13,6 +13,7 @@ export function initBrandModel({host,reduced,tilt=false}) {
   let running=0,previous=0,phase=0,assembly=1,mix=0,gap=.08,loading=false,failed=false,destroyed=false;
   let pointerX=0,pointerY=0,pointerKnown=false,tiltX=0,tiltY=0,targetTiltX=0,targetTiltY=0;
   let renderWidth=0,renderHeight=0,renderRatio=0;
+  let materialization=host.dataset.introLogo==='waiting'?0:1;
   const introActive=()=>tilt&&(document.body.classList.contains('intro-active')||['waiting','revealing'].includes(host.dataset.introLogo));
   const pointerRegion=tilt?host.closest(".hero"):host;
   pointerRegion.addEventListener("pointermove",e=>{if(!tilt||introActive()||!fine.matches||e.pointerType==="touch")return;const box=pointerRegion.getBoundingClientRect();targetTiltX=(e.clientX-box.left)/box.width*2-1;targetTiltY=(e.clientY-box.top)/box.height*2-1;wake();});
@@ -57,6 +58,11 @@ export function initBrandModel({host,reduced,tilt=false}) {
     running=0;if(!renderer||!visible||document.hidden||destroyed)return;
     const dt=Math.min(previous?(now-previous)/1000:1/60,.04);previous=now;
     const animate=animationsAllowed()&&!introActive();
+    const entering=host.dataset.introLogo==='revealing';
+    if(reduced.matches)materialization=1;
+    else if(entering)materialization=Math.min(1,materialization+dt/.8);
+    else if(host.dataset.introLogo==='shown')materialization=1;
+    const depth=1-Math.pow(1-materialization,3);
     if(animate){phase+=dt;assembly=Math.min(1,assembly+dt);}
     else assembly=1;
     mix+=(Number(opened)-mix)*(1-Math.exp(-9*dt));
@@ -66,6 +72,7 @@ export function initBrandModel({host,reduced,tilt=false}) {
     gap=animate?gap+(targetGap-gap)*(1-Math.exp(-(engaged?16:3.2)*dt)):targetGap;
     tiltX+=(targetTiltX-tiltX)*(1-Math.exp(-7*dt));tiltY+=(targetTiltY-tiltY)*(1-Math.exp(-7*dt));
     group.rotation.set(.045+Math.sin(phase*Math.PI*2/9)*.025*idle+(animate&&tilt?-tiltY*.16:0),.32+Math.sin(phase*Math.PI*2/10)*.035*idle+(animate&&tilt?tiltX*.22:0),animate&&tilt?tiltX*.025:0);
+    group.rotation.x*=depth;group.rotation.y*=depth;group.scale.z=.06+.94*depth;
     group.position.set(animate&&tilt?tiltX*.1:0,animate&&tilt?-tiltY*.08:0,0);
     meshes.forEach((mesh,i)=>{
       const direction=i===0?-1:1;
@@ -76,7 +83,7 @@ export function initBrandModel({host,reduced,tilt=false}) {
     scene.environmentRotation.set(0,.1+(animate?Math.sin(phase*.22)*.12:0),0);
     renderer.render(scene,camera);
     host.dataset.renderState='ready';
-    if(animate||Math.abs(Number(opened)-mix)>.001)running=requestAnimationFrame(frame);
+    if(animate||(entering&&materialization<1)||Math.abs(Number(opened)-mix)>.001)running=requestAnimationFrame(frame);
     else previous=0;
   }
   function wake(){
@@ -86,7 +93,7 @@ export function initBrandModel({host,reduced,tilt=false}) {
   function sleep(){cancelAnimationFrame(running);running=0;previous=0;}
   function prepareIntro(){
     if(!tilt)return;
-    phase=0;assembly=1;mix=0;gap=.045;
+    phase=0;assembly=1;mix=0;gap=.045;materialization=0;
     pointerX=pointerY=tiltX=tiltY=targetTiltX=targetTiltY=0;pointerKnown=false;
     hovered=focused=pinned=false;dismissed=false;updateDisclosure();
     // Replay must wait for a fresh neutral frame, not a stale 'ready' flag.

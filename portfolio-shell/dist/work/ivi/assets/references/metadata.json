@@ -1,0 +1,227 @@
+[
+  {
+    "file": "unified-01.jpg",
+    "caption": "통합 메뉴형 사례 01",
+    "type": "unified",
+    "width": 235,
+    "height": 173,
+    "brand_verified": false,
+    "source": "IVI 원본 PDF p.7 포함 조사사진 / object 104",
+    "crop_box": [
+      62,
+      26,
+      297,
+      199
+    ]
+  },
+  {
+    "file": "unified-02.jpg",
+    "caption": "통합 메뉴형 사례 02",
+    "type": "unified",
+    "width": 274,
+    "height": 176,
+    "brand_verified": false,
+    "source": "IVI 원본 PDF p.7 포함 조사사진 / object 104",
+    "crop_box": [
+      302,
+      26,
+      576,
+      202
+    ]
+  },
+  {
+    "file": "unified-03.jpg",
+    "caption": "통합 메뉴형 사례 03",
+    "type": "unified",
+    "width": 304,
+    "height": 176,
+    "brand_verified": false,
+    "source": "IVI 원본 PDF p.7 포함 조사사진 / object 104",
+    "crop_box": [
+      587,
+      26,
+      891,
+      202
+    ]
+  },
+  {
+    "file": "unified-04.jpg",
+    "caption": "통합 메뉴형 사례 04",
+    "type": "unified",
+    "width": 261,
+    "height": 168,
+    "brand_verified": false,
+    "source": "IVI 원본 PDF p.7 포함 조사사진 / object 104",
+    "crop_box": [
+      82,
+      205,
+      343,
+      373
+    ]
+  },
+  {
+    "file": "unified-05.jpg",
+    "caption": "통합 메뉴형 사례 05",
+    "type": "unified",
+    "width": 278,
+    "height": 169,
+    "brand_verified": false,
+    "source": "IVI 원본 PDF p.7 포함 조사사진 / object 104",
+    "crop_box": [
+      347,
+      204,
+      625,
+      373
+    ]
+  },
+  {
+    "file": "unified-06.jpg",
+    "caption": "통합 메뉴형 사례 06",
+    "type": "unified",
+    "width": 212,
+    "height": 169,
+    "brand_verified": false,
+    "source": "IVI 원본 PDF p.7 포함 조사사진 / object 104",
+    "crop_box": [
+      629,
+      204,
+      841,
+      373
+    ]
+  },
+  {
+    "file": "double-01.jpg",
+    "caption": "더블 탭 메뉴형 사례 01",
+    "type": "double",
+    "width": 385,
+    "height": 161,
+    "brand_verified": false,
+    "source": "IVI 원본 PDF p.7 포함 조사사진 / object 104",
+    "crop_box": [
+      1158,
+      8,
+      1543,
+      169
+    ]
+  },
+  {
+    "file": "double-02.jpg",
+    "caption": "더블 탭 메뉴형 사례 02",
+    "type": "double",
+    "width": 150,
+    "height": 218,
+    "brand_verified": false,
+    "source": "IVI 원본 PDF p.7 포함 조사사진 / object 104",
+    "crop_box": [
+      1123,
+      170,
+      1273,
+      388
+    ]
+  },
+  {
+    "file": "double-03.jpg",
+    "caption": "더블 탭 메뉴형 사례 03",
+    "type": "double",
+    "width": 142,
+    "height": 218,
+    "brand_verified": false,
+    "source": "IVI 원본 PDF p.7 포함 조사사진 / object 104",
+    "crop_box": [
+      1277,
+      170,
+      1419,
+      388
+    ]
+  },
+  {
+    "file": "double-04.jpg",
+    "caption": "더블 탭 메뉴형 사례 04",
+    "type": "double",
+    "width": 206,
+    "height": 218,
+    "brand_verified": false,
+    "source": "IVI 원본 PDF p.7 포함 조사사진 / object 104",
+    "crop_box": [
+      1424,
+      170,
+      1630,
+      388
+    ]
+  },
+  {
+    "file": "top-01.jpg",
+    "caption": "상단 메뉴형 사례 01",
+    "type": "top",
+    "width": 279,
+    "height": 182,
+    "brand_verified": false,
+    "source": "IVI 원본 PDF p.7 포함 조사사진 / object 104",
+    "crop_box": [
+      295,
+      545,
+      574,
+      727
+    ]
+  },
+  {
+    "file": "side-01.jpg",
+    "caption": "측면 메뉴형 사례 01",
+    "type": "side",
+    "width": 395,
+    "height": 190,
+    "brand_verified": false,
+    "source": "IVI 원본 PDF p.7 포함 조사사진 / object 104",
+    "crop_box": [
+      1014,
+      484,
+      1409,
+      674
+    ]
+  },
+  {
+    "file": "side-02.jpg",
+    "caption": "측면 메뉴형 사례 02",
+    "type": "side",
+    "width": 283,
+    "height": 190,
+    "brand_verified": false,
+    "source": "IVI 원본 PDF p.7 포함 조사사진 / object 104",
+    "crop_box": [
+      1410,
+      484,
+      1693,
+      674
+    ]
+  },
+  {
+    "file": "side-03.jpg",
+    "caption": "측면 메뉴형 사례 03",
+    "type": "side",
+    "width": 546,
+    "height": 180,
+    "brand_verified": false,
+    "source": "IVI 원본 PDF p.7 포함 조사사진 / object 104",
+    "crop_box": [
+      969,
+      675,
+      1515,
+      855
+    ]
+  },
+  {
+    "file": "side-04.jpg",
+    "caption": "측면 메뉴형 사례 04",
+    "type": "side",
+    "width": 280,
+    "height": 180,
+    "brand_verified": false,
+    "source": "IVI 원본 PDF p.7 포함 조사사진 / object 104",
+    "crop_box": [
+      1517,
+      675,
+      1797,
+      855
+    ]
+  }
+]

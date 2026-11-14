@@ -1,0 +1,60 @@
+/* LG-only editorial grid, restrained light and clear research hierarchy. */
+.lg-refined{background:#0b0a0e;color:#f4f1f6}
+.lg-refined main{--case-chapter-start:clamp(64px,7vw,112px);--case-chapter-end:clamp(80px,8vw,128px);--case-chapter-separation:clamp(44px,5vw,80px);--case-evidence-gap:36px}
+.lg-refined .study-dark{background:#0b0a0e}
+.lg-refined .container{width:min(100% - clamp(48px,9vw,160px),1440px);margin-inline:auto}
+.lg-refined main .chapter-heading{max-width:920px;gap:18px;margin-block:32px 40px}
+.lg-refined main .chapter-heading h2{font-size:clamp(30px,3.1vw,48px);line-height:1.27;letter-spacing:-.025em;word-break:keep-all}
+.lg-refined main .chapter-heading .lead{max-width:48em;font-size:clamp(16px,1.2vw,18px);line-height:1.8;word-break:keep-all}
+.lg-refined .chapter-label{font-size:11px;letter-spacing:.1em;border-color:#ffffff2a;padding-bottom:20px}
+.lg-refined main .subsection+.subsection{margin-top:clamp(56px,6vw,88px);padding-top:32px}
+.lg-refined .surface::before{background:#15121a;border:1px solid #ffffff0a;border-radius:12px}
+.lg-refined .surface-rose::before{background:#1b141e}
+.lg-refined :is(#factors .factor-inventory,#workflow .workflow-steps) .surface::before{background:none;border:0}
+.lg-refined :is(.capture img,.architecture-image img){height:auto;max-width:100%;object-fit:contain}
+.lg-refined .capture img{border-radius:5px}
+.lg-refined :is(.capture figcaption,.screen-caption){font-size:13px;line-height:1.65;color:#aaa1b0}
+.lg-refined .research-timeline .number::before{background:linear-gradient(90deg,#df7caf,#8a70bd)}
+.lg-refined .research-steps>li>.number{background:#100d14;border-color:#d783ad}
+.lg-refined .research-steps>li:not(:last-child)::after{background:linear-gradient(#db81ae,#826da9)}
+.lg-research-path{position:relative;margin:32px 0 56px;max-width:1060px;overflow:hidden}
+.lg-research-path svg{display:block;width:100%;height:clamp(85px,12vw,150px);overflow:visible}
+.lg-research-path path{fill:none;stroke-width:1.3;vector-effect:non-scaling-stroke}
+.lg-path-base{stroke:#7d617e;opacity:.45}.lg-path-progress{stroke:#dd83b3;stroke-dasharray:1;stroke-dashoffset:var(--path-offset,0);filter:drop-shadow(0 0 4px #bc62936b)}
+.lg-research-path circle{fill:#e2b1ca;stroke:#0b0a0e;stroke-width:3;vector-effect:non-scaling-stroke}
+.lg-research-path figcaption{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;color:#b3a6b5;font-size:10px;letter-spacing:.08em;line-height:1.5}
+.lg-research-path figcaption span:last-child{text-align:right}
+.lg-refined #tool-flow .chapter-step-content{background:#110e15}
+.lg-refined #tool-flow .chapter-step-layer{background:#110e15;border:1px solid #ffffff18;border-radius:8px}
+.lg-refined #tool-flow .chapter-step-layer .surface::before{display:none}
+.lg-refined #tool-flow .chapter-step-nav button{transition:border-color .25s,color .25s,background .25s}
+.lg-refined #tool-flow .chapter-step-nav button:not(:disabled):is(:hover,:focus-visible){color:#fff;border-color:#dc83af;background:#dc83af25}
+.lg-refined .case-action .case-arrow,.lg-refined .case-end__back .case-arrow{transition:transform .3s ease}
+.lg-refined .case-action:is(:hover,:focus-visible) .case-arrow,.lg-refined .case-end__back:is(:hover,:focus-visible) .case-arrow{transform:translate(4px,-4px)}
+.lg-refined .project-cover__art>img{transform:translate3d(0,var(--hero-shift,0px),0) scale(1.025);transform-origin:center;will-change:auto}
+@media(prefers-reduced-motion:no-preference){
+ .lg-refined .project-cover__heading{animation:lg-heading .85s cubic-bezier(.22,1,.36,1) both}
+ .lg-refined .project-cover__art{animation:lg-art 1.1s cubic-bezier(.22,1,.36,1) both}
+ @keyframes lg-heading{from{opacity:0;transform:translateY(24px);clip-path:inset(0 0 100%)}to{opacity:1;transform:none;clip-path:inset(0)}}
+ @keyframes lg-art{from{opacity:.2;filter:brightness(.8)}to{opacity:1;filter:brightness(1)}}
+}
+@media(max-width:1000px){.lg-refined .container{width:calc(100% - 64px)}.lg-research-path figcaption{font-size:9px;gap:8px}.lg-refined #goal .research-timeline{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}}
+@media(max-width:600px){.lg-refined .container{width:calc(100% - 40px)}.lg-refined main{--case-chapter-start:48px;--case-chapter-end:64px;--case-chapter-separation:32px}.lg-refined main .chapter-heading h2{font-size:clamp(26px,7vw,32px)}.lg-refined #goal .research-timeline{grid-template-columns:1fr}.lg-research-path figcaption{font-size:8px;letter-spacing:0}.lg-refined .project-cover__art>img{transform:none}}
+@media(prefers-reduced-motion:reduce){.lg-path-progress{stroke-dashoffset:0}.lg-refined .project-cover__art>img{transform:none}}
+
+/* LG research path: readable milestones with a reversible moving highlight. */
+.lg-research-path .lg-flow-dot{display:none;fill:#f7d8e8;stroke:none}
+.lg-research-path.lg-flow-motion circle:not(.lg-flow-dot){opacity:.42;transition:opacity .2s,fill .2s}
+.lg-research-path.lg-flow-motion circle.is-active{opacity:1;fill:#f4b7d5}
+.lg-research-path.lg-flow-motion .lg-flow-dot{display:block;filter:drop-shadow(0 0 4px #e88eb8)}
+.lg-research-path.lg-flow-motion figcaption span{opacity:.65;transition:opacity .25s,color .25s}
+.lg-research-path.lg-flow-motion figcaption span.is-active{opacity:1;color:#f3d2e2}
+.lg-refined #tool-flow .chapter-step-nav{position:relative;padding-bottom:14px}
+.lg-refined #tool-flow .chapter-step-nav::after{content:'';position:absolute;left:0;bottom:0;width:100%;height:1px;background:linear-gradient(90deg,#dc83af calc(var(--lg-step-progress,0) * 100%),#ffffff30 0);transition:background .25s}
+@media(prefers-reduced-motion:no-preference){
+ .lg-evidence-arrived{animation:lg-evidence .65s cubic-bezier(.22,1,.36,1) both}
+ @keyframes lg-evidence{from{opacity:.65;transform:translateY(8px)}to{opacity:1;transform:none}}
+}
+@media(prefers-reduced-motion:reduce){.lg-research-path .lg-flow-dot{display:none!important}}
+/* Keep the research content readable while the supporting line animates. */
+.lg-refined :is(#goal .research-timeline,#experiment-1 .research-steps,#model .research-steps)>li{opacity:1!important;transform:none!important}

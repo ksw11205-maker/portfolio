@@ -2,7 +2,7 @@
  const fine=matchMedia('(hover:hover) and (pointer:fine)'),reduced=matchMedia('(prefers-reduced-motion: reduce)');
  const cursor=document.createElement('div');cursor.className='case-cursor';cursor.setAttribute('aria-hidden','true');cursor.innerHTML='<span class="case-cursor-disc"><span class="case-cursor-i">i</span></span>';document.body.append(cursor);
  const disc=cursor.querySelector('.case-cursor-disc'),tooltip=document.createElement('div');tooltip.className='case-image-tooltip';tooltip.setAttribute('aria-hidden','true');document.body.append(tooltip);
- const images=[...document.querySelectorAll('main img[alt]')].filter(img=>img.alt.trim()&&!img.closest('.cover-tools,.meta-tools,.project-tool-list,a,button,dialog,[data-no-image-info]'));
+ const images=[...document.querySelectorAll('main img[alt]')].filter(img=>img.alt.trim()&&!img.closest('.project-cover,.research-collage,.cover-tools,.meta-tools,.project-tool-list,a,button,dialog,[data-no-image-info]'));
  images.forEach(img=>{img.classList.add('case-info-image');img.setAttribute('tabindex','0');});
  let x=0,y=0,rx=0,ry=0,frame=0,last=0,inside=false,dragging=false,focusImage=null,touchImage=null;
  const allowed=()=>fine.matches&&!reduced.matches&&!document.hidden&&!dragging;

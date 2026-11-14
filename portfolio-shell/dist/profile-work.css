@@ -1,7 +1,7 @@
 /* Profile + working principles: editorial type, open evidence, one blue accent. */
 .statement-keyword{position:relative;display:inline-block;white-space:nowrap;font:inherit;font-style:normal;padding-bottom:.045em}
-.statement-underline{position:absolute;inset:auto -.015em -.11em;width:calc(100% + .03em);height:.24em;overflow:visible;pointer-events:none}
-.statement-underline path{fill:none;stroke:#2d63ed;stroke-width:4;stroke-linecap:round;vector-effect:non-scaling-stroke;stroke-dasharray:1;stroke-dashoffset:0;transform-box:fill-box;transform-origin:center}
+.statement-underline{position:absolute;left:0;top:auto;bottom:-.24em;width:100%;height:.4em;overflow:visible;pointer-events:none}
+.statement-underline path{fill:none;stroke:#2d63ed;stroke-width:6;stroke-linecap:round;vector-effect:non-scaling-stroke;stroke-dasharray:1;stroke-dashoffset:0;transform-box:fill-box;transform-origin:center}
 [data-line-state="waiting"] .statement-underline path{opacity:0;stroke-dashoffset:1}
 
 .about{grid-template-columns:repeat(12,minmax(0,1fr));gap:76px 40px;padding-block:112px;margin-top:clamp(88px,12svh,128px)}
@@ -110,7 +110,7 @@
  .tools .capability-main{font-size:clamp(28px,6.9vw,36px);line-height:1.26}
  .tools .capability-detail{margin-top:22px;font-size:14px}
  .tools .tool-marquee{inset:18px 0 auto;opacity:.32}
- .statement-underline path{stroke-width:3}
+ .statement-underline path{stroke-width:4.8}
 }
 @media(prefers-reduced-motion:reduce){
  [data-line-state] .statement-underline path{opacity:1;stroke-dashoffset:0;transform:none}

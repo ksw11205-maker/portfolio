@@ -1,0 +1,82 @@
+/* A project-colored diagonal reading area over the left third of each cover. */
+main .project-cover{--cover-header:68px;--cover-dark:#241a26;--cover-tint:#472d42;--cover-muted:#d9d5de;position:relative;display:block;width:100%;max-width:none;height:calc(100svh - var(--cover-header));min-height:700px;padding:0!important;margin:0;overflow:hidden;isolation:isolate;color:#fff;background:var(--cover-dark)}
+main .project-cover[data-cover-project="ivi"]{--cover-dark:#14252e;--cover-tint:#234653;--cover-muted:#cfdee4}
+main .project-cover[data-cover-project="cafekok"]{--cover-dark:#34271e;--cover-tint:#604735;--cover-muted:#e5d8cc}
+main .project-cover[data-cover-project="offer"]{--cover-dark:#1c1917;--cover-tint:#3a2b23;--cover-muted:#e2d8d0}
+main .project-cover__art{position:absolute;inset:0 0 0 22%;display:block;width:78%;height:100%;max-width:none;margin:0;padding:0;overflow:hidden;border:0;border-radius:0}
+main .project-cover__art>img{position:static;display:block;width:100%;height:100%;min-height:0;max-height:none;max-width:none;aspect-ratio:auto;object-fit:cover;object-position:center;animation:none}
+main .project-cover:is([data-cover-project="ivi"],[data-cover-project="offer"]) .project-cover__art>img{object-position:right center}
+main .project-cover::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(105deg,color-mix(in srgb,var(--cover-dark) 88%,transparent) 0%,color-mix(in srgb,var(--cover-dark) 82%,transparent) 24%,color-mix(in srgb,var(--cover-tint) 65%,transparent) 33%,color-mix(in srgb,var(--cover-dark) 40%,transparent) 38%,transparent 51%)}
+main .project-cover__intro{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:32px;width:36%;max-width:none;height:100%;margin:0;padding:40px clamp(24px,3vw,56px);color:#fff}
+main .project-cover__heading{width:100%;max-width:none}
+main .project-cover .project-cover__category{display:block;margin:0 0 18px;font:500 11px/1.5 CasePretendard,sans-serif;letter-spacing:.07em;color:var(--cover-muted)}
+main .project-cover h1{margin:0;color:#fff;font-size:clamp(28px,2.6vw,46px);font-weight:650;line-height:1.12;letter-spacing:-.035em;overflow-wrap:normal}
+main .project-cover h1 :is(span,em){color:inherit;font-style:normal}
+main .project-cover .project-cover__description{margin:24px 0 0;color:var(--cover-muted);font-size:16px;line-height:1.75;letter-spacing:-.02em;word-break:keep-all}
+main .project-cover__footer{position:static;width:100%;color:#fff}
+main .project-cover .cover-details{display:grid;grid-template-columns:1fr;gap:18px;margin:0;padding:0;border:0;max-width:none}
+main .project-cover .cover-details>div{display:grid;gap:5px;min-width:0}
+main .project-cover .cover-details dt{margin:0;font-size:10px;line-height:1.4;letter-spacing:.12em;color:var(--cover-muted);opacity:1}
+main .project-cover .cover-details dd{margin:0;color:#fff;font-size:13px;line-height:1.5;font-weight:500}
+main .project-cover .cover-tools,main .project-cover .meta-tools{display:flex;align-items:center;gap:12px}
+main .project-cover .cover-details img{position:static;display:block;width:22px;height:22px;object-fit:contain}
+main .project-cover .project-cover__note{margin:14px 0 0;color:var(--cover-muted);font-size:10px;line-height:1.6}
+main .project-cover .project-cover__action{position:relative;inset:auto;margin:0;min-height:48px;flex:none;background:#ffffff12;border-color:#ffffff55;color:#fff;backdrop-filter:blur(12px)}
+main .project-cover .project-cover__action:hover,main .project-cover .project-cover__action:focus-visible{color:var(--action-ink)}
+main .project-cover[data-cover-project="offer"] h1{font-size:clamp(44px,4.5vw,76px)}
+@media(min-width:801px) and (max-height:800px){main .project-cover{min-height:640px}main .project-cover__intro{gap:24px;padding-block:28px}main .project-cover .project-cover__description{margin-top:18px}main .project-cover .cover-details{gap:14px}}
+@media(min-width:601px) and (max-width:1000px){
+ main .project-cover__intro{width:43%;padding-inline:28px;gap:28px}
+ main .project-cover::after{background:linear-gradient(105deg,color-mix(in srgb,var(--cover-dark) 88%,transparent) 0%,color-mix(in srgb,var(--cover-dark) 82%,transparent) 30%,color-mix(in srgb,var(--cover-tint) 65%,transparent) 39%,transparent 60%)}
+ main .project-cover h1{font-size:26px}
+ main .project-cover .project-cover__description{font-size:14px}
+ main .project-cover__art{left:28%;width:72%}
+ main .project-cover[data-cover-project="ivi"] .project-cover__art>img{object-position:65% center}
+}
+@media(max-width:600px){
+ main .project-cover{height:auto;min-height:calc(100svh - var(--cover-header));display:flex;flex-direction:column}
+ main .project-cover__intro{order:0;width:100%;height:auto;gap:24px;padding:32px 24px 44px;background:linear-gradient(135deg,var(--cover-dark),var(--cover-tint))}
+ main .project-cover__art{position:relative;inset:auto;order:1;width:100%;height:auto;aspect-ratio:1920/1081;overflow:visible}
+ main .project-cover__art::before{content:"";position:absolute;inset:-1px 0 0;z-index:1;background:linear-gradient(165deg,var(--cover-tint),transparent 36%);pointer-events:none}
+ main .project-cover::after{display:none}
+ main .project-cover h1{font-size:30px}
+ main .project-cover .project-cover__description{font-size:14px;margin-top:16px}
+ main .project-cover .cover-details{grid-template-columns:1fr 1fr;gap:16px 24px}
+ main .project-cover .cover-details dd{font-size:12px}
+ main .project-cover .cover-details>div:last-child{grid-column:1/-1}
+}
+@media(max-width:480px){main .project-cover{--cover-header:60px}}
+
+/* LG's laptop stays on the left; its reading panel follows the right edge. */
+@media(min-width:601px){
+ main .project-cover[data-cover-project="lg"] .project-cover__art{inset:0 22% 0 0}
+ main .project-cover[data-cover-project="lg"] .project-cover__art>img{object-position:left center}
+ main .project-cover[data-cover-project="lg"] .project-cover__intro{margin-left:auto}
+ main .project-cover[data-cover-project="lg"]::after{transform:scaleX(-1)}
+}
+@media(min-width:601px) and (max-width:1000px){main .project-cover[data-cover-project="lg"] .project-cover__art{right:28%}}
+/* OFFER uses a solid hanging banner with an angled lower edge. */
+main .project-cover[data-cover-project="offer"]::after{display:none}
+main .project-cover[data-cover-project="offer"] .project-cover__intro{isolation:isolate;background:none;margin-left:4%;width:32%;height:100%;filter:none;padding-inline:clamp(24px,2.4vw,44px)}
+main .project-cover[data-cover-project="offer"] .project-cover__intro::before{content:"";position:absolute;inset:0 -12px -80px;z-index:-1;background:#292623;border:0;clip-path:polygon(0 0,100% 0,100% 94%,0 100%);transform:skewX(-5deg);transform-origin:top center;pointer-events:none}
+main .project-cover[data-cover-project="offer"] .project-cover__art::before{display:none}
+@media(min-width:601px) and (max-width:1000px){main .project-cover[data-cover-project="offer"] .project-cover__intro{margin-left:4%;width:39%;padding-inline:22px}}
+@media(max-width:600px){
+ main .project-cover[data-cover-project="offer"] .project-cover__intro{margin-left:5%;width:90%;height:auto;padding:32px 24px 48px;margin-bottom:28px}
+ main .project-cover[data-cover-project="offer"] .project-cover__intro::before{inset:0 -5px -12px;transform:skewX(-2deg)}
+}
+@media(min-width:601px){
+ main .project-cover:is([data-cover-project="lg"],[data-cover-project="offer"]) .project-cover__art{inset:0;width:100%}
+ main .project-cover:is([data-cover-project="ivi"],[data-cover-project="cafekok"]) .project-cover__art{mask-image:linear-gradient(90deg,transparent,#000 22%)}
+}
+
+/* Keep the three-device composition within the canvas, shifted to the right. */
+main .project-cover[data-cover-project="offer"]{background:#eae7e2}
+@media(min-width:601px){
+ main .project-cover[data-cover-project="offer"] .project-cover__art{inset:0 0 0 24%;width:76%;background:#eae7e2}
+ main .project-cover[data-cover-project="offer"] .project-cover__art>img{object-fit:contain;object-position:right center}
+}
+@media(max-width:600px){main .project-cover[data-cover-project="offer"] .project-cover__intro{filter:none}}
+
+@font-face{font-family:Anton;src:url('/assets/fonts/Anton-Regular.ttf') format('truetype');font-weight:400;font-display:swap}
+main .project-cover h1{font-family:Anton,CasePretendard,sans-serif;font-weight:400;letter-spacing:-.025em;line-height:1.13}

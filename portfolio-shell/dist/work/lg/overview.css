@@ -1,0 +1,81 @@
+/* One research system, then a purposeful typographic classification. */
+.lg-refined .lg-system-map{max-width:none;margin:32px 0 48px;overflow:visible}
+.lg-refined .lg-system-map svg{height:auto;aspect-ratio:1100/330}
+.lg-refined .lg-system-map .lg-system-port circle{fill:#edb5d1;stroke:#0b0a0e;stroke-width:2}
+.lg-refined .lg-system-map .lg-path-progress{stroke:url(#lg-system-gradient);filter:none}
+.lg-refined .lg-system-map figcaption{grid-template-columns:1fr 1fr 1fr 1fr;text-align:center;font-size:11px}
+.lg-refined .lg-system-map figcaption span:last-child{text-align:center}
+.lg-refined #goal .research-mini{display:none}
+.lg-refined #goal .research-timeline{gap:32px;margin-top:0}
+.lg-refined #goal .research-timeline>li{padding:20px 0 0;border-left:0;border-top:1px solid #d885af4d}
+.lg-refined #goal .research-timeline .number::before{display:none}
+.lg-refined #goal .research-timeline .number{margin-bottom:16px;font-size:12px;color:#c89ab3}
+.lg-refined #sequences .surface::before{display:none}
+.lg-refined #sequences .subsection{position:relative;padding:34px 0;background:transparent;box-shadow:none}
+.lg-refined #sequences .feature-inventory{display:flex;flex-wrap:wrap;gap:0;list-style:none;max-width:100%;margin:38px 0 0;padding:0;border-block:1px solid #e295b44d}
+.lg-refined #sequences .feature-inventory>li{width:auto;min-height:0;display:block;padding:13px 0;margin:0;border:0;border-radius:0;background:none;color:#f4e7ef;font-size:clamp(22px,2.2vw,35px);line-height:1.55;font-weight:500;letter-spacing:-.03em}
+.lg-refined #sequences .feature-inventory>li::after{content:' / ';padding-inline:15px;color:#d94390;font-weight:300}
+.lg-refined #sequences .feature-inventory>li:last-child::after{content:''}
+.lg-refined #sequences .feature-inventory>li:nth-child(3n+2){color:#e58bb6}
+.lg-refined #sequences .subsection:last-child>.steps{display:block;margin-top:40px;border-top:1px solid #b5749766}
+.lg-refined #sequences .subsection:last-child>.steps>article{display:grid;grid-template-columns:38px minmax(150px,.7fr) minmax(0,1.3fr);gap:20px;align-items:baseline;padding:26px 0;margin:0;border:0;border-bottom:1px solid #b5749744;border-radius:0;background:none;box-shadow:none}
+.lg-refined #sequences .subsection:last-child>.steps h4{font-size:clamp(24px,2.2vw,34px);margin:0;color:#eb91bc}
+.lg-refined #sequences .subsection:last-child>.steps p{margin:0;font-size:16px;line-height:1.8}
+.lg-refined #sequences .subsection:last-child>.steps .number{margin:0;color:#b990a8;font-size:12px}
+@media(prefers-reduced-motion:no-preference){
+ .lg-refined #sequences .lg-sequence-arrived .feature-inventory>li{animation:lg-word-settle .6s cubic-bezier(.22,1,.36,1) both;animation-delay:calc(var(--overview-order,0) * 24ms)}
+ @keyframes lg-word-settle{from{opacity:.25;translate:0 12px;filter:blur(2px)}to{opacity:1;translate:0;filter:none}}
+ @keyframes lg-purpose-arrive{from{opacity:.4;clip-path:inset(0 100% 0 0)}to{opacity:1;clip-path:inset(0)}}
+}
+@media(max-width:1099px){.lg-refined #goal .research-timeline{grid-template-columns:repeat(2,minmax(0,1fr))}.lg-refined #sequences .purpose-groups>article{padding:24px 18px}}
+@media(max-width:600px){.lg-refined .lg-system-map figcaption{font-size:8px;letter-spacing:.03em;gap:8px}.lg-refined #goal .research-timeline{grid-template-columns:1fr 1fr;gap:24px 20px}.lg-refined #goal .research-timeline h3{font-size:18px;line-height:1.4}.lg-refined #goal .research-timeline p{font-size:14px;line-height:1.75}.lg-refined #sequences .feature-inventory>li{font-size:23px;padding:6px 0}.lg-refined #sequences .feature-inventory>li::after{padding-inline:10px}.lg-refined #sequences .purpose-groups{grid-template-columns:1fr}.lg-refined #sequences .purpose-groups>article{display:grid;grid-template-columns:1fr 1fr;gap:0 20px;padding:26px 24px;border-right:0;border-bottom:1px solid #fff4}.lg-refined #sequences .purpose-groups h4{grid-column:1;grid-row:2;margin:10px 0}.lg-refined #sequences .purpose-groups p{grid-column:2;grid-row:1/4;font-size:15px;align-self:center}.lg-refined #sequences .purpose-groups .count{font-size:48px;margin-top:14px;grid-column:1}.lg-refined #sequences .subsection:last-child>.steps>article{grid-template-columns:28px 1fr;gap:12px}.lg-refined #sequences .subsection:last-child>.steps p{grid-column:2}.lg-refined #sequences .subsection:last-child>.steps h4{font-size:26px}}
+@media(prefers-reduced-motion:reduce){.lg-refined #sequences .lg-sequence-arrived *{animation:none!important}}
+
+/* The diagram is only a dashed route; the research explanations carry its meaning. */
+body.lg-refined #goal .lg-system-map svg{height:auto;aspect-ratio:1100/160}
+body.lg-refined #goal .lg-system-map{margin:20px 0 28px}
+body.lg-refined #goal .lg-system-map :is(.lg-path-base,.lg-path-progress){stroke-dasharray:4 7;stroke-linecap:round;filter:none}
+body.lg-refined #goal .lg-system-map .lg-path-progress{stroke:#e699c0;stroke-dasharray:1;stroke-dashoffset:var(--path-offset,1)}
+body.lg-refined #goal .research-timeline.lg-goal-progress>li{opacity:.62!important;transform:none!important;transition:opacity .26s ease,border-color .26s ease}
+body.lg-refined #goal .research-timeline.lg-goal-progress>li.lg-goal-reached{opacity:1!important;border-color:#e6a2c6}
+body.lg-refined #goal .research-timeline.lg-goal-progress>li .number{color:#ab9ca7;transition:color .26s}
+body.lg-refined #goal .research-timeline.lg-goal-progress>li.lg-goal-reached .number{color:#f0b4d3}
+/* Eighteen features, all visible: compact words and a quick stagger, no marquee. */
+body.lg-refined #sequences .feature-inventory{margin-top:24px;gap:0;padding:12px 0}
+body.lg-refined #sequences .feature-inventory>li{font-size:18px;line-height:1.7;letter-spacing:-.015em;padding:5px 0;white-space:nowrap}
+body.lg-refined #sequences .feature-inventory>li::after{padding-inline:12px}
+body.lg-refined #sequences .lg-sequence-arrived .feature-inventory>li{animation-duration:.25s;animation-delay:calc(var(--overview-order,0) * 25ms)}
+/* A real table keeps purpose, examples and count aligned at every width. */
+body.lg-refined #sequences .lg-purpose-table-wrap{width:100%;margin-top:28px;overflow:visible}
+body.lg-refined #sequences .lg-purpose-table{display:table;width:100%;border-collapse:collapse;table-layout:fixed;background:transparent;color:#f5edf2;font-size:16px;line-height:1.7}
+body.lg-refined #sequences .lg-purpose-table caption{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+body.lg-refined #sequences .lg-purpose-table :is(th,td){display:table-cell;padding:20px 24px;border:0;border-bottom:1px solid #ce75a14d;text-align:left;vertical-align:middle;overflow-wrap:anywhere;font-weight:400}
+body.lg-refined #sequences .lg-purpose-table thead th{color:#e7a0c3;font-size:12px;letter-spacing:.05em;border-top:1px solid #d982af;line-height:1.5;padding-block:16px}
+body.lg-refined #sequences .lg-purpose-table th:first-child{width:30%}
+body.lg-refined #sequences .lg-purpose-table th:last-child{width:17%;text-align:right}
+body.lg-refined #sequences .lg-purpose-table tbody th{font-size:22px;font-weight:550;color:#efbbd6}
+body.lg-refined #sequences .lg-purpose-table tbody td:last-child{text-align:right;font-size:27px;font-variant-numeric:tabular-nums;color:#f7e3ee;white-space:nowrap}
+body.lg-refined #sequences .lg-purpose-table tbody td:nth-child(2){color:#c5b9c4;font-size:16px}
+@media(max-width:600px){body.lg-refined #sequences .feature-inventory>li{font-size:17px;padding:4px 0}body.lg-refined #sequences .feature-inventory>li::after{padding-inline:10px}body.lg-refined #sequences .lg-purpose-table :is(th,td){padding:16px 9px}body.lg-refined #sequences .lg-purpose-table tbody th{font-size:16px}body.lg-refined #sequences .lg-purpose-table tbody td:nth-child(2){font-size:14px}body.lg-refined #sequences .lg-purpose-table tbody td:last-child{font-size:20px}body.lg-refined #sequences .lg-purpose-table th:first-child{width:35%}body.lg-refined #sequences .lg-purpose-table th:last-child{width:22%}}
+@media(prefers-reduced-motion:reduce){body.lg-refined #goal .research-timeline>li{opacity:1!important;transition:none!important}body.lg-refined #goal .lg-system-map .lg-path-progress{stroke-dashoffset:0}body.lg-refined #sequences .feature-inventory>li{animation:none!important}}
+body.lg-refined #goal .lg-system-map .lg-path-progress{display:none}
+body.lg-refined #goal .lg-system-map .lg-path-base{opacity:.72}
+body.lg-refined #goal .lg-system-map .lg-system-port circle{r:5px}
+@media(min-width:701px){body.lg-refined #goal .research-timeline{grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}body.lg-refined #goal .research-timeline h3{font-size:20px;line-height:1.5}body.lg-refined #goal .research-timeline p{font-size:15px;line-height:1.8}}
+/* Four fixed peaks and four equally centered explanations share one canvas. */
+body.lg-refined #goal .lg-system-map svg{height:auto;aspect-ratio:1100/190}
+body.lg-refined #goal .lg-system-map figcaption{gap:0;text-align:center}
+body.lg-refined #goal .research-timeline{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
+body.lg-refined #goal .research-timeline>li{text-align:center;padding:24px 12px 0}
+body.lg-refined #goal .research-timeline h3{font-size:20px;line-height:1.5}
+body.lg-refined #goal .research-timeline p{font-size:15px;line-height:1.8;margin-inline:auto;max-width:24em}
+body.lg-refined #goal .research-timeline .number{display:block;text-align:center}
+body.lg-refined #goal .lg-system-port circle{transition:fill .25s,opacity .25s,filter .25s}
+body.lg-refined #goal .lg-system-port circle.is-current{fill:#ffdaec;filter:drop-shadow(0 0 6px #e78bb8);r:6px}
+.lg-goal-sequence{width:100%;max-width:100%;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:#a26085 transparent}
+.lg-goal-canvas{width:100%}
+/* Keep this complete reading scene visible below the shared header at its start. */
+body.lg-refined main #goal.chapter{padding-block:32px!important}
+@media(max-width:700px){.lg-goal-canvas{min-width:640px}.lg-goal-sequence{padding-bottom:12px}body.lg-refined #goal .research-timeline h3{font-size:17px}body.lg-refined #goal .research-timeline p{font-size:14px}body.lg-refined #goal .lg-system-map figcaption{font-size:9px}}
+.lg-goal-scroll-hint{display:none}
+@media(max-width:700px){.lg-goal-scroll-hint{display:block;position:sticky;left:0;width:100%;font-size:11px;line-height:1.7;text-align:center;color:#c4a5b6;padding:14px 0 0;margin:0}}

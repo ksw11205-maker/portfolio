@@ -1,0 +1,14 @@
+/* Reserve photo space below the title at every desktop type size. */
+.about:has(.profile-portrait){row-gap:48px}
+.about:has(.profile-portrait) .section-heading{padding-bottom:236px}
+.about .profile-portrait{position:relative;grid-column:1/5;grid-row:1;align-self:end;justify-self:center;width:148px;max-width:100%;margin:0;overflow:visible;border-radius:4px;background:#fff}
+.profile-portrait img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:contain;border-radius:4px}
+.profile-portrait::before,.profile-portrait::after{content:"";position:absolute;width:44px;height:44px;z-index:1;background-position:center;background-size:contain;background-repeat:no-repeat;pointer-events:none}
+.profile-portrait::before{left:-22px;top:-20px;background-image:url('/assets/profile/logo-corner-blue.svg')}
+.profile-portrait::after{right:-22px;bottom:-20px;background-image:url('/assets/profile/logo-corner-white.svg');transform:rotate(180deg)}
+@media(min-width:701px){.about:has(.profile-portrait) .about-intro{align-self:center;padding-top:0}}
+@media(max-width:700px){
+ .about:has(.profile-portrait) .section-heading{padding-bottom:0}
+ .about .profile-portrait{grid-column:1;grid-row:auto;align-self:start;justify-self:start;margin:10px 0 10px 17px;width:124px}
+ .about:has(.profile-portrait){row-gap:28px}
+}

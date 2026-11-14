@@ -1,0 +1,10 @@
+@import url('/case-steps.css');
+/* Native document scrolling; only the outgoing chapter is pinned. */
+.case-slide-frame{position:relative;width:100%;isolation:isolate;padding-bottom:clamp(120px,calc((100svh - 124px)*.3),260px)}
+.case-slide-frame--last{padding-bottom:0}
+.case-slide-surface{--case-exit-scale:.94;display:flow-root;position:relative;min-height:calc(100svh - 68px);transform-origin:center bottom}
+.case-slide-frame:focus-within .case-slide-surface{opacity:1!important;transform:none!important}
+@media(hover:none),(pointer:coarse){.case-slide-surface{--case-exit-scale:.98}}
+@media(max-width:480px){.case-slide-surface{min-height:calc(100svh - 60px)}}
+@media(prefers-reduced-motion:reduce){.case-slide-surface{transform:none!important;opacity:1!important}}
+@media print{.case-slide-frame,.case-slide-surface{position:static!important;transform:none!important;opacity:1!important;min-height:0!important}.pin-spacer{padding:0!important;height:auto!important}}

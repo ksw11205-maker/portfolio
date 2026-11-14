@@ -26,13 +26,13 @@ export function initSectionFlow({reduced,scrollMotion}){
     if(visibleCovers[nearest]>0&&nearest!==listCurrent){listCurrent=nearest;scrollMotion.requestUpdate();}
   },{threshold:[0,.1,.25,.5,.75,1]});
   covers.forEach(cover=>listObserver.observe(cover));
-  const desktop=matchMedia('(min-width:1101px) and (min-height:700px)');
-  const desktopQA=matchMedia('(min-width:901px) and (min-height:700px) and (hover:hover) and (pointer:fine)');
+  const desktop=matchMedia('(min-width:1024px) and (min-height:600px) and (hover:hover) and (pointer:fine)');
+  const desktopQA=matchMedia('(min-width:1024px) and (min-height:600px) and (hover:hover) and (pointer:fine)');
   const clamp=(n,min=0,max=1)=>Math.max(min,Math.min(max,n)),smooth=n=>n*n*(3-2*n);
   const resting=()=>reduced.matches||document.body.classList.contains('motion-paused');
   const labels={home:'Hero',about:'Who I Am',tools:'How I Work',work:'Projects',qa:'How I Think',contact:'Contact'};
   const configs=[
-    {id:'about',heading:'.section-heading',content:'.about-intro,.profile-details'},
+    {id:'about',heading:'.section-heading',content:'.about-intro,.profile-details,.profile-portrait'},
     {id:'tools',heading:'.tools-heading',content:'.tools-visual,.tools-capabilities'},
     {id:'work',heading:'.work-heading',content:'.project-list,.work-gallery,.work-copy-viewport,.work-progress'},
     {id:'qa',heading:'.qa-heading',content:'.qa-deck'},
@@ -69,7 +69,7 @@ export function initSectionFlow({reduced,scrollMotion}){
     return {left,top,width:right-left,height:bottom-top};
   }
   function measure(){
-    layoutFrame=0;const h=innerHeight,w=document.documentElement.clientWidth,enabled=!resting()&&w>600&&h>=650;
+    layoutFrame=0;const h=innerHeight,w=document.documentElement.clientWidth,enabled=!resting()&&w>600&&(h>=650||desktop.matches);
     const size=w+':'+h,changedSize=layoutSize&&layoutSize!==size;
     let restoreWork=null;
     if(changedSize&&measured&&!pendingAnchor&&workEntry.enabled&&workEntry.mode==='work'&&scrollY>=workEntry.start&&scrollY<=workEntry.start+workEntry.run){
@@ -84,18 +84,33 @@ export function initSectionFlow({reduced,scrollMotion}){
     }
     layoutSize=size;
     const compact=w<=800||h<760;
-    const intro=enabled?h*(compact?.42:.7):0;
+    const intro=enabled?h*(compact?.34:.54):0;
     headerGeometry=header.getBoundingClientRect();
     work.classList.toggle('is-pinned',enabled&&desktop.matches);
     orbit.setPinned(enabled&&desktop.matches,headerGeometry.bottom);
     if(restoreWork&&!work.classList.contains('is-pinned'))listCurrent=restoreWork.index||0;
     qa.classList.toggle('is-scroll-driven',enabled&&desktopQA.matches);
+    // Test the untransformed content, including text enlarged by the browser.
+    // If any face is too tall, keep every project in normal document order.
+    if(work.classList.contains('is-pinned')&&projectInfo.some(({info})=>{
+      const style=getComputedStyle(info),children=[...info.children];
+      const required=children.reduce((sum,node)=>sum+node.offsetHeight,0)+
+        Math.max(0,children.length-1)*(parseFloat(style.rowGap)||0)+
+        parseFloat(style.paddingTop)+parseFloat(style.paddingBottom);
+      return required>info.clientHeight+1||info.scrollWidth>info.clientWidth+1;
+    })){
+      work.classList.remove('is-pinned');orbit.setPinned(false,headerGeometry.bottom);
+    }
+    property(qa,'--qa-safe-top',headerGeometry.bottom+24+'px');
+    if(qa.classList.contains('is-scroll-driven')&&cards.some(card=>
+      card.offsetHeight>h-headerGeometry.bottom-48||card.scrollHeight>card.clientHeight+1
+    ))qa.classList.remove('is-scroll-driven');
     // Measure Q&A's settled heading before the reading track moves it sideways.
     qa.style.removeProperty('--qa-x');
     entries.forEach(entry=>{
       const {section,shell,title}=entry;
-      entry.mode=entry.id==='work'&&desktop.matches?'work':entry.id==='qa'&&desktopQA.matches?'qa':'flow';
-      entry.enabled=enabled;entry.intro=entry.id==='contact'&&enabled?h*.95:intro;
+      entry.mode=entry.id==='work'&&work.classList.contains('is-pinned')?'work':entry.id==='qa'&&qa.classList.contains('is-scroll-driven')?'qa':'flow';
+      entry.enabled=enabled;entry.intro=entry.id==='contact'&&enabled?h*.72:intro;
       entry.progress=null;entry.qaProgress=null;
       title.style.removeProperty('transform');
       section.classList.remove('is-entry-pinned');shell.classList.remove('has-entry-pin');
@@ -120,7 +135,9 @@ export function initSectionFlow({reduced,scrollMotion}){
       const {section,shell}=entry;
       const margin=getComputedStyle(section).marginTop;
       shell.style.marginTop=margin;section.style.marginTop='0px';
-      entry.pinTop=entry.id==='tools'?headerGeometry.bottom+24:0;
+      // The section already has top padding. Keep short laptop viewports from
+      // spending that space twice and crowding the final principle at the bottom.
+      entry.pinTop=entry.id==='tools'?headerGeometry.bottom:0;
       section.style.setProperty('--entry-top',entry.pinTop+'px');
       shell.classList.add('has-entry-pin');section.classList.add('is-entry-pinned');
       shell.style.height=section.offsetHeight+entry.intro+'px';
@@ -190,10 +207,10 @@ export function initSectionFlow({reduced,scrollMotion}){
       statementMotion.renderEntry(entry,content,atRest);
       // Reuse the large title settling as group one; no second title animation.
       const isContact=entry.id==='contact';
-      const opacity=smooth(clamp(reveal.title*1.65))*(isContact?smooth(clamp(progress/.56)):1);
-      const settle=entry.enabled?progress:1;
+      const opacity=smooth(clamp(reveal.title*1.65))*(isContact&&!reveal.settled?smooth(clamp(progress/.56)):1);
+      const settle=entry.enabled&&!reveal.settled?progress:1;
       const p=1-Math.pow(1-settle,3);
-      if(isContact)contactWave.render(progress);
+      if(isContact)contactWave.render(reveal.settled?1:progress);
       entry.progress=progress;
       entry.title.style.opacity=String(opacity);
       entry.title.style.transform=p<1?`translate3d(${entry.x*(1-p)}px,${entry.y*(1-p)}px,0) scale(${entry.scale+(1-entry.scale)*p})`:'';
@@ -215,7 +232,7 @@ export function initSectionFlow({reduced,scrollMotion}){
       const rawPosition=clamp((distance-workEntry.hold)/workEntry.slot,0,projects.length-1);
       const arrival=smooth(clamp((y-(workEntry.start-h*.85))/(h*.85)));
       const arrivalOffset=clamp(workEntry.start-y,0,h);
-      orbit.renderEntry(arrival,arrivalOffset);
+      orbit.renderEntry(arrival,0);
       // Hold each face level for reading; rotate both halves on the same clock.
       const whole=Math.floor(rawPosition),fraction=clamp((rawPosition-whole-.18)/.64);
       const position=Math.min(projects.length-1,whole+smooth(fraction));
@@ -232,7 +249,7 @@ export function initSectionFlow({reduced,scrollMotion}){
         cards.forEach((card,index)=>{
           const center=qaGeometry[index].center-shift;
           const tilt=index===0?0:clamp((center-qaWidth*.55)/(qaWidth*.65))*(1-progress),direction=index%2?-1:1;
-          property(card,'--qa-angle',direction*3*tilt+'deg');property(card,'--qa-lift',direction*qaGeometry[index].height*.08*tilt+'px');
+          property(card,'--qa-angle',direction*(h<760?0:3)*tilt+'deg');property(card,'--qa-lift',direction*qaGeometry[index].height*(h<760?0:.04)*tilt+'px');
         });
       }
     }else{
@@ -269,7 +286,7 @@ export function initSectionFlow({reduced,scrollMotion}){
   function anchorPosition(target){
     if(target===hero)return 0;
     const entry=entries.find(entry=>entry.section===target);
-    if(entry?.enabled)return entry.start+(entry.id==='contact'?entry.intro:0);
+    if(entry?.enabled)return entry.start+entry.intro;
     return target.getBoundingClientRect().top+scrollY-header.getBoundingClientRect().bottom-24;
   }
   document.addEventListener('click',event=>{
@@ -315,7 +332,19 @@ export function initSectionFlow({reduced,scrollMotion}){
   measure();
   const loaded=document.readyState==='complete'?Promise.resolve():new Promise(resolve=>addEventListener('load',resolve,{once:true}));
   Promise.all([loaded,document.fonts?.ready]).then(()=>requestAnimationFrame(()=>requestAnimationFrame(()=>{measure();restoreInitialAnchor();})));
-  readingSnap=initReadingSnap({header,getPoints:offset=>{
+  readingSnap=initReadingSnap({header,getRanges:()=>{
+    const ranges=[];
+    entries.forEach(entry=>{
+      if(!entry.enabled)return;
+      if(entry.intro>0)ranges.push({start:entry.start-Math.min(160,innerHeight*.2),end:entry.start+entry.intro,
+        onSettle:direction=>{if(direction<0)textReveal.finishEntry(entry);}});
+      if(entry.mode==='work')for(let i=0;i<projects.length-1;i++){
+        const origin=entry.start+entry.hold+i*entry.slot;
+        ranges.push({start:origin+entry.slot*.18,end:origin+entry.slot*.82});
+      }
+    });
+    return ranges;
+  },getPoints:offset=>{
     if(!measured)return [];
     const points=[0];
     entries.forEach(entry=>{
@@ -328,7 +357,15 @@ export function initSectionFlow({reduced,scrollMotion}){
             const shift=clamp(card.center-qaWidth*.5,0,entry.travel);
             points.push(entry.start+entry.intro+entry.run*shift/entry.travel);
           });
-        }else points.push(entry.start+entry.intro);
+         }else {
+          const first=entry.start+entry.intro;
+          points.push(first);
+          // Keep overlapping reading positions through sections taller than a screen.
+          const available=innerHeight-offset-40,travel=entry.section.offsetHeight-(entry.pinTop||0)-available;
+          if(travel>80){const count=Math.ceil(travel/(available*.8));
+            for(let i=1;i<=count;i++)points.push({top:first+travel*i/count,radius:Math.min(64,available*.1)});
+          }
+        }
       }else{
         const start=layoutTop(entry.heading)-offset,available=innerHeight-offset-48;
         points.push(start);

@@ -35,7 +35,7 @@ export function createTextReveal(entries,{requestUpdate=()=>{}}={}){
     });
   }
   function finishEntry(entry){
-    const state=states.get(entry);if(state.finished)return;state.finished=true;paint(entry,1);
+    const state=states.get(entry);state.finished=true;state.contentComplete=true;state.contentStart=performance.now()-420;paint(entry,1);
     entry.section.dataset.revealState='shown';requestUpdate();
   }
   return {
@@ -56,37 +56,26 @@ export function createTextReveal(entries,{requestUpdate=()=>{}}={}){
     },
     renderEntry(entry,progress,resting){
       const state=states.get(entry),now=performance.now();
-      if(resting||entry.id==='work'){finishEntry(entry);return {title:1,content:1};}
+      if(resting||entry.id==='work'){if(!state.contentComplete)finishEntry(entry);return {title:1,content:1,settled:true};}
+      if(state.contentComplete)return {title:1,content:1,settled:true};
       const gate=entry.id==='contact'?entry.start+entry.intro*.56:entry.start-innerHeight*.12;
       if(state.start===null&&scrollY>=gate){state.start=now;entry.section.dataset.revealState='playing';}
       if(state.start===null)return {title:0,content:0};
       const p=state.finished?1:clamp((now-state.start)/state.duration);if(!state.finished)paint(entry,p);
       if(p===1)state.finished=true;
-      // Contact keeps its first reveal clock, then uses the same scroll position
-      // as the wave for a continuous fade in either direction, even mid-reveal.
-      if(entry.id==='contact'){
-        if(progress>=.998&&p===1&&state.contentStart===null)state.contentStart=now;
-        const q=state.contentStart===null?0:clamp((now-state.contentStart)/620);
-        const cover=clamp((progress-.72)/.28),envelope=cover*cover*(3-2*cover);
-        const content=(1-Math.pow(1-q,3))*envelope;
-        state.contentComplete=q===1;
-        entry.section.dataset.revealState=content===1?'shown':content>0?'content':'title';
-        if(p<1||state.contentStart!==null&&q<1)requestUpdate();
-        return {title:p,content};
-      }
-      // Only start the content clock after both the lettering and title placement finish.
-      if(progress<.998||p<1){
-        state.contentStart=null;state.contentComplete=false;
+      // Once reading starts, neither the body nor its settled title rewind.
+      // The original entrance still plays on the first visit.
+      if(state.contentStart===null&&(progress<.86||p<.9)){
         entry.section.dataset.revealState='title';
         if(p<1)requestUpdate();
-        return {title:p,content:0};
+        return {title:p,content:0,settled:false};
       }
       if(state.contentStart===null)state.contentStart=now;
-      const q=clamp((now-state.contentStart)/620),content=1-Math.pow(1-q,3);
+      const q=clamp((now-state.contentStart)/420),content=1-Math.pow(1-q,3);
       state.contentComplete=q===1;
       entry.section.dataset.revealState=q===1?'shown':'content';
       if(q<1)requestUpdate();
-      return {title:1,content};
+      return {title:1,content,settled:true};
     },
     finishEntry
   };
