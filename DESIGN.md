@@ -1,6 +1,6 @@
-# 새 포트폴리오 디자인 기준 · 리디자인 준비
-작성일: 2026-11-15. 상태: 최신 사용자 명세·이력 선별과 표지 구도 시안 준비. 새 사이트 구현·실행·배포는 하지 않았다.
-쉘의 최신 흐름·표지·CTA·Q&A·Contact는 [구체 명세](docs/design/shell-direction-20261115.md)를 따른다. 프로필 사실은 [프로필 문서](docs/projects/profile.md)를 따른다. 생성된 표지는 UI 원본 합성 전의 구도 연구 시안이다.
+# 새 포트폴리오 디자인 기준 · 별도 구현
+작성일: 2026-11-15. 상태: 사용자의 구현 시작 지시에 따라 `redesign/`에 메인과 4개 상세페이지를 구현했다. 정적 경로·구문·자산 검사를 수행했으며 사이트 실행·브라우저 화면 검수·배포는 하지 않았다.
+쉘의 최신 흐름·표지·CTA·Q&A·Contact는 [구체 명세](docs/design/shell-direction-20261115.md)를 따른다. 프로필 사실은 [프로필 문서](docs/projects/profile.md)를 따른다. 실제 원본 UI를 합성한 최종 SVG 표지는 `redesign/assets/covers/`에 있고, 이전 생성 이미지는 구도 연구 자료로만 남긴다.
 이 문서는 사용자의 전면 리디자인 요청에 따라 준비 브랜치에서 공통 기준을 새로 잡는다. 과거 디자인 원본은 [보관 브랜치](https://github.com/ksw11205-maker/portfolio/tree/archive/pre-redesign-20261114)에 보존한다.
 작업 절차는 AGENTS.md, 사실·연구 근거는 docs/projects/, 외부 코드 출처는 docs/design/references.md가 담당한다. 과거 화면의 문구·수치·실제 제품 자산을 보존하되 기존 배치·테마·모션을 새 디자인의 필수 조건으로 삼지 않는다.
 

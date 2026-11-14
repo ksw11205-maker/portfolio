@@ -1,0 +1,290 @@
+/* CAFÉKOK and OFFER case-study layouts. Original product interfaces stay intact. */
+body[data-project="cafekok"] { --product-bg:#f3f0e9; --product-ink:#2d2925; --product-muted:#655e56; --product-line:#d7d0c4; --product-accent:#5c3826; background:var(--product-bg); }
+body[data-project="offer"] { --product-bg:#fff; --product-ink:#171717; --product-muted:#5e5e5a; --product-line:#deded8; --product-accent:#c73512; background:var(--product-bg); }
+:is([data-project="cafekok"],[data-project="offer"]) .product-story { background:var(--product-bg); color:var(--product-ink); }
+:is([data-project="cafekok"],[data-project="offer"]) .product-story > .case-section { width:100%; max-width:1440px; margin-inline:auto; padding:clamp(72px,8vw,128px) clamp(24px,5vw,80px); }
+:is([data-project="cafekok"],[data-project="offer"]) .product-story > .case-section + .case-section { border-top:1px solid var(--product-line); }
+:is([data-project="cafekok"],[data-project="offer"]) .product-story p { word-break:keep-all; overflow-wrap:anywhere; }
+:is([data-project="cafekok"],[data-project="offer"]) .product-story p:not([class]),
+:is([data-project="cafekok"],[data-project="offer"]) .decision p { color:var(--product-muted); line-height:1.85; font-size:clamp(16px,1.25vw,18px); }
+:is([data-project="cafekok"],[data-project="offer"]) .product-story .case-heading { margin:0; max-width:21ch; color:var(--product-ink); font-size:clamp(34px,4.2vw,64px); line-height:1.22; font-weight:650; letter-spacing:-.045em; word-break:keep-all; }
+:is([data-project="cafekok"],[data-project="offer"]) .product-story .section-kicker { color:var(--product-muted); font-size:12px; line-height:1.5; letter-spacing:.13em; font-weight:650; margin:0 0 28px; }
+:is([data-project="cafekok"],[data-project="offer"]) .product-story .case-lead { max-width:39em; color:var(--product-ink); font-size:clamp(18px,1.55vw,22px); line-height:1.75; font-weight:450; letter-spacing:-.022em; }
+:is([data-project="cafekok"],[data-project="offer"]) .product-note { font-size:13px; line-height:1.8; color:var(--product-muted); margin-top:24px; padding-left:14px; border-left:2px solid var(--product-line); }
+.product-section-intro { max-width:840px; margin-bottom:64px; }
+.product-section-intro .case-lead { margin-top:28px; }
+.product-annotation { display:flex; flex-direction:column; gap:40px; }
+:is([data-project="cafekok"],[data-project="offer"]) .decision { padding:0; border:0; background:none; border-radius:0; box-shadow:none; }
+:is([data-project="cafekok"],[data-project="offer"]) .decision h3 { margin:0 0 14px; font-size:clamp(19px,1.55vw,23px); font-weight:650; line-height:1.45; letter-spacing:-.025em; word-break:keep-all; }
+:is([data-project="cafekok"],[data-project="offer"]) .decision p { margin:0; }
+.decision-number { display:block; margin-bottom:14px; font-size:12px; line-height:1.4; letter-spacing:.09em; font-variant-numeric:tabular-nums; font-weight:650; }
+:is([data-project="cafekok"],[data-project="offer"]) figure { margin:0; min-width:0; }
+:is([data-project="cafekok"],[data-project="offer"]) .screen { display:block; max-width:100%; width:100%; height:auto; }
+:is([data-project="cafekok"],[data-project="offer"]) .screen-caption { display:block; margin-top:18px; font-size:13px; font-weight:400; letter-spacing:0; line-height:1.7; color:var(--product-muted); word-break:keep-all; }
+:is([data-project="cafekok"],[data-project="offer"]) .screen-caption > span { display:block; max-width:none; text-align:left; font-size:10px; font-weight:650; letter-spacing:.1em; margin:0 0 4px; }
+.phone-pair { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:clamp(20px,3vw,44px); align-items:start; }
+.phone-figure { min-width:0; }
+.phone-stage { padding:7px; background:#302b27; border:1px solid #6e6357; border-radius:34px; overflow:hidden; box-shadow:0 20px 45px -24px rgba(50,36,21,.35); }
+.phone-stage .screen { border-radius:27px; }
+
+/* Café: quiet architectural space, warm materials, generous mobile evidence. */
+[data-project="cafekok"] .product-opening .case-heading { max-width:18ch; font-size:clamp(40px,5.3vw,78px); }
+.cafe-serif { font-weight:350; }
+.product-opening-copy { display:grid; grid-template-columns:1.1fr 1fr; gap:16px 72px; margin-top:48px; align-items:start; }
+.product-opening-copy .case-lead { margin:0; grid-row:span 2; }
+.product-opening-copy p:not(.case-lead) { margin:0; }
+.product-opening-copy .product-note { padding-left:14px; }
+[data-project="cafekok"] .metric-strip { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; margin-top:72px; padding:32px 0; border:0; border-block:1px solid var(--product-line); background:transparent; }
+[data-project="cafekok"] .metric-strip > div { display:flex; gap:22px; align-items:center; padding:0; }
+[data-project="cafekok"] .metric-strip strong { font-size:clamp(42px,5vw,68px); font-weight:400; line-height:1; letter-spacing:-.06em; color:var(--product-accent); }
+[data-project="cafekok"] .metric-strip span { font-size:14px; line-height:1.65; word-break:keep-all; }
+.cafe-equation { display:grid; grid-template-columns:1fr auto 1fr auto 1fr; gap:22px; align-items:center; margin-top:64px; }
+.cafe-equation > div { min-width:0; }
+.equation-label { display:block; margin-bottom:20px; font-size:10px; font-weight:650; letter-spacing:.1em; color:var(--product-muted); }
+.cafe-equation strong { display:block; font-size:clamp(20px,2vw,28px); line-height:1.4; font-weight:600; letter-spacing:-.03em; word-break:keep-all; }
+.cafe-equation p { margin:14px 0 0; font-size:14px !important; }
+.equation-sign { font-size:26px; font-weight:300; color:#867366; }
+.equation-result { padding-left:16px; border-left:1px solid var(--product-line); }
+.cafe-taste-layout { display:grid; grid-template-columns:.75fr 1.5fr; gap:clamp(40px,6vw,88px); align-items:center; }
+.taste-axes { list-style:none; padding:0; margin:0; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; }
+.taste-axes li { padding:12px 4px; text-align:center; font-size:12px; color:var(--product-muted); border-block:1px solid var(--product-line); }
+.cafe-pair--offset > figure:nth-child(2) { margin-top:88px; }
+[data-project="cafekok"] .cafe-purpose { display:grid; grid-template-columns:1.05fr .8fr; gap:40px 96px; position:relative; padding-top:96px; padding-bottom:96px; isolation:isolate; }
+.cafe-purpose-photo { position:absolute; inset:0; z-index:-2; overflow:hidden; }
+.cafe-purpose-photo img { width:100%; height:100%; object-fit:cover; object-position:center; opacity:.19; filter:saturate(.75); }
+.cafe-purpose::after { content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(90deg,rgba(243,240,233,.98),rgba(243,240,233,.8) 50%,rgba(243,240,233,.35)); }
+.cafe-purpose-content { align-self:center; max-width:540px; }
+.cafe-purpose .case-lead { margin-block:28px; }
+.purpose-list { display:flex; flex-wrap:wrap; gap:8px; margin:32px 0 48px; }
+.purpose-list span { padding:9px 16px; border:1px solid #a99b8b; border-radius:999px; font-size:13px; background:rgba(252,250,246,.7); }
+.purpose-phone { width:min(100%,350px); margin-inline:auto !important; align-self:center; }
+.phone-crop--home { aspect-ratio:390 / 610; }
+.phone-crop--home .screen { width:100%; height:auto; }
+.cafe-explore-layout { display:grid; grid-template-columns:1fr 1fr 1fr; gap:clamp(28px,4vw,64px); align-items:center; }
+.cafe-explore-notes { display:flex; flex-direction:column; gap:36px; }
+.cafe-explore-notes .decision h3 { font-size:19px; }
+.cafe-explore-notes .decision p { font-size:15px; }
+.cafe-explore-notes .product-note { margin-top:0; }
+.cafe-return-layout { display:grid; grid-template-columns:1.55fr .65fr; gap:clamp(48px,6vw,96px); align-items:center; }
+.cafe-return .phone-pair { max-width:760px; }
+.cafe-material-board { display:grid; grid-template-columns:1fr 1fr; gap:0; margin-top:56px; border:1px solid var(--product-line); }
+.cafe-wordmark-board { display:flex; flex-direction:column; justify-content:space-between; min-height:300px; padding:48px; background:#4a372c; color:#fff9ef; }
+.cafe-wordmark-board img { width:237px; max-width:80%; height:auto; }
+.cafe-wordmark-board p { font-size:20px !important; color:#fff9ef !important; line-height:1.6 !important; margin:48px 0 0; }
+.palette-board { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); }
+.case-swatch { display:flex; flex-direction:column; justify-content:flex-end; padding:24px; background:var(--swatch); min-height:150px; font-size:13px; color:#fffaf5; }
+.case-swatch:nth-child(even) { color:#34302c; }
+.case-swatch code { margin-top:6px; font-size:10px; font-family:inherit; letter-spacing:.06em; opacity:.8; }
+.product-flow { list-style:none; display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); margin:64px 0 0; padding:0; border-top:1px solid var(--product-line); }
+.product-flow li { position:relative; padding:28px 20px 0 0; }
+.product-flow li:not(:last-child)::after { content:"→"; position:absolute; right:16px; top:57px; font-size:17px; color:var(--product-muted); }
+.product-flow li > span { display:block; margin-bottom:16px; color:var(--product-muted); font-size:11px; font-variant-numeric:tabular-nums; }
+.product-flow strong { display:block; font-size:19px; font-weight:600; line-height:1.5; }
+.product-flow small { display:block; margin-top:8px; color:var(--product-muted); font-size:12px; line-height:1.6; }
+
+/* Offer: editorial white space, sharp rules, one restrained benefit accent. */
+[data-project="offer"] .offer-manifesto { max-width:none; font-size:clamp(44px,7.5vw,112px); line-height:.98; letter-spacing:-.07em; font-weight:750; }
+.offer-manifesto > span { color:var(--product-accent); }
+.offer-intro-grid { display:grid; grid-template-columns:1fr 1.15fr; gap:80px; margin-top:64px; }
+.offer-intro-grid .case-lead { font-size:clamp(22px,2.1vw,32px) !important; line-height:1.55 !important; margin:0; font-weight:550 !important; }
+.offer-intro-grid p:first-child { margin-top:0; }
+.offer-principles { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:40px; padding-top:48px; margin-top:64px; border-top:1px solid var(--product-line); }
+.offer-principles span { font-size:11px; letter-spacing:.08em; font-weight:650; }
+.offer-principles h3 { margin:22px 0 12px; font-size:24px; line-height:1.5; font-weight:650; letter-spacing:-.035em; }
+.offer-principles p { margin:0; font-size:15px !important; }
+.offer-section-head { display:grid; grid-template-columns:1.15fr 1fr; gap:72px; align-items:end; margin-bottom:56px; }
+.offer-section-head .case-lead { margin:0; }
+.offer-browser { background:#f6f6f3; overflow:hidden; border:1px solid #deded8; }
+.browser-bar { height:32px; padding-inline:14px; display:flex; gap:5px; align-items:center; background:#efefec; border-bottom:1px solid #deded8; }
+.browser-bar i { display:block; width:5px; height:5px; border:1px solid #a7a7a1; border-radius:50%; }
+.browser-bar span { font-size:8px; letter-spacing:.12em; margin-left:12px; color:#666660; }
+.offer-browser .screen-caption { padding:0 20px 18px; }
+.offer-browser--quiet { border-radius:0; }
+[data-project="offer"] .offer-browser--pan .screen-viewport { width:100%; overflow-x:auto; overscroll-behavior-inline:contain; scrollbar-width:thin; }
+[data-project="offer"] .offer-browser--pan .screen-viewport:focus-visible { outline-offset:-3px; }
+[data-project="offer"] .screen-pan-hint { display:none; }
+.offer-inline-decisions { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:64px; margin-top:40px; }
+.offer-inline-decisions--three { grid-template-columns:repeat(3,minmax(0,1fr)); gap:40px; }
+.offer-info-order { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); margin-bottom:32px; border-top:1px solid var(--product-line); border-bottom:1px solid var(--product-line); }
+.offer-info-order > span { display:flex; gap:16px; padding:20px 16px 20px 0; font-size:14px; align-items:center; }
+.offer-info-order b { color:var(--product-accent); font-size:10px; font-weight:600; }
+.offer-compare-detail { display:grid; grid-template-columns:.65fr 1.35fr; gap:64px; align-items:center; margin-top:64px; }
+.offer-compare-detail .decision p { font-size:15px; }
+.offer-interest-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:40px; margin-top:56px; }
+.interest-heading { border-top:2px solid var(--product-ink); padding-top:20px; margin-bottom:32px; }
+.interest-heading > span { font-size:10px; font-weight:650; letter-spacing:.08em; }
+.interest-heading h3 { font-size:25px; font-weight:600; line-height:1.5; letter-spacing:-.035em; margin:18px 0 0; }
+.offer-interest-grid > article > p { font-size:15px !important; margin:24px 0 0; }
+.offer-brand-context { display:grid; grid-template-columns:.8fr 1.2fr; gap:64px; margin-top:72px; padding-top:56px; border-top:1px solid var(--product-line); align-items:center; }
+.offer-brand-context h3 { font-size:clamp(23px,2.3vw,32px); font-weight:600; line-height:1.5; letter-spacing:-.035em; margin:0 0 24px; }
+.offer-brand-context p:not(.section-kicker) { margin:0; }
+.offer-responsive { display:grid; grid-template-columns:1.8fr 1fr .58fr; gap:28px; align-items:end; padding:40px 32px; background:#f1f1ed; }
+.responsive-device { border:6px solid #242424; border-radius:9px; overflow:hidden; background:#fff; }
+.responsive-tablet .responsive-device { border-width:5px; border-radius:13px; }
+.responsive-mobile .responsive-device { border-width:4px; border-radius:17px; }
+.offer-responsive .screen-caption { min-height:65px; margin-bottom:0; }
+.offer-responsive .screen-caption > span { font-size:8px; }
+.offer-system-line { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:40px; border-top:1px solid var(--product-line); margin-top:56px; padding-top:28px; }
+.system-label { display:block; font-size:10px; letter-spacing:.08em; margin-bottom:24px; color:var(--product-muted); }
+.offer-system-line strong { display:block; font-size:20px; font-weight:550; line-height:1.5; }
+.offer-system-line p { font-size:13px !important; margin:10px 0 0; }
+.offer-color-dots { display:flex; gap:8px; height:30px; align-items:center; }
+.offer-color-dots i { width:26px; height:26px; background:var(--swatch); border:1px solid rgba(23,23,23,.14); border-radius:50%; }
+
+/* Common closing evidence. */
+.reflection-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:72px; margin-top:48px; }
+.reflection-grid h3 { font-size:20px; font-weight:600; line-height:1.5; margin:0 0 16px; }
+.reflection-grid p { margin:0; }
+.data-table-wrap { width:100%; margin-top:48px; overflow-x:auto; }
+:is([data-project="cafekok"],[data-project="offer"]) .data-table { width:100%; border-collapse:collapse; font-size:14px; line-height:1.8; text-align:left; }
+:is([data-project="cafekok"],[data-project="offer"]) .data-table caption { text-align:left; padding-bottom:18px; font-size:12px; color:var(--product-muted); }
+:is([data-project="cafekok"],[data-project="offer"]) .data-table th,
+:is([data-project="cafekok"],[data-project="offer"]) .data-table td { padding:20px 24px 20px 0; vertical-align:top; border-bottom:1px solid var(--product-line); background:transparent; }
+:is([data-project="cafekok"],[data-project="offer"]) .data-table thead th { border-top:1px solid var(--product-ink); color:var(--product-muted); font-size:11px; font-weight:550; }
+:is([data-project="cafekok"],[data-project="offer"]) .data-table tbody th { width:36%; font-weight:550; color:var(--product-ink); }
+:is([data-project="cafekok"],[data-project="offer"]) .data-table td { color:var(--product-muted); }
+:is([data-project="cafekok"],[data-project="offer"]) .next-project p { margin-top:10px; font-size:13px; line-height:1.6; color:#f4f4f0d6; }
+:is([data-project="cafekok"],[data-project="offer"]) .next-project-grid--single { grid-template-columns:1fr; }
+:is([data-project="cafekok"],[data-project="offer"]) .next-project-grid--single .next-project { aspect-ratio:21/8; min-height:310px; }
+:is([data-project="cafekok"],[data-project="offer"]) .site-footer .footer-name { display:inline-flex; flex-wrap:wrap; gap:5px 12px; }
+:is([data-project="cafekok"],[data-project="offer"]) .site-footer .footer-name > span { flex-basis:auto; margin:0; color:var(--case-muted); font-size:10px; font-weight:400; }
+
+@media (min-width:1600px) {
+  .cafe-purpose-photo { inset-inline:calc((1440px - 100vw)/2); }
+  .cafe-purpose::after { inset-inline:calc((1440px - 100vw)/2); }
+}
+@media (max-width:1100px) {
+  .cafe-taste-layout { grid-template-columns:1fr 1.5fr; gap:36px; }
+  .cafe-explore-layout { grid-template-columns:1fr 1fr; gap:36px; align-items:start; }
+  .cafe-explore-layout > .phone-figure:first-child { grid-column:1; grid-row:1; }
+  .cafe-explore-layout > .phone-figure:last-child { grid-column:2; grid-row:1; }
+  .cafe-explore-notes { grid-column:1 / -1; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); margin-top:12px; gap:28px; }
+  .cafe-explore-notes .product-note { grid-column:1 / -1; }
+  [data-project="cafekok"] .cafe-purpose { gap:48px; }
+  .cafe-return-layout { grid-template-columns:1.5fr .8fr; gap:40px; }
+  .offer-section-head { gap:40px; }
+  .offer-compare-detail { gap:36px; grid-template-columns:.8fr 1.2fr; }
+  .offer-responsive { gap:20px; padding:28px 20px; }
+  .offer-responsive .screen-caption { font-size:11px; }
+}
+@media (max-width:760px) {
+  :is([data-project="cafekok"],[data-project="offer"]) .product-story > .case-section { padding-block:72px; }
+  :is([data-project="cafekok"],[data-project="offer"]) .product-story .section-kicker { margin-bottom:22px; font-size:10px; }
+  :is([data-project="cafekok"],[data-project="offer"]) .product-story .case-heading { font-size:clamp(30px,6vw,44px); }
+  :is([data-project="cafekok"],[data-project="offer"]) .product-story .case-lead { font-size:18px; }
+  .product-section-intro { margin-bottom:40px; }
+  .product-opening-copy { grid-template-columns:1fr; gap:24px; margin-top:32px; }
+  .product-opening-copy .case-lead { grid-row:auto; }
+  [data-project="cafekok"] .product-opening .case-heading { font-size:clamp(38px,8vw,56px); }
+  [data-project="cafekok"] .metric-strip { margin-top:40px; gap:14px; padding:24px 0; }
+  [data-project="cafekok"] .metric-strip > div { flex-direction:column; align-items:flex-start; gap:12px; }
+  [data-project="cafekok"] .metric-strip strong { font-size:48px; }
+  [data-project="cafekok"] .metric-strip span { font-size:11px; }
+  .cafe-equation { grid-template-columns:1fr auto 1fr; gap:20px 12px; margin-top:40px; }
+  .cafe-equation .equation-sign:nth-of-type(2) { display:none; }
+  .equation-label { font-size:8px; margin-bottom:12px; }
+  .cafe-equation strong { font-size:20px; }
+  .cafe-equation p { font-size:12px !important; }
+  .equation-result { grid-column:1 / -1; margin-top:8px; padding:24px 0 0; border-top:1px solid var(--product-line); border-left:0; }
+  .cafe-taste-layout { grid-template-columns:1fr; gap:40px; }
+  .cafe-taste-layout .product-annotation { display:grid; grid-template-columns:1fr 1fr; gap:28px; }
+  .cafe-taste-layout .taste-axes { grid-column:1 / -1; grid-template-columns:repeat(6,minmax(0,1fr)); }
+  .taste-axes li { font-size:10px; }
+  .phone-pair { gap:20px; }
+  .phone-stage { padding:5px; border-radius:24px; }
+  .phone-stage .screen { border-radius:18px; }
+  .cafe-pair--offset > figure:nth-child(2) { margin-top:48px; }
+  [data-project="cafekok"] .cafe-purpose { grid-template-columns:1fr; gap:40px; }
+  .cafe-purpose-photo img { opacity:.15; }
+  .cafe-purpose::after { background:linear-gradient(180deg,rgba(243,240,233,.95),rgba(243,240,233,.4)); }
+  .cafe-purpose-content { max-width:none; }
+  .purpose-phone { width:min(100%,340px); }
+  .cafe-explore-layout { gap:20px; }
+  .cafe-explore-notes { grid-template-columns:1fr; gap:28px; margin-top:24px; }
+  .cafe-explore-notes .decision { display:grid; grid-template-columns:.25fr 1fr; gap:0 20px; }
+  .cafe-explore-notes .decision-number { grid-row:span 2; font-size:9px; }
+  .cafe-explore-notes .decision h3 { font-size:18px; }
+  .cafe-explore-notes .decision p { font-size:15px; }
+  .cafe-return-layout { grid-template-columns:1fr; gap:40px; }
+  .cafe-return-layout > .product-annotation { display:grid; grid-template-columns:1fr 1fr; gap:28px; }
+  .cafe-material-board { grid-template-columns:1fr; margin-top:40px; }
+  .cafe-wordmark-board { min-height:260px; padding:32px; }
+  .case-swatch { min-height:140px; }
+  .product-flow { grid-template-columns:1fr; margin-top:40px; }
+  .product-flow li { display:grid; grid-template-columns:32px 1fr 1.1fr; gap:12px; padding:20px 0; border-bottom:1px solid var(--product-line); align-items:center; }
+  .product-flow li > span { margin:0; }
+  .product-flow strong { font-size:17px; }
+  .product-flow small { margin:0; font-size:11px; }
+  .product-flow li:not(:last-child)::after { content:none; }
+  [data-project="offer"] .offer-manifesto { font-size:clamp(40px,8.3vw,64px); }
+  .offer-intro-grid { grid-template-columns:1fr; gap:28px; margin-top:40px; }
+  .offer-intro-grid .case-lead { font-size:24px !important; }
+  .offer-principles { grid-template-columns:1fr; gap:28px; margin-top:40px; padding-top:32px; }
+  .offer-principles > div { display:grid; grid-template-columns:1fr 2fr; gap:8px 20px; }
+  .offer-principles > div > span { grid-row:span 2; padding-top:7px; font-size:9px; }
+  .offer-principles h3 { font-size:21px; margin:0; }
+  .offer-principles p { font-size:15px !important; }
+  .offer-section-head { grid-template-columns:1fr; gap:28px; margin-bottom:36px; }
+  .browser-bar { height:24px; padding-inline:10px; }
+  .browser-bar span { font-size:7px; }
+  .offer-browser .screen-caption { padding:0 14px 14px; font-size:11px; }
+  .offer-inline-decisions { gap:28px; margin-top:32px; }
+  .offer-inline-decisions--three { grid-template-columns:1fr; }
+  .offer-inline-decisions--three .decision { padding-top:24px; border-top:1px solid var(--product-line); }
+  .offer-info-order { grid-template-columns:repeat(2,minmax(0,1fr)); margin-bottom:24px; }
+  .offer-info-order > span { padding-block:16px; font-size:12px; }
+  .offer-compare-detail { grid-template-columns:1fr; gap:32px; margin-top:40px; }
+  .offer-compare-detail .product-annotation { display:grid; grid-template-columns:1fr 1fr; gap:28px; }
+  .offer-interest-grid { grid-template-columns:1fr; gap:40px; margin-top:40px; }
+  .interest-heading { margin-bottom:24px; }
+  .interest-heading h3 { font-size:23px; }
+  .offer-brand-context { grid-template-columns:1fr; gap:32px; margin-top:48px; padding-top:40px; }
+  .offer-responsive { grid-template-columns:1fr 1fr; gap:32px 24px; padding:24px 20px; align-items:start; }
+  .responsive-desktop { grid-column:1 / -1; }
+  .responsive-mobile { max-width:155px; margin-inline:auto !important; }
+  .offer-responsive .screen-caption { min-height:0; font-size:11px; }
+  .offer-responsive .screen-caption > span { font-size:8px; }
+  .offer-system-line { grid-template-columns:1fr; gap:28px; margin-top:40px; }
+  .offer-system-line > div { display:grid; grid-template-columns:1fr 1.5fr; gap:8px 24px; }
+  .system-label { margin:0; grid-row:span 2; padding-top:6px; font-size:9px; }
+  .offer-system-line p { margin:0; }
+  .reflection-grid { grid-template-columns:1fr; gap:32px; margin-top:32px; }
+  .data-table-wrap { margin-top:32px; }
+  :is([data-project="cafekok"],[data-project="offer"]) .data-table { font-size:12px; }
+  :is([data-project="cafekok"],[data-project="offer"]) .data-table th,
+  :is([data-project="cafekok"],[data-project="offer"]) .data-table td { padding:16px 16px 16px 0; }
+  :is([data-project="cafekok"],[data-project="offer"]) .data-table tbody th { width:39%; }
+}
+@media (max-width:420px) {
+  .cafe-taste-layout .product-annotation,
+  .cafe-return-layout > .product-annotation,
+  .offer-inline-decisions,
+  .offer-compare-detail .product-annotation { grid-template-columns:1fr; }
+  .cafe-taste-layout .taste-axes { grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .phone-pair { gap:16px; }
+  .phone-pair .screen-caption { font-size:11px; }
+  .phone-pair .screen-caption > span { font-size:8px; }
+  .cafe-explore-layout { gap:16px; }
+  .cafe-explore-layout > .phone-figure .screen-caption { font-size:11px; }
+  .cafe-explore-layout > .phone-figure .screen-caption > span { font-size:8px; }
+}
+@media (max-width:600px) {
+  .phone-pair { grid-template-columns:1fr; gap:36px; }
+  .phone-pair > .phone-figure { width:min(100%,340px); margin-inline:auto !important; }
+  .cafe-pair--offset > figure:nth-child(2) { margin-top:0; }
+  .cafe-explore-layout { display:flex; flex-direction:column; gap:36px; }
+  .cafe-explore-layout > .phone-figure { width:min(100%,340px); margin-inline:auto !important; }
+  .cafe-explore-layout > .phone-figure .screen-caption,
+  .phone-pair .screen-caption { font-size:13px; }
+  .cafe-explore-layout > .phone-figure .screen-caption > span,
+  .phone-pair .screen-caption > span { font-size:10px; }
+  .cafe-explore-notes { margin-top:0; }
+  .cafe-explore-notes .decision { grid-template-columns:1fr; }
+  .cafe-explore-notes .decision-number { grid-row:auto; }
+  :is([data-project="cafekok"],[data-project="offer"]) .next-project-grid--single .next-project { aspect-ratio:16/9; min-height:210px; }
+  [data-project="offer"] .offer-browser--pan .screen-viewport > .screen { width:960px; min-width:100%; max-width:none; }
+  [data-project="offer"] .screen-pan-hint { display:block; margin-top:10px; font-size:11px; font-weight:400; line-height:1.6; color:var(--product-muted); }
+}
+@media (prefers-reduced-motion:reduce) {
+  :is([data-project="cafekok"],[data-project="offer"]) .product-story * { animation:none !important; transition:none !important; }
+}

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-38 6 360 360" fill="none">
+  <!-- Original open, folded strip; deliberately not an orbit or closed ring. -->
+  <defs>
+    <linearGradient id="metal" x1="52" y1="72" x2="276" y2="323" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#43474e"/><stop offset=".19" stop-color="#858b93"/>
+      <stop offset=".38" stop-color="#b8bdc3"/><stop offset=".55" stop-color="#60666f"/>
+      <stop offset=".73" stop-color="#32373f"/><stop offset=".9" stop-color="#969da5"/><stop offset="1" stop-color="#555b63"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="72" y1="66" x2="251" y2="326" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#aeb5be" stop-opacity=".15"/><stop offset=".4" stop-color="#d0d5db" stop-opacity=".55"/><stop offset="1" stop-color="#79808b" stop-opacity=".1"/>
+    </linearGradient>
+  </defs>
+  <path d="M84 39C37 70 27 124 49 165C69 204 110 215 159 219C215 224 253 250 260 286C264 304 258 321 248 334L237 326C252 301 244 273 223 257C205 243 182 239 154 236C103 231 61 219 39 183C8 132 24 69 84 39Z" fill="url(#metal)"/>
+  <path d="M84 39C37 70 27 124 49 165C69 204 110 215 159 219C215 224 253 250 260 286C264 304 258 321 248 334" stroke="url(#edge)" stroke-width=".65"/>
+</svg>

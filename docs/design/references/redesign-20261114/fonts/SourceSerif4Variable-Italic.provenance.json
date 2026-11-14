@@ -1,0 +1,38 @@
+{
+  "collectedOn": "2026-11-15",
+  "family": "Source Serif 4 Variable",
+  "style": "italic",
+  "weightRange": [200, 900],
+  "repository": "adobe-fonts/source-serif",
+  "pinnedCommit": "80d3f8894c09c937bebfa9011247d2e1c79fd6f4",
+  "repositoryPath": "WOFF2/VAR/SourceSerif4Variable-Italic.ttf.woff2",
+  "officialTreeUrl": "https://api.github.com/repos/adobe-fonts/source-serif/git/trees/80d3f8894c09c937bebfa9011247d2e1c79fd6f4?recursive=1",
+  "officialRawUrl": "https://raw.githubusercontent.com/adobe-fonts/source-serif/80d3f8894c09c937bebfa9011247d2e1c79fd6f4/WOFF2/VAR/SourceSerif4Variable-Italic.ttf.woff2",
+  "officialCssUrl": "https://github.com/adobe-fonts/source-serif/blob/80d3f8894c09c937bebfa9011247d2e1c79fd6f4/source-serif-variable.css",
+  "localFiles": [
+    "docs/design/references/redesign-20261114/fonts/SourceSerif4Variable-Italic.woff2",
+    "redesign/assets/fonts/SourceSerif4Variable-Italic.woff2"
+  ],
+  "bytes": 346688,
+  "woff2Signature": "wOF2",
+  "gitBlobSha1": "9fcf4743dfa259398b94c430ca009ef9a98048dd",
+  "sha256": "9d28b5749a1ad096a295cb607c521bd1af4cd9979b6f37332daf70143149fb44",
+  "downloadMethod": "Official pinned Git tree confirmed the exact path. The connected GitHub read-only fetch_file tool returned the original binary as base64; decoded locally without altering the bytes. PowerShell HTTPS retrieval failed with an unexpected TLS receive error, so no elevated network permissions were requested.",
+  "verification": [
+    "Decoded binary size equals the official Git tree size.",
+    "Binary begins with the wOF2 signature.",
+    "Git blob SHA1 computed from the decoded bytes equals the official tree blob SHA1.",
+    "Both local copies have the recorded SHA256.",
+    "Official pinned source-serif-variable.css declares italic style and weight range 200 900 for this exact binary."
+  ],
+  "license": {
+    "name": "SIL Open Font License 1.1",
+    "officialUrl": "https://github.com/adobe-fonts/source-serif/blob/80d3f8894c09c937bebfa9011247d2e1c79fd6f4/LICENSE.md",
+    "retainedLocalFiles": [
+      "docs/design/references/redesign-20261114/adobe-fonts/source-serif/LICENSE.md",
+      "redesign/assets/fonts/SourceSerif-LICENSE.md"
+    ]
+  },
+  "prepareScript": "scripts/prepare-redesign.cjs copies the reference binary to the isolated redesign font directory.",
+  "scope": "Font binary preparation only. Shared CSS remains owned by the parent task. No website, server, browser, remote repository mutation or deployment."
+}

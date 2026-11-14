@@ -1,0 +1,141 @@
+{
+  "generatedAt": "2026-11-14T16:11:20.617Z",
+  "siteRoot": "redesign",
+  "mode": "Static source inspection only",
+  "status": "passed",
+  "execution": {
+    "websiteStarted": false,
+    "serverStarted": false,
+    "browserStarted": false,
+    "prototypeExecuted": false,
+    "deployed": false,
+    "javascriptParsedWithNodeCheckOnly": true
+  },
+  "counts": {
+    "portfolioHtml": 5,
+    "prototypeHtml": 9,
+    "css": 18,
+    "svg": 136,
+    "jsSyntax": 18,
+    "inlineJsSyntax": 1,
+    "localReferences": 362,
+    "anchors": 58
+  },
+  "portfolioErrors": [],
+  "prototypeAndOriginalAssetNotes": [],
+  "prototypeCtaChecks": [
+    {
+      "file": "work/cafekok/index.html",
+      "coverCount": 1,
+      "floatCount": 1,
+      "sameDestination": true,
+      "floatingInitiallyHidden": true,
+      "destination": "/work/cafekok/prototype/"
+    },
+    {
+      "file": "work/ivi/index.html",
+      "coverCount": 1,
+      "floatCount": 1,
+      "sameDestination": true,
+      "floatingInitiallyHidden": true,
+      "destination": "https://www.figma.com/proto/FF8CphVdOl1e6iASFM4ef2/IVIS?page-id=0%3A1&node-id=103-936&starting-point-node-id=103%3A936&scaling=scale-down"
+    },
+    {
+      "file": "work/lg/index.html",
+      "coverCount": 1,
+      "floatCount": 1,
+      "sameDestination": true,
+      "floatingInitiallyHidden": true,
+      "destination": "/work/lg/prototype/"
+    },
+    {
+      "file": "work/offer/case-study.html",
+      "coverCount": 1,
+      "floatCount": 1,
+      "sameDestination": true,
+      "floatingInitiallyHidden": true,
+      "destination": "/work/offer/"
+    }
+  ],
+  "externalReferences": {
+    "portfolio": [
+      {
+        "scope": "portfolio",
+        "file": "work/ivi/index.html",
+        "context": "a[href]",
+        "url": "https://www.figma.com/proto/FF8CphVdOl1e6iASFM4ef2/IVIS?page-id=0%3A1&node-id=103-936&starting-point-node-id=103%3A936&scaling=scale-down",
+        "verification": "Not fetched; external dependency reported separately."
+      }
+    ],
+    "prototypesAndOriginalAssets": [
+      {
+        "scope": "prototype",
+        "file": "work/lg/prototype/index.html",
+        "context": "link[href]",
+        "url": "https://fonts.googleapis.com/",
+        "verification": "Not fetched; external dependency reported separately."
+      },
+      {
+        "scope": "prototype",
+        "file": "work/lg/prototype/index.html",
+        "context": "link[href]",
+        "url": "https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap",
+        "verification": "Not fetched; external dependency reported separately."
+      },
+      {
+        "scope": "prototype",
+        "file": "work/lg/prototype/index.html",
+        "context": "a[href]",
+        "url": "https://www.nngroup.com/articles/ten-usability-heuristics/",
+        "verification": "Not fetched; external dependency reported separately."
+      },
+      {
+        "scope": "prototype",
+        "file": "work/lg/prototype/index.html",
+        "context": "a[href]",
+        "url": "https://www.iso.org/standard/63500.html",
+        "verification": "Not fetched; external dependency reported separately."
+      },
+      {
+        "scope": "prototype",
+        "file": "work/lg/prototype/index.html",
+        "context": "a[href]",
+        "url": "https://developer.android.com/design/ui/tv/guides/components/cards",
+        "verification": "Not fetched; external dependency reported separately."
+      },
+      {
+        "scope": "prototype",
+        "file": "work/lg/prototype/index.html",
+        "context": "a[href]",
+        "url": "https://www.nngroup.com/articles/recognition-and-recall/",
+        "verification": "Not fetched; external dependency reported separately."
+      },
+      {
+        "scope": "prototype",
+        "file": "work/lg/prototype/index.html",
+        "context": "a[href]",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html",
+        "verification": "Not fetched; external dependency reported separately."
+      },
+      {
+        "scope": "prototype",
+        "file": "work/lg/prototype/index.html",
+        "context": "a[href]",
+        "url": "https://m3.material.io/foundations/interaction/states/overview",
+        "verification": "Not fetched; external dependency reported separately."
+      },
+      {
+        "scope": "prototype",
+        "file": "work/lg/prototype/index.html",
+        "context": "a[href]",
+        "url": "https://m3.material.io/styles/layout/overview",
+        "verification": "Not fetched; external dependency reported separately."
+      }
+    ]
+  },
+  "limitations": [
+    "Static inspection cannot establish responsive layout quality, animation behavior, interaction correctness, focus order or rendered image fidelity.",
+    "External websites, Figma prototype targets, CDN dependencies and original prototype API behavior were not fetched or executed.",
+    "Original prototypes and original source assets are reported separately and do not fail the newly built portfolio checks."
+  ]
+}

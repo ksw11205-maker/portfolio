@@ -1,4 +1,11 @@
-# 현재 실행 기준 · 2026-10-27
+# 현재 리디자인 작업 기준 · 2026-11-15
+
+- 사용자가 전면 리디자인 구현을 승인했다. 신규 메인·상세·공통 스타일과 모션은 `redesign/`에서 작업한다. 구현 브랜치는 `redesign/implementation-20261115`다.
+- 기존 `portfolio-shell/dist/`와 보관 브랜치는 원본이다. 새 외형 구현을 이유로 덮어쓰지 않는다. 기존 제품 프로토타입은 실제 결과물로 새 루트에 복사해 연결한다.
+- 현재 사용자는 사이트 실행 보류 상태다. 소스 생성과 정적 검사는 가능하며 개발 서버·브라우저·배포는 실행하지 않는다. 실행 승인이 오면 `redesign/`을 웹 루트로 사용한다.
+- 최신 구현 상태와 검증 한계는 `docs/design/redesign-handoff.md`, 정적 결과는 `docs/design/redesign-static-check-20261115.json`을 따른다.
+
+# 기존 원본 실행 기준 · 2026-10-27
 
 - 최신 메인·상세페이지·실행 UI는 `portfolio-shell/dist/`를 직접 수정한다.
 - 카페콕 React 원본은 `portfolio-shell/prototypes/cafekok/`이며 빌드 결과를 `portfolio-shell/dist/work/cafekok/prototype/`로 복사한다.

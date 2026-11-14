@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="취향과 오늘의 방문 목적을 연결하는 카페 탐색 앱, CAFÉKOK의 UX/UI 디자인 케이스 스터디.">
+  <meta name="theme-color" content="#f3f0e9">
+  <title>CAFÉKOK — 취향에서 오늘의 공간으로 | 김성원</title>
+  <link rel="stylesheet" href="/styles/system.css">
+  <link rel="stylesheet" href="/styles/cases.css">
+  <link rel="stylesheet" href="/styles/products.css">
+  <script type="module" src="/scripts/site.js"></script>
+  <link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/assets/fonts/SUIT-Variable.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body data-page="case" data-project="cafekok">
+  <a class="skip-link" href="#main">본문 바로가기</a>
+  <header class="site-header"><a class="wordmark" href="/" aria-label="김성원 포트폴리오 홈"><img src="/assets/brand/symbol.svg" alt="" width="32" height="32"><span>KSW<span class="wordmark-period">.</span></span></a><nav class="site-nav" aria-label="주요 메뉴"><a href="/#work">WORK</a><a href="/#profile">PROFILE</a><a href="/#contact">CONTACT <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" stroke="currentColor" stroke-width="1.5"/></svg></a></nav></header>
+
+  <main id="main">
+    <section class="case-hero" aria-labelledby="case-title">
+      <img class="case-hero__image" src="/assets/covers/cafekok.svg" width="2400" height="1350" alt="따뜻한 카페 외관과 실제 CAFÉKOK 홈 화면을 담은 휴대폰 목업" fetchpriority="high" style="view-transition-name:cover-cafekok">
+      <div class="case-hero-copy">
+        <p class="case-type">03 / MOBILE APP · CAFÉ DISCOVERY</p>
+        <h1 class="case-title" id="case-title">CAFÉKOK<span class="hero-period">.</span></h1>
+        <p class="case-hero-description">내 취향과 오늘의 목적이<br>만나는 카페를 찾다.</p>
+        <dl class="case-meta">
+          <div><dt>ROLE</dt><dd>기획 · UX/UI 디자인</dd></div>
+          <div><dt>PERIOD</dt><dd>2026.07—10</dd></div>
+          <div><dt>OUTPUT</dt><dd>모바일 앱 프로토타입</dd></div>
+        </dl>
+        <a class="prototype-link" data-prototype-cover href="/work/cafekok/prototype/" target="_blank" rel="noopener noreferrer">앱 프로토타입 <span aria-hidden="true">↗</span><span class="sr-only"> — 새 탭</span></a>
+      </div>
+    </section>
+
+    <nav class="case-nav" aria-label="CAFÉKOK 목차">
+      <a href="#premise">출발점</a><a href="#taste">취향</a><a href="#purpose">방문 목적</a><a href="#explore">탐색과 선택</a><a href="#return">저장과 재방문</a><a href="#reflection">회고</a>
+    </nav>
+
+    <div class="product-story">
+      <section class="case-section product-opening" id="premise" aria-labelledby="premise-title">
+        <p class="section-kicker">01 / DESIGN PREMISE</p>
+        <h2 class="case-heading" id="premise-title">좋은 카페보다,<br><span class="cafe-serif">지금 나에게</span> 맞는 카페.</h2>
+        <div class="product-opening-copy">
+          <p class="case-lead">같은 사람도 작업할 때와 친구를 만날 때 원하는 공간이 달라집니다. CAFÉKOK은 오래 유지되는 취향과 그날의 목적을 나누어, 카페를 고를 기준부터 정리했습니다.</p>
+          <p>사진을 보고 마음에 드는 곳을 찾은 뒤 좌석·메뉴·거리까지 다시 확인해야 한다는 문제 가설에서 시작했습니다. 많은 후보를 보여주는 것보다, 무엇을 기준으로 비교할지 알 수 있는 흐름을 만드는 데 집중했습니다.</p>
+          <p class="product-note">개인 기획 프로젝트입니다. 아래 문제와 설계 방향은 가설이며, 사용자 조사나 추천 효과를 검증한 결과는 아닙니다.</p>
+        </div>
+        <div class="metric-strip" aria-label="서비스 설계의 구성">
+          <div><strong>6</strong><span>취향을 구성하는 기준</span></div>
+          <div><strong>4</strong><span>오늘의 방문 목적</span></div>
+          <div><strong>1</strong><span>발견에서 저장까지의 흐름</span></div>
+        </div>
+        <div class="cafe-equation" aria-label="평소의 취향과 오늘의 목적을 함께 반영하는 설계">
+          <div><span class="equation-label">STAYS WITH ME</span><strong>평소의 취향</strong><p>분위기 · 공간 · 좌석 · 메뉴 · 가격 · 이동 반경</p></div>
+          <span class="equation-sign" aria-hidden="true">×</span>
+          <div><span class="equation-label">CHANGES TODAY</span><strong>오늘의 목적</strong><p>공부·작업 · 데이트 · 친구와 · 드라이브</p></div>
+          <span class="equation-sign" aria-hidden="true">=</span>
+          <div class="equation-result"><span class="equation-label">A PLACE TO CHOOSE</span><strong>선택할 수 있는 이유</strong><p>나의 기준으로 후보를 읽고 비교하는 경험</p></div>
+        </div>
+      </section>
+
+      <section class="case-section cafe-taste" id="taste" aria-labelledby="taste-title">
+        <div class="product-section-intro">
+          <p class="section-kicker">02 / KNOW MY TASTE</p>
+          <h2 class="case-heading" id="taste-title">취향을 묻고,<br>다시 고칠 수 있게.</h2>
+          <p class="case-lead">여섯 기준을 한 화면에 쏟아놓는 대신, 한 번에 하나씩 답하도록 나눴습니다. 입력한 취향은 결과 화면에서 끝나지 않고 ‘내 취향’에 남습니다.</p>
+        </div>
+        <div class="cafe-taste-layout">
+          <div class="product-annotation">
+            <div class="decision"><span class="decision-number">01</span><h3>질문의 양을 먼저 알립니다.</h3><p>6단계 진행 표시로 현재 위치를 보여줍니다. 질문과 선택지에 집중할 수 있도록 화면의 행동을 이전·다음으로 정리했습니다.</p></div>
+            <div class="decision"><span class="decision-number">02</span><h3>한 번의 답으로 고정하지 않습니다.</h3><p>‘내 취향’에서 선택한 내용을 확인하고 항목별로 바꿀 수 있습니다. 변화하는 취향을 다시 긴 입력 과정으로 돌려보내지 않도록 했습니다.</p></div>
+            <ul class="taste-axes" aria-label="취향의 여섯 기준"><li>분위기</li><li>공간</li><li>좌석</li><li>메뉴</li><li>가격</li><li>이동 반경</li></ul>
+          </div>
+          <div class="phone-pair cafe-pair--offset">
+            <figure class="phone-figure"><div class="phone-stage"><img class="screen" src="/work/cafekok/assets/latest/quiz.png" width="780" height="1688" alt="첫 번째 취향 질문. 어떤 분위기에 마음이 가는지 세 가지 답변 중 선택하며 상단에 6단계 진행 표시가 있다." loading="lazy" decoding="async"></div><figcaption class="screen-caption"><span>01 / TASTE QUIZ</span>한 화면, 하나의 질문</figcaption></figure>
+            <figure class="phone-figure"><div class="phone-stage"><img class="screen" src="/work/cafekok/assets/latest/profile.png" width="780" height="1688" alt="나의 카페 취향. 선택한 분위기, 공간, 좌석, 메뉴, 가격, 이동 반경을 확인하고 각각 수정할 수 있다." loading="lazy" decoding="async"></div><figcaption class="screen-caption"><span>02 / MY TASTE</span>입력한 기준을 확인하고 수정</figcaption></figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section cafe-purpose" id="purpose" aria-labelledby="purpose-title">
+        <div class="cafe-purpose-photo" aria-hidden="true"><img src="/work/cafekok/assets/cafe-cover.jpg" width="1600" height="1067" alt="" loading="lazy" decoding="async"></div>
+        <div class="cafe-purpose-content">
+          <p class="section-kicker">03 / A PURPOSE FOR TODAY</p>
+          <h2 class="case-heading" id="purpose-title">오늘은,<br>어떤 카페가 끌리나요?</h2>
+          <p class="case-lead">취향은 기본값으로 두고, 방문 목적은 홈에서 바로 고릅니다. 매번 취향을 다시 설정하는 대신 오늘의 상황만 더할 수 있도록 했습니다.</p>
+          <div class="purpose-list" aria-label="방문 목적"><span>공부·작업</span><span>데이트</span><span>친구와</span><span>드라이브</span></div>
+          <div class="decision"><h3>탐색의 시작점을 가까이.</h3><p>방문 목적을 홈 상단에 두어 구체적인 검색어가 없어도 탐색을 시작할 수 있습니다. 목적을 정한 뒤에는 같은 기준을 탐색 화면에서 이어갑니다.</p></div>
+        </div>
+        <figure class="phone-figure purpose-phone"><div class="phone-stage phone-crop phone-crop--home"><img class="screen" src="/work/cafekok/assets/latest/home.png" width="780" height="1688" alt="CAFÉKOK 홈 상단. 카페 사진과 오늘의 방문 목적을 고르는 네 가지 항목이 보인다." loading="lazy" decoding="async"></div><figcaption class="screen-caption"><span>HOME / UPPER SECTION</span>실제 홈 화면의 목적 선택 구간 발췌</figcaption></figure>
+      </section>
+
+      <section class="case-section" id="explore" aria-labelledby="explore-title">
+        <div class="product-section-intro">
+          <p class="section-kicker">04 / FIND A REASON TO CHOOSE</p>
+          <h2 class="case-heading" id="explore-title">목록에서는 좁히고,<br>상세에서는 이유를 확인합니다.</h2>
+          <p class="case-lead">검색어·방문 목적·필터를 함께 보며 후보를 좁힙니다. 마음에 드는 카페를 누르면 선택한 취향과 연결된 설명을 먼저 만나도록 했습니다.</p>
+        </div>
+        <div class="cafe-explore-layout">
+          <figure class="phone-figure"><div class="phone-stage"><img class="screen" src="/work/cafekok/assets/latest/explore.png" width="780" height="1688" alt="소일을 검색한 탐색 화면. 방문 목적, 적용된 조건, 결과 수, 지도와 정렬을 목록 가까이 배치했다." loading="lazy" decoding="async"></div><figcaption class="screen-caption"><span>EXPLORE</span>검색과 조건을 같은 맥락에서</figcaption></figure>
+          <div class="cafe-explore-notes">
+            <div class="decision"><span class="decision-number">01 / REFINE</span><h3>적용한 조건을 숨기지 않습니다.</h3><p>선택한 조건을 검색창 아래에 남겨 결과가 왜 달라졌는지 알 수 있게 했습니다. 개별 조건 해제와 정렬은 서로 다른 행동으로 구분했습니다.</p></div>
+            <div class="decision"><span class="decision-number">02 / UNDERSTAND</span><h3>점수 다음에는 설명이 필요합니다.</h3><p>상세의 ‘이 카페를 고른 이유’에서 분위기·공간·좌석·메뉴를 확인합니다. 숫자만으로 판단을 맡기기보다, 자신의 취향과 어떤 점이 맞는지 읽을 수 있게 했습니다.</p></div>
+            <div class="decision"><span class="decision-number">03 / CONTINUE</span><h3>다음 행동을 명확히 나눕니다.</h3><p>위치를 살펴보는 지도와 나중을 위한 저장을 하단에 둡니다. 장소에 대한 이해에서 다음 행동으로 이어지는 구조입니다.</p></div>
+            <p class="product-note">화면의 일치율과 카페 정보는 프로토타입 데모 표현입니다. 검증된 추천 정확도나 실시간 장소 정보를 뜻하지 않습니다.</p>
+          </div>
+          <figure class="phone-figure"><div class="phone-stage"><img class="screen" src="/work/cafekok/assets/latest/detail.png" width="780" height="1688" alt="소일 아틀리에 상세. 공간 사진 아래에 이 카페를 고른 이유와 취향 태그가 있고 하단에 지도와 저장 행동이 있다." loading="lazy" decoding="async"></div><figcaption class="screen-caption"><span>CAFÉ DETAIL</span>어울리는 이유를 읽고 다음 행동으로</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="case-section cafe-return" id="return" aria-labelledby="return-title">
+        <div class="product-section-intro">
+          <p class="section-kicker">05 / MAKE ROOM FOR THE NEXT VISIT</p>
+          <h2 class="case-heading" id="return-title">발견은 한 번.<br>선택은 나중에도.</h2>
+          <p class="case-lead">마음에 든 공간을 지금 방문하지 않아도 괜찮습니다. 저장은 다음 방문을 준비하는 목록이 되고, 비어 있는 상태는 새로운 탐색의 시작점이 됩니다.</p>
+        </div>
+        <div class="cafe-return-layout">
+          <div class="phone-pair">
+            <figure class="phone-figure"><div class="phone-stage"><img class="screen" src="/work/cafekok/assets/latest/saved-empty.png" width="780" height="1688" alt="저장한 카페가 없을 때의 화면. 빈 상태 안내와 카페를 찾아보는 다음 행동을 제공한다." loading="lazy" decoding="async"></div><figcaption class="screen-caption"><span>EMPTY STATE</span>없음을 알리고, 다음 행동을 제안</figcaption></figure>
+            <figure class="phone-figure"><div class="phone-stage"><img class="screen" src="/work/cafekok/assets/latest/saved.png" width="780" height="1688" alt="저장한 카페가 있는 목록 화면. 저장한 공간의 사진과 정보를 다시 확인할 수 있다." loading="lazy" decoding="async"></div><figcaption class="screen-caption"><span>SAVED CAFÉS</span>다시 찾아갈 후보를 한곳에</figcaption></figure>
+          </div>
+          <div class="product-annotation"><div class="decision"><h3>비어 있는 화면도 흐름의 일부입니다.</h3><p>단순히 ‘0개’를 보여주는 데서 끝내지 않고, 무엇을 저장할 수 있는지 설명하고 탐색으로 연결합니다.</p></div><div class="decision"><h3>핵심 공간을 항상 같은 자리에.</h3><p>홈·탐색·저장·내 취향의 네 영역을 하단에 유지합니다. 새로운 장소를 보다가도 저장한 후보와 취향 기준으로 돌아갈 수 있습니다.</p></div><p class="product-note">현재 앱 프로토타입은 저장 흐름을 보여주는 데모로, 새로고침하면 목록이 초기화됩니다. 계정 간·방문 간 저장 유지 기능은 구현 범위 밖입니다.</p></div>
+        </div>
+      </section>
+
+      <section class="case-section cafe-system" aria-labelledby="system-title">
+        <div class="product-section-intro">
+          <p class="section-kicker">06 / QUIET FRAME, RICH PLACES</p>
+          <h2 class="case-heading" id="system-title">공간이 주인공이 되는<br>따뜻한 프레임.</h2>
+          <p class="case-lead">카페의 사진은 각자의 색과 분위기를 갖습니다. UI는 에스프레소 브라운과 밝은 중성색으로 정리해, 사진을 살리면서 선택 상태와 행동을 구분했습니다.</p>
+        </div>
+        <div class="cafe-material-board">
+          <div class="cafe-wordmark-board"><img src="/work/cafekok/assets/editorial/logo.png" width="237" height="60" alt="CAFÉKOK 로고" loading="lazy" decoding="async"><p>같은 프레임 안에서,<br>서로 다른 공간의 개성을.</p></div>
+          <div class="palette-board" aria-label="제품 주요 색상"><div class="case-swatch" style="--swatch:#4a372c"><span>Espresso</span><code>#4A372C</code></div><div class="case-swatch" style="--swatch:#f0e9e1"><span>Warm beige</span><code>#F0E9E1</code></div><div class="case-swatch" style="--swatch:#34302c"><span>Charcoal</span><code>#34302C</code></div><div class="case-swatch" style="--swatch:#f5f5f4"><span>Mist</span><code>#F5F5F4</code></div></div>
+        </div>
+        <ol class="product-flow" aria-label="핵심 탐색 흐름"><li><span>01</span><strong>취향 입력</strong><small>나의 기준 만들기</small></li><li><span>02</span><strong>목적 선택</strong><small>오늘의 상황 더하기</small></li><li><span>03</span><strong>후보 탐색</strong><small>조건으로 좁히기</small></li><li><span>04</span><strong>상세 확인</strong><small>선택의 이유 읽기</small></li><li><span>05</span><strong>카페 저장</strong><small>다음 방문으로 이어가기</small></li></ol>
+      </section>
+
+      <section class="case-section product-reflection" id="reflection" aria-labelledby="reflection-title">
+        <p class="section-kicker">07 / REFLECTION & NEXT QUESTIONS</p>
+        <h2 class="case-heading" id="reflection-title">취향을 아는 것에서,<br>선택을 돕는 것으로.</h2>
+        <div class="reflection-grid"><div><h3>이번에 구체화한 것</h3><p>취향과 방문 목적을 분리하고, 입력한 기준이 홈·탐색·상세·저장까지 이어지는 모바일 UX를 설계했습니다. 실제 프로토타입 화면으로 입력, 탐색, 저장 상태를 표현했습니다.</p></div><div><h3>다음에 확인할 것</h3><p>6단계 취향 입력의 부담, 추천 이유에 대한 이해, 조건을 조정해 원하는 카페를 찾고 저장하는 과정을 사용자 과제로 확인할 계획입니다. 추천 로직과 실제 장소 데이터 연동은 별도 검토가 필요합니다.</p></div></div>
+        <div class="data-table-wrap"><table class="data-table"><caption>후속 검증에서 확인할 설계 질문</caption><thead><tr><th scope="col">설계한 장치</th><th scope="col">확인할 질문</th></tr></thead><tbody><tr><th scope="row">한 화면, 하나의 취향 질문</th><td>질문을 이해하고 부담 없이 끝까지 답할 수 있는가?</td></tr><tr><th scope="row">취향과 오늘의 목적 분리</th><td>두 기준의 차이와 변경 방법을 자연스럽게 이해하는가?</td></tr><tr><th scope="row">조건과 추천 이유의 연결</th><td>어떤 기준으로 제안된 카페인지 설명할 수 있는가?</td></tr><tr><th scope="row">빈 상태에서 탐색으로</th><td>저장할 카페가 없는 상황에서도 다음 행동을 찾는가?</td></tr></tbody></table></div>
+      </section>
+    </div>
+
+    <section class="next-projects" aria-label="다른 프로젝트">
+      <div class="next-projects-heading"><p class="section-kicker">CONTINUE EXPLORING</p><a href="/#work">모든 프로젝트 <span aria-hidden="true">↗</span></a></div>
+      <div class="next-project-grid"><a class="next-project" href="/work/ivi/"><img src="/assets/projects/ivi-cover-clean-1920.jpg" width="1920" height="1080" alt="IVI 프로젝트 표지" loading="lazy" decoding="async"><div><span class="next-project-direction">← PREVIOUS PROJECT</span><h2>IVI</h2><p>운전 중 필요한 정보의 우선순위</p></div></a><a class="next-project" href="/work/offer/case-study.html"><img src="/assets/covers/offer.svg" width="2400" height="1350" alt="OFFER 반응형 웹 프로젝트 표지" loading="lazy" decoding="async"><div><span class="next-project-direction">NEXT PROJECT →</span><h2>OFFER</h2><p>다른 브랜드, 같은 비교 기준</p></div></a></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="footer-name" href="/">김성원 <span>UI/UX Designer</span></a><a href="mailto:ksw11205@gmail.com">ksw11205@gmail.com</a><p>© 2026 KIM SEONGWON</p></footer>
+  <a class="prototype-float" data-prototype-float href="/work/cafekok/prototype/" target="_blank" rel="noopener noreferrer" hidden>앱 프로토타입 <span aria-hidden="true">↗</span><span class="sr-only"> — 새 탭</span></a>
+</body>
+</html>

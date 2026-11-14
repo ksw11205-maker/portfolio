@@ -1,0 +1,8 @@
+{
+  "date": "2026-11-15",
+  "profile": "docs/projects/profile-content-20261115.json",
+  "questions": "docs/design/qa-content-20261115.json",
+  "projectFacts": "docs/projects/",
+  "generatedRasterStudiesUsedAsUiEvidence": false,
+  "implementation": "Isolated static redesign; original portfolio-shell/dist retained"
+}

@@ -3,7 +3,9 @@
   "private": true,
   "scripts": {
     "dev": "node portfolio-shell/server.cjs",
-    "start": "node portfolio-shell/server.cjs"
+    "start": "node portfolio-shell/server.cjs",
+    "dev:redesign": "node scripts/serve-redesign.cjs",
+    "check:redesign": "node scripts/verify-cover-assets.cjs && node scripts/validate-redesign.cjs"
   },
   "engines": { "node": ">=20" }
 }
