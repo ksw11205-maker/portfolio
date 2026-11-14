@@ -1,4 +1,5 @@
-// Transform-only light fields; no gesture capture or continuous JS render loop.
+// Layered aurora fields remain inside the original wave's clipped background.
+// Only transforms animate; no gesture capture or continuous JavaScript loop.
 (() => {
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   function attach() {
@@ -9,23 +10,24 @@
     const layer = document.createElement('div');
     layer.className = 'contact-atmosphere';
     layer.setAttribute('aria-hidden', 'true');
-    for (const name of ['blue', 'pearl', 'cyan']) {
+    for (const name of ['blue', 'lilac', 'apricot', 'ribbon', 'pearl']) {
       const field = document.createElement('div');
       field.className = 'contact-atmosphere__field contact-atmosphere__field--' + name;
       layer.append(field);
     }
     background.append(layer);
-    let visible = false;
+    let visible = false, navigating = false;
     const sync = () => {
-      contact.dataset.atmosphereActive = String(visible && !document.hidden && !reduced.matches && !document.body.classList.contains('motion-paused'));
+      contact.dataset.atmosphereActive = String(visible && !navigating && !document.hidden && !reduced.matches && !navigator.connection?.saveData && !document.body.classList.contains('motion-paused'));
     };
     const observer = new IntersectionObserver(([entry]) => { visible = entry.isIntersecting; sync(); }, {threshold:0});
     observer.observe(contact);
     new MutationObserver(sync).observe(document.body, {attributes:true, attributeFilter:['class']});
     reduced.addEventListener('change', sync);
     document.addEventListener('visibilitychange', sync);
+    addEventListener('portfolio:navigating', () => { navigating = true; sync(); });
     addEventListener('pagehide', () => { visible = false; sync(); });
-    addEventListener('pageshow', () => { const box = contact.getBoundingClientRect(); visible = box.bottom > 0 && box.top < innerHeight; sync(); });
+    addEventListener('pageshow', () => { navigating = false; const box = contact.getBoundingClientRect(); visible = box.bottom > 0 && box.top < innerHeight; sync(); });
     sync();
     return true;
   }

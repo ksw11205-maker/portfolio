@@ -1,17 +1,27 @@
-/* Moving light fields continue the existing blue/pearl Q&A → CONTACT wave. */
-#contact .contact-atmosphere{position:absolute;inset:0;overflow:hidden;pointer-events:none;isolation:isolate;contain:paint}
-#contact .contact-atmosphere__field{position:absolute;pointer-events:none;border-radius:50%;animation-play-state:paused;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-direction:alternate;transform-origin:center;will-change:auto}
-#contact .contact-atmosphere__field--blue{left:8%;top:22%;width:78%;height:112%;background:radial-gradient(ellipse at center,#4299eb55 0%,#68b8ed30 40%,#68b8ed00 72%);animation-name:contact-blue-drift;animation-duration:15s;transform:translate3d(-18%,5%,0) rotate(-16deg) scale(1.04)}
-#contact .contact-atmosphere__field--pearl{left:35%;top:-44%;width:90%;height:112%;background:radial-gradient(ellipse at center,#fffef5b8 0%,#e8f7f66b 36%,#fff0 70%);animation-name:contact-pearl-drift;animation-duration:19s;animation-delay:-8s;transform:translate3d(8%,8%,0) rotate(12deg)}
-#contact .contact-atmosphere__field--cyan{left:-30%;top:-35%;width:130%;height:160%;background:radial-gradient(ellipse 56% 40% at center,#b5e8df00 47%,#7bcac83d 58%,#a4dce22e 64%,#fff0 75%);animation-name:contact-cyan-current;animation-duration:23s;animation-delay:-11s;transform:translate3d(-8%,-3%,0) rotate(-25deg)}
+/* A luminous moving colour mesh, inside the existing Q&A → CONTACT wave. */
+#contact .contact-atmosphere{position:absolute;inset:0;overflow:hidden;pointer-events:none;isolation:isolate;contain:paint;background:linear-gradient(125deg,#e4eff6 0%,#ecedf5 44%,#f6eee6 100%)}
+#contact .contact-atmosphere__field{position:absolute;pointer-events:none;border-radius:50%;animation-play-state:paused;animation-timing-function:cubic-bezier(.45,0,.55,1);animation-iteration-count:infinite;transform-origin:center;will-change:auto;backface-visibility:hidden}
+/* Broad pastel centres retain a light canvas behind dark copy. */
+#contact .contact-atmosphere__field--blue{left:-30%;top:4%;width:112%;height:138%;background:radial-gradient(ellipse at 48% 50%,#83b4f8ba 0%,#9fcbf690 23%,#aacff34f 44%,#aacff300 69%);animation:contact-cobalt-current 18s cubic-bezier(.45,0,.55,1) -3s infinite paused;transform:translate3d(-10%,9%,0) rotate(-16deg) scale(1.02)}
+#contact .contact-atmosphere__field--lilac{left:26%;top:-48%;width:110%;height:145%;background:radial-gradient(ellipse at center,#c3a1e8b3 0%,#c8b0ed82 25%,#cebce944 43%,#d3c5ec00 70%);animation:contact-lilac-current 22s cubic-bezier(.45,0,.55,1) -9s infinite paused;transform:translate3d(8%,-4%,0) rotate(18deg) scale(1.04)}
+#contact .contact-atmosphere__field--apricot{left:42%;top:32%;width:100%;height:125%;background:radial-gradient(ellipse at center,#f0b18ca1 0%,#f6c5a97a 28%,#f3d7c73d 48%,#f6decb00 70%);animation:contact-apricot-current 20s cubic-bezier(.45,0,.55,1) -5s infinite paused;transform:translate3d(10%,8%,0) rotate(-14deg)}
+/* A soft curved band makes the direction of flow legible, without sharp edges. */
+#contact .contact-atmosphere__field--ribbon{left:-45%;top:-40%;width:170%;height:160%;background:radial-gradient(ellipse 57% 37% at center,#b1ddf100 36%,#d7eff76b 47%,#8ac4e875 53%,#aec7f346 60%,#b9c5ee00 70%);animation:contact-ribbon-current 25s cubic-bezier(.45,0,.55,1) -13s infinite paused;transform:translate3d(-8%,3%,0) rotate(-28deg)}
+#contact .contact-atmosphere__field--pearl{left:-9%;top:-47%;width:98%;height:132%;background:radial-gradient(ellipse at center,#fffdf4c9 0%,#fffff591 30%,#fffef53d 50%,#fffef500 72%);animation:contact-pearl-current 16s cubic-bezier(.45,0,.55,1) -6s infinite paused;transform:translate3d(-8%,-6%,0) rotate(-8deg)}
+/* The veil protects heading and card contrast while retaining flowing colour. */
+#contact .contact-atmosphere::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,#f5f8fa20 0%,#ffffff0a 56%,#f9f4ee14 100%)}
 #contact[data-atmosphere-active="true"] .contact-atmosphere__field{animation-play-state:running;will-change:transform}
-@keyframes contact-blue-drift{to{transform:translate3d(22%,-14%,0) rotate(16deg) scale(1.18)}}
-@keyframes contact-pearl-drift{to{transform:translate3d(-25%,20%,0) rotate(-17deg) scale(1.1)}}
-@keyframes contact-cyan-current{to{transform:translate3d(16%,10%,0) rotate(22deg) scale(1.12)}}
+@keyframes contact-cobalt-current{0%,100%{transform:translate3d(-10%,9%,0) rotate(-16deg) scale(1.02)}35%{transform:translate3d(27%,-13%,0) rotate(13deg) scale(1.16)}70%{transform:translate3d(5%,-24%,0) rotate(31deg) scale(.96)}}
+@keyframes contact-lilac-current{0%,100%{transform:translate3d(8%,-4%,0) rotate(18deg) scale(1.04)}40%{transform:translate3d(-36%,24%,0) rotate(-19deg) scale(1.12)}72%{transform:translate3d(-14%,36%,0) rotate(-34deg) scale(.94)}}
+@keyframes contact-apricot-current{0%,100%{transform:translate3d(10%,8%,0) rotate(-14deg)}40%{transform:translate3d(-28%,-32%,0) rotate(12deg) scale(1.18)}75%{transform:translate3d(-53%,-9%,0) rotate(27deg) scale(.96)}}
+@keyframes contact-ribbon-current{0%,100%{transform:translate3d(-8%,3%,0) rotate(-28deg)}50%{transform:translate3d(17%,17%,0) rotate(28deg) scale(1.14)}}
+@keyframes contact-pearl-current{0%,100%{transform:translate3d(-8%,-6%,0) rotate(-8deg)}45%{transform:translate3d(42%,29%,0) rotate(22deg) scale(1.05)}76%{transform:translate3d(14%,47%,0) rotate(-12deg) scale(1.14)}}
 @media(max-width:600px){
- #contact .contact-atmosphere__field--blue{width:145%;left:-30%;animation-duration:19s}
- #contact .contact-atmosphere__field--pearl{width:170%;left:-15%}
- #contact .contact-atmosphere__field--cyan{width:180%;left:-45%;opacity:.7}
+ #contact .contact-atmosphere__field--blue{left:-58%;width:175%;height:110%}
+ #contact .contact-atmosphere__field--lilac{left:5%;width:170%;height:120%;top:-28%}
+ #contact .contact-atmosphere__field--apricot{left:0%;width:165%;height:105%;top:40%}
+ #contact .contact-atmosphere__field--ribbon{left:-75%;width:235%;height:140%;opacity:.8}
+ #contact .contact-atmosphere__field--pearl{left:-35%;width:180%;height:115%}
 }
 .motion-paused #contact .contact-atmosphere__field{animation-play-state:paused!important;will-change:auto}
 @media(prefers-reduced-motion:reduce){#contact .contact-atmosphere__field{animation:none!important;will-change:auto!important}}

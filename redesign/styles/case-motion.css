@@ -1,0 +1,27 @@
+/* Content stays visible by default. Only the case-motion.js enhancer animates it. */
+body[data-page="case"] .time-track > span { transform-origin:left center; }
+body[data-page="case"].case-motion-enhanced :is(.research-ui-region,.ui-focus) {
+  transition:box-shadow 260ms ease,background-color 260ms ease;
+}
+body[data-page="case"].case-motion-enhanced :is(.research-ui-region,.ui-focus).is-note-focused {
+  background-color:color-mix(in srgb,var(--research-accent,var(--product-accent,var(--case-accent))) 7%,transparent);
+  box-shadow:0 0 0 2px color-mix(in srgb,var(--research-accent,var(--product-accent,var(--case-accent))) 65%,transparent),0 0 24px color-mix(in srgb,var(--research-accent,var(--product-accent,var(--case-accent))) 18%,transparent);
+}
+body[data-page="case"].case-motion-enhanced .next-project::before {
+  content:"";position:absolute;inset:auto 0 0;height:3px;z-index:2;pointer-events:none;
+  background:var(--case-accent);transform:scaleX(0);transform-origin:left center;
+  transition:transform 600ms cubic-bezier(.22,1,.36,1);
+}
+body[data-page="case"].case-motion-enhanced .next-project:focus-visible::before { transform:scaleX(1); }
+@media(hover:hover) and (pointer:fine) {
+  body[data-page="case"].case-motion-enhanced .next-project:hover::before { transform:scaleX(1); }
+  body[data-page="case"].case-motion-enhanced .next-project > div > span:last-child:not(:first-child) {
+    transition:translate 350ms cubic-bezier(.22,1,.36,1);
+  }
+  body[data-page="case"].case-motion-enhanced .next-project:hover > div > span:last-child:not(:first-child) { translate:4px -4px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  body[data-page="case"] :is(.research-ui-region,.ui-focus,.next-project,.next-project img) { transition:none!important; }
+  body[data-page="case"] .next-project::before { display:none; }
+  body[data-page="case"] .next-project:hover img { transform:none; }
+}

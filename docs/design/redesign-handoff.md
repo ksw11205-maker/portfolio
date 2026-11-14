@@ -1,6 +1,27 @@
 # 리디자인 구현 인계
 
-## 최신 사용자 수정 · 2026-11-15
+## 최신 사용자 수정 · 표지와 모션 · 2026-11-15
+
+작업 루트는 `redesign/`, 로컬 주소는 `http://localhost:4175/`, 브랜치는 `redesign/implementation-20261115`다. 원본 `portfolio-shell/dist/`는 수정하지 않았다.
+
+- LG 표지는 플루트 벽·마젠타 조명·바이올렛 아치·층을 나눈 받침을 추가했다. OFFER는 창빛·석재 테이블·아카이브 벽 선반으로 깊이를 만들었다. 카페콕은 기존 사진을 유지하고 폰 폭을 약 22% 줄여 기울기를 0도로 맞췄다. 실제 홈의 네 목적 버튼까지 보인다. IVI 콘셉트 표지는 유지했다.
+- LS Graphics와 Mockup Maison은 장면 구성 참고 자료로 사용했다. 유료 PSD를 사용하지 않았으며 배경은 직접 작성한 SVG다. Devices.css MIT 프레임과 원본 프로젝트 UI를 유지했다. 출처·증명 이미지는 `references/mockup-scene-20261115/`에 있다.
+- 네 상세 표지는 메인의 이미지·제목·소개·역할·기간·도구를 그대로 사용한다. 전체 이미지 아래에 메타데이터를 배치하고 본문과 같은 SUIT 글꼴로 통일했다. `scripts/sync-case-covers.cjs`로 동기화한다.
+- `case-motion.js/css`는 표지 문구·섹션 제목·UI 번호 주석·연구 차트·회고의 짧은 진입 모션과 주석 호버 강조를 담당한다. 본문을 상시 숨기지 않으며 움직임 축소와 모션 정지를 지원한다.
+- Contact는 기존 파도 안에서 다섯 색상 레이어가 서로 다른 경로로 흐른다. 화면 밖·숨긴 탭·모션 정지·움직임 축소 상태에서는 정지한다. WHO I AM의 문장·교육기관·과정·수상 날짜는 의미 단위로 줄을 나눴다.
+- 모바일의 다음 프로젝트 카드와 IVI 표가 페이지 전체를 가로로 밀던 문제를 수정했다. 표와 넓은 UI만 해당 영역 안에서 좌우 스크롤된다.
+
+### 검증
+
+격리된 headless Chromium으로 로컬 포트폴리오 5개 페이지를 데스크톱 1440px·모바일 390px에서 렌더링했다. 실제 사용자 브라우저·프로필은 사용하지 않았다. 프로필 줄바꿈, 표지, 본문 도입, Contact의 화면을 확인했다. 상세와 Contact 모션은 일반 모션과 움직임 축소 상태로 기능 검사했다. 증거와 재현 명령은 `qa-visual-20261115/{report,case-motion,contact-motion}.json`, `scripts/qa-{visual-local,case-motion,contact-motion}.cjs`에 있다. 원본 제품의 전체 사용자 흐름, 실제 모바일 기기의 성능, 배포는 이번 검수 범위가 아니다.
+
+정적 검사는 `npm run check:redesign`으로 실행한다. 5개 포트폴리오 페이지·9개 원본 데모 페이지의 파일 경로, 앵커, CTA, 자바스크립트 구문과 목업의 원본 이미지 해시·픽셀·크기를 검사한다. 목업을 다시 생성하면 `node docs/design/references/mockup-scene-20261115/check-covers.cjs`로 장면 검증 기록을 갱신한다.
+
+`scripts/build-redesign-home.cjs`는 기존 쉘 복원과 상세 표지 동기화를 함께 실행한다. 새 Contact 파일은 복원 스크립트가 덮어쓰지 않는다. 네 상세 HTML의 본문과 프로젝트별 CSS는 직접 관리한다.
+
+아래는 이전 단계의 기록이다. 실행 여부·스타일·검증 범위는 위 최신 상태를 따른다.
+
+## 이전 단계 · 쉘 복원
 
 로컬 실행 승인 후 사용자 피드백을 반영했다. 기존 `portfolio-shell/dist`의 쉘과 커서를 `redesign/`에 복원하고 최신 프로필·SBS 교육 경험·Q&A·Contact 문구를 유지했다. `scripts/restore-shell.cjs`가 복원 빌드의 원본이며 `build-redesign-home.cjs`는 이 스크립트로 위임한다. 기존 원본은 변경하지 않는다.
 

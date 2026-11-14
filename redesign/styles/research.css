@@ -185,7 +185,8 @@ body[data-project="ivi"] {
 .time-axis { display: flex; justify-content: space-between; margin-top: .8rem; color: var(--research-muted); font-size: .65rem; }
 .time-comparison .research-note { min-height: 3.5em; margin-top: 1.5rem; font-size: .75rem; }
 .result-table-wrap { margin-top: 3.5rem; }
-.table-scroll { max-width: 100%; overflow-x: auto; overscroll-behavior-inline: contain; }
+.table-scroll { width:100%; min-width:0; max-width: 100%; overflow-x: auto; overscroll-behavior-inline: contain; contain:inline-size paint; }
+.study-archive:not([open]) > .archive-content { display:none; }
 [data-project="ivi"] .data-table { width: 100%; min-width: 560px; border-collapse: collapse; text-align: right; font-size: .85rem; font-variant-numeric: tabular-nums; }
 [data-project="ivi"] .data-table caption { padding: 0 0 1.3rem; color: var(--research-ink); text-align: left; font-size: 1rem; font-weight: 500; }
 [data-project="ivi"] .data-table caption span { margin-left: 1.2rem; color: var(--research-muted); font-size: .72rem; font-weight: 400; }

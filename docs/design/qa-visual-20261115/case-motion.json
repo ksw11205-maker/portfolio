@@ -1,0 +1,175 @@
+{
+  "checkedAt": "2026-11-14T17:42:34.306Z",
+  "origin": "http://localhost:4175",
+  "viewport": {
+    "width": 1440,
+    "height": 700
+  },
+  "pages": [
+    {
+      "project": "lg",
+      "heroBeforeEntry": {
+        "top": 910,
+        "viewport": 700,
+        "animations": 0
+      },
+      "heroActive": 5,
+      "heroFinished": {
+        "active": 0,
+        "opacity": "1"
+      },
+      "annotation": {
+        "entryObserved": true,
+        "regionTransform": "none",
+        "pointerHighlight": true,
+        "pointerLeaveClears": true
+      },
+      "heroRunsOnce": true,
+      "reducedMotion": {
+        "enhanced": false,
+        "animateCalls": 0,
+        "targetAnimations": 0,
+        "titleOpacity": "1"
+      }
+    },
+    {
+      "project": "ivi",
+      "heroBeforeEntry": {
+        "top": 910.75,
+        "viewport": 700,
+        "animations": 0
+      },
+      "heroActive": 5,
+      "heroFinished": {
+        "active": 0,
+        "opacity": "1"
+      },
+      "annotation": {
+        "entryObserved": true,
+        "regionTransform": "none",
+        "pointerHighlight": true,
+        "pointerLeaveClears": true
+      },
+      "research": {
+        "activeOnEntry": 4,
+        "menu": {
+          "value": "19.49",
+          "pressed": "true",
+          "values": [
+            "22.15초",
+            "24.74초",
+            "28.71초",
+            "19.49초"
+          ],
+          "widths": [
+            73.83333333333333,
+            82.46666666666667,
+            95.7,
+            64.96666666666667
+          ],
+          "activeTransforms": 0,
+          "announcement": "메뉴 탐색. 측면 메뉴형 평균 19.49초로 최단. 상단형 28.71초 대비 평균 9.22초 짧음. 측면형 ↔ 상단형: Tukey HSD 사후검정에서 차이 확인."
+        },
+        "phoneValue": "13.87"
+      },
+      "heroRunsOnce": true,
+      "reducedMotion": {
+        "enhanced": false,
+        "animateCalls": 0,
+        "targetAnimations": 0,
+        "titleOpacity": "1",
+        "researchMenuStillWorks": true
+      }
+    },
+    {
+      "project": "cafekok",
+      "heroBeforeEntry": {
+        "top": 910,
+        "viewport": 700,
+        "animations": 0
+      },
+      "heroActive": 5,
+      "heroFinished": {
+        "active": 0,
+        "opacity": "1"
+      },
+      "annotation": {
+        "entryObserved": true,
+        "regionTransform": "none",
+        "pointerHighlight": true,
+        "pointerLeaveClears": true
+      },
+      "heroRunsOnce": true,
+      "reducedMotion": {
+        "enhanced": false,
+        "animateCalls": 0,
+        "targetAnimations": 0,
+        "titleOpacity": "1"
+      }
+    },
+    {
+      "project": "offer",
+      "heroBeforeEntry": {
+        "top": 910,
+        "viewport": 700,
+        "animations": 0
+      },
+      "heroActive": 5,
+      "heroFinished": {
+        "active": 0,
+        "opacity": "1"
+      },
+      "annotation": {
+        "entryObserved": true,
+        "regionTransform": "none",
+        "pointerHighlight": true,
+        "pointerLeaveClears": true
+      },
+      "heroRunsOnce": true,
+      "reducedMotion": {
+        "enhanced": false,
+        "animateCalls": 0,
+        "targetAnimations": 0,
+        "titleOpacity": "1"
+      }
+    }
+  ],
+  "errors": [],
+  "passed": true,
+  "mobileIVI": {
+    "checkedAt": "2026-11-14T17:43:27.737Z",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "closed": {
+      "viewport": 390,
+      "width": 390
+    },
+    "open": {
+      "viewport": 390,
+      "width": 390
+    },
+    "tableMetrics": {
+      "width": 342,
+      "content": 520,
+      "scrollLeft": 178,
+      "height": 306
+    },
+    "archiveTables": [
+      {
+        "width": 342,
+        "content": 520,
+        "scrollLeft": 178,
+        "height": 480
+      },
+      {
+        "width": 342,
+        "content": 520,
+        "scrollLeft": 178,
+        "height": 364
+      }
+    ],
+    "passed": true
+  }
+}

@@ -1,6 +1,6 @@
 {
   "created": "2026-11-15",
-  "revision": "Project-specific studio refresh",
+  "revision": "Architectural studio scenes and upright Cafe home",
   "generator": "scripts/create-cover-assets.cjs",
   "outputType": "Self-contained SVG, original UI bytes, Devices.css-derived vector hardware and native studio lighting.",
   "sources": [
@@ -94,22 +94,22 @@
       "path": "redesign/assets/covers/lg.svg",
       "width": 2400,
       "height": 1350,
-      "bytes": 1146253,
-      "sha256": "f3a61224f05a363aa65512e32ad7989712637657992a6191184ce96e8c279698"
+      "bytes": 1148740,
+      "sha256": "0eb31801f46e307f12a67f1a5fe8004e48358980acfaaa0511568812be378e82"
     },
     {
       "path": "redesign/assets/covers/cafekok.svg",
       "width": 2400,
       "height": 1350,
-      "bytes": 1897023,
-      "sha256": "9ea0053fc20f8e59ba34193aa37e84d691a55759d06056fb8ba0fd1e2fbefacb"
+      "bytes": 1897076,
+      "sha256": "7154b9c8728e4b24c0d07d294738cff315c2175197f813424b5296505e09bd29"
     },
     {
       "path": "redesign/assets/covers/offer.svg",
       "width": 2400,
       "height": 1350,
-      "bytes": 275293,
-      "sha256": "6e5a22c718a98528c66e25191788984e20f2333d4a12832793f2ce883dcd84c3"
+      "bytes": 278277,
+      "sha256": "a5139d3995dca490ed9a66e7121195ec9cafe26eec377822ff3187745ceda756"
     }
   ],
   "thirdParty": {
@@ -127,7 +127,7 @@
         "work/lg/assets/02-analysis.webp",
         "work/lg/assets/tv-sports.webp"
       ],
-      "treatment": "TV behind laptop; actual full-width source UI top-cropped in viewport. Graphite space, violet rim lighting, magenta floor reflection. Laptop uses Devices.css geometry.",
+      "treatment": "TV behind laptop; actual full-width source UI top-cropped in viewport. Fluted charcoal wall, violet arched recess, luminous magenta slit, layered stone plinths and deep floor perspective. Laptop uses Devices.css geometry.",
       "limitations": "TV source native776x653, secondary screen. No source UI text modified."
     },
     "cafekok": {
@@ -135,7 +135,7 @@
         "work/cafekok/assets/cafe-cover.jpg",
         "work/cafekok/assets/latest/home.png"
       ],
-      "treatment": "Existing cafe photograph retained. Large gently rotated gold phone, original UI beneath camera safe area. Phone extends beyond canvas and lower placeholder remains outside cover.",
+      "treatment": "Existing cafe photograph retained. Smaller upright gold phone at scale1.45, reduced22 percent from previous1.85; no rotation. Original UI beneath camera safe area, full four-purpose home choices visible. Lower incomplete source content remains outside canvas.",
       "limitations": "Original loading placeholder is not retouched; off-canvas crop only."
     },
     "offer": {
@@ -144,7 +144,7 @@
         "work/offer/case-study-assets/editorial/tablet.jpg",
         "work/offer/case-study-assets/editorial/mobile.jpg"
       ],
-      "treatment": "Centered Pro Display, left overlapping iPad, right overlapping iPhone; same Explore page4/2/1columns. Warmgrayblack with restrained orange studio wash.",
+      "treatment": "Centered Pro Display, left overlapping iPad, right overlapping iPhone; same Explore page4/2/1columns. Warm gray architectural room with a limestone display table, diagonal window shadows, recessed arch and terracotta archive objects.",
       "limitations": "Desktop source top-cropped. Native tablet aspect ratio preserved; no live website claim."
     },
     "ivi": {
@@ -160,6 +160,7 @@
     "browserStarted": false,
     "deployed": false,
     "staticSvgRender": "All three SVG files rendered locally with sharp/librsvg to 1200 × 675 PNG proofs; visually inspected. No website or browser launched.",
+    "sceneReferences": "docs/design/references/mockup-scene-20261115/README.md",
     "sourceHashesVerified": true,
     "webpToPngDecodedPixelsEqual": true,
     "selfContainedImages": true,

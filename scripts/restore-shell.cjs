@@ -2,17 +2,23 @@
 const fs=require('node:fs'),p=require('node:path');
 const root=p.resolve(__dirname,'..'),source=p.join(root,'portfolio-shell/dist'),out=p.join(root,'redesign');
 const read=f=>fs.readFileSync(f,'utf8'),write=(f,s)=>fs.writeFileSync(f,s.replace(/\r\n/g,'\n'));
-for(const name of fs.readdirSync(source)){if(/\.(css|js)$/.test(name))fs.copyFileSync(p.join(source,name),p.join(out,name));}
+const maintained=new Set(['contact-atmosphere.js','contact-atmosphere.css']);
+for(const name of fs.readdirSync(source)){if(/\.(css|js)$/.test(name)&&!maintained.has(name))fs.copyFileSync(p.join(source,name),p.join(out,name));}
 fs.cpSync(p.join(source,'vendor'),p.join(out,'vendor'),{recursive:true});
 const profile=JSON.parse(read(p.join(root,'docs/projects/profile-content-20261115.json')));
 const qa=JSON.parse(read(p.join(root,'docs/design/qa-content-20261115.json'))).cards;
 const esc=s=>String(s||'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
-const experience=profile.experience.map(e=>`<li><span class="profile-category">${esc(e.category)}</span><h3>${esc(e.institution)}</h3><p class="profile-role">${esc(e.title)}</p><p class="profile-date">${esc(e.start?e.start+'–'+(e.end||'현재'):e.periodLabel)}${e.status?' · '+esc(e.status):''}</p>${e.projects?'<details class="profile-research"><summary>참여 연구와 맡은 역할</summary><ul>'+e.projects.map(x=>`<li><strong>${esc(x.partner)}</strong><p>${esc(x.title)}</p><p class="profile-date">${esc(x.start+'–'+x.end)}</p><p>${esc(x.contribution)}</p></li>`).join('')+'</ul></details>':''}</li>`).join('');
+const lines=parts=>parts.map(x=>`<span class="profile-text-line">${esc(x)}</span>`).join('');
+const institution=e=>e.id==='sbs'?lines(['SBS아카데미 AIX학원','부산점']):esc(e.institution);
+const course=e=>e.id==='sbs'?lines(['AI융합 스마트기기 UXUI디자인','전문인력양성과정']):e.id==='mito'?lines(['AI 스마트 모빌리티 콘텐츠 자동화','및 인터페이스 디자인 과정']):lines(['학부연구생','기업 및 기관 연구과제 참여']);
+const experience=profile.experience.map(e=>`<li><span class="profile-category">${esc(e.category)}</span><h3>${institution(e)}</h3><p class="profile-role">${course(e)}</p><p class="profile-date">${esc(e.start?e.start+'–'+(e.end||'현재'):e.periodLabel)}${e.status?' · '+esc(e.status):''}</p>${e.projects?'<details class="profile-research"><summary>참여 연구와 맡은 역할</summary><ul>'+e.projects.map(x=>`<li><strong>${esc(x.partner)}</strong><p>${esc(x.title)}</p><p class="profile-date">${esc(x.start+'–'+x.end)}</p><p>${esc(x.contribution)}</p></li>`).join('')+'</ul></details>':''}</li>`).join('');
 const education=`<li><h3>동의대학교</h3><p class="profile-role">인간·시스템디자인공학<br>산업ICT공학 부전공</p><p class="profile-date">2020.03–2026.02 · 졸업</p></li>`;
-const certs=profile.certifications.filter(x=>x.priority==='primary').map(x=>`<li><h3>${esc(x.name)}${x.grade==='1급'?' 1급':''}</h3><p class="profile-date">${esc(x.date)} · ${esc(x.issuer)}</p></li>`).join('');
-const awards=profile.awards.map(x=>`<li><h3>${esc(x.award)}</h3><p class="award-event">${esc(x.name)}</p><p class="profile-date">${esc(x.date)} · ${esc(x.issuer)}</p></li>`).join('');
+const certs=profile.certifications.filter(x=>x.priority==='primary').map(x=>`<li><h3>${x.name==='멀티미디어콘텐츠제작전문가'?'멀티미디어콘텐츠<wbr>제작전문가':esc(x.name)}${x.grade==='1급'?' 1급':''}</h3><p class="profile-date">${lines([x.date,x.issuer])}</p></li>`).join('');
+const awards=profile.awards.map(x=>`<li><h3>${esc(x.award)}</h3><p class="award-event">${x.name.startsWith('부산디지털')?lines(['부산디지털혁신아카데미','해커톤(Dev-ton) 대회']):lines(['추계학술대회','캡스톤 경진대회'])}</p><p class="profile-date">${lines([x.date,x.issuer])}</p></li>`).join('');
 let about=read(p.join(source,'profile-sections.js')).split('export function aboutSection(){return `')[1].split('`;}',1)[0];
 about=about.replace("${keyword('명확한 경험')}",'<em class="statement-keyword">명확한 경험<span class="restored-underline" aria-hidden="true"></span></em>');
+about=about.replace('을 설계합니다.</span>','을<span class="statement-closing">설계합니다.</span></span>');
+about=about.replace('인간공학을 바탕으로, 사용자의 행동과 맥락을 이해합니다.','인간공학을 바탕으로,<br>사용자의 행동과 맥락을 이해합니다.');
 about=about.replace('<div class="about-grid profile-details">', '<span id="profile" class="profile-anchor" aria-hidden="true"></span><div class="about-grid profile-details">');
 const start=about.indexOf('<div class="about-grid profile-details">');
 about=about.slice(0,start)+`<div class="about-grid profile-details"><div class="reveal"><p class="eyebrow">EXPERIENCE</p><ul class="profile-list">${experience}</ul></div><div class="reveal"><p class="eyebrow">EDUCATION & CERTIFICATIONS</p><ul class="profile-list">${education}${certs}</ul></div><div class="reveal"><p class="eyebrow">AWARDS</p><ul class="profile-list">${awards}</ul></div></div></section>`;

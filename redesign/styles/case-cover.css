@@ -1,0 +1,21 @@
+/* The cover carries the same full artwork and project identity as the home.
+   Text lives below it so no crop or typography obscures the actual UI. */
+body[data-page=case] .case-hero--shared{display:block;position:relative;min-height:0;padding:100px 0 0;overflow:hidden;background:var(--bg);color:var(--ink);isolation:isolate}
+body[data-page=case] .case-hero--shared::after{display:none}
+body[data-page=case] .case-hero--shared>img{display:block;position:relative;inset:auto;width:100%;max-width:none;height:auto;aspect-ratio:auto;object-fit:contain;object-position:center;z-index:0}
+body[data-page=case] .case-hero--shared .case-hero-copy{position:relative;inset:auto;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(230px,.6fr) auto;gap:40px;align-items:center;width:100%;margin:0;padding:48px var(--gutter) 52px;background:var(--bg)!important;color:var(--ink);border-bottom:1px solid var(--line)}
+body[data-page=case] .case-hero--shared .case-type{margin:0 0 15px;color:var(--case-accent);font-family:inherit;font-size:11px;font-weight:600;letter-spacing:.055em;text-transform:uppercase;line-height:1.6}
+body[data-page=case] .case-hero--shared .case-title{max-width:none;margin:0;font-family:inherit;font-style:normal;font-weight:650;font-size:clamp(32px,3.4vw,58px);letter-spacing:-.045em;line-height:1.12;color:var(--ink)}
+body[data-page=case] .case-hero--shared .case-title>span{display:block}
+body[data-page=case] .case-hero--shared .case-hero-description{max-width:42em;margin:19px 0 0;font-family:inherit;font-size:15px;font-weight:400;letter-spacing:-.025em;line-height:1.85;color:var(--case-muted);text-wrap:pretty;word-break:keep-all}
+body[data-page=case] .case-hero--shared .case-meta{position:static;display:flex;flex-direction:column;gap:16px;margin:0;padding:0;min-width:0;max-width:none}
+body[data-page=case] .case-hero--shared .case-meta>div{display:grid;grid-template-columns:52px minmax(0,1fr);gap:14px;align-items:baseline}
+body[data-page=case] .case-hero--shared .case-meta dt{margin:0;color:var(--case-muted);font-size:9px;letter-spacing:.06em}
+body[data-page=case] .case-hero--shared .case-meta dd{margin:0;color:var(--ink);font-size:12px;line-height:1.8;word-break:keep-all}
+body[data-page=case] .case-hero--shared .prototype-link{position:static;inset:auto;margin:0;min-width:160px;min-height:48px;border:1px solid var(--line);background:transparent;color:var(--ink);backdrop-filter:none;font-size:10px;font-family:inherit;letter-spacing:.03em;padding:15px 20px;gap:22px}
+body[data-page=case] .case-hero--shared .prototype-link:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+body[data-project=cafekok] .site-header,body[data-project=offer] .site-header{color:var(--ink)}
+body[data-page=case] .case-title em{font-family:inherit;font-style:normal;font-weight:inherit}
+@media(min-width:1700px){body[data-page=case] .case-hero--shared .case-hero-copy{gap:60px;padding-top:58px;padding-bottom:60px}}
+@media(max-width:1100px){body[data-page=case] .case-hero--shared .case-hero-copy{grid-template-columns:minmax(0,1fr) minmax(230px,.7fr);gap:28px 40px}.case-cover-action{grid-column:1/-1}body[data-page=case] .case-hero--shared .case-title{font-size:42px}body[data-page=case] .case-hero--shared .case-hero-description{font-size:14px}}
+@media(max-width:700px){body[data-page=case] .case-hero--shared{padding-top:78px}body[data-page=case] .case-hero--shared .case-hero-copy{grid-template-columns:1fr;gap:28px;padding:30px var(--gutter) 36px}body[data-page=case] .case-hero--shared .case-title{font-size:clamp(28px,7.3vw,42px);line-height:1.14}body[data-page=case] .case-hero--shared .case-type{font-size:9px;margin-bottom:13px}body[data-page=case] .case-hero--shared .case-hero-description{font-size:14px;margin-top:16px}body[data-page=case] .case-hero--shared .case-meta{gap:12px;border-top:1px solid var(--line);padding-top:23px}body[data-page=case] .case-hero--shared .case-meta dd{font-size:12px}body[data-page=case] .case-hero--shared .case-meta>div{grid-column:auto;grid-template-columns:46px 1fr}.case-cover-action{grid-column:auto}body[data-page=case] .case-hero--shared .prototype-link{min-height:46px}}

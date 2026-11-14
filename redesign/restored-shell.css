@@ -3,9 +3,21 @@
 .about{position:relative}
 .profile-category{display:block;font-size:11px;color:#8c99ad;margin-bottom:8px}
 .about .profile-details .profile-list{display:flex;flex-direction:column;gap:28px}
-.about .profile-details .profile-list>li{margin:0}
+.about .profile-details .profile-list>li{margin:0;padding-bottom:0;border-bottom:0}
 .about .profile-details .profile-list h3{font-size:18px}
 .about .profile-details .profile-role{font-size:13px;line-height:1.8}
+.profile-text-line{display:block}
+.about .statement-closing{display:block;margin-top:.1em}
+.about .profile-details :is(h3,p){word-break:keep-all;overflow-wrap:normal;text-wrap:pretty}
+.about .profile-details .profile-date{font-variant-numeric:tabular-nums;line-height:1.8}
+.about .profile-details .profile-date .profile-text-line+ .profile-text-line{margin-top:2px}
+.about .profile-details .profile-list>li+li{padding-top:23px;border-top:1px solid #a2abba22}
+.about .profile-details .profile-role{margin-top:10px}
+.about .profile-details h3{line-height:1.55}
+.about .profile-details>div{min-width:0}
+.about .profile-details>div:last-child .profile-list>li{display:block}
+.about .profile-details>div:last-child .profile-date{padding-top:0;margin-top:8px}
+.about .profile-details>div:last-child .award-event{margin-top:6px}
 .profile-research{margin-top:16px;color:#a2abba;font-size:12px;line-height:1.8}
 .profile-research summary{cursor:pointer;padding:6px 0;color:#d2d9e4}
 .profile-research ul{padding:12px 0 0 14px;border-left:1px solid #61728a50;list-style:none}

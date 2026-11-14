@@ -1,0 +1,321 @@
+{
+  "testedAt": "2026-11-14T17:40:18.388Z",
+  "target": "http://localhost:4175/",
+  "browser": "Isolated headless Chromium",
+  "checks": [
+    {
+      "name": "Five visible colour fields after completed wave",
+      "passed": true,
+      "detail": {
+        "active": "true",
+        "visible": true,
+        "waveProgress": "1.0000",
+        "fields": [
+          {
+            "name": "contact-atmosphere__field contact-atmosphere__field--blue",
+            "transform": "matrix(1.10484, 0.032259, -0.032259, 1.10484, 202.367, -60.8121)",
+            "playState": "running",
+            "animation": "contact-cobalt-current"
+          },
+          {
+            "name": "contact-atmosphere__field contact-atmosphere__field--lilac",
+            "transform": "matrix(1.05389, -0.368799, 0.368799, 1.05389, -563.572, 351.329)",
+            "playState": "running",
+            "animation": "contact-lilac-current"
+          },
+          {
+            "name": "contact-atmosphere__field contact-atmosphere__field--apricot",
+            "transform": "matrix(1.13737, 0.142047, -0.142047, 1.13737, -300.471, -306.132)",
+            "playState": "running",
+            "animation": "contact-apricot-current"
+          },
+          {
+            "name": "contact-atmosphere__field contact-atmosphere__field--ribbon",
+            "transform": "matrix(1.01123, 0.522709, -0.522709, 1.01123, 408.888, 269.339)",
+            "playState": "running",
+            "animation": "contact-ribbon-current"
+          },
+          {
+            "name": "contact-atmosphere__field contact-atmosphere__field--pearl",
+            "transform": "matrix(0.975903, 0.38541, -0.38541, 0.975903, 582.124, 375.876)",
+            "playState": "running",
+            "animation": "contact-pearl-current"
+          }
+        ],
+        "wave": true,
+        "clip": true,
+        "wavePaths": 3,
+        "card": true,
+        "backgroundClip": "none"
+      }
+    },
+    {
+      "name": "All field transforms change over 1.2 seconds",
+      "passed": true,
+      "detail": {
+        "before": [
+          {
+            "name": "contact-atmosphere__field contact-atmosphere__field--blue",
+            "transform": "matrix(1.10484, 0.032259, -0.032259, 1.10484, 202.367, -60.8121)",
+            "playState": "running",
+            "animation": "contact-cobalt-current"
+          },
+          {
+            "name": "contact-atmosphere__field contact-atmosphere__field--lilac",
+            "transform": "matrix(1.05389, -0.368799, 0.368799, 1.05389, -563.572, 351.329)",
+            "playState": "running",
+            "animation": "contact-lilac-current"
+          },
+          {
+            "name": "contact-atmosphere__field contact-atmosphere__field--apricot",
+            "transform": "matrix(1.13737, 0.142047, -0.142047, 1.13737, -300.471, -306.132)",
+            "playState": "running",
+            "animation": "contact-apricot-current"
+          },
+          {
+            "name": "contact-atmosphere__field contact-atmosphere__field--ribbon",
+            "transform": "matrix(1.01123, 0.522709, -0.522709, 1.01123, 408.888, 269.339)",
+            "playState": "running",
+            "animation": "contact-ribbon-current"
+          },
+          {
+            "name": "contact-atmosphere__field contact-atmosphere__field--pearl",
+            "transform": "matrix(0.975903, 0.38541, -0.38541, 0.975903, 582.124, 375.876)",
+            "playState": "running",
+            "animation": "contact-pearl-current"
+          }
+        ],
+        "after": [
+          {
+            "name": "contact-atmosphere__field contact-atmosphere__field--blue",
+            "transform": "matrix(1.1276, 0.191113, -0.191113, 1.1276, 365.894, -144.009)",
+            "playState": "running",
+            "animation": "contact-cobalt-current"
+          },
+          {
+            "name": "contact-atmosphere__field contact-atmosphere__field--lilac",
+            "transform": "matrix(1.01895, -0.395949, 0.395949, 1.01895, -518.307, 373.931)",
+            "playState": "running",
+            "animation": "contact-lilac-current"
+          },
+          {
+            "name": "contact-atmosphere__field contact-atmosphere__field--apricot",
+            "transform": "matrix(1.15105, 0.220375, -0.220375, 1.15105, -378.753, -377.662)",
+            "playState": "running",
+            "animation": "contact-apricot-current"
+          },
+          {
+            "name": "contact-atmosphere__field contact-atmosphere__field--ribbon",
+            "transform": "matrix(1.02847, 0.472075, -0.472075, 1.02847, 379.609, 258.622)",
+            "playState": "running",
+            "animation": "contact-ribbon-current"
+          },
+          {
+            "name": "contact-atmosphere__field contact-atmosphere__field--pearl",
+            "transform": "matrix(0.980297, 0.381565, -0.381565, 0.980297, 584.188, 387.918)",
+            "playState": "running",
+            "animation": "contact-pearl-current"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Original wave and metal card retained",
+      "passed": true,
+      "detail": {
+        "wavePaths": 3,
+        "clip": "none",
+        "card": true
+      }
+    },
+    {
+      "name": "Motion toggle freezes visible fields",
+      "passed": true,
+      "detail": {
+        "before": {
+          "active": "false",
+          "visible": true,
+          "waveProgress": "1.0000",
+          "fields": [
+            {
+              "name": "contact-atmosphere__field contact-atmosphere__field--blue",
+              "transform": "matrix(1.12964, 0.230551, -0.230551, 1.12964, 405.313, -164.065)",
+              "playState": "paused",
+              "animation": "contact-cobalt-current"
+            },
+            {
+              "name": "contact-atmosphere__field contact-atmosphere__field--lilac",
+              "transform": "matrix(0.993186, -0.414453, 0.414453, 0.993186, -485.429, 390.347)",
+              "playState": "paused",
+              "animation": "contact-lilac-current"
+            },
+            {
+              "name": "contact-atmosphere__field contact-atmosphere__field--apricot",
+              "transform": "matrix(1.1532, 0.23681, -0.23681, 1.1532, -394.874, -392.393)",
+              "playState": "paused",
+              "animation": "contact-apricot-current"
+            },
+            {
+              "name": "contact-atmosphere__field contact-atmosphere__field--ribbon",
+              "transform": "matrix(1.03864, 0.437817, -0.437817, 1.03864, 359.953, 251.428)",
+              "playState": "paused",
+              "animation": "contact-ribbon-current"
+            },
+            {
+              "name": "contact-atmosphere__field contact-atmosphere__field--pearl",
+              "transform": "matrix(0.999384, 0.346219, -0.346219, 0.999384, 559.087, 403.012)",
+              "playState": "paused",
+              "animation": "contact-pearl-current"
+            }
+          ],
+          "wave": true,
+          "clip": true,
+          "wavePaths": 3,
+          "card": true,
+          "backgroundClip": "none"
+        },
+        "after": {
+          "active": "false",
+          "visible": true,
+          "waveProgress": "1.0000",
+          "fields": [
+            {
+              "name": "contact-atmosphere__field contact-atmosphere__field--blue",
+              "transform": "matrix(1.12964, 0.230551, -0.230551, 1.12964, 405.313, -164.065)",
+              "playState": "paused",
+              "animation": "contact-cobalt-current"
+            },
+            {
+              "name": "contact-atmosphere__field contact-atmosphere__field--lilac",
+              "transform": "matrix(0.993186, -0.414453, 0.414453, 0.993186, -485.429, 390.347)",
+              "playState": "paused",
+              "animation": "contact-lilac-current"
+            },
+            {
+              "name": "contact-atmosphere__field contact-atmosphere__field--apricot",
+              "transform": "matrix(1.1532, 0.23681, -0.23681, 1.1532, -394.874, -392.393)",
+              "playState": "paused",
+              "animation": "contact-apricot-current"
+            },
+            {
+              "name": "contact-atmosphere__field contact-atmosphere__field--ribbon",
+              "transform": "matrix(1.03864, 0.437817, -0.437817, 1.03864, 359.953, 251.428)",
+              "playState": "paused",
+              "animation": "contact-ribbon-current"
+            },
+            {
+              "name": "contact-atmosphere__field contact-atmosphere__field--pearl",
+              "transform": "matrix(0.999384, 0.346219, -0.346219, 0.999384, 559.087, 403.012)",
+              "playState": "paused",
+              "animation": "contact-pearl-current"
+            }
+          ],
+          "wave": true,
+          "clip": true,
+          "wavePaths": 3,
+          "card": true,
+          "backgroundClip": "none"
+        }
+      }
+    },
+    {
+      "name": "Reduced motion freezes fields",
+      "passed": true,
+      "detail": {
+        "before": {
+          "active": "false",
+          "visible": true,
+          "waveProgress": "1.0000",
+          "fields": [
+            {
+              "name": "contact-atmosphere__field contact-atmosphere__field--blue",
+              "transform": "matrix(0.980487, -0.28115, 0.28115, 0.980487, -161.28, 124.2)",
+              "playState": "running",
+              "animation": "none"
+            },
+            {
+              "name": "contact-atmosphere__field contact-atmosphere__field--lilac",
+              "transform": "matrix(0.989099, 0.321378, -0.321378, 0.989099, 126.72, -58)",
+              "playState": "running",
+              "animation": "none"
+            },
+            {
+              "name": "contact-atmosphere__field contact-atmosphere__field--apricot",
+              "transform": "matrix(0.970296, -0.241922, 0.241922, 0.970296, 144, 100)",
+              "playState": "running",
+              "animation": "none"
+            },
+            {
+              "name": "contact-atmosphere__field contact-atmosphere__field--ribbon",
+              "transform": "matrix(0.882948, -0.469472, 0.469472, 0.882948, -195.84, 48)",
+              "playState": "running",
+              "animation": "none"
+            },
+            {
+              "name": "contact-atmosphere__field contact-atmosphere__field--pearl",
+              "transform": "matrix(0.990268, -0.139173, 0.139173, 0.990268, -112.895, -79.2)",
+              "playState": "running",
+              "animation": "none"
+            }
+          ],
+          "wave": true,
+          "clip": true,
+          "wavePaths": 3,
+          "card": true,
+          "backgroundClip": "none"
+        },
+        "after": {
+          "active": "false",
+          "visible": true,
+          "waveProgress": "1.0000",
+          "fields": [
+            {
+              "name": "contact-atmosphere__field contact-atmosphere__field--blue",
+              "transform": "matrix(0.980487, -0.28115, 0.28115, 0.980487, -161.28, 124.2)",
+              "playState": "running",
+              "animation": "none"
+            },
+            {
+              "name": "contact-atmosphere__field contact-atmosphere__field--lilac",
+              "transform": "matrix(0.989099, 0.321378, -0.321378, 0.989099, 126.72, -58)",
+              "playState": "running",
+              "animation": "none"
+            },
+            {
+              "name": "contact-atmosphere__field contact-atmosphere__field--apricot",
+              "transform": "matrix(0.970296, -0.241922, 0.241922, 0.970296, 144, 100)",
+              "playState": "running",
+              "animation": "none"
+            },
+            {
+              "name": "contact-atmosphere__field contact-atmosphere__field--ribbon",
+              "transform": "matrix(0.882948, -0.469472, 0.469472, 0.882948, -195.84, 48)",
+              "playState": "running",
+              "animation": "none"
+            },
+            {
+              "name": "contact-atmosphere__field contact-atmosphere__field--pearl",
+              "transform": "matrix(0.990268, -0.139173, 0.139173, 0.990268, -112.895, -79.2)",
+              "playState": "running",
+              "animation": "none"
+            }
+          ],
+          "wave": true,
+          "clip": true,
+          "wavePaths": 3,
+          "card": true,
+          "backgroundClip": "none"
+        }
+      }
+    },
+    {
+      "name": "No application JavaScript errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "consoleErrors": [],
+  "pageErrors": [],
+  "blockedExternal": [],
+  "passed": true
+}

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T17:01:45.782Z",
+  "generatedAt": "2026-11-14T17:44:14.933Z",
   "siteRoot": "redesign",
   "mode": "Static source inspection only",
   "status": "passed",
@@ -15,11 +15,11 @@
   "counts": {
     "portfolioHtml": 5,
     "prototypeHtml": 9,
-    "css": 41,
+    "css": 43,
     "svg": 136,
-    "jsSyntax": 55,
+    "jsSyntax": 59,
     "inlineJsSyntax": 1,
-    "localReferences": 439,
+    "localReferences": 463,
     "anchors": 58
   },
   "portfolioErrors": [],

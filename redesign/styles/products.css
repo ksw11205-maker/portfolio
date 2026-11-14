@@ -145,7 +145,7 @@ body[data-project="offer"] { --product-bg:#f1f0eb; --product-ink:#171717; --prod
 :is([data-project="cafekok"],[data-project="offer"]) .data-table td { color:var(--product-muted); }
 :is([data-project="cafekok"],[data-project="offer"]) .next-project p { margin-top:10px; font-size:13px; line-height:1.6; color:#f4f4f0d6; }
 :is([data-project="cafekok"],[data-project="offer"]) .next-project-grid--single { grid-template-columns:1fr; }
-:is([data-project="cafekok"],[data-project="offer"]) .next-project-grid--single .next-project { aspect-ratio:21/8; min-height:310px; }
+:is([data-project="cafekok"],[data-project="offer"]) .next-project-grid--single .next-project { aspect-ratio:21/8; min-height:310px; min-width:0; width:100%; }
 :is([data-project="cafekok"],[data-project="offer"]) .site-footer .footer-name { display:inline-flex; flex-wrap:wrap; gap:5px 12px; }
 :is([data-project="cafekok"],[data-project="offer"]) .site-footer .footer-name > span { flex-basis:auto; margin:0; color:var(--case-muted); font-size:10px; font-weight:400; }
 
