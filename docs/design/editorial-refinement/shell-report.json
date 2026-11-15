@@ -1,0 +1,62 @@
+[
+  {
+    "current": "0",
+    "gallery": {
+      "x": 0,
+      "y": 0,
+      "width": 720.015625,
+      "height": 1000,
+      "top": 0,
+      "right": 720.015625,
+      "bottom": 1000,
+      "left": 0
+    },
+    "titleShadow": "rgba(0, 0, 0, 0.8) 0px 2px 4px, rgba(0, 0, 0, 0.6) 0px 6px 24px",
+    "overflow": false
+  },
+  {
+    "current": "1",
+    "gallery": {
+      "x": 0,
+      "y": 0,
+      "width": 720.015625,
+      "height": 1000,
+      "top": 0,
+      "right": 720.015625,
+      "bottom": 1000,
+      "left": 0
+    },
+    "titleShadow": "rgba(0, 0, 0, 0.8) 0px 2px 4px, rgba(0, 0, 0, 0.6) 0px 6px 24px",
+    "overflow": false
+  },
+  {
+    "current": "2",
+    "gallery": {
+      "x": 0,
+      "y": 0,
+      "width": 720.015625,
+      "height": 1000,
+      "top": 0,
+      "right": 720.015625,
+      "bottom": 1000,
+      "left": 0
+    },
+    "titleShadow": "rgba(0, 0, 0, 0.8) 0px 2px 4px, rgba(0, 0, 0, 0.6) 0px 6px 24px",
+    "overflow": false
+  },
+  {
+    "current": "3",
+    "gallery": {
+      "x": 0,
+      "y": 0,
+      "width": 720.015625,
+      "height": 1000,
+      "top": 0,
+      "right": 720.015625,
+      "bottom": 1000,
+      "left": 0
+    },
+    "titleShadow": "rgba(0, 0, 0, 0.8) 0px 2px 4px, rgba(0, 0, 0, 0.6) 0px 6px 24px",
+    "overflow": false
+  }
+]

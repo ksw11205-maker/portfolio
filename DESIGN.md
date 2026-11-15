@@ -1,3 +1,17 @@
+# Current case-study design guide — 2026-11-16
+
+This guide supersedes older presentation rules below. Apply the installed Emil Kowalski Apple Design and Design Engineering skills in .agents/skills. Preserve the authentic interfaces, factual research, project identities, navigation destinations, and prototype functionality.
+
+- Typography: one Pretendard family; headings 28–44px, subheadings 20–28px, body 17px, labels minimum 16px. Use weights 400/600, left alignment, body line-height 1.7 and heading line-height 1.25.
+- Reading order: section introduction, authentic interface, concise feature annotations, then visible supporting evidence. No disclosure toggles for case-study content. Keep prototype controls intact.
+- Spacing: 8/12/16/24/32/48/64/80px rhythm; text around 64ch; related content grouped closely. Background emphasis belongs to meaningful transitions and real UI boards.
+- Palette: LG dark violet/magenta; IVI graphite/cyan; CAFÉKOK cream/espresso; OFFER warm white/orange. Use one base, one supporting surface, and restrained accents.
+- Covers: shell artwork fills the entire left half, with a dark contrast treatment behind the overlaid heading. Detail cover copy sits left; artwork fills the right side from top to bottom. On mobile, stack readable copy and full-width artwork.
+- Motion: no dramatic title entrances. Preserve the existing restrained reading fade, keep central reading content visible, and respect reduced motion.
+- Quality: inspect actual browser screenshots and measured geometry across desktop, laptop, tablet, and mobile. Never infer visual success from a build alone.
+
+---
+
 # 새 포트폴리오 디자인 기준 · 별도 구현
 최신 사용자 수정 우선(2026-11-15): 메인 쉘·커서·인트로·파도는 기존 버전으로 복원한다. 최신 이력과 선별한 Q&A 문구는 유지한다. 상세의 쉬운 설명에 실제 UI 번호 강조와 세부 판단을 더하고, 회고는 Q&A, 페이지 끝은 다음 프로젝트 하나로 통일한다. LG는 다크 테크·마젠타/바이올렛, IVI는 차콜 블랙·시안, CAFÉKOK은 크림·브라운·살구, OFFER는 웜그레이·블랙·오렌지다. 아래 초기 제안과 다를 때 이 수정이 우선한다.
 작성일: 2026-11-15. 상태: 사용자의 구현 시작 지시에 따라 `redesign/`에 메인과 4개 상세페이지를 구현했다. 정적 경로·구문·자산 검사를 수행했으며 사이트 실행·브라우저 화면 검수·배포는 하지 않았다.

@@ -1,0 +1,1506 @@
+[
+  {
+    "slug": "lg",
+    "width": 1920,
+    "boards": [
+      {
+        "id": "api-start",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "before-upload",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "01-input",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "02-analysis",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "03-alternative",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "04-comparison",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "workspace",
+        "collisions": 0,
+        "invalidAnchors": 0
+      }
+    ],
+    "small": []
+  },
+  {
+    "slug": "lg",
+    "width": 1440,
+    "boards": [
+      {
+        "id": "api-start",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "before-upload",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "01-input",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "02-analysis",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "03-alternative",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "04-comparison",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "workspace",
+        "collisions": 0,
+        "invalidAnchors": 0
+      }
+    ],
+    "small": []
+  },
+  {
+    "slug": "lg",
+    "width": 1280,
+    "boards": [
+      {
+        "id": "api-start",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "before-upload",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "01-input",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "02-analysis",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "03-alternative",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "04-comparison",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "workspace",
+        "collisions": 0,
+        "invalidAnchors": 0
+      }
+    ],
+    "small": []
+  },
+  {
+    "slug": "lg",
+    "width": 1024,
+    "boards": [
+      {
+        "id": "api-start",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "before-upload",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "01-input",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "02-analysis",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "03-alternative",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "04-comparison",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "workspace",
+        "collisions": 0,
+        "invalidAnchors": 0
+      }
+    ],
+    "small": []
+  },
+  {
+    "slug": "lg",
+    "width": 768,
+    "boards": [
+      {
+        "id": "api-start",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "before-upload",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "01-input",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "02-analysis",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "03-alternative",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "04-comparison",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "workspace",
+        "collisions": 0,
+        "invalidAnchors": 0
+      }
+    ],
+    "small": []
+  },
+  {
+    "slug": "lg",
+    "width": 430,
+    "boards": [
+      {
+        "id": "api-start",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "before-upload",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "01-input",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "02-analysis",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "03-alternative",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "04-comparison",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "workspace",
+        "collisions": 0,
+        "invalidAnchors": 0
+      }
+    ],
+    "small": []
+  },
+  {
+    "slug": "lg",
+    "width": 390,
+    "boards": [
+      {
+        "id": "api-start",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "before-upload",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "01-input",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "02-analysis",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "03-alternative",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "04-comparison",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "workspace",
+        "collisions": 0,
+        "invalidAnchors": 0
+      }
+    ],
+    "small": []
+  },
+  {
+    "slug": "lg",
+    "width": 320,
+    "boards": [
+      {
+        "id": "api-start",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "before-upload",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "01-input",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "02-analysis",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "03-alternative",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "04-comparison",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "workspace",
+        "collisions": 0,
+        "invalidAnchors": 0
+      }
+    ],
+    "small": []
+  },
+  {
+    "slug": "ivi",
+    "width": 1920,
+    "boards": [
+      {
+        "id": "unified",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "double",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "top",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "side",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "climate",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "menu",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "phone",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "concept-clean",
+        "collisions": 0,
+        "invalidAnchors": 0
+      }
+    ],
+    "small": []
+  },
+  {
+    "slug": "ivi",
+    "width": 1440,
+    "boards": [
+      {
+        "id": "unified",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "double",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "top",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "side",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "climate",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "menu",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "phone",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "concept-clean",
+        "collisions": 0,
+        "invalidAnchors": 0
+      }
+    ],
+    "small": []
+  },
+  {
+    "slug": "ivi",
+    "width": 1280,
+    "boards": [
+      {
+        "id": "unified",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "double",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "top",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "side",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "climate",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "menu",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "phone",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "concept-clean",
+        "collisions": 0,
+        "invalidAnchors": 0
+      }
+    ],
+    "small": []
+  },
+  {
+    "slug": "ivi",
+    "width": 1024,
+    "boards": [
+      {
+        "id": "unified",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "double",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "top",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "side",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "climate",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "menu",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "phone",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "concept-clean",
+        "collisions": 0,
+        "invalidAnchors": 0
+      }
+    ],
+    "small": []
+  },
+  {
+    "slug": "ivi",
+    "width": 768,
+    "boards": [
+      {
+        "id": "unified",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "double",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "top",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "side",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "climate",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "menu",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "phone",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "concept-clean",
+        "collisions": 0,
+        "invalidAnchors": 0
+      }
+    ],
+    "small": []
+  },
+  {
+    "slug": "ivi",
+    "width": 430,
+    "boards": [
+      {
+        "id": "unified",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "double",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "top",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "side",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "climate",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "menu",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "phone",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "concept-clean",
+        "collisions": 0,
+        "invalidAnchors": 0
+      }
+    ],
+    "small": []
+  },
+  {
+    "slug": "ivi",
+    "width": 390,
+    "boards": [
+      {
+        "id": "unified",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "double",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "top",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "side",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "climate",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "menu",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "phone",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "concept-clean",
+        "collisions": 0,
+        "invalidAnchors": 0
+      }
+    ],
+    "small": []
+  },
+  {
+    "slug": "ivi",
+    "width": 320,
+    "boards": [
+      {
+        "id": "unified",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "double",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "top",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "side",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "climate",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "menu",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "phone",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "concept-clean",
+        "collisions": 0,
+        "invalidAnchors": 0
+      }
+    ],
+    "small": []
+  },
+  {
+    "slug": "cafekok",
+    "width": 1920,
+    "boards": [
+      {
+        "id": "quiz",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "profile",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "home",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "explore",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "detail",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "saved-empty",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "saved",
+        "collisions": 0,
+        "invalidAnchors": 0
+      }
+    ],
+    "small": []
+  },
+  {
+    "slug": "cafekok",
+    "width": 1440,
+    "boards": [
+      {
+        "id": "quiz",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "profile",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "home",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "explore",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "detail",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "saved-empty",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "saved",
+        "collisions": 0,
+        "invalidAnchors": 0
+      }
+    ],
+    "small": []
+  },
+  {
+    "slug": "cafekok",
+    "width": 1280,
+    "boards": [
+      {
+        "id": "quiz",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "profile",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "home",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "explore",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "detail",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "saved-empty",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "saved",
+        "collisions": 0,
+        "invalidAnchors": 0
+      }
+    ],
+    "small": []
+  },
+  {
+    "slug": "cafekok",
+    "width": 1024,
+    "boards": [
+      {
+        "id": "quiz",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "profile",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "home",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "explore",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "detail",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "saved-empty",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "saved",
+        "collisions": 0,
+        "invalidAnchors": 0
+      }
+    ],
+    "small": []
+  },
+  {
+    "slug": "cafekok",
+    "width": 768,
+    "boards": [
+      {
+        "id": "quiz",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "profile",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "home",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "explore",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "detail",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "saved-empty",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "saved",
+        "collisions": 0,
+        "invalidAnchors": 0
+      }
+    ],
+    "small": []
+  },
+  {
+    "slug": "cafekok",
+    "width": 430,
+    "boards": [
+      {
+        "id": "quiz",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "profile",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "home",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "explore",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "detail",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "saved-empty",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "saved",
+        "collisions": 0,
+        "invalidAnchors": 0
+      }
+    ],
+    "small": []
+  },
+  {
+    "slug": "cafekok",
+    "width": 390,
+    "boards": [
+      {
+        "id": "quiz",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "profile",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "home",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "explore",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "detail",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "saved-empty",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "saved",
+        "collisions": 0,
+        "invalidAnchors": 0
+      }
+    ],
+    "small": []
+  },
+  {
+    "slug": "cafekok",
+    "width": 320,
+    "boards": [
+      {
+        "id": "quiz",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "profile",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "home",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "explore",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "detail",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "saved-empty",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "saved",
+        "collisions": 0,
+        "invalidAnchors": 0
+      }
+    ],
+    "small": []
+  },
+  {
+    "slug": "offer",
+    "width": 1920,
+    "boards": [
+      {
+        "id": "home",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "explore",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "filtered",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "detail",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "saved",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "favorites",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "brand",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "explore-responsive",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "tablet-responsive",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "mobile-responsive",
+        "collisions": 0,
+        "invalidAnchors": 0
+      }
+    ],
+    "small": []
+  },
+  {
+    "slug": "offer",
+    "width": 1440,
+    "boards": [
+      {
+        "id": "home",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "explore",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "filtered",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "detail",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "saved",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "favorites",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "brand",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "explore-responsive",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "tablet-responsive",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "mobile-responsive",
+        "collisions": 0,
+        "invalidAnchors": 0
+      }
+    ],
+    "small": []
+  },
+  {
+    "slug": "offer",
+    "width": 1280,
+    "boards": [
+      {
+        "id": "home",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "explore",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "filtered",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "detail",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "saved",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "favorites",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "brand",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "explore-responsive",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "tablet-responsive",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "mobile-responsive",
+        "collisions": 0,
+        "invalidAnchors": 0
+      }
+    ],
+    "small": []
+  },
+  {
+    "slug": "offer",
+    "width": 1024,
+    "boards": [
+      {
+        "id": "home",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "explore",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "filtered",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "detail",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "saved",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "favorites",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "brand",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "explore-responsive",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "tablet-responsive",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "mobile-responsive",
+        "collisions": 0,
+        "invalidAnchors": 0
+      }
+    ],
+    "small": []
+  },
+  {
+    "slug": "offer",
+    "width": 768,
+    "boards": [
+      {
+        "id": "home",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "explore",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "filtered",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "detail",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "saved",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "favorites",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "brand",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "explore-responsive",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "tablet-responsive",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "mobile-responsive",
+        "collisions": 0,
+        "invalidAnchors": 0
+      }
+    ],
+    "small": []
+  },
+  {
+    "slug": "offer",
+    "width": 430,
+    "boards": [
+      {
+        "id": "home",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "explore",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "filtered",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "detail",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "saved",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "favorites",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "brand",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "explore-responsive",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "tablet-responsive",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "mobile-responsive",
+        "collisions": 0,
+        "invalidAnchors": 0
+      }
+    ],
+    "small": []
+  },
+  {
+    "slug": "offer",
+    "width": 390,
+    "boards": [
+      {
+        "id": "home",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "explore",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "filtered",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "detail",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "saved",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "favorites",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "brand",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "explore-responsive",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "tablet-responsive",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "mobile-responsive",
+        "collisions": 0,
+        "invalidAnchors": 0
+      }
+    ],
+    "small": []
+  },
+  {
+    "slug": "offer",
+    "width": 320,
+    "boards": [
+      {
+        "id": "home",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "explore",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "filtered",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "detail",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "saved",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "favorites",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "brand",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "explore-responsive",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "tablet-responsive",
+        "collisions": 0,
+        "invalidAnchors": 0
+      },
+      {
+        "id": "mobile-responsive",
+        "collisions": 0,
+        "invalidAnchors": 0
+      }
+    ],
+    "small": []
+  }
+]
