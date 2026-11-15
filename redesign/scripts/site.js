@@ -48,7 +48,7 @@ if (menuToggle && menu) {
 // Section navigation never changes the scroll position by script.
 const localLinks = [...document.querySelectorAll('.site-nav a[href^="#"], .case-nav a[href^="#"]')];
 const sectionLinks = localLinks.map(link => ({ link, section: document.getElementById(link.hash.slice(1)) })).filter(x => x.section);
-if (sectionLinks.length && 'IntersectionObserver' in window) {
+if (sectionLinks.length && 'IntersectionObserver' in window && !document.querySelector('.case-toc')) {
   const visible = new Map();
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => visible.set(entry.target, entry.isIntersecting));

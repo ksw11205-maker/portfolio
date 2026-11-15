@@ -1,4 +1,20 @@
+# Current handoff — 2026-11-16
+
+Current implementation and verification: [Portfolio reading system](reading-system-qa/README.md). This supersedes the historical cover-generation and typography instructions below. Use scripts/build-redesign-home.cjs to refresh shared artwork only; current case content is preserved.
+
 # 리디자인 구현 인계
+
+## 최신 통합 커버와 UI 설명 · 2026-11-15
+
+4개 상세 커버는 이제 제목·한국어 한 줄 소개·목업·배경·기존 CTA가 하나의 장면 안에 있다. 이미지 아래에 있던 중복 소개 블록을 제거했다. 메타데이터는 커버 안의 펼침 영역에 보존한다. 4개 UI 쇼케이스와 30개 주석 보드를 구현했으며 번호 표식 대신 61개 키워드/짧은 설명/점과 연결선을 쓴다. 기존의 긴 UI 판단 근거는 보드 아래 펼침 설명에 남긴다.
+
+현재 구현·수정 파일·출처·8개 너비 Chrome 캡처·검증 한계는 [최종 UI 프레젠테이션 인계](interface-presentation/README.md)를 따른다. 아래의 단일 합성 이미지/하단 소개/번호 주석 설명은 이전 기록이다. 제품 UI와 원본 자산·연구표·의미 있는 본문·CTA 목적지는 변경하지 않았다. 배포와 push는 하지 않았다.
+
+## 최신 커버 아트 디렉션 · 2026-11-15
+
+사용자의 Behance 수준 커버 리디자인 요청에 따라 메인 4개 프로젝트 이미지와 상세 히어로를 반응형 HTML/CSS 기기 구성으로 교체했다. 이전 SVG와 원본 화면은 보존한다. LG는 TV와 AI 분석 도구를 분리하고, IVI 커버는 실제 Figma 통합형·공조 화면과 그래파이트/레드, 카페콕은 홈·상세 2대 폰과 크림/브라운, OFFER는 실제 3종 반응형 화면과 웜그레이/오렌지다. IVI 본문 색상·연구 내용은 유지했다.
+
+이전의 단일 이미지 커버 동기화 설명보다 [새 커버 구현·출처·검증 기록](cover-art-direction/README.md)이 우선한다. `node scripts/install-art-covers.cjs`로 메인 및 상세를 동기화하고 `scripts/build-redesign-home.cjs`도 이 과정을 실행한다. 4종 화면 크기 렌더링 증거는 `cover-art-direction/qa/`에 있다.
 
 ## 최신 사용자 수정 · 표지와 모션 · 2026-11-15
 
