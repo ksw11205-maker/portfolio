@@ -46,3 +46,7 @@ Each of the 30 fictional cafes has its own photo source. The original twelve loc
 - Brunch: Luke Tokaryk — https://unsplash.com/photos/VANvc2u1eic
 
 The image sequence deduplicates matching sources. Budget and travel distance are not mapped to visual claims about an actual café's price or location. License: https://unsplash.com/license .
+
+## Naver map capture — 2026-11-15
+
+`public/images/seomyeon-naver-map.png` is the user-provided screenshot of Naver Map around Busan Seomyeon and Jeonpo, received through the user’s Drive file. Displayed with a NAVER credit; used as a static area reference without claiming a verified cafe coordinate. Source: https://drive.google.com/file/d/1wkmxsR1Djd4yraDww8_NGTBFYElkdNTg/view

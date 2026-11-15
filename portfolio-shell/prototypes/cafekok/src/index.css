@@ -326,7 +326,8 @@
 .detail-facts { grid-template-columns: repeat(2,minmax(0,1fr)); padding: 18px; background: #f5f5f4; }
 .detail-reason, .detail-section { margin: 20px 20px 0; padding: 22px 20px; border-radius: 16px; background: #f7f7f6; }
 .detail-section .detail-notice { padding: 0; margin-top: 16px; background: transparent; }
-.detail-map { height: 230px; margin-top: 4px; }
+.detail-map { height: 250px; margin-top: 4px; }
+.detail-map-image { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 65% 50%; }
 .sample-map + .map-results { margin-top: 16px; }
 
 /* Keep the recommendation prominent and the supporting facts on the page. */
@@ -368,3 +369,28 @@
 .profile-screen .taste-field { flex: 1 1 0; min-height: 44px; padding-block: 6px; }
 @media (max-height: 680px) { .profile-screen .taste-slideshow { height: 124px; } .profile-screen .profile-summary-copy { padding-block: 8px; } .profile-screen .profile-summary h1 { font-size: 20px; } .profile-screen .profile-summary-copy .eyebrow { font-size: 10px; } }
 @media (max-height: 590px) { .profile-screen { height: auto; min-height: calc(100dvh - 80px); } .profile-screen .taste-fields { flex: 0 0 auto; } }
+
+/* Leave room for camera cutouts and the home indicator, including mockup captures. */
+:root { --device-top: max(24px, env(safe-area-inset-top)); --device-bottom: max(24px, env(safe-area-inset-bottom)); }
+.app-header { padding-top: var(--device-top); padding-bottom: 16px; min-height: calc(60px + var(--device-top)); }
+.quiz-header { padding-top: var(--device-top); padding-bottom: 16px; min-height: calc(60px + var(--device-top)); }
+.detail-toolbar { padding-top: var(--device-top); padding-bottom: 16px; }
+.bottom-nav { bottom: calc(16px + var(--device-bottom)); }
+.home-screen, .explore-screen, .saved-screen, .settings-screen { padding-bottom: calc(112px + var(--device-bottom)); }
+.detail-actions { padding-bottom: calc(16px + var(--device-bottom)); }
+.detail-screen { padding-bottom: calc(112px + var(--device-bottom)); }
+.onboard-screen { padding-bottom: calc(16px + var(--device-bottom)); }
+.quiz-screen { padding-bottom: calc(16px + var(--device-bottom)); }
+.profile-screen { height: calc(100dvh - 60px - var(--device-top)); padding-bottom: calc(106px + var(--device-bottom)); }
+@media (max-width: 600px) { :root { --device-top: max(54px, env(safe-area-inset-top)); } .profile-screen .taste-slideshow { height: clamp(124px, 25dvh, 230px); } }
+@media (max-height: 650px) { .profile-screen { height: auto; min-height: calc(100dvh - 60px - var(--device-top)); } .profile-screen .taste-fields { flex: 0 0 auto; } }
+
+/* A branded recommendation card anchors the cafe detail page. */
+.detail-reason { padding: 24px 22px; background: #4b382d; color: #fff9f2; border-radius: 18px; }
+.detail-reason-brand { margin-bottom: 18px; }
+.detail-reason .cafekok-logo { color: #fff9f2; }
+.detail-reason .cafekok-logo-mark { background: #fff9f2; color: #4b382d; }
+.detail-reason .section-title { color: #fff9f2; font-size: 19px; font-weight: 600; }
+.detail-reason p:not(.eyebrow):not(.metadata) { max-width: none; color: #f2e8df; font-size: 15px; line-height: 1.8; }
+.detail-reason .detail-tags { margin-top: 18px; }
+.detail-reason .detail-tags > span { background: rgba(255,249,242,.14); color: #fff9f2; }

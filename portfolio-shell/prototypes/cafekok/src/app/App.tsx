@@ -652,13 +652,11 @@ function areaMapUrl(region: string) {
 function MiniMap({ region, hours }: { region: string; hours: string }) {
   return (
     <div className="sample-map detail-map">
-      <iframe
-        className="sample-map-frame"
-        title={`${region} 지역 지도`}
-        src={areaMapUrl(region)}
+      <img
+        className="detail-map-image"
+        src="/work/cafekok/prototype/images/seomyeon-naver-map.png"
+        alt="네이버 지도에서 캡처한 부산 서면·전포 일대 지도"
         loading="lazy"
-        tabIndex={-1}
-        aria-hidden="true"
       />
       <span className="sample-map-label">{region} · 정확한 위치 정보 없음</span>
       <div className="map-info-overlay">
@@ -673,11 +671,11 @@ function MiniMap({ region, hours }: { region: string; hours: string }) {
       </div>
       <a
         className="sample-map-attribution"
-        href="https://www.openstreetmap.org/copyright"
+        href="https://map.naver.com/p/search/서면역"
         target="_blank"
         rel="noreferrer"
       >
-        © OpenStreetMap 기여자
+        지도 © NAVER
       </a>
     </div>
   )
@@ -715,7 +713,7 @@ function Icon({
     bean: "coffee-bean",
     bell: "bell",
   }
-  const mask = `url("/work/cafekok/prototype/icons/${icons[name] || "coffee"}.svg") center / contain no-repeat`
+  const mask = `url("/icons/${icons[name] || "coffee"}.svg") center / contain no-repeat`
   return (
     <span
       aria-hidden="true"
@@ -916,7 +914,7 @@ function Modal({
 export default function App() {
   const [loaded, setLoaded] = useState(false)
   const [quizCompleted, setQuizCompleted] = useState(false)
-  const [screen, setScreen] = useState<Screen>(new URLSearchParams(window.location.search).get("preview") === "home" ? "home" : "onboard")
+  const [screen, setScreen] = useState<Screen>("onboard")
   const [tab, setTab] = useState<Screen>("home")
   const [prefs, setPrefs] = useState<Prefs>({})
   const [purpose, setPurpose] = useState<Purpose | undefined>()
@@ -1830,7 +1828,7 @@ export default function App() {
             <h1 className="page-title">{cafe.name}</h1>
           </div>
           <section className="detail-reason">
-            <Icon name="date" className="detail-ornament" />
+            <div className="detail-reason-brand"><Logo className="text-[18px]" /></div>
             <h2 className="section-title">
               {match(cafe) === undefined
                 ? "이런 공간이에요"
@@ -2017,7 +2015,7 @@ export default function App() {
               </a>{" "}
               ·{" "}
               <a
-                href="/work/cafekok/prototype/licenses/phosphor-LICENSE.txt"
+                href="/licenses/phosphor-LICENSE.txt"
                 target="_blank"
                 rel="noreferrer"
                 className="underline underline-offset-4"
@@ -2037,7 +2035,7 @@ export default function App() {
               </a>{" "}
               ·{" "}
               <a
-                href="/work/cafekok/prototype/licenses/lucide-LICENSE.txt"
+                href="/licenses/lucide-LICENSE.txt"
                 target="_blank"
                 rel="noreferrer"
                 className="underline underline-offset-4"
