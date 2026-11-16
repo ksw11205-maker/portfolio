@@ -1,0 +1,42 @@
+[
+  {
+    "current": "0",
+    "position": "0.00000",
+    "y": 4103,
+    "start": "3923",
+    "cls": "project-visual lg is-active",
+    "transform": "matrix(1.04, 0, 0, 1.04, 0, 0)"
+  },
+  {
+    "current": "1",
+    "position": "1.00000",
+    "y": 4913,
+    "start": "3923",
+    "cls": "project-visual ivi is-active",
+    "transform": "matrix(1.04, 0, 0, 1.04, 0, 0)"
+  },
+  {
+    "current": "2",
+    "position": "2.00000",
+    "y": 5723,
+    "start": "3923",
+    "cls": "project-visual cafekok is-active",
+    "transform": "matrix(1.04, 0, 0, 1.04, 0, 0)"
+  },
+  {
+    "current": "3",
+    "position": "3.00000",
+    "y": 6493,
+    "start": "3923",
+    "cls": "project-visual offer is-active",
+    "transform": "matrix(1.04, 0, 0, 1.04, 0, 0)"
+  },
+  {
+    "reduced": [
+      "none",
+      "none",
+      "none",
+      "none"
+    ]
+  }
+]

@@ -1,0 +1,40 @@
+/* Whole covers, a left reading rail, and visually distinct editorial chapters. */
+body[data-unified-case] #main .archive-hero{display:grid!important;grid-template-columns:minmax(280px,34%) minmax(0,66%);min-height:100svh!important;height:auto!important;align-items:center;padding:110px 32px 48px!important;gap:24px}
+body[data-unified-case] #main .archive-hero-intro{position:static!important;grid-column:1;grid-row:1;width:100%!important;min-height:0!important;padding:32px!important;height:auto!important}
+body[data-unified-case] #main .archive-hero-art{position:static!important;inset:auto!important;grid-column:2;grid-row:1;width:100%!important;height:auto!important;min-height:0!important;aspect-ratio:auto!important;background:none!important;overflow:visible!important}
+body[data-unified-case] #main .archive-hero-art>.mockup-preview{height:auto!important;display:block!important;overflow:visible!important}
+body[data-unified-case] #main .archive-hero-art img{position:static!important;width:100%!important;height:auto!important;max-height:none!important;object-fit:contain!important;transform:none!important;mask-image:none!important;-webkit-mask-image:none!important}
+body[data-unified-case] #main .mood-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.mood-card{position:relative;isolation:isolate;min-height:420px;aspect-ratio:1/1.1;padding:28px;display:flex;flex-direction:column;justify-content:space-between;border-radius:14px;overflow:hidden;color:white;background:#151515}
+.mood-card::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(#0004,#0001 30%,#000c)}
+.mood-card>img{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover}
+body[data-unified-case] #main .mood-card>strong{font-size:clamp(21px,2vw,32px);font-weight:600;letter-spacing:-.04em}
+body[data-unified-case] #main .mood-card h3{color:#fff;font-size:20px;margin:0 0 12px}
+body[data-unified-case] #main .mood-card p{color:#eee;font-size:15px;line-height:1.7;margin:0}
+.design-token-board{display:grid;grid-template-columns:1.1fr 1fr;gap:20px;align-items:stretch}
+.type-spec{background:var(--presentation-bg);border:1px solid var(--line);border-radius:14px;padding:32px}
+body[data-unified-case] #main .type-spec h3{font-size:clamp(28px,2.6vw,40px);margin:0 0 32px;line-height:1.4}
+.type-spec h3>span{display:block}
+.type-spec table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+body[data-unified-case] #main .type-spec :is(th,td){font-size:15px;text-align:left;padding:13px 0;border:0}
+.type-spec thead{border-bottom:1px solid var(--line);color:var(--case-muted)}
+body[data-unified-case] #main .token-scope{font-size:12px;color:var(--case-muted);margin:24px 0 0}
+.color-spec{display:grid;grid-template-columns:1.2fr 1fr;gap:16px}
+.accent-spec{background:var(--case-accent);color:#151515;border-radius:14px;padding:28px;display:flex;flex-direction:column;justify-content:space-between;min-height:320px}
+.accent-spec span{font-size:12px}.accent-spec strong{font-size:22px;font-weight:500}
+.neutral-spec{display:grid;grid-template-rows:repeat(3,1fr);overflow:hidden;border:1px solid var(--line);border-radius:14px}
+.neutral-spec>div{display:flex;flex-direction:column;justify-content:space-between;padding:22px;font-size:11px}
+.neutral-spec b{font-size:14px;font-weight:400}.base-spec{background:var(--bg);color:var(--ink)}.surface-spec{background:var(--presentation-bg);color:var(--ink)}.ink-spec{background:var(--ink);color:var(--bg)}
+.concept-flow-note{margin-top:40px}.authentic-system-notes{margin-top:48px;padding-top:32px;border-top:1px solid var(--line)}
+body[data-unified-case] #main #background .evidence-block{display:grid;grid-template-columns:1fr 1.3fr;gap:32px;align-items:center}
+body[data-unified-case] #main #background .evidence-block>div:empty{display:none}
+body[data-unified-case] #main #research .factor-funnel{background:transparent;border:0;padding-inline:0}
+body[data-unified-case] #main #research .model-values{border:0;border-block:1px solid var(--line);padding:36px 0}
+body[data-unified-case] #main .prototype-float{left:20px!important;right:auto!important}
+@media(min-width:1200px){body[data-unified-case] #main>.unified-chapter,body[data-unified-case] #main>.next-projects{width:calc(100% - 200px);max-width:1400px;margin-left:200px;margin-right:0}body[data-unified-case] #main .case-toc{position:fixed!important;left:24px;top:132px;width:156px;max-height:calc(100svh - 220px);padding:0;overflow:auto;border:0;z-index:30}body[data-unified-case] #main .case-nav{display:flex;flex-direction:column;gap:8px;align-items:flex-start}body[data-unified-case].case-toc-ready #main .case-toc:not(.is-after-cover){opacity:0!important;visibility:hidden!important;pointer-events:none!important}body[data-unified-case] #main .case-nav a{font-size:12px;min-height:36px}}
+@media(max-width:1199px){body[data-unified-case] #main .case-toc{position:relative!important;inset:auto!important}body[data-unified-case] #main .mood-card{min-height:340px;padding:24px}.design-token-board{grid-template-columns:1fr}}
+@media(max-width:1023px){body[data-unified-case] #main #background .evidence-block{grid-template-columns:1fr}.mood-grid{gap:12px!important}body[data-unified-case] #main .mood-card{min-height:360px;padding:20px}.mood-card>strong{overflow-wrap:anywhere}}
+@media(max-width:767px){body[data-unified-case] #main .archive-hero{display:flex!important;flex-direction:column;padding:100px 0 0!important;gap:0;min-height:0!important}body[data-unified-case] #main .archive-hero-intro{padding:24px!important;order:0}body[data-unified-case] #main .archive-hero-art{order:1}body[data-unified-case] #main .mood-grid{grid-template-columns:1fr}.mood-card{aspect-ratio:1.15;min-height:320px!important}.color-spec{grid-template-columns:1fr 1fr}.type-spec{padding:24px}.accent-spec{padding:20px;min-height:300px}.neutral-spec>div{padding:16px}.design-token-board{gap:16px}}
+.mood-grid>*{min-width:0}.mood-card{min-width:0;aspect-ratio:auto!important}.design-token-board>*{min-width:0}.color-spec>*{min-width:0}
+body[data-unified-case] #main .archive-hero{grid-template-columns:minmax(280px,.9fr) minmax(0,1.75fr)}
+body[data-project=cafekok][data-unified-case] #main .chapter-heading .section-kicker{color:#9b4b29}body[data-project=offer][data-unified-case] #main .chapter-heading .section-kicker{color:#c73512}

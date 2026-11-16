@@ -1,5 +1,11 @@
 # Current handoff — 2026-11-16
 
+최신 표지/미감 보강: `styles/art-directed-sections.css`가 네 상세에서 마지막으로 적용된다. 표지는 contain 비율의 전체 이미지, 1200px 이상에서는 왼쪽 고정 목차, 왼쪽 하단 프로토타입 버튼을 사용한다. CONCEPT은 사진 무드보드, DESIGN SYSTEM은 서체·크기·웨이트·색상 보드다. 이전 디자인 시스템의 실제 조작 설명과 제품 고유 색상 자료는 FINAL DESIGN 마지막으로 이동해 보존했다. 참고 사진 출처는 `redesign/assets/moods/CREDITS.md`.
+
+최신 8개 목차 개편: [재구성 매핑과 검증](master-review/unified-structure.md). 네 상세는 `styles/unified-cases.css`가 마지막 스타일이다. 쉘은 `styles/shell-cover-hover.css`에서 기존 OFFER의 1.04배 확대를 공통화했다. 제품 앱 코드는 변경하지 않았다. 이전 상세 순서·1920px 폭·연결선 규칙보다 이 기록을 우선한다.
+
+최신 사용자 요청 반영: [마스터 상세 리디자인 검증](master-review/README.md). 네 상세페이지에 `styles/master-editorial.css`가 마지막으로 로드된다. 연결선 스크립트는 상세에서 해제했으며, 원본 UI 자산·연구 사실·링크는 유지했다. 메인 쉘과 제품 UI는 수정하지 않았다. 이전 설명보다 이 기록을 우선한다.
+
 Current implementation and verification: [Portfolio reading system](reading-system-qa/README.md). This supersedes the historical cover-generation and typography instructions below. Use scripts/build-redesign-home.cjs to refresh shared artwork only; current case content is preserved.
 
 # 리디자인 구현 인계

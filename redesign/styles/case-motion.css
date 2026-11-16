@@ -1,9 +1,17 @@
-/* Safe default: visible content without JS, reduced motion or when paused. */
+/* One-time entrance only: chapters stay visible when scrolled past. */
 body[data-page="case"].case-motion-enhanced [data-reading-fade] {
-  opacity:var(--reading-opacity,1);
-  transition:opacity 160ms linear;
+  opacity:0;
+  transform:translateY(10px);
+  transition:opacity .58s cubic-bezier(.22,1,.36,1),transform .58s cubic-bezier(.22,1,.36,1);
 }
-body[data-page="case"].case-motion-enhanced [data-reading-fade]:focus-within {opacity:1}
+body[data-page="case"].case-motion-enhanced [data-reading-fade].is-reading-visible,
+body[data-page="case"].case-motion-enhanced [data-reading-fade]:focus-within {
+  opacity:1;
+  transform:none;
+}
+body[data-page="case"].is-motion-paused [data-reading-fade] {
+  opacity:1!important;transform:none!important;transition:none!important;
+}
 /* Remove decorative section rules; keep tables and feature connectors. */
 body[data-page="case"] :is(.case-section + .case-section,
   .product-story > .case-section + .case-section, .reflection-section,
@@ -15,8 +23,8 @@ body[data-page="case"] :is(.case-section + .case-section,
   border-bottom:0;
 }
 @media(prefers-reduced-motion:reduce) {
-  body[data-page="case"] [data-reading-fade] {opacity:1!important;transition:none!important}
+  body[data-page="case"] [data-reading-fade] {opacity:1!important;transform:none!important;transition:none!important}
 }
 @media print {
-  body[data-page="case"] [data-reading-fade] {opacity:1!important;transition:none!important}
+  body[data-page="case"] [data-reading-fade] {opacity:1!important;transform:none!important;transition:none!important}
 }

@@ -1,4 +1,15 @@
-# Current case-study design guide — 2026-11-16
+# 마스터 상세 디자인 기준 — 2026-11-16
+
+사용자 지정 SUNEUI MOON 포트폴리오를 네 상세페이지의 구성 기준으로 적용한다. 같은 원본의 YES24는 LG·IVI 다크 처리, KORAIL은 CAFEKOK·OFFER 라이트 처리의 참조다. 아래 과거 주석·색상·타이포 규칙보다 이 기준이 우선한다. 메인 쉘과 제품 UI는 적용 범위 밖이다.
+
+- 최신 상세 구조는 OVERVIEW → BACKGROUND → RESEARCH → DIRECTION → CONCEPT → DESIGN SYSTEM → FINAL DESIGN → RETROSPECTIVE의 8개 목차다. `redesign/styles/unified-cases.css`가 마지막 스타일이며 최대 1400px, 거터 24–64px, Pretendard 제목 30–48px·본문 17px을 적용한다. 이전 1920px/16:9 구간 규칙보다 우선한다.
+- 배경: LG #0B0A0E, IVI #0B0D10, CAFEKOK #FFF8EC, OFFER #F1F1ED. 강조는 기존 마젠타·바이올렛 / #63D9EA / #F29A70 / #FF4D22.
+- 큰 실제 UI, 낮은 대비의 1px 외곽선, 사각 키워드와 짧은 설명을 사용한다. 화면 위 연결선·점·좌표 주석을 기본 표현으로 사용하지 않는다. 원본 이미지와 연구 데이터는 보존한다.
+- 넓은 UI는 본문 폭을 사용한다. 모바일 UI는 최대 420px, 태블릿·모바일에서는 관련 설명을 이미지 아래에 둔다. 회고와 다음 프로젝트까지 같은 편집 기준을 적용한다.
+- 참조 관찰과 실제 검증: `docs/design/master-review/README.md`.
+- 현재 섹션 매핑·구현 검증: `docs/design/master-review/unified-structure.md`. 연구 결과와 후속 설계 제안, 기획 가설과 검증된 성과를 구분한다. FINAL DESIGN은 실제 화면 진입 순서로 구성하고 화면 아래 사각 키워드·1–2문장 설명을 붙인다.
+
+# Previous case-study design guide — 2026-11-16
 
 This guide supersedes older presentation rules below. Apply the installed Emil Kowalski Apple Design and Design Engineering skills in .agents/skills. Preserve the authentic interfaces, factual research, project identities, navigation destinations, and prototype functionality.
 

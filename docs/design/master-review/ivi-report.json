@@ -1,0 +1,329 @@
+[
+  {
+    "width": 1440,
+    "height": 900,
+    "overflow": false,
+    "overflowDetails": [],
+    "broken": [],
+    "wires": 0,
+    "boards": [
+      {
+        "w": 1122.8125,
+        "ratio": 1.635,
+        "renderedRatio": 1.6346433770014557
+      },
+      {
+        "w": 1122.8125,
+        "ratio": 1.635,
+        "renderedRatio": 1.6346433770014557
+      },
+      {
+        "w": 1122.8125,
+        "ratio": 1.635,
+        "renderedRatio": 1.6346433770014557
+      },
+      {
+        "w": 1122.8125,
+        "ratio": 1.635,
+        "renderedRatio": 1.6346433770014557
+      },
+      {
+        "w": 1122.8125,
+        "ratio": 1.635,
+        "renderedRatio": 1.6346433770014557
+      },
+      {
+        "w": 1122.8125,
+        "ratio": 1.635,
+        "renderedRatio": 1.6346433770014557
+      },
+      {
+        "w": 1122.8125,
+        "ratio": 1.635,
+        "renderedRatio": 1.6346433770014557
+      },
+      {
+        "w": 1122.8125,
+        "ratio": 2.397530864197531,
+        "renderedRatio": 2.3995726495726495
+      }
+    ],
+    "links": [
+      "https://www.figma.com/proto/FF8CphVdOl1e6iASFM4ef2/IVIS?page-id=0%3A1&node-id=103-936&starting-point-node-id=103%3A936&scaling=scale-down",
+      "/work/cafekok/"
+    ],
+    "errors": [],
+    "anchor": "#overview",
+    "captures": [
+      "docs/design/master-review/ivi-1440-0.jpg",
+      "docs/design/master-review/ivi-1440-1.jpg",
+      "docs/design/master-review/ivi-1440-2.jpg",
+      "docs/design/master-review/ivi-1440-3.jpg",
+      "docs/design/master-review/ivi-1440-4.jpg",
+      "docs/design/master-review/ivi-1440-5.jpg",
+      "docs/design/master-review/ivi-1440-6.jpg",
+      "docs/design/master-review/ivi-1440-7.jpg",
+      "docs/design/master-review/ivi-1440-8.jpg",
+      "docs/design/master-review/ivi-1440-9.jpg",
+      "docs/design/master-review/ivi-1440-10.jpg"
+    ]
+  },
+  {
+    "width": 1366,
+    "height": 768,
+    "overflow": false,
+    "overflowDetails": [],
+    "broken": [],
+    "wires": 0,
+    "boards": [
+      {
+        "w": 828.734375,
+        "ratio": 1.635,
+        "renderedRatio": 1.6351084812623273
+      },
+      {
+        "w": 828.734375,
+        "ratio": 1.635,
+        "renderedRatio": 1.6351084812623273
+      },
+      {
+        "w": 828.734375,
+        "ratio": 1.635,
+        "renderedRatio": 1.6351084812623273
+      },
+      {
+        "w": 828.734375,
+        "ratio": 1.635,
+        "renderedRatio": 1.6351084812623273
+      },
+      {
+        "w": 828.734375,
+        "ratio": 1.635,
+        "renderedRatio": 1.6351084812623273
+      },
+      {
+        "w": 828.734375,
+        "ratio": 1.635,
+        "renderedRatio": 1.6351084812623273
+      },
+      {
+        "w": 828.734375,
+        "ratio": 1.635,
+        "renderedRatio": 1.6351084812623273
+      },
+      {
+        "w": 1054.75,
+        "ratio": 2.397530864197531,
+        "renderedRatio": 2.397727272727273
+      }
+    ],
+    "links": [
+      "https://www.figma.com/proto/FF8CphVdOl1e6iASFM4ef2/IVIS?page-id=0%3A1&node-id=103-936&starting-point-node-id=103%3A936&scaling=scale-down",
+      "/work/cafekok/"
+    ],
+    "errors": [],
+    "anchor": "#overview",
+    "captures": [
+      "docs/design/master-review/ivi-1366-0.jpg",
+      "docs/design/master-review/ivi-1366-1.jpg",
+      "docs/design/master-review/ivi-1366-2.jpg",
+      "docs/design/master-review/ivi-1366-3.jpg",
+      "docs/design/master-review/ivi-1366-4.jpg",
+      "docs/design/master-review/ivi-1366-5.jpg",
+      "docs/design/master-review/ivi-1366-6.jpg",
+      "docs/design/master-review/ivi-1366-7.jpg",
+      "docs/design/master-review/ivi-1366-8.jpg",
+      "docs/design/master-review/ivi-1366-9.jpg",
+      "docs/design/master-review/ivi-1366-10.jpg"
+    ]
+  },
+  {
+    "width": 768,
+    "height": 1024,
+    "overflow": false,
+    "overflowDetails": [],
+    "broken": [],
+    "wires": 0,
+    "boards": [
+      {
+        "w": 704.5625,
+        "ratio": 1.635,
+        "renderedRatio": 1.6357308584686774
+      },
+      {
+        "w": 704.5625,
+        "ratio": 1.635,
+        "renderedRatio": 1.6357308584686774
+      },
+      {
+        "w": 704.5625,
+        "ratio": 1.635,
+        "renderedRatio": 1.6357308584686774
+      },
+      {
+        "w": 704.5625,
+        "ratio": 1.635,
+        "renderedRatio": 1.6357308584686774
+      },
+      {
+        "w": 704.5625,
+        "ratio": 1.635,
+        "renderedRatio": 1.6357308584686774
+      },
+      {
+        "w": 704.5625,
+        "ratio": 1.635,
+        "renderedRatio": 1.6357308584686774
+      },
+      {
+        "w": 704.5625,
+        "ratio": 1.635,
+        "renderedRatio": 1.6357308584686774
+      },
+      {
+        "w": 704.5625,
+        "ratio": 2.397530864197531,
+        "renderedRatio": 2.3979591836734695
+      }
+    ],
+    "links": [
+      "https://www.figma.com/proto/FF8CphVdOl1e6iASFM4ef2/IVIS?page-id=0%3A1&node-id=103-936&starting-point-node-id=103%3A936&scaling=scale-down",
+      "/work/cafekok/"
+    ],
+    "errors": [],
+    "anchor": "#overview",
+    "captures": [
+      "docs/design/master-review/ivi-768-0.jpg",
+      "docs/design/master-review/ivi-768-1.jpg",
+      "docs/design/master-review/ivi-768-2.jpg",
+      "docs/design/master-review/ivi-768-3.jpg",
+      "docs/design/master-review/ivi-768-4.jpg",
+      "docs/design/master-review/ivi-768-5.jpg",
+      "docs/design/master-review/ivi-768-6.jpg",
+      "docs/design/master-review/ivi-768-7.jpg",
+      "docs/design/master-review/ivi-768-8.jpg",
+      "docs/design/master-review/ivi-768-9.jpg",
+      "docs/design/master-review/ivi-768-10.jpg"
+    ]
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "overflow": false,
+    "overflowDetails": [
+      [
+        "data-table",
+        544,
+        0
+      ],
+      [
+        "",
+        544,
+        0
+      ],
+      [
+        "",
+        544,
+        0
+      ],
+      [
+        "",
+        544,
+        0
+      ],
+      [
+        "",
+        544,
+        0
+      ],
+      [
+        "",
+        440.53125,
+        0
+      ],
+      [
+        "",
+        544,
+        0
+      ],
+      [
+        "",
+        544,
+        0
+      ],
+      [
+        "",
+        544,
+        0
+      ],
+      [
+        "",
+        440.53125,
+        0
+      ]
+    ],
+    "broken": [],
+    "wires": 0,
+    "boards": [
+      {
+        "w": 340,
+        "ratio": 1.635,
+        "renderedRatio": 1.6346153846153846
+      },
+      {
+        "w": 340,
+        "ratio": 1.635,
+        "renderedRatio": 1.6346153846153846
+      },
+      {
+        "w": 340,
+        "ratio": 1.635,
+        "renderedRatio": 1.6346153846153846
+      },
+      {
+        "w": 340,
+        "ratio": 1.635,
+        "renderedRatio": 1.6346153846153846
+      },
+      {
+        "w": 340,
+        "ratio": 1.635,
+        "renderedRatio": 1.6346153846153846
+      },
+      {
+        "w": 340,
+        "ratio": 1.635,
+        "renderedRatio": 1.6346153846153846
+      },
+      {
+        "w": 340,
+        "ratio": 1.635,
+        "renderedRatio": 1.6346153846153846
+      },
+      {
+        "w": 340,
+        "ratio": 2.397530864197531,
+        "renderedRatio": 2.3943661971830985
+      }
+    ],
+    "links": [
+      "https://www.figma.com/proto/FF8CphVdOl1e6iASFM4ef2/IVIS?page-id=0%3A1&node-id=103-936&starting-point-node-id=103%3A936&scaling=scale-down",
+      "/work/cafekok/"
+    ],
+    "errors": [],
+    "anchor": "#overview",
+    "captures": [
+      "docs/design/master-review/ivi-390-0.jpg",
+      "docs/design/master-review/ivi-390-1.jpg",
+      "docs/design/master-review/ivi-390-2.jpg",
+      "docs/design/master-review/ivi-390-3.jpg",
+      "docs/design/master-review/ivi-390-4.jpg",
+      "docs/design/master-review/ivi-390-5.jpg",
+      "docs/design/master-review/ivi-390-6.jpg",
+      "docs/design/master-review/ivi-390-7.jpg",
+      "docs/design/master-review/ivi-390-8.jpg",
+      "docs/design/master-review/ivi-390-9.jpg",
+      "docs/design/master-review/ivi-390-10.jpg"
+    ]
+  }
+]
