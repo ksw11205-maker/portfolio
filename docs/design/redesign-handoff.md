@@ -1,12 +1,17 @@
-# Current handoff — 2026-11-16
+# Current handoff — 2026-11-17
 
-최신 표지/미감 보강: `styles/art-directed-sections.css`가 네 상세에서 마지막으로 적용된다. 표지는 contain 비율의 전체 이미지, 1200px 이상에서는 왼쪽 고정 목차, 왼쪽 하단 프로토타입 버튼을 사용한다. CONCEPT은 사진 무드보드, DESIGN SYSTEM은 서체·크기·웨이트·색상 보드다. 이전 디자인 시스템의 실제 조작 설명과 제품 고유 색상 자료는 FINAL DESIGN 마지막으로 이동해 보존했다. 참고 사진 출처는 `redesign/assets/moods/CREDITS.md`.
+**작업 기준은 `redesign/` 단일 버전이다.** 기본 실행 `npm run dev`는 4175 포트의 최신 리디자인만 연다. 이전 `portfolio-shell/dist/`는 읽기 전용 보관본이며 기본 실행·수정·배포 경로에서 제외했다. 과거 Git 브랜치와 백업은 복구 가능성을 위해 삭제하지 않는다.
 
-최신 8개 목차 개편: [재구성 매핑과 검증](master-review/unified-structure.md). 네 상세는 `styles/unified-cases.css`가 마지막 스타일이다. 쉘은 `styles/shell-cover-hover.css`에서 기존 OFFER의 1.04배 확대를 공통화했다. 제품 앱 코드는 변경하지 않았다. 이전 상세 순서·1920px 폭·연결선 규칙보다 이 기록을 우선한다.
+## 연구 자료 기반 상세페이지 구조 · 2026-11-17
 
-최신 사용자 요청 반영: [마스터 상세 리디자인 검증](master-review/README.md). 네 상세페이지에 `styles/master-editorial.css`가 마지막으로 로드된다. 연결선 스크립트는 상세에서 해제했으며, 원본 UI 자산·연구 사실·링크는 유지했다. 메인 쉘과 제품 UI는 수정하지 않았다. 이전 설명보다 이 기록을 우선한다.
+- LG는 `NAVER_UX_LG_KimSeongwon.pdf` 18장 발표자료와 `LG-detail-layout.pdf`의 연구 순서를 따른다. OVERVIEW → BACKGROUND → 대표 시퀀스·요인 정의 → 1차 실험·요인 선별 → 2차 실험·예측 모델 → AI Design Tool의 IA·입력·분석·대안·비교 → REFLECTION. 일반적인 CONCEPT 및 DESIGN SYSTEM 장은 제거한다.
+- IVI는 원 연구 발표자료의 Introduction → Method → Results → Discussion → Conclusion 순서를 따른다. 15개 사례·4개 레이아웃 → 실험 환경·과제·절차 → 객관적·주관적 결과·히트맵 → 기능별 설계 시사점 → 한계·향후 과제. CONCEPT 및 DESIGN SYSTEM 장은 제거한다.
+- IVI의 하이브리드 UI는 실험에서 직접 검증된 결과가 아니라, 기능별 결과를 바탕으로 한 후속 설계 제안으로 표시한다. 시선 분산은 직접 시선추적 측정이 아니라 자기보고 결과임을 유지한다.
+- 실제 연구 성과와 개인 UI 리디자인, 프로토타입 예시 점수를 서로 구분한다. 연구 사실·표본·수치·실험 결과는 원본 자료를 임의로 보정하지 않는다.
 
-Current implementation and verification: [Portfolio reading system](reading-system-qa/README.md). This supersedes the historical cover-generation and typography instructions below. Use scripts/build-redesign-home.cjs to refresh shared artwork only; current case content is preserved.
+## 최신 실행 경로
+
+`npm run dev` → `scripts/serve-redesign.cjs` → `redesign/` → `http://localhost:4175/`.
 
 # 리디자인 구현 인계
 
