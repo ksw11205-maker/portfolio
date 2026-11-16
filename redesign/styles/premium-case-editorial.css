@@ -1,0 +1,80 @@
+﻿/* Project-specific editorial compositions built from existing product screens. */
+body[data-unified-case] { --premium-rule:rgba(255,255,255,.18); --premium-muted:#c3bec6; --premium-accent:#f065b1; }
+body[data-project="ivi"] { --premium-accent:#63d9ea; --premium-muted:#bec8cb; }
+body[data-project="cafekok"] { --premium-accent:#a34b28; --premium-rule:rgba(48,37,31,.22); --premium-muted:#5f514a; }
+body[data-project="offer"] { --premium-accent:#c73512; --premium-rule:rgba(23,23,23,.2); --premium-muted:#555; }
+body[data-unified-case] .premium-intro { display:grid; grid-template-columns:minmax(240px,.8fr) minmax(0,1.2fr); align-items:center; gap:clamp(36px,6vw,100px); margin-block:clamp(72px,8vw,140px) 0; padding-block:clamp(40px,5vw,80px); border-block:1px solid var(--premium-rule); }
+body[data-unified-case] .premium-intro > * { min-inline-size:0; }
+body[data-unified-case] .premium-copy { max-width:35rem; }
+body[data-unified-case] .premium-label { color:var(--premium-accent); font-size:.75rem; font-weight:600; letter-spacing:.045em; }
+body[data-unified-case] .premium-copy h3 { margin:24px 0; font-size:clamp(1.9rem,1.25rem + 1.7vw,3.35rem); line-height:1.28; letter-spacing:-.04em; font-weight:600; }
+body[data-unified-case] .premium-copy > p:not(.premium-label) { max-width:36em; font-size:1rem; line-height:1.8; }
+body[data-unified-case] .premium-copy .premium-source { margin-top:24px; color:var(--premium-muted); font-size:.75rem!important; }
+body[data-unified-case] .premium-intro figure { margin:0; }
+body[data-unified-case] .premium-intro img { display:block; inline-size:100%; block-size:auto; object-fit:contain; border:1px solid var(--premium-rule); }
+body[data-unified-case] .premium-intro figcaption { margin-top:16px; display:flex; flex-wrap:wrap; gap:8px 16px; color:var(--premium-accent); font-size:.75rem; line-height:1.6; font-weight:600; }
+body[data-unified-case] .premium-intro figcaption span { color:var(--premium-muted); font-weight:400; }
+body[data-unified-case] .premium-lg { grid-template-columns:minmax(240px,.72fr) minmax(0,1.28fr); }
+body[data-unified-case] .premium-lg figure { max-width:760px; justify-self:end; }
+body[data-unified-case] .premium-ivi { grid-template-columns:minmax(240px,.8fr) minmax(0,1.2fr); }
+body[data-unified-case] .premium-cafe { grid-template-columns:minmax(250px,1fr) minmax(0,1fr); }
+body[data-unified-case] .premium-phones { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:clamp(12px,2vw,30px); align-items:start; max-width:620px; justify-self:end; padding:clamp(16px,3vw,48px); background:#f4e7d6; }
+body[data-unified-case] .premium-phones img:nth-child(2) { margin-top:clamp(32px,5vw,80px); }
+body[data-unified-case] .premium-phones figcaption { grid-column:1 / -1; }
+body[data-unified-case] .premium-dimensions { display:flex; flex-wrap:wrap; gap:8px; margin-top:28px; }
+body[data-unified-case] .premium-dimensions span { border:1px solid var(--premium-rule); padding:7px 10px; font-size:.75rem; }
+body[data-unified-case] .premium-offer { grid-template-columns:minmax(240px,.68fr) minmax(0,1.32fr); }
+body[data-unified-case] .premium-browser { padding:clamp(12px,2vw,28px); background:#e5e5df; }
+@media (max-width:1023px) { body[data-unified-case] .premium-intro { grid-template-columns:minmax(0,1fr); gap:32px; } body[data-unified-case] .premium-intro figure { justify-self:stretch; } }
+@media (max-width:767px) { body[data-unified-case] .premium-intro { margin-top:56px; padding-block:40px; } body[data-unified-case] .premium-copy h3 { font-size:clamp(1.85rem,1.3rem + 2vw,2.4rem); } body[data-unified-case] .premium-phones { max-width:100%; } }
+/* The automotive comparison reads as a full-width research plate. */
+@media (min-width:1024px) {
+ body[data-unified-case] .premium-ivi { grid-template-columns:minmax(0,1fr); gap:48px; }
+ body[data-unified-case] .premium-ivi .premium-copy { max-width:55rem; }
+ body[data-unified-case] .premium-ivi figure { width:min(100%,1200px); margin-left:auto; }
+}
+/* CAFÉKOK: keep mobile navigation and prototype access in normal flow. */
+body[data-project="cafekok"] .cafe-mobile-prototype { display:none; }
+@media (max-width:1023px) {
+ body[data-project="cafekok"] > .header { position:relative!important; inset:auto!important; margin:max(12px,env(safe-area-inset-top)) auto 0!important; transform:none!important; }
+ body[data-project="cafekok"] #main .case-toc { position:relative!important; inset:auto!important; width:auto; max-height:none; margin-inline:max(20px,env(safe-area-inset-left)) max(20px,env(safe-area-inset-right)); padding:20px 0; overflow:visible; opacity:1!important; visibility:visible!important; pointer-events:auto!important; }
+ body[data-project="cafekok"] #main .case-nav { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:4px 16px; }
+ body[data-project="cafekok"] #main .case-nav a { min-height:44px; }
+ body[data-project="cafekok"] #main .cafe-mobile-prototype { display:inline-flex; align-items:center; gap:20px; min-height:44px; padding:10px 16px; margin-top:16px; border:1px solid currentColor; color:#913e22; font-size:.85rem; }
+ body[data-project="cafekok"] > .prototype-float { display:none!important; }
+ body[data-project="cafekok"] > .site-footer { padding-bottom:max(24px,env(safe-area-inset-bottom)); }
+ body[data-project="cafekok"] .case-section[id] { scroll-margin-top:24px; }
+}
+body[data-project="cafekok"] .cafe-mobile-prototype:focus-visible { outline:3px solid #913e22; outline-offset:4px; }
+/* OFFER: use actual interface comparisons as the concept, with a quiet frame. */
+body[data-project="offer"] .offer-editorial-pair { display:grid; grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr); gap:clamp(24px,4vw,64px); align-items:start; margin-block:clamp(48px,6vw,96px) 24px; }
+body[data-project="offer"] .offer-editorial-pair figure { margin:0; min-width:0; }
+body[data-project="offer"] .offer-editorial-pair figure:nth-child(2) { margin-top:clamp(40px,7vw,112px); }
+body[data-project="offer"] .offer-editorial-pair img { display:block; width:100%; height:auto; border:1px solid rgba(23,23,23,.16); }
+body[data-project="offer"] .offer-editorial-pair figcaption { display:flex; flex-direction:column; gap:8px; margin-top:16px; font-size:.85rem; line-height:1.6; }
+body[data-project="offer"] .offer-editorial-pair figcaption strong { color:#bb3517; font-size:.75rem; }
+body[data-project="offer"] .offer-principles > div { background:transparent!important; border:0!important; border-top:1px solid rgba(23,23,23,.25)!important; border-radius:0!important; padding-inline:0!important; }
+body[data-project="offer"] .offer-mobile-prototype { display:none; }
+@media (max-width:1023px) {
+ body[data-project="offer"] > .header { position:relative!important; inset:auto!important; margin:max(12px,env(safe-area-inset-top)) auto 0!important; transform:none!important; }
+ body[data-project="offer"] #main .case-toc { position:relative!important; inset:auto!important; width:auto; max-height:none; margin-inline:max(20px,env(safe-area-inset-left)) max(20px,env(safe-area-inset-right)); padding:20px 0; overflow:visible; opacity:1!important; visibility:visible!important; pointer-events:auto!important; }
+ body[data-project="offer"] #main .case-nav { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:4px 16px; }
+ body[data-project="offer"] #main .case-nav a { min-height:44px; }
+ body[data-project="offer"] #main .offer-mobile-prototype { display:inline-flex; align-items:center; gap:20px; min-height:44px; padding:10px 16px; margin-top:16px; border:1px solid currentColor; color:#b72f13; font-size:.85rem; }
+ body[data-project="offer"] > .prototype-float { display:none!important; }
+ body[data-project="offer"] > .site-footer { padding-bottom:max(24px,env(safe-area-inset-bottom)); }
+ body[data-project="offer"] .case-section[id] { scroll-margin-top:24px; }
+}
+@media (max-width:767px) { body[data-project="offer"] .offer-editorial-pair { grid-template-columns:minmax(0,1fr); } body[data-project="offer"] .offer-editorial-pair figure:nth-child(2) { margin-top:16px; } }
+body[data-project="offer"] .offer-mobile-prototype:focus-visible { outline:3px solid #b72f13; outline-offset:4px; }
+/* Wide research and tool screens remain readable on small displays. */
+@media (max-width:600px) {
+ body[data-project="lg"] #main .is-wide-ui .interface-content { display:block; overflow-x:auto; overscroll-behavior-inline:contain; }
+ body[data-project="lg"] #main .is-wide-ui .interface-content > .interface-image { min-width:640px!important; max-width:none!important; width:640px!important; }
+ body[data-project="ivi"] .heatmap-scroll { overflow-x:auto; overscroll-behavior-inline:contain; }
+ body[data-project="ivi"] .heatmap-scroll img { min-width:640px; max-width:none; width:640px; height:auto; }
+}
+body[data-project="lg"] .interface-content:focus-visible,body[data-project="ivi"] .heatmap-scroll:focus-visible { outline:3px solid var(--premium-accent); outline-offset:4px; }
+@media (min-width:1024px) {
+ body[data-project="cafekok"] .case-section[id], body[data-project="offer"] .case-section[id] { scroll-margin-top:144px; }
+}

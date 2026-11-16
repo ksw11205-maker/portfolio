@@ -12,7 +12,8 @@ const digest = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
   const embeddedImages = new Map();
   for (const cover of manifest.outputs) {
     const svg = fs.readFileSync(path.join(root, cover.path), 'utf8');
-    if (digest(Buffer.from(svg)) !== cover.sha256) throw Error('Output hash changed: ' + cover.path);
+    // Git may check out text SVGs with CRLF on Windows; the manifest hashes canonical LF bytes.
+    if (digest(Buffer.from(svg.replace(/\r\n/g, '\n'))) !== cover.sha256) throw Error('Output hash changed: ' + cover.path);
     if (/href="(?!data:)/.test(svg)) throw Error('External image reference: ' + cover.path);
     if (/<text\b/.test(svg)) throw Error('Baked vector text: ' + cover.path);
     for (const match of svg.matchAll(/href="data:image\/[^;]+;base64,([^"]+)/g)) {

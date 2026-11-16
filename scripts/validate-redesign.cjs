@@ -135,7 +135,9 @@ for (const [file, doc] of documents) {
   if (PORTFOLIO_PAGES.has(rel(file)) && /\bdata-page=["']case["']/.test(doc.text)) {
     const covers = doc.nodes.filter(node => node.name === 'a' && Object.hasOwn(node.attrs, 'data-prototype-cover'));
     const floats = doc.nodes.filter(node => node.name === 'a' && Object.hasOwn(node.attrs, 'data-prototype-float'));
-    const result = { file: rel(file), coverCount: covers.length, floatCount: floats.length, sameDestination: false, floatingInitiallyHidden: false };
+    const mobiles = doc.nodes.filter(node => node.name === 'a' && Object.hasOwn(node.attrs, 'data-prototype-mobile'));
+    const result = { file: rel(file), coverCount: covers.length, floatCount: floats.length, mobileCount: mobiles.length, sameDestination: false, floatingInitiallyHidden: false };
+    if (mobiles.length !== 1) issue(file, 'prototype-mobile-count', 'Case must have exactly one mobile navigation prototype CTA.');
     if (covers.length !== 1 || floats.length !== 1) issue(file, 'prototype-cta-count', 'Case must have exactly one cover CTA and one floating prototype CTA.');
     else {
       result.sameDestination = new URL(covers[0].attrs.href, 'https://portfolio.local/' + rel(file)).href === new URL(floats[0].attrs.href, 'https://portfolio.local/' + rel(file)).href;
@@ -145,8 +147,16 @@ for (const [file, doc] of documents) {
       if (!result.floatingInitiallyHidden) issue(file, 'prototype-float-initial-state', 'Floating CTA must begin hidden and be revealed after the hero leaves the viewport.');
       for (const cta of [covers[0], floats[0]]) if (cta.attrs.target === '_blank' && !/\bnoopener\b/.test(cta.attrs.rel || '')) issue(file, 'prototype-cta-rel', 'New-tab prototype CTA is missing rel=noopener.', cta.index, doc.text);
       const target = new URL(covers[0].attrs.href, 'https://portfolio.local/' + rel(file)).href;
-      const additional = doc.nodes.filter(node => node.name === 'a' && node.attrs.href && node !== covers[0] && node !== floats[0] && new URL(node.attrs.href, 'https://portfolio.local/' + rel(file)).href === target);
-      if (additional.length) issue(file, 'additional-prototype-cta', `${additional.length} additional link(s) repeat the prototype destination outside the authorized two CTAs.`);
+      if (mobiles.length === 1) {
+        const mobile = mobiles[0];
+        const tocStart = doc.nodes.find(node => node.name === 'aside' && /(?:^|\s)case-toc(?:\s|$)/.test(node.attrs.class || ''));
+        const tocEnd = tocStart && doc.text.indexOf('</aside>', tocStart.index);
+        if (!mobile.attrs.href || new URL(mobile.attrs.href, 'https://portfolio.local/' + rel(file)).href !== target) issue(file, 'prototype-mobile-mismatch', 'Mobile navigation CTA destination differs from the cover CTA.', mobile.index, doc.text);
+        if (!tocStart || tocEnd < 0 || mobile.index <= tocStart.index || mobile.index >= tocEnd) issue(file, 'prototype-mobile-location', 'Mobile prototype CTA must be inside the project table of contents.', mobile.index, doc.text);
+        if (mobile.attrs.target !== '_blank' || !/\bnoopener\b/.test(mobile.attrs.rel || '')) issue(file, 'prototype-mobile-rel', 'Mobile prototype CTA must open in a new tab with rel=noopener.', mobile.index, doc.text);
+      }
+      const additional = doc.nodes.filter(node => node.name === 'a' && node.attrs.href && node !== covers[0] && node !== floats[0] && !mobiles.includes(node) && new URL(node.attrs.href, 'https://portfolio.local/' + rel(file)).href === target);
+      if (additional.length) issue(file, 'additional-prototype-cta', `${additional.length} additional link(s) repeat the prototype destination outside the designated CTAs.`);
     }
     ctaChecks.push(result);
   }
