@@ -1,0 +1,298 @@
+[
+  {
+    "width": 1440,
+    "height": 900,
+    "overflow": false,
+    "overflowDetails": [],
+    "broken": [],
+    "wires": 0,
+    "boards": [
+      {
+        "w": 270.3125,
+        "ratio": 0.46208530805687204,
+        "renderedRatio": 0.46153846153846156
+      },
+      {
+        "w": 270.3125,
+        "ratio": 0.46208530805687204,
+        "renderedRatio": 0.46153846153846156
+      },
+      {
+        "w": 270.3125,
+        "ratio": 0.46208530805687204,
+        "renderedRatio": 0.46153846153846156
+      },
+      {
+        "w": 270.3125,
+        "ratio": 0.46208530805687204,
+        "renderedRatio": 0.46153846153846156
+      },
+      {
+        "w": 270.3125,
+        "ratio": 0.46208530805687204,
+        "renderedRatio": 0.46153846153846156
+      },
+      {
+        "w": 270.3125,
+        "ratio": 0.46208530805687204,
+        "renderedRatio": 0.46153846153846156
+      },
+      {
+        "w": 270.3125,
+        "ratio": 0.46208530805687204,
+        "renderedRatio": 0.46153846153846156
+      },
+      {
+        "w": 270.3125,
+        "ratio": 0.46208530805687204,
+        "renderedRatio": 0.46153846153846156
+      },
+      {
+        "w": 270.3125,
+        "ratio": 0.46208530805687204,
+        "renderedRatio": 0.46153846153846156
+      }
+    ],
+    "links": [
+      "/work/cafekok/prototype/",
+      "/work/offer/case-study.html"
+    ],
+    "errors": [],
+    "anchor": "#overview",
+    "captures": [
+      "docs/design/master-review/cafekok-1440-0.jpg",
+      "docs/design/master-review/cafekok-1440-1.jpg",
+      "docs/design/master-review/cafekok-1440-2.jpg",
+      "docs/design/master-review/cafekok-1440-3.jpg",
+      "docs/design/master-review/cafekok-1440-4.jpg",
+      "docs/design/master-review/cafekok-1440-5.jpg",
+      "docs/design/master-review/cafekok-1440-6.jpg",
+      "docs/design/master-review/cafekok-1440-7.jpg",
+      "docs/design/master-review/cafekok-1440-8.jpg",
+      "docs/design/master-review/cafekok-1440-9.jpg",
+      "docs/design/master-review/cafekok-1440-10.jpg"
+    ]
+  },
+  {
+    "width": 1366,
+    "height": 768,
+    "overflow": false,
+    "overflowDetails": [],
+    "broken": [],
+    "wires": 0,
+    "boards": [
+      {
+        "w": 230.65625,
+        "ratio": 0.46208530805687204,
+        "renderedRatio": 0.46292585170340683
+      },
+      {
+        "w": 230.65625,
+        "ratio": 0.46208530805687204,
+        "renderedRatio": 0.46292585170340683
+      },
+      {
+        "w": 230.65625,
+        "ratio": 0.46208530805687204,
+        "renderedRatio": 0.46292585170340683
+      },
+      {
+        "w": 230.65625,
+        "ratio": 0.46208530805687204,
+        "renderedRatio": 0.46292585170340683
+      },
+      {
+        "w": 230.65625,
+        "ratio": 0.46208530805687204,
+        "renderedRatio": 0.46292585170340683
+      },
+      {
+        "w": 230.65625,
+        "ratio": 0.46208530805687204,
+        "renderedRatio": 0.46292585170340683
+      },
+      {
+        "w": 230.65625,
+        "ratio": 0.46208530805687204,
+        "renderedRatio": 0.46292585170340683
+      },
+      {
+        "w": 230.65625,
+        "ratio": 0.46208530805687204,
+        "renderedRatio": 0.46292585170340683
+      },
+      {
+        "w": 230.65625,
+        "ratio": 0.46208530805687204,
+        "renderedRatio": 0.46292585170340683
+      }
+    ],
+    "links": [
+      "/work/cafekok/prototype/",
+      "/work/offer/case-study.html"
+    ],
+    "errors": [],
+    "anchor": "#overview",
+    "captures": [
+      "docs/design/master-review/cafekok-1366-0.jpg",
+      "docs/design/master-review/cafekok-1366-1.jpg",
+      "docs/design/master-review/cafekok-1366-2.jpg",
+      "docs/design/master-review/cafekok-1366-3.jpg",
+      "docs/design/master-review/cafekok-1366-4.jpg",
+      "docs/design/master-review/cafekok-1366-5.jpg",
+      "docs/design/master-review/cafekok-1366-6.jpg",
+      "docs/design/master-review/cafekok-1366-7.jpg",
+      "docs/design/master-review/cafekok-1366-8.jpg",
+      "docs/design/master-review/cafekok-1366-9.jpg",
+      "docs/design/master-review/cafekok-1366-10.jpg"
+    ]
+  },
+  {
+    "width": 768,
+    "height": 1024,
+    "overflow": false,
+    "overflowDetails": [],
+    "broken": [],
+    "wires": 0,
+    "boards": [
+      {
+        "w": 307.546875,
+        "ratio": 0.46208530805687204,
+        "renderedRatio": 0.4624624624624625
+      },
+      {
+        "w": 307.546875,
+        "ratio": 0.46208530805687204,
+        "renderedRatio": 0.4624624624624625
+      },
+      {
+        "w": 307.546875,
+        "ratio": 0.46208530805687204,
+        "renderedRatio": 0.4624624624624625
+      },
+      {
+        "w": 307.546875,
+        "ratio": 0.46208530805687204,
+        "renderedRatio": 0.4624624624624625
+      },
+      {
+        "w": 307.546875,
+        "ratio": 0.46208530805687204,
+        "renderedRatio": 0.4624624624624625
+      },
+      {
+        "w": 307.546875,
+        "ratio": 0.46208530805687204,
+        "renderedRatio": 0.4624624624624625
+      },
+      {
+        "w": 307.546875,
+        "ratio": 0.46208530805687204,
+        "renderedRatio": 0.4624624624624625
+      },
+      {
+        "w": 307.546875,
+        "ratio": 0.46208530805687204,
+        "renderedRatio": 0.4624624624624625
+      },
+      {
+        "w": 307.546875,
+        "ratio": 0.46208530805687204,
+        "renderedRatio": 0.4624624624624625
+      }
+    ],
+    "links": [
+      "/work/cafekok/prototype/",
+      "/work/offer/case-study.html"
+    ],
+    "errors": [],
+    "anchor": "#overview",
+    "captures": [
+      "docs/design/master-review/cafekok-768-0.jpg",
+      "docs/design/master-review/cafekok-768-1.jpg",
+      "docs/design/master-review/cafekok-768-2.jpg",
+      "docs/design/master-review/cafekok-768-3.jpg",
+      "docs/design/master-review/cafekok-768-4.jpg",
+      "docs/design/master-review/cafekok-768-5.jpg",
+      "docs/design/master-review/cafekok-768-6.jpg",
+      "docs/design/master-review/cafekok-768-7.jpg",
+      "docs/design/master-review/cafekok-768-8.jpg",
+      "docs/design/master-review/cafekok-768-9.jpg",
+      "docs/design/master-review/cafekok-768-10.jpg"
+    ]
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "overflow": false,
+    "overflowDetails": [],
+    "broken": [],
+    "wires": 0,
+    "boards": [
+      {
+        "w": 233.984375,
+        "ratio": 0.46208530805687204,
+        "renderedRatio": 0.4624505928853755
+      },
+      {
+        "w": 233.984375,
+        "ratio": 0.46208530805687204,
+        "renderedRatio": 0.4624505928853755
+      },
+      {
+        "w": 233.984375,
+        "ratio": 0.46208530805687204,
+        "renderedRatio": 0.4624505928853755
+      },
+      {
+        "w": 233.984375,
+        "ratio": 0.46208530805687204,
+        "renderedRatio": 0.4624505928853755
+      },
+      {
+        "w": 233.984375,
+        "ratio": 0.46208530805687204,
+        "renderedRatio": 0.4624505928853755
+      },
+      {
+        "w": 233.984375,
+        "ratio": 0.46208530805687204,
+        "renderedRatio": 0.4624505928853755
+      },
+      {
+        "w": 233.984375,
+        "ratio": 0.46208530805687204,
+        "renderedRatio": 0.4624505928853755
+      },
+      {
+        "w": 233.984375,
+        "ratio": 0.46208530805687204,
+        "renderedRatio": 0.4624505928853755
+      },
+      {
+        "w": 233.984375,
+        "ratio": 0.46208530805687204,
+        "renderedRatio": 0.4624505928853755
+      }
+    ],
+    "links": [
+      "/work/cafekok/prototype/",
+      "/work/offer/case-study.html"
+    ],
+    "errors": [],
+    "anchor": "#overview",
+    "captures": [
+      "docs/design/master-review/cafekok-390-0.jpg",
+      "docs/design/master-review/cafekok-390-1.jpg",
+      "docs/design/master-review/cafekok-390-2.jpg",
+      "docs/design/master-review/cafekok-390-3.jpg",
+      "docs/design/master-review/cafekok-390-4.jpg",
+      "docs/design/master-review/cafekok-390-5.jpg",
+      "docs/design/master-review/cafekok-390-6.jpg",
+      "docs/design/master-review/cafekok-390-7.jpg",
+      "docs/design/master-review/cafekok-390-8.jpg",
+      "docs/design/master-review/cafekok-390-9.jpg",
+      "docs/design/master-review/cafekok-390-10.jpg"
+    ]
+  }
+]

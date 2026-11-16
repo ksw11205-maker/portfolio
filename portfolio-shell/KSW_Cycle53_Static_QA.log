@@ -1,0 +1,30 @@
+[
+  {
+    "project": "LG",
+    "file": "work/lg/index.html",
+    "images": 17,
+    "css_files_checked": 2,
+    "issues": []
+  },
+  {
+    "project": "IVI",
+    "file": "work/ivi/index.html",
+    "images": 31,
+    "css_files_checked": 15,
+    "issues": []
+  },
+  {
+    "project": "CAFEKOK",
+    "file": "work/cafekok/index.html",
+    "images": 14,
+    "css_files_checked": 13,
+    "issues": []
+  },
+  {
+    "project": "OFFER",
+    "file": "work/offer/case-study.html",
+    "images": 15,
+    "css_files_checked": 11,
+    "issues": []
+  }
+]

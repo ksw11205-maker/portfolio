@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "lg",
+    "transform": "matrix(1.04, 0, 0, 1.04, 0, 0)"
+  },
+  {
+    "slug": "ivi",
+    "transform": "matrix(1.04, 0, 0, 1.04, 0, 0)"
+  },
+  {
+    "slug": "cafekok",
+    "transform": "matrix(1.04, 0, 0, 1.04, 0, 0)"
+  },
+  {
+    "slug": "offer",
+    "transform": "matrix(1.04, 0, 0, 1.04, 0, 0)"
+  },
+  {
+    "reduced": [
+      "none",
+      "none",
+      "none",
+      "none"
+    ]
+  }
+]

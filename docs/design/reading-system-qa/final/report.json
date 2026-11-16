@@ -1,0 +1,1730 @@
+[
+  {
+    "slug": "lg",
+    "width": 1920,
+    "errors": [],
+    "overflow": false,
+    "small": [],
+    "boards": [
+      {
+        "id": "api-start",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "before-upload",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "01-input",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "02-analysis",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "03-alternative",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "04-comparison",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "workspace",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      }
+    ],
+    "heroRatioError": 0.000029340599818183932,
+    "active": [
+      "#overview"
+    ],
+    "tooltip": false
+  },
+  {
+    "slug": "lg",
+    "width": 1440,
+    "errors": [],
+    "overflow": false,
+    "small": [],
+    "boards": [
+      {
+        "id": "api-start",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "before-upload",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "01-input",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "02-analysis",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "03-alternative",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "04-comparison",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "workspace",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      }
+    ],
+    "heroRatioError": 0.000029340599818183932,
+    "active": [
+      "#overview"
+    ],
+    "tooltip": false
+  },
+  {
+    "slug": "lg",
+    "width": 1280,
+    "errors": [],
+    "overflow": false,
+    "small": [],
+    "boards": [
+      {
+        "id": "api-start",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "before-upload",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "01-input",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "02-analysis",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "03-alternative",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "04-comparison",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "workspace",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      }
+    ],
+    "heroRatioError": 0.000047678966970998715,
+    "active": [
+      "#overview"
+    ],
+    "tooltip": false
+  },
+  {
+    "slug": "lg",
+    "width": 1024,
+    "errors": [],
+    "overflow": false,
+    "small": [],
+    "boards": [
+      {
+        "id": "api-start",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "before-upload",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "01-input",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "02-analysis",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "03-alternative",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "04-comparison",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "workspace",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      }
+    ],
+    "heroRatioError": 0.00003079278895889992,
+    "active": [
+      "#overview"
+    ],
+    "tooltip": false
+  },
+  {
+    "slug": "lg",
+    "width": 768,
+    "errors": [],
+    "overflow": false,
+    "small": [],
+    "boards": [
+      {
+        "id": "api-start",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "before-upload",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "01-input",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "02-analysis",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "03-alternative",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "04-comparison",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "workspace",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      }
+    ],
+    "heroRatioError": 0.00003850973606023267,
+    "active": [
+      "#overview"
+    ],
+    "tooltip": false
+  },
+  {
+    "slug": "lg",
+    "width": 430,
+    "errors": [],
+    "overflow": false,
+    "small": [],
+    "boards": [
+      {
+        "id": "api-start",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "before-upload",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "01-input",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "02-analysis",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "03-alternative",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "04-comparison",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "workspace",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      }
+    ],
+    "heroRatioError": 0.000038211204552274225,
+    "active": [
+      "#overview"
+    ],
+    "tooltip": false
+  },
+  {
+    "slug": "lg",
+    "width": 390,
+    "errors": [],
+    "overflow": false,
+    "small": [],
+    "boards": [
+      {
+        "id": "api-start",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "before-upload",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "01-input",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "02-analysis",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "03-alternative",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "04-comparison",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "workspace",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      }
+    ],
+    "heroRatioError": 0,
+    "active": [
+      "#overview"
+    ],
+    "tooltip": false
+  },
+  {
+    "slug": "lg",
+    "width": 320,
+    "errors": [],
+    "overflow": false,
+    "small": [],
+    "boards": [
+      {
+        "id": "api-start",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "before-upload",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "01-input",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "02-analysis",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "03-alternative",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "04-comparison",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "workspace",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      }
+    ],
+    "heroRatioError": 0.00010269634056037091,
+    "active": [
+      "#overview"
+    ],
+    "tooltip": false
+  },
+  {
+    "slug": "ivi",
+    "width": 1920,
+    "errors": [],
+    "overflow": false,
+    "small": [],
+    "boards": [
+      {
+        "id": "unified",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "double",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "top",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "side",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "climate",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "menu",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "phone",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "concept-clean",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      }
+    ],
+    "heroRatioError": 0.000029340599818183932,
+    "active": [
+      "#overview"
+    ],
+    "tooltip": false
+  },
+  {
+    "slug": "ivi",
+    "width": 1440,
+    "errors": [],
+    "overflow": false,
+    "small": [],
+    "boards": [
+      {
+        "id": "unified",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "double",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "top",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "side",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "climate",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "menu",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "phone",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "concept-clean",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      }
+    ],
+    "heroRatioError": 0.000029340599818183932,
+    "active": [
+      "#overview"
+    ],
+    "tooltip": false
+  },
+  {
+    "slug": "ivi",
+    "width": 1280,
+    "errors": [],
+    "overflow": false,
+    "small": [],
+    "boards": [
+      {
+        "id": "unified",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "double",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "top",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "side",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "climate",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "menu",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "phone",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "concept-clean",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      }
+    ],
+    "heroRatioError": 0.000047678966970998715,
+    "active": [
+      "#overview"
+    ],
+    "tooltip": false
+  },
+  {
+    "slug": "ivi",
+    "width": 1024,
+    "errors": [],
+    "overflow": false,
+    "small": [],
+    "boards": [
+      {
+        "id": "unified",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "double",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "top",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "side",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "climate",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "menu",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "phone",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "concept-clean",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      }
+    ],
+    "heroRatioError": 0.00003079278895889992,
+    "active": [
+      "#overview"
+    ],
+    "tooltip": false
+  },
+  {
+    "slug": "ivi",
+    "width": 768,
+    "errors": [],
+    "overflow": false,
+    "small": [],
+    "boards": [
+      {
+        "id": "unified",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "double",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "top",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "side",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "climate",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "menu",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "phone",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "concept-clean",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      }
+    ],
+    "heroRatioError": 0.00003850973606023267,
+    "active": [
+      "#overview"
+    ],
+    "tooltip": false
+  },
+  {
+    "slug": "ivi",
+    "width": 430,
+    "errors": [],
+    "overflow": false,
+    "small": [],
+    "boards": [
+      {
+        "id": "unified",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "double",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "top",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "side",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "climate",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "menu",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "phone",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "concept-clean",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      }
+    ],
+    "heroRatioError": 0.000038211204552274225,
+    "active": [
+      "#overview"
+    ],
+    "tooltip": false
+  },
+  {
+    "slug": "ivi",
+    "width": 390,
+    "errors": [],
+    "overflow": false,
+    "small": [],
+    "boards": [
+      {
+        "id": "unified",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "double",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "top",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "side",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "climate",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "menu",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "phone",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "concept-clean",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      }
+    ],
+    "heroRatioError": 0,
+    "active": [
+      "#overview"
+    ],
+    "tooltip": false
+  },
+  {
+    "slug": "ivi",
+    "width": 320,
+    "errors": [],
+    "overflow": false,
+    "small": [],
+    "boards": [
+      {
+        "id": "unified",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "double",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "top",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "side",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "climate",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "menu",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "phone",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "concept-clean",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      }
+    ],
+    "heroRatioError": 0.00010269634056037091,
+    "active": [
+      "#overview"
+    ],
+    "tooltip": false
+  },
+  {
+    "slug": "cafekok",
+    "width": 1920,
+    "errors": [],
+    "overflow": false,
+    "small": [],
+    "boards": [
+      {
+        "id": "quiz",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "profile",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "home",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "explore",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "detail",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "saved-empty",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "saved",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      }
+    ],
+    "heroRatioError": 0,
+    "active": [
+      "#premise"
+    ],
+    "tooltip": false
+  },
+  {
+    "slug": "cafekok",
+    "width": 1440,
+    "errors": [],
+    "overflow": false,
+    "small": [],
+    "boards": [
+      {
+        "id": "quiz",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "profile",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "home",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "explore",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "detail",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "saved-empty",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "saved",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      }
+    ],
+    "heroRatioError": 0,
+    "active": [
+      "#premise"
+    ],
+    "tooltip": false
+  },
+  {
+    "slug": "cafekok",
+    "width": 1280,
+    "errors": [],
+    "overflow": false,
+    "small": [],
+    "boards": [
+      {
+        "id": "quiz",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "profile",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "home",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "explore",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "detail",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "saved-empty",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "saved",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      }
+    ],
+    "heroRatioError": 0,
+    "active": [
+      "#premise"
+    ],
+    "tooltip": false
+  },
+  {
+    "slug": "cafekok",
+    "width": 1024,
+    "errors": [],
+    "overflow": false,
+    "small": [],
+    "boards": [
+      {
+        "id": "quiz",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "profile",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "home",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "explore",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "detail",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "saved-empty",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "saved",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      }
+    ],
+    "heroRatioError": 0.000017389187403349382,
+    "active": [
+      "#premise"
+    ],
+    "tooltip": false
+  },
+  {
+    "slug": "cafekok",
+    "width": 768,
+    "errors": [],
+    "overflow": false,
+    "small": [],
+    "boards": [
+      {
+        "id": "quiz",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "profile",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "home",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "explore",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "detail",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "saved-empty",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "saved",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      }
+    ],
+    "heroRatioError": 0,
+    "active": [
+      "#premise"
+    ],
+    "tooltip": false
+  },
+  {
+    "slug": "cafekok",
+    "width": 430,
+    "errors": [],
+    "overflow": false,
+    "small": [],
+    "boards": [
+      {
+        "id": "quiz",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "profile",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "home",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "explore",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "detail",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "saved-empty",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "saved",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      }
+    ],
+    "heroRatioError": 0,
+    "active": [
+      "#premise"
+    ],
+    "tooltip": false
+  },
+  {
+    "slug": "cafekok",
+    "width": 390,
+    "errors": [],
+    "overflow": false,
+    "small": [],
+    "boards": [
+      {
+        "id": "quiz",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "profile",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "home",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "explore",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "detail",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "saved-empty",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "saved",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      }
+    ],
+    "heroRatioError": 0,
+    "active": [
+      "#premise"
+    ],
+    "tooltip": false
+  },
+  {
+    "slug": "cafekok",
+    "width": 320,
+    "errors": [],
+    "overflow": false,
+    "small": [],
+    "boards": [
+      {
+        "id": "quiz",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "profile",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "home",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "explore",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "detail",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "saved-empty",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "saved",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      }
+    ],
+    "heroRatioError": 0,
+    "active": [
+      "#premise"
+    ],
+    "tooltip": false
+  },
+  {
+    "slug": "offer",
+    "width": 1920,
+    "errors": [],
+    "overflow": false,
+    "small": [],
+    "boards": [
+      {
+        "id": "home",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "explore",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "filtered",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "detail",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "saved",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "favorites",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "brand",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "explore-responsive",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "tablet-responsive",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "mobile-responsive",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      }
+    ],
+    "heroRatioError": 0.000029340599818183932,
+    "active": [
+      "#premise"
+    ],
+    "tooltip": false
+  },
+  {
+    "slug": "offer",
+    "width": 1440,
+    "errors": [],
+    "overflow": false,
+    "small": [],
+    "boards": [
+      {
+        "id": "home",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "explore",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "filtered",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "detail",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "saved",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "favorites",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "brand",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "explore-responsive",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "tablet-responsive",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "mobile-responsive",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      }
+    ],
+    "heroRatioError": 0.000029340599818183932,
+    "active": [
+      "#premise"
+    ],
+    "tooltip": false
+  },
+  {
+    "slug": "offer",
+    "width": 1280,
+    "errors": [],
+    "overflow": false,
+    "small": [],
+    "boards": [
+      {
+        "id": "home",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "explore",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "filtered",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "detail",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "saved",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "favorites",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "brand",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "explore-responsive",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "tablet-responsive",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "mobile-responsive",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      }
+    ],
+    "heroRatioError": 0.000047678966970998715,
+    "active": [
+      "#premise"
+    ],
+    "tooltip": false
+  },
+  {
+    "slug": "offer",
+    "width": 1024,
+    "errors": [],
+    "overflow": false,
+    "small": [],
+    "boards": [
+      {
+        "id": "home",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "explore",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "filtered",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "detail",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "saved",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "favorites",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "brand",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "explore-responsive",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "tablet-responsive",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "mobile-responsive",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      }
+    ],
+    "heroRatioError": 0.00003079278895889992,
+    "active": [
+      "#premise"
+    ],
+    "tooltip": false
+  },
+  {
+    "slug": "offer",
+    "width": 768,
+    "errors": [],
+    "overflow": false,
+    "small": [],
+    "boards": [
+      {
+        "id": "home",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "explore",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "filtered",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "detail",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "saved",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "favorites",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "brand",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "explore-responsive",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "tablet-responsive",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "mobile-responsive",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      }
+    ],
+    "heroRatioError": 0.00003850973606023267,
+    "active": [
+      "#premise"
+    ],
+    "tooltip": false
+  },
+  {
+    "slug": "offer",
+    "width": 430,
+    "errors": [],
+    "overflow": false,
+    "small": [],
+    "boards": [
+      {
+        "id": "home",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "explore",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "filtered",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "detail",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "saved",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "favorites",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "brand",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "explore-responsive",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "tablet-responsive",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "mobile-responsive",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      }
+    ],
+    "heroRatioError": 0.000038211204552274225,
+    "active": [
+      "#premise"
+    ],
+    "tooltip": false
+  },
+  {
+    "slug": "offer",
+    "width": 390,
+    "errors": [],
+    "overflow": false,
+    "small": [],
+    "boards": [
+      {
+        "id": "home",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "explore",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "filtered",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "detail",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "saved",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "favorites",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "brand",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "explore-responsive",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "tablet-responsive",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "mobile-responsive",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      }
+    ],
+    "heroRatioError": 0,
+    "active": [
+      "#premise"
+    ],
+    "tooltip": false
+  },
+  {
+    "slug": "offer",
+    "width": 320,
+    "errors": [],
+    "overflow": false,
+    "small": [],
+    "boards": [
+      {
+        "id": "home",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "explore",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "filtered",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "detail",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "saved",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "favorites",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "brand",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "explore-responsive",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "tablet-responsive",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      },
+      {
+        "id": "mobile-responsive",
+        "deviceCollisions": 0,
+        "labelCollisions": 0
+      }
+    ],
+    "heroRatioError": 0.00010269634056037091,
+    "active": [
+      "#premise"
+    ],
+    "tooltip": false
+  }
+]

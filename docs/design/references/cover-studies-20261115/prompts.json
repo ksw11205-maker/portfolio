@@ -1,0 +1,41 @@
+{
+  "method": "built-in image_gen",
+  "status": "Visual studies only; exact source screenshot compositing and final-resolution export remain before production",
+  "outputs": [
+    {
+      "file": "offer-cover-study-v1.png",
+      "inputs": [
+        "portfolio-shell/dist/assets/projects/offer-cover-1920.jpg",
+        "portfolio-shell/dist/work/offer/case-study-assets/editorial/explore.jpg",
+        "portfolio-shell/dist/work/offer/case-study-assets/editorial/tablet.jpg",
+        "portfolio-shell/dist/work/offer/case-study-assets/editorial/mobile.jpg"
+      ],
+      "prompt": "Use case: compositing, product-mockup. Create ONE polished landscape 16:9 portfolio cover for the user's responsive website OFFER. Image 1 is composition reference only; images 2, 3, 4 are the actual current desktop, tablet and mobile UI screens to insert. Put a large premium dark-bezel desktop monitor in the CENTER and behind, a portrait tablet at the LEFT foreground, and a portrait smartphone at the RIGHT foreground. Devices overlap slightly but no important part of the screens is blocked. The overall arrangement is frontal, sophisticated commercial product photography, exceptionally clean and sharp, on an off-white warm-gray seamless studio floor with soft realistic contact shadows, subtly warmer light on one side. Restrained orange accent only from the original UI. The desktop must show source image 2, tablet source image 3, mobile source image 4: same EXPLORE page with responsive 4-column, 2-column and 1-column presentation. Preserve original UI content, typography, Korean copy, logo, brand card colors and proportions as faithfully as possible, with absolutely no invented alternate layouts, new metrics, or redrawn labels. The old cover's old Explore OFFERs heading is NOT current; use EXPLORE. from the new screenshots. No large text outside the device screens, no floating logos in the background, no extra devices, no decorations. Let the hardware fill about 80% of the canvas while all device silhouettes remain inside the image with comfortable edge margins. Highest available resolution and crisp screen content. This is a visual cover concept, not proof of a user test.",
+      "observedLimit": "Generated tiny text and dates are not pixel-identical to originals; keep this as composition direction, not final UI evidence."
+    },
+    {
+      "file": "lg-cover-study-v1.png",
+      "inputs": [
+        "portfolio-shell/dist/assets/projects/lg-cover-1920.jpg",
+        "portfolio-shell/dist/work/lg/assets/02-analysis.webp",
+        "portfolio-shell/dist/work/lg/assets/tv-sports.webp"
+      ],
+      "prompt": "Use case: compositing, product-mockup. Create ONE premium landscape 16:9 UX/UI designer portfolio cover. Input 1 provides the overall existing approved concept: a large laptop in the foreground, and a television in a contemporary living room behind it. Keep this dual-device concept but refine the room, lighting and composition to understated high-end commercial product photography. Input 2 is the actual user's LG TV UI Evaluator analysis tool screen to show on the laptop. Input 3 is the actual TV screen to show on the television. Insert these supplied screens as faithfully as possible; never invent alternate TV content, improve numerical scores, or fabricate UI. Screens should retain their own aspect ratio with sensible top-aligned framing if needed. Black/graphite hardware, elegant dark architectural room, carefully controlled soft magenta and muted plum edge lighting, restrained reflections, believable contact shadows and a readable presentation. Laptop occupies lower-left/center foreground, television occupies upper-right background; both must be legible and fully identifiable. Avoid the very saturated neon lounge look of input 1; use illumination as a subtle accent on the furniture and device edges. No new text outside devices, no brand slogans, no science-fiction decoration, no random charts in the room. Keep screen surfaces bright enough for the real UI to be readable, and all important content away from outer crop margins. Highest available resolution. This is a designed presentation concept, not a claimed real research equipment photo.",
+      "observedLimit": "TV and laptop microcopy must be replaced with exact original captures in the production composite."
+    },
+    {
+      "file": "cafekok-cover-study-v1.png",
+      "inputs": [
+        "portfolio-shell/dist/work/cafekok/assets/cafe-cover.jpg",
+        "portfolio-shell/dist/work/cafekok/assets/latest/home.png"
+      ],
+      "prompt": "Use case: compositing, product-mockup. Create ONE exceptionally polished landscape 16:9 portfolio cover for the user's cafe discovery app CAFÉKOK. Input 1 is the beloved current photographic background: the bright warm ivory cafe facade with benches and windows. Preserve this background's distinctive architecture, materials, natural warm colors and inviting mood, and retain it as recognizable photography. Input 2 is the actual current CAFÉKOK app home screen. Place ONE large premium near-frontal dark-framed smartphone in the right-hand half of the composition, high enough and large enough to be useful as the DETAIL PAGE HERO cover; its complete device silhouette stays inside the image. It should look like carefully art-directed premium product advertising rather than a tiny phone pasted onto a photograph. Show input 2 on its screen as faithfully as possible, keeping CAFÉKOK branding, the brown header, home image, Korean interface and bottom navigation. Do not invent new features, new cards, new metrics, or different copy. Compose the screen top-aligned and preserve its portrait proportions. The architecture and calm cafe context remain visible on the left for future HTML overlay text, but DO NOT render extra typography onto the background. Realistic soft device shadow, muted warm-gray reflections, restrained highlights, no neon, no glowing circles, no floating app icons, no multiple phones, no extraneous decorations. Highest available resolution. This is a visual mockup direction, not proof of an actual device or user testing.",
+      "observedLimit": "Preserve the original cafe photo and current home screenshot as separate source layers for final compositing. The current screenshot includes an image-loading placeholder, so obtain a stable complete capture before final use."
+    }
+  ],
+  "unchangedCover": {
+    "project": "ivi",
+    "source": "portfolio-shell/dist/assets/projects/ivi-cover-clean-1920.jpg",
+    "usage": "Use for both main project cover and detail-page cover; user explicitly selected concept artwork"
+  }
+}

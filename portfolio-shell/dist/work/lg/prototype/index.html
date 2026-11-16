@@ -1286,6 +1286,11 @@ main { flex: 1; overflow-y: auto; display: flex; flex-direction: column; }
 /* ANIMATE */
 @keyframes slideUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
 .anim-in { animation: slideUp 0.45s cubic-bezier(0.4, 0, 0.2, 1) both; }
+/* Prototype → case study interface deep dive. */
+.hdr-guide-link{min-height:40px;display:inline-flex;align-items:center;justify-content:center;margin-right:16px;padding:0 10px;color:#e6a3c6;border:1px solid rgba(225,157,192,.3);font:600 10px/1 'JetBrains Mono',monospace;letter-spacing:.04em;text-decoration:none;white-space:nowrap}
+.hdr-guide-link:hover{color:#fff;border-color:#e6a3c6}
+.hdr-guide-link:focus-visible{outline:2px solid #e6a3c6;outline-offset:3px}
+@media(max-width:960px){.hdr-guide-link{display:none}}
 </style>
 </head>
 <body>
@@ -1461,7 +1466,8 @@ main { flex: 1; overflow-y: auto; display: flex; flex-direction: column; }
       </div>
     </div>
     <div style="width:20px;"></div>
-    <button class="hdr-icon" title="평가 모델 정보" onclick="openUtilityModal('modelInfoModal')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><circle cx="12" cy="16" r="0.5" fill="currentColor"/></svg></button>
+    <a class="hdr-guide-link" href="../tool-guide/" target="_blank" rel="noopener noreferrer" title="AI Design Tool 화면 해설 보기">UI GUIDE ↗</a>
+<button class="hdr-icon" title="평가 모델 정보" onclick="openUtilityModal('modelInfoModal')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><circle cx="12" cy="16" r="0.5" fill="currentColor"/></svg></button>
     <button class="hdr-icon" title="API KEY 확인" onclick="openApiCheckModal()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></button>
     <button class="hdr-icon" title="시스템 종료" onclick="openUtilityModal('logoutModal')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg></button>
   </div>

@@ -1,0 +1,21 @@
+/* Main shell: small orientation cues tied to the current work and question. */
+.work-fullbleed.is-pinned .project-meta{position:relative}
+.work-fullbleed.is-pinned .project.is-current .project-meta::before{content:"";position:absolute;left:0;top:-1px;width:32%;height:2px;background:#438aff;transform-origin:left center;animation:shell-project-rule .55s cubic-bezier(.22,1,.36,1) both;pointer-events:none}
+@media(prefers-reduced-motion:no-preference){
+ body:not(.motion-paused) .work-fullbleed.is-pinned .project.is-current .project-copy{animation:shell-project-copy .45s cubic-bezier(.22,1,.36,1) both}
+ @keyframes shell-project-copy{from{opacity:.82;translate:0 8px}to{opacity:1;translate:0 0}}
+ @keyframes shell-project-rule{from{transform:scaleX(0);opacity:.3}to{transform:scaleX(1);opacity:1}}
+}
+.qa-card{transition:border-color .35s ease,box-shadow .35s ease}
+.qa-card.shell-qa-current{border-color:#548fe480;box-shadow:inset 0 1px 0 #bdd7ff33,0 16px 40px #0002}
+.qa-card.shell-qa-current .qa-card-top .eyebrow{color:#a9caff}
+.qa-card::after{content:"";position:absolute;left:24px;right:24px;top:-1px;height:2px;border-radius:3px;background:#4f91ff;transform:scaleX(0);transform-origin:left;transition:transform .5s cubic-bezier(.22,1,.36,1);pointer-events:none}
+.qa-card.shell-qa-current::after,.qa-card:focus-visible::after{transform:scaleX(1)}
+.contact-card-link .contact-email{text-decoration:none;background-image:linear-gradient(#263a4b,#263a4b);background-repeat:no-repeat;background-size:0 1px;background-position:left bottom;transition:background-size .3s ease}
+.contact-card-link:is(:hover,:focus-visible) .contact-email{text-decoration:none;background-size:100% 1px}
+@media(hover:hover) and (pointer:fine){
+ .work-current-link::before,.project-visual::before{content:"";position:absolute;inset:2px;border:1px solid #a9caffaa;opacity:0;transition:opacity .25s ease;pointer-events:none;z-index:12}
+ .work-current-link:focus-visible::before,.project-visual:focus-visible::before{opacity:1}
+}
+@media(prefers-reduced-motion:reduce){.qa-card,.qa-card::after,.contact-card-link .contact-email{transition:none}.work-fullbleed.is-pinned .project.is-current .project-meta::before{animation:none}}
+.motion-paused .qa-card,.motion-paused .qa-card::after,.motion-paused .contact-card-link .contact-email{transition:none}.motion-paused .work-fullbleed.is-pinned .project.is-current .project-meta::before{animation:none}

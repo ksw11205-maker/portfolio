@@ -1,0 +1,32 @@
+[
+  {
+    "width": 1440,
+    "header": 1,
+    "active": "#click-patterns",
+    "tocFont": "16px"
+  },
+  {
+    "width": 390,
+    "header": 1,
+    "active": "#click-patterns",
+    "tocFont": "16px"
+  },
+  {
+    "mobileHeaderMenu": true
+  },
+  {
+    "width": 1440,
+    "profileHeight": 857.28125,
+    "imageTitles": 0
+  },
+  {
+    "width": 1280,
+    "profileHeight": 876.703125,
+    "imageTitles": 0
+  },
+  {
+    "width": 390,
+    "profileHeight": 882.140625,
+    "imageTitles": 0
+  }
+]

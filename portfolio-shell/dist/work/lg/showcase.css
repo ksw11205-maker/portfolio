@@ -1,0 +1,43 @@
+/* Actual screens with short adjacent explanations, without repeated controls or labels. */
+.lg-refined #tool-flow,.lg-refined #tool-settings{overflow-anchor:none}
+.lg-refined .tool-capture-layout,.lg-refined .settings-capture-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(185px,.35fr);gap:28px;align-items:start}
+.lg-refined .tool-capture-image,.lg-refined .settings-capture-image{min-width:0}
+.lg-refined .tool-role-notes,.lg-refined .settings-notes{min-width:0;text-align:left;display:grid;gap:26px;padding-top:12px}
+.lg-refined .tool-role-notes>div,.lg-refined .settings-notes>div{padding:0;border:0;margin:0}
+.lg-refined .tool-role-notes h3,.lg-refined .settings-notes h3{display:block;font-size:16px;line-height:1.55;font-weight:550;margin:0;color:#edb1cf;word-break:keep-all}
+.lg-refined .tool-role-notes p,.lg-refined .settings-notes p{display:block;font-size:14px;line-height:1.85;color:#bdb0c1;margin:10px 0 0;word-break:keep-all}
+.lg-refined #tool-flow.chapter-step-pinned .tool-capture-layout,.lg-refined #tool-settings.chapter-step-pinned .settings-capture-layout{grid-template-columns:minmax(0,1fr) minmax(160px,.36fr);gap:24px}
+.lg-refined #tool-flow.chapter-step-pinned .chapter-step-heading h2{font-size:clamp(26px,2.4vw,36px)}
+.lg-refined #tool-flow.chapter-step-pinned .chapter-step-heading .lead{font-size:15px}
+.lg-refined #tool-flow .chapter-step-layer,.lg-refined #tool-settings .chapter-step-layer{border:0;border-radius:0;padding:12px 0 36px!important}
+.lg-refined #tool-flow .captures.surface::before,.lg-refined #tool-settings .captures.surface::before{display:none}
+.lg-refined #tool-flow.chapter-step-pinned .chapter-step-content,.lg-refined #tool-flow.chapter-step-pinned .chapter-step-layer,.lg-refined #tool-settings .chapter-step-layer{background:#0b0a0e}
+.lg-refined #tool-flow .capture+.capture{margin-top:40px}
+.lg-refined #tool-settings .capture{margin:0}
+.lg-refined #tool-settings .settings-capture-image{border:1px solid #ffffff1b;border-radius:5px;overflow:hidden;background:#111015}
+.lg-refined #tool-settings .settings-capture-image img{width:100%;height:auto}
+.lg-refined #tool-settings>.chapter-heading h2{max-width:25em}
+.lg-refined #tool-settings .settings-screen-title{font-size:20px;color:#edb1cf;margin:0 0 22px}
+/* Only real prototype screens, each framed as a monitor, sit behind the reflection. */
+.lg-refined #reflection .research-collage{opacity:.22;display:block;overflow:hidden}
+.lg-refined #reflection .reflection-device{position:absolute;width:46%;padding:9px;border:1px solid #aa8eaa45;border-radius:9px;background:#131017;box-shadow:0 22px 45px #0005;transform:rotate(-8deg)}
+.lg-refined #reflection .reflection-device::after{content:'';display:block;width:32%;height:5px;margin:10px auto 1px;border-radius:4px;background:#3a2b3e}
+.lg-refined #reflection .reflection-device img{position:static!important;display:block;width:100%!important;height:auto;max-width:none;transform:none!important;border:0;border-radius:3px}
+.lg-refined #reflection .reflection-device:nth-child(1){left:-7%;top:-3%}
+.lg-refined #reflection .reflection-device:nth-child(2){right:-6%;top:10%;transform:rotate(7deg)}
+.lg-refined #reflection .reflection-device:nth-child(3){left:9%;bottom:-9%;transform:rotate(5deg)}
+.lg-refined #reflection .reflection-device:nth-child(4){right:0;bottom:-6%;transform:rotate(-8deg)}
+.lg-refined #reflection::before{display:none}
+.lg-refined #reflection::after{background:linear-gradient(90deg,#0b0a0edb,#0b0a0ec7 55%,#0b0a0e94)}
+@media(max-width:700px){
+ .lg-refined .tool-capture-layout,.lg-refined .settings-capture-layout{grid-template-columns:1fr;gap:22px}
+ .lg-refined .tool-role-notes,.lg-refined .settings-notes{grid-template-columns:1fr 1fr;gap:20px;padding-top:0}
+ .lg-refined .tool-role-notes h3,.lg-refined .settings-notes h3{font-size:15px}
+ .lg-refined .tool-role-notes p,.lg-refined .settings-notes p{font-size:13px}
+ .lg-refined #tool-settings .settings-screen-title{font-size:19px}
+ .lg-refined #reflection .reflection-device{width:82%}
+ .lg-refined #reflection .reflection-device:nth-child(1){left:-25%;top:0}
+ .lg-refined #reflection .reflection-device:nth-child(2){right:-25%;top:30%}
+ .lg-refined #reflection .reflection-device:nth-child(3){left:-20%;bottom:7%}
+ .lg-refined #reflection .reflection-device:nth-child(4){display:none}
+}

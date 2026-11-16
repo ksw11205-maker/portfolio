@@ -1,0 +1,82 @@
+/* Eight editorial chapters. Latest case-study layer; product apps are out of scope. */
+body[data-unified-case]{--master-width:1400px;--master-gutter:clamp(24px,4vw,64px);--reading-title:clamp(30px,3.3vw,48px);--reading-subtitle:clamp(22px,2.2vw,30px)}
+body[data-unified-case] #main>.unified-chapter{display:block;width:100%;max-width:1400px;margin:0 auto;padding:80px var(--master-gutter);min-height:0;border:0;border-bottom:1px solid var(--line);background:var(--bg);border-radius:0;scroll-margin-top:100px}
+body[data-unified-case] #main .chapter-heading{max-width:100%;margin:0 0 40px;display:block}
+body[data-unified-case] #main .chapter-heading .section-kicker{font-size:12px!important;font-weight:600;letter-spacing:.1em;color:var(--case-accent);margin:0 0 16px}
+body[data-unified-case] #main .chapter-heading h2{max-width:26ch;font-size:var(--reading-title);line-height:1.25;letter-spacing:-.04em}
+body[data-unified-case] #main .chapter-heading .case-lead{font-size:17px;line-height:1.75;max-width:66ch;margin:20px 0 0;color:var(--case-muted)}
+body[data-unified-case] #main .case-toc{max-width:1400px;padding:24px var(--master-gutter);margin:0 auto;background:var(--bg);border-bottom:1px solid var(--line)}
+body[data-unified-case] #main .case-nav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px 24px}
+body[data-unified-case] #main .case-nav a{font-size:12px;font-weight:500;letter-spacing:.025em;line-height:1.5;min-height:40px;display:flex;align-items:center}
+.unified-project-meta{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:0;padding:24px 0;border-block:1px solid var(--line)}
+body[data-unified-case] #main .unified-project-meta dt{font-size:12px!important;color:var(--case-muted);margin-bottom:8px}
+.unified-project-meta dd{margin:0}
+body[data-unified-case] #main .evidence-block{margin-top:48px;min-width:0}
+body[data-unified-case] #main .evidence-block:first-of-type{margin-top:0}
+body[data-unified-case] #main .evidence-title{font-size:26px;line-height:1.4;margin-bottom:24px;max-width:38ch}
+body[data-unified-case] #main .research-summary-copy{padding:0;max-width:66ch}
+body[data-unified-case] #main .research-summary-copy p{margin:0 0 16px}
+body[data-unified-case] #main :is(.research-summary-heading,.product-section-intro,.research-section-head,.offer-section-head){margin-bottom:24px}
+body[data-unified-case] #main :is(.research-split,.context-pair){gap:28px;align-items:start}
+body[data-unified-case] #main :is(.factor-funnel,.model-values,.task-result,.study-archive,.component-detail-panel){border-radius:4px}
+body[data-unified-case] #main .results-collection{display:grid;grid-template-columns:1fr;gap:24px}
+body[data-unified-case] #main .task-result,body[data-unified-case] #main .task-result:last-child{grid-column:auto;display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;padding:32px;background:var(--presentation-bg)}
+body[data-unified-case] #main .research-process{margin-bottom:40px}
+body[data-unified-case] #main .research-process li{min-height:200px;padding:24px!important;border-radius:4px}
+body[data-unified-case] #main .research-process li>span{font-size:28px!important;padding-bottom:24px}
+body[data-unified-case] #main .experiment-pair{grid-template-columns:1fr 1fr;gap:24px}
+body[data-unified-case] #main .experiment-pair>article{padding:28px;border-radius:4px}
+body[data-unified-case] #main .model-values{background:var(--presentation-bg)!important}
+body[data-unified-case] #main .model-values :is(strong,p,span){color:var(--ink)!important}
+body[data-unified-case] #main .model-values strong{color:var(--case-accent)!important}
+body[data-unified-case] #main .original-evidence-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:40px}
+body[data-unified-case] #main .original-evidence-gallery img{max-height:300px;object-fit:contain}
+body[data-unified-case] #main .original-evidence-gallery figcaption{font-size:13px;line-height:1.6}
+/* Final design owns the visual emphasis. Original pixels and native ratios stay intact. */
+body[data-unified-case] #main #final-design{padding-top:96px}
+body[data-unified-case] #main .final-screen-group{padding:48px 0;margin:0;border-bottom:1px solid var(--line)}
+body[data-unified-case] #main .final-screen-group:last-child{border:0;padding-bottom:0}
+body[data-unified-case] #main .screen-group-title{font-size:clamp(22px,2.1vw,30px);line-height:1.4;margin:0 0 24px;max-width:34ch}
+body[data-unified-case] #main .annotated-interface{margin:0!important}
+body[data-unified-case] #main .annotation-stage{display:flex!important;align-items:center;justify-content:center;min-height:0;gap:0;margin:0;padding:0;background:transparent;border:0;box-shadow:none}
+body[data-unified-case] #main .interface-device,body[data-unified-case] #main .is-mobile-ui .interface-device{display:block;width:100%!important;max-width:100%;padding:0;margin:0 auto;border:1px solid var(--line);border-radius:3px;box-shadow:none}
+body[data-unified-case] #main .interface-content{display:flex;align-items:center;justify-content:center;background:transparent}
+body[data-unified-case] #main .interface-content>.interface-image{width:100%!important;height:auto!important;max-height:none!important;max-width:100%!important;object-fit:contain!important}
+body[data-unified-case] #main .is-mobile-ui .interface-device{width:clamp(260px,28vw,360px)!important;max-width:100%}
+body[data-unified-case] #main .is-mobile-ui .interface-content>.interface-image{max-height:65svh!important;width:auto!important}
+body[data-unified-case] #main .is-mobile-ui .interface-device{width:fit-content!important}
+body[data-unified-case] #main .screen-group-copy{max-width:64ch;margin:24px 0 0}
+body[data-unified-case] #main .feature-keyword{display:inline-block;padding:5px 9px;border:1px solid color-mix(in srgb,var(--case-accent) 40%,transparent);border-radius:2px;background:color-mix(in srgb,var(--case-accent) 8%,transparent);color:var(--case-accent);font-size:12px;line-height:1.5;letter-spacing:.045em;font-weight:600}
+body[data-project=cafekok][data-unified-case] #main .feature-keyword{color:#9b4b29}
+body[data-project=offer][data-unified-case] #main .feature-keyword{color:#c73512}
+body[data-unified-case] #main .screen-group-copy p{margin:12px 0 0;color:var(--case-muted);font-size:17px;line-height:1.75}
+body[data-unified-case] #main .is-mobile-ui .annotation-stage{display:flex!important;padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important}
+body[data-unified-case] #main .mobile-screen-pair{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+body[data-unified-case] #main .mobile-screen-pair .final-screen-group{padding-bottom:40px}
+.system-foundations{display:grid;grid-template-columns:1.15fr 1fr;gap:40px;padding:28px 0;margin-bottom:32px;border-block:1px solid var(--line)}
+body[data-unified-case] #main .foundation-label{display:block;font-size:12px;color:var(--case-muted);letter-spacing:.08em;margin-bottom:20px}
+body[data-unified-case] #main .type-foundation>strong{font-size:clamp(24px,2.5vw,36px);font-weight:600;letter-spacing:-.04em}
+body[data-unified-case] #main .system-foundations p{font-size:16px;line-height:1.7;color:var(--case-muted);margin-top:16px}
+.foundation-swatches{display:flex;gap:12px;height:72px}
+.foundation-swatches i{display:block;flex:1;border:1px solid var(--line)}
+.swatch-base{background:var(--bg)}.swatch-surface{background:var(--presentation-bg)}.swatch-accent{background:var(--case-accent)}
+@media(max-width:767px){body[data-unified-case] #main .mobile-screen-pair,.system-foundations{grid-template-columns:1fr;gap:0}.system-foundations{gap:28px}}
+body[data-unified-case] #main .original-caption{margin-top:12px!important;font-size:12px!important}
+body[data-unified-case] #main .study-setup{margin:32px 0 56px}
+body[data-unified-case] #main .final-finding{padding:32px 0;border-block:1px solid var(--line);margin:40px 0}
+body[data-unified-case] #main .final-finding h3{margin:20px 0 12px}
+body[data-unified-case] #main .tool-component-details{margin-top:24px}
+body[data-unified-case] #main .tool-component-details>.research-section-head{display:none}
+body[data-unified-case] #main .component-detail-panel{padding:28px;background:var(--presentation-bg)}
+body[data-unified-case] #main .cafe-material-board{margin:0}
+body[data-unified-case] #main .offer-principles{margin:0;padding:0;gap:24px}
+body[data-unified-case] #main .offer-principles>div{min-height:180px;border-radius:4px;padding:24px!important}
+body[data-unified-case] #main .offer-system-line{margin:0;border:0}
+body[data-unified-case] #main .research-reflection-qa>article{display:grid;grid-template-columns:48px 1fr;gap:16px 24px}
+body[data-unified-case] #main .research-reflection-qa>article>div{grid-column:2;max-width:70ch}
+body[data-unified-case] #main .chapter-alias{display:block;scroll-margin-top:12px}
+body[data-unified-case] #main>.unified-chapter{scroll-margin-top:12px}
+@media(min-width:1024px) and (max-height:850px){body[data-unified-case] #main .interface-content>.interface-image{max-height:66svh!important;width:auto!important}body[data-unified-case] #main .interface-device{width:fit-content!important;max-width:100%}}
+@media(max-width:1023px){body[data-unified-case] #main>.unified-chapter{padding-block:64px}body[data-unified-case] #main :is(.task-result,.task-result:last-child,.experiment-pair){grid-template-columns:1fr}body[data-unified-case] #main .original-evidence-gallery{grid-template-columns:1fr 1fr}}
+@media(max-width:767px){body[data-unified-case] #main>.unified-chapter{padding:48px 24px}body[data-unified-case] #main .case-nav{grid-template-columns:1fr 1fr;gap:4px 16px}body[data-unified-case] #main .chapter-heading{margin-bottom:28px}body[data-unified-case] #main .chapter-heading h2{font-size:30px}body[data-unified-case] #main .chapter-heading .case-lead{font-size:16px}body[data-unified-case] #main :is(.research-split,.context-pair,.original-evidence-gallery){grid-template-columns:1fr}body[data-unified-case] #main .final-screen-group{padding:32px 0}body[data-unified-case] #main .research-reflection-qa>article{grid-template-columns:1fr}body[data-unified-case] #main .research-reflection-qa>article>div{grid-column:1}body[data-unified-case] #main .screen-group-copy p{font-size:16px}body[data-unified-case] #main .interface-content>.interface-image{max-height:none!important}body[data-unified-case] #main .is-mobile-ui .interface-content>.interface-image{max-height:60svh!important}body[data-unified-case] #main #final-design{padding-top:56px}}
+@media(prefers-reduced-motion:reduce){body[data-unified-case] [data-reading-fade]{opacity:1!important;transform:none!important;transition:none!important}}

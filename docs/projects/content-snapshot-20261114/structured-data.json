@@ -1,0 +1,132 @@
+{
+  "sourceFiles": [
+    "data.js",
+    "work/ivi/script.js"
+  ],
+  "contactEmail": "ksw11205@gmail.com",
+  "projects": [
+    {
+      "slug": "lg",
+      "role": "UX Research · UI Design",
+      "period": "2025.03–2025.09",
+      "summary": "TV 화면의 사용성을 예측하고, 디자인 개선으로 연결하다",
+      "title": "TV USABILITY\nAI DESIGN TOOL",
+      "category": "Smart TV UX/UI",
+      "tools": [
+        "Figma",
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ]
+    },
+    {
+      "slug": "ivi",
+      "role": "UX Research · Usability Testing",
+      "period": "2025.03–2026.04",
+      "summary": "운전자의 주행 맥락을 고려해 차량 터치스크린의 사용성을 분석하다",
+      "title": "IVI\nUSABILITY RESEARCH",
+      "category": "Automotive UX Research",
+      "tools": [
+        "Figma",
+        "Maze"
+      ]
+    },
+    {
+      "slug": "cafekok",
+      "role": "Planning · UX/UI Design",
+      "period": "2026.07–2026.10",
+      "summary": "취향과 방문 목적을 연결해 나에게 맞는 카페를 발견하다",
+      "title": "CAFÉKOK",
+      "category": "Cafe Recommendation UX/UI",
+      "tools": [
+        "Figma"
+      ]
+    },
+    {
+      "slug": "offer",
+      "role": "Planning · UX/UI Design",
+      "period": "2026.09–2026.10",
+      "summary": "흩어진 브랜드 혜택을 한곳에서 빠르게 발견하고 비교하다",
+      "title": "OFFER",
+      "category": "Brand Promotion Discovery Platform",
+      "tools": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "question": "What kind of designer am I?",
+      "answer": "복잡한 정보와 문제를 사용자 관점에서 구조화하는 UX/UI 디자이너입니다. 사용자의 행동과 맥락을 이해하고, 정보 구조와 인터페이스를 연결합니다."
+    },
+    {
+      "question": "How do I approach UX problems?",
+      "answer": "먼저 사용자의 목적과 이용 맥락을 살펴봅니다. 문제를 정의하고 정보의 우선순위를 정리한 뒤, 화면과 흐름으로 구체화하고 검토하며 다듬습니다."
+    },
+    {
+      "question": "What do I value in design?",
+      "answer": "명확성, 사용성, 일관성, 목적을 중요하게 생각합니다. 사용자가 다음 행동을 자연스럽게 이해할 수 있는 경험을 지향합니다."
+    },
+    {
+      "question": "How do I use AI in my workflow?",
+      "answer": "AI를 탐색, 정보 구조화, 프로토타이핑, 구현 지원을 빠르게 만드는 도구로 활용합니다. 문제를 정의하고 결과를 판단하는 디자인 사고는 직접 수행합니다."
+    },
+    {
+      "question": "What kind of work am I interested in?",
+      "answer": "복잡한 정보와 다양한 사용 맥락을 명확한 경험으로 연결하는 작업에 관심이 있습니다. 정보 구조부터 인터페이스까지 일관되게 설계하는 UX/UI 작업을 지향합니다."
+    }
+  ],
+  "ivi": {
+    "unit": "seconds",
+    "layoutOrder": [
+      "통합 메뉴형",
+      "더블 탭 메뉴형",
+      "상단 메뉴형",
+      "측면 메뉴형"
+    ],
+    "tasks": [
+      {
+        "key": "climate",
+        "label": "공조 조절",
+        "title": "공조 조절 · 통합 메뉴형 최단",
+        "values": [
+          15.15,
+          19.14,
+          22.32,
+          17.96
+        ],
+        "note": "상단형 22.32초 대비 평균 7.17초 짧음",
+        "stat": "통합형 ↔ 상단형: Tukey HSD 사후검정에서 차이 확인"
+      },
+      {
+        "key": "menu",
+        "label": "메뉴 탐색",
+        "title": "메뉴 탐색 · 측면 메뉴형 최단",
+        "values": [
+          22.15,
+          24.74,
+          28.71,
+          19.49
+        ],
+        "note": "상단형 28.71초 대비 평균 9.22초 짧음",
+        "stat": "측면형 ↔ 상단형: Tukey HSD 사후검정에서 차이 확인"
+      },
+      {
+        "key": "phone",
+        "label": "전화 걸기",
+        "title": "전화 걸기 · 측면 메뉴형 최단",
+        "values": [
+          15.35,
+          20.14,
+          16.05,
+          13.87
+        ],
+        "note": "더블 탭형 20.14초 대비 평균 6.27초 짧음",
+        "stat": "측면형 ↔ 더블 탭형: Tukey HSD 사후검정에서 차이 확인"
+      }
+    ]
+  },
+  "claimStatus": "Page claims preserved; not new research verification"
+}

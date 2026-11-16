@@ -1,0 +1,318 @@
+[
+  {
+    "width": 1440,
+    "height": 900,
+    "overflow": false,
+    "overflowDetails": [],
+    "broken": [],
+    "wires": 0,
+    "boards": [
+      {
+        "w": 1122.8125,
+        "ratio": 1.309090909090909,
+        "renderedRatio": 1.308857808857809
+      },
+      {
+        "w": 1122.8125,
+        "ratio": 1.309090909090909,
+        "renderedRatio": 1.308857808857809
+      },
+      {
+        "w": 1122.8125,
+        "ratio": 1.309090909090909,
+        "renderedRatio": 1.308857808857809
+      },
+      {
+        "w": 1122.8125,
+        "ratio": 1.309090909090909,
+        "renderedRatio": 1.308857808857809
+      },
+      {
+        "w": 1122.8125,
+        "ratio": 1.309090909090909,
+        "renderedRatio": 1.308857808857809
+      },
+      {
+        "w": 1122.8125,
+        "ratio": 1.309090909090909,
+        "renderedRatio": 1.308857808857809
+      },
+      {
+        "w": 1122.8125,
+        "ratio": 1.309090909090909,
+        "renderedRatio": 1.308857808857809
+      },
+      {
+        "w": 1122.8125,
+        "ratio": 1.309090909090909,
+        "renderedRatio": 1.308857808857809
+      },
+      {
+        "w": 1122.8125,
+        "ratio": 0.75,
+        "renderedRatio": 0.7501670006680027
+      },
+      {
+        "w": 270.3125,
+        "ratio": 0.46208530805687204,
+        "renderedRatio": 0.46153846153846156
+      }
+    ],
+    "links": [
+      "/work/offer/",
+      "/work/lg/"
+    ],
+    "errors": [],
+    "anchor": "#overview",
+    "captures": [
+      "docs/design/master-review/offer-1440-0.jpg",
+      "docs/design/master-review/offer-1440-1.jpg",
+      "docs/design/master-review/offer-1440-2.jpg",
+      "docs/design/master-review/offer-1440-3.jpg",
+      "docs/design/master-review/offer-1440-4.jpg",
+      "docs/design/master-review/offer-1440-5.jpg",
+      "docs/design/master-review/offer-1440-6.jpg",
+      "docs/design/master-review/offer-1440-7.jpg",
+      "docs/design/master-review/offer-1440-8.jpg",
+      "docs/design/master-review/offer-1440-9.jpg",
+      "docs/design/master-review/offer-1440-10.jpg"
+    ]
+  },
+  {
+    "width": 1366,
+    "height": 768,
+    "overflow": false,
+    "overflowDetails": [],
+    "broken": [],
+    "wires": 0,
+    "boards": [
+      {
+        "w": 663.53125,
+        "ratio": 1.309090909090909,
+        "renderedRatio": 1.309664694280079
+      },
+      {
+        "w": 663.53125,
+        "ratio": 1.309090909090909,
+        "renderedRatio": 1.309664694280079
+      },
+      {
+        "w": 663.53125,
+        "ratio": 1.309090909090909,
+        "renderedRatio": 1.309664694280079
+      },
+      {
+        "w": 663.53125,
+        "ratio": 1.309090909090909,
+        "renderedRatio": 1.309664694280079
+      },
+      {
+        "w": 663.53125,
+        "ratio": 1.309090909090909,
+        "renderedRatio": 1.309664694280079
+      },
+      {
+        "w": 663.53125,
+        "ratio": 1.309090909090909,
+        "renderedRatio": 1.309664694280079
+      },
+      {
+        "w": 663.53125,
+        "ratio": 1.309090909090909,
+        "renderedRatio": 1.309664694280079
+      },
+      {
+        "w": 663.53125,
+        "ratio": 1.309090909090909,
+        "renderedRatio": 1.309664694280079
+      },
+      {
+        "w": 380.15625,
+        "ratio": 0.75,
+        "renderedRatio": 0.7495069033530573
+      },
+      {
+        "w": 230.65625,
+        "ratio": 0.46208530805687204,
+        "renderedRatio": 0.46292585170340683
+      }
+    ],
+    "links": [
+      "/work/offer/",
+      "/work/lg/"
+    ],
+    "errors": [],
+    "anchor": "#overview",
+    "captures": [
+      "docs/design/master-review/offer-1366-0.jpg",
+      "docs/design/master-review/offer-1366-1.jpg",
+      "docs/design/master-review/offer-1366-2.jpg",
+      "docs/design/master-review/offer-1366-3.jpg",
+      "docs/design/master-review/offer-1366-4.jpg",
+      "docs/design/master-review/offer-1366-5.jpg",
+      "docs/design/master-review/offer-1366-6.jpg",
+      "docs/design/master-review/offer-1366-7.jpg",
+      "docs/design/master-review/offer-1366-8.jpg",
+      "docs/design/master-review/offer-1366-9.jpg",
+      "docs/design/master-review/offer-1366-10.jpg"
+    ]
+  },
+  {
+    "width": 768,
+    "height": 1024,
+    "overflow": false,
+    "overflowDetails": [],
+    "broken": [],
+    "wires": 0,
+    "boards": [
+      {
+        "w": 704.5625,
+        "ratio": 1.309090909090909,
+        "renderedRatio": 1.3104089219330854
+      },
+      {
+        "w": 704.5625,
+        "ratio": 1.309090909090909,
+        "renderedRatio": 1.3104089219330854
+      },
+      {
+        "w": 704.5625,
+        "ratio": 1.309090909090909,
+        "renderedRatio": 1.3104089219330854
+      },
+      {
+        "w": 704.5625,
+        "ratio": 1.309090909090909,
+        "renderedRatio": 1.3104089219330854
+      },
+      {
+        "w": 704.5625,
+        "ratio": 1.309090909090909,
+        "renderedRatio": 1.3104089219330854
+      },
+      {
+        "w": 704.5625,
+        "ratio": 1.309090909090909,
+        "renderedRatio": 1.3104089219330854
+      },
+      {
+        "w": 704.5625,
+        "ratio": 1.309090909090909,
+        "renderedRatio": 1.3104089219330854
+      },
+      {
+        "w": 704.5625,
+        "ratio": 1.309090909090909,
+        "renderedRatio": 1.3104089219330854
+      },
+      {
+        "w": 704.5625,
+        "ratio": 0.75,
+        "renderedRatio": 0.7507987220447284
+      },
+      {
+        "w": 307.546875,
+        "ratio": 0.46208530805687204,
+        "renderedRatio": 0.4624624624624625
+      }
+    ],
+    "links": [
+      "/work/offer/",
+      "/work/lg/"
+    ],
+    "errors": [],
+    "anchor": "#overview",
+    "captures": [
+      "docs/design/master-review/offer-768-0.jpg",
+      "docs/design/master-review/offer-768-1.jpg",
+      "docs/design/master-review/offer-768-2.jpg",
+      "docs/design/master-review/offer-768-3.jpg",
+      "docs/design/master-review/offer-768-4.jpg",
+      "docs/design/master-review/offer-768-5.jpg",
+      "docs/design/master-review/offer-768-6.jpg",
+      "docs/design/master-review/offer-768-7.jpg",
+      "docs/design/master-review/offer-768-8.jpg",
+      "docs/design/master-review/offer-768-9.jpg",
+      "docs/design/master-review/offer-768-10.jpg"
+    ]
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "overflow": false,
+    "overflowDetails": [],
+    "broken": [],
+    "wires": 0,
+    "boards": [
+      {
+        "w": 340,
+        "ratio": 1.309090909090909,
+        "renderedRatio": 1.3076923076923077
+      },
+      {
+        "w": 340,
+        "ratio": 1.309090909090909,
+        "renderedRatio": 1.3076923076923077
+      },
+      {
+        "w": 340,
+        "ratio": 1.309090909090909,
+        "renderedRatio": 1.3076923076923077
+      },
+      {
+        "w": 340,
+        "ratio": 1.309090909090909,
+        "renderedRatio": 1.3076923076923077
+      },
+      {
+        "w": 340,
+        "ratio": 1.309090909090909,
+        "renderedRatio": 1.3076923076923077
+      },
+      {
+        "w": 340,
+        "ratio": 1.309090909090909,
+        "renderedRatio": 1.3076923076923077
+      },
+      {
+        "w": 340,
+        "ratio": 1.309090909090909,
+        "renderedRatio": 1.3076923076923077
+      },
+      {
+        "w": 340,
+        "ratio": 1.309090909090909,
+        "renderedRatio": 1.3076923076923077
+      },
+      {
+        "w": 340,
+        "ratio": 0.75,
+        "renderedRatio": 0.7505518763796909
+      },
+      {
+        "w": 233.984375,
+        "ratio": 0.46208530805687204,
+        "renderedRatio": 0.4624505928853755
+      }
+    ],
+    "links": [
+      "/work/offer/",
+      "/work/lg/"
+    ],
+    "errors": [],
+    "anchor": "#overview",
+    "captures": [
+      "docs/design/master-review/offer-390-0.jpg",
+      "docs/design/master-review/offer-390-1.jpg",
+      "docs/design/master-review/offer-390-2.jpg",
+      "docs/design/master-review/offer-390-3.jpg",
+      "docs/design/master-review/offer-390-4.jpg",
+      "docs/design/master-review/offer-390-5.jpg",
+      "docs/design/master-review/offer-390-6.jpg",
+      "docs/design/master-review/offer-390-7.jpg",
+      "docs/design/master-review/offer-390-8.jpg",
+      "docs/design/master-review/offer-390-9.jpg",
+      "docs/design/master-review/offer-390-10.jpg"
+    ]
+  }
+]

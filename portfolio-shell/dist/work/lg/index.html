@@ -1,284 +1,98 @@
 <!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#0b0a0e">
-  <meta name="description" content="LG전자 산학 연구. 대표 시퀀스 설정부터 두 차례 실험, TV 사용성 예측 모델과 AI Design Tool 개발까지.">
-  <title>LG TV · AI Design Tool — 김성원</title>
-  <link rel="preload" href="assets/cover.webp" as="image" fetchpriority="high">
-  <link rel="stylesheet" href="assets/fonts/fonts.css">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="/page-transitions.css">
-  <link rel="stylesheet" href="/brand-base.css">
-  <link rel="icon" type="image/svg+xml" href="/assets/brand/favicon.svg">
-  <script src="/page-transitions.js"></script>
-  <script defer src="/vendor/gsap/gsap.min.js"></script>
-  <script defer src="/vendor/gsap/ScrollTrigger.min.js"></script>
-  <script defer src="script.js"></script>
-<link rel="stylesheet" href="/case-navigation.css"><script defer src="/case-navigation.js"></script><link rel="stylesheet" href="/case-cursor.css"><script defer src="/case-cursor.js"></script></head>
-<body>
-<a class="skip" href="#background">본문으로 이동</a>
-<header class="topbar case-shared" data-theme="dark"><a class="case-shared__back" href="/#work"><svg class="case-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19 12H5m0 0 6-6m-6 6 6 6"/></svg> BACK TO PROJECT</a><span class="case-shared__title">TV USABILITY / AI DESIGN TOOL</span></header><div class="reading-progress" data-project="lg" aria-hidden="true"></div>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#0B0A0E" />
+<meta name="description" content="LG TV 사용성 연구와 AI Design Tool UI 프로토타입 제작. 연구 근거와 디자인 판단을 연결하는 UX/UI 프로젝트." />
+<title>LG TV Usability — AI Design Tool | KSW</title>
+<link rel="preload" href="/assets/fonts/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="icon" type="image/svg+xml" href="/assets/brand/favicon.svg" />
+<link rel="stylesheet" href="remaster.css" />
+<link rel="stylesheet" href="/case-controls.css" />
+</head>
+<body data-project="lg">
+<a class="skip-link" href="#main">본문으로 건너뛰기</a>
+<header class="site-header shell-header" id="site-header">
+  <a class="shell-brand" href="/#home" aria-label="김성원 포트폴리오 홈">
+    <img class="shell-brand-mark" src="/assets/brand/symbol.svg" width="38" height="38" alt="" />
+  </a>
+  <button class="shell-menu-toggle" type="button" aria-controls="lg-header-navigation" aria-expanded="false" aria-label="메뉴 열기">
+    <span class="shell-menu-icon" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="shell-menu-label" aria-hidden="true">MENU</span>
+  </button>
+  <nav class="header-nav" id="lg-header-navigation" aria-label="LG 프로젝트 내비게이션">
+    <a href="#research">RESEARCH</a><a href="#evidence">EVIDENCE</a><a href="#interface">INTERFACE</a>
+    <a class="header-back" href="/#work"><span>ALL WORK</span><span aria-hidden="true">↗</span></a>
+  </nav>
+</header>
 <main id="main">
-  <section class="hero" aria-labelledby="project-title">
-    <img class="hero-image" src="assets/cover.webp" width="1672" height="941" alt="마젠타 조명의 거실. 전면 노트북에는 AI 디자인 툴, 후면 TV에는 평가 대상 화면이 배치된 목업." fetchpriority="high">
-    <div class="hero-shade" aria-hidden="true"></div>
-    <div class="hero-copy container">
-      <p class="eyebrow">Smart TV UX/UI</p>
-      <h1 id="project-title">TV USABILITY<br><span>AI DESIGN TOOL</span></h1>
-      <p class="hero-summary">TV 화면의 사용성을 예측하고,<br>디자인 개선으로 연결하다</p>
-      <div class="case-cover-actions"><a class="case-action case-cover-action" data-project="lg" href="/work/lg/prototype/" target="_blank" rel="noopener noreferrer" aria-label="LG AI 디자인 툴 프로토타입 보기 (새 탭)"><span>VIEW PROTOTYPE</span><svg class="case-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a></div>
+  <section class="intro" aria-labelledby="title">
+    <div class="intro-topline"><span class="eyebrow"><i class="status-dot" aria-hidden="true"></i> PROJECT 01 / UX RESEARCH × UI DESIGN</span><span class="intro-year">2025.03 — 2025.09</span></div>
+    <div class="intro-grid">
+      <div class="intro-copy">
+        <p class="intro-kicker">LG ELECTRONICS · TV USABILITY</p>
+        <h1 id="title">TV 사용성 연구에서 <br><em>AI Design Tool</em>까지<span class="period">.</span></h1>
+        <p class="intro-description">원거리에서 조작하는 TV UI를 정량적으로 이해하고, 연구 결과를 디자인 의사결정을 지원하는 화면으로 구체화한 프로젝트.</p>
+        <div class="hero-actions"><a class="button-primary case-action case-cover-action" data-project="lg" href="prototype/" target="_blank" rel="noopener noreferrer" aria-label="LG AI Design Tool 프로토타입 보기 (새 탭)"><span>VIEW PROTOTYPE</span><svg class="case-arrow" aria-hidden="true" viewBox="0 0 24 24" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a></div>
+      </div>
+      <figure class="intro-visual"><img src="assets/01-input.webp" width="1600" height="1000" alt="실제 LG AI Design Tool 프로토타입의 화면 이미지 업로드 UI 원본" data-original-prototype="true" fetchpriority="high" /><figcaption><span>TV USABILITY</span><span>RESEARCH TO DESIGN</span></figcaption></figure>
     </div>
-    <a class="hero-scroll" href="#overview">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a>
+    <div class="intro-bottomline"><span>ROLE <b>UX Research Collaboration · UI Prototype Design</b></span><span>SCROLL TO EXPLORE <span aria-hidden="true">↓</span></span></div>
   </section>
-  <div id="overview" class="overview container">
-    <dl class="meta">
-      <div><dt>ROLE</dt><dd>UX Research · UI Design</dd></div>
-      <div><dt>PERIOD</dt><dd>2025.03–2025.09</dd></div>
-      <div><dt>TOOL</dt><dd class="meta-tools"><img src="/assets/tools/figma.svg" width="24" height="24" alt="Figma" title="Figma"><img src="/assets/tools/html5.svg" width="24" height="24" alt="HTML" title="HTML"><img src="/assets/tools/css3.svg" width="24" height="24" alt="CSS" title="CSS"><img src="/assets/tools/javascript.svg" width="24" height="24" alt="JavaScript" title="JavaScript"></dd></div>
-    </dl>
-    <p class="asset-note">표지는 UI를 재현한 목업입니다. 본문의 AI 툴 화면은 프로젝트 이후 개인 작업으로 디자인을 개선한 프로토타입입니다.</p>
-    <nav class="phase-nav" aria-label="프로젝트 목차">
-      <a href="#background"><span>01</span> 배경·목표</a>
-      <a href="#sequences"><span>02</span> 대표 시퀀스</a>
-      <a href="#factors"><span>03</span> 1차 실험·요인 도출</a>
-      <a href="#model"><span>04</span> 2차 실험·예측 모델</a>
-      <a href="#architecture"><span>05</span> AI Design Tool</a>
-      <a href="#reflection"><span>06</span> 회고</a>
-    </nav>
-  </div>
-  <div class="study-dark">
-    <div class="continuous-background" aria-hidden="true">
-      <i class="field field-rose field-opening"></i><i class="field field-violet field-research"></i>
-      <i class="field field-rose field-model"></i><i class="field field-violet field-workflow"></i>
-      <i class="field field-rose field-comparison"></i>
+
+  <section id="background" class="section section-context" aria-labelledby="context-title">
+    <div class="section-index"><span>01 / THE QUESTION</span><span>BACKGROUND</span></div>
+    <div class="context-grid">
+      <div class="section-lead"><p class="eyebrow accent">THE PROBLEM</p><h2 id="context-title">멀리서 조작하고,<br>한 화면에 더 많은<br><em>기능이 쌓인다.</em></h2></div>
+      <div class="context-content"><p class="lead-body">TV는 화면에서 떨어진 거리에서 리모컨으로 조작합니다. 콘텐츠와 설정 기능이 복잡해질수록, UI의 사용성을 직관만으로 판단하기 어려워집니다.</p><p>따라서 디자인 요소가 사용성에 어떤 영향을 주는지 실험으로 확인하고, 이를 설계에 활용할 수 있는 정량적 기준이 필요했습니다.</p><figure class="content-image"><img src="assets/tv-context.webp" width="1180" height="664" alt="스포츠, 앱, 콘텐츠가 함께 표시되는 webOS TV 홈 화면" loading="lazy" /><figcaption>01 — ACTUAL TV UI CONTEXT</figcaption></figure></div>
     </div>
-
-    <section class="chapter container chapter-background" id="background" data-figma-node="719:585">
-      <div class="chapter-label"><span>BACKGROUND</span><span>TV Usability AI Tool</span></div>
-      <div class="chapter-heading" data-reveal-group>
-        <h2 data-reveal-item>복잡해지는 TV UI,<br>사용성을 어떻게 <em>예측할 수 있을까?</em></h2>
-        <p class="lead" data-reveal-item>TV는 원거리에서 리모컨으로 조작되며, 다양한 콘텐츠와 기능이 하나의 화면에 모입니다.<br class="desktop-break"> 이러한 환경에서 UI의 사용성을 정량적으로 설명하고 설계에 활용할 기준이 필요했습니다.</p>
-      </div>
-      <div class="usage-context">
-        <figure class="context-image" data-reveal><img src="assets/tv-context.webp" width="1180" height="664" alt="콘텐츠, 앱, 설정 기능이 함께 배치된 webOS 홈 화면" loading="lazy" decoding="async"></figure>
-        <div class="observations" data-reveal-group>
-          <article data-reveal-item><p class="number">01 /</p><h3>원거리 조작 환경</h3><p>TV는 화면에서 떨어진 위치에서 리모컨으로 조작합니다.</p></article>
-          <article data-reveal-item><p class="number">02 /</p><h3>콘텐츠와 기능의 복잡화</h3><p>다양한 콘텐츠와 설정 기능이 하나의 화면에 모입니다.</p></article>
-          <article data-reveal-item><p class="number">03 /</p><h3>정량적 평가 기준의 필요성</h3><p>따라서 화면 요소와 사용성의 관계를 실험을 통해 확인할 필요가 있습니다.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="chapter container" id="goal" data-figma-node="719:639">
-      <div class="chapter-label"><span>Goal &amp; Process</span><span>TV Usability AI Tool</span></div>
-      <div class="chapter-heading" data-reveal-group><h2 data-reveal-item>TV UI 사용성을 예측하고<br><em>디자인 개선으로 연결하다.</em></h2><p class="lead" data-reveal-item>사용성에 영향을 미치는 요인을 실험으로 도출하고, 예측 모델과 AI Design Tool로 연결해 디자인 의사결정을 지원하고자 했습니다.</p></div>
-      <ol class="steps steps-four surface" data-reveal-group>
-        <li data-reveal-item><span class="number">01</span><h3 class="accent">대표 시퀀스 설정</h3><p>webOS 기능과 사용자 목적을 분석해 평가 대상을 선정</p></li>
-        <li data-reveal-item><span class="number">02</span><h3 class="accent">1차 실험 · 요인 도출</h3><p>2수준 실험을 통해 사용성에 영향을 미치는 주요 요인 확인</p></li>
-        <li data-reveal-item><span class="number">03</span><h3 class="accent">2차 실험 · 예측 모델 개발</h3><p>3수준 실험 데이터를 바탕으로 사용성 예측 모델 개발</p></li>
-        <li data-reveal-item><span class="number">04</span><h3 class="accent-strong">AI Design Tool 개발</h3><p>평가·진단·개선안 검토를 지원하는 툴로 연구 결과 구체화</p></li>
-      </ol>
-    </section>
-
-    <section class="chapter container" id="sequences" data-figma-node="719:703">
-      <div class="chapter-label"><span>Key Sequences</span><span>TV Usability AI Tool</span></div>
-      <div class="chapter-heading" data-reveal-group><h2 data-reveal-item>webOS 기능과 사용자 목적을 연결한<br><em>시퀀스 유형 정의</em></h2><p class="lead" data-reveal-item>webOS 기능 및 사용자 목적 나열을 통한 시퀀스 유형 선정</p></div>
-      <div class="subsection">
-        <h3 class="sub-label" data-reveal>01 / webOS 기능 추출</h3>
-        <p class="lead" data-reveal>webOS의 다양한 기능을 사용자 경험 관점에서 목적 기반으로 나열</p>
-        <ul class="feature-inventory" data-reveal-group>
-          <li data-reveal-item>쉬운 사용</li><li data-reveal-item>app검색</li><li data-reveal-item>스포츠</li><li data-reveal-item>음성 검색</li><li data-reveal-item>채널 편성표</li><li data-reveal-item>최근 사용</li>
-          <li data-reveal-item>퀵설정</li><li data-reveal-item>앱 런처</li><li data-reveal-item>공지사항</li><li data-reveal-item>위시리스트</li><li data-reveal-item>스크린 쉐어링</li><li data-reveal-item>게임</li>
-          <li data-reveal-item>카테고리</li><li data-reveal-item>OTT 플랫폼</li><li data-reveal-item>외부입력</li><li data-reveal-item>즐겨찾기</li><li data-reveal-item>AI 검색</li><li data-reveal-item>알림</li>
-        </ul>
-      </div>
-      <div class="subsection surface">
-        <h3 class="sub-label" data-reveal>02 / 사용자 목적에 따라 분류</h3><p class="lead" data-reveal>사용자 목적을 3가지로 정의하고, 기능을 해당 목적에 따라 분류</p>
-        <div class="steps steps-three purpose-groups" data-reveal-group>
-          <article data-reveal-item><span class="number">01</span><h4 class="accent">검색 목적</h4><p>음성 검색<br>app검색<br>AI 검색</p><span class="count">3개</span></article>
-          <article data-reveal-item><span class="number">02</span><h4 class="accent">시청 목적</h4><p>OTT 플랫폼<br>위시리스트<br>스포츠<br>…</p><span class="count">11개</span></article>
-          <article data-reveal-item><span class="number">03</span><h4 class="accent">제어 목적</h4><p>외부입력<br>쉬운 사용<br>퀵설정<br>…</p><span class="count">8개</span></article>
-        </div>
-      </div>
-      <div class="subsection surface surface-rose">
-        <h3 class="sub-label" data-reveal>03 / 시퀀스 유형 정의</h3><p class="lead" data-reveal>사용자 여정 특성에 따라 시퀀스 유형을 3가지로 정의</p>
-        <div class="steps steps-three" data-reveal-group>
-          <article data-reveal-item><span class="number">01</span><h4 class="accent-strong">목적형 이동</h4><p>명확한 목적을 가지고 검색 기능을 통해 콘텐츠로 이동하는 과정</p></article>
-          <article data-reveal-item><span class="number">02</span><h4 class="accent-strong">탐색형 이동</h4><p>콘텐츠를 둘러보며 관심 있는 항목을 찾고 선택하는 과정</p></article>
-          <article data-reveal-item><span class="number">03</span><h4 class="accent-strong">설정/조작(제어)</h4><p>원하는 사용 환경에 맞게 TV의 설정과 기능을 조정하는 과정</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="chapter container" id="screens" data-figma-node="719:849">
-      <div class="chapter-label"><span>Key Sequences</span><span>TV Usability AI Tool</span></div>
-      <div class="chapter-heading" data-reveal-group><h2 data-reveal-item>실제 대표 화면 선정</h2><p class="lead" data-reveal-item>실제 UI 환경에서 가장 빈번하게 사용되는 대표 화면을 매핑 및 선정</p></div>
-      <div class="two-columns screen-columns">
-        <article class="surface surface-rose" data-reveal>
-          <h3 class="accent-strong">탐색형 이동</h3><p class="lead">Q카드 / 스포츠</p>
-          <figure class="screen-stack"><img class="qcard" src="assets/tv-qcard.webp" width="661" height="373" alt="Q카드 탐색 화면" loading="lazy" decoding="async"><img class="sports" src="assets/tv-sports.webp" width="776" height="653" alt="경기와 팀 콘텐츠가 나열된 스포츠 탐색 화면" loading="lazy" decoding="async"></figure>
-          <p class="screen-caption">유사 레이아웃으로 탐색형 이동과 목적형 이동 시퀀스 통합</p>
-        </article>
-        <article class="surface" data-reveal><h3 class="accent-strong">설정/조작 (제어)</h3><p class="lead">퀵 설정 페이지</p><figure><img src="assets/tv-control.webp" width="776" height="438" alt="홈 화면 위에서 밝기와 영상 설정을 조정하는 퀵 설정 화면" loading="lazy" decoding="async"></figure></article>
-      </div>
-    </section>
-
-    <section class="chapter container" id="factors" data-figma-node="719:895">
-      <div class="chapter-label"><span>Usability Factors</span><span>TV Usability AI Tool</span></div>
-      <div class="chapter-heading" data-reveal-group><h2 data-reveal-item>TV 사용성 주요 요인 도출</h2><p class="lead" data-reveal-item>50여 건의 선행 문헌 및 가이드라인 분석 후, 출현 빈도수 기반으로 22개 핵심 요인 선별</p></div>
-      <div class="subsection inventory-section">
-        <h3 class="sub-label" data-reveal>01 / 1차 리스트업</h3>
-        <h4 class="inventory-title accent" data-reveal>Display Static Factor</h4>
-        <div class="steps steps-four factor-inventory" data-reveal-group>
-          <article data-reveal-item><span class="number">01</span><h5>Screen</h5><p>Size<br>Layout</p></article>
-          <article data-reveal-item><span class="number">02</span><h5>Text</h5><p>Length<br>Font Size<br>Layout</p></article>
-          <article data-reveal-item><span class="number">03</span><h5>Image</h5><p>Size<br>Layout</p></article>
-          <article data-reveal-item><span class="number">04</span><h5>Item</h5><p>Category Count<br>Item Count<br>Size</p></article>
-        </div>
-        <h4 class="inventory-title accent" data-reveal>Control Static Factor</h4>
-        <div class="steps steps-three factor-inventory" data-reveal-group>
-          <article data-reveal-item><span class="number">01</span><h5>Card Button</h5><p>Count<br>Alignment<br>Size<br>Clearance</p></article>
-          <article data-reveal-item><span class="number">02</span><h5>Icon Button</h5><p>Count<br>Alignment<br>Size<br>Clearance</p></article>
-          <article data-reveal-item><span class="number">03</span><h5>Text Button</h5><p>Count<br>Alignment<br>Size<br>Clearance</p></article>
-        </div>
-      </div>
-      <div class="subsection surface">
-        <h3 class="sub-label" data-reveal>02 / 2차 리스트업</h3><p class="lead" data-reveal>분석의 중복성을 제거하고, 실제 UI 환경에서 측정 가능한 핵심 변수 중심으로 최적화</p>
-        <ol class="variable-grid" data-reveal-group>
-          <li data-reveal-item><span class="number">01</span>Screen Category Count</li><li data-reveal-item><span class="number">02</span>Image Size</li><li data-reveal-item><span class="number">03</span>Text Font Size</li>
-          <li data-reveal-item><span class="number">04</span>Thumbnail Item Count</li><li data-reveal-item><span class="number">05</span>Icon Item Count</li><li data-reveal-item><span class="number">06</span>Text Item Count</li>
-          <li data-reveal-item><span class="number">07</span>Thumbnail Item Size</li><li data-reveal-item><span class="number">08</span>Icon Item Size</li><li data-reveal-item><span class="number">09</span>Text Item Size</li>
-        </ol>
-      </div>
-      <div class="subsection surface factor-mapping">
-        <h3 class="sub-label" data-reveal>03 / 대표 시퀀스별 요인 도출</h3>
-        <div class="mapping-row">
-          <figure class="source-composite" data-reveal><img class="source-context" src="assets/tv-factors-context.webp" width="967" height="581" alt="요인을 측정할 실제 webOS 화면" loading="lazy" decoding="async"><img class="source-browse" src="assets/tv-factors-browse.webp" width="885" height="1273" alt="이미지·텍스트·썸네일 등 사용성 요인을 구분한 탐색형 화면" loading="lazy" decoding="async"></figure>
-          <div class="mapping-labels" data-reveal-group><h4 class="accent-strong" data-reveal-item>탐색형 이동</h4><ul><li data-reveal-item>Image Size</li><li data-reveal-item>Text Font Size</li><li data-reveal-item>Icon Item Size</li><li data-reveal-item>Text Item Count / Size</li><li data-reveal-item>Thumbnail Item Count / Size</li><li data-reveal-item>Screen Category Count</li></ul></div>
-        </div>
-        <div class="mapping-row">
-          <figure data-reveal><img src="assets/tv-factors-control.webp" width="1000" height="601" alt="아이콘과 텍스트 항목을 측정한 설정·조작 화면" loading="lazy" decoding="async"></figure>
-          <div class="mapping-labels" data-reveal-group><h4 class="accent-strong" data-reveal-item>설정 / 조작 (제어)</h4><ul><li data-reveal-item>Icon Item Count / Size</li><li data-reveal-item>Text Font Size</li><li data-reveal-item>Text Item Count / Size</li><li data-reveal-item>Screen Category Count</li></ul></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="chapter container" id="experiment-1" data-figma-node="719:1052">
-      <div class="chapter-label"><span>Usability Factors</span><span>TV Usability AI Tool</span></div>
-      <div class="chapter-heading" data-reveal-group><h2 data-reveal-item>주요 사용성 요인 도출 프로세스</h2><p class="lead" data-reveal-item>실험계획법(DOE)을 적용한 대안 평가 및 피실험자 조사를 통해 TV 사용성 최종 주요 요인 도출</p></div>
-      <div class="subsection"><h3 class="sub-label" data-reveal>01 / 연구 프로세스</h3>
-        <ol class="steps steps-four research-steps" data-reveal-group>
-          <li data-reveal-item><span class="number">01</span><h4>실험 설계</h4><ul><li>대표 시퀀스별 UI 요인의 중요도 파악</li><li>사용성에 영향을 미치는 주요 요인 선별(Screening)이 핵심 목표</li><li>Plackett-Burman 2수준 설계로 주효과 중심의 실험 효율성 확보</li></ul></li>
-          <li data-reveal-item><span class="number">02</span><h4>실험 대안 제작</h4><ul><li>시퀀스별 12개씩, 총 24개 조합</li><li>선정 요인에 MIN/MAX 값 적용</li><li>실험 대안 프로토타이핑 제작</li></ul></li>
-          <li data-reveal-item><span class="number">03</span><h4>실험 진행</h4><ul><li>가정 내 시청 환경과 유사한 실험 공간 구성</li><li>20~30대·40~50대 각 5명, 총 10명 참여</li><li>각 대안을 사용성 관점에서 1~7점으로 평가</li></ul></li>
-          <li data-reveal-item><span class="number">04</span><h4>주요 요인 도출</h4><ul><li>사용성에 유의한 영향을 미치는 요인을 분석하여 주요 요인 선정</li></ul></li>
-        </ol>
-      </div>
-      <div class="subsection"><h3 class="sub-label" data-reveal>02 / 주요 사용성 요인</h3>
-        <div class="two-columns factor-results" data-reveal-group>
-          <article class="surface surface-rose" data-reveal-item><h4>탐색형 이동</h4><p>탐색 효율성에 가장 큰 주효과를 미친 요인</p><ul class="factor-list"><li class="accent">Thumbnail Item Count <span>(Main Factor)</span></li><li>Screen Category Count</li><li>Text Font Size</li><li>Image Size</li><li>Text Item Count</li><li>Text Item Size</li></ul></article>
-          <article class="surface" data-reveal-item><h4>설정 / 조작 (제어)</h4><p>인지 용이성과 타겟팅에 직결된 요인</p><ul class="factor-list"><li class="accent">Text Item Size <span>(Main Factor)</span></li><li>Icon Item Size</li></ul></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="chapter container" id="model" data-figma-node="719:1136">
-      <div class="chapter-label"><span>Predictive Model</span><span>TV Usability AI Tool</span></div>
-      <div class="chapter-heading" data-reveal-group><h2 data-reveal-item>사용성 예측 모델 개발 프로세스</h2><p class="lead" data-reveal-item>도출된 주요 요인과 사용성 평가 데이터를 바탕으로, 사용성을 정량적으로 예측하고 최적화할 수 있는 모델을 구축</p></div>
-      <div class="subsection"><h3 class="sub-label" data-reveal>01 / 예측 모델 개발 과정</h3>
-        <ol class="steps steps-four research-steps" data-reveal-group>
-          <li data-reveal-item><span class="number">01</span><h4>실험 설계</h4><ul><li>요인의 곡선 반응과 교호작용을 파악하는 3수준 실험</li><li>탐색형 이동: 부분요인설계 27개 조합</li><li>설정/조작: 완전요인설계 9개 조합</li></ul></li>
-          <li data-reveal-item><span class="number">02</span><h4>실험 방법</h4><ul><li>1차 실험과 동일한 평가 환경</li><li>실제 참여자 10명의 실험 데이터 확보</li><li>AI 증강 데이터 10명분을 추가해 모델 개발에 활용</li></ul></li>
-          <li data-reveal-item><span class="number">03</span><h4>AI 데이터 증강</h4><ul><li>1차 실험의 회귀식을 바탕으로 3수준 조합에 맞춰 수치 정규화</li><li>실제 데이터와 예측 데이터의 상관관계 및 유사성 검토</li></ul></li>
-          <li data-reveal-item><span class="number">04</span><h4>사용성 예측 모델 개발</h4><ul><li>다항 회귀 분석으로 사용성 요인값을 점수로 변환하는 방정식 설계</li></ul></li>
-        </ol>
-      </div>
-      <div class="subsection"><h3 class="sub-label" data-reveal>02 / 사용성 예측 모델</h3>
-        <div class="two-columns models" data-reveal-group>
-          <article class="surface surface-rose model-card" data-reveal-item>
-            <h4>탐색형 이동</h4><p class="metric"><span data-count="65.81">65.81</span><span class="percent">%</span></p><p class="metric-caption">모델 설명력 · 수정 결정계수 R²</p>
-            <p>실험에서 수집한 사용성 평가점수 변동의 약 65.81%를 설명하는 다항 회귀 모델입니다.</p>
-            <p class="equation" aria-label="탐색형 이동 다항 회귀식 일부">y = −8.31 + 0.613X₁ − 0.00089X₂ + 0.0477X₃ + … − 0.0963X₄X₆</p>
-            <ul class="model-variables"><li>y: Usability Score</li><li>x₁: Screen Category Count</li><li>x₂: Image Size</li><li>x₃: Text Font Size</li><li>x₄: Text Item Count</li><li>x₅: Text Item Size</li><li>x₆: Thumbnail Item Count</li></ul>
-          </article>
-          <article class="surface model-card" data-reveal-item>
-            <h4>설정 / 조작 (제어)</h4><p class="metric"><span data-count="79.20">79.20</span><span class="percent">%</span></p><p class="metric-caption">모델 설명력 · 수정 결정계수 R²</p>
-            <p>텍스트와 아이콘 크기, 두 요인의 교호작용을 반영해 사용성 평가점수 변동의 약 79.20%를 설명합니다.</p>
-            <p class="equation" aria-label="설정 조작 다항 회귀식">y = −9.45 + 0.11377X₁ + 0.1302X₂ − 0.000311X₁² − 0.001714X₂² + 0.000264X₁X₂</p>
-            <ul class="model-variables"><li>y: Usability Score</li><li>x₁: Text Item Size</li><li>x₂: Icon Item Size</li></ul>
-          </article>
-        </div>
-        <p class="source-note">출처: LG전자 × 동의대학교 UXU LAB, 최종보고 자료 p.17–20. 수정 결정계수는 모델 설명력을 나타내며, 예측 정확도나 사용성 개선율을 의미하지 않습니다.</p>
-      </div>
-    </section>
-
-    <section class="chapter container" id="architecture" data-figma-node="719:1222">
-      <div class="chapter-label"><span>AI Design Tool</span><span>TV Usability AI Tool</span></div>
-      <div class="chapter-heading" data-reveal-group><h2 data-reveal-item>AI Design Tool 정보구조도 (IA)</h2><p class="lead" data-reveal-item>평가 흐름을 중심으로 핵심 화면과 보조 기능을 구조화</p></div>
-      <div class="subsection"><h3 class="sub-label" data-reveal>01 / 정보 구조도</h3>
-        <figure class="architecture surface" data-reveal>
-          <div class="image-button architecture-image"><img src="assets/tool-architecture.svg" width="1601" height="1149" alt="로그인·설정에서 홈으로 진입한 뒤 화면 입력, 사용성 분석, 대안 추천, 결과 비교를 진행하며 작업 이력을 남기는 정보구조도" loading="lazy" decoding="async"></div>
-          <div class="architecture-mobile">
-            <div class="ia-entry"><strong>로그인·설정 → 홈·세션 시작</strong><p>API Key와 평가 모델 확인 · 새 평가 시작 · 이전 분석 로그</p></div>
-            <ol class="ia-mobile-flow"><li><span>01</span><h4>화면 입력</h4><p>이미지 업로드 · 영역 지정 · 요인 자동 인식</p></li><li><span>02</span><h4>사용성 분석</h4><p>사용성 점수 · 요인별 영향도 · 권장 범위 비교</p></li><li><span>03</span><h4>대안 추천</h4><p>AI 개선 제안 · 요인별 조정 · 예상 개선 점수</p></li><li><span>04</span><h4>결과 비교</h4><p>As-Is / To-Be · 점수 비교 · 변경 사항</p></li></ol>
-            <div class="ia-record"><strong>대안 재조정 ↺</strong><p>결과 비교 후 대안 추천 단계로 돌아가 조정합니다.</p><strong>작업 이력</strong><p>대안 생성 이력 · AI 제안 내용 · 사용자 조정 내역 기록</p></div>
-
-          </div>
-        </figure>
-      </div>
-    </section>
-
-    <section class="chapter container" id="workflow" data-figma-node="719:1333">
-      <div class="chapter-label"><span>AI Design Tool</span><span>AI DESIGN TOOL</span></div>
-      <div class="chapter-heading" data-reveal-group><h2 data-reveal-item>AI Design Tool 주요 기능 흐름</h2><p class="lead" data-reveal-item>전체 기능은 현황 입력, 문제 진단, 대안 추천의 흐름으로 구성</p></div>
-      <div class="subsection"><h3 class="sub-label" data-reveal>01 / 서비스 이용 흐름</h3>
-        <ol class="steps steps-three workflow-steps" data-reveal-group><li class="surface" data-reveal-item><span class="number">01</span><h4 class="accent">화면 입력</h4><p>이미지 업로드<br>주요 요인 인식</p></li><li class="surface surface-rose" data-reveal-item><span class="number">02</span><h4 class="accent">사용성 분석</h4><p>점수 산출 · 등급화<br>요인 영향도 분석</p></li><li class="surface" data-reveal-item><span class="number">03</span><h4 class="accent">대안 생성 및 비교</h4><p>AI 대안 생성<br>As-Is / To-Be 비교</p></li></ol>
-        <div class="settings-strip surface" data-reveal><h4 class="accent">설정</h4><p>API Key · 모델 정보 · 단계 간 이동</p></div>
-      </div>
-    </section>
-<section class="chapter container tool-chapter" id="tool-input" data-figma-node="719:1389"><div class="chapter-label"><span>AI Design Tool</span><span>AI DESIGN TOOL</span></div><div class="chapter-heading" data-reveal-group><h2 data-reveal-item>AI Design Tool Design<br><em>화면 입력 UI</em></h2><p class="lead" data-reveal-item>평가할 TV 화면을 업로드하고, 평가 유형과 주요 요인값을 확인·조정합니다.</p></div><div class="captures surface"><figure class="capture" data-reveal><div class="capture-label"><h3 class="sub-label">01 / 화면 업로드 및 요인값 입력</h3></div><div class="image-button"><img src="assets/01-input.webp" width="1600" height="1000" alt="01 / 화면 업로드 및 요인값 입력" loading="lazy" decoding="async"></div><figcaption>프로젝트 TV UI를 입력한 상태 · 평가 유형 선택 → 요인값 확인 → 분석 실행</figcaption></figure></div></section><section class="chapter container tool-chapter" id="tool-analysis" data-figma-node="741:1740"><div class="chapter-label"><span>AI Design Tool</span><span>AI DESIGN TOOL</span></div><div class="chapter-heading" data-reveal-group><h2 data-reveal-item>AI Design Tool Design<br><em>사용성 분석 UI</em></h2><p class="lead" data-reveal-item>사용성 점수와 요인별 영향을 확인하고, 우선 개선할 항목을 파악합니다.</p></div><div class="captures surface"><figure class="capture" data-reveal><div class="capture-label"><h3 class="sub-label">01 / 사용성 점수 및 분석 리포트</h3></div><div class="image-button"><img src="assets/02-analysis.webp" width="1600" height="1535" alt="01 / 사용성 점수 및 분석 리포트" loading="lazy" decoding="async"></div><figcaption>점수·영향 지수·개선 권고를 함께 확인하는 화면입니다. 표시 수치는 프로토타입 예시입니다.</figcaption></figure></div></section><section class="chapter container tool-chapter" id="tool-alternatives" data-figma-node="741:1771"><div class="chapter-label"><span>AI Design Tool</span><span>AI DESIGN TOOL</span></div><div class="chapter-heading" data-reveal-group><h2 data-reveal-item>AI Design Tool Design<br><em>대안 생성 및 비교 UI</em></h2><p class="lead" data-reveal-item>AI 개선 제안을 바탕으로 대안을 생성하고, 기존 화면과 변경 내용을 비교합니다.</p></div><div class="captures surface"><figure class="capture" data-reveal><div class="capture-label"><h3 class="sub-label">01 / AI 개선 제안 및 대안 생성</h3></div><div class="image-button"><img src="assets/03-alternative.webp" width="1600" height="1000" alt="01 / AI 개선 제안 및 대안 생성" loading="lazy" decoding="async"></div><figcaption>개선할 요인을 선택하고 대안을 생성합니다. 표시 수치는 프로토타입 예시입니다.</figcaption></figure><figure class="capture" data-reveal><div class="capture-label"><h3 class="sub-label">02 / 기존 화면과 대안 비교</h3></div><div class="image-button"><img src="assets/04-comparison.webp" width="1600" height="1137" alt="02 / 기존 화면과 대안 비교" loading="lazy" decoding="async"></div><figcaption>원본과 대안의 요인 변화·점수를 나란히 확인합니다. 점수 변화는 프로토타입 예시입니다.</figcaption></figure></div></section><section class="chapter container tool-chapter" id="tool-settings" data-figma-node="741:1802"><div class="chapter-label"><span>AI Design Tool</span><span>AI DESIGN TOOL</span></div><div class="chapter-heading" data-reveal-group><h2 data-reveal-item>AI Design Tool Design<br><em>환경 설정 UI</em></h2><p class="lead" data-reveal-item>API 연결, AI 모델, 평가 기준과 저장·보안 옵션을 한곳에서 관리합니다.</p></div><div class="captures surface"><figure class="capture" data-reveal><div class="capture-label"><h3 class="sub-label">01 / API 연결 및 요청 설정</h3></div><div class="image-button"><img src="assets/05-settings.webp" width="1600" height="650" alt="01 / API 연결 및 요청 설정" loading="lazy" decoding="async"></div><figcaption>API KEY와 요청 제한을 관리하는 설정 화면입니다.</figcaption></figure><div class="setting-details"><h3 class="sub-label" data-reveal>02 / 모델 · 평가 기준 · 저장 및 보안</h3><div class="three-columns"><figure class="capture" data-reveal><div class="capture-label"><h3 class="sub-label">모델 설정</h3></div><div class="image-button"><img src="assets/06-settings-model.webp" width="1197" height="320" alt="모델 설정" loading="lazy" decoding="async"></div></figure><figure class="capture" data-reveal><div class="capture-label"><h3 class="sub-label">평가 기준</h3></div><div class="image-button"><img src="assets/07-settings-score.webp" width="1197" height="317" alt="평가 기준" loading="lazy" decoding="async"></div></figure><figure class="capture" data-reveal><div class="capture-label"><h3 class="sub-label">저장 / 보안</h3></div><div class="image-button"><img src="assets/08-settings-storage.webp" width="1197" height="258" alt="저장 / 보안" loading="lazy" decoding="async"></div></figure></div></div></div></section>
-    <div class="closing-transition" aria-hidden="true"></div>
-  </div>
-  <section class="closing" id="reflection" data-figma-node="751:140">
-    <div class="chapter container">
-      <div class="chapter-label"><span>Reflection</span><span>TV Usability AI Tool</span></div>
-      <div class="chapter-heading" data-reveal><h2>프로젝트 회고</h2></div>
-      <div class="reflection-grid">
-        <div class="reflection-answers">
-          <article class="reflection-answer" data-reveal>
-            <div class="qa-line question"><span class="qa-marker" aria-hidden="true">Q</span><h3>이 프로젝트를 하며 <em>느끼고 배운 점</em>은?</h3></div>
-            <div class="qa-line answer"><span class="qa-marker" aria-hidden="true">A</span><div>
-              <p>LG전자 UI/UX 부서와 소통하며 진행한 산학 연구를 통해, 학교에서 배운 사용자 중심 설계가 실무에서 어떻게 논의되고 구체화되는지 경험할 수 있었습니다. 정해진 일정에 맞춰 중간 결과를 공유하고 피드백을 다음 작업에 반영하는 과정을 보며, 결과물의 완성도만큼 판단의 근거를 명확하게 전달하는 일도 중요하다는 것을 배웠습니다.</p>
-              <p>박사·석사 선배들과 함께하며 실험 조건과 평가 지표를 검토하고, 분석 결과를 보고서와 발표자료로 정리하는 과정을 가까이에서 배울 수 있었습니다. 화면을 만드는 데서 나아가, 왜 그렇게 설계했는지 설명할 수 있는 근거를 함께 정리해야 한다는 관점을 얻었습니다.</p>
-            </div></div>
-          </article>
-          <article class="reflection-answer" data-reveal>
-            <div class="qa-line question"><span class="qa-marker" aria-hidden="true">Q</span><h3>프로젝트에서 <em>어려웠거나 아쉬웠던 점</em>은?</h3></div>
-            <div class="qa-line answer"><span class="qa-marker" aria-hidden="true">A</span><div>
-              <p>학부연구생으로 참여하다 보니 연구의 흐름과 분석 내용을 충분히 이해하면서도, 주어진 작업을 일정에 맞춰 따라가는 데 집중해야 했습니다. 특히 짧은 기간 안에 보고서와 발표자료를 준비할 때는 복잡한 연구 내용을 먼저 이해하고, 핵심을 추려 읽기 쉬운 형태로 정리하는 과정이 어려웠습니다.</p>
-              <p>내용을 더 깊이 이해하거나 제 관점에서 의견을 제안해 볼 시간이 부족했던 점은 아쉬움으로 남았습니다. 이 경험을 통해 작업 초기에 목적과 전달할 핵심을 정리하고, 이해가 부족한 부분을 빠르게 확인하는 것이 중요함을 느꼈습니다. 앞으로는 맡은 일을 완수하는 실행력에 더해, 연구의 맥락을 스스로 설명하고 의견을 제안할 수 있는 역량을 키우고자 합니다.</p>
-            </div></div>
-          </article>
-        </div>
-        <aside class="previous-ui" aria-label="프로젝트 당시 UI와 개인 디자인 개선의 구분" data-reveal>
-          <h3>BEFORE · 프로젝트 당시 UI</h3><p class="previous-source">최종보고 자료에 수록된 초기 입력·분석 화면</p>
-          <figure><div class="image-button"><img src="assets/previous-input.webp" width="900" height="505" alt="프로젝트 당시 초기 화면 입력 UI" loading="lazy" decoding="async"></div><figcaption>입력 화면 · 최종보고 p.24</figcaption></figure>
-          <figure><div class="image-button"><img src="assets/previous-analysis.webp" width="900" height="506" alt="프로젝트 당시 초기 사용성 분석 UI" loading="lazy" decoding="async"></div><figcaption>분석 화면 · 최종보고 p.26</figcaption></figure>
-          <p class="redesign-context">프로젝트 이후에는 주요 기능과 흐름을 유지하며 개인 작업으로 정보 구성과 시각 표현을 다듬었습니다.</p>
-        </aside>
-      </div>
-    </div>
+    <div class="context-points"><div><span>CONTEXT 01</span><strong>원거리 조작 환경</strong><p>시청 거리와 리모컨 입력을 고려한 가독성·조작성</p></div><div><span>CONTEXT 02</span><strong>복잡한 정보 밀도</strong><p>콘텐츠·카테고리·설정 기능이 하나의 화면에 공존</p></div><div><span>CONTEXT 03</span><strong>정량적 근거의 필요</strong><p>감각이 아닌 실험 데이터로 설계 판단을 지원</p></div></div>
   </section>
+
+  <section id="role" class="role-band" aria-labelledby="role-title"><div class="role-head"><span class="eyebrow">MY CONTRIBUTION</span><h2 id="role-title">연구 전체의 성과와<br><em>내가 만든 화면을</em> 구분합니다.</h2></div><div class="role-detail"><p>대표 시퀀스 선정, 사용성 실험, 요인 분석 및 예측 모델 개발은 <strong>연구팀의 공동 작업</strong>입니다.</p><p>저는 연구진의 요구사항을 바탕으로 <strong>AI Design Tool UI 프로토타입을 제작·수정</strong>하고, 검토와 보고를 위한 시각 자료를 구성했습니다.</p><p class="role-caveat">본 페이지의 연구 수치는 팀 연구 기록의 결과이며, 개인이 단독 산출하거나 별도로 재검증한 값이 아닙니다.</p></div></section>
+
+  <span class="anchor-alias" id="goal"></span><section id="research" class="section section-research" aria-labelledby="research-title">
+    <div class="section-index"><span>02 / THE APPROACH</span><span>RESEARCH PROCESS</span></div>
+    <div class="section-heading"><p class="eyebrow accent">FROM RESEARCH TO INTERFACE</p><h2 id="research-title">사용성의 근거를 찾고,<br>디자인을 판단하는 <em>도구로 연결하다.</em></h2><p>실험으로 요인을 선별하고 예측 모델을 구축한 뒤, 그 결과를 AI Design Tool의 평가 흐름으로 구체화했습니다.</p></div>
+    <ol class="research-steps"><li><span class="step-number">01</span><div><strong>대표 시퀀스 선정</strong><p>webOS 기능과 사용자 목적을 분석해 평가 대상 정의</p></div><span class="step-type">DEFINE</span></li><li><span class="step-number">02</span><div><strong>1차 실험 · 요인 도출</strong><p>2수준 설계로 주요 사용성 요인 선별</p></div><span class="step-type">SCREEN</span></li><li><span class="step-number">03</span><div><strong>2차 실험 · 예측 모델</strong><p>3수준 실험 데이터로 사용성 예측 모델 개발</p></div><span class="step-type">MODEL</span></li><li class="is-highlight"><span class="step-number">04</span><div><strong>AI Design Tool 구현</strong><p>입력·분석·대안·비교가 이어지는 UI 프로토타입 제작</p></div><span class="step-type">DESIGN</span></li></ol>
+  </section>
+
+  <span class="anchor-alias" id="screens"></span><section id="sequences" class="section section-sequence" aria-labelledby="sequence-title"><div class="section-index"><span>03 / THE SCENARIOS</span><span>KEY SEQUENCES</span></div><div class="section-heading compact"><p class="eyebrow accent">USER PURPOSE</p><h2 id="sequence-title">많은 기능을<br><em>세 가지 이용 목적</em>으로 좁혔다.</h2><p>검색·시청·제어 목적을 기준으로 TV 사용 흐름을 정리하고, 대표 화면을 선정했습니다.</p></div>
+    <div class="sequence-overview"><div class="sequence-aside"><div><span class="mini-label">SEARCH</span><strong>검색 목적</strong><p>음성 검색 · 앱 검색 · AI 검색</p></div><div><span class="mini-label">WATCH</span><strong>시청 목적</strong><p>OTT · 스포츠 · 위시리스트 등</p></div><div><span class="mini-label">CONTROL</span><strong>제어 목적</strong><p>외부입력 · 퀵설정 · 쉬운 사용 등</p></div></div><figure class="sequence-main"><img src="assets/tv-sports.webp" width="776" height="653" alt="스포츠 경기와 팀별 콘텐츠를 탐색하는 TV 화면" loading="lazy" /><figcaption><b>01</b><span>탐색형 이동<br><small>스포츠 콘텐츠를 탐색하며 관심 항목 선택</small></span></figcaption></figure></div>
+    <div class="sequence-secondary"><figure><img src="assets/tv-qcard.webp" width="661" height="373" alt="TV 검색 및 목적형 탐색 화면" loading="lazy" /><figcaption><b>02</b><span>탐색형·목적형 이동 통합<br><small>유사한 Q카드 레이아웃을 기준으로 정리</small></span></figcaption></figure><figure><img src="assets/tv-control.webp" width="776" height="438" alt="밝기와 소리 등을 조정하는 TV 퀵 설정 화면" loading="lazy" /><figcaption><b>03</b><span>설정 / 조작<br><small>밝기·소리·화면 등 주요 기능 조정</small></span></figcaption></figure></div>
+  </section>
+
+  <section id="factors" class="section section-factor" aria-labelledby="factor-title"><div class="section-index"><span>04 / FINDING VARIABLES</span><span>USABILITY FACTORS</span></div><div class="factor-header"><div><p class="eyebrow accent">EVIDENCE SELECTION</p><h2 id="factor-title">53개 후보에서<br><em>9개 측정 요인</em>까지.</h2></div><p>선행 문헌·가이드라인 검토를 거쳐 핵심 요인을 압축하고, 실제 TV UI에서 측정할 수 있는 변수를 정의했습니다.</p></div>
+    <div class="factor-numbers" aria-label="사용성 요인 정리 단계"><div><strong>53<span>개</span></strong><p>초기 후보</p></div><span aria-hidden="true">→</span><div><strong>22<span>개</span></strong><p>출현 빈도 기반 선별</p></div><span aria-hidden="true">→</span><div><strong>09<span>개</span></strong><p>전문가 검토·중복 정리</p></div></div>
+    <div class="factor-list" aria-label="9개 주요 측정 변수"><span>Screen Category Count</span><span>Image Size</span><span>Text Font Size</span><span>Thumbnail Item Count</span><span>Icon Item Count</span><span>Text Item Count</span><span>Thumbnail Item Size</span><span>Icon Item Size</span><span>Text Item Size</span></div>
+    <div class="factor-visuals"><figure><img src="assets/tv-factors-browse.webp" width="885" height="1273" alt="탐색형 TV 화면에서 화면 카테고리와 썸네일 항목을 보여 주는 분석 이미지" loading="lazy"/><figcaption>탐색형 이동 — 썸네일 개수와 화면 구성</figcaption></figure><figure><img src="assets/tv-factors-control.webp" width="1000" height="601" alt="퀵 설정 화면의 텍스트 및 아이콘 요소 분석 이미지" loading="lazy"/><figcaption>설정·조작 — 텍스트와 아이콘 크기</figcaption></figure></div>
+  </section>
+
+  <span class="anchor-alias" id="experiment-1"></span><span class="anchor-alias" id="model"></span><section id="evidence" class="section section-evidence" aria-labelledby="evidence-title"><div class="section-index"><span>05 / THE EVIDENCE</span><span>EXPERIMENTS & MODEL</span></div><div class="section-heading"><p class="eyebrow accent">TWO ROUNDS OF EXPERIMENTS</p><h2 id="evidence-title">실험 결과를<br><em>예측 가능한 기준</em>으로.</h2><p>1차 실험은 영향 요인 선별, 2차 실험은 사용성 점수를 예측하는 모델 개발에 초점을 두었습니다.</p></div>
+   <div class="experiment-grid"><article class="experiment"><span class="mini-label">EXPERIMENT 01 / SCREENING</span><h3>주요 요인 도출</h3><p>Plackett–Burman 2수준 설계로 대표 시퀀스별 요인을 실험하고 주효과를 확인했습니다.</p><div class="experiment-data"><div><strong>24</strong><span>실험 대안 조합<br>시퀀스별 12개</span></div><div><strong>10</strong><span>참여자<br>20–30대·40–50대</span></div><div><strong>1–7</strong><span>사용성 평가 척도</span></div></div><p class="small-note">탐색형: 썸네일 항목 수 등 / 설정·조작형: 텍스트·아이콘 크기 등</p></article><article class="experiment"><span class="mini-label">EXPERIMENT 02 / MODELING</span><h3>예측 모델 개발</h3><p>3수준 설계와 다항 회귀를 활용해 주요 요인의 곡선 반응 및 교호작용을 모델링했습니다.</p><div class="experiment-data"><div><strong>27</strong><span>탐색형 이동<br>부분요인설계</span></div><div><strong>09</strong><span>설정·조작<br>완전요인설계</span></div><div><strong>10+10</strong><span>실제 평가 10명 +<br>AI 증강 데이터 10명분</span></div></div><p class="small-note">연구 기록에 포함된 모델 개발 과정이며 개인 단독 분석 결과가 아닙니다.</p></article></div>
+   <div class="model-heading"><span class="eyebrow">MODEL EXPLANATORY POWER / ADJUSTED R²</span><p>아래 수치는 모델의 <strong>설명력</strong>이며, 예측 정확도나 실제 사용성 개선율이 아닙니다.</p></div><div class="model-results"><div><span>EXPLORATORY NAVIGATION</span><strong>65.81<small>%</small></strong><p>탐색형 이동 모델 · 수정 결정계수</p></div><div><span>SETTINGS & CONTROL</span><strong>79.20<small>%</small></strong><p>설정·조작 모델 · 수정 결정계수</p></div></div><details class="model-details"><summary>연구 기록의 회귀식 및 변수 보기 <span aria-hidden="true">+</span></summary><div class="equation-grid"><div><b>탐색형 이동</b><p>y = −8.31 + 0.613X₁ − 0.00089X₂ + 0.0477X₃ + … − 0.0963X₄X₆</p><small>X₁ 화면 카테고리 수 · X₂ 이미지 크기 · X₃ 텍스트 글꼴 크기 · X₄ 텍스트 항목 수 · X₅ 텍스트 항목 크기 · X₆ 썸네일 항목 수</small></div><div><b>설정·조작</b><p>y = −9.45 + 0.11377X₁ + 0.1302X₂ − 0.000311X₁² − 0.001714X₂² + 0.000264X₁X₂</p><small>X₁ 텍스트 항목 크기 · X₂ 아이콘 항목 크기</small></div></div></details>
+  </section>
+
+  <section id="bridge" class="section section-bridge" aria-labelledby="bridge-title"><div class="section-index"><span>06 / THE TRANSLATION</span><span>RESEARCH → DESIGN</span></div><div class="bridge-heading"><p class="eyebrow accent">DESIGN CONNECTION</p><h2 id="bridge-title">데이터에서 끝나지 않고,<br><em>실제로 조정할 수 있는 화면</em>으로.</h2></div><div class="bridge-diagram"><div class="bridge-column"><span class="mini-label">RESEARCH FINDINGS</span><div><b>탐색형 이동</b><p>썸네일 항목 수<br>화면 카테고리 수</p></div><div><b>설정·조작</b><p>텍스트 항목 크기<br>아이콘 항목 크기</p></div></div><div class="bridge-arrow" aria-hidden="true"><span>→</span><small>TOOL INPUTS</small></div><div class="bridge-column bridge-output"><span class="mini-label">DESIGN TOOL FLOW</span><div><b>요인 확인 → 분석</b><p>UI 요소의 값을 확인하고 영향도를 해석</p></div><div><b>대안 생성 → 비교</b><p>조정할 항목을 선택하고 예상 점수를 비교</p></div></div></div><p class="caveat">연구 결과를 프로토타입의 기능 구조로 연결한 설명이며, 별도의 사용자 검증 또는 실사용 개선 효과를 의미하지 않습니다.</p></section>
+
+  <span class="anchor-alias" id="workflow"></span><section id="architecture" class="section section-architecture" aria-labelledby="architecture-title"><div class="section-index"><span>07 / INFORMATION ARCHITECTURE</span><span>DESIGN SYSTEM LOGIC</span></div><div class="architecture-head"><div><p class="eyebrow accent">TOOL INFORMATION FLOW</p><h2 id="architecture-title">하나의 평가 작업이<br><em>다음 판단으로 이어지도록.</em></h2></div><p>실제 도구의 주요 입력·분석·대안·비교 흐름과 기록 및 설정 기능을 구분해 구조화했습니다.</p></div><div class="architecture-flow" role="list" aria-label="AI Design Tool 평가 흐름"><div role="listitem"><span>01</span><b>화면 입력</b><small>이미지 업로드<br>요인 확인</small></div><div role="listitem"><span>02</span><b>사용성 분석</b><small>예측 점수<br>요인 영향도</small></div><div role="listitem"><span>03</span><b>대안 추천</b><small>개선안 제시<br>요인값 조정</small></div><div role="listitem"><span>04</span><b>결과 비교</b><small>As-Is / To-Be<br>점수·변경 사항</small></div></div><div class="architecture-sub"><span>SUPPORTING FUNCTIONS</span><p>작업 이력 · 분석 로그 · API 및 모델 설정 · 대안 재조정</p></div></section>
+
+  <span class="anchor-alias" id="tool-flow"></span><section id="interface" class="section section-interface" aria-labelledby="interface-title"><div class="section-index"><span>08 / THE ACTUAL UI</span><span>AI DESIGN TOOL</span></div><div class="interface-heading"><span class="eyebrow accent">INTERFACE DEEP DIVE</span><h2 id="interface-title">화면은 크게.<br>설명은 <em>명확하게.</em></h2><p>실제 프로토타입 화면으로 살펴보는 입력 → 분석 → 대안 → 비교의 네 단계.</p><a class="inline-button" href="tool-guide/">AI Design Tool 상세 해설 <span aria-hidden="true">↗</span></a></div>
+    <article class="ui-stage" id="tool-input"><div class="ui-stage-head"><span class="ui-count">01 / INPUT</span><div><h3>평가할 TV UI를 입력하고<br>사용성 요인값을 확인합니다.</h3><p>TV 화면을 업로드한 뒤 평가 유형과 화면 요소를 검토·조정합니다.</p></div></div><figure class="ui-figure"><img src="assets/01-input.webp" width="1600" height="1000" alt="AI Design Tool의 입력 단계: TV UI 미리보기와 오른쪽 요인값 설정 패널" loading="lazy" /><div class="ui-pin" style="--x:79%;--y:48%;" aria-hidden="true"><span></span><b>요인값 검토·수정</b></div><figcaption>ACTUAL PROTOTYPE / INPUT</figcaption></figure><p class="mobile-callout"><b>01</b> 오른쪽 패널에서 사용성 요인값을 확인·조정</p></article>
+    <article class="ui-stage" id="tool-analysis"><div class="ui-stage-head"><span class="ui-count">02 / ANALYZE</span><div><h3>점수만 보여주지 않고<br>영향 요인까지 살펴봅니다.</h3><p>사용성 점수·등급을 읽고 우선적으로 검토할 UI 요소를 확인합니다.</p></div></div><figure class="ui-figure"><img src="assets/02-analysis.webp" width="1600" height="1535" alt="AI Design Tool 사용성 분석 화면: 점수와 요인별 분석 결과" loading="lazy" /><div class="ui-pin" style="--x:48%;--y:25%;" aria-hidden="true"><span></span><b>예측 점수와 등급</b></div><figcaption>ACTUAL PROTOTYPE / ANALYSIS</figcaption></figure><p class="mobile-callout"><b>02</b> 사용성 점수·등급과 요인별 영향을 분석</p></article>
+    <article class="ui-stage" id="tool-alternatives"><div class="ui-stage-head"><span class="ui-count">03 / ALTERNATIVE</span><div><h3>바꿀 요인을 선택하고<br>AI 권장안을 검토합니다.</h3><p>변경 항목과 권장 내용을 확인해 디자인 대안을 생성하는 단계입니다.</p></div></div><figure class="ui-figure"><img src="assets/03-alternative.webp" width="1600" height="1000" alt="AI Design Tool의 대안 추천 화면: 가운데 조정 영역과 오른쪽 AI 권장 패널" loading="lazy" /><div class="ui-pin marker-left" style="--x:84%;--y:49%;" aria-hidden="true"><span></span><b>AI 권장 개선안</b></div><figcaption>ACTUAL PROTOTYPE / RECOMMENDATION</figcaption></figure><p class="mobile-callout"><b>03</b> 오른쪽 권장 패널에서 변경 항목과 제안을 검토</p></article>
+    <article class="ui-stage" id="tool-comparison"><div class="ui-stage-head"><span class="ui-count">04 / COMPARE</span><div><h3>기존 화면과 개선 대안을<br>나란히 비교합니다.</h3><p>As-Is/To-Be 화면과 요인값·예측 점수의 차이를 검토합니다.</p></div></div><figure class="ui-figure"><img src="assets/04-comparison.webp" width="1600" height="1137" alt="AI Design Tool의 기존 화면과 개선 대안 비교 화면" loading="lazy" /><div class="ui-pin" style="--x:55%;--y:77%;" aria-hidden="true"><span></span><b>예측 점수 비교</b></div><figcaption>ACTUAL PROTOTYPE / COMPARISON</figcaption></figure><p class="mobile-callout"><b>04</b> 비교 화면의 점수 변화는 프로토타입 예시값</p><p class="caveat">캡처에 표시된 53점·61점은 프로토타입 화면의 예시값이며 실제 사용자 개선 효과를 뜻하지 않습니다.</p></article>
+  </section>
+
+  <section id="tool-settings" class="section section-settings" aria-labelledby="settings-title"><div class="section-index"><span>09 / SUPPORTING FEATURES</span><span>SETTINGS</span></div><div class="settings-heading"><div><p class="eyebrow accent">BEHIND THE INTERFACE</p><h2 id="settings-title">분석 흐름 밖의 설정도<br><em>한곳에 모았습니다.</em></h2></div><p>API 연결, 모델, 평가 기준, 저장·보안 옵션을 사용자가 확인할 수 있도록 분류했습니다.</p></div><figure class="settings-main"><img src="assets/settings-latest/workspace.png" alt="AI Design Tool의 작업내역 화면과 좌측 탐색 및 상단 내비게이션" loading="lazy" /><figcaption>WORKSPACE / LEFT NAVIGATION</figcaption></figure><div class="settings-details"><div><b>01 / API</b><img src="assets/settings-latest/api-panel.png" alt="API 키 및 분석 요청 제한 설정 패널" loading="lazy" /><p>연결 키와 요청 제한</p></div><div><b>02 / MODEL</b><img src="assets/settings-latest/model-panel.png" alt="기본 AI 모델 및 응답 정밀도 설정 패널" loading="lazy" /><p>기본 모델과 응답 정밀도</p></div><div><b>03 / CRITERIA</b><img src="assets/settings-latest/score-panel.png" alt="TV 시청 거리 가중치 및 개선 권장 기준 패널" loading="lazy" /><p>시청 거리 가중치와 평가 기준</p></div><div><b>04 / STORAGE</b><img src="assets/settings-latest/storage-panel.png" alt="자동 저장 및 민감정보 마스킹 설정 패널" loading="lazy" /><p>자동 저장과 민감정보 마스킹</p></div></div></section>
+
+  <section id="reflection" class="reflection" aria-labelledby="reflection-title"><div class="section-index"><span>10 / REFLECTION</span><span>WHAT I LEARNED</span></div><div class="reflection-grid"><div><span class="eyebrow">THINKING BEYOND SCREENS</span><h2 id="reflection-title">좋은 화면은<br>예쁘기 전에,<br><em>설명 가능해야 한다.</em></h2></div><div class="reflection-answers"><div><span>Q. 무엇을 배웠나요?</span><p>LG전자 UI/UX 부서와 소통하며 진행한 산학 연구를 통해, 실험과 분석의 결과가 실무에서 어떻게 논의되고 구체화되는지 경험했습니다. 일정에 맞춰 중간 결과를 공유하고 피드백을 반영하는 과정에서, 시각적 완성도만큼 판단 근거를 명확히 전달하는 일이 중요함을 배웠습니다.</p></div><div><span>Q. 무엇이 아쉬웠나요?</span><p>학부연구생으로 참여하며 복잡한 연구 내용을 충분히 이해하면서도 짧은 일정에 맞춰 정리해야 했습니다. 다음에는 작업 목적을 먼저 구조화하고, 궁금한 부분을 더 적극적으로 확인해 연구의 맥락을 스스로 설명하고 제안하는 역량을 기르고자 합니다.</p></div></div></div></section>
 </main>
-<footer class="case-end" data-theme="light" data-project="lg" aria-labelledby="case-end-title">
-  <div class="case-end__meta"><span class="case-end__label">END OF PROJECT</span><span class="case-end__rule" aria-hidden="true"></span></div>
-  <div class="case-end__body">
-    <h2 class="case-end__title" id="case-end-title"><span class="case-end__line">TV USABILITY</span><span class="case-end__line">AI DESIGN TOOL</span></h2>
-    <a class="case-end__back" href="/#work"><span>BACK TO PROJECT</span><svg class="case-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
-  </div>
-</footer>
-
-<a class="case-action case-float-action" data-project="lg" href="/work/lg/prototype/" target="_blank" rel="noopener noreferrer" aria-label="LG AI 디자인 툴 프로토타입 보기 (새 탭)" hidden><span>VIEW PROTOTYPE</span><svg class="case-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a><button class="case-top" type="button" aria-label="페이지 맨 위로 이동"><svg class="case-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V5m0 0L6 11m6-6 6 6"/></svg><small>TOP</small></button></body>
+<footer class="end-footer"><div><span>KSW / SELECTED WORK 01</span><p>실험의 근거를 이해하고,<br>디자인으로 구체화하는 사람.</p></div><div class="footer-links"><a href="/#work">ALL PROJECTS ↗</a></div><span class="footer-bottom">LG TV USABILITY — AI DESIGN TOOL <span>© KSW 2026</span></span></footer>
+<a class="case-action case-float-action" data-project="lg" href="prototype/" target="_blank" rel="noopener noreferrer" aria-label="LG AI Design Tool 프로토타입 열기 (새 탭)" hidden><span>VIEW PROTOTYPE</span><svg class="case-arrow" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
+<button type="button" class="case-top" aria-label="페이지 맨 위로 이동" hidden><svg class="case-arrow" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 19V5m0 0L6 11m6-6 6 6"/></svg><small>TOP</small></button>
+<script defer src="/case-controls-lg.js"></script>
+<script src="remaster.js" defer></script>
+</body>
 </html>

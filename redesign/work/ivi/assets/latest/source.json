@@ -1,0 +1,28 @@
+{
+  "fileKey": "FF8CphVdOl1e6iASFM4ef2",
+  "exported": "2026-11-15",
+  "method": "Figma connector download_assets native frame render",
+  "scale": 4,
+  "designModified": false,
+  "sourceFrame": { "width": 654, "height": 400 },
+  "nodes": {
+    "unified": "103:936",
+    "double": "193:449",
+    "top": "113:385",
+    "side": "404:114",
+    "climate": "178:1446",
+    "menu": "101:38",
+    "phone": "103:858"
+  },
+  "width": 2616,
+  "height": 1600,
+  "sha256": {
+    "unified": "c9200dee600e162187c3d537d7db9cb02ea67bb32d9274c7090b5320691d4c87",
+    "double": "04262652b568d1111127efd0a93458beb8261c6ec05205ce25818762185af7f2",
+    "top": "4bc052f06be2ff8259efa6bdbec5793dc966cc7c012433d706990a39c539de85",
+    "side": "4c6fd8001188d6710851cfafb8df3f4e7e8fa0132966b9037c23bb927f5888e8",
+    "climate": "2ce367f8715b67d5d4646f76959c373c3c38bc3399c208cf14c7375ae511965a",
+    "menu": "58bc0e8b1056172911147e6dead1e827e7bbc3385eb635180812a7089ae1308c",
+    "phone": "f3fb442cd73617f0e41ba0c4d71648c75722147c9cb7b413f4d2b5652fe98363"
+  }
+}

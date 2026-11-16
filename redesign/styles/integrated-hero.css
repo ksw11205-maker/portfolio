@@ -1,0 +1,58 @@
+/* A single introductory composition: no title or introduction below the artwork. */
+body[data-page=case] .case-hero--shared>.cover-hero{aspect-ratio:auto;height:clamp(740px,calc(100svh - 100px),1040px)}
+.cover-hero .hero-intro{top:9%;left:6%;width:29%;border:0;padding:0}
+.cover-hero .hero-intro .cover-index{font-size:11px;line-height:1.6;letter-spacing:.09em}
+.cover-hero .hero-intro .cover-wordmark{position:static;display:block;font-family:SUIT,Arial,sans-serif;font-size:clamp(42px,6.3cqw,104px);font-weight:650;line-height:.99;letter-spacing:-.065em;margin:26px 0 0;color:inherit}
+.cover-hero .hero-intro .cover-wordmark>span{display:block;margin-top:14px;font-size:.36em;line-height:1.15;font-weight:500;letter-spacing:-.035em}
+.cover-hero .hero-one-line{font-size:clamp(14px,1.08cqw,18px);line-height:1.8;letter-spacing:-.025em;margin:26px 0 0;opacity:.8;max-width:27em;text-wrap:pretty;word-break:keep-all}
+.cover-hero .hero-footer{position:absolute;z-index:8;bottom:5%;left:6%;width:29%;display:flex;flex-direction:column;align-items:flex-start;gap:20px}
+body[data-page=case] .cover-hero .prototype-link{position:static;display:inline-flex;align-items:center;justify-content:space-between;gap:30px;padding:15px 20px;min-width:180px;min-height:50px;margin:0!important;border:1px solid currentColor;background:transparent;color:inherit;font:600 11px/1.5 SUIT,Arial,sans-serif;letter-spacing:.05em;transform:none}
+body[data-page=case] .cover-hero .prototype-link:is(:hover,:focus-visible){background:var(--hero-accent);color:var(--hero-action-ink,#fff);border-color:var(--hero-accent);outline-offset:5px}
+.cover-hero{--hero-accent:#c678ad}.cover-hero.cover-scene--ivi{--hero-accent:#ce4f47}.cover-hero.cover-scene--cafekok{--hero-accent:#70513d;--hero-action-ink:#fff}.cover-hero.cover-scene--offer{--hero-accent:#c94727}
+.hero-credits{position:relative;font:500 10px/1.6 SUIT,Arial,sans-serif;letter-spacing:.06em}
+.hero-credits summary{cursor:pointer;opacity:.65;padding:8px 0}.hero-credits dl{position:absolute;bottom:100%;left:0;margin:0;min-width:280px;padding:22px;background:#19171cf5;color:#f3efef;border:1px solid #ffffff30;box-shadow:0 10px 30px #0004;font-size:12px;letter-spacing:0;line-height:1.6}
+.hero-credits dl>div+div{margin-top:12px}.hero-credits dt{font-size:9px;opacity:.65}.hero-credits dd{margin:2px 0 0}
+.cover-hero.cover-scene--lg .lg-tool{left:38%;bottom:11%;width:39%}
+.cover-hero.cover-scene--lg .tool-caption{left:38%;bottom:6%}
+.cover-hero.cover-scene--lg .tv-caption{top:5%;right:5%}
+.cover-hero.cover-scene--ivi .hero-intro{width:30%;top:9%}
+.cover-hero.cover-scene--ivi .hero-footer{top:42%;bottom:auto}
+.cover-hero.cover-scene--cafekok .hero-intro{width:37%}
+.cover-hero.cover-scene--cafekok .cafe-home{width:20.5%;top:7%}
+.cover-hero.cover-scene--cafekok .cafe-detail{width:18%;top:17%}
+.cover-hero.cover-scene--cafekok .hero-footer{bottom:45%}
+.cover-hero.cover-scene--cafekok .cafe-caption{display:none}
+.cover-hero.cover-scene--offer .hero-intro{width:29%;top:9%}
+.cover-hero.cover-scene--offer .hero-footer{top:36%;bottom:auto}
+.cover-hero.cover-scene--offer .offer-desktop{left:auto;right:4%;top:14%;width:55%}
+.cover-hero.cover-scene--offer .offer-tablet{left:38%;width:22%;bottom:7%}
+.cover-hero.cover-scene--offer .offer-caption{left:55%;bottom:3%}
+@media(min-width:701px) and (max-width:1024px){
+ body[data-page=case] .case-hero--shared>.cover-hero{height:760px}
+ .cover-hero .hero-intro{width:32%}.cover-hero .hero-intro .cover-wordmark{font-size:52px}
+ .cover-hero .hero-intro .cover-wordmark>span{font-size:23px}
+ .cover-hero .hero-one-line{font-size:14px;margin-top:22px}
+ .cover-hero.cover-scene--cafekok .hero-intro{width:40%}.cover-hero.cover-scene--cafekok .hero-intro .cover-wordmark{font-size:44px}
+ .cover-hero.cover-scene--cafekok .cafe-home{top:22%}.cover-hero.cover-scene--cafekok .cafe-detail{top:31%}
+ .cover-hero.cover-scene--cafekok .hero-footer{bottom:44%}
+}
+@media(max-width:700px){
+ body[data-page=case] .case-hero--shared>.cover-hero{height:auto;aspect-ratio:auto;container-type:inline-size;min-height:0}
+ .cover-hero .hero-intro,.cover-hero.cover-scene--ivi .hero-intro,.cover-hero.cover-scene--cafekok .hero-intro,.cover-hero.cover-scene--offer .hero-intro{position:relative;inset:auto;width:100%;padding:32px 24px 0;border:0}
+ .cover-hero .hero-intro .cover-index{font-size:9px}.cover-hero .hero-intro .cover-wordmark{font-size:clamp(38px,12cqw,66px);margin-top:20px}
+ .cover-hero .hero-intro .cover-wordmark>span{font-size:22px;margin-top:8px}.cover-hero .hero-one-line{font-size:14px;margin-top:18px;line-height:1.75;max-width:30em}
+ .cover-hero .cover-objects{position:relative;inset:auto;height:auto;aspect-ratio:1/1.05;width:100%;margin-top:25px}
+ .cover-hero .hero-footer,.cover-hero.cover-scene--cafekok .hero-footer{position:relative;inset:auto;width:100%;padding:14px 24px 24px;gap:10px}
+ .cover-hero.cover-scene--ivi .hero-footer{top:auto;bottom:auto}
+ .cover-hero.cover-scene--offer .hero-footer{top:auto;bottom:auto}
+ .cover-hero .hero-footer .prototype-link{width:100%}.hero-credits dl{min-width:min(280px,calc(100vw - 48px))}
+ .cover-hero .device-caption{font-size:7px;letter-spacing:.06em}
+ .cover-hero .lg-tv{width:82%;right:5%;top:3%;padding:.8cqw;transform:rotateY(-7deg)}
+ .cover-hero.cover-scene--lg .lg-tool{left:8%;width:60%;bottom:11%;padding:1cqw 1cqw 1.4cqw}
+ .cover-hero.cover-scene--lg .tool-caption{left:8%;bottom:3%}.cover-hero.cover-scene--lg .tv-caption{top:60%;right:5%;width:25%}
+ .cover-hero .ivi-main{width:86%;right:6%;bottom:32%;transform:rotateY(-5deg) rotateZ(-3deg)}.cover-hero .ivi-detail{width:54%;bottom:9%;left:8%}.cover-hero .ivi-caption{bottom:2%;right:6%;font-size:6px}
+ .cover-hero .cafe-photo{width:100%;height:42%}.cover-hero.cover-scene--cafekok .cafe-home{width:38%;right:45%;top:2%;transform:rotate(-5deg)}.cover-hero.cover-scene--cafekok .cafe-detail{width:33%;right:9%;top:13%;transform:rotate(6deg)}
+ .cover-hero .handset{border-radius:5cqw;padding:.8cqw}.cover-hero .handset .device-screen{border-radius:4cqw}.cover-hero .handset:before{top:1.4cqw}.cover-hero .handset .device-screen>img{padding-top:2.5cqw}
+ .cover-hero .cafe-caption{display:none}
+ .cover-hero.cover-scene--offer .offer-desktop{width:80%;left:14%;top:3%;padding:.9cqw}.cover-hero.cover-scene--offer .offer-tablet{width:36%;left:6%;bottom:12%;padding:1cqw}.cover-hero .offer-mobile{width:23%;right:7%;bottom:10%;padding:.5cqw;border-radius:3cqw}.cover-hero .offer-mobile .device-screen{border-radius:2.5cqw}.cover-hero.cover-scene--offer .offer-caption{left:44%;bottom:3%;font-size:6px}
+}

@@ -1,0 +1,98 @@
+[
+  {
+    "project": "lg",
+    "width": 1440,
+    "url": "http://127.0.0.1:39041/work/lg/",
+    "error": "Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at http://127.0.0.1:39041/work/lg/\nCall log:\n  - navigating to \"http://127.0.0.1:39041/work/lg/\", waiting until \"domcontentloaded\"\n"
+  },
+  {
+    "project": "lg",
+    "width": 1280,
+    "url": "http://127.0.0.1:39041/work/lg/",
+    "error": "Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at http://127.0.0.1:39041/work/lg/\nCall log:\n  - navigating to \"http://127.0.0.1:39041/work/lg/\", waiting until \"domcontentloaded\"\n"
+  },
+  {
+    "project": "lg",
+    "width": 768,
+    "url": "http://127.0.0.1:39041/work/lg/",
+    "error": "Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at http://127.0.0.1:39041/work/lg/\nCall log:\n  - navigating to \"http://127.0.0.1:39041/work/lg/\", waiting until \"domcontentloaded\"\n"
+  },
+  {
+    "project": "lg",
+    "width": 390,
+    "url": "http://127.0.0.1:39041/work/lg/",
+    "error": "Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at http://127.0.0.1:39041/work/lg/\nCall log:\n  - navigating to \"http://127.0.0.1:39041/work/lg/\", waiting until \"domcontentloaded\"\n"
+  },
+  {
+    "project": "ivi",
+    "width": 1440,
+    "url": "http://127.0.0.1:39041/work/ivi/",
+    "error": "Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at http://127.0.0.1:39041/work/ivi/\nCall log:\n  - navigating to \"http://127.0.0.1:39041/work/ivi/\", waiting until \"domcontentloaded\"\n"
+  },
+  {
+    "project": "ivi",
+    "width": 1280,
+    "url": "http://127.0.0.1:39041/work/ivi/",
+    "error": "Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at http://127.0.0.1:39041/work/ivi/\nCall log:\n  - navigating to \"http://127.0.0.1:39041/work/ivi/\", waiting until \"domcontentloaded\"\n"
+  },
+  {
+    "project": "ivi",
+    "width": 768,
+    "url": "http://127.0.0.1:39041/work/ivi/",
+    "error": "Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at http://127.0.0.1:39041/work/ivi/\nCall log:\n  - navigating to \"http://127.0.0.1:39041/work/ivi/\", waiting until \"domcontentloaded\"\n"
+  },
+  {
+    "project": "ivi",
+    "width": 390,
+    "url": "http://127.0.0.1:39041/work/ivi/",
+    "error": "Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at http://127.0.0.1:39041/work/ivi/\nCall log:\n  - navigating to \"http://127.0.0.1:39041/work/ivi/\", waiting until \"domcontentloaded\"\n"
+  },
+  {
+    "project": "cafekok",
+    "width": 1440,
+    "url": "http://127.0.0.1:39041/work/cafekok/",
+    "error": "Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at http://127.0.0.1:39041/work/cafekok/\nCall log:\n  - navigating to \"http://127.0.0.1:39041/work/cafekok/\", waiting until \"domcontentloaded\"\n"
+  },
+  {
+    "project": "cafekok",
+    "width": 1280,
+    "url": "http://127.0.0.1:39041/work/cafekok/",
+    "error": "Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at http://127.0.0.1:39041/work/cafekok/\nCall log:\n  - navigating to \"http://127.0.0.1:39041/work/cafekok/\", waiting until \"domcontentloaded\"\n"
+  },
+  {
+    "project": "cafekok",
+    "width": 768,
+    "url": "http://127.0.0.1:39041/work/cafekok/",
+    "error": "Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at http://127.0.0.1:39041/work/cafekok/\nCall log:\n  - navigating to \"http://127.0.0.1:39041/work/cafekok/\", waiting until \"domcontentloaded\"\n"
+  },
+  {
+    "project": "cafekok",
+    "width": 390,
+    "url": "http://127.0.0.1:39041/work/cafekok/",
+    "error": "Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at http://127.0.0.1:39041/work/cafekok/\nCall log:\n  - navigating to \"http://127.0.0.1:39041/work/cafekok/\", waiting until \"domcontentloaded\"\n"
+  },
+  {
+    "project": "offer",
+    "width": 1440,
+    "url": "http://127.0.0.1:39041/work/offer/case-study.html",
+    "error": "Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at http://127.0.0.1:39041/work/offer/case-study.html\nCall log:\n  - navigating to \"http://127.0.0.1:39041/work/offer/case-study.html\", waiting until \"domcontentloaded\"\n"
+  },
+  {
+    "project": "offer",
+    "width": 1280,
+    "url": "http://127.0.0.1:39041/work/offer/case-study.html",
+    "error": "Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at http://127.0.0.1:39041/work/offer/case-study.html\nCall log:\n  - navigating to \"http://127.0.0.1:39041/work/offer/case-study.html\", waiting until \"domcontentloaded\"\n"
+  },
+  {
+    "project": "offer",
+    "width": 768,
+    "url": "http://127.0.0.1:39041/work/offer/case-study.html",
+    "error": "Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at http://127.0.0.1:39041/work/offer/case-study.html\nCall log:\n  - navigating to \"http://127.0.0.1:39041/work/offer/case-study.html\", waiting until \"domcontentloaded\"\n"
+  },
+  {
+    "project": "offer",
+    "width": 390,
+    "url": "http://127.0.0.1:39041/work/offer/case-study.html",
+    "error": "Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at http://127.0.0.1:39041/work/offer/case-study.html\nCall log:\n  - navigating to \"http://127.0.0.1:39041/work/offer/case-study.html\", waiting until \"domcontentloaded\"\n"
+  }
+]

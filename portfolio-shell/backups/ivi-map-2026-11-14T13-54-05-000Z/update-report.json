@@ -1,0 +1,63 @@
+{
+  "fileKey": "FF8CphVdOl1e6iASFM4ef2",
+  "nodes": {
+    "unified": "103:936",
+    "double": "193:449",
+    "top": "113:385",
+    "side": "404:114",
+    "climate": "178:1446",
+    "menu": "101:38",
+    "phone": "103:858"
+  },
+  "updated": [
+    {
+      "name": "unified",
+      "width": 654,
+      "height": 400,
+      "bytes": 121335,
+      "sha256": "b000b18b950a9d418708773d2373dfbfd650852baa58d24eef229ae8bbd91c5c"
+    },
+    {
+      "name": "double",
+      "width": 654,
+      "height": 400,
+      "bytes": 122554,
+      "sha256": "9ad3b4d683e984f01a6abcadbbfad1afef2638690a3e8d9de5d6dc4163865729"
+    },
+    {
+      "name": "top",
+      "width": 654,
+      "height": 400,
+      "bytes": 123475,
+      "sha256": "01165f67712b0636f14e767394f3b219a40194b946af99ff00137076fd2ceb00"
+    },
+    {
+      "name": "side",
+      "width": 2616,
+      "height": 1600,
+      "bytes": 1047973,
+      "sha256": "4c6fd8001188d6710851cfafb8df3f4e7e8fa0132966b9037c23bb927f5888e8"
+    },
+    {
+      "name": "climate",
+      "width": 654,
+      "height": 400,
+      "bytes": 117658,
+      "sha256": "fcded96bb77b5f5f619b09cb8f5a6b1adfb82b2a5a014cca69512bd80b2ee724"
+    },
+    {
+      "name": "menu",
+      "width": 654,
+      "height": 400,
+      "bytes": 122413,
+      "sha256": "1ed2ac8fbd863aa7a76a10b7df35ba4cbc16bdf45b418f1d761a043a2be9b3d3"
+    },
+    {
+      "name": "phone",
+      "width": 654,
+      "height": 400,
+      "bytes": 111901,
+      "sha256": "23526ba649b07bf2bc220d23e42f9437fe485603c4a3e67d86fa3fa6138d728b"
+    }
+  ]
+}

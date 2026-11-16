@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-15",
+  "files": [
+    {
+      "file": "cafekok-cover-study-v1.png",
+      "bytes": 2501929,
+      "width": 1672,
+      "height": 941,
+      "sha256": "51b1a56f402048eee0704ea1849c337b878039e692ffd2b793086aa5cf7db9f4",
+      "status": "composition study, not final original UI composite"
+    },
+    {
+      "file": "lg-cover-study-v1.png",
+      "bytes": 1914152,
+      "width": 1672,
+      "height": 941,
+      "sha256": "019c833161b25b4d890e637b7991b1d7c3f807324b540330f6a6143a082cdce5",
+      "status": "composition study, not final original UI composite"
+    },
+    {
+      "file": "offer-cover-study-v1.png",
+      "bytes": 1657330,
+      "width": 1672,
+      "height": 941,
+      "sha256": "bd21d4ed09d40026ab82258f08c6f381467a6e992f5abbeb888ea83bff3b63e4",
+      "status": "composition study, not final original UI composite"
+    }
+  ],
+  "websiteWiring": false,
+  "sourceScreenshotFidelity": "Not pixel-identical; original UI replacement required",
+  "fourKExport": false
+}

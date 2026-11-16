@@ -1,0 +1,249 @@
+{
+  "checkedAt": "2026-11-14T14:07:02.012Z",
+  "repositories": 8,
+  "collectedSourceFiles": 48,
+  "licenseFiles": 8,
+  "totalBytes": 290178,
+  "files": [
+    {
+      "file": "sources/motiondivision/motion/LICENSE.md",
+      "bytes": 1100,
+      "sha256": "1bf0dc3f7727723e5a032ed12164a47cf92c05204cb1a3485f123c24e2833ed1"
+    },
+    {
+      "file": "sources/motiondivision/motion/README.md",
+      "bytes": 7475,
+      "sha256": "08915bb5254a4bc1fd47e8d7ea8fff0dcb470461f6fd6b59fb6d2f0bef0400df"
+    },
+    {
+      "file": "sources/motiondivision/motion/dev/html/public/examples/stagger.html",
+      "bytes": 6826,
+      "sha256": "e9fc653397a566c72ed3ab8b5fc34a8a51450d940fbef76aa3b572486ad72a76"
+    },
+    {
+      "file": "sources/motiondivision/motion/dev/html/public/playwright/scroll/scroll-callback-progress.html",
+      "bytes": 3073,
+      "sha256": "0eb935b663478220a1035bfaa16d41de8e6d3c2b33586f9de3b1d5cdd442bd84"
+    },
+    {
+      "file": "sources/motiondivision/motion/dev/html/public/playwright/animate/timeline.html",
+      "bytes": 428,
+      "sha256": "3ba8b15fb595b384bcfc602d469c1967c1dd3785f6ba6d48f0a3c12eb17d4014"
+    },
+    {
+      "file": "sources/motiondivision/motion/packages/motion-dom/src/animation/animate/element.ts",
+      "bytes": 4641,
+      "sha256": "c273fb513a122a5be3f22fa5ff7587c21ce225f8c3db4761cff93e2bfab8e555"
+    },
+    {
+      "file": "sources/motiondivision/motion/dev/html/src/inc.js",
+      "bytes": 137,
+      "sha256": "6405a41e95087e21f83b6bdc3376fd3fa1f4a2e552095195b34d2aa75715e0de"
+    },
+    {
+      "file": "sources/motiondivision/motion/dev/html/src/imports/view.js",
+      "bytes": 70,
+      "sha256": "ed88341b85d2aded8899ca6b5974f54ed0ef8f9f147fc83cd6d1d8db2bd1f068"
+    },
+    {
+      "file": "sources/motiondivision/motion/packages/framer-motion/src/animation/animate/sequence.ts",
+      "bytes": 2054,
+      "sha256": "790afe78ac6ce6dd9a3afa5e08fa8a7607e4cceca169b3dad3610e5464be3b1f"
+    },
+    {
+      "file": "sources/motiondivision/motion/packages/framer-motion/src/render/dom/scroll/index.ts",
+      "bytes": 1006,
+      "sha256": "3ef6e5247c9b847f53610aaa82e512c2b797483708a2d679d9f04900ed503b02"
+    },
+    {
+      "file": "sources/russellsamora/scrollama/LICENSE",
+      "bytes": 1071,
+      "sha256": "c0b658fd38a5a7c8d38634dffaf0a66fd82843c2e8fb08aec372b21e4d0f3a89"
+    },
+    {
+      "file": "sources/russellsamora/scrollama/README.md",
+      "bytes": 11620,
+      "sha256": "094ced37a3c807c961c6ba5783ba617e78e6f17b2a12b6fb5754935401b92236"
+    },
+    {
+      "file": "sources/russellsamora/scrollama/docs/sticky-side/index.html",
+      "bytes": 5750,
+      "sha256": "3c2e4d9ca8dba410438757c64acd362403f2405d280be1652794afe43d90d1a8"
+    },
+    {
+      "file": "sources/russellsamora/scrollama/docs/progress/index.html",
+      "bytes": 4275,
+      "sha256": "7e339035f340ecf5780e95d848d5aeea3d9215cb1ab893459443ad886693358e"
+    },
+    {
+      "file": "sources/russellsamora/scrollama/src/entry.js",
+      "bytes": 8162,
+      "sha256": "275039aec1e36b9cd228bd29ca45e52f5e2d90eb639a8a37557ab46ed52ff3ad"
+    },
+    {
+      "file": "sources/russellsamora/scrollama/src/parseOffset.js",
+      "bytes": 579,
+      "sha256": "333b17da2de74eb42a455a98992495e784c6b84334ebd14ef6fadc911ee3db16"
+    },
+    {
+      "file": "sources/d3/d3-shape/LICENSE",
+      "bytes": 731,
+      "sha256": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3"
+    },
+    {
+      "file": "sources/d3/d3-shape/README.md",
+      "bytes": 605,
+      "sha256": "2d13c83b4371ee00ed991f6106383bcbb916b00bf00da07ba8972915d9825200"
+    },
+    {
+      "file": "sources/d3/d3-shape/src/line.js",
+      "bytes": 1733,
+      "sha256": "90eac879faa69aa2178a21e4ed2838c8f975e3d3282936dcc415b48573352da6"
+    },
+    {
+      "file": "sources/d3/d3-shape/src/area.js",
+      "bytes": 3218,
+      "sha256": "a2b2a221aaac4ed5715ff22d5a8d2264dd2992bd7ba22b0973e1555f6c3fd85a"
+    },
+    {
+      "file": "sources/d3/d3-shape/src/curve/linear.js",
+      "bytes": 744,
+      "sha256": "e377d1440cd2547ad2e38050898e2cd765eb9d248cc5702f287763353ac43b87"
+    },
+    {
+      "file": "sources/dimsemenov/PhotoSwipe/LICENSE",
+      "bytes": 1110,
+      "sha256": "41924a489f374dcc647db30916c6de47c4eb8c9a995de6a4c08629696096db3e"
+    },
+    {
+      "file": "sources/dimsemenov/PhotoSwipe/README.md",
+      "bytes": 1672,
+      "sha256": "b54b8dd7246e834a835853fc9eaf6a5cdae77e834c908541f1f68124ceb38f69"
+    },
+    {
+      "file": "sources/dimsemenov/PhotoSwipe/docs/getting-started.md",
+      "bytes": 6715,
+      "sha256": "782f089bc8ee86777c7da880b2c67362ad8406d02c2efa0b64e770461e677aae"
+    },
+    {
+      "file": "sources/dimsemenov/PhotoSwipe/src/js/lightbox/lightbox.js",
+      "bytes": 8924,
+      "sha256": "05a710ba48f5315d4123735bf403d64242ecf3d75d825972e66d7a0929db7da5"
+    },
+    {
+      "file": "sources/dimsemenov/PhotoSwipe/src/photoswipe.css",
+      "bytes": 7003,
+      "sha256": "bb5e956812a813e1bd5be5d7641cc78d05d7e7d3f7ab10187bc2725d70b52c94"
+    },
+    {
+      "file": "sources/argyleink/open-props/LICENSE",
+      "bytes": 1068,
+      "sha256": "fed3aa342094f6bb33701d09133c159a4c124e509ede255a889dd2c28ec3ab6e"
+    },
+    {
+      "file": "sources/argyleink/open-props/readme.md",
+      "bytes": 2270,
+      "sha256": "552c700d787a50409f71d833fde0249bfae8264af7f31d366d949aa45af1e7ae"
+    },
+    {
+      "file": "sources/argyleink/open-props/src/props.easing.css",
+      "bytes": 6415,
+      "sha256": "0767db9d3c7a630d21cd399cf9797357713a4b675e48c8281af62cddd8f01ee0"
+    },
+    {
+      "file": "sources/argyleink/open-props/src/props.sizes.css",
+      "bytes": 1935,
+      "sha256": "9df4d9369105ef74288efcf9c0261d2ef9893e09669f25637e46a87f8109d583"
+    },
+    {
+      "file": "sources/argyleink/open-props/src/props.fonts.css",
+      "bytes": 2805,
+      "sha256": "ba041962ded7cb37a69021fc8ebb84ca586269bb36e6a4a8b4de34630068727b"
+    },
+    {
+      "file": "sources/argyleink/open-props/src/props.shadows.css",
+      "bytes": 4347,
+      "sha256": "305767180c329828bc298f467f619c0064a15281e5ac651fd846bbd94058a60e"
+    },
+    {
+      "file": "sources/sneas/img-comparison-slider/LICENSE",
+      "bytes": 1074,
+      "sha256": "7ea86ea7d6b3bf7d1368064512d24bdbe8a5c7c66dd7e0e55f608ec3c39cc2b3"
+    },
+    {
+      "file": "sources/sneas/img-comparison-slider/README.md",
+      "bytes": 6230,
+      "sha256": "9c825a9c124c2bc42ea741e961fb7f651622851cfbbcd8ac1b25cc44c12d37c9"
+    },
+    {
+      "file": "sources/sneas/img-comparison-slider/packages/img-comparison-slider/README.md",
+      "bytes": 6230,
+      "sha256": "9c825a9c124c2bc42ea741e961fb7f651622851cfbbcd8ac1b25cc44c12d37c9"
+    },
+    {
+      "file": "sources/sneas/img-comparison-slider/packages/img-comparison-slider/src/index.ts",
+      "bytes": 11678,
+      "sha256": "aef230a1c894bfef4369052cd9ce0919746b4a90c8bffad5d13795b80eba6f48"
+    },
+    {
+      "file": "sources/sneas/img-comparison-slider/packages/img-comparison-slider/src/styles.scss",
+      "bytes": 3390,
+      "sha256": "ab0c3b3fcd2b7ad380c594e2b7de0c6f4b182770c22389f0b4bd35f4e7cfceb1"
+    },
+    {
+      "file": "sources/sneas/img-comparison-slider/packages/img-comparison-slider/src/template.html",
+      "bytes": 778,
+      "sha256": "a722e7397a246e67d7397792ba2716c0b50d200599c62df67cfd80b95aa7b2e5"
+    },
+    {
+      "file": "sources/darkroomengineering/lenis/LICENSE",
+      "bytes": 1089,
+      "sha256": "aa0646bd5431b4828d8e4c3312417bd516c6c6b5c96cdc2842700dde31572f50"
+    },
+    {
+      "file": "sources/darkroomengineering/lenis/README.md",
+      "bytes": 34587,
+      "sha256": "fe6aaa35a243c4e0a124a23e7149ffe66e83789fc7a55b01a2042fa14e8baa54"
+    },
+    {
+      "file": "sources/darkroomengineering/lenis/packages/core/lenis.css",
+      "bytes": 513,
+      "sha256": "2f668ae84a668327f246faf8a770383a2bf69196d214290fbc4d5548910606c5"
+    },
+    {
+      "file": "sources/darkroomengineering/lenis/packages/core/src/lenis.ts",
+      "bytes": 33448,
+      "sha256": "b7c7561611816af5383047cca7867ddaea30363aae878a33aff62914dc4f74a1"
+    },
+    {
+      "file": "sources/codrops/ScrollBasedLayoutAnimations/LICENSE",
+      "bytes": 1103,
+      "sha256": "85131f2bb7714dc895ff5d7d68db65acc5ad0e5dfd72162869fc8d63dec06056"
+    },
+    {
+      "file": "sources/codrops/ScrollBasedLayoutAnimations/README.md",
+      "bytes": 1822,
+      "sha256": "ab1ab8c2101a56152cfed3520bccb582dee78af868ed1f73b49b26d18fc82c15"
+    },
+    {
+      "file": "sources/codrops/ScrollBasedLayoutAnimations/css/base.css",
+      "bytes": 39094,
+      "sha256": "94635460be019ec6c277803a4f8b5440bf177958a5ccd9b7f47c42126a8d0c60"
+    },
+    {
+      "file": "sources/codrops/ScrollBasedLayoutAnimations/index.html",
+      "bytes": 25880,
+      "sha256": "574e58ae77b2b9cc0aadecc92a364cce2a31761e987b8ab3d858addf27caddc2"
+    },
+    {
+      "file": "sources/codrops/ScrollBasedLayoutAnimations/js/index.js",
+      "bytes": 13020,
+      "sha256": "f5a36f29c6297f2c72e22769d6016e890e7fad9b5c2f94c6a48b854791abc150"
+    },
+    {
+      "file": "sources/codrops/ScrollBasedLayoutAnimations/js/utils.js",
+      "bytes": 680,
+      "sha256": "d32f581f7420a86129a0d846f375c6f89e06f68f8d7f07c48ff527417b1fc193"
+    }
+  ]
+}

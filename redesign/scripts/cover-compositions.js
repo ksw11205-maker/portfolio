@@ -1,0 +1,13 @@
+// Generated from scripts/lib/cover-compositions.cjs
+export function renderCover(slug){
+ const img=(src,alt)=>`<img src="${src}" alt="${alt}" decoding="async" loading="eager">`;
+ const device=(kind,cls,src,alt)=>`<div class="cover-device ${kind} ${cls}"><div class="device-screen">${img(src,alt)}</div></div>`;
+ const signatures={lg:['01 / SMART TV UX','LG TV','AI Design Tool','Research meets design.'],ivi:['02 / AUTOMOTIVE HMI','IVI','Usability Research','Designed for the driving context.'],cafekok:['03 / MOBILE EXPERIENCE','CAFÉKOK','Find your place.','Personalized café discovery'],offer:['04 / RESPONSIVE WEB','OFFER','Worth a look.','Brand promotion curation']};
+ const [type,name,sub,line]=signatures[slug];
+ let objects='';
+ if(slug==='lg')objects=`<div class="lg-plinth"></div>${device('television','lg-tv','/work/lg/assets/tv-control.webp','LG TV의 실제 TV 제어 화면')}<span class="device-caption tv-caption">LG TV / PRODUCT INTERFACE</span>${device('notebook','lg-tool','/work/lg/assets/02-analysis.webp','별도 AI Design Tool의 실제 사용성 분석 화면')}<span class="device-caption tool-caption">AI DESIGN TOOL / USABILITY ANALYSIS</span>`;
+ if(slug==='ivi')objects=`<div class="cockpit-surface"></div><div class="cockpit-trim"></div>${device('automotive','ivi-main','/assets/covers/screens/ivi-unified.webp','Figma에서 추출한 실제 IVI 통합형 프로토타입 화면')}${device('automotive','ivi-detail','/assets/covers/screens/ivi-climate.webp','동일 IVI 프로토타입의 공조 조절 화면')}<span class="device-caption ivi-caption">IN-VEHICLE TOUCHSCREEN / INTERACTION STUDY</span>`;
+ if(slug==='cafekok')objects=`<div class="cafe-photo">${img('/work/cafekok/assets/cafe-cover.jpg','프로젝트 원본 카페 외관 사진')}</div>${device('handset','cafe-detail','/assets/covers/screens/cafekok-detail.webp','카페콕 실제 카페 상세 화면')}${device('handset','cafe-home','/assets/covers/screens/cafekok-home.webp','카페콕 실제 홈과 방문 목적 선택 화면')}<span class="device-caption cafe-caption">A PLACE FOR YOUR EVERYDAY.</span>`;
+ if(slug==='offer')objects=`<div class="offer-baseline"></div>${device('desktop','offer-desktop','/assets/covers/screens/offer-desktop-1920.webp','OFFER 실제 데스크톱 탐색 화면')}${device('slate','offer-tablet','/work/offer/case-study-assets/editorial/tablet.jpg','OFFER 실제 태블릿 탐색 화면')}${device('handset','offer-mobile','/work/offer/case-study-assets/editorial/mobile.jpg','OFFER 실제 모바일 탐색 화면')}<span class="device-caption offer-caption">DESKTOP / TABLET / MOBILE</span>`;
+ return `<div class="cover-scene cover-scene--${slug}" data-art="${slug}"><div class="cover-signature"><span class="cover-index">${type}</span><strong class="cover-wordmark">${name}</strong><span class="cover-subtitle">${sub}</span><span class="cover-deck">${line}</span></div><div class="cover-objects">${objects}</div></div>`;
+}

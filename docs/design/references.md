@@ -1,5 +1,32 @@
 # 디자인 레퍼런스 출처와 적용 범위
 
+## 상세 컨셉 무드보드 · 2026-11-16
+
+사용자 첨부 YES24 CONCEPT 사진 카드와 KORAIL DESIGN SYSTEM 보드를 직접 확인했다. 컨셉은 사진·키워드·짧은 설명의 3열 무드보드, 디자인 시스템은 서체/타입 스케일/색상으로 축약했다. 프로젝트별 외부 참고 사진은 `redesign/assets/moods/`에 저장했고 원본 배포 URL과 사용 조건은 [CREDITS](../../redesign/assets/moods/CREDITS.md)에 기록했다. 실제 UI·연구 증거와 구분해 컨셉에만 사용한다.
+
+## 표지 구도 연구 · 2026-11-15
+
+사용자의 기존 표지와 실제 프로토타입·사이트 캡처를 참조해 built-in ImageGen으로 LG·CAFÉKOK·OFFER 구도 시안 3개를 생성했다. [프롬프트와 원본 목록](references/cover-studies-20261115/prompts.json), [파일 해시·크기](references/cover-studies-20261115/asset-manifest.json)를 보존한다.
+시안은 각각 1672×941 PNG이며 4K 최종 산출물이 아니다. 생성 모델의 UI 작은 글자·날짜·수치 차이가 있어 실제 화면 증거로 사용하지 않는다. 배경·디바이스 구도 선택 후 원본 UI를 별도 레이어로 합성하고 출력 크기를 검수한다. IVI는 사용자 선택에 따라 기존 컨셉 표지를 그대로 사용한다.
+Q&A 원본 오브젝트 5개를 직접 확인해 문구와의 의미 대응을 검토했다. 사이트 미실행 요청을 유지했으므로 런타임 디자인·모션·접근성 감사를 수행했다고 주장하지 않는다.
+
+## 전면 리디자인 준비 · 2026-11-14
+
+사용자의 새 디자인 요청에 따라 준비한 자원이다. 실행 페이지에 적용하거나 새 사이트를 실행하지 않았다.
+- 콘텐츠 원본: [내용 추출본](../projects/content-snapshot-20261114/README.md)
+- 공통 제안: [DESIGN.md](../../DESIGN.md), [구현 인계](redesign-handoff.md)
+- [자원 인덱스](references/redesign-20261114/FOUNDATIONS.json): 4개 폰트·아이콘 저장소 고정 커밋/라이선스/파일 URL.
+- [인터랙션 수집본](references/redesign-20261114/interaction-collection/README.md): 기존에 선정한 8개 저장소의 코드·예제·문서 48개와 적용 판단.
+- [SUIT](https://github.com/sun-typeface/SUIT): 한글·영문 기본 서체 후보. OFL 1.1 원문과 Variable WOFF2/CSS를 수집.
+- [Pretendard](https://github.com/orioncactus/pretendard): 기존 로컬 파일 재사용 후보. 배포 폰트 라이선스와 CSS를 수집.
+- [Source Serif 4](https://github.com/adobe-fonts/source-serif): 제한된 영문 강조 후보. OFL 원문과 Roman Variable WOFF2를 수집.
+- [Lucide](https://github.com/lucide-icons/lucide): 아이콘 11개 SVG와 전체 라이선스 고지를 수집. 기업 로고 대체용이 아님.
+- 버튼·포커스·호버는 의미 있는 HTML/CSS를 기본으로 한다. [hover](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/hover), [focus-visible](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible), [dialog](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog)의 공식 문서를 확인했다.
+- 새 디자인에서는 수집한 라이브러리를 모두 설치하지 않는다. CSS/WAAPI → 필요할 때 Motion, native dialog → 필요할 때 PhotoSwipe 순으로 선택한다. Lenis와 Codrops 연출은 목적과 충돌 검토 후의 후보다.
+- 수집 원문은 상대 import·CSS URL을 수정하지 않았다. 선택 소스 스냅샷이므로 독립 실행본이 아니다. 폰트·아이콘·동작은 실제 시각·키보드·터치 검수 후 최종 채택한다.
+- 디자인 후보와 구현 준비 상태를 명시한 것이며, 브랜드 화면·사진·성과의 사용 권한이나 연구 결과를 새로 검증한 기록은 아니다.
+
+
 ### How I Think 카드 이미지 — 사용자 제공 최종본
 
 - 원본 ZIP: `C:/Users/SBS/Downloads/카드 내부 이미지들.zip`. 각 파일을 직접 확인했다. `1.png` 연결된 사각 판 구조물, `2.png` 어두운 전구와 노란 불빛, `3.png` 옆으로 기울어진 다이아몬드·바닥 반사, `4.png` 바닥에 눕힌 실버 AI 글자, `5.png` 맞물린 반투명 유리 퍼즐이다.
@@ -61,6 +88,8 @@
 | `LICENSE` | `6D4BDC9A9CF30E7BEB593475FDCDBF29F981EA6BD7923F202866145409F87B44` |
 
 ## 참고 캡처
+
+2026-11-16 사용자 지정 업데이트: SUNEUI MOON 원본을 9개 연속 구간으로 직접 열어 전체를 확인했다. 그 안의 YES24 Ticket(앞부분)은 LG·IVI의 어두운 표면과 큰 UI 대비에, KORAIL(중간 부분)은 CAFEKOK·OFFER의 밝은 표면과 정돈된 흐름에 적용한다. 공통은 왼쪽 정렬 제목·화면 중심 구성·여백 위계다. 사용자 요청에 따라 원본의 장식·강한 색상 면·연결선까지 복제하지 않는다. 웹 원문 텍스트 접근은 403이었으며 관찰 근거는 아래 보존된 사용자 제공 원본이다. 참고 이미지 자체를 사이트 자산으로 사용하지 않았다.
 
 - 아래 세 캡처는 사용자가 선택해 제공한 Behance 레퍼런스다. 원본 PNG를 변경 없이 보존했다. 확인일·제공일은 2026-09-28이며 실제 촬영일은 미확인이다.
 - 이전 로컬 화면 캡처는 구현 상태 확인용 QA 자료이며 디자인 레퍼런스로 채택하지 않았다.

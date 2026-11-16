@@ -1,79 +1,99 @@
-// Reading navigation: section transitions and overlapping views of tall evidence.
+// Soft wheel motion and readable scene landings share one animation owner.
+import { initScrollMotion } from './scroll-motion.js';
 export function layoutTop(element){
  let top=0;for(let node=element;node;node=node.offsetParent)top+=node.offsetTop;return top;
 }
-export function initReadingSnap({header,getPoints}){
+export function initReadingSnap({header,getPoints=()=>[],getRanges=()=>[]}){
  const root=document.documentElement,reduced=matchMedia('(prefers-reduced-motion: reduce)');
- let points=[],frame=0,refreshFrame=0,lastWheel=-Infinity;
+ const motion=initScrollMotion({reduced});
+ let points=[],ranges=[],aligning=false,refreshFrame=0,idle=0,direction=0,lastY=scrollY;
+ let manual=false,moved=false,touching=false,pressed=false,lastSettled=null;
+ const fields='input,textarea,select,[contenteditable],dialog';
  const blocked=()=>reduced.matches||document.body.classList.contains('motion-paused')||document.body.classList.contains('intro-active');
- function sync(){root.dataset.readingSnap=blocked()?'disabled':'scripted';}
+ function cancel(){clearTimeout(idle);if(aligning)motion.cancel();aligning=false;root.dataset.readingPhase='idle';}
+ function sync(){cancel();manual=false;root.dataset.readingSnap=blocked()?'disabled':'smooth-proximity';}
  function refresh(){
-  refreshFrame=0;const gap=innerWidth<=600?40:Math.round(Math.max(56,Math.min(80,innerWidth*.045)));
-  const offset=Math.max(0,header?.getBoundingClientRect().bottom||0)+gap;
+  refreshFrame=0;
+  const gap=innerWidth<=600?24:32,offset=Math.max(0,header?.getBoundingClientRect().bottom||0)+gap;
   root.style.scrollPaddingTop=offset+'px';
-  const max=Math.max(0,root.scrollHeight-innerHeight);
-  const candidates=[...new Set([0,...getPoints(offset),max].filter(Number.isFinite).map(p=>Math.round(Math.max(0,Math.min(max,p)))))].sort((a,b)=>a-b);
-  points=[];
-  const minStep=Math.min(160,innerHeight*.18);
-  candidates.forEach(point=>{if(!points.length||point-points.at(-1)>=minStep||point===Math.round(max))points.push(point);});
-  sync();
+  const max=Math.max(0,root.scrollHeight-innerHeight),available=Math.max(180,innerHeight-offset-32);
+  const clamp=n=>Math.max(0,Math.min(max,n));
+  points=getPoints(offset).map(point=>typeof point==='number'?{top:point}:point)
+   .filter(point=>Number.isFinite(point?.top)).map(point=>({...point,top:clamp(point.top),radius:point.radius??Math.min(96,available*.14)}));
+  ranges=getRanges(offset).filter(range=>Number.isFinite(range.start)&&Number.isFinite(range.end)&&range.end>range.start)
+   .map(range=>({...range,start:clamp(range.start),end:clamp(range.end)}));
  }
- function schedule(){if(!refreshFrame)refreshFrame=requestAnimationFrame(refresh);}
- function cancel(){cancelAnimationFrame(frame);frame=0;}
+ function schedule(){
+  // Loaded images or disclosures can move the destination during alignment.
+  // Re-evaluate after layout settles instead of stopping at stale coordinates.
+  if(aligning){cancel();manual=true;moved=true;queue();}
+  if(!refreshFrame)refreshFrame=requestAnimationFrame(refresh);
+ }
  function nested(target,delta){
-  for(let node=target;node&&node!==document.body&&node!==root;node=node.parentElement){
+  for(let node=target;node instanceof Element&&node!==document.body&&node!==root;node=node.parentElement){
    if(/auto|scroll/.test(getComputedStyle(node).overflowY)&&node.scrollHeight>node.clientHeight+1&&(delta>0?node.scrollTop+node.clientHeight<node.scrollHeight-1:node.scrollTop>0))return true;
   }return false;
  }
- function navigate(dir){
-  if(frame||blocked())return;
-  refresh();const ordered=dir>0?points:[...points].reverse();
-  const target=ordered.find(point=>dir*(point-scrollY)>8);if(target===undefined)return;
-  const origin=scrollY,start=performance.now();
-  function tick(time){
-   if(blocked()){cancel();return;}
-   const p=Math.min(1,(time-start)/650);
-   window.scrollTo({top:origin+(target-origin)*(1-Math.pow(1-p,3)),behavior:'instant'});
-   if(p<1)frame=requestAnimationFrame(tick);else frame=0;
-  }frame=requestAnimationFrame(tick);
+ function settle(){
+  if(!manual||blocked()||touching||pressed||getSelection()?.toString()||document.activeElement?.matches(fields))return;
+  // Finish the user's own wheel momentum before choosing a reading position.
+  if(motion.isMoving){queue();return;}
+  manual=false;if(!moved)return;refresh();const origin=scrollY;
+  const range=ranges.find(range=>origin>range.start+2&&origin<range.end-2);
+  const point=points.filter(point=>Math.abs(point.top-origin)<=point.radius&&Math.abs(point.top-origin)>2&&
+    (lastSettled===null||Math.abs(point.top-lastSettled)>3))
+    .sort((a,b)=>Math.abs(a.top-origin)-Math.abs(b.top-origin))[0];
+  const target=range?(direction<0?range.start:range.end):point?.top;
+  if(target===undefined||Math.abs(target-origin)<2)return;
+  range?.onSettle?.(direction,target);
+  const duration=Math.min(.95,Math.max(.42,Math.abs(target-origin)*.0011));
+  aligning=true;
+  root.dataset.readingPhase='aligning';root.dataset.readingTarget=String(target);
+  motion.scrollTo(target,{duration,onComplete(){
+   aligning=false;lastY=scrollY;lastSettled=target;root.dataset.readingPhase='idle';
+  }});
  }
- const fields='input,textarea,select,[contenteditable],dialog';
+ function queue(){clearTimeout(idle);if(manual&&!touching&&!pressed)idle=setTimeout(settle,180);}
+ function begin(delta,target){
+  cancel();manual=false;
+  if(blocked()||target?.closest?.(fields)||nested(target,delta)||getSelection()?.toString())return;
+  manual=true;moved=!!delta;lastY=scrollY;if(delta)direction=Math.sign(delta);
+  // Leaving an aligned position must remain possible with small wheel steps.
+  if(lastSettled!==null&&Math.abs(scrollY-lastSettled)>innerHeight*.45)lastSettled=null;
+  queue();
+ }
  addEventListener('wheel',event=>{
-  if(blocked()||event.ctrlKey||event.metaKey||Math.abs(event.deltaX)>=Math.abs(event.deltaY)||event.target.closest(fields)||nested(event.target,event.deltaY)||getSelection()?.toString())return;
-  event.preventDefault();event.stopImmediatePropagation();
-  const now=performance.now(),ongoing=now-lastWheel<650;lastWheel=now;
-  if(!ongoing)navigate(Math.sign(event.deltaY));
- },{capture:true,passive:false});
- addEventListener('keydown',event=>{
-  if(blocked()||event.ctrlKey||event.metaKey||event.altKey||event.target.closest(fields+',a,button')||getSelection()?.toString())return;
-  const dir={ArrowDown:1,ArrowUp:-1,PageDown:1,PageUp:-1,' ':event.shiftKey?-1:1}[event.key];
-  if(!dir||nested(event.target,dir))return;
-  event.preventDefault();event.stopImmediatePropagation();if(!event.repeat)navigate(dir);
- },{capture:true});
- let touch=null;
- addEventListener('touchstart',event=>{
-  cancel();touch=null;
-  if(blocked()||event.touches.length!==1||event.target.closest(fields))return;
-  const p=event.touches[0];touch={x:p.clientX,y:p.clientY,dy:0,swiping:false};
+  if(event.ctrlKey||event.metaKey||Math.abs(event.deltaX)>=Math.abs(event.deltaY)){cancel();manual=false;return;}
+  begin(event.deltaY,event.target);
+ },{capture:true,passive:true});
+ addEventListener('scroll',()=>{
+  if(aligning)return;
+  const delta=scrollY-lastY;lastY=scrollY;
+  if(manual&&Math.abs(delta)>.5){moved=true;direction=Math.sign(delta);queue();}
  },{passive:true});
- addEventListener('touchmove',event=>{
-  if(!touch||event.touches.length!==1||blocked()){touch=null;return;}
-  const p=event.touches[0],dx=touch.x-p.clientX,dy=touch.y-p.clientY;
-  if(Math.abs(dx)>Math.abs(dy)||nested(event.target,dy)){touch=null;return;}
-  if(Math.abs(dy)>8){event.preventDefault();touch.dy=dy;touch.swiping=true;}
- },{passive:false});
- addEventListener('touchend',event=>{
-  if(touch?.swiping){event.preventDefault();if(Math.abs(touch.dy)>28)navigate(Math.sign(touch.dy));}
-  touch=null;
- },{passive:false});
- addEventListener('touchcancel',()=>{touch=null;},{passive:true});
- addEventListener('pointerdown',cancel,{passive:true});document.addEventListener('click',cancel,true);
- addEventListener('keydown',e=>{if(['Home','End','Tab','Escape'].includes(e.key))cancel();});
+ addEventListener('touchstart',event=>{touching=true;begin(0,event.target);},{capture:true,passive:true});
+ addEventListener('touchend',()=>{touching=false;queue();},{capture:true,passive:true});
+ addEventListener('touchcancel',()=>{touching=false;manual=false;cancel();},{capture:true,passive:true});
+ addEventListener('pointerdown',()=>{pressed=true;cancel();manual=false;},{capture:true,passive:true});
+ addEventListener('pointerup',()=>{pressed=false;queue();},{capture:true,passive:true});
+ addEventListener('pointercancel',event=>{
+  pressed=false;
+  // Native touch panning hands the pointer to the browser; touchend still owns
+  // the reading settle after its momentum finishes.
+  if(event.pointerType==='touch'&&touching)return;
+  cancel();manual=false;
+ },{capture:true,passive:true});
+ addEventListener('keydown',event=>{
+  const down=['ArrowDown','PageDown',' '].includes(event.key),up=['ArrowUp','PageUp'].includes(event.key)||event.key===' '&&event.shiftKey;
+  if((down||up)&&!event.ctrlKey&&!event.metaKey&&!event.altKey)begin(up?-1:1,event.target);
+  else{cancel();manual=false;}
+ },{capture:true});
+ for(const type of ['click','hashchange','blur','pagehide'])addEventListener(type,()=>{cancel();manual=false;},{capture:true});
  new MutationObserver(sync).observe(document.body,{attributes:true,attributeFilter:['class']});
- reduced.addEventListener('change',()=>{cancel();sync();});
- addEventListener('resize',schedule);addEventListener('pageshow',schedule);
+ reduced.addEventListener('change',sync);
+ addEventListener('resize',()=>{cancel();manual=false;schedule();});addEventListener('pageshow',schedule);
  document.fonts?.ready.then(schedule);document.fonts?.addEventListener('loadingdone',schedule);
- refresh();return {refresh:schedule};
+ sync();refresh();return {refresh:schedule,cancel(){cancel();manual=false;}};
 }
 export function initCaseReadingSnap(){
  const header=document.querySelector('.case-shared');if(!header)return;

@@ -1,0 +1,1070 @@
+{
+  "slug": "home",
+  "sourceFile": "index.html",
+  "sourceSha256": "5d9c39f4aa29a570381112bdd683e9f77c4b7bc676b91e582504f5c941dbe70e",
+  "sourceStatus": "Extracted from current page; claims not independently revalidated",
+  "title": "Kim Seongwon — UX/UI Portfolio 2026",
+  "plainText": "본문으로 이동 PROFILE PROJECT Q&A CONTACT 서로 다른 관점을 연결해, 명확한 구조를 만듭니다. 두 조각이 맞물리는 형태에 저의 디자인 방식을 담았습니다. UX/UI DESIGNER KIM SEONGWON Ⅱ 01 / PROFILE Who I Am 사람을 이해하고, 명확한 경험 을 설계합니다. 인간공학을 바탕으로, 사용자의 행동과 맥락을 이해합니다. EXPERIENCE 동의대학교 UXU LAB 학부 연구생 2024.03–2025.12 스마트 TV와 차량 IVI의 사용성을 연구하며, 사용자 행동 분석과 인터페이스 개선을 수행했습니다. BACKGROUND 동의대학교 인간공학과 졸업 2026.02 인간공학기사 2024.11 SBS 아카데미 UX/UI 디자인 교육과정 수강 중 · 2026.07–12 AWARDS 장려상 대한인간공학회 캡스톤 디자인 경진대회 2025 혁신상 BDIA 해커톤 2024 장려상 대한인간공학회 캡스톤 디자인 경진대회 2024 WORKING PRINCIPLES How I Work 사용하는 도구: Figma, Adobe Photoshop, Adobe Illustrator, Adobe After Effects, HTML, CSS, JavaScript, GPT, Codex. AI 활용 아이디어를 빠르게 검증 합니다. GPT와 Codex를 활용해 시안을 탐색하고 프로토타입을 구현합니다. 인간공학 사용자 행동에서 판단의 근거 를 찾습니다. 이용 맥락과 인지부하를 살피고 사용성 평가로 설계를 점검합니다. UX/UI 복잡한 정보를 명확한 경험 으로 만듭니다. 정보 구조부터 화면과 인터랙션까지 일관된 흐름으로 연결합니다. 02 / PROJECT Things I’ve Designed 01 TV USABILITY AI DESIGN TOOL Smart TV UX/UI TV 화면의 사용성을 예측하고, 디자인 개선으로 연결하다 ROLE UX Research · UI Design PERIOD 2025.03–2025.09 TOOL 02 IVI USABILITY RESEARCH Automotive UX Research 운전자의 주행 맥락을 고려해 차량 터치스크린의 사용성을 분석하다 ROLE UX Research · Usability Testing PERIOD 2025.03–2026.04 TOOL 03 CAFÉKOK Cafe Recommendation UX/UI 취향과 방문 목적을 연결해 나에게 맞는 카페를 발견하다 ROLE Planning · UX/UI Design PERIOD 2026.07–2026.10 TOOL 04 OFFER Brand Promotion Discovery Platform 흩어진 브랜드 혜택을 한곳에서 빠르게 발견하고 비교하다 ROLE Planning · UX/UI Design PERIOD 2026.09–2026.10 TOOL 03 / Q&A How I Think SCROLL TO READ 01 / 05 What kind of designer am I? 복잡한 정보와 문제를 사용자 관점에서 구조화하는 UX/UI 디자이너입니다. 사용자의 행동과 맥락을 이해하고, 정보 구조와 인터페이스를 연결합니다. 02 / 05 How do I approach UX problems? 먼저 사용자의 목적과 이용 맥락을 살펴봅니다. 문제를 정의하고 정보의 우선순위를 정리한 뒤, 화면과 흐름으로 구체화하고 검토하며 다듬습니다. 03 / 05 What do I value in design? 명확성, 사용성, 일관성, 목적을 중요하게 생각합니다. 사용자가 다음 행동을 자연스럽게 이해할 수 있는 경험을 지향합니다. 04 / 05 How do I use AI in my workflow? AI를 탐색, 정보 구조화, 프로토타이핑, 구현 지원을 빠르게 만드는 도구로 활용합니다. 문제를 정의하고 결과를 판단하는 디자인 사고는 직접 수행합니다. 05 / 05 What kind of work am I interested in? 복잡한 정보와 다양한 사용 맥락을 명확한 경험으로 연결하는 작업에 관심이 있습니다. 정보 구조부터 인터페이스까지 일관되게 설계하는 UX/UI 작업을 지향합니다. 04 / CONTACT Let’s Make It Clear. 좋은 경험의 시작, 함께 이야기하고 싶습니다. KIM SEONGWON UX/UI DESIGNER ksw11205@gmail.com © 2026 KIM SEONGWON SCROLL",
+  "blocks": [
+    {
+      "order": 0,
+      "kind": "p",
+      "section": "home",
+      "id": null,
+      "text": "서로 다른 관점을 연결해, 명확한 구조를 만듭니다."
+    },
+    {
+      "order": 1,
+      "kind": "p",
+      "section": "home",
+      "id": null,
+      "text": "두 조각이 맞물리는 형태에 저의 디자인 방식을 담았습니다."
+    },
+    {
+      "order": 2,
+      "kind": "p",
+      "section": "home",
+      "id": null,
+      "text": "UX/UI DESIGNER"
+    },
+    {
+      "order": 3,
+      "kind": "h1",
+      "section": "home",
+      "id": null,
+      "text": "KIM SEONGWON"
+    },
+    {
+      "order": 4,
+      "kind": "p",
+      "section": "about",
+      "id": null,
+      "text": "01 / PROFILE"
+    },
+    {
+      "order": 5,
+      "kind": "h2",
+      "section": "about",
+      "id": "about-title",
+      "text": "Who I Am"
+    },
+    {
+      "order": 6,
+      "kind": "p",
+      "section": "about",
+      "id": null,
+      "text": "사람을 이해하고, 명확한 경험 을 설계합니다."
+    },
+    {
+      "order": 7,
+      "kind": "p",
+      "section": "about",
+      "id": null,
+      "text": "인간공학을 바탕으로, 사용자의 행동과 맥락을 이해합니다."
+    },
+    {
+      "order": 8,
+      "kind": "p",
+      "section": "about",
+      "id": null,
+      "text": "EXPERIENCE"
+    },
+    {
+      "order": 9,
+      "kind": "h3",
+      "section": "about",
+      "id": null,
+      "text": "동의대학교 UXU LAB"
+    },
+    {
+      "order": 10,
+      "kind": "p",
+      "section": "about",
+      "id": null,
+      "text": "학부 연구생"
+    },
+    {
+      "order": 11,
+      "kind": "p",
+      "section": "about",
+      "id": null,
+      "text": "2024.03–2025.12"
+    },
+    {
+      "order": 12,
+      "kind": "p",
+      "section": "about",
+      "id": null,
+      "text": "스마트 TV와 차량 IVI의 사용성을 연구하며, 사용자 행동 분석과 인터페이스 개선을 수행했습니다."
+    },
+    {
+      "order": 13,
+      "kind": "p",
+      "section": "about",
+      "id": null,
+      "text": "BACKGROUND"
+    },
+    {
+      "order": 14,
+      "kind": "li",
+      "section": "about",
+      "id": null,
+      "text": "동의대학교 인간공학과 졸업 2026.02"
+    },
+    {
+      "order": 15,
+      "kind": "h3",
+      "section": "about",
+      "id": null,
+      "text": "동의대학교 인간공학과 졸업"
+    },
+    {
+      "order": 16,
+      "kind": "p",
+      "section": "about",
+      "id": null,
+      "text": "2026.02"
+    },
+    {
+      "order": 17,
+      "kind": "li",
+      "section": "about",
+      "id": null,
+      "text": "인간공학기사 2024.11"
+    },
+    {
+      "order": 18,
+      "kind": "h3",
+      "section": "about",
+      "id": null,
+      "text": "인간공학기사"
+    },
+    {
+      "order": 19,
+      "kind": "p",
+      "section": "about",
+      "id": null,
+      "text": "2024.11"
+    },
+    {
+      "order": 20,
+      "kind": "li",
+      "section": "about",
+      "id": null,
+      "text": "SBS 아카데미 UX/UI 디자인 교육과정 수강 중 · 2026.07–12"
+    },
+    {
+      "order": 21,
+      "kind": "h3",
+      "section": "about",
+      "id": null,
+      "text": "SBS 아카데미 UX/UI 디자인 교육과정"
+    },
+    {
+      "order": 22,
+      "kind": "p",
+      "section": "about",
+      "id": null,
+      "text": "수강 중 · 2026.07–12"
+    },
+    {
+      "order": 23,
+      "kind": "p",
+      "section": "about",
+      "id": null,
+      "text": "AWARDS"
+    },
+    {
+      "order": 24,
+      "kind": "li",
+      "section": "about",
+      "id": null,
+      "text": "장려상 대한인간공학회 캡스톤 디자인 경진대회 2025"
+    },
+    {
+      "order": 25,
+      "kind": "h3",
+      "section": "about",
+      "id": null,
+      "text": "장려상"
+    },
+    {
+      "order": 26,
+      "kind": "p",
+      "section": "about",
+      "id": null,
+      "text": "대한인간공학회 캡스톤 디자인 경진대회"
+    },
+    {
+      "order": 27,
+      "kind": "p",
+      "section": "about",
+      "id": null,
+      "text": "2025"
+    },
+    {
+      "order": 28,
+      "kind": "li",
+      "section": "about",
+      "id": null,
+      "text": "혁신상 BDIA 해커톤 2024"
+    },
+    {
+      "order": 29,
+      "kind": "h3",
+      "section": "about",
+      "id": null,
+      "text": "혁신상"
+    },
+    {
+      "order": 30,
+      "kind": "p",
+      "section": "about",
+      "id": null,
+      "text": "BDIA 해커톤"
+    },
+    {
+      "order": 31,
+      "kind": "p",
+      "section": "about",
+      "id": null,
+      "text": "2024"
+    },
+    {
+      "order": 32,
+      "kind": "li",
+      "section": "about",
+      "id": null,
+      "text": "장려상 대한인간공학회 캡스톤 디자인 경진대회 2024"
+    },
+    {
+      "order": 33,
+      "kind": "h3",
+      "section": "about",
+      "id": null,
+      "text": "장려상"
+    },
+    {
+      "order": 34,
+      "kind": "p",
+      "section": "about",
+      "id": null,
+      "text": "대한인간공학회 캡스톤 디자인 경진대회"
+    },
+    {
+      "order": 35,
+      "kind": "p",
+      "section": "about",
+      "id": null,
+      "text": "2024"
+    },
+    {
+      "order": 36,
+      "kind": "p",
+      "section": "tools",
+      "id": null,
+      "text": "WORKING PRINCIPLES"
+    },
+    {
+      "order": 37,
+      "kind": "h2",
+      "section": "tools",
+      "id": "tools-title",
+      "text": "How I Work"
+    },
+    {
+      "order": 38,
+      "kind": "p",
+      "section": "tools",
+      "id": null,
+      "text": "사용하는 도구: Figma, Adobe Photoshop, Adobe Illustrator, Adobe After Effects, HTML, CSS, JavaScript, GPT, Codex."
+    },
+    {
+      "order": 39,
+      "kind": "h3",
+      "section": "tools",
+      "id": null,
+      "text": "AI 활용"
+    },
+    {
+      "order": 40,
+      "kind": "p",
+      "section": "tools",
+      "id": null,
+      "text": "아이디어를 빠르게 검증 합니다."
+    },
+    {
+      "order": 41,
+      "kind": "p",
+      "section": "tools",
+      "id": null,
+      "text": "GPT와 Codex를 활용해 시안을 탐색하고 프로토타입을 구현합니다."
+    },
+    {
+      "order": 42,
+      "kind": "h3",
+      "section": "tools",
+      "id": null,
+      "text": "인간공학"
+    },
+    {
+      "order": 43,
+      "kind": "p",
+      "section": "tools",
+      "id": null,
+      "text": "사용자 행동에서 판단의 근거 를 찾습니다."
+    },
+    {
+      "order": 44,
+      "kind": "p",
+      "section": "tools",
+      "id": null,
+      "text": "이용 맥락과 인지부하를 살피고 사용성 평가로 설계를 점검합니다."
+    },
+    {
+      "order": 45,
+      "kind": "h3",
+      "section": "tools",
+      "id": null,
+      "text": "UX/UI"
+    },
+    {
+      "order": 46,
+      "kind": "p",
+      "section": "tools",
+      "id": null,
+      "text": "복잡한 정보를 명확한 경험 으로 만듭니다."
+    },
+    {
+      "order": 47,
+      "kind": "p",
+      "section": "tools",
+      "id": null,
+      "text": "정보 구조부터 화면과 인터랙션까지 일관된 흐름으로 연결합니다."
+    },
+    {
+      "order": 48,
+      "kind": "p",
+      "section": "work",
+      "id": null,
+      "text": "02 / PROJECT"
+    },
+    {
+      "order": 49,
+      "kind": "h2",
+      "section": "work",
+      "id": "work-title",
+      "text": "Things I’ve Designed"
+    },
+    {
+      "order": 50,
+      "kind": "h3",
+      "section": "work",
+      "id": null,
+      "text": "TV USABILITY AI DESIGN TOOL"
+    },
+    {
+      "order": 51,
+      "kind": "p",
+      "section": "work",
+      "id": null,
+      "text": "Smart TV UX/UI"
+    },
+    {
+      "order": 52,
+      "kind": "p",
+      "section": "work",
+      "id": null,
+      "text": "TV 화면의 사용성을 예측하고, 디자인 개선으로 연결하다"
+    },
+    {
+      "order": 53,
+      "kind": "dt",
+      "section": "work",
+      "id": null,
+      "text": "ROLE"
+    },
+    {
+      "order": 54,
+      "kind": "dd",
+      "section": "work",
+      "id": null,
+      "text": "UX Research · UI Design"
+    },
+    {
+      "order": 55,
+      "kind": "dt",
+      "section": "work",
+      "id": null,
+      "text": "PERIOD"
+    },
+    {
+      "order": 56,
+      "kind": "dd",
+      "section": "work",
+      "id": null,
+      "text": "2025.03–2025.09"
+    },
+    {
+      "order": 57,
+      "kind": "dt",
+      "section": "work",
+      "id": null,
+      "text": "TOOL"
+    },
+    {
+      "order": 59,
+      "kind": "h3",
+      "section": "work",
+      "id": null,
+      "text": "IVI USABILITY RESEARCH"
+    },
+    {
+      "order": 60,
+      "kind": "p",
+      "section": "work",
+      "id": null,
+      "text": "Automotive UX Research"
+    },
+    {
+      "order": 61,
+      "kind": "p",
+      "section": "work",
+      "id": null,
+      "text": "운전자의 주행 맥락을 고려해 차량 터치스크린의 사용성을 분석하다"
+    },
+    {
+      "order": 62,
+      "kind": "dt",
+      "section": "work",
+      "id": null,
+      "text": "ROLE"
+    },
+    {
+      "order": 63,
+      "kind": "dd",
+      "section": "work",
+      "id": null,
+      "text": "UX Research · Usability Testing"
+    },
+    {
+      "order": 64,
+      "kind": "dt",
+      "section": "work",
+      "id": null,
+      "text": "PERIOD"
+    },
+    {
+      "order": 65,
+      "kind": "dd",
+      "section": "work",
+      "id": null,
+      "text": "2025.03–2026.04"
+    },
+    {
+      "order": 66,
+      "kind": "dt",
+      "section": "work",
+      "id": null,
+      "text": "TOOL"
+    },
+    {
+      "order": 68,
+      "kind": "h3",
+      "section": "work",
+      "id": null,
+      "text": "CAFÉKOK"
+    },
+    {
+      "order": 69,
+      "kind": "p",
+      "section": "work",
+      "id": null,
+      "text": "Cafe Recommendation UX/UI"
+    },
+    {
+      "order": 70,
+      "kind": "p",
+      "section": "work",
+      "id": null,
+      "text": "취향과 방문 목적을 연결해 나에게 맞는 카페를 발견하다"
+    },
+    {
+      "order": 71,
+      "kind": "dt",
+      "section": "work",
+      "id": null,
+      "text": "ROLE"
+    },
+    {
+      "order": 72,
+      "kind": "dd",
+      "section": "work",
+      "id": null,
+      "text": "Planning · UX/UI Design"
+    },
+    {
+      "order": 73,
+      "kind": "dt",
+      "section": "work",
+      "id": null,
+      "text": "PERIOD"
+    },
+    {
+      "order": 74,
+      "kind": "dd",
+      "section": "work",
+      "id": null,
+      "text": "2026.07–2026.10"
+    },
+    {
+      "order": 75,
+      "kind": "dt",
+      "section": "work",
+      "id": null,
+      "text": "TOOL"
+    },
+    {
+      "order": 77,
+      "kind": "h3",
+      "section": "work",
+      "id": null,
+      "text": "OFFER"
+    },
+    {
+      "order": 78,
+      "kind": "p",
+      "section": "work",
+      "id": null,
+      "text": "Brand Promotion Discovery Platform"
+    },
+    {
+      "order": 79,
+      "kind": "p",
+      "section": "work",
+      "id": null,
+      "text": "흩어진 브랜드 혜택을 한곳에서 빠르게 발견하고 비교하다"
+    },
+    {
+      "order": 80,
+      "kind": "dt",
+      "section": "work",
+      "id": null,
+      "text": "ROLE"
+    },
+    {
+      "order": 81,
+      "kind": "dd",
+      "section": "work",
+      "id": null,
+      "text": "Planning · UX/UI Design"
+    },
+    {
+      "order": 82,
+      "kind": "dt",
+      "section": "work",
+      "id": null,
+      "text": "PERIOD"
+    },
+    {
+      "order": 83,
+      "kind": "dd",
+      "section": "work",
+      "id": null,
+      "text": "2026.09–2026.10"
+    },
+    {
+      "order": 84,
+      "kind": "dt",
+      "section": "work",
+      "id": null,
+      "text": "TOOL"
+    },
+    {
+      "order": 86,
+      "kind": "p",
+      "section": "qa",
+      "id": null,
+      "text": "03 / Q&A"
+    },
+    {
+      "order": 87,
+      "kind": "h2",
+      "section": "qa",
+      "id": "qa-title",
+      "text": "How I Think"
+    },
+    {
+      "order": 88,
+      "kind": "p",
+      "section": "qa",
+      "id": null,
+      "text": "SCROLL TO READ"
+    },
+    {
+      "order": 89,
+      "kind": "li",
+      "section": "qa",
+      "id": null,
+      "text": "01 / 05 What kind of designer am I? 복잡한 정보와 문제를 사용자 관점에서 구조화하는 UX/UI 디자이너입니다. 사용자의 행동과 맥락을 이해하고, 정보 구조와 인터페이스를 연결합니다."
+    },
+    {
+      "order": 90,
+      "kind": "p",
+      "section": "qa",
+      "id": null,
+      "text": "01 / 05"
+    },
+    {
+      "order": 91,
+      "kind": "h3",
+      "section": "qa",
+      "id": "qa-question-0",
+      "text": "What kind of designer am I?"
+    },
+    {
+      "order": 92,
+      "kind": "p",
+      "section": "qa",
+      "id": null,
+      "text": "복잡한 정보와 문제를 사용자 관점에서 구조화하는 UX/UI 디자이너입니다. 사용자의 행동과 맥락을 이해하고, 정보 구조와 인터페이스를 연결합니다."
+    },
+    {
+      "order": 93,
+      "kind": "li",
+      "section": "qa",
+      "id": null,
+      "text": "02 / 05 How do I approach UX problems? 먼저 사용자의 목적과 이용 맥락을 살펴봅니다. 문제를 정의하고 정보의 우선순위를 정리한 뒤, 화면과 흐름으로 구체화하고 검토하며 다듬습니다."
+    },
+    {
+      "order": 94,
+      "kind": "p",
+      "section": "qa",
+      "id": null,
+      "text": "02 / 05"
+    },
+    {
+      "order": 95,
+      "kind": "h3",
+      "section": "qa",
+      "id": "qa-question-1",
+      "text": "How do I approach UX problems?"
+    },
+    {
+      "order": 96,
+      "kind": "p",
+      "section": "qa",
+      "id": null,
+      "text": "먼저 사용자의 목적과 이용 맥락을 살펴봅니다. 문제를 정의하고 정보의 우선순위를 정리한 뒤, 화면과 흐름으로 구체화하고 검토하며 다듬습니다."
+    },
+    {
+      "order": 97,
+      "kind": "li",
+      "section": "qa",
+      "id": null,
+      "text": "03 / 05 What do I value in design? 명확성, 사용성, 일관성, 목적을 중요하게 생각합니다. 사용자가 다음 행동을 자연스럽게 이해할 수 있는 경험을 지향합니다."
+    },
+    {
+      "order": 98,
+      "kind": "p",
+      "section": "qa",
+      "id": null,
+      "text": "03 / 05"
+    },
+    {
+      "order": 99,
+      "kind": "h3",
+      "section": "qa",
+      "id": "qa-question-2",
+      "text": "What do I value in design?"
+    },
+    {
+      "order": 100,
+      "kind": "p",
+      "section": "qa",
+      "id": null,
+      "text": "명확성, 사용성, 일관성, 목적을 중요하게 생각합니다. 사용자가 다음 행동을 자연스럽게 이해할 수 있는 경험을 지향합니다."
+    },
+    {
+      "order": 101,
+      "kind": "li",
+      "section": "qa",
+      "id": null,
+      "text": "04 / 05 How do I use AI in my workflow? AI를 탐색, 정보 구조화, 프로토타이핑, 구현 지원을 빠르게 만드는 도구로 활용합니다. 문제를 정의하고 결과를 판단하는 디자인 사고는 직접 수행합니다."
+    },
+    {
+      "order": 102,
+      "kind": "p",
+      "section": "qa",
+      "id": null,
+      "text": "04 / 05"
+    },
+    {
+      "order": 103,
+      "kind": "h3",
+      "section": "qa",
+      "id": "qa-question-3",
+      "text": "How do I use AI in my workflow?"
+    },
+    {
+      "order": 104,
+      "kind": "p",
+      "section": "qa",
+      "id": null,
+      "text": "AI를 탐색, 정보 구조화, 프로토타이핑, 구현 지원을 빠르게 만드는 도구로 활용합니다. 문제를 정의하고 결과를 판단하는 디자인 사고는 직접 수행합니다."
+    },
+    {
+      "order": 105,
+      "kind": "li",
+      "section": "qa",
+      "id": null,
+      "text": "05 / 05 What kind of work am I interested in? 복잡한 정보와 다양한 사용 맥락을 명확한 경험으로 연결하는 작업에 관심이 있습니다. 정보 구조부터 인터페이스까지 일관되게 설계하는 UX/UI 작업을 지향합니다."
+    },
+    {
+      "order": 106,
+      "kind": "p",
+      "section": "qa",
+      "id": null,
+      "text": "05 / 05"
+    },
+    {
+      "order": 107,
+      "kind": "h3",
+      "section": "qa",
+      "id": "qa-question-4",
+      "text": "What kind of work am I interested in?"
+    },
+    {
+      "order": 108,
+      "kind": "p",
+      "section": "qa",
+      "id": null,
+      "text": "복잡한 정보와 다양한 사용 맥락을 명확한 경험으로 연결하는 작업에 관심이 있습니다. 정보 구조부터 인터페이스까지 일관되게 설계하는 UX/UI 작업을 지향합니다."
+    },
+    {
+      "order": 109,
+      "kind": "p",
+      "section": "contact",
+      "id": null,
+      "text": "04 / CONTACT"
+    },
+    {
+      "order": 110,
+      "kind": "h2",
+      "section": "contact",
+      "id": null,
+      "text": "Let’s Make It Clear."
+    },
+    {
+      "order": 111,
+      "kind": "p",
+      "section": "contact",
+      "id": null,
+      "text": "좋은 경험의 시작, 함께 이야기하고 싶습니다."
+    },
+    {
+      "order": 112,
+      "kind": "p",
+      "section": "contact",
+      "id": null,
+      "text": "KIM SEONGWON"
+    },
+    {
+      "order": 113,
+      "kind": "p",
+      "section": "contact",
+      "id": null,
+      "text": "UX/UI DESIGNER"
+    },
+    {
+      "order": 114,
+      "kind": "p",
+      "section": null,
+      "id": null,
+      "text": "© 2026 KIM SEONGWON"
+    }
+  ],
+  "tables": [],
+  "images": [
+    {
+      "source": "/assets/brand/symbol.svg",
+      "alt": "",
+      "caption": "",
+      "section": null,
+      "figmaNode": null,
+      "intrinsicWidth": 38,
+      "intrinsicHeight": 38,
+      "localAsset": "assets/brand/symbol.svg",
+      "sha256": "0a037d082b5923d7add84e07082bd48b1d1da991e9fb5528d7de3034f171392e"
+    },
+    {
+      "source": "/assets/brand/poster.svg",
+      "alt": "코발트블루와 실버 조각이 연결된 김성원의 브랜드 심볼",
+      "caption": "",
+      "section": "home",
+      "figmaNode": null,
+      "intrinsicWidth": 800,
+      "intrinsicHeight": 790,
+      "localAsset": "assets/brand/poster.svg",
+      "sha256": "c541a08c11e36da39fba3ed1ffeb252b7d6e35faf215222ba067766d4046a2d5"
+    },
+    {
+      "source": "/assets/profile/seongwon-portrait.webp",
+      "alt": "김성원 프로필 사진",
+      "caption": "",
+      "section": "about",
+      "figmaNode": null,
+      "intrinsicWidth": 1086,
+      "intrinsicHeight": 1448,
+      "localAsset": "assets/profile/seongwon-portrait.webp",
+      "sha256": "41147136d4f8fffff8380c7347ea2fdd3c44af915e1268a56b994fcffda3c787"
+    },
+    {
+      "source": "/assets/projects/lg-cover-1920.jpg",
+      "alt": "마젠타 조명의 거실에서 노트북의 TV UI 분석 도구와 TV 평가 화면을 함께 보여주는 목업",
+      "caption": "",
+      "section": "work",
+      "figmaNode": null,
+      "intrinsicWidth": 1920,
+      "intrinsicHeight": 1081,
+      "localAsset": "assets/projects/lg-cover-1920.jpg",
+      "sha256": "cc62ffadf2a26eb7f88927564b778462abf1397e0e244ca18070f7c0cf870bd3"
+    },
+    {
+      "source": "/assets/tools/figma.svg",
+      "alt": "Figma",
+      "caption": "",
+      "section": "work",
+      "figmaNode": null,
+      "intrinsicWidth": 24,
+      "intrinsicHeight": 24,
+      "localAsset": "assets/tools/figma.svg",
+      "sha256": "d37c2bf1a1d4f10aeffb224e44da672cb8b9510f6e5a2e24b61758262995805e"
+    },
+    {
+      "source": "/assets/tools/html5.svg",
+      "alt": "HTML",
+      "caption": "",
+      "section": "work",
+      "figmaNode": null,
+      "intrinsicWidth": 24,
+      "intrinsicHeight": 24,
+      "localAsset": "assets/tools/html5.svg",
+      "sha256": "34826e5b3315daadf4fa15f723a3c1d5ba4a89277bfd94e22ac4d7d3d54338c5"
+    },
+    {
+      "source": "/assets/tools/css3.svg",
+      "alt": "CSS",
+      "caption": "",
+      "section": "work",
+      "figmaNode": null,
+      "intrinsicWidth": 24,
+      "intrinsicHeight": 24,
+      "localAsset": "assets/tools/css3.svg",
+      "sha256": "36b7d94b657d571d3f94042acbf6a4c86a5301a222f83f4b4583ad2acf6e297d"
+    },
+    {
+      "source": "/assets/tools/javascript.svg",
+      "alt": "JavaScript",
+      "caption": "",
+      "section": "work",
+      "figmaNode": null,
+      "intrinsicWidth": 24,
+      "intrinsicHeight": 24,
+      "localAsset": "assets/tools/javascript.svg",
+      "sha256": "0656ff65fc8eeacda5c78d7f9ffe91ec1eb919db64f56e0b7dcd460af4bbd36c"
+    },
+    {
+      "source": "/assets/projects/ivi-cover-clean-1920.jpg",
+      "alt": "차량 중앙 디스플레이에 표시된 차량 제어와 내비게이션 화면 목업",
+      "caption": "",
+      "section": "work",
+      "figmaNode": null,
+      "intrinsicWidth": 1920,
+      "intrinsicHeight": 1081,
+      "localAsset": "assets/projects/ivi-cover-clean-1920.jpg",
+      "sha256": "3a929d5cadd4c2243c656381ab775ea173a73339f52ca53205ab7a837c1d84f2"
+    },
+    {
+      "source": "/assets/tools/figma.svg",
+      "alt": "Figma",
+      "caption": "",
+      "section": "work",
+      "figmaNode": null,
+      "intrinsicWidth": 24,
+      "intrinsicHeight": 24,
+      "localAsset": "assets/tools/figma.svg",
+      "sha256": "d37c2bf1a1d4f10aeffb224e44da672cb8b9510f6e5a2e24b61758262995805e"
+    },
+    {
+      "source": "/assets/tools/maze.svg",
+      "alt": "Maze",
+      "caption": "",
+      "section": "work",
+      "figmaNode": null,
+      "intrinsicWidth": 24,
+      "intrinsicHeight": 24,
+      "localAsset": "assets/tools/maze.svg",
+      "sha256": "32e6963c1fd061ee8250e9218164e1425922156843e681d07f1e3cb448068daa"
+    },
+    {
+      "source": "/work/cafekok/assets/cafe-cover.webp",
+      "alt": "밝은 외벽과 나무 벤치 앞에서 사람들이 머무는 카페",
+      "caption": "",
+      "section": "work",
+      "figmaNode": null,
+      "intrinsicWidth": 1600,
+      "intrinsicHeight": 1067,
+      "localAsset": "work/cafekok/assets/cafe-cover.webp",
+      "sha256": "41fc509267d75ad11e225de672a748871b5543d960f9e4540166d6bacc8a19bf"
+    },
+    {
+      "source": "/work/cafekok/assets/latest/home.png",
+      "alt": "카페콕 최신 프로토타입 홈 화면",
+      "caption": "",
+      "section": "work",
+      "figmaNode": null,
+      "intrinsicWidth": 780,
+      "intrinsicHeight": 1688,
+      "localAsset": "work/cafekok/assets/latest/home.png",
+      "sha256": "fb3d61f4e462f9b5e56cadf4e289d697e602e65af7597b88ba31152b7d0bf9c9"
+    },
+    {
+      "source": "/assets/tools/figma.svg",
+      "alt": "Figma",
+      "caption": "",
+      "section": "work",
+      "figmaNode": null,
+      "intrinsicWidth": 24,
+      "intrinsicHeight": 24,
+      "localAsset": "assets/tools/figma.svg",
+      "sha256": "d37c2bf1a1d4f10aeffb224e44da672cb8b9510f6e5a2e24b61758262995805e"
+    },
+    {
+      "source": "/assets/projects/offer-cover-1920.jpg",
+      "alt": "희미한 브랜드 로고 배경 앞에 OFFER의 데스크톱·태블릿·모바일 화면을 배치한 목업",
+      "caption": "",
+      "section": "work",
+      "figmaNode": null,
+      "intrinsicWidth": 1920,
+      "intrinsicHeight": 1081,
+      "localAsset": "assets/projects/offer-cover-1920.jpg",
+      "sha256": "8a8a6ed7550a3b5ce4b6b9d3cbaee74eb2fb80286935822a7f830aebcec51a24"
+    },
+    {
+      "source": "/assets/tools/html5.svg",
+      "alt": "HTML",
+      "caption": "",
+      "section": "work",
+      "figmaNode": null,
+      "intrinsicWidth": 24,
+      "intrinsicHeight": 24,
+      "localAsset": "assets/tools/html5.svg",
+      "sha256": "34826e5b3315daadf4fa15f723a3c1d5ba4a89277bfd94e22ac4d7d3d54338c5"
+    },
+    {
+      "source": "/assets/tools/css3.svg",
+      "alt": "CSS",
+      "caption": "",
+      "section": "work",
+      "figmaNode": null,
+      "intrinsicWidth": 24,
+      "intrinsicHeight": 24,
+      "localAsset": "assets/tools/css3.svg",
+      "sha256": "36b7d94b657d571d3f94042acbf6a4c86a5301a222f83f4b4583ad2acf6e297d"
+    },
+    {
+      "source": "/assets/tools/javascript.svg",
+      "alt": "JavaScript",
+      "caption": "",
+      "section": "work",
+      "figmaNode": null,
+      "intrinsicWidth": 24,
+      "intrinsicHeight": 24,
+      "localAsset": "assets/tools/javascript.svg",
+      "sha256": "0656ff65fc8eeacda5c78d7f9ffe91ec1eb919db64f56e0b7dcd460af4bbd36c"
+    },
+    {
+      "source": "/assets/qa/1.png",
+      "alt": "여러 사각 금속 판이 서로 연결된 구조물",
+      "caption": "",
+      "section": "qa",
+      "figmaNode": null,
+      "intrinsicWidth": 1254,
+      "intrinsicHeight": 1254,
+      "localAsset": "assets/qa/1.png",
+      "sha256": "37163303bb56c8a8a4ba22d140d2972464d59bc84d723fcac99d95341db6c16e"
+    },
+    {
+      "source": "/assets/qa/2.png",
+      "alt": "어두운 전구 내부에서 빛나는 노란 불빛",
+      "caption": "",
+      "section": "qa",
+      "figmaNode": null,
+      "intrinsicWidth": 1254,
+      "intrinsicHeight": 1254,
+      "localAsset": "assets/qa/2.png",
+      "sha256": "54219473bf81f377558d1727c5f802378e0ba4a817a5851d8c4b0b0e95a2e9ee"
+    },
+    {
+      "source": "/assets/qa/3.png",
+      "alt": "옆으로 기울어진 다이아몬드와 은은한 바닥 반사",
+      "caption": "",
+      "section": "qa",
+      "figmaNode": null,
+      "intrinsicWidth": 1254,
+      "intrinsicHeight": 1254,
+      "localAsset": "assets/qa/3.png",
+      "sha256": "c3e62da26b5ce0915208be5f61937ea15d2272919658452b35170723348a0f66"
+    },
+    {
+      "source": "/assets/qa/4.png",
+      "alt": "바닥에 눕힌 실버 메탈 AI 글자",
+      "caption": "",
+      "section": "qa",
+      "figmaNode": null,
+      "intrinsicWidth": 1254,
+      "intrinsicHeight": 1254,
+      "localAsset": "assets/qa/4.png",
+      "sha256": "74a913ad872f54727d27f992f4e6f454b1281b4fc290966345da37cfdff08957"
+    },
+    {
+      "source": "/assets/qa/5.png",
+      "alt": "서로 맞물린 반투명 유리 퍼즐 조각",
+      "caption": "",
+      "section": "qa",
+      "figmaNode": null,
+      "intrinsicWidth": 1254,
+      "intrinsicHeight": 1254,
+      "localAsset": "assets/qa/5.png",
+      "sha256": "a558673492951dce862bedd25e0645a2ec926692829e6503ae6f5a8151a3c480"
+    }
+  ],
+  "links": [
+    {
+      "text": "LG case study",
+      "target": "/work/lg/",
+      "section": "work"
+    },
+    {
+      "text": "IVI case study",
+      "target": "/work/ivi/",
+      "section": "work"
+    },
+    {
+      "text": "CAFÉKOK case study",
+      "target": "/work/cafekok/",
+      "section": "work"
+    },
+    {
+      "text": "OFFER case study",
+      "target": "/work/offer/case-study.html",
+      "section": "work"
+    },
+    {
+      "text": "ksw11205@gmail.com",
+      "target": "mailto:ksw11205@gmail.com",
+      "section": "contact"
+    }
+  ]
+}

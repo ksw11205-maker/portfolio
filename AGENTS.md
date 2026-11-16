@@ -1,4 +1,12 @@
-# 현재 실행 기준 · 2026-10-27
+# 현재 리디자인 작업 기준 · 2026-11-15
+
+- 사용자가 전면 리디자인 구현을 승인했다. 신규 메인·상세·공통 스타일과 모션은 `redesign/`에서 작업한다. 구현 브랜치는 `redesign/implementation-20261115`다.
+- 기존 `portfolio-shell/dist/`와 보관 브랜치는 원본이다. 새 외형 구현을 이유로 덮어쓰지 않는다. 기존 제품 프로토타입은 실제 결과물로 새 루트에 복사해 연결한다.
+- 사용자가 로컬 실행을 승인했으며 `redesign/`이 4175번 포트의 웹 루트다. 배포는 요청되지 않았다.
+- 최신 수정: 메인 쉘과 커서는 기존 dist의 디자인으로 복원하되 선별한 이력·Q&A 사실은 유지한다. 상세는 새 설명을 유지하고 화면 포인트 주석·회고 Q&A·다음 프로젝트 하나를 적용한다. LG 다크/마젠타/바이올렛, IVI 차콜/시안, 카페콕 크림/브라운/살구, OFFER 웜그레이/블랙/오렌지다.
+- 최신 구현 상태와 검증 한계는 `docs/design/redesign-handoff.md`, 정적 결과는 `docs/design/redesign-static-check-20261115.json`을 따른다.
+
+# 기존 원본 실행 기준 · 2026-10-27
 
 - 최신 메인·상세페이지·실행 UI는 `portfolio-shell/dist/`를 직접 수정한다.
 - 카페콕 React 원본은 `portfolio-shell/prototypes/cafekok/`이며 빌드 결과를 `portfolio-shell/dist/work/cafekok/prototype/`로 복사한다.
