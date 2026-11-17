@@ -1,0 +1,278 @@
+[
+  {
+    "width": 1440,
+    "height": 900,
+    "overflow": false,
+    "overflowDetails": [],
+    "broken": [],
+    "wires": 0,
+    "boards": [
+      {
+        "w": 1122.8125,
+        "ratio": 1.6,
+        "renderedRatio": 1.5997150997150997
+      },
+      {
+        "w": 1122.8125,
+        "ratio": 1.6,
+        "renderedRatio": 1.5997150997150997
+      },
+      {
+        "w": 1122.8125,
+        "ratio": 1.6,
+        "renderedRatio": 1.5997150997150997
+      },
+      {
+        "w": 1122.8125,
+        "ratio": 1.0423452768729642,
+        "renderedRatio": 1.042711234911792
+      },
+      {
+        "w": 1122.8125,
+        "ratio": 1.6,
+        "renderedRatio": 1.5997150997150997
+      },
+      {
+        "w": 1122.8125,
+        "ratio": 1.4072119613016711,
+        "renderedRatio": 1.4072681704260652
+      },
+      {
+        "w": 1122.8125,
+        "ratio": 1.6,
+        "renderedRatio": 1.5997150997150997
+      },
+      {
+        "w": 1122.8125,
+        "ratio": 1.6,
+        "renderedRatio": 1.5997150997150997
+      }
+    ],
+    "links": [
+      "/work/lg/prototype/",
+      "/work/ivi/"
+    ],
+    "errors": [],
+    "anchor": "#overview",
+    "captures": [
+      "docs/design/master-review/lg-1440-0.jpg",
+      "docs/design/master-review/lg-1440-1.jpg",
+      "docs/design/master-review/lg-1440-2.jpg",
+      "docs/design/master-review/lg-1440-3.jpg",
+      "docs/design/master-review/lg-1440-4.jpg",
+      "docs/design/master-review/lg-1440-5.jpg",
+      "docs/design/master-review/lg-1440-6.jpg",
+      "docs/design/master-review/lg-1440-7.jpg",
+      "docs/design/master-review/lg-1440-8.jpg",
+      "docs/design/master-review/lg-1440-9.jpg",
+      "docs/design/master-review/lg-1440-10.jpg"
+    ]
+  },
+  {
+    "width": 1366,
+    "height": 768,
+    "overflow": false,
+    "overflowDetails": [],
+    "broken": [],
+    "wires": 0,
+    "boards": [
+      {
+        "w": 811,
+        "ratio": 1.6,
+        "renderedRatio": 1.5996055226824457
+      },
+      {
+        "w": 811,
+        "ratio": 1.6,
+        "renderedRatio": 1.5996055226824457
+      },
+      {
+        "w": 811,
+        "ratio": 1.6,
+        "renderedRatio": 1.5996055226824457
+      },
+      {
+        "w": 528.328125,
+        "ratio": 1.0423452768729642,
+        "renderedRatio": 1.0414201183431953
+      },
+      {
+        "w": 811,
+        "ratio": 1.6,
+        "renderedRatio": 1.5996055226824457
+      },
+      {
+        "w": 713.265625,
+        "ratio": 1.4072119613016711,
+        "renderedRatio": 1.406311637080868
+      },
+      {
+        "w": 811,
+        "ratio": 1.6,
+        "renderedRatio": 1.5996055226824457
+      },
+      {
+        "w": 811,
+        "ratio": 1.6,
+        "renderedRatio": 1.5996055226824457
+      }
+    ],
+    "links": [
+      "/work/lg/prototype/",
+      "/work/ivi/"
+    ],
+    "errors": [],
+    "anchor": "#overview",
+    "captures": [
+      "docs/design/master-review/lg-1366-0.jpg",
+      "docs/design/master-review/lg-1366-1.jpg",
+      "docs/design/master-review/lg-1366-2.jpg",
+      "docs/design/master-review/lg-1366-3.jpg",
+      "docs/design/master-review/lg-1366-4.jpg",
+      "docs/design/master-review/lg-1366-5.jpg",
+      "docs/design/master-review/lg-1366-6.jpg",
+      "docs/design/master-review/lg-1366-7.jpg",
+      "docs/design/master-review/lg-1366-8.jpg",
+      "docs/design/master-review/lg-1366-9.jpg",
+      "docs/design/master-review/lg-1366-10.jpg"
+    ]
+  },
+  {
+    "width": 768,
+    "height": 1024,
+    "overflow": false,
+    "overflowDetails": [],
+    "broken": [],
+    "wires": 0,
+    "boards": [
+      {
+        "w": 704.5625,
+        "ratio": 1.6,
+        "renderedRatio": 1.6022727272727273
+      },
+      {
+        "w": 704.5625,
+        "ratio": 1.6,
+        "renderedRatio": 1.6022727272727273
+      },
+      {
+        "w": 704.5625,
+        "ratio": 1.6,
+        "renderedRatio": 1.6022727272727273
+      },
+      {
+        "w": 704.5625,
+        "ratio": 1.0423452768729642,
+        "renderedRatio": 1.0428994082840237
+      },
+      {
+        "w": 704.5625,
+        "ratio": 1.6,
+        "renderedRatio": 1.6022727272727273
+      },
+      {
+        "w": 704.5625,
+        "ratio": 1.4072119613016711,
+        "renderedRatio": 1.407185628742515
+      },
+      {
+        "w": 704.5625,
+        "ratio": 1.6,
+        "renderedRatio": 1.6022727272727273
+      },
+      {
+        "w": 704.5625,
+        "ratio": 1.6,
+        "renderedRatio": 1.6022727272727273
+      }
+    ],
+    "links": [
+      "/work/lg/prototype/",
+      "/work/ivi/"
+    ],
+    "errors": [],
+    "anchor": "#overview",
+    "captures": [
+      "docs/design/master-review/lg-768-0.jpg",
+      "docs/design/master-review/lg-768-1.jpg",
+      "docs/design/master-review/lg-768-2.jpg",
+      "docs/design/master-review/lg-768-3.jpg",
+      "docs/design/master-review/lg-768-4.jpg",
+      "docs/design/master-review/lg-768-5.jpg",
+      "docs/design/master-review/lg-768-6.jpg",
+      "docs/design/master-review/lg-768-7.jpg",
+      "docs/design/master-review/lg-768-8.jpg",
+      "docs/design/master-review/lg-768-9.jpg",
+      "docs/design/master-review/lg-768-10.jpg"
+    ]
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "overflow": false,
+    "overflowDetails": [],
+    "broken": [],
+    "wires": 0,
+    "boards": [
+      {
+        "w": 340,
+        "ratio": 1.6,
+        "renderedRatio": 1.596244131455399
+      },
+      {
+        "w": 340,
+        "ratio": 1.6,
+        "renderedRatio": 1.596244131455399
+      },
+      {
+        "w": 340,
+        "ratio": 1.6,
+        "renderedRatio": 1.596244131455399
+      },
+      {
+        "w": 340,
+        "ratio": 1.0423452768729642,
+        "renderedRatio": 1.0429447852760736
+      },
+      {
+        "w": 340,
+        "ratio": 1.6,
+        "renderedRatio": 1.596244131455399
+      },
+      {
+        "w": 340,
+        "ratio": 1.4072119613016711,
+        "renderedRatio": 1.4049586776859504
+      },
+      {
+        "w": 340,
+        "ratio": 1.6,
+        "renderedRatio": 1.596244131455399
+      },
+      {
+        "w": 340,
+        "ratio": 1.6,
+        "renderedRatio": 1.596244131455399
+      }
+    ],
+    "links": [
+      "/work/lg/prototype/",
+      "/work/ivi/"
+    ],
+    "errors": [],
+    "anchor": "#overview",
+    "captures": [
+      "docs/design/master-review/lg-390-0.jpg",
+      "docs/design/master-review/lg-390-1.jpg",
+      "docs/design/master-review/lg-390-2.jpg",
+      "docs/design/master-review/lg-390-3.jpg",
+      "docs/design/master-review/lg-390-4.jpg",
+      "docs/design/master-review/lg-390-5.jpg",
+      "docs/design/master-review/lg-390-6.jpg",
+      "docs/design/master-review/lg-390-7.jpg",
+      "docs/design/master-review/lg-390-8.jpg",
+      "docs/design/master-review/lg-390-9.jpg",
+      "docs/design/master-review/lg-390-10.jpg"
+    ]
+  }
+]

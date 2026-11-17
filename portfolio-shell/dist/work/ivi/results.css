@@ -1,0 +1,50 @@
+/* Results are one comparison surface, with tabs attached to its upper edge. */
+#findings .result-switch{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%;gap:0;margin:0;border:1px solid #35444e;border-bottom:0}
+#findings .result-switch button{min-width:0;min-height:62px;border:0;border-right:1px solid #35444e;border-radius:0;padding:16px 10px;position:relative;background:#121a22;letter-spacing:-.02em;font-weight:550;color:#b6c5d0;transition:background .3s,color .3s}
+#findings .result-switch button:last-child{border-right:0}
+#findings .result-switch button[aria-pressed=true]{background:#63d9ea;color:#071219}
+#findings .result-switch button[aria-pressed=true]::after{content:'';position:absolute;left:18px;right:18px;bottom:8px;height:2px;background:#0c4d5866;transform-origin:left;animation:ivi-tab-rule .45s ease both}
+#findings .result-panel{margin-top:0;border-top:0;padding:clamp(24px,3vw,48px);column-gap:40px}
+#findings .result-value strong{font-size:clamp(64px,6vw,94px)}
+#findings .bar-row.best .bar-track{box-shadow:0 0 24px #63d9ea12}
+#findings .bar-row.best .bar-fill{position:relative;overflow:hidden}
+#findings .bar-row.best .bar-fill::after{content:'';position:absolute;inset:0;background:linear-gradient(100deg,transparent 10%,#fff9 50%,transparent 90%);transform:translateX(-110%);animation:ivi-result-sheen 1.2s .35s ease both}
+#findings .subjective{margin-top:0;padding-top:0;gap:20px;border-top:0}
+#findings .subjective-table{padding-top:20px;border-top:1px solid #63d9ea3d}
+#findings .subjective-table h3{font-size:clamp(22px,2vw,30px);margin-bottom:16px}
+#findings .subjective-table thead th{color:#b8c8d4;background:#101a22;font-size:12px;font-weight:500}
+#findings .subjective-table tbody th{font-weight:450;line-height:1.6}
+#findings .subjective-table td{position:relative;font-variant-numeric:tabular-nums;text-align:center;font-size:17px;border-inline:1px solid #1b2a3440;isolation:isolate;overflow:hidden}
+#findings .subjective-table td.best-score{background:#174450;color:#a9f3ff;font-weight:650}
+#findings .subjective-table td.high-burden{background:#442c31;color:#ffc1b7;font-weight:550}
+#findings .subjective-table td.best-score::before,#findings .subjective-table td.high-burden::before{content:'';position:absolute;inset:0;background:linear-gradient(110deg,transparent 20%,#ffffff29 50%,transparent 80%);transform:translateX(-120%);pointer-events:none;z-index:-1}
+#findings .subjective-table.results-table-visible td.best-score::before,#findings .subjective-table.results-table-visible td.high-burden::before{animation:ivi-score-shimmer 2.6s .3s ease-in-out 2}
+#findings .subjective-table tr[data-score-neutral] td{color:#c2cbd3;background:#ffffff04;font-weight:400}
+.ivi-score-legend{display:flex;flex-wrap:wrap;gap:12px 24px;margin:0 0 22px;color:#96adbc;font-size:11px;line-height:1.6}
+.ivi-score-legend span{display:inline-flex;align-items:center;gap:8px}.ivi-score-legend i{width:7px;height:7px;border-radius:50%;background:#63d9ea}.ivi-score-legend span+span i{background:#e98e83}
+#click-patterns .heatmaps figure{min-width:0}
+.ivi-heatmap-evidence{display:flex;gap:32px;align-items:baseline;margin-top:20px;padding-top:18px;border-top:1px solid #63d9ea4d}
+.ivi-heatmap-evidence>div{min-width:0}.ivi-heatmap-evidence dt{font-size:11px;color:#94a7b5;line-height:1.6}.ivi-heatmap-evidence dd{margin:10px 0 0;font-size:clamp(27px,3vw,40px);color:#e5eef2;line-height:1.15;font-variant-numeric:tabular-nums;letter-spacing:-.03em}.ivi-heatmap-evidence dd small{font-size:13px;margin-left:4px;color:#93b1c2}
+#click-patterns .heatmaps figure:first-child .ivi-heatmap-evidence dd{color:#83e7f3}
+@keyframes ivi-tab-rule{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes ivi-result-sheen{from{transform:translateX(-110%)}to{transform:translateX(110%)}}
+@keyframes ivi-score-shimmer{0%,25%{transform:translateX(-120%);opacity:0}50%{opacity:1}75%,100%{transform:translateX(120%);opacity:0}}
+@media(max-width:700px){#findings .result-switch button{font-size:12px;min-height:56px;padding:14px 6px}#findings .result-panel{padding:22px 18px;gap:30px}#findings .subjective-table td{font-size:15px}.ivi-heatmap-evidence{gap:26px}.ivi-heatmap-evidence dd{font-size:34px}}
+@media(prefers-reduced-motion:reduce){#findings .result-switch button,#findings .result-switch button::after,#findings .bar-row.best .bar-fill::after,#findings .subjective-table td::before{animation:none!important;transition:none!important}}
+
+/* Cycle 23: narrow-screen evidence tables — data unchanged. */
+#findings .table-scroll{max-width:100%;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:#63d9ea #17222a;scroll-padding-inline:0 16px}
+#findings .table-scroll:focus-visible{outline:2px solid #63d9ea;outline-offset:3px}
+#findings .subjective-table table{border-spacing:0;min-width:740px}
+#findings .subjective-table th:first-child{position:sticky;left:0;z-index:2;min-width:148px;max-width:178px;background:#101a22;box-shadow:1px 0 0 #35444e}
+#findings .subjective-table thead th:first-child{z-index:3}
+#findings .subjective-table tbody th:first-child{background:#111a22;color:#e6eef4}
+@media(max-width:700px){
+ #findings .subjective-table{min-width:0}
+ #findings .subjective-table h3{font-size:21px;line-height:1.35}
+ #findings .subjective-table .table-scroll{margin-right:0}
+ #findings .subjective-table table{min-width:680px}
+ #findings .subjective-table th:first-child{min-width:136px;max-width:136px}
+ #findings .subjective-table td,#findings .subjective-table th{padding:12px 9px}
+ #findings .subjective-table .table-scroll::after{content:"";display:block;height:1px}
+}

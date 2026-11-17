@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 140" fill="currentColor" aria-hidden="true">
+  <!-- Original solid letter outlines: consistent 22-unit stems, no font dependency. -->
+  <defs>
+    <path id="ksw-k" d="M18 16H40V60L76 16H104L62 67L108 124H79L40 77V124H18Z"/>
+    <path id="ksw-s" d="M256 25L242 43C233 36 224 32 212 32C201 32 195 37 195 44C195 52 201 55 216 59C240 65 254 75 254 94C254 115 237 127 213 127C192 127 178 120 165 109L179 91C189 100 201 106 214 106C226 106 232 102 232 95C232 87 225 83 210 79C186 73 173 64 173 45C173 26 189 13 212 13C230 13 244 18 256 25Z"/>
+    <path id="ksw-w" d="M288 16H312L330 89L349 16H370L389 89L407 16H431L402 124H378L359 56L340 124H316Z"/>
+  </defs>
+  <path class="intro-shape" data-letter="ksw-k" d="M63 16L116 124H10Z"/>
+  <path class="intro-shape" data-letter="ksw-s" d="M166 20H256V120H166Z"/>
+  <path class="intro-shape" data-letter="ksw-w" d="M418 70C418 99 395 122 366 122C337 122 314 99 314 70C314 41 337 18 366 18C395 18 418 41 418 70Z"/>
+</svg>

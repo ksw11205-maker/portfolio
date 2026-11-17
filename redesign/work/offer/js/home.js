@@ -1,0 +1,39 @@
+offerReady.then(({brands,promotions})=>{
+const U=OFFER;
+function sectionHeading(name, linkLabel, href) {
+  return `<div class="section-heading">
+    <h2>${name}</h2>
+    <a class="text-link" href="${href}" aria-label="${linkLabel} 전체 보기">전체 보기 ${U.icon('arrow')}</a>
+  </div>`;
+}
+const featured=promotions.filter(p=>p.featured).slice(0,3);const usedImages=new Set();const fresh=[...promotions].sort((a,b)=>b.createdAt.localeCompare(a.createdAt)).filter(p=>{if(usedImages.has(p.image))return false;usedImages.add(p.image);return true;}).slice(0,4);const ending=promotions.filter(U.active).sort((a,b)=>U.remaining(a)-U.remaining(b)).slice(0,3);
+const main=document.getElementById('main');main.classList.add('home-layout');main.innerHTML='<section id="home-hero" class="container hero" aria-labelledby="hero-heading"><div class="hero-topline eyebrow"><span>THE OFFER EDIT</span><span class="edition">AUTUMN 2026</span></div><h1 id="hero-heading">Find your<br>next <em>OFFER.</em></h1><p class="hero-copy">지금 받을 수 있는 브랜드의 혜택을 발견하세요.</p>'+U.searchForm('','home-search')+'</section><section id="home-popular" class="container section home-popular">'+sectionHeading('POPULAR','인기 혜택','explore.html?sort=popular')+('<div class="offer-grid--editorial">'+featured.map((p,i)=>U.card(p,i===0?'featured':'supporting')).join('')+'</div>')+'</section><section id="home-new" class="container section new-section">'+sectionHeading('NEW','새 혜택','explore.html?sort=new')+U.grid(fresh)+'</section><div id="home-ending" class="ending-section"><section class="container section">'+sectionHeading('ENDING SOON','마감 임박 혜택','explore.html?status=active&sort=ending')+(ending.length?U.grid(ending,true,'deadline'):U.empty('곧 종료되는 OFFER가 없습니다.','다른 브랜드의 혜택을 둘러보세요.'))+'</section></div><section id="home-categories" class="container section"><div class="section-heading"><h2>CATEGORY</h2></div><div class="category-list">'+[['fashion','Fashion'],['beauty','Beauty'],['food','Food'],['lifestyle','Lifestyle']].map(([id,label])=>'<a class="category-link" href="explore.html?category='+id+'"><span>'+label+'<small>'+promotions.filter(p=>p.category===id).length+' OFFERs</small></span>'+U.icon('up')+'</a>').join('')+'</div></section><section id="home-following" class="container section following-section"><div class="section-heading"><h2>FOLLOW</h2><a class="text-link" href="favorites.html">관심 브랜드 '+U.icon('arrow')+'</a></div><div id="following-content"></div></section>';
+main.querySelector('.hero-copy').textContent='여러 브랜드의 혜택을 한곳에서. 지금 나에게 맞는 OFFER를 찾아보세요.';
+main.querySelector('#home-hero .search-form').insertAdjacentHTML('afterend','<nav class="hero-shortcuts" aria-label="빠른 카테고리 탐색"><span>바로 찾기</span><a href="explore.html?category=fashion">Fashion</a><a href="explore.html?category=beauty">Beauty</a><a href="explore.html?category=food">Food</a><a href="explore.html?category=lifestyle">Lifestyle</a></nav>');
+function renderFollowing(){const followed=U.read('favoriteBrands');const items=promotions.filter(p=>followed.includes(p.brandId)&&U.active(p));document.getElementById('following-content').innerHTML=items.length?U.grid(items.slice(0,4)):followed.length?U.empty('새로운 OFFER를 기다리고 있어요.','관심 브랜드에 현재 진행 중인 OFFER가 없습니다.'):'<div class="empty-state"><div><h3>아직 팔로우한 브랜드가 없어요.</h3><p>브랜드를 팔로우하면 진행 중인 혜택을 여기에서 볼 수 있어요.</p><div class="brand-suggestions">'+brands.filter(b=>['musinsa','nike','oliveyoung','29cm'].includes(b.id)).map(b=>U.followButton(b,true)).join('')+'</div></div><a class="text-link" href="favorites.html">브랜드 둘러보기 '+U.icon('arrow')+'</a></div>';}
+// Reorder the actual DOM so keyboard and visual reading order agree on mobile.
+const hero=main.querySelector('#home-hero');
+const existing=[...hero.children];const copy=document.createElement('div');copy.className='hero-main';existing.forEach(el=>copy.appendChild(el));hero.appendChild(copy);
+const brandRows=[
+ ['musinsa','uniqlo','nike','hm','adidas','puma','northface'],
+ ['oliveyoung','starbucks','ikea','innisfree','mega-coffee','burgerking','mcdonalds'],
+ ['29cm','new-balance','muji','tamburins','fila','kfc']
+];
+const rowMarkup=(ids,index)=>{
+ const entries=ids.map(id=>brands.find(b=>b.id===id)).filter(Boolean);
+ const group=duplicate=>'<div class="brand-marquee__group"'+(duplicate?' aria-hidden="true" inert':'')+'>'+entries.map(b=>'<a class="brand-marquee__tile" href="brand.html?id='+b.id+'" aria-label="'+U.escape(b.name)+' 혜택 보기"'+(duplicate?' tabindex="-1"':'')+'><img class="brand-marquee__logo" src="assets/images/brands/'+U.escape(b.id)+'-hero.svg" alt="" width="248" height="144" loading="eager" decoding="async"></a>').join('')+'</div>';
+ return '<div class="brand-marquee'+(index%2?' brand-marquee--reverse':'')+'" style="--marquee-duration:'+(48+index*6)+'s"><div class="brand-marquee__track">'+group(false)+group(true)+'</div></div>';
+};
+hero.insertAdjacentHTML('beforeend','<aside class="hero-brands" aria-label="다양한 브랜드 둘러보기"><div class="brand-marquees">'+brandRows.map(rowMarkup).join('')+'</div><button class="marquee-toggle" type="button" aria-label="브랜드 모션 일시정지" aria-pressed="false"><svg viewBox="0 0 20 20" aria-hidden="true"><path class="pause-symbol" d="M7 5v10M13 5v10"/><path class="play-symbol" d="m7 5 8 5-8 5Z"/></svg></button></aside>');
+const brandPanel=hero.querySelector('.hero-brands'),motionButton=hero.querySelector('.marquee-toggle'),reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
+motionButton.addEventListener('click',()=>{const paused=brandPanel.classList.toggle('is-paused');motionButton.setAttribute('aria-pressed',String(paused));motionButton.setAttribute('aria-label',paused?'브랜드 모션 재생':'브랜드 모션 일시정지');});
+function syncMotionPreference(){motionButton.hidden=reducedMotion.matches;}
+syncMotionPreference();reducedMotion.addEventListener('change',syncMotionPreference);
+if('IntersectionObserver' in window){const observer=new IntersectionObserver(([entry])=>brandPanel.classList.toggle('is-offscreen',!entry.isIntersecting));observer.observe(brandPanel);}
+document.addEventListener('visibilitychange',()=>brandPanel.classList.toggle('is-document-hidden',document.hidden));
+hero.querySelectorAll('.brand-marquee').forEach(row=>row.addEventListener('focusout',()=>requestAnimationFrame(()=>{if(!row.matches(':focus-within'))row.scrollLeft=0;})));
+const mobile=matchMedia('(max-width: 767px)');
+function arrangeSections(){const focused=document.activeElement;const order=mobile.matches?['hero','popular','ending','categories','new','following']:['hero','popular','new','ending','categories','following'];order.forEach(name=>main.appendChild(document.getElementById('home-'+name)));if(focused&&main.contains(focused))focused.focus({preventScroll:true});}
+arrangeSections();mobile.addEventListener('change',arrangeSections);
+renderFollowing();document.addEventListener('offer:storage',e=>{if(e.detail.key==='favoriteBrands')renderFollowing();});document.addEventListener('offer:external-storage',renderFollowing);
+});

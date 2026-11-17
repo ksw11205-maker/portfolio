@@ -2,8 +2,14 @@
   "name": "kim-seongwon-portfolio",
   "private": true,
   "scripts": {
-    "dev": "node portfolio-shell/server.cjs",
-    "start": "node portfolio-shell/server.cjs"
+    "dev": "node scripts/serve-redesign.cjs",
+    "start": "node scripts/serve-redesign.cjs",
+    "dev:redesign": "node scripts/serve-redesign.cjs",
+    "check:redesign": "node scripts/verify-cover-assets.cjs && node scripts/validate-redesign.cjs",
+    "dev:legacy": "node portfolio-shell/server.cjs",
+    "check": "npm run check:redesign"
   },
-  "engines": { "node": ">=20" }
+  "engines": {
+    "node": ">=20"
+  }
 }

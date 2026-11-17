@@ -18,12 +18,14 @@ export function preparePortfolioIntro({app,reduced,force=false}){
   state.blocksHero=true;
   const overlay=document.createElement('div');overlay.className='portfolio-intro';overlay.setAttribute('aria-hidden','true');
   const d=brandShape.commands.map(c=>c.join(' ')).join(' ');
-  const width=window.innerWidth||1440,height=window.innerHeight||900;
-  const logoWidth=Math.min(180,Math.max(100,width*.13)),unit=logoWidth/brandShape.width;
-  const holeWidth=220*unit,holeHeight=180*unit;
-  // The backdrop and mark share one camera. Its central aperture reveals the real
-  // hero underneath; scaling the camera carries both logo edges out of view.
-  overlay.innerHTML=`<div class="intro-camera"><svg class="intro-scene" viewBox="${-width/2} ${-height/2} ${width} ${height}" preserveAspectRatio="none" focusable="false"><defs><mask id="intro-portal" maskUnits="userSpaceOnUse" x="${-width/2}" y="${-height/2}" width="${width}" height="${height}"><rect x="${-width/2}" y="${-height/2}" width="${width}" height="${height}" fill="white"/><rect class="intro-aperture" x="${-holeWidth/2}" y="${-holeHeight/2}" width="${holeWidth}" height="${holeHeight}" rx="${8*unit}" fill="black"/></mask></defs><rect x="${-width/2}" y="${-height/2}" width="${width}" height="${height}" fill="#0b0c0e" mask="url(#intro-portal)"/><svg x="${-logoWidth/2}" y="${-brandShape.height*unit/2}" width="${logoWidth}" height="${brandShape.height*unit}" viewBox="0 0 ${brandShape.width} ${brandShape.height}" overflow="visible"><g class="intro-piece"><path fill="${brandShape.blue}" d="${d}"/></g><g class="intro-piece"><path fill="${brandShape.silver}" d="${d}" transform="rotate(180 ${brandShape.width/2} ${brandShape.height/2})"/></g></svg></svg></div>`;
+  const stage=document.querySelector('.hero-brand .brand-stage');
+  const box=stage.getBoundingClientRect();
+  const logoWidth=box.height * brandShape.width * .007 / 5.7;
+  const logoHeight=logoWidth * brandShape.height / brandShape.width;
+  const centerX=box.left+box.width/2,centerY=box.top+box.height/2;
+  // Start inside an oversized symbol, then pull it into the real model's position.
+  overlay.classList.add('portfolio-intro--depth');
+  overlay.innerHTML=`<div class="intro-depth-backdrop"></div><div class="intro-depth-mark" style="left:${centerX}px;top:${centerY}px;width:${logoWidth}px;height:${logoHeight}px"><svg viewBox="0 0 ${brandShape.width} ${brandShape.height}" focusable="false"><path fill="${brandShape.blue}" d="${d}"/><path fill="${brandShape.silver}" d="${d}" transform="rotate(180 ${brandShape.width/2} ${brandShape.height/2})"/></svg></div>`;
   const roots=[app,document.querySelector('.skip')].filter(Boolean),inert=roots.map(r=>r.inert);
   const previousOverflow=document.documentElement.style.overflow,previousBody=document.body.style.overflow;
   const animations=[];let finished=false,openTimer,watchdog,preparation;
@@ -41,28 +43,38 @@ export function preparePortfolioIntro({app,reduced,force=false}){
   roots.forEach(r=>r.inert=true);document.documentElement.style.overflow='hidden';document.body.style.overflow='hidden';
   document.body.classList.add('intro-active','intro-closed');document.body.append(overlay);reveal();
   dispatchEvent(new Event('portfolio:intro-prepare'));
-  overlay.querySelectorAll('.intro-piece').forEach((piece,i)=>animations.push(piece.animate([
-    {transform:`translate(${i?22:-22}px,${i?-22:22}px)`,opacity:0},{transform:'translate(0,0)',opacity:1}
-  ],{duration:780,delay:80+i*90,easing:'cubic-bezier(.22,1,.36,1)',fill:'both'})));
-  preparation=prepareHeroReadiness(document.querySelector('.hero'));
+  const mark=overlay.querySelector('.intro-depth-mark');
+  const startScale=Math.max(innerWidth/logoWidth,innerHeight/logoHeight)*1.7;
+  const startTransform=`translate(-50%,-50%) scale(${startScale})`;
+  mark.style.transform=startTransform;
+  preparation=prepareHeroReadiness(document.querySelector('.hero'),{timeout:1200});
   openTimer=setTimeout(async()=>{
     await preparation.ready;if(finished)return;
-    // Reveal the hero background first. The real logo stays hidden throughout
-    // the zoom, then fades in at its final position after the portal is removed.
-    [document.querySelector('.header'),document.querySelector('.hero-bottom')].filter(Boolean).forEach((node,i)=>{
-      animations.push(node.animate([{opacity:0},{opacity:1}],{duration:600,delay:420+i*60,easing:'cubic-bezier(.22,1,.36,1)',fill:'both'}));
+    const travel=mark.animate([
+      {transform:startTransform,filter:'blur(4px)'},
+      {transform:'translate(-50%,-50%) scale(1)',filter:'blur(0px)'}
+    ],{duration:1450,easing:'cubic-bezier(.16,.7,.22,1)',fill:'forwards'});
+    animations.push(travel);
+    animations.push(overlay.querySelector('.intro-depth-backdrop').animate([
+      {opacity:1},{opacity:0}
+    ],{duration:850,delay:500,easing:'ease-in-out',fill:'forwards'}));
+    state.blocksHero=false;document.body.classList.remove('intro-closed');
+    [document.querySelector('.header'),document.querySelector('.hero-bottom')].filter(Boolean).forEach(node=>{
+      animations.push(node.animate([{opacity:0},{opacity:1}],{duration:600,delay:700,easing:'ease-out',fill:'both'}));
     });
-    state.blocksHero=false;document.body.classList.remove('intro-closed');overlay.classList.add('is-opening');
-    animations.push(overlay.querySelector('.intro-aperture').animate([
-      {transform:'scale(0)'},{transform:'scale(1)'}
-    ],{duration:280,easing:'cubic-bezier(.22,1,.36,1)',fill:'forwards'}));
-    const zoom=Math.max(width/holeWidth,height/holeHeight)*1.25;
-    animations.push(overlay.querySelector('.intro-camera').animate([
-      {transform:'scale(1)'},{transform:`scale(${zoom})`}
-    ],{duration:1250,easing:'cubic-bezier(.72,0,.22,1)',fill:'forwards'}));
-    animations.at(-1).finished.then(()=>finish(true)).catch(()=>{});
-  },1050);
-  watchdog=setTimeout(()=>finish(true),3100);
+    // Both surfaces share a contour and a centre. The flat mark dissolves as
+    // the actual bevelled mesh gains depth and turns into the studio light.
+    openTimer=setTimeout(()=>{
+      if(finished)return;
+      logoReveal.open().then(()=>{
+      if(finished)return;
+      const dissolve=mark.animate([{opacity:1},{opacity:0}],{duration:500,fill:'forwards'});
+      animations.push(dissolve);
+      dissolve.finished.then(()=>finish(true)).catch(()=>{});
+      });
+    },1150);
+  },180);
+  watchdog=setTimeout(()=>finish(true),3500);
   addEventListener('keydown',skip);addEventListener('pagehide',finish,{once:true});reduced.addEventListener('change',finish,{once:true});
   return state;
 }

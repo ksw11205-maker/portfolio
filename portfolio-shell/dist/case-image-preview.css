@@ -1,0 +1,51 @@
+/* Run 9 safe integration: additive image-preview controls.
+   Source of truth remains portfolio-vscode/dist. */
+.case-preview-cta {
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: .4em; margin: 10px 0 2px; padding: 10px 14px;
+  min-height: 44px; border: 1px solid currentColor; border-radius: 999px;
+  background: transparent; color: inherit; font: inherit;
+  font-size: 12px; font-weight: 650; letter-spacing: -.01em;
+  cursor: zoom-in; transition: background-color .18s ease, color .18s ease;
+}
+#screens .case-preview-cta {color: #30251f; border-color: rgba(48,37,31,.45);}
+#screens .case-preview-cta:hover {background: #30251f; color: #fff8ec;}
+#responsive .case-preview-cta {color: #f1f1ed; border-color: rgba(241,241,237,.68);}
+#responsive .case-preview-cta:hover {background: #f1f1ed; color: #171717;}
+.case-preview-cta:focus-visible, .case-preview-close:focus-visible {
+  outline: 3px solid #f29a70; outline-offset: 4px;
+}
+.case-preview-dialog {
+  padding: 0; border: 1px solid rgba(255,255,255,.15);
+  border-radius: 16px; width: min(94vw, 1040px);
+  max-width: 94vw; max-height: 92dvh; overflow: hidden;
+  background: #151516; color: #f1f1ed;
+  box-shadow: 0 24px 80px rgba(0,0,0,.48);
+}
+.case-preview-dialog::backdrop {background: rgba(0,0,0,.83); backdrop-filter: blur(5px);}
+.case-preview-dialog[open] {display: flex; flex-direction: column;}
+.case-preview-heading {
+  min-height: 64px; display: flex; justify-content: space-between;
+  align-items: center; gap: 16px; padding: 12px 18px;
+  border-bottom: 1px solid rgba(255,255,255,.16);
+}
+.case-preview-title {margin: 0; color: #f1f1ed; font-size: 14px; font-weight: 650; line-height: 1.4;}
+.case-preview-close {
+  min-width: 44px; min-height: 44px; background: none; color: #f1f1ed;
+  border: 1px solid rgba(255,255,255,.5); border-radius: 50%;
+  cursor: pointer; font-size: 24px; line-height: 1;
+}
+.case-preview-content {min-height: 110px; overflow: auto; overscroll-behavior: contain; padding: 12px; text-align: center;}
+.case-preview-image {display: block; max-width: 100%; height: auto; max-height: calc(92dvh - 118px); width: auto; margin: auto; object-fit: contain;}
+.case-preview-message {margin: 32px auto; font-size: 14px; line-height: 1.65; color: #f1f1ed;}
+.case-preview-image[hidden], .case-preview-message[hidden] {display:none !important;}
+@media(max-width:480px) {
+  .case-preview-dialog {width: 96vw; max-width: 96vw; border-radius: 12px;}
+  .case-preview-heading {padding: 8px 12px; min-height: 60px;}
+  .case-preview-title {font-size: 12px;}
+  .case-preview-content {padding: 8px;}
+}
+@media(prefers-reduced-motion:reduce) {
+  .case-preview-cta {transition: none;}
+  .case-preview-dialog::backdrop {backdrop-filter: none;}
+}

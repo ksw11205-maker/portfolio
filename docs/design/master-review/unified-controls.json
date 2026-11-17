@@ -1,0 +1,337 @@
+[
+  {
+    "slug": "lg",
+    "chapters": [
+      "overview",
+      "background",
+      "research",
+      "direction",
+      "concept",
+      "design-system",
+      "final-design",
+      "retrospective"
+    ],
+    "clicks": [
+      {
+        "hash": "#overview",
+        "target": true,
+        "top": 112
+      },
+      {
+        "hash": "#background",
+        "target": true,
+        "top": 112.1875
+      },
+      {
+        "hash": "#research",
+        "target": true,
+        "top": 111.546875
+      },
+      {
+        "hash": "#direction",
+        "target": true,
+        "top": 112.375
+      },
+      {
+        "hash": "#concept",
+        "target": true,
+        "top": 111.875
+      },
+      {
+        "hash": "#design-system",
+        "target": true,
+        "top": 112.203125
+      },
+      {
+        "hash": "#final-design",
+        "target": true,
+        "top": 112.125
+      },
+      {
+        "hash": "#retrospective",
+        "target": true,
+        "top": 111.8125
+      }
+    ],
+    "skip": true,
+    "duplicates": [],
+    "finalOrder": [
+      "api-start",
+      "before-upload",
+      "01-input",
+      "02-analysis",
+      "03-alternative",
+      "04-comparison",
+      "workspace",
+      "settings"
+    ],
+    "h2": [
+      "연구의 근거를, 화면의 판단으로.",
+      "멀리서 조작하는 TV, 판단 기준이 필요했습니다.",
+      "사용성 요인에서 예측 모델까지.",
+      "점수보다, 바꿀 수 있는 요인을.",
+      "정밀한 판단을 위한, 차분한 기술의 감도.",
+      "서체와 색으로, 프로젝트의 인상을 정리합니다.",
+      "화면을 입력하고, 대안을 비교합니다.",
+      "화면의 이유를 설명하는 디자이너로."
+    ]
+  },
+  {
+    "slug": "ivi",
+    "chapters": [
+      "overview",
+      "background",
+      "research",
+      "direction",
+      "concept",
+      "design-system",
+      "final-design",
+      "retrospective"
+    ],
+    "clicks": [
+      {
+        "hash": "#overview",
+        "target": true,
+        "top": 112
+      },
+      {
+        "hash": "#background",
+        "target": true,
+        "top": 112.40625
+      },
+      {
+        "hash": "#research",
+        "target": true,
+        "top": 111.9375
+      },
+      {
+        "hash": "#direction",
+        "target": true,
+        "top": 111.5
+      },
+      {
+        "hash": "#concept",
+        "target": true,
+        "top": 111.5
+      },
+      {
+        "hash": "#design-system",
+        "target": true,
+        "top": 111.828125
+      },
+      {
+        "hash": "#final-design",
+        "target": true,
+        "top": 111.75
+      },
+      {
+        "hash": "#retrospective",
+        "target": true,
+        "top": 111.515625
+      }
+    ],
+    "skip": true,
+    "duplicates": [],
+    "finalOrder": [
+      "climate",
+      "menu",
+      "phone",
+      "concept-clean"
+    ],
+    "h2": [
+      "기능에 따라 달라지는 화면의 기준.",
+      "하나의 화면에 모인 기능, 다른 조작 방식.",
+      "네 가지 레이아웃을 같은 기준으로.",
+      "탐색은 고정하고, 조절은 바로.",
+      "주행의 긴장 속에서도, 차분하게 읽히도록.",
+      "서체와 색으로, 프로젝트의 인상을 정리합니다.",
+      "실험에서 설계 제안까지.",
+      "순위보다 기능의 성격을 먼저."
+    ]
+  },
+  {
+    "slug": "cafekok",
+    "chapters": [
+      "overview",
+      "background",
+      "research",
+      "direction",
+      "concept",
+      "design-system",
+      "final-design",
+      "retrospective"
+    ],
+    "clicks": [
+      {
+        "hash": "#overview",
+        "target": true,
+        "top": 112
+      },
+      {
+        "hash": "#background",
+        "target": true,
+        "top": 112.40625
+      },
+      {
+        "hash": "#research",
+        "target": true,
+        "top": 112.34375
+      },
+      {
+        "hash": "#direction",
+        "target": true,
+        "top": 112.03125
+      },
+      {
+        "hash": "#concept",
+        "target": true,
+        "top": 112.359375
+      },
+      {
+        "hash": "#design-system",
+        "target": true,
+        "top": 111.6875
+      },
+      {
+        "hash": "#final-design",
+        "target": true,
+        "top": 111.609375
+      },
+      {
+        "hash": "#retrospective",
+        "target": true,
+        "top": 112.03125
+      }
+    ],
+    "skip": true,
+    "duplicates": [],
+    "finalOrder": [
+      "onboarding",
+      "quiz",
+      "profile",
+      "home",
+      "explore",
+      "detail",
+      "saved",
+      "saved-empty",
+      "map"
+    ],
+    "h2": [
+      "취향에서 오늘의 공간으로.",
+      "좋은 카페보다, 지금 나에게 맞는 카페.",
+      "선택의 기준부터 정리했습니다.",
+      "평소 취향과 오늘의 목적을 나눕니다.",
+      "따뜻한 공간의 결을, 화면 안으로.",
+      "서체와 색으로, 프로젝트의 인상을 정리합니다.",
+      "첫 취향 입력부터 다음 방문까지.",
+      "취향을 아는 것에서 선택을 돕는 것으로."
+    ]
+  },
+  {
+    "slug": "offer",
+    "chapters": [
+      "overview",
+      "background",
+      "research",
+      "direction",
+      "concept",
+      "design-system",
+      "final-design",
+      "retrospective"
+    ],
+    "clicks": [
+      {
+        "hash": "#overview",
+        "target": true,
+        "top": 112
+      },
+      {
+        "hash": "#background",
+        "target": true,
+        "top": 112.40625
+      },
+      {
+        "hash": "#research",
+        "target": true,
+        "top": 111.5625
+      },
+      {
+        "hash": "#direction",
+        "target": true,
+        "top": 111.53125
+      },
+      {
+        "hash": "#concept",
+        "target": true,
+        "top": 111.625
+      },
+      {
+        "hash": "#design-system",
+        "target": true,
+        "top": 111.953125
+      },
+      {
+        "hash": "#final-design",
+        "target": true,
+        "top": 111.875
+      },
+      {
+        "hash": "#retrospective",
+        "target": true,
+        "top": 111.546875
+      }
+    ],
+    "skip": true,
+    "duplicates": [],
+    "finalOrder": [
+      "home",
+      "explore",
+      "detail",
+      "filtered",
+      "saved",
+      "favorites",
+      "brand",
+      "explore-responsive",
+      "tablet-responsive",
+      "mobile-responsive"
+    ],
+    "h2": [
+      "흩어진 혜택을 같은 기준으로.",
+      "브랜드마다 다른 정보, 비교는 한곳에서.",
+      "비교에 필요한 항목을 정리했습니다.",
+      "발견·비교·재방문을 연결합니다.",
+      "다양한 브랜드를 담는, 명료한 프레임.",
+      "서체와 색으로, 프로젝트의 인상을 정리합니다.",
+      "발견에서 비교, 저장으로.",
+      "정보를 모으는 서비스에서 선택을 돕는 구조로."
+    ]
+  },
+  {
+    "shell": [
+      {
+        "cls": "project-visual lg is-active",
+        "scale": "matrix(1.04, 0, 0, 1.04, 0, 0)"
+      },
+      {
+        "cls": "project-visual ivi is-active",
+        "scale": "matrix(1.04, 0, 0, 1.04, 0, 0)"
+      },
+      {
+        "cls": "project-visual cafekok is-active",
+        "scale": "matrix(1.04, 0, 0, 1.04, 0, 0)"
+      },
+      {
+        "cls": "project-visual lg is-active",
+        "scale": "matrix(1.04, 0, 0, 1.04, 0, 0)"
+      },
+      {
+        "reduced": [
+          "none",
+          "none",
+          "none",
+          "none"
+        ]
+      }
+    ]
+  }
+]

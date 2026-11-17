@@ -22,11 +22,10 @@ export function createStatementMotion(entries,{requestUpdate=()=>{}}={}){
   }
   function draw(state){
     state.started=true;
-    state.animations=state.paths.map((path,i)=>path.animate([
-      {opacity:0,strokeDashoffset:'1',transform:`translate(${[-10,2,10][i]}px,${[5,-5,4][i]}px) rotate(${[-3,2,-2][i]}deg)`,offset:0},
-      {opacity:1,strokeDashoffset:'.9',transform:'translate(0,0) rotate(0deg)',offset:.28},
-      {opacity:1,strokeDashoffset:'0',transform:'translate(0,0) rotate(0deg)',offset:1}
-    ],{duration:850,delay:state.index*90+i*110,easing:'cubic-bezier(.22,1,.36,1)',fill:'both'}));
+    state.animations=state.paths.map(path=>path.animate([
+      {opacity:1,strokeDashoffset:'1'},
+      {opacity:1,strokeDashoffset:'0'}
+    ],{duration:360,delay:state.index*70,easing:'cubic-bezier(.2,.5,.3,1)',fill:'both'}));
     state.node.dataset.lineState='drawing';
     Promise.all(state.animations.map(animation=>animation.finished)).then(()=>{if(!disposed)finish(state);}).catch(()=>{});
   }

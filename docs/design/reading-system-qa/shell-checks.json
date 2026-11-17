@@ -1,0 +1,54 @@
+[
+  {
+    "width": 1440,
+    "overflow": false,
+    "images": [
+      {
+        "src": "/assets/archive-covers/lg-cover-1920.jpg",
+        "ratioError": 0.00004564135192075547,
+        "displayWidth": 648
+      },
+      {
+        "src": "/assets/archive-covers/ivi-cover-clean-1920.jpg",
+        "ratioError": 9.528966844688856,
+        "displayWidth": 574.9586791992188
+      },
+      {
+        "src": "/assets/archive-covers/cafekok-owner.webp",
+        "ratioError": 7.314665631834504,
+        "displayWidth": 587.59521484375
+      },
+      {
+        "src": "/assets/archive-covers/offer-cover-1920.jpg",
+        "ratioError": 9.528966844688856,
+        "displayWidth": 574.9586791992188
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "overflow": false,
+    "images": [
+      {
+        "src": "/assets/archive-covers/lg-cover-1920.jpg",
+        "ratioError": 0.0000576526238738051,
+        "displayWidth": 342
+      },
+      {
+        "src": "/assets/archive-covers/ivi-cover-clean-1920.jpg",
+        "ratioError": 0.0000576526238738051,
+        "displayWidth": 342
+      },
+      {
+        "src": "/assets/archive-covers/cafekok-owner.webp",
+        "ratioError": 0,
+        "displayWidth": 342
+      },
+      {
+        "src": "/assets/archive-covers/offer-cover-1920.jpg",
+        "ratioError": 0.0000576526238738051,
+        "displayWidth": 342
+      }
+    ]
+  }
+]

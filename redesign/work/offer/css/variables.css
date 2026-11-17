@@ -1,0 +1,41 @@
+@font-face {
+  font-family: "Pretendard Variable";
+  src: url("../assets/fonts/PretendardVariable.woff2") format("woff2");
+  font-weight: 45 920;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --color-bg: #fff;
+  --color-surface: #f7f7f5;
+  --color-text-primary: #111;
+  --color-text-secondary: #777;
+  --color-text-muted: #666;
+  --color-border: #e7e7e3;
+  --color-accent: #ff4d22;
+  --color-accent-readable: #c73512;
+  --page-width: 1440px;
+  --gutter: 64px;
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+  --space-8: 64px;
+  --space-10: 80px;
+  --space-12: 96px;
+  --space-15: 120px;
+  --duration: 240ms;
+  --font: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+  --section-gap: 104px;
+  --grid-gap: 24px;
+  --radius-card: 16px;
+  --radius-control: 999px;
+  --color-warm: #fff4ee;
+  --type-hero: clamp(64px, 6vw, 84px);
+  --type-page: clamp(48px, 4.5vw, 64px);
+  --type-section: clamp(30px, 2.8vw, 40px);
+  --ease: cubic-bezier(.22,.61,.36,1);
+}

@@ -1,0 +1,21 @@
+KSW PORTFOLIO — SAFE SHELL + RUN 9 FEATURE INTEGRATION (2026-11-12)
+
+This archive uses portfolio-vscode.zip as its original authoritative shell.
+The incompatible Run 9 full-page replacements were NOT used.
+
+Included changes:
+1. IVI: clarified four tested layouts versus the untested hybrid design direction.
+2. CAFEKOK: accessible image enlargement for original 7 phone screenshots.
+3. OFFER: accessible image enlargement for the existing three-device comparison.
+4. Shared progressive JS/CSS with modal close, Esc, focus return and image error message.
+
+Original shell, LG, all images, project routes, prototypes, and their visual styles are preserved.
+No GitHub push or remote deployment has been done.
+
+RUN:
+From the directory containing dist (the extracted portfolio-vscode folder):
+  py -m http.server 5500 --directory dist
+Visit http://localhost:5500/
+
+DO NOT RUN the old Run 9 patch HTML on top of this build.
+See QA_INTEGRATION_REPORT.md for tested functionality and limitations.

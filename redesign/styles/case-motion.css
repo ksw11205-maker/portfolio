@@ -1,0 +1,30 @@
+/* One-time entrance only: chapters stay visible when scrolled past. */
+body[data-page="case"].case-motion-enhanced [data-reading-fade] {
+  opacity:0;
+  transform:translateY(10px);
+  transition:opacity .58s cubic-bezier(.22,1,.36,1),transform .58s cubic-bezier(.22,1,.36,1);
+}
+body[data-page="case"].case-motion-enhanced [data-reading-fade].is-reading-visible,
+body[data-page="case"].case-motion-enhanced [data-reading-fade]:focus-within {
+  opacity:1;
+  transform:none;
+}
+body[data-page="case"].is-motion-paused [data-reading-fade] {
+  opacity:1!important;transform:none!important;transition:none!important;
+}
+/* Remove decorative section rules; keep tables and feature connectors. */
+body[data-page="case"] :is(.case-section + .case-section,
+  .product-story > .case-section + .case-section, .reflection-section,
+  .role-note, .research-question, .layout-card > header,
+  .metric-strip, .offer-principles, .offer-brand-context, .offer-system-line,
+  .reflection-qa, .research-reflection-qa > article,
+  .reflection-qa article, .annotation-stage, .presentation-evidence) {
+  border-top:0;
+  border-bottom:0;
+}
+@media(prefers-reduced-motion:reduce) {
+  body[data-page="case"] [data-reading-fade] {opacity:1!important;transform:none!important;transition:none!important}
+}
+@media print {
+  body[data-page="case"] [data-reading-fade] {opacity:1!important;transform:none!important;transition:none!important}
+}

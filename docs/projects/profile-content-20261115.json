@@ -1,0 +1,182 @@
+{
+  "status": "Curated public portfolio content draft; not yet applied to the website",
+  "source": {
+    "fileName": "김성원_이력서_자기소개서.docx",
+    "sha256": "953bd50e5b2233a9f2565f957232509829176bd84393b6e2d57ac55db2744d83",
+    "providedBy": "user",
+    "reviewedOn": "2026-11-15",
+    "scope": "Text facts and selected self-introduction content only; document layout was not assessed"
+  },
+  "identity": {
+    "name": "김성원",
+    "englishName": "KIM SEONGWON",
+    "role": "UX/UI Designer",
+    "email": "ksw11205@gmail.com"
+  },
+  "education": [
+    {
+      "institution": "동의대학교",
+      "major": "인간·시스템디자인공학",
+      "minor": "산업ICT공학과",
+      "start": "2020.03",
+      "end": "2026.02",
+      "status": "졸업",
+      "gpa": "4.08 / 4.5",
+      "displayPriority": "major and minor primary; GPA secondary"
+    }
+  ],
+  "experience": [
+    {
+      "id": "sbs",
+      "category": "교육 경험",
+      "institution": "SBS아카데미 AIX학원 부산점",
+      "title": "AI융합 스마트기기 UXUI디자인 전문인력양성과정",
+      "start": "2026.06",
+      "end": null,
+      "status": "수강 중",
+      "placement": "EXPERIENCE"
+    },
+    {
+      "id": "mito",
+      "category": "교육 경험",
+      "institution": "부산 미토직업전문학교",
+      "title": "AI 스마트 모빌리티 콘텐츠 자동화 및 인터페이스 디자인 과정",
+      "start": "2026.02",
+      "end": "2026.06",
+      "status": "수료",
+      "placement": "EXPERIENCE"
+    },
+    {
+      "id": "lab",
+      "category": "연구 경험",
+      "institution": "동의대학교 UXU LAB",
+      "title": "학부연구생 · 기업 및 기관 연구과제 참여",
+      "periodLabel": "2024–2025",
+      "periodStatus": "Year-level summary of dated projects; exact lab appointment period not revalidated",
+      "projects": [
+        {
+          "title": "ONE-Bio LMS 상호작용성 향상을 위한 UI/UX 설계 전략 연구",
+          "start": "2025.07",
+          "end": "2025.12",
+          "partner": "바이오헬스 혁신융합대학",
+          "contribution": "교수님·사업단 소통, 요구사항 공유, 전체 진행과 자료 취합·보고서 정리",
+          "claimBasis": "User-authored resume self-introduction"
+        },
+        {
+          "title": "TV 사용성 평가모델 및 AI 디자인 Tool 개발 연구",
+          "start": "2025.03",
+          "end": "2025.09",
+          "partner": "LG전자",
+          "contribution": "일정에 맞춘 프로토타입 디자인안 제작, 보고서 자료·이미지 조사, 중간 검토와 피드백 반영",
+          "claimBoundary": "Do not claim sole ownership of the entire research or prediction model"
+        },
+        {
+          "title": "스마트 방석 및 스마트케어 프로그램 UI 사용성 평가",
+          "start": "2024.12",
+          "end": "2025.02",
+          "partner": "네오펙트",
+          "contribution": "사용성 평가 참여",
+          "claimBoundary": "Specific responsibilities beyond participation are not stated"
+        }
+      ],
+      "placement": "EXPERIENCE"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "GTQ",
+      "grade": "1급",
+      "date": "2026.11",
+      "issuer": "한국생산성본부",
+      "priority": "primary"
+    },
+    {
+      "name": "멀티미디어콘텐츠제작전문가",
+      "grade": "단일",
+      "date": "2026.09",
+      "issuer": "한국산업인력공단",
+      "priority": "primary"
+    },
+    {
+      "name": "인간공학기사",
+      "grade": "기사",
+      "date": "2026.06",
+      "issuer": "한국산업인력공단",
+      "priority": "primary"
+    },
+    {
+      "name": "ITQ 한글파워포인트",
+      "grade": "A",
+      "date": "2013.03",
+      "issuer": "한국생산성본부",
+      "priority": "optional expanded credentials"
+    }
+  ],
+  "awards": [
+    {
+      "name": "추계학술대회 캡스톤 경진대회",
+      "award": "장려상",
+      "date": "2025.11",
+      "issuer": "대한인간공학회"
+    },
+    {
+      "name": "부산디지털혁신아카데미 해커톤(Dev-ton) 대회",
+      "award": "혁신상",
+      "date": "2024.11",
+      "issuer": "부산정보산업진흥원"
+    },
+    {
+      "name": "추계학술대회 캡스톤 경진대회",
+      "award": "장려상",
+      "date": "2024.11",
+      "issuer": "대한인간공학회"
+    }
+  ],
+  "editorialSelection": {
+    "introDraft": "인간공학과 사용자 연구를 바탕으로, 화면의 이유를 설명하는 UX/UI 디자이너 김성원입니다.",
+    "supportingStory": "산업ICT를 공부한 경험에 인간공학과 사용성 평가를 더하고, 디자인 도구와 웹 구현을 배우며 설계의 범위를 넓혀 왔습니다.",
+    "collaborationBasis": "ONE-Bio 연구에서 요구사항 전달·진행 조율·자료 취합을 맡은 경험",
+    "growthBoundary": "팀원의 작업을 직접 수정하는 대신 목적·형식·완료 기준을 공유하겠다는 내용은 개선 계획이며 이미 검증된 습관으로 바꾸지 않는다."
+  },
+  "revisions": [
+    {
+      "field": "human factors engineer certificate",
+      "old": "2024.11",
+      "new": "2026.06",
+      "basis": "latest resume"
+    },
+    {
+      "field": "SBS course start",
+      "old": "2026.07",
+      "new": "2026.06",
+      "basis": "latest resume"
+    },
+    {
+      "field": "SBS course end",
+      "old": "2026.12",
+      "new": "수강 중; end not stated",
+      "basis": "latest resume"
+    },
+    {
+      "field": "degree title",
+      "old": "인간공학과",
+      "new": "인간·시스템디자인공학 · 산업ICT공학 부전공",
+      "basis": "latest resume"
+    },
+    {
+      "field": "SBS placement",
+      "old": "BACKGROUND",
+      "new": "EXPERIENCE",
+      "basis": "explicit user request"
+    }
+  ],
+  "excludedFromPublicPortfolio": [
+    "생년월일",
+    "개인 주소",
+    "휴대폰 번호",
+    "병역 상세",
+    "운전면허",
+    "자기소개서 안에 섞인 첨삭 메모",
+    "직무 관련성이 낮은 개별 과제의 상세 내용"
+  ]
+}

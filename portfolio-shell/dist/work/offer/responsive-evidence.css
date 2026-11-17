@@ -1,0 +1,54 @@
+/* Cycle 27: OFFER-only responsive evidence, source screenshots untouched. */
+body[data-editorial="offer"] #responsive .offer-responsive-evidence{display:grid;grid-template-columns:minmax(0,1.9fr) minmax(0,.9fr) minmax(0,.58fr);align-items:start;gap:clamp(16px,2vw,32px);margin-top:56px}
+body[data-editorial="offer"] #responsive .offer-responsive-evidence>figure{min-width:0;width:auto;flex:none;margin:0}
+body[data-editorial="offer"] #responsive .offer-responsive-evidence>figure img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;object-position:top}
+body[data-editorial="offer"] #responsive .offer-responsive-evidence figcaption{white-space:normal;display:grid;gap:7px;margin-top:18px;padding-top:14px;border-top:1px solid #77756f;font-size:13px;line-height:1.5;letter-spacing:-.015em;color:#c5c2ba}
+body[data-editorial="offer"] #responsive .offer-responsive-evidence figcaption strong{font-size:clamp(15px,1.4vw,19px);font-weight:600;color:#f1f1ed;letter-spacing:-.025em}
+body[data-editorial="offer"] #responsive .offer-responsive-evidence figcaption .offer-device-no{font-size:10px;letter-spacing:.12em;color:#ff8c70}
+body[data-editorial="offer"] #responsive .offer-responsive-evidence .ed-browser{max-width:100%}
+@media(max-width:900px){body[data-editorial="offer"] #responsive .offer-responsive-evidence{grid-template-columns:minmax(0,1.25fr) minmax(0,.8fr);gap:32px 22px}body[data-editorial="offer"] #responsive .offer-responsive-evidence>figure:first-child{grid-column:1/-1}body[data-editorial="offer"] #responsive .offer-responsive-evidence>figure:nth-child(3){width:100%;justify-self:auto}}
+@media(max-width:520px){body[data-editorial="offer"] #responsive .offer-responsive-evidence{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px 14px;margin-top:30px}body[data-editorial="offer"] #responsive .offer-responsive-evidence>figure:first-child{grid-column:1/-1}body[data-editorial="offer"] #responsive .offer-responsive-evidence figcaption{margin-top:12px;padding-top:12px;gap:5px;font-size:11px}body[data-editorial="offer"] #responsive .offer-responsive-evidence figcaption strong{font-size:14px;line-height:1.4}body[data-editorial="offer"] #responsive .offer-responsive-evidence>figure>img{border-width:2px;border-radius:5px}}
+@media(prefers-reduced-motion:reduce){body[data-editorial="offer"] #responsive .offer-responsive-evidence *{scroll-behavior:auto}}
+
+/* Cycle 29: at narrow phone widths, tablet and mobile evidence must remain legible.
+   Preserve original screenshot bytes; only change the presentation grid. */
+@media (max-width: 520px) {
+  body[data-editorial="offer"] #responsive .offer-responsive-evidence {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 38px;
+  }
+  body[data-editorial="offer"] #responsive .offer-responsive-evidence > figure,
+  body[data-editorial="offer"] #responsive .offer-responsive-evidence > figure:first-child {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+  body[data-editorial="offer"] #responsive .offer-responsive-evidence > figure:nth-child(3) {
+    width: min(100%, 330px);
+    justify-self: center;
+  }
+  body[data-editorial="offer"] #responsive .offer-responsive-evidence figcaption {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+  body[data-editorial="offer"] #responsive .offer-responsive-evidence figcaption strong {
+    font-size: 16px;
+  }
+}
+
+/* Cycle 30: remove viewport-sized dead space before the responsive UI evidence.
+   The chapter's visual evidence, not a blank heading panel, controls its height. */
+@media (min-width: 901px) and (min-height: 700px) {
+  body[data-editorial="offer"] #responsive .section-head,
+  body[data-editorial="offer"] #responsive .section-intro {
+    min-height: 0;
+    margin-bottom: clamp(28px, 3vw, 48px);
+  }
+}
+
+/* Cycle 31: full-resolution evidence is accessible on narrow viewports without altering screenshots. */
+body[data-editorial="offer"] #responsive .offer-evidence-open{display:block;position:relative;min-width:0;max-width:100%;text-decoration:none;color:inherit;cursor:zoom-in}
+body[data-editorial="offer"] #responsive .offer-evidence-open img{display:block;width:100%;height:auto}
+body[data-editorial="offer"] #responsive .offer-evidence-open:focus-visible{outline:3px solid #ff8c70;outline-offset:5px;border-radius:3px}
+body[data-editorial="offer"] #responsive .offer-evidence-hint{position:absolute;right:10px;bottom:10px;padding:7px 10px;background:rgba(23,23,23,.92);color:#fff;font-size:12px;line-height:1.2;letter-spacing:-.01em;border:1px solid rgba(255,255,255,.5);border-radius:3px;pointer-events:none}
+@media (min-width:901px){body[data-editorial="offer"] #responsive .offer-evidence-hint{opacity:0;transition:opacity .18s ease}body[data-editorial="offer"] #responsive .offer-evidence-open:hover .offer-evidence-hint,body[data-editorial="offer"] #responsive .offer-evidence-open:focus-visible .offer-evidence-hint{opacity:1}}
+@media(prefers-reduced-motion:reduce){body[data-editorial="offer"] #responsive .offer-evidence-hint{transition:none}}

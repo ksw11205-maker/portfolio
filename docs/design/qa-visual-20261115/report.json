@@ -1,0 +1,71 @@
+{
+  "mode": "Isolated local Chromium, desktop and mobile, reduced motion",
+  "errors": [],
+  "pages": [
+    {
+      "name": "home",
+      "width": 1440,
+      "overflow": false,
+      "missingImages": [],
+      "heading": "KIM SEONGWON"
+    },
+    {
+      "name": "home-mobile",
+      "width": 390,
+      "overflow": false,
+      "heading": "KIM SEONGWON"
+    },
+    {
+      "name": "lg",
+      "width": 1440,
+      "overflow": false,
+      "missingImages": [],
+      "heading": "TV USABILITYAI DESIGN TOOL"
+    },
+    {
+      "name": "lg-mobile",
+      "width": 390,
+      "overflow": false,
+      "heading": "TV USABILITYAI DESIGN TOOL"
+    },
+    {
+      "name": "ivi",
+      "width": 1440,
+      "overflow": false,
+      "missingImages": [],
+      "heading": "IVIUSABILITY RESEARCH"
+    },
+    {
+      "name": "ivi-mobile",
+      "width": 390,
+      "overflow": false,
+      "heading": "IVIUSABILITY RESEARCH"
+    },
+    {
+      "name": "cafekok",
+      "width": 1440,
+      "overflow": false,
+      "missingImages": [],
+      "heading": "CAFÉKOK"
+    },
+    {
+      "name": "cafekok-mobile",
+      "width": 390,
+      "overflow": false,
+      "heading": "CAFÉKOK"
+    },
+    {
+      "name": "offer",
+      "width": 1440,
+      "overflow": false,
+      "missingImages": [],
+      "heading": "OFFER"
+    },
+    {
+      "name": "offer-mobile",
+      "width": 390,
+      "overflow": false,
+      "heading": "OFFER"
+    }
+  ]
+}

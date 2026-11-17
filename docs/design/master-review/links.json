@@ -1,0 +1,42 @@
+[
+  {
+    "slug": "lg",
+    "skip": {
+      "focused": true,
+      "x": 12
+    },
+    "anchor": "#main",
+    "prototype": "http://localhost:4175/work/lg/prototype/",
+    "next": "http://localhost:4175/work/ivi/"
+  },
+  {
+    "slug": "ivi",
+    "skip": {
+      "focused": true,
+      "x": 12
+    },
+    "anchor": "#main",
+    "prototype": "chrome-error://chromewebdata/",
+    "next": "http://localhost:4175/work/cafekok/"
+  },
+  {
+    "slug": "cafekok",
+    "skip": {
+      "focused": true,
+      "x": 12
+    },
+    "anchor": "#main",
+    "prototype": "http://localhost:4175/work/cafekok/prototype/",
+    "next": "http://localhost:4175/work/offer/case-study.html"
+  },
+  {
+    "slug": "offer",
+    "skip": {
+      "focused": true,
+      "x": 12
+    },
+    "anchor": "#main",
+    "prototype": "http://localhost:4175/work/offer/",
+    "next": "http://localhost:4175/work/lg/"
+  }
+]

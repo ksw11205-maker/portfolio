@@ -102,7 +102,7 @@
 .work-fullbleed.is-pinned .project-visual.ivi{--cover-position:54% 50%}
 .work-fullbleed.is-pinned .cafekok-photo-preview>div{inset:auto 0 0;padding:36px 42px;background:linear-gradient(transparent,#f3f0e9 35%);padding-top:90px}
 .work-fullbleed.is-pinned .cafekok-photo-preview .cafekok-brand-logo{width:210px}
-.work-fullbleed.is-pinned .project-visual.offer>.art{padding:clamp(32px,3.35vw,64px);padding-top:42vh;background:#10203d}
+.work-fullbleed.is-pinned .project-visual.offer>.art:not(.mockup-preview){padding:clamp(32px,3.35vw,64px);padding-top:42vh;background:#10203d}
 .work-fullbleed.is-pinned .project-visual.offer .art-top{display:none}
 .work-fullbleed.is-pinned .project-visual.offer .art-word{font-size:clamp(64px,7vw,130px);max-width:5em}
 .work-fullbleed.is-pinned .work-current-link{display:block;z-index:20;background:none;border:0;pointer-events:auto}
@@ -185,3 +185,7 @@
 .project-info h3.project-title--ivi{font-size:clamp(26px,2.4vw,45px);overflow-wrap:anywhere}
 
 .work-fullbleed.is-pinned .project-info h3.project-title--ivi{font-size:clamp(26px,2.3vw,42px);overflow-wrap:anywhere}
+
+/* Photographs fill every project face, including the responsive static list. */
+.project-visual :is(.mockup-preview,.cafekok-photo-preview)>img{object-fit:cover}
+.work-fullbleed.is-pinned .project-visual.offer>.mockup-preview{padding:0;background:none}

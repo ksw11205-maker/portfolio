@@ -1,0 +1,286 @@
+{
+  "collectedOn": "2026-11-14",
+  "scope": "Selected reference snapshots, not installed libraries or complete runnable repositories; normalized LF text.",
+  "repositories": [
+    {
+      "repo": "motiondivision/motion",
+      "branch": "main",
+      "sha": "f95ab9418d9524b906c8681994b95d15cb03d5fc",
+      "license": "MIT",
+      "archived": false,
+      "pushed": "2026-11-13T17:56:54Z",
+      "description": "A modern animation library for React and JavaScript",
+      "files": [
+        {
+          "path": "LICENSE.md",
+          "url": "https://raw.githubusercontent.com/motiondivision/motion/f95ab9418d9524b906c8681994b95d15cb03d5fc/LICENSE.md"
+        },
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/motiondivision/motion/f95ab9418d9524b906c8681994b95d15cb03d5fc/README.md"
+        },
+        {
+          "path": "dev/html/public/examples/stagger.html",
+          "url": "https://raw.githubusercontent.com/motiondivision/motion/f95ab9418d9524b906c8681994b95d15cb03d5fc/dev/html/public/examples/stagger.html"
+        },
+        {
+          "path": "dev/html/public/playwright/scroll/scroll-callback-progress.html",
+          "url": "https://raw.githubusercontent.com/motiondivision/motion/f95ab9418d9524b906c8681994b95d15cb03d5fc/dev/html/public/playwright/scroll/scroll-callback-progress.html"
+        },
+        {
+          "path": "dev/html/public/playwright/animate/timeline.html",
+          "url": "https://raw.githubusercontent.com/motiondivision/motion/f95ab9418d9524b906c8681994b95d15cb03d5fc/dev/html/public/playwright/animate/timeline.html"
+        },
+        {
+          "path": "packages/motion-dom/src/animation/animate/element.ts",
+          "url": "https://raw.githubusercontent.com/motiondivision/motion/f95ab9418d9524b906c8681994b95d15cb03d5fc/packages/motion-dom/src/animation/animate/element.ts"
+        },
+        {
+          "path": "dev/html/src/inc.js",
+          "url": "https://raw.githubusercontent.com/motiondivision/motion/f95ab9418d9524b906c8681994b95d15cb03d5fc/dev/html/src/inc.js"
+        },
+        {
+          "path": "dev/html/src/imports/view.js",
+          "url": "https://raw.githubusercontent.com/motiondivision/motion/f95ab9418d9524b906c8681994b95d15cb03d5fc/dev/html/src/imports/view.js"
+        },
+        {
+          "path": "packages/framer-motion/src/animation/animate/sequence.ts",
+          "url": "https://raw.githubusercontent.com/motiondivision/motion/f95ab9418d9524b906c8681994b95d15cb03d5fc/packages/framer-motion/src/animation/animate/sequence.ts"
+        },
+        {
+          "path": "packages/framer-motion/src/render/dom/scroll/index.ts",
+          "url": "https://raw.githubusercontent.com/motiondivision/motion/f95ab9418d9524b906c8681994b95d15cb03d5fc/packages/framer-motion/src/render/dom/scroll/index.ts"
+        }
+      ]
+    },
+    {
+      "repo": "russellsamora/scrollama",
+      "branch": "main",
+      "sha": "afab8ab2509a7e0112bee4bd7c131eafc50ffc3a",
+      "license": "MIT",
+      "archived": false,
+      "pushed": "2025-11-13T14:13:24Z",
+      "description": "Scrollytelling with IntersectionObserver.",
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/russellsamora/scrollama/afab8ab2509a7e0112bee4bd7c131eafc50ffc3a/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/russellsamora/scrollama/afab8ab2509a7e0112bee4bd7c131eafc50ffc3a/README.md"
+        },
+        {
+          "path": "docs/sticky-side/index.html",
+          "url": "https://raw.githubusercontent.com/russellsamora/scrollama/afab8ab2509a7e0112bee4bd7c131eafc50ffc3a/docs/sticky-side/index.html"
+        },
+        {
+          "path": "docs/progress/index.html",
+          "url": "https://raw.githubusercontent.com/russellsamora/scrollama/afab8ab2509a7e0112bee4bd7c131eafc50ffc3a/docs/progress/index.html"
+        },
+        {
+          "path": "src/entry.js",
+          "url": "https://raw.githubusercontent.com/russellsamora/scrollama/afab8ab2509a7e0112bee4bd7c131eafc50ffc3a/src/entry.js"
+        },
+        {
+          "path": "src/parseOffset.js",
+          "url": "https://raw.githubusercontent.com/russellsamora/scrollama/afab8ab2509a7e0112bee4bd7c131eafc50ffc3a/src/parseOffset.js"
+        }
+      ]
+    },
+    {
+      "repo": "d3/d3-shape",
+      "branch": "main",
+      "sha": "48978638595cf677f6e6c0bdf195e132568fca58",
+      "license": "ISC",
+      "archived": false,
+      "pushed": "2026-11-03T04:27:24Z",
+      "description": "Graphical primitives for visualization, such as lines and areas.",
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/d3/d3-shape/48978638595cf677f6e6c0bdf195e132568fca58/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/d3/d3-shape/48978638595cf677f6e6c0bdf195e132568fca58/README.md"
+        },
+        {
+          "path": "src/line.js",
+          "url": "https://raw.githubusercontent.com/d3/d3-shape/48978638595cf677f6e6c0bdf195e132568fca58/src/line.js"
+        },
+        {
+          "path": "src/area.js",
+          "url": "https://raw.githubusercontent.com/d3/d3-shape/48978638595cf677f6e6c0bdf195e132568fca58/src/area.js"
+        },
+        {
+          "path": "src/curve/linear.js",
+          "url": "https://raw.githubusercontent.com/d3/d3-shape/48978638595cf677f6e6c0bdf195e132568fca58/src/curve/linear.js"
+        }
+      ]
+    },
+    {
+      "repo": "dimsemenov/PhotoSwipe",
+      "branch": "master",
+      "sha": "cd41cb587a460634e4cae53134f3d01d06e284a6",
+      "license": "MIT",
+      "archived": false,
+      "pushed": "2025-12-04T07:31:46Z",
+      "description": "JavaScript image gallery for mobile and desktop, modular, framework independent",
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/dimsemenov/PhotoSwipe/cd41cb587a460634e4cae53134f3d01d06e284a6/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/dimsemenov/PhotoSwipe/cd41cb587a460634e4cae53134f3d01d06e284a6/README.md"
+        },
+        {
+          "path": "docs/getting-started.md",
+          "url": "https://raw.githubusercontent.com/dimsemenov/PhotoSwipe/cd41cb587a460634e4cae53134f3d01d06e284a6/docs/getting-started.md"
+        },
+        {
+          "path": "src/js/lightbox/lightbox.js",
+          "url": "https://raw.githubusercontent.com/dimsemenov/PhotoSwipe/cd41cb587a460634e4cae53134f3d01d06e284a6/src/js/lightbox/lightbox.js"
+        },
+        {
+          "path": "src/photoswipe.css",
+          "url": "https://raw.githubusercontent.com/dimsemenov/PhotoSwipe/cd41cb587a460634e4cae53134f3d01d06e284a6/src/photoswipe.css"
+        }
+      ]
+    },
+    {
+      "repo": "argyleink/open-props",
+      "branch": "main",
+      "sha": "f39ab7c377a0e047f930982e3611bbc95254a260",
+      "license": "MIT",
+      "archived": false,
+      "pushed": "2026-10-11T23:53:54Z",
+      "description": "CSS custom properties to help accelerate adaptive and consistent design.",
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/argyleink/open-props/f39ab7c377a0e047f930982e3611bbc95254a260/LICENSE"
+        },
+        {
+          "path": "readme.md",
+          "url": "https://raw.githubusercontent.com/argyleink/open-props/f39ab7c377a0e047f930982e3611bbc95254a260/readme.md"
+        },
+        {
+          "path": "src/props.easing.css",
+          "url": "https://raw.githubusercontent.com/argyleink/open-props/f39ab7c377a0e047f930982e3611bbc95254a260/src/props.easing.css"
+        },
+        {
+          "path": "src/props.sizes.css",
+          "url": "https://raw.githubusercontent.com/argyleink/open-props/f39ab7c377a0e047f930982e3611bbc95254a260/src/props.sizes.css"
+        },
+        {
+          "path": "src/props.fonts.css",
+          "url": "https://raw.githubusercontent.com/argyleink/open-props/f39ab7c377a0e047f930982e3611bbc95254a260/src/props.fonts.css"
+        },
+        {
+          "path": "src/props.shadows.css",
+          "url": "https://raw.githubusercontent.com/argyleink/open-props/f39ab7c377a0e047f930982e3611bbc95254a260/src/props.shadows.css"
+        }
+      ]
+    },
+    {
+      "repo": "sneas/img-comparison-slider",
+      "branch": "master",
+      "sha": "c73939d61c8fb010342c9910f1de420edbf0b067",
+      "license": "MIT",
+      "archived": false,
+      "pushed": "2026-11-04T16:01:42Z",
+      "description": "Image comparison slider. Compare images before and after. Supports React, Vue, Angular.",
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/sneas/img-comparison-slider/c73939d61c8fb010342c9910f1de420edbf0b067/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/sneas/img-comparison-slider/c73939d61c8fb010342c9910f1de420edbf0b067/README.md"
+        },
+        {
+          "path": "packages/img-comparison-slider/README.md",
+          "url": "https://raw.githubusercontent.com/sneas/img-comparison-slider/c73939d61c8fb010342c9910f1de420edbf0b067/packages/img-comparison-slider/README.md"
+        },
+        {
+          "path": "packages/img-comparison-slider/src/index.ts",
+          "url": "https://raw.githubusercontent.com/sneas/img-comparison-slider/c73939d61c8fb010342c9910f1de420edbf0b067/packages/img-comparison-slider/src/index.ts"
+        },
+        {
+          "path": "packages/img-comparison-slider/src/styles.scss",
+          "url": "https://raw.githubusercontent.com/sneas/img-comparison-slider/c73939d61c8fb010342c9910f1de420edbf0b067/packages/img-comparison-slider/src/styles.scss"
+        },
+        {
+          "path": "packages/img-comparison-slider/src/template.html",
+          "url": "https://raw.githubusercontent.com/sneas/img-comparison-slider/c73939d61c8fb010342c9910f1de420edbf0b067/packages/img-comparison-slider/src/template.html"
+        }
+      ]
+    },
+    {
+      "repo": "darkroomengineering/lenis",
+      "branch": "main",
+      "sha": "bd89165aa6ab64c4ae68242c8d2a5e90b76ff77d",
+      "license": "MIT",
+      "archived": false,
+      "pushed": "2026-11-13T16:54:11Z",
+      "description": "Smooth scroll as it should be",
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/darkroomengineering/lenis/bd89165aa6ab64c4ae68242c8d2a5e90b76ff77d/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/darkroomengineering/lenis/bd89165aa6ab64c4ae68242c8d2a5e90b76ff77d/README.md"
+        },
+        {
+          "path": "packages/core/lenis.css",
+          "url": "https://raw.githubusercontent.com/darkroomengineering/lenis/bd89165aa6ab64c4ae68242c8d2a5e90b76ff77d/packages/core/lenis.css"
+        },
+        {
+          "path": "packages/core/src/lenis.ts",
+          "url": "https://raw.githubusercontent.com/darkroomengineering/lenis/bd89165aa6ab64c4ae68242c8d2a5e90b76ff77d/packages/core/src/lenis.ts"
+        }
+      ]
+    },
+    {
+      "repo": "codrops/ScrollBasedLayoutAnimations",
+      "branch": "main",
+      "sha": "729029a0f2c31e7c39e15d5c6433a0f4f2bac498",
+      "license": "MIT",
+      "archived": false,
+      "pushed": "2026-10-31T10:03:22Z",
+      "description": "An exploration of different scroll based layout switch animations using GSAP's ScrollTrigger and Flip.",
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/codrops/ScrollBasedLayoutAnimations/729029a0f2c31e7c39e15d5c6433a0f4f2bac498/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/codrops/ScrollBasedLayoutAnimations/729029a0f2c31e7c39e15d5c6433a0f4f2bac498/README.md"
+        },
+        {
+          "path": "css/base.css",
+          "url": "https://raw.githubusercontent.com/codrops/ScrollBasedLayoutAnimations/729029a0f2c31e7c39e15d5c6433a0f4f2bac498/css/base.css"
+        },
+        {
+          "path": "index.html",
+          "url": "https://raw.githubusercontent.com/codrops/ScrollBasedLayoutAnimations/729029a0f2c31e7c39e15d5c6433a0f4f2bac498/index.html"
+        },
+        {
+          "path": "js/index.js",
+          "url": "https://raw.githubusercontent.com/codrops/ScrollBasedLayoutAnimations/729029a0f2c31e7c39e15d5c6433a0f4f2bac498/js/index.js"
+        },
+        {
+          "path": "js/utils.js",
+          "url": "https://raw.githubusercontent.com/codrops/ScrollBasedLayoutAnimations/729029a0f2c31e7c39e15d5c6433a0f4f2bac498/js/utils.js"
+        }
+      ]
+    }
+  ]
+}

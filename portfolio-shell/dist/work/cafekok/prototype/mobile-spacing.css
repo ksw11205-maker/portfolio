@@ -1,0 +1,26 @@
+/* Consistent content margins for the currently published mobile prototype. */
+.app-shell { --cafe-gutter: clamp(24px, 7.2vw, 32px); }
+
+.app-shell :is(.onboard-content, .quiz-screen, .app-header, .section-block, .explore-screen, .saved-screen, .settings-screen, .detail-toolbar, .detail-summary, .detail-section, .detail-actions) {
+  padding-inline: var(--cafe-gutter);
+}
+.app-shell .quiz-header {
+  margin-inline: calc(-1 * var(--cafe-gutter));
+  padding-inline: var(--cafe-gutter);
+}
+.app-shell :is(.home-hero .page-intro, .profile-summary-copy) { padding-inline: var(--cafe-gutter); }
+.app-shell :is(.taste-banner, .taste-fields, .taste-actions, .detail-reason) { margin-inline: var(--cafe-gutter); }
+.app-shell :is(.picks-section, .discoveries-section) { padding-inline: 0; }
+.app-shell :is(.picks-section, .discoveries-section) > :is(.section-heading, .metadata) { padding-inline: var(--cafe-gutter); }
+.app-shell .drag-carousel {
+  padding-inline: var(--cafe-gutter);
+  scroll-padding-inline: var(--cafe-gutter);
+}
+.app-shell .bottom-nav {
+  width: calc(100% - var(--cafe-gutter) - var(--cafe-gutter));
+  max-width: calc(440px - var(--cafe-gutter) - var(--cafe-gutter));
+}
+.app-shell .modal-panel { padding-inline: var(--cafe-gutter); }
+@media (max-height: 680px) {
+  .app-shell .onboard-cover { height: 42dvh; min-height: 200px; }
+}

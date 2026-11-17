@@ -1,0 +1,26 @@
+{
+  "project": "IVI",
+  "fileKey": "FF8CphVdOl1e6iASFM4ef2",
+  "source": "https://www.figma.com/design/FF8CphVdOl1e6iASFM4ef2/IVIS",
+  "exported": "2026-11-15",
+  "method": "Figma connector download_assets, native node render",
+  "format": "png",
+  "scale": 4,
+  "frameWidth": 654,
+  "frameHeight": 400,
+  "exportWidth": 2616,
+  "exportHeight": 1600,
+  "designModified": false,
+  "postExportUpscaling": false,
+  "displayWidthCap": 654,
+  "notes": "Current map and UI exported directly from the existing Figma frames. This is an asset-quality update, not a new usability experiment. Embedded raster imagery retains the source design resolution. Temporary connector URLs are intentionally omitted.",
+  "assets": [
+    { "file": "unified.png", "nodeId": "103:936", "source": "https://www.figma.com/design/FF8CphVdOl1e6iASFM4ef2/IVIS?node-id=103-936", "width": 2616, "height": 1600, "scale": 4, "bytes": 1012460, "sha256": "c9200dee600e162187c3d537d7db9cb02ea67bb32d9274c7090b5320691d4c87" },
+    { "file": "double.png", "nodeId": "193:449", "source": "https://www.figma.com/design/FF8CphVdOl1e6iASFM4ef2/IVIS?node-id=193-449", "width": 2616, "height": 1600, "scale": 4, "bytes": 1035134, "sha256": "04262652b568d1111127efd0a93458beb8261c6ec05205ce25818762185af7f2" },
+    { "file": "top.png", "nodeId": "113:385", "source": "https://www.figma.com/design/FF8CphVdOl1e6iASFM4ef2/IVIS?node-id=113-385", "width": 2616, "height": 1600, "scale": 4, "bytes": 1040680, "sha256": "4bc052f06be2ff8259efa6bdbec5793dc966cc7c012433d706990a39c539de85" },
+    { "file": "side.png", "nodeId": "404:114", "source": "https://www.figma.com/design/FF8CphVdOl1e6iASFM4ef2/IVIS?node-id=404-114", "width": 2616, "height": 1600, "scale": 4, "bytes": 1047973, "sha256": "4c6fd8001188d6710851cfafb8df3f4e7e8fa0132966b9037c23bb927f5888e8" },
+    { "file": "climate.png", "nodeId": "178:1446", "source": "https://www.figma.com/design/FF8CphVdOl1e6iASFM4ef2/IVIS?node-id=178-1446", "width": 2616, "height": 1600, "scale": 4, "bytes": 968321, "sha256": "2ce367f8715b67d5d4646f76959c373c3c38bc3399c208cf14c7375ae511965a" },
+    { "file": "menu.png", "nodeId": "101:38", "source": "https://www.figma.com/design/FF8CphVdOl1e6iASFM4ef2/IVIS?node-id=101-38", "width": 2616, "height": 1600, "scale": 4, "bytes": 1008680, "sha256": "58bc0e8b1056172911147e6dead1e827e7bbc3385eb635180812a7089ae1308c" },
+    { "file": "phone.png", "nodeId": "103:858", "source": "https://www.figma.com/design/FF8CphVdOl1e6iASFM4ef2/IVIS?node-id=103-858", "width": 2616, "height": 1600, "scale": 4, "bytes": 1039845, "sha256": "f3fb442cd73617f0e41ba0c4d71648c75722147c9cb7b413f4d2b5652fe98363" }
+  ]
+}
