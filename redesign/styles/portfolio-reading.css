@@ -137,3 +137,61 @@ body[data-page=case] main :is(i,summary strong,.time-label strong){font-size:16p
 body[data-project=cafekok] .cafe-purpose-photo,body[data-project=cafekok] .cafe-purpose::after{inset-inline:0}
 .profile-group>summary{display:none}@media(max-width:1000px){.profile-group>summary{display:list-item;font-size:16px;font-weight:600;cursor:pointer;padding:16px 0;border-bottom:1px solid #ffffff26}.profile-group>.eyebrow{display:none}.profile-group[open]>.profile-list{padding-top:20px}#about.about{row-gap:24px;padding-block:88px 48px;margin-top:0}.about .profile-details{gap:16px}}
 .work:not(.is-pinned) .project-visual{aspect-ratio:auto;height:auto}.work:not(.is-pinned) .project-visual .mockup-preview{height:auto}.work:not(.is-pinned) .project-visual .mockup-preview>img{width:100%;height:auto;object-fit:contain}.project-visual .mockup-preview>img{transform:none!important}
+
+/* WHO I AM — compact dates and accessible research disclosure */
+#about.about .profile-details .profile-date {
+  font-size:12px;
+  line-height:1.5;
+  letter-spacing:-.015em;
+  color:#8b97a7;
+}
+#about.about .profile-details .profile-research .profile-date {
+  font-size:11px;
+}
+#about.about .profile-details .profile-research > summary {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:10px 0 12px;
+  border-bottom:1px solid #9aa8bd35;
+  list-style:none;
+  cursor:pointer;
+  color:#cbd4e0;
+  font-size:13px;
+  font-weight:550;
+  line-height:1.5;
+}
+#about.about .profile-research > summary::-webkit-details-marker {
+  display:none;
+}
+#about.about .profile-research > summary::after {
+  content:"";
+  flex:none;
+  width:8px;
+  height:8px;
+  border-right:1.5px solid currentColor;
+  border-bottom:1.5px solid currentColor;
+  transform:translateY(-2px) rotate(45deg);
+  transition:transform .2s ease;
+}
+#about.about .profile-research[open] > summary::after {
+  transform:translateY(2px) rotate(225deg);
+}
+#about.about .profile-research > summary:hover {
+  color:#f0f4fa;
+}
+#about.about .profile-research > summary:focus-visible {
+  outline:2px solid #7e9eeb;
+  outline-offset:4px;
+  border-radius:2px;
+}
+#about.about .profile-research ul {
+  margin:0;
+  padding:16px 0 0 12px;
+}
+@media(prefers-reduced-motion:reduce) {
+  #about.about .profile-research > summary::after {
+    transition:none;
+  }
+}
