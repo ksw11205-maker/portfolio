@@ -1,0 +1,116 @@
+/* SUNEUI MOON composition; YES24 dark / KORAIL light treatment.
+   Case studies only. Product UI and portfolio shell retain their own styles. */
+body[data-page=case]{--bg:#0B0A0E;--ink:#f5f2f6;--case-muted:#b6b1bb;--case-accent:#f065b1;--presentation-bg:#141217;--line:#ffffff26;--reading-title:clamp(30px,3.6vw,54px);--reading-subtitle:clamp(23px,2.4vw,34px);--reading-radius:0px;--reading-space:clamp(64px,7vw,104px);--master-width:1320px;--master-gutter:clamp(24px,4.2vw,64px);--research-ink:var(--ink);--research-muted:var(--case-muted);--research-accent:var(--case-accent);--research-surface:var(--presentation-bg);--research-line:var(--line);--presentation-accent:var(--case-accent);background:var(--bg)}
+body[data-project=ivi]{--bg:#0B0D10;--case-accent:#63D9EA;--presentation-bg:#14181c}
+body[data-project=cafekok]{--bg:#FFF8EC;--ink:#382e26;--case-muted:#716253;--case-accent:#F29A70;--presentation-bg:#f5eddf;--line:#382e2626}
+body[data-project=offer]{--bg:#F1F1ED;--ink:#242421;--case-muted:#65655d;--case-accent:#FF4D22;--presentation-bg:#e7e7e1;--line:#24242126}
+body[data-page=case]{--product-bg:var(--bg);--product-ink:var(--ink);--product-muted:var(--case-muted);--product-line:var(--line);--product-accent:var(--ink);--presentation-ink:var(--ink);--presentation-muted:var(--case-muted);--case-action-ink:#151315}
+body[data-page=case]::before,body[data-page=case]::after{display:none!important}
+body[data-page=case] #main>:is(.case-section,.ui-showcase,.next-projects),body[data-page=case] #main>.product-story{width:100%;max-width:var(--master-width);margin-inline:auto}
+body[data-page=case] #main .case-section,body[data-page=case] #main .product-story>.case-section{padding:var(--reading-space) var(--master-gutter);max-width:var(--master-width);border-radius:0}
+body[data-page=case] #main .case-section+.case-section{border-top:1px solid var(--line)}
+body[data-page=case] #main :is(h2,h3){text-wrap:balance;word-break:keep-all}
+body[data-page=case] #main .case-heading{max-width:24ch;letter-spacing:-.045em}
+body[data-page=case] #main .section-kicker{font-size:13px!important;letter-spacing:.08em;color:var(--case-muted);margin-bottom:20px}
+body[data-page=case] #main :is(.research-section-head,.product-section-intro,.offer-section-head){margin-bottom:40px;max-width:100%}
+body[data-page=case] #main :is(.research-summary-copy,.case-lead){max-width:62ch}
+/* Chapters stay in normal flow, returning the entire width to the evidence. */
+body[data-page=case] .case-toc{position:relative;inset:auto;max-width:var(--master-width);width:100%;max-height:none;margin:auto;padding:24px var(--master-gutter);border-bottom:1px solid var(--line);opacity:1!important;visibility:visible!important;transform:none!important;pointer-events:auto!important}
+body[data-page=case] #main .case-nav{display:flex;flex-direction:row;flex-wrap:wrap;gap:8px 32px}
+body[data-page=case] #main .case-nav a{font-size:14px;padding:8px 0}
+/* Keyword, concise explanation, complete original UI. No overlay coordinates. */
+body[data-page=case] #main .annotated-interface{margin:32px 0 48px!important}
+body[data-page=case] #main .annotation-stage{display:flex;flex-direction:column;align-items:stretch;gap:28px;padding:0;min-height:0;max-width:none;background:transparent;border:0;border-radius:0;box-shadow:none}
+body[data-page=case] #main .annotation-labels{position:static;order:-1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px 40px;width:100%;padding:0}
+body[data-page=case] #main .feature-label{position:static;inset:auto!important;width:auto;min-width:0;padding:0;gap:12px;cursor:default}
+body[data-page=case] #main .feature-label::before{display:none}
+body[data-page=case] #main .feature-label strong{display:inline-block;max-width:100%;padding:6px 10px;background:var(--case-accent);color:#181415;font-size:12px;line-height:1.4;letter-spacing:.055em;font-weight:600;border-radius:0}
+body[data-page=case] #main .feature-label>span{font-size:16px;line-height:1.65;color:var(--case-muted);max-width:40ch}
+body[data-page=case] #main .interface-device{width:100%;max-width:none;padding:0;border:1px solid var(--line);border-radius:2px;background:transparent;box-shadow:none}
+body[data-page=case] #main .interface-device::after{display:none}
+body[data-page=case] #main .interface-content{border-radius:0;background:transparent}
+body[data-page=case] #main .interface-image{cursor:default}
+body[data-page=case] #main .is-mobile-ui .annotation-stage{display:grid;grid-template-columns:minmax(220px,.8fr) minmax(0,1.2fr);align-items:center;gap:clamp(32px,6vw,88px);padding:40px;background:var(--presentation-bg);border:1px solid var(--line)}
+body[data-page=case] #main .is-mobile-ui .annotation-labels{grid-template-columns:1fr;gap:32px}
+body[data-page=case] #main .is-mobile-ui .interface-device{width:min(100%,420px)!important;justify-self:center;grid-column:auto}
+body[data-page=case] #main :is(.original-caption,.screen-caption){text-align:left!important;font-size:13px!important;line-height:1.65;margin-top:14px!important}
+body[data-page=case] #main :is(.original-caption,.screen-caption)>span{text-align:left!important;font-size:13px!important}
+body[data-page=case] #main .presentation-evidence{border-top:1px solid var(--line);padding-top:24px;margin-top:32px}
+body[data-page=case] #main .presentation-reasoning{gap:32px}
+body[data-page=case] #main .presentation-reasoning h4{font-size:18px}
+body[data-page=case] #main .presentation-reasoning p{font-size:16px}
+/* Large, uncropped boards instead of overlapping decorative devices. */
+body[data-page=case] #main .ui-showcase{padding:64px var(--master-gutter);background:var(--presentation-bg)}
+body[data-page=case] #main .showcase-composition{display:grid;grid-template-columns:1fr;gap:32px;height:auto;min-height:0;margin-top:40px;perspective:none}
+body[data-page=case] #main .showcase-device{display:block;position:static;inset:auto;width:100%;height:auto;max-width:none;margin:0;padding:0;transform:none!important;border:1px solid var(--line);border-radius:2px;box-shadow:none;background:transparent}
+body[data-page=case] #main .showcase-device::after{display:none}
+body[data-page=case] #main .showcase-device img{width:100%;height:auto;max-height:none;object-fit:contain;border-radius:0}
+body[data-project=cafekok] #main .showcase-composition{grid-template-columns:repeat(3,minmax(0,1fr));align-items:start}
+body[data-project=offer] #main .showcase-composition{grid-template-columns:1fr .6fr;align-items:start}
+body[data-project=offer] #main .showcase-device-0{grid-column:1/-1}
+body[data-page=case] #main :is(.offer-interest-grid,.offer-compare-detail,.offer-brand-context){display:grid;grid-template-columns:1fr;gap:48px}
+body[data-page=case] #main :is(.task-result,.heatmap-pair .screen,.study-archive,.component-detail-panel,.heatmap-comparison-result,.model-values){border-radius:0;box-shadow:none;background:var(--presentation-bg);border:1px solid var(--line)}
+body[data-page=case] #main .screen>img{border:1px solid var(--line);border-radius:2px}
+body[data-page=case] #main .tool-story-head{grid-template-columns:160px minmax(0,1fr);gap:32px;margin-bottom:32px}
+body[data-page=case] #main .tool-story-head>span{font-size:13px!important;color:var(--case-muted)}
+body[data-page=case] #main .tool-story+.tool-story{padding-top:80px;border-top:1px solid var(--line)}
+body[data-page=case] #main .sequence-pair>figure{max-width:none;margin-bottom:0}
+body[data-page=case] #main :is(.research-reflection-qa,.reflection-qa)>article{grid-template-columns:56px minmax(0,1fr);padding:32px 0;gap:24px}
+body[data-page=case] #main .research-reflection-qa>article>div{grid-column:2;min-width:0}
+body[data-page=case] #main .next-projects{padding:64px var(--master-gutter)}
+body[data-page=case] #main .next-project{border-radius:0}
+body[data-project=cafekok] #main .cafe-purpose{background:var(--presentation-bg)}
+body[data-project=cafekok] #main .cafe-purpose::after,body[data-project=cafekok] #main .cafe-purpose-photo{display:none}
+@media(min-width:768px) and (max-width:1023px){body[data-page=case] #main .is-mobile-ui .annotation-stage{display:flex;flex-direction:column;align-items:center}body[data-page=case] #main .is-mobile-ui .annotation-labels{order:1;grid-template-columns:1fr;max-width:420px}}
+/* A neutral cover lets each project's real artwork carry the identity. */
+body[data-page=case] #main .archive-hero{background:var(--bg)!important;--cover-ink:var(--ink);--cover-muted:var(--case-muted)}
+body[data-page=case] #main .archive-hero-intro{background:var(--bg)!important;color:var(--ink)!important}
+body[data-page=case] #main .archive-hero-intro :is(h1,p,dt,dd,.case-type){color:var(--ink)!important}
+body[data-page=case] #main .archive-hero-intro .prototype-link{color:var(--ink)!important;border-color:var(--line)!important;border-radius:0}
+body[data-project=offer] #main .archive-hero-intro :is(h1,.case-type,.archive-summary,.archive-meta dt,.archive-meta dd){color:var(--ink)!important}
+body[data-project=offer] #main .archive-hero-intro .archive-meta{border-color:var(--line)}
+body[data-page=case] .skip-link{left:-9999px;transform:none}
+body[data-page=case] .skip-link:focus{left:12px}
+body[data-project=cafekok] #main .reading-evidence-heading,body[data-project=offer] #main .reading-evidence-heading{color:var(--ink)}
+@media(max-width:767px){body[data-page=case] #main .research-reflection-qa>article>div{grid-column:1}}
+@media(max-width:1439px){body[data-page=case]{--reading-space:72px}body[data-page=case] #main .annotation-labels{gap:24px}body[data-page=case] #main .case-heading{font-size:clamp(32px,3.6vw,48px)}}
+@media(max-width:1023px){body[data-page=case] #main .annotation-labels{grid-template-columns:repeat(2,minmax(0,1fr))}body[data-page=case] #main .is-mobile-ui .annotation-stage{padding:28px;gap:32px}body[data-page=case] #main .research-process{grid-template-columns:1fr 1fr}body[data-page=case] #main .task-result{grid-template-columns:1fr}}
+@media(max-width:767px){body[data-page=case]{--master-gutter:24px;--reading-space:56px}body[data-page=case] #main .case-heading{font-size:32px}body[data-page=case] #main :is(.annotation-labels,.research-split,.heatmap-pair,.presentation-reasoning,.tool-story-head){grid-template-columns:1fr}body[data-page=case] #main .is-mobile-ui .annotation-stage{display:flex;padding:24px 16px;gap:28px}body[data-page=case] #main .is-mobile-ui .annotation-labels{order:1;gap:24px}body[data-page=case] #main .showcase-composition{grid-template-columns:1fr;gap:32px}body[data-project=cafekok] #main .showcase-device{max-width:360px;margin:auto}body[data-page=case] #main .ui-showcase{padding:48px 24px}body[data-page=case] #main .tool-story+.tool-story{padding-top:48px}body[data-page=case] #main :is(.research-reflection-qa,.reflection-qa)>article{grid-template-columns:1fr;gap:12px}body[data-page=case] #main .research-reflection-qa>article>p{grid-column:auto}body[data-page=case] #main .next-projects{padding:48px 24px}}
+/* 16:9 editorial boards: 1920 canvas / 160px side margins. */
+body[data-page=case]{--master-width:1920px;--master-gutter:clamp(24px,8.333vw,160px)}
+body[data-page=case] #main :is(.research-process,.offer-principles){gap:20px;border:0;margin-top:48px}
+body[data-page=case] #main :is(.research-process li,.offer-principles>div){padding:32px!important;border:1px solid var(--line);border-radius:16px;background:var(--presentation-bg);min-height:280px;display:flex;flex-direction:column;justify-content:flex-end}
+body[data-page=case] #main .research-process li>span{font-size:48px!important;line-height:1;margin-bottom:auto;padding-bottom:40px;color:var(--case-accent)}
+body[data-page=case] #main .offer-principles span{color:var(--case-accent);margin-bottom:auto;padding-bottom:40px}
+body[data-page=case] #main .experiment-pair{grid-template-columns:1.2fr 1fr;gap:24px}
+body[data-page=case] #main .experiment-pair>article{padding:32px;background:var(--bg);border:1px solid var(--line);border-radius:16px}
+body[data-page=case] #main .model-values{padding:40px;border-radius:16px;margin-top:24px;background:var(--case-accent);color:#171317}
+body[data-page=case] #main .model-values :is(strong,p,span){color:#171317!important}
+body[data-page=case] #main .factor-funnel{padding:40px;background:var(--presentation-bg);border:1px solid var(--line);border-radius:16px}
+body[data-page=case] #main .factor-funnel strong{font-size:clamp(56px,7vw,112px);color:var(--case-accent)}
+body[data-page=case] #main .results-collection{grid-template-columns:1fr 1fr;gap:24px}
+body[data-page=case] #main .task-result{grid-template-columns:1fr;padding:32px;border-radius:16px}
+body[data-page=case] #main .task-result:last-child{grid-column:1/-1;grid-template-columns:.8fr 1.2fr}
+body[data-page=case] #main .cafe-equation{padding:32px;border:1px solid var(--line);background:var(--presentation-bg);border-radius:16px}
+@media(min-width:1440px){body[data-page=case] #main :is(.product-opening,.research-summary,.factor-section){min-height:56.25vw;max-height:none;display:flex;flex-direction:column;justify-content:center}body[data-page=case] #main .research-summary .context-screen{width:100%;max-width:1000px;align-self:flex-end}body[data-page=case] #main .research-summary .context-pair{width:100%}}
+@media(max-width:1023px){body[data-page=case]{--master-gutter:32px}body[data-page=case] #main :is(.experiment-pair,.results-collection){grid-template-columns:1fr}body[data-page=case] #main .task-result:last-child{grid-template-columns:1fr}body[data-page=case] #main .research-process{grid-template-columns:1fr 1fr}}
+@media(max-width:767px){body[data-page=case]{--master-gutter:24px}body[data-page=case] #main :is(.research-process,.offer-principles){grid-template-columns:1fr}body[data-page=case] #main :is(.research-process li,.offer-principles>div){min-height:210px;padding:24px!important}body[data-page=case] #main :is(.experiment-pair>article,.model-values,.factor-funnel,.task-result){padding:24px}}
+body[data-page=case] #main .model-values{background:var(--case-accent)!important}
+/* Concise evidence beneath the section title; viewport-aware original images. */
+body[data-page=case] #main .design-summary{font-size:17px;line-height:1.7;color:var(--case-muted);max-width:68ch;margin:12px 0 24px;grid-column:1/-1}
+body[data-page=case] #main .tool-story-head:has(.design-summary){display:block}
+body[data-page=case] #main .tool-story-head>span{display:block;margin-bottom:12px}
+body[data-page=case] #main .annotation-stage{align-items:center;gap:20px}
+body[data-page=case] #main .annotation-labels{align-self:stretch}
+body[data-page=case] #main .interface-device{width:fit-content;max-width:100%;margin-inline:auto}
+body[data-page=case] #main .interface-content>.interface-image{width:auto!important;max-width:100%!important;height:auto!important;max-height:min(58svh,620px)!important;object-fit:contain!important}
+body[data-page=case] #main .is-mobile-ui .interface-device{width:fit-content!important;max-width:100%}
+body[data-page=case] #main .showcase-composition{display:flex;justify-content:center;align-items:flex-start;gap:24px}
+body[data-page=case] #main .showcase-device{width:auto;max-width:48%;flex:0 1 auto}
+body[data-page=case] #main .showcase-device img{width:auto;max-width:100%;max-height:55svh;object-fit:contain}
+body[data-page=case] #main .screen>img{width:auto;max-width:100%;max-height:56svh;object-fit:contain;margin-inline:auto}
+body[data-page=case] #main :is(.product-opening,.research-summary,.factor-section){min-height:0}
+body[data-page=case] #main .ui-showcase{padding-block:48px}
+@media(max-width:1023px){body[data-page=case] #main .interface-content>.interface-image{max-height:60svh!important}body[data-page=case] #main .showcase-composition{flex-wrap:wrap}}
+@media(max-width:767px){body[data-page=case] #main .showcase-device{max-width:100%}body[data-page=case] #main .showcase-composition{flex-direction:column;align-items:center}body[data-page=case] #main .interface-content>.interface-image{max-height:58svh!important}body[data-page=case] #main .design-summary{font-size:16px}}
+body[data-page=case] #main .tool-story-head{display:block!important}body[data-page=case] #main .tool-story-head>div{display:block}body[data-page=case] #main .tool-story-head p{margin-top:12px}

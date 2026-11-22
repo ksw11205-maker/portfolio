@@ -1,6 +1,6 @@
 # 김성원 UX/UI 포트폴리오
 
-현재 공개 작업본의 실행 기준은 `portfolio-shell/dist/`입니다. 2026-10-27까지의 메인 쉘, LG·IVI·CAFÉKOK·OFFER 상세페이지, 공통 헤더·푸터·커서·스크롤 정렬 및 실행 버튼을 포함합니다.
+현재 공개 작업본의 실행 기준은 `portfolio-shell/dist/`입니다. 2026-11-23 메인과 LG·IVI·CAFÉKOK·OFFER 상세페이지를 포함합니다. 이번 반영에는 LG와 IVI의 상세 콘텐츠, 공통 프로젝트 탐색과 푸터 수정이 포함됩니다.
 
 ## 실행
 
@@ -30,7 +30,7 @@ npm run dev
 3. 내장 브라우저에서 로컬 페이지를 열고 Annotate로 요소나 영역을 선택해 수정 의견을 남깁니다.
 4. 현재 작업 대상은 `portfolio-shell/dist/`입니다. 기존 `OFFER/`, `cafekok/` 폴더를 일괄 복사하는 예전 `portfolio-shell/build.cjs`는 최신 상세페이지를 덮어쓸 수 있으므로 실행하지 않습니다.
 
-메인 정적 HTML과 `app.js`의 렌더링 내용이 함께 있는 경우 변경 후 양쪽을 일치시킵니다. 공통 상세페이지 스타일·동작은 `case-navigation.*`, `case-cursor.*`, `reading-snap.js`에서 관리합니다. OFFER 제품 UI와 케이스 스터디를 구분해 수정합니다.
+메인 정적 HTML과 `app.js`의 렌더링 내용이 함께 있는 경우 변경 후 양쪽을 일치시킵니다. 공통 상세페이지 탐색과 푸터 스타일은 `portfolio-shell/dist/styles/case-entry.css`에서 관리합니다. OFFER 제품 UI와 케이스 스터디를 구분해 수정합니다.
 
 CAFÉKOK 프로토타입의 React 소스는 `portfolio-shell/prototypes/cafekok/`에 있습니다. 그 폴더에서 `npm ci`와 `npm run build`를 실행하고, 생성된 `dist/`의 내용만 `portfolio-shell/dist/work/cafekok/prototype/`로 반영합니다.
 

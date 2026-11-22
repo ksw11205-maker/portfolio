@@ -1,0 +1,42 @@
+[
+  {
+    "source": "work/ivi/assets/latest/unified.png",
+    "output": "assets/covers/screens/ivi-unified.webp",
+    "width": 2616,
+    "height": 1600,
+    "sourceSha256": "c9200dee600e162187c3d537d7db9cb02ea67bb32d9274c7090b5320691d4c87",
+    "originalBytes": 1012460,
+    "optimizedBytes": 580456,
+    "pixelsIdentical": true
+  },
+  {
+    "source": "work/ivi/assets/latest/climate.png",
+    "output": "assets/covers/screens/ivi-climate.webp",
+    "width": 2616,
+    "height": 1600,
+    "sourceSha256": "2ce367f8715b67d5d4646f76959c373c3c38bc3399c208cf14c7375ae511965a",
+    "originalBytes": 968321,
+    "optimizedBytes": 550556,
+    "pixelsIdentical": true
+  },
+  {
+    "source": "work/cafekok/assets/latest/home.png",
+    "output": "assets/covers/screens/cafekok-home.webp",
+    "width": 780,
+    "height": 1688,
+    "sourceSha256": "fb3d61f4e462f9b5e56cadf4e289d697e602e65af7597b88ba31152b7d0bf9c9",
+    "originalBytes": 833241,
+    "optimizedBytes": 582236,
+    "pixelsIdentical": true
+  },
+  {
+    "source": "work/cafekok/assets/latest/detail.png",
+    "output": "assets/covers/screens/cafekok-detail.webp",
+    "width": 780,
+    "height": 1688,
+    "sourceSha256": "9272aee942bf905a8490863822992bba9435247c6911c6a436de92e4e5826e59",
+    "originalBytes": 909405,
+    "optimizedBytes": 603752,
+    "pixelsIdentical": true
+  }
+]

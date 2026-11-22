@@ -1,0 +1,115 @@
+/* KSW case-study controls — shared shell geometry, individual project hover */
+/* Place after the project's own styles. All four projects retain their own color language. */
+body[data-project="lg"] { --project-accent:#e34891; --project-accent-ink:#160b15; }
+body[data-project="ivi"] { --project-accent:#63d9ea; --project-accent-ink:#081921; }
+body[data-project="cafekok"] { --project-accent:#f29a70; --project-accent-ink:#30251f; }
+body[data-project="offer"] { --project-accent:#ff4d22; --project-accent-ink:#171717; }
+
+/* Restore a restrained dark shell look at rest; project accent appears on interaction. */
+body[data-project] .case-action {
+  --action-accent:var(--project-accent);
+  --action-ink:var(--project-accent-ink);
+  position:relative; isolation:isolate; box-sizing:border-box;
+  display:inline-flex; align-items:center; justify-content:center; gap:16px;
+  min-height:49px; padding:0 21px; border:1px solid rgba(202,213,231,.42);
+  border-radius:999px; color:#f8f9fc; background:rgba(18,24,33,.84);
+  text-decoration:none; font:650 11px/1.35 Pretendard,CasePretendard,Arial,sans-serif;
+  letter-spacing:.025em; white-space:nowrap; overflow:hidden;
+  backdrop-filter:blur(15px); -webkit-backdrop-filter:blur(15px);
+  transition:background-color .25s,border-color .25s,color .25s,transform .25s;
+}
+body[data-project] .case-action::before {
+  content:""; position:absolute; inset:0; z-index:-1;
+  background:var(--project-accent); border-radius:60% 60% 0 0;
+  transform:translateY(105%);
+  transition:transform .42s cubic-bezier(.22,1,.36,1),border-radius .42s;
+}
+body[data-project] .case-action:hover,
+body[data-project] .case-action:focus-visible {
+  color:var(--project-accent-ink) !important;
+  border-color:var(--project-accent) !important;
+  background:var(--project-accent) !important;
+  box-shadow:0 8px 26px color-mix(in srgb,var(--project-accent) 22%,transparent);
+}
+body[data-project] .case-action:hover::before,
+body[data-project] .case-action:focus-visible::before { transform:translateY(0); border-radius:0; }
+body[data-project] .case-action:focus-visible { outline:2px solid var(--project-accent);outline-offset:4px; }
+body[data-project] .case-action .case-arrow{flex:none;width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}
+body[data-project] .case-action:hover .case-arrow{transform:translate(2px,-2px);}
+/* Floating one-click launch sits directly above the TOP control. */
+body[data-project] .case-float-action {
+  position:fixed; right:clamp(20px,3vw,48px);
+  bottom:calc(max(clamp(20px,3vw,48px), env(safe-area-inset-bottom, 0px) + 12px, var(--case-footer-clearance, 0px)) + 68px);z-index:110;
+  min-height:48px; padding:0 19px; box-shadow:0 8px 28px #0006;
+}
+body[data-project] .case-float-action[hidden]{display:none!important;}
+body[data-project] .case-top {
+  position:fixed; right:clamp(20px,3vw,48px);
+  bottom:max(clamp(20px,3vw,48px),calc(env(safe-area-inset-bottom, 0px) + 12px),var(--case-footer-clearance,0px));
+  z-index:110; display:grid;align-content:center;justify-items:center;gap:2px;
+  width:56px;height:56px;padding:0;cursor:pointer;
+  background:rgba(18,24,33,.86);color:#f7f9fc;
+  border:1px solid rgba(202,213,231,.42);border-radius:50%;
+  box-shadow:0 8px 28px #0006;
+  backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px);isolation:isolate;overflow:hidden;
+}
+body[data-project] .case-top::before { content:"";position:absolute;inset:0;z-index:-1;
+  border-radius:45% 45% 0 0;background:var(--project-accent);
+  transform:translateY(105%);transition:transform .42s cubic-bezier(.22,1,.36,1),border-radius .42s;
+}
+body[data-project] .case-top:hover::before,body[data-project] .case-top:focus-visible::before { transform:translateY(0);border-radius:0; }
+body[data-project] .case-top:hover,body[data-project] .case-top:focus-visible {
+  color:var(--project-accent-ink); border-color:var(--project-accent);
+}
+body[data-project] .case-top:focus-visible { outline:2px solid var(--project-accent);outline-offset:4px; }
+body[data-project] .case-top small {font:650 9px/1.2 Pretendard,CasePretendard,Arial,sans-serif;letter-spacing:.03em;}
+body[data-project] .case-top .case-arrow{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}
+/* Shell buttons retain the shell's blue base but respond in the case accent. */
+body[data-project="lg"] :is(.button-primary,.inline-button):hover,
+body[data-project="lg"] :is(.button-primary,.inline-button):focus-visible {
+  background:var(--project-accent);border-color:var(--project-accent);color:var(--project-accent-ink);
+}
+body[data-project="lg"] :is(.text-link,.footer-links a):hover,
+body[data-project="lg"] :is(.text-link,.footer-links a):focus-visible {
+  background:color-mix(in srgb,var(--project-accent) 12%,transparent);
+  border-color:var(--project-accent);color:var(--project-accent);
+}
+body[data-project="lg"] .hero-actions .case-action{min-height:52px;padding:0 24px;background:#146bff;border-color:#146bff;color:#fff;}
+body[data-project="lg"] .intro-visual img[data-original-prototype] {object-fit:contain;background:#09090c;}
+/* Other case-study controls (including secondary native buttons) follow the project accent. */
+body[data-project] :is(.case-end__back,.case-shared__back):hover,
+body[data-project] :is(.case-end__back,.case-shared__back):focus-visible {color:var(--project-accent)!important;}
+body[data-project="offer"] .ed-primary-link:hover,
+body[data-project="offer"] .ed-primary-link:focus-visible {background:var(--project-accent);border-color:var(--project-accent);color:var(--project-accent-ink);}
+/* IVI cover uses an unchanged original exported HMI screen, not a generated photo. */
+body[data-project="ivi"] main .project-cover__art>img[data-original-prototype] {
+  object-fit:contain;object-position:center;box-sizing:border-box;
+  padding:clamp(16px,2.5vw,48px);background:#101c26;
+}
+@media(max-width:600px){
+  body[data-project] .case-top {right:16px;bottom:max(20px,calc(env(safe-area-inset-bottom, 0px) + 12px),var(--case-footer-clearance,0px));width:50px;height:50px;}
+  body[data-project] .case-float-action {right:16px;bottom:calc(max(20px, env(safe-area-inset-bottom, 0px) + 12px, var(--case-footer-clearance, 0px)) + 62px);min-height:44px;padding:0 16px;font-size:10px;gap:12px;}
+  body[data-project="ivi"] main .project-cover__art>img[data-original-prototype] {height:auto;padding:12px;object-fit:contain;}
+}
+@media(prefers-reduced-motion:reduce){
+  body[data-project] .case-action,body[data-project] .case-action::before,
+  body[data-project] .case-top::before {transition:none!important;animation:none!important;}
+}
+/* Functional controls inside case-study explanations also honor the project accent. */
+body[data-project] main button:not(:disabled):hover,
+body[data-project] main button:not(:disabled):focus-visible {
+  background-color:var(--project-accent);
+  border-color:var(--project-accent);
+  color:var(--project-accent-ink);
+}
+body[data-project] main button:not(:disabled):focus-visible {
+  outline:2px solid var(--project-accent);
+  outline-offset:3px;
+}
+body[data-project="lg"] .shell-menu-toggle:hover,
+body[data-project="lg"] .shell-menu-toggle:focus-visible {
+  color:var(--project-accent);
+}
+
+/* Cycle 36: the TOP control appears only after the cover CTA has passed. */
+body[data-project] .case-top[hidden] { display:none !important; }

@@ -584,3 +584,6 @@ main:has(.entry-section){overflow-x:clip}
  .tools-visual{height:260px}
  .qa-card{flex-basis:auto}
 }
+
+/* OFFER cover retains all three device silhouettes. */
+.project-visual.offer{background:#eae7e2}

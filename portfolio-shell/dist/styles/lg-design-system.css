@@ -1,0 +1,747 @@
+/* Editorial roles and components local to the LG case study. */
+body.lg-final-spec {
+  --bg: #0a0a0c;
+  --ink: #f0f0f4;
+  --case-muted: #b3b2c0;
+  --case-accent: #c8003b;
+  --lg-highlight: #f36b96;
+  --lg-accent-text: var(--lg-highlight);
+  --lg-accent-fill: #25141d;
+  --lg-accent-line: #95425f;
+  --lg-secondary: #9090a8;
+  --lg-violet: #b9a5de;
+  --lg-surface: #131318;
+  --lg-surface-raised: #19191f;
+  --line: rgba(255, 255, 255, .12);
+  --lg-panel-radius: .375rem;
+  --lg-heading: clamp(1.875rem, 1.38rem + 1.55vw, 3rem);
+  --lg-subheading: clamp(1.375rem, 1.25rem + .32vw, 1.625rem);
+  --lg-lead: clamp(1rem, .96rem + .13vw, 1.125rem);
+  --lg-body: clamp(.9375rem, .91rem + .1vw, 1rem);
+  --lg-label: .75rem;
+  --lg-detail: .875rem;
+  --lg-chapter-gap: clamp(3rem, 5vw, 5rem);
+  --lg-group-gap: clamp(1.75rem, 3vw, 3.25rem);
+  --lg-grid-gap: clamp(1rem, 2.3vw, 2rem);
+  --lg-panel-padding: clamp(1rem, 2.4vw, 1.75rem);
+  --lg-copy-width: 66ch;
+}
+
+body.lg-final-spec[data-unified-case] #main > .unified-chapter {
+  padding-block: var(--lg-chapter-gap);
+  padding-inline: var(--master-gutter);
+}
+
+body.lg-final-spec[data-unified-case] #main .chapter-heading {
+  margin-block: 0 var(--lg-group-gap);
+}
+
+body.lg-final-spec[data-unified-case] #main .chapter-heading .case-heading {
+  max-inline-size: 30ch;
+  margin: 0;
+  color: var(--ink);
+  font-size: var(--lg-heading);
+  font-weight: 650;
+  line-height: 1.22;
+  letter-spacing: -.035em;
+  text-wrap: balance;
+}
+
+body.lg-final-spec[data-unified-case] #main :is(.case-lead, .research-source .lead) {
+  max-inline-size: var(--lg-copy-width);
+  margin-block: .875rem 0;
+  font-size: var(--lg-lead);
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+body.lg-final-spec[data-unified-case] #main .unified-chapter :is(p, dd, li) {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+body.lg-final-spec[data-unified-case] #main .unified-chapter :is(p, dd) {
+  text-wrap: pretty;
+}
+
+body.lg-final-spec[data-unified-case] #main .unified-chapter :is(.section-kicker, .reflection-q-number, .number) {
+  color: var(--lg-secondary);
+  font-size: var(--lg-label) !important;
+  font-weight: 650;
+  letter-spacing: .075em;
+  font-variant-numeric: tabular-nums;
+}
+
+body.lg-final-spec[data-unified-case] #main .chapter-heading > .section-kicker {
+  margin-block-end: .75rem !important;
+}
+
+body.lg-final-spec[data-unified-case] #main .unified-chapter :is(
+  .section-kicker, .number, .reflection-q-number, .research-source .sub-label
+) {
+  color: var(--lg-highlight);
+}
+
+body.lg-final-spec[data-unified-case] #main #goal-process .case-heading em {
+  color: var(--lg-highlight);
+}
+
+body.lg-final-spec[data-unified-case] #main :is(
+  .observations h3, .research-timeline h3, .research-subtitle,
+  .research-source .chapter-heading :is(h3, h4), .direction-columns h3, .ai-bridge h3,
+  #information-architecture > h3, #core-workflow > h3, .tool-heading > h3,
+  .screen-summary .screen-group-title, #review .research-reflection-qa h3
+) {
+  margin-block: 0 .625rem;
+  color: var(--ink);
+  font-size: var(--lg-subheading);
+  font-weight: 650;
+  line-height: 1.3;
+  letter-spacing: -.025em;
+}
+
+body.lg-final-spec[data-unified-case] #main :is(
+  .role-note p, .observations p, .research-timeline p,
+  .research-source p:not(.lead, .metric), .research-source li,
+  .direction-columns p:not(.section-kicker), .ai-bridge p, .ai-bridge li,
+  .screen-description, .component-notes dd, #review .research-reflection-qa p
+) {
+  color: var(--case-muted);
+  font-size: var(--lg-body);
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+body.lg-final-spec[data-unified-case] #main #overview .role-note p {
+  max-inline-size: var(--lg-copy-width);
+  font-size: var(--lg-body);
+}
+
+body.lg-final-spec[data-unified-case] #main :is(.direction-columns, .usage-context, .workflow-screens, .screen-columns) {
+  gap: var(--lg-grid-gap);
+}
+
+body.lg-final-spec[data-unified-case] #main :is(
+  .observations > article, .research-timeline > li, .research-steps > li,
+  .direction-columns > article, .workflow-screens > li, .research-reflection-qa > article,
+  .research-source > .subsection.surface, .research-source .factor-results .surface,
+  .research-source .model-card
+) {
+  min-inline-size: 0;
+  padding: var(--lg-panel-padding);
+  border: 1px solid var(--line);
+  border-radius: var(--lg-panel-radius);
+  background: var(--lg-surface);
+}
+
+body.lg-final-spec[data-unified-case] #main #overview .role-note {
+  padding: var(--lg-panel-padding);
+  border: 1px solid var(--line);
+  border-radius: var(--lg-panel-radius);
+  background: var(--lg-surface);
+}
+
+body.lg-final-spec[data-unified-case] #main :is(
+  .observations, .research-timeline, .research-steps, .direction-columns, .research-reflection-qa
+) {
+  gap: var(--lg-grid-gap);
+}
+
+body.lg-final-spec[data-unified-case] #main .research-reflection-qa {
+  display: grid;
+}
+
+body.lg-final-spec[data-unified-case] #main .research-source .research-steps > li > ul {
+  margin-block-end: 0;
+  padding-inline-start: 1.2em;
+  list-style: disc;
+}
+
+body.lg-final-spec[data-unified-case] #main .research-source .research-steps > li > ul > li {
+  display: list-item;
+  list-style-type: disc;
+}
+
+body.lg-final-spec[data-unified-case] #main .research-source .research-steps > li > ul > li::marker {
+  color: var(--lg-highlight);
+}
+
+body.lg-final-spec[data-unified-case] #main :is(.research-timeline, .research-steps) .number {
+  display: block;
+  inline-size: max-content;
+  margin-block-end: .5rem;
+}
+
+body.lg-final-spec[data-unified-case] #main .research-timeline .number {
+  margin-block-end: .625rem;
+}
+
+body.lg-final-spec[data-unified-case] #main :is(.legacy-research, .core-workflow, .tool-heading) {
+  margin-block: var(--lg-group-gap) 0;
+  padding-block: var(--lg-group-gap) 0;
+  border-block-start: 1px solid var(--line);
+}
+
+body.lg-final-spec[data-unified-case] #main :is(.research-source, .research-source .subsection) {
+  min-inline-size: 0;
+  margin-block-start: var(--lg-group-gap);
+}
+
+body.lg-final-spec[data-unified-case] #main .research-source .chapter-heading {
+  margin-block-end: var(--lg-grid-gap);
+}
+
+body.lg-final-spec[data-unified-case] #main .research-source :is(.sub-label, .screen-label h3, .inventory-title, .mapping-labels h4, .steps h4) {
+  margin-block: 0 .625rem;
+  color: var(--ink);
+  font-size: 1.125rem;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+body.lg-final-spec[data-unified-case] #main .research-source .inventory-title {
+  margin-block-start: var(--lg-grid-gap);
+}
+
+body.lg-final-spec[data-unified-case] #main .research-source .chapter-heading em {
+  color: inherit;
+  font: inherit;
+}
+
+body.lg-final-spec[data-unified-case] #main .research-source .feature-inventory {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(8.5rem, 45%), 1fr));
+  gap: 0 .875rem;
+  margin-block: 1rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+body.lg-final-spec[data-unified-case] #main .research-source .feature-inventory li {
+  padding: .5rem 0;
+  border-block-start: 1px solid var(--line);
+  color: var(--ink);
+  text-align: center;
+}
+
+body.lg-final-spec[data-unified-case] #main .research-source .subsection .sub-label {
+  color: var(--lg-highlight);
+}
+
+body.lg-final-spec[data-unified-case] #main .research-source .variable-grid li {
+  padding: .75rem 0;
+  border-block-start: 1px solid var(--line);
+  background: none;
+}
+
+body.lg-final-spec[data-unified-case] #main .research-source :is(.variable-grid li span:first-child, .factor-inventory h5) {
+  color: var(--ink);
+  font-weight: 650;
+}
+
+body.lg-final-spec[data-unified-case] #main .research-source .metric {
+  color: var(--lg-highlight) !important;
+}
+
+body.lg-final-spec[data-unified-case] #main .research-source .equation {
+  font-size: var(--lg-detail);
+}
+
+body.lg-final-spec[data-unified-case] #main .research-source .source-note {
+  color: var(--lg-secondary);
+  font-size: var(--lg-detail);
+}
+
+body.lg-final-spec[data-unified-case] #main .ai-bridge {
+  margin-block-start: var(--lg-group-gap);
+  padding: var(--lg-panel-padding);
+  border: 1px solid var(--line);
+  border-radius: var(--lg-panel-radius);
+  background: radial-gradient(ellipse at 100% 100%, #3c1c35 0, transparent 65%), var(--lg-surface);
+}
+
+body.lg-final-spec[data-unified-case] #main .ai-bridge li {
+  display: grid;
+  place-items: center;
+  min-block-size: 3.5rem;
+  padding: .75rem;
+  border: 1px solid #b9a5de66;
+  border-radius: var(--lg-panel-radius);
+  background: var(--lg-accent-fill);
+  color: var(--ink);
+  text-align: center;
+}
+
+body.lg-final-spec[data-unified-case] #main .workflow-screens {
+  margin-block: var(--lg-grid-gap) 0;
+}
+
+body.lg-final-spec[data-unified-case] #main .workflow-screens figcaption {
+  color: var(--ink);
+  font-size: var(--lg-body);
+  text-align: start !important;
+}
+
+body.lg-final-spec[data-unified-case] #main .workflow-screens figcaption span {
+  color: var(--case-muted);
+  font-size: var(--lg-detail);
+  text-align: start !important;
+}
+
+body.lg-final-spec[data-page][data-unified-case] #main .final-screen-group {
+  gap: var(--lg-grid-gap);
+  padding-block: var(--lg-group-gap) !important;
+}
+
+body.lg-final-spec[data-page][data-unified-case] #main .screen-summary {
+  padding: 0;
+}
+
+body.lg-final-spec[data-unified-case] #main .component-notes dt {
+  display: inline-block;
+  padding: .3rem .55rem;
+  border: 1px solid var(--lg-accent-line);
+  border-radius: 0;
+  background: var(--lg-accent-fill);
+  color: var(--lg-highlight);
+  font-size: var(--lg-label) !important;
+  font-weight: 650;
+  line-height: 1.5;
+  letter-spacing: .045em;
+}
+
+body.lg-final-spec[data-unified-case] #main :is(.workflow-screens img, .tool-screen img) {
+  border-color: var(--line);
+  border-radius: var(--lg-panel-radius);
+  background: var(--lg-surface);
+}
+
+body.lg-final-spec[data-unified-case] #main .tool-screen figcaption {
+  text-align: start !important;
+}
+
+body.lg-final-spec[data-unified-case] #main .tool-screen a {
+  color: var(--case-muted);
+  text-decoration: underline;
+  text-decoration-color: var(--line);
+}
+
+body.lg-final-spec[data-unified-case] #main .tool-screen a:is(:hover, :focus-visible) {
+  color: var(--ink);
+  text-decoration-color: currentColor;
+}
+
+body.lg-final-spec[data-unified-case] #main #review .reflection-q-number {
+  color: var(--lg-highlight);
+}
+
+/* Information architecture */
+body.lg-final-spec[data-unified-case] #main .lg-ia {
+  position: relative;
+  margin: var(--lg-grid-gap) 0 0;
+  padding: clamp(1rem, 2.5vw, 2rem);
+  border: 1px solid var(--line);
+  border-radius: var(--lg-panel-radius);
+  background: var(--lg-surface);
+  container-type: inline-size;
+}
+
+.lg-final-spec .lg-ia-svg {
+  position: absolute;
+  inset: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  pointer-events: none;
+}
+
+.lg-final-spec .lg-ia-svg [data-ia-edge] {
+  fill: none;
+  stroke: var(--case-muted);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.lg-final-spec .lg-ia-svg .lg-ia-loop {
+  stroke: var(--lg-violet);
+  stroke-width: 2;
+}
+
+.lg-final-spec .lg-ia-svg .lg-ia-log {
+  stroke: #aca9bc;
+  stroke-dasharray: 5 4;
+}
+
+.lg-final-spec .lg-ia-svg .lg-ia-junction { fill: #aca9bc; }
+
+.lg-final-spec .lg-ia-nodes {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  column-gap: clamp(1.25rem, 3.3vw, 3.25rem);
+  row-gap: 3rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lg-final-spec .lg-ia-node {
+  position: relative;
+  min-inline-size: 0;
+  padding: .875rem 1rem;
+  border: 1px solid #ffffff26;
+  border-radius: var(--lg-panel-radius);
+  background: var(--lg-surface-raised);
+}
+
+.lg-final-spec .lg-ia-core {
+  border-color: #c8003b80;
+  background: #20151d;
+}
+
+.lg-final-spec .lg-ia-node[data-ia-node="home"] {
+  grid-column: 2;
+}
+
+.lg-final-spec .lg-ia-core {
+  grid-row: 2;
+}
+
+.lg-final-spec .lg-ia-node[data-ia-node="input"] {
+  grid-column: 1;
+}
+
+.lg-final-spec .lg-ia-node[data-ia-node="analysis"] { grid-column: 2; }
+.lg-final-spec .lg-ia-node[data-ia-node="generate"] { grid-column: 3; }
+.lg-final-spec .lg-ia-node[data-ia-node="compare"] { grid-column: 4; }
+
+.lg-final-spec .lg-ia-node[data-ia-node="history"] {
+  grid-column: 2 / 4;
+  grid-row: 3;
+  justify-self: center;
+  inline-size: min(100%, 17rem);
+  margin-block-start: .75rem;
+}
+
+body.lg-final-spec #main .lg-ia-step {
+  color: var(--lg-secondary);
+  font-size: var(--lg-label);
+  font-weight: 650;
+  line-height: 1.35;
+  font-variant-numeric: tabular-nums;
+}
+
+.lg-final-spec #main .lg-ia-node h4 {
+  margin-block: .35rem .75rem;
+  color: var(--ink);
+  font-size: clamp(1.0625rem, 1rem + .35vw, 1.25rem);
+  font-weight: 650;
+  line-height: 1.3;
+}
+
+.lg-final-spec #main .lg-ia-core h4 {
+  color: var(--lg-highlight);
+}
+
+.lg-final-spec .lg-ia-node ul {
+  display: grid;
+  gap: .375rem;
+  margin: 0;
+  padding: .75rem 0 0;
+  border-block-start: 1px solid var(--line);
+  list-style: none;
+  color: var(--case-muted);
+  font-size: var(--lg-detail);
+  line-height: 1.5;
+}
+
+body.lg-final-spec[data-unified-case] #main .lg-ia-node ul > li {
+  margin: 0;
+  padding: 0;
+  font-size: var(--lg-detail);
+  line-height: 1.45;
+}
+
+body.lg-final-spec[data-unified-case] #main .lg-ia-key {
+  position: relative;
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: start;
+  gap: .625rem 1.5rem;
+  max-inline-size: none;
+  margin: 1.5rem 0 0 !important;
+  padding-block-start: 1rem;
+  border-block-start: 1px solid var(--line);
+}
+
+body.lg-final-spec[data-unified-case] #main .lg-ia-key span:not(.sr-only) {
+  display: inline-flex !important;
+  gap: .5rem;
+  align-items: center;
+  margin: 0 !important;
+  font-size: var(--lg-label);
+}
+
+.lg-final-spec .lg-ia-key span:not(.sr-only)::before {
+  content: "";
+  inline-size: 1.25rem;
+  border-block-start: 2px solid var(--case-muted);
+}
+
+.lg-final-spec .lg-ia-key span:nth-child(2)::before { border-color: var(--lg-violet); }
+.lg-final-spec .lg-ia-key span:nth-child(3)::before { border-block-start: 2px dashed var(--lg-secondary); }
+
+@container (max-width: 38rem) {
+  .lg-final-spec .lg-ia-nodes {
+    grid-template-columns: minmax(0, 1fr);
+    padding-inline: 1.5rem;
+    row-gap: 1.5rem;
+  }
+
+  .lg-final-spec .lg-ia-node:is([data-ia-node]) {
+    grid-column: 1;
+    grid-row: auto;
+    inline-size: 100%;
+    margin-block-start: 0;
+  }
+}
+
+@media (max-width: 680px) {
+  body.lg-final-spec[data-unified-case] #main .final-screen-group {
+    row-gap: .75rem;
+  }
+}
+
+body.lg-final-spec[data-unified-case] #main #research .research-source .research-keyword {
+  margin: 0 0 .625rem;
+  color: var(--lg-highlight);
+  font-size: .6875rem;
+  font-weight: 650;
+  letter-spacing: .09em;
+}
+
+body.lg-final-spec[data-unified-case] #main .screen-quick-settings .screen-label {
+  text-align: start;
+}
+
+@media (min-width: 601px) {
+  body.lg-final-spec[data-unified-case] #main .screen-columns > .screen-quick-settings {
+    grid-column: 1 / -1;
+    justify-self: center;
+    inline-size: calc((100% - var(--lg-grid-gap)) / 2);
+  }
+}
+
+body.lg-final-spec[data-unified-case] #main .inventory-section .factor-inventory + .inventory-title {
+  margin-block-start: var(--lg-group-gap);
+  padding-block-start: var(--lg-grid-gap);
+  border-block-start: 1px solid var(--line);
+}
+
+body.lg-final-spec[data-unified-case] #main .research-source .variable-grid :is(li, span) {
+  text-align: center;
+}
+
+body.lg-final-spec[data-unified-case] #main .research-source > .subsection.factor-mapping {
+  background: none;
+  border-color: transparent;
+  padding-inline: 0;
+}
+
+body.lg-final-spec[data-unified-case] #main .factor-mapping .mapping-row {
+  grid-template-columns: minmax(0, 1.85fr) minmax(0, 1fr);
+  align-items: start;
+}
+
+body.lg-final-spec[data-unified-case] #main .mapping-row figure {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  box-shadow: none;
+}
+
+.lg-final-spec :is(.mapping-row .source-context, .mapping-row img[src$="tv-factors-control.webp"]) {
+  clip-path: polygon(2.8% .5%, 97% .5%, 97% 91.4%, 60% 91.4%, 59% 92.5%, 40.4% 92.5%, 39.6% 91.4%, 2.8% 91.4%);
+}
+
+body.lg-final-spec[data-unified-case] #main .mapping-labels {
+  padding-block-start: .625rem;
+}
+
+body.lg-final-spec[data-unified-case] #main .research-source .mapping-labels h4 {
+  color: var(--lg-highlight);
+}
+
+body.lg-final-spec[data-unified-case] #main .research-source .mapping-labels ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body.lg-final-spec[data-unified-case] #main .research-source .mapping-labels li {
+  padding-block: .4rem;
+  border-block-start: 1px solid var(--line);
+}
+
+body.lg-final-spec[data-unified-case] #main .model-card :is(h4, .metric, .metric-caption),
+body.lg-final-spec[data-unified-case] #main #research-model .source-note {
+  max-inline-size: none;
+  text-align: center;
+}
+
+body.lg-final-spec[data-unified-case] #main .model-card .metric strong {
+  color: var(--lg-highlight);
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+body.lg-final-spec[data-unified-case] #main .model-card .metric {
+  margin: 1.25rem 0 .375rem;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+body.lg-final-spec[data-unified-case] #main #research-model .source-note {
+  margin-block-start: 1rem;
+}
+
+body.lg-final-spec[data-unified-case] #main :is(.research-timeline, .research-steps, .workflow-screens, .ai-bridge ol) > li {
+  position: relative;
+}
+
+body.lg-final-spec[data-unified-case] #main :is(.research-timeline, .research-steps, .workflow-screens, .ai-bridge ol) > li:not(:last-child)::after {
+  content: "→" / "";
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: 100%;
+  inline-size: var(--lg-grid-gap);
+  transform: translateY(-50%);
+  color: var(--lg-highlight);
+  font-size: 1rem;
+  line-height: 1;
+  text-align: center;
+  pointer-events: none;
+}
+
+body.lg-final-spec[data-unified-case] #main .ai-bridge ol {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--lg-grid-gap);
+}
+
+body.lg-final-spec[data-unified-case] #main .research-steps {
+  grid-template-columns: repeat(4,minmax(0,1fr));
+}
+
+body.lg-final-spec[data-page][data-unified-case] #main .final-screen-group:has(.component-study) {
+  grid-template-columns: minmax(0,1fr);
+}
+
+body.lg-final-spec[data-unified-case] #main .component-study {
+  display: grid;
+  gap: var(--lg-grid-gap);
+}
+
+body.lg-final-spec[data-unified-case] #main [data-screen="sidebar"] .component-study {
+  grid-template-columns: minmax(10rem, .58fr) minmax(0,1fr);
+  align-items: start;
+}
+
+body.lg-final-spec[data-unified-case] #main .component-study .tool-screen {
+  grid-row: auto;
+}
+
+body.lg-final-spec[data-unified-case] #main .component-study .component-notes {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body.lg-final-spec[data-unified-case] #main [data-screen="topbar"] .component-study .component-notes {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
+}
+
+body.lg-final-spec[data-unified-case] #main .component-study .component-notes > div {
+  margin: 0;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--lg-panel-radius);
+  background: var(--lg-surface);
+}
+
+body.lg-final-spec[data-unified-case] #main .component-study .component-notes dd {
+  max-inline-size: none;
+}
+
+body.lg-final-spec[data-unified-case] #main .component-study .component-notes figure {
+  margin: .5rem 0 .75rem;
+}
+
+.lg-final-spec .component-study .component-notes img {
+  display: block;
+  inline-size: min(100%, 20rem);
+  block-size: auto;
+}
+
+.lg-final-spec .component-study .component-closeup--icon img { inline-size: 4rem; }
+
+.lg-final-spec .settings-previews {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+  gap: var(--lg-grid-gap);
+}
+
+.lg-final-spec .settings-previews figure { margin: 0; }
+.lg-final-spec .settings-previews img { display: block; inline-size: 100%; block-size: auto; }
+
+body.lg-final-spec[data-unified-case] #main #review {
+  border-block-start: 0;
+}
+
+body.lg-final-spec[data-unified-case] #main #design {
+  border-block-end: 0;
+}
+
+body.lg-final-spec #review .review-watermark {
+  inset: auto 3% 2% auto;
+  opacity: .09;
+}
+
+body.lg-final-spec #review.review-technical::after {
+  background: radial-gradient(ellipse at 97% 98%, #c8003b38, transparent 42%), linear-gradient(90deg, #000e, #0002);
+}
+
+@media (max-width: 1000px) {
+  body.lg-final-spec[data-unified-case] #main :is(.research-timeline,.research-steps) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  body.lg-final-spec[data-unified-case] #main :is(ol.research-timeline,ol.research-steps) > li:not(:last-child)::after {
+    content: "↓" / "";
+    inset: calc(100% + var(--lg-grid-gap) / 2) auto auto 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  body.lg-final-spec[data-unified-case] #main ol.workflow-screens > li:nth-child(2)::after {
+    content: "↙" / "";
+    inset: calc(100% + var(--lg-grid-gap) / 2) 98% auto auto;
+  }
+}
+
+@media (max-width: 680px) {
+  body.lg-final-spec[data-unified-case] #main .factor-mapping .mapping-row,
+  body.lg-final-spec[data-unified-case] #main [data-screen="sidebar"] .component-study,
+  body.lg-final-spec[data-unified-case] #main .ai-bridge ol {
+    grid-template-columns: minmax(0,1fr);
+  }
+
+  body.lg-final-spec[data-unified-case] #main .ai-bridge ol > li:not(:last-child)::after {
+    content: "↓" / "";
+    inset: calc(100% + var(--lg-grid-gap) / 2) auto auto 50%;
+    transform: translate(-50%, -50%);
+  }
+}
