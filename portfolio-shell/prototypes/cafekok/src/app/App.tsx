@@ -641,23 +641,39 @@ function Logo({ className = "text-[26px]" }: { className?: string }) {
   )
 }
 
-const MAP_BOUNDS: Record<string, string> = {
-  "부산 전포": "129.048,35.147,129.081,35.166",
-  "부산 광안리": "129.101,35.143,129.135,35.162",
-  "부산 서면": "129.042,35.149,129.075,35.168",
-}
-function areaMapUrl(region: string) {
-  return `https://www.openstreetmap.org/export/embed.html?bbox=${MAP_BOUNDS[region] || MAP_BOUNDS["부산 전포"]}&layer=mapnik`
-}
-function MiniMap({ region, hours }: { region: string; hours: string }) {
+function NaverMap({
+  className = "",
+  children,
+}: {
+  className?: string
+  children: React.ReactNode
+}) {
   return (
-    <div className="sample-map detail-map">
+    <div className={`sample-map ${className}`}>
       <img
-        className="detail-map-image"
-        src="/work/cafekok/prototype/images/seomyeon-naver-map.png"
+        className="sample-map-image"
+        src={`${import.meta.env.BASE_URL}images/seomyeon-naver-map.png`}
         alt="네이버 지도에서 캡처한 부산 서면·전포 일대 지도"
+        width={1857}
+        height={911}
         loading="lazy"
       />
+      {children}
+      <a
+        className="sample-map-attribution"
+        href="https://map.naver.com/p/search/서면역"
+        target="_blank"
+        rel="noreferrer"
+      >
+        지도 © NAVER
+      </a>
+    </div>
+  )
+}
+
+function MiniMap({ region, hours }: { region: string; hours: string }) {
+  return (
+    <NaverMap className="detail-map">
       <span className="sample-map-label">{region} · 정확한 위치 정보 없음</span>
       <div className="map-info-overlay">
         <p>
@@ -669,15 +685,7 @@ function MiniMap({ region, hours }: { region: string; hours: string }) {
           <strong>정보 없음</strong>
         </p>
       </div>
-      <a
-        className="sample-map-attribution"
-        href="https://map.naver.com/p/search/서면역"
-        target="_blank"
-        rel="noreferrer"
-      >
-        지도 © NAVER
-      </a>
-    </div>
+    </NaverMap>
   )
 }
 
@@ -713,7 +721,7 @@ function Icon({
     bean: "coffee-bean",
     bell: "bell",
   }
-  const mask = `url("/icons/${icons[name] || "coffee"}.svg") center / contain no-repeat`
+  const mask = `url("${import.meta.env.BASE_URL}icons/${icons[name] || "coffee"}.svg") center / contain no-repeat`
   return (
     <span
       aria-hidden="true"
@@ -1481,21 +1489,9 @@ export default function App() {
       [24, 79],
       [57, 82],
     ]
-    const mapUrl = areaMapUrl(region)
     return (
       <div>
-        <div className="sample-map">
-          <iframe
-            className="sample-map-frame"
-            title={`${region} 주변 지도`}
-            src={mapUrl}
-            loading="lazy"
-            tabIndex={-1}
-            aria-hidden="true"
-          />
-          <span className="sample-map-label">
-            {region.replace("부산 ", "")} · 위치 미확인
-          </span>
+        <NaverMap>
           {list.map((c, index) => (
             <button
               key={c.id}
@@ -1510,15 +1506,7 @@ export default function App() {
               {index + 1}
             </button>
           ))}
-          <a
-            className="sample-map-attribution"
-            href="https://www.openstreetmap.org/copyright"
-            target="_blank"
-            rel="noreferrer"
-          >
-            © OpenStreetMap 기여자
-          </a>
-        </div>
+        </NaverMap>
 
         {list.length ? (
           <div className="map-results">
@@ -1801,11 +1789,10 @@ export default function App() {
 
   const Detail = () => {
     if (!cafe) return null
-    const isSaved = saved.includes(cafe.id)
     const why = tags(cafe)
     return (
       <>
-        <main className="detail-screen pb-32">
+        <main className="detail-screen">
           <div className="detail-toolbar">
             <button
               className="icon-button"
@@ -1873,22 +1860,6 @@ export default function App() {
             <MiniMap region={cafe.neighborhood} hours={cafe.sampleHours} />
           </section>
         </main>
-        <div className="detail-actions">
-          <button
-            className={secondary}
-            onClick={() => {
-              nav("explore")
-              setMap(true)
-            }}
-          >
-            <Icon name="map" />
-            지도 보기
-          </button>
-          <button className={primary} onClick={() => toggle(cafe.id)}>
-            <Icon name={isSaved ? "check" : "saved"} />
-            {isSaved ? "저장 취소" : "카페 저장"}
-          </button>
-        </div>
       </>
     )
   }

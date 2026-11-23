@@ -125,7 +125,7 @@ body[data-project="ivi"] #main .ivi-chapter :is(h2,h3,h4,h5,p,li,dd,figcaption),
 .ivi-heading { display: grid; justify-items: start; gap: .85rem; margin-block-end: clamp(1.5rem, 4vw, 3.5rem); }
 body[data-project="ivi"] #main .ivi-label { margin: 0; font-size: .75rem; letter-spacing: .12em; font-weight: 750; line-height: 1.5; }
 .ivi-chapter .ivi-label { color: var(--case-accent); }
-body[data-project="ivi"] #main .ivi-heading :is(h2,h3) {
+body[data-project="ivi"] #main .ivi-heading :is(h2,h3,h4) {
   max-inline-size: 29ch;
   margin: 0;
   color: var(--ink);
@@ -136,8 +136,10 @@ body[data-project="ivi"] #main .ivi-heading :is(h2,h3) {
 }
 body[data-project="ivi"] #main .ivi-heading h2 { font-size: clamp(1.9rem, 3.5vw, 3rem); }
 body[data-project="ivi"] #main .ivi-heading h3 { font-size: clamp(1.45rem, 2.7vw, 2.25rem); }
+body[data-project="ivi"] #main .ivi-heading h4 { font-size: clamp(1.25rem, 2.2vw, 1.75rem); }
 .ivi-lead { max-inline-size: 64ch; margin: 0; color: var(--muted); font-size: clamp(1rem, 1.45vw, 1.125rem); line-height: 1.75; }
 .ivi-chapter :is(.ivi-note,.ivi-source) { margin-block: .95rem 0; color: var(--muted); line-height: 1.7; font-size: .875rem; }
+.ivi-external .ivi-comparison-summary { margin-block-start: var(--ivi-gap); }
 .ivi-chapter :is(section,figure)[id] { scroll-margin-block-start: calc(var(--case-topbar-height) + 1.5rem); }
 
 .ivi-block + .ivi-block, .ivi-subsection {
