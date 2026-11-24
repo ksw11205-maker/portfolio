@@ -1,0 +1,197 @@
+/* HIG-inspired hierarchy and alignment; the owner's minimum is 16 CSS px. */
+@font-face{font-family:PortfolioText;src:url('/assets/fonts/PretendardVariable.woff2') format('woff2');font-weight:100 900;font-display:swap}
+body[data-page=case]{font-family:PortfolioText,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:17px;line-height:1.65}
+body[data-page=case] :is(h1,h2,h3,h4,p,li,dt,dd,figcaption,summary){text-align:left}
+body[data-page=case] :is(p,li,dt,dd,figcaption,summary,button,a,small,td,th,label){font-size:16px!important;line-height:1.65}
+body[data-page=case] :is(.section-kicker,.case-type,.screen-caption,.original-caption,.tool-story-head>span,.showcase-heading>p,.feature-label strong,.feature-label>span,.component-detail-panel dt,.research-note,.research-ui-notes span,.research-reflection-qa span,.reflection-qa span,.archive-meta){font-size:16px!important;letter-spacing:0!important;line-height:1.6}
+body[data-page=case] :is(p,dd,li,figcaption){font-weight:400}
+body[data-page=case] :is(h1,h2,h3,h4){font-family:inherit;font-weight:600;letter-spacing:-.035em}
+body[data-page=case] h1{font-size:clamp(36px,4vw,64px);line-height:1.12}
+body[data-page=case] :is(h2,.case-heading){font-size:clamp(28px,3vw,42px);line-height:1.25;margin-bottom:0}
+body[data-page=case] h3{font-size:clamp(22px,2.2vw,30px);line-height:1.35}
+body[data-page=case] h4{font-size:20px;line-height:1.4}
+body[data-page=case] :is(h1,h2,h3,h4)>:is(span,strong,em){font-size:inherit!important;font-weight:inherit}
+body[data-page=case] :is(.case-lead,.archive-summary){font-size:18px!important;line-height:1.7}
+body[data-page=case] .case-section{padding-top:64px!important;padding-bottom:64px!important}
+body[data-page=case] .research-section-head{margin-bottom:32px}
+body[data-page=case] .section-kicker{margin-bottom:16px}
+body[data-page=case] .case-lead{margin-top:20px;max-width:65ch}
+body[data-page=case] .research-summary{gap:32px}
+body[data-page=case] :is(.product-section-intro,.offer-section-head){margin-bottom:36px}
+body[data-page=case] .tool-story{padding-block:40px}
+body[data-page=case] .tool-story-head{gap:24px;margin-bottom:28px}
+body[data-page=case] .tool-story-head>div{max-width:68ch}
+body[data-page=case] .tool-story-head h3{font-size:28px}
+body[data-page=case] .feature-label{min-width:160px;width:calc(20% - 28px)}
+body[data-page=case] .annotation-stage{grid-template-columns:minmax(180px,20%) minmax(0,1fr) minmax(180px,20%);column-gap:28px}
+body[data-page=case] .original-caption>span{font-size:16px!important}
+body[data-page=case] .presentation-reasoning p{font-size:16px!important}
+body[data-page=case] .type-min{font-size:16px!important;line-height:1.6!important}
+/* Same glass pill and navigation as the portfolio shell. */
+body[data-page=case] .header{--header-text:#d5d9e0;position:fixed;left:50%;top:20px;transform:translateX(-50%);z-index:80;display:flex;align-items:center;gap:32px;padding:8px 12px 8px 24px;border:1px solid #ffffff24;border-radius:999px;background:rgba(17,20,27,.94);color:#fff;backdrop-filter:blur(20px)}
+body[data-page=case] .header .monogram{display:flex;align-items:center}
+body[data-page=case] .header .brand-mark{display:block;width:38px;height:38px;max-width:none}
+body[data-page=case] .header nav{display:flex;gap:4px;align-items:center}
+body[data-page=case] .header nav a{font-size:16px!important;color:#d5d9e0;min-height:44px;padding:10px 14px;border-radius:24px;white-space:nowrap;letter-spacing:0}
+body[data-page=case] .header nav a:is(:hover,:focus-visible){background:#146bff;color:white}
+body[data-page=case] .header .menu{display:none}
+body[data-page=case] .header a[data-nav=work]{color:white;text-decoration:underline;text-decoration-color:var(--case-accent);text-underline-offset:9px}
+/* Persistent left reading rail, never over the cover or body text. */
+.case-toc{position:fixed;top:145px;left:24px;width:158px;z-index:40;max-height:calc(100svh - 175px);overflow:auto}
+.case-toc>summary{display:none}
+body[data-page=case] .case-toc .case-nav{position:static;display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:0;margin:0;min-height:0;border:0;background:none;backdrop-filter:none;overflow:visible;white-space:normal}
+body[data-page=case] .case-nav a{font-size:16px!important;line-height:1.5;padding:9px 0;max-width:100%;color:var(--case-muted);font-weight:500}
+body[data-page=case] .case-nav a[aria-current=location]{color:var(--case-accent);font-weight:600;text-decoration:underline;text-underline-offset:7px;text-decoration-thickness:1px}
+body[data-page=case] .case-nav a::after{display:none}
+.case-toc.is-cover-visible{visibility:hidden;pointer-events:none}
+@media(min-width:1101px){
+ body[data-page=case] main>:is(.case-section,.ui-showcase,.next-projects),body[data-page=case] .product-story{margin-left:200px;margin-right:24px;width:calc(100% - 224px)}
+ body[data-page=case] .product-story>.case-section{padding-inline:40px}
+ body[data-page=case] .archive-hero{display:grid!important;grid-template-columns:30% 70%;align-items:center;height:auto;min-height:min(900px,100svh);padding:110px 0 48px}
+ .archive-hero-intro{grid-column:1;grid-row:1;width:100%;height:auto;padding:32px;gap:24px}
+ .archive-hero-art{position:relative;grid-column:2;grid-row:1;inset:auto;width:100%;height:auto;align-self:center}
+ .archive-hero-art>.mockup-preview{height:auto}
+ .archive-hero-art>.mockup-preview>img{display:block;width:100%;height:auto;object-fit:contain}
+ body[data-page=case] .archive-hero::after{display:none}
+}
+/* Fit the width of authentic imagery; preserve its native ratio. */
+body[data-page=case] :is(.screen>img,.context-screen>img,.heatmap-pair img){width:100%;height:auto;max-height:none;object-fit:contain}
+.work-fullbleed.is-pinned .project-visual .mockup-preview{display:flex!important;align-items:center;justify-content:center;padding:0!important;width:100%;height:100%}
+.work-fullbleed.is-pinned .project-visual .mockup-preview>img{width:90%!important;height:auto!important;max-height:none!important;object-fit:contain!important}
+.project-visual>.mockup-preview>img{height:auto;object-fit:contain}
+.project-visual.cafekok{background:#6c5142!important}
+/* Compare the two experimental conditions, with existing findings intact. */
+body[data-project=ivi] #click-patterns{background:#1b2c32;border-radius:24px}
+body[data-project=ivi] .heatmap-pair{gap:24px;grid-template-columns:1fr 1fr;margin-top:32px}
+body[data-project=ivi] .heatmap-pair .screen{padding:20px;background:#101b20;border-radius:18px;border:1px solid #8fb4bd40}
+body[data-project=ivi] .heatmap-pair .screen:first-child{border-color:var(--case-accent)}
+body[data-project=ivi] .heatmap-pair .screen-caption{display:block;font-size:20px!important;font-weight:600}
+body[data-project=ivi] .heatmap-pair .screen-caption>span{font-size:16px!important;display:block;text-align:left}
+body[data-project=ivi] .heatmap-numbers dd{font-size:32px!important;font-weight:600}
+body[data-project=ivi] .heatmap-numbers small{margin-left:4px}
+.heatmap-comparison-result{display:flex;gap:40px;flex-wrap:wrap;padding:24px 28px;margin-top:28px;border-radius:16px;background:#2c4850}
+.heatmap-comparison-result strong{display:block;font-size:28px;font-weight:600;color:var(--case-accent)}
+.heatmap-comparison-result span{font-size:16px}
+/* One compact profile board, without losing education or research content. */
+@media(min-width:1001px){
+ #about.about{display:grid;grid-template-columns:200px minmax(0,1fr);gap:28px 48px;margin-top:0;padding-block:108px 64px;min-height:0}
+ #about.about .section-heading{grid-column:1;grid-row:1;padding:0}
+ #about.about .section-heading h2{font-size:42px;margin-top:12px}
+ #about.about .profile-portrait{grid-column:1;grid-row:2;align-self:start;width:140px;margin:0 0 0 18px}
+ #about.about .about-intro{grid-column:2;grid-row:1;align-self:center;padding:0}
+ #about.about .about-statement{font-size:clamp(28px,2.5vw,40px);line-height:1.3;max-width:none}
+ #about.about :is(.statement-opening,.statement-main,.statement-closing){display:inline}
+ #about.about .statement-context{font-size:17px;margin-top:12px;max-width:none}
+ #about.about .statement-context br{display:none}
+ #about.about .profile-details{grid-column:2;grid-row:2;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:32px;margin:0}
+ #about.about .profile-list{gap:14px}
+ #about.about .profile-list>li{padding-bottom:12px}
+ #about.about .profile-details h3{font-size:18px!important;line-height:1.4}
+ #about.about .profile-details :is(p,summary,.profile-category){font-size:16px;line-height:1.55}
+ #about.about .profile-text-line{display:inline}
+ #about.about .profile-text-line+.profile-text-line::before{content:' '}
+ #about.about .profile-details .eyebrow{font-size:16px;margin-bottom:20px;letter-spacing:0}
+}
+.case-image-tooltip{display:none!important}
+@media(max-width:1100px){
+ .case-toc{left:16px;top:105px;width:auto;max-width:210px;max-height:75svh;overflow:auto;border-radius:14px;background:var(--bg);border:1px solid var(--line);padding:10px 16px}
+ .case-toc>summary{display:list-item;cursor:pointer;font-size:16px}
+ body[data-page=case] .case-toc .case-nav{padding-top:12px}
+ body[data-page=case] .annotation-stage{display:flex;grid-template-columns:none}
+ body[data-page=case] .feature-label{width:100%;min-width:0}
+ body[data-page=case] .archive-hero-art>.mockup-preview>img{width:100%;height:auto}
+ body[data-page=case] .archive-hero-art{height:auto;aspect-ratio:auto}
+}
+@media(max-width:700px){
+ body[data-page=case] .header{top:12px;width:calc(100% - 32px);padding:8px 16px;justify-content:space-between;gap:16px}
+ body[data-page=case] .header .menu{display:flex;align-items:center;justify-content:center;width:44px;height:44px;background:transparent;border:0;color:white}
+ .header .menu-icon{display:flex;flex-direction:column;gap:5px}.header .menu-icon i{display:block;width:22px;height:1px;background:currentColor}
+ body[data-page=case] .header nav{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;align-items:stretch;padding:12px;border-radius:20px;background:#11141bf5;border:1px solid #ffffff24}
+ body[data-page=case] .header nav.is-open{display:flex}
+ body[data-page=case] .case-section{padding:48px 24px!important}
+ body[data-page=case] :is(.case-lead,.archive-summary){font-size:17px!important}
+ body[data-page=case] .heatmap-pair{grid-template-columns:1fr}
+ .heatmap-comparison-result{gap:20px}
+ body[data-page=case] .reflection-qa article{grid-template-columns:1fr;gap:16px}
+}
+@media print{.header,.case-toc{display:none!important}}
+
+
+body[data-page=case] main :is(span,caption){font-size:16px!important}
+body[data-page=case] main :is(h1,h2,h3,h4)>:is(span,strong,em){font-size:inherit!important}
+.header{gap:32px}.header nav{gap:4px}.header nav a{font-size:16px;letter-spacing:0;padding:10px 14px}
+.statement-closing::before{content:" "}
+@media(min-width:1001px){#about.about{padding-top:96px;padding-bottom:40px;gap:20px 48px}#about.about .profile-details{gap:28px}}
+
+@media(max-width:1400px){body[data-page=case] .annotation-stage{display:flex;flex-direction:column;gap:0;padding:32px 24px}body[data-page=case] .annotation-labels{position:relative;display:flex;flex-direction:column;gap:24px;width:100%;padding-top:32px}body[data-page=case] .feature-label{position:relative;inset:auto!important;width:100%;min-width:0;padding-left:14px}body[data-page=case] .feature-label::before{content:"";position:absolute;left:0;top:8px;width:5px;height:5px;border-radius:50%;background:var(--presentation-accent)}body[data-page=case] .interface-device{width:100%}}
+
+body[data-page=case] .is-mobile-ui .interface-device{width:min(100%,340px)!important}
+body[data-page=case] .tool-flow{flex-wrap:wrap;gap:12px 24px}body[data-page=case] .tool-flow li{flex:0 1 auto}
+body[data-page=case] .data-table{display:block;max-width:100%;overflow-x:auto}
+body[data-page=case] .research-reflection-qa>article{grid-template-columns:60px minmax(0,.8fr) minmax(0,1.2fr);gap:24px}
+@media(max-width:700px){body[data-page=case] .research-reflection-qa>article{grid-template-columns:1fr;gap:12px}}
+
+body[data-page=case] main :is(code,b){font-size:16px!important}body[data-project=ivi] .time-track strong{font-size:16px!important}
+body[data-page=case] .site-footer,body[data-page=case] .site-footer span{font-size:16px!important;line-height:1.6}
+body[data-page=case] main :is(i,summary strong,.time-label strong){font-size:16px!important}.cafe-purpose-photo{max-width:100%;overflow:hidden}
+body[data-project=cafekok] .cafe-purpose-photo,body[data-project=cafekok] .cafe-purpose::after{inset-inline:0}
+.profile-group>summary{display:none}@media(max-width:1000px){.profile-group>summary{display:list-item;font-size:16px;font-weight:600;cursor:pointer;padding:16px 0;border-bottom:1px solid #ffffff26}.profile-group>.eyebrow{display:none}.profile-group[open]>.profile-list{padding-top:20px}#about.about{row-gap:24px;padding-block:88px 48px;margin-top:0}.about .profile-details{gap:16px}}
+.work:not(.is-pinned) .project-visual{aspect-ratio:auto;height:auto}.work:not(.is-pinned) .project-visual .mockup-preview{height:auto}.work:not(.is-pinned) .project-visual .mockup-preview>img{width:100%;height:auto;object-fit:contain}.project-visual .mockup-preview>img{transform:none!important}
+
+/* WHO I AM — compact dates and accessible research disclosure */
+#about.about .profile-details .profile-date {
+  font-size:12px;
+  line-height:1.5;
+  letter-spacing:-.015em;
+  color:#8b97a7;
+}
+#about.about .profile-details .profile-research .profile-date {
+  font-size:11px;
+}
+#about.about .profile-details .profile-research > summary {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:10px 0 12px;
+  border-bottom:1px solid #9aa8bd35;
+  list-style:none;
+  cursor:pointer;
+  color:#cbd4e0;
+  font-size:13px;
+  font-weight:550;
+  line-height:1.5;
+}
+#about.about .profile-research > summary::-webkit-details-marker {
+  display:none;
+}
+#about.about .profile-research > summary::after {
+  content:"";
+  flex:none;
+  width:8px;
+  height:8px;
+  border-right:1.5px solid currentColor;
+  border-bottom:1.5px solid currentColor;
+  transform:translateY(-2px) rotate(45deg);
+  transition:transform .2s ease;
+}
+#about.about .profile-research[open] > summary::after {
+  transform:translateY(2px) rotate(225deg);
+}
+#about.about .profile-research > summary:hover {
+  color:#f0f4fa;
+}
+#about.about .profile-research > summary:focus-visible {
+  outline:2px solid #7e9eeb;
+  outline-offset:4px;
+  border-radius:2px;
+}
+#about.about .profile-research ul {
+  margin:0;
+  padding:16px 0 0 12px;
+}
+@media(prefers-reduced-motion:reduce) {
+  #about.about .profile-research > summary::after {
+    transition:none;
+  }
+}

@@ -1,0 +1,63 @@
+/* Detail chapters: keep a message beside its evidence; reserve large space for topic changes. */
+main {
+  --case-chapter-start: clamp(56px, 6vw, 88px);
+  --case-chapter-end: clamp(64px, 7vw, 104px);
+  --case-chapter-separation: clamp(40px, 4vw, 64px);
+  --case-evidence-gap: 32px;
+}
+main section[id]:not(.project-cover) {
+  padding-block: var(--case-chapter-start) var(--case-chapter-end);
+  margin-block-start: var(--case-chapter-separation);
+}
+/* The former viewport-sized introduction separated headings from their own evidence. */
+main .chapter-heading {
+  min-height: 0;
+  margin-block: 28px var(--case-evidence-gap);
+  gap: 18px;
+  align-content: start;
+}
+main .section-intro,
+main .section-head {
+  min-height: 0;
+  margin-bottom: var(--case-evidence-gap);
+}
+main .section-intro > .eyebrow,
+main .section-head > .eyebrow {
+  margin-bottom: 16px;
+}
+main .section-intro > .lead { margin-top: 18px; }
+main .section-head > h2 { margin-block: 16px 18px; }
+main .chapter-heading .lead,
+main .section-intro .lead,
+main .section-head > p { line-height: 1.75; }
+main .chapter-heading + .subsection,
+main .case-reading-intro + .subsection { margin-top: 0; }
+/* Subsections within one research chapter remain visibly related. */
+main .subsection + .subsection { margin-top: 48px; padding-top: 32px; }
+main .subsection.surface + .subsection.surface { margin-top: 64px; }
+main .observations { gap: 24px; }
+main .observations article + article { padding-top: 24px; }
+/* OFFER's introductions are horizontal grids, not separate title slides. */
+main .chapter > .split { margin-bottom: var(--case-evidence-gap); row-gap: 18px; }
+main .chapter > .eyebrow { margin-bottom: 16px; }
+/* Preserve CAFÉKOK's content gutter when the slide controller adds a frame. */
+main .case-slide-frame .case-slide-surface > section:has(> .section-head) {
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 5vw;
+  border-bottom: 1px solid #d7cec2;
+}
+@media (max-width: 600px) {
+  main {
+    --case-chapter-start: 40px;
+    --case-chapter-end: 56px;
+    --case-chapter-separation: 32px;
+    --case-evidence-gap: 24px;
+  }
+  main .chapter-heading { margin-top: 24px; gap: 16px; }
+  main .section-intro > .lead { margin-top: 16px; }
+  main .section-head > h2 { margin-block: 14px 16px; }
+  main .subsection + .subsection { margin-top: 36px; padding-top: 24px; }
+  main .subsection.surface + .subsection.surface { margin-top: 48px; }
+  main .case-slide-frame .case-slide-surface > section:has(> .section-head) { padding-inline: 6vw; }
+}

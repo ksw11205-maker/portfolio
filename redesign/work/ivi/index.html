@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="#0B0D10" name="theme-color"/>
+<meta content="15개 IVI 사례와 15명의 사용자 실험을 통해 기능별 레이아웃 전략을 제안한 김성원의 자동차 UX 리서치 프로젝트." name="description"/>
+<title>IVI — One Screen, Different Journeys · 김성원</title>
+<link href="/assets/brand/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="/styles/system.css" rel="stylesheet"/>
+<link href="/styles/cases.css" rel="stylesheet"/>
+<link href="/styles/research.css" rel="stylesheet"/>
+<script src="/scripts/site.js" type="module"></script>
+<link as="font" crossorigin="" href="/assets/fonts/SUIT-Variable.woff2" rel="preload" type="font/woff2"/>
+<link href="/styles/case-motion.css" rel="stylesheet"/><script src="/scripts/case-motion.js" type="module"></script>
+<link href="/styles/interface-presentation.css" rel="stylesheet"/>
+<link href="/cafekok-cover.css" rel="stylesheet"/><script src="/scripts/portfolio-reading.js" type="module"></script><link href="/styles/case-editorial.css" rel="stylesheet"/><link href="/styles/master-editorial.css" rel="stylesheet"/><link href="/styles/unified-cases.css" rel="stylesheet"/><link href="/styles/art-directed-sections.css" rel="stylesheet"/><link href="/styles/research-editorial-2026.css" rel="stylesheet"/><link href="/styles/premium-case-editorial.css" rel="stylesheet"/><link href="/styles/flagship-refinement.css" rel="stylesheet"/><link href="/styles/annotation-revisions.css" rel="stylesheet"/><link rel="stylesheet" href="/styles/case-entry.css"/>
+<script type="module" src="/scripts/case-footer-wave.js"></script>
+<link rel="stylesheet" href="/styles/ivi-final.css"/>
+<link rel="stylesheet" href="/styles/case-cover-actions.css"/>
+</head>
+<body data-page="case" data-project="ivi" data-theme="dark" data-unified-case="" data-case-entry>
+<a class="skip-link" href="#main">본문으로 이동</a>
+<header class="case-shared" data-theme="dark">
+  <nav aria-label="프로젝트 이동" class="case-shared__links">
+    <a class="case-shared__back" href="/#work" aria-label="Back to project 목록"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M19 12H5m6-6-6 6 6 6"/></svg><span class="case-shared__full">BACK TO PROJECT</span><span class="case-shared__short" aria-hidden="true">BACK</span></a>
+    <span class="case-shared__title">IVI USABILITY RESEARCH</span>
+    <a class="case-shared__next" href="/work/cafekok/" aria-label="Next to project · CAFÉKOK"><span class="case-shared__full">NEXT TO PROJECT</span><span class="case-shared__short" aria-hidden="true">NEXT</span><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+  </nav>
+</header>
+<main id="main">
+<section class="project-cover ivi-cover" id="cover" data-cover-project="ivi" aria-labelledby="project-title">
+  <figure class="ivi-cover-art"><img src="/assets/projects/ivi-cover-clean-1920.jpg" srcset="/assets/projects/ivi-cover-clean-960.jpg 960w, /assets/projects/ivi-cover-clean-1920.jpg 1920w" sizes="(max-width: 600px) 100vw, 78vw" width="1920" height="1081" alt="차량 실내에 배치한 IVI 하이브리드 콘셉트" fetchpriority="high" decoding="async"/></figure>
+  <div class="ivi-cover-intro">
+    <div><p class="ivi-label">AUTOMOTIVE UX RESEARCH</p><h1 id="project-title">IVI<br/>USABILITY RESEARCH</h1><p>운전자의 주행 맥락을 고려해<br/>차량 터치스크린의 사용성을 분석하다</p></div>
+    <dl><div><dt>ROLE</dt><dd>UX Research · Usability Testing</dd></div><div><dt>PRESENTATION</dt><dd>2025 대한인간공학회 춘계학술대회</dd></div><div><dt>TOOLS</dt><dd><img src="/assets/tools/figma.svg" width="22" height="22" alt="Figma"/> <img src="/assets/tools/maze.svg" width="22" height="22" alt="Maze"/></dd></div></dl>
+    <a data-case-prototype class="prototype-link" data-prototype-cover="" href="https://www.figma.com/proto/FF8CphVdOl1e6iASFM4ef2/IVIS?page-id=0%3A1&amp;node-id=103-936&amp;starting-point-node-id=103%3A936&amp;scaling=scale-down" rel="noopener noreferrer" target="_blank"><span>VIEW PROTOTYPE</span><span class="case-prototype-arrow" aria-hidden="true">↗</span><span class="sr-only">새 탭에서 열기</span></a>
+  </div>
+  <a class="case-cover-cue" href="#case-overview" aria-label="스크롤하여 프로젝트 목차 보기"><span class="case-cover-cue__mouse" aria-hidden="true"></span><span>SCROLL</span></a>
+</section>
+<div class="case-overview-bar" id="case-overview" tabindex="-1"><span>INDEX</span><nav class="case-overview-links" aria-label="프로젝트 전체 섹션">
+    <a href="#background">BACKGROUND</a>
+    <a href="#goal">GOAL &amp; PROCESS</a>
+    <a href="#research">RESEARCH</a>
+    <a href="#direction">DIRECTION</a>
+    <a href="#final-design">PROPOSED LAYOUT</a>
+    <a href="#retrospective">REVIEW</a>
+  </nav></div>
+<section class="case-section unified-chapter contribution-only" id="overview" aria-labelledby="overview-title" tabindex="-1">
+  <h2 class="section-kicker" id="overview-title">MY CONTRIBUTION</h2>
+  <div class="role-note">
+    <p>네 가지 IVI 레이아웃을 비교하기 위해 공조·앱 탐색·전화 과제를 설계했습니다. 주행 시뮬레이터에서 참여자 실험을 직접 진행하며 각 과제에 걸린 시간과 클릭 행동을 기록하고, 설문으로 참가자가 느낀 작업부하를 확인했습니다.</p>
+    <p>수행 데이터와 참여자 응답을 함께 분석해, 메뉴를 찾는 과정과 공조를 반복해서 조절하는 과정에 맞는 배치 원칙을 도출했습니다. 이 결과를 연구 보고서와 발표 자료로 정리해 대한인간공학회 모빌리티 세션에서 직접 발표했습니다.</p>
+  </div>
+</section>
+<aside class="case-toc" aria-label="프로젝트 목차"><span class="case-toc-label" aria-hidden="true">INDEX</span><nav class="case-nav" aria-label="프로젝트 목차">
+    <a href="#background">BACKGROUND</a>
+    <a href="#goal">GOAL &amp; PROCESS</a>
+    <a href="#research">RESEARCH</a>
+    <a href="#direction">DIRECTION</a>
+    <a href="#final-design">PROPOSED LAYOUT</a>
+    <a href="#retrospective">REVIEW</a>
+  </nav><a data-case-prototype class="mobile-prototype-link" data-prototype-mobile="" href="https://www.figma.com/proto/FF8CphVdOl1e6iASFM4ef2/IVIS?page-id=0%3A1&amp;node-id=103-936&amp;starting-point-node-id=103%3A936&amp;scaling=scale-down" rel="noopener noreferrer" target="_blank"><span>VIEW PROTOTYPE</span><span class="case-prototype-arrow" aria-hidden="true">↗</span><span class="sr-only">새 탭에서 열기</span></a></aside>
+<section class="case-section unified-chapter ivi-chapter" id="background" aria-labelledby="background-title" tabindex="-1">
+  <header class="ivi-heading"><p class="ivi-label">BACKGROUND</p><h2 id="background-title">화면에 기능이 모여도 조작 방식은 다릅니다.</h2><p class="ivi-lead">물리 버튼으로 분리되어 있던 기능이 통합 터치스크린으로 이동하면서 운전자의 조작 방식도 달라지고 있습니다.</p></header>
+  <div class="ivi-pair ivi-context">
+    <figure><img src="/work/ivi/assets/bmw-background.jpg" width="1280" height="800" alt="계기판과 물리 조작부가 분리된 차량 내부" loading="lazy" decoding="async"/><figcaption><strong>SEPARATED</strong><span>물리 버튼 중심의 분리된 조작 구조</span></figcaption></figure>
+    <figure><img src="/work/ivi/assets/tesla-background.png" width="1000" height="498" alt="중앙 터치스크린에 주요 기능이 모인 차량 내부" loading="lazy" decoding="async"/><figcaption><strong>INTEGRATED</strong><span>터치스크린에 기능이 통합된 조작 구조</span></figcaption></figure>
+  </div>
+  <article class="ivi-block ivi-external">
+    <header class="ivi-heading"><p class="ivi-label">EXTERNAL RESEARCH</p><h3>같은 네 가지 조작, 다른 수행시간</h3><p class="ivi-lead">물리 버튼 중심의 대시보드와 터치스크린 중심의 조작 방식은 얼마나 다를까요? 차량 12대에서 시속 110km로 주행하며 네 가지 조작 과제의 수행시간과 주행거리를 측정했습니다.</p></header>
+    <div class="ivi-pair ivi-vehicles">
+      <figure><img src="/work/ivi/assets/volvo-v70-vibilagare.jpg" width="907" height="605" alt="2005년식 Volvo V70의 물리 버튼과 센터 콘솔" loading="lazy" decoding="async"/><figcaption><span>Volvo V70 (2005)</span><strong>10.0<small>초</small></strong><b>306 m 주행</b><div class="ivi-meter" aria-hidden="true"><span style="--value:22.27%"></span></div></figcaption></figure>
+      <figure><img src="/work/ivi/assets/mg-marvel-r-vibilagare.jpg" width="907" height="605" alt="MG Marvel R의 중앙 터치스크린" loading="lazy" decoding="async"/><figcaption><span>MG Marvel R</span><strong>44.9<small>초</small></strong><b>1,372 m 주행</b><div class="ivi-meter" aria-hidden="true"><span style="--value:100%"></span></div></figcaption></figure>
+    </div>
+    <p class="ivi-lead ivi-comparison-summary">같은 네 가지 조작에 물리 버튼 중심의 Volvo V70은 <strong>10.0초</strong>, 터치스크린 중심의 MG Marvel R은 <strong>44.9초</strong>가 걸렸습니다. MG의 수행시간은 Volvo의 약 4.5배였습니다.</p>
+    <section class="ivi-subsection" aria-labelledby="ivi-touch-comparison-title">
+      <header class="ivi-heading">
+        <h4 id="ivi-touch-comparison-title">터치스크린 차량끼리도 조작&nbsp;시간은 두 배 이상 차이 났습니다.</h4>
+      </header>
+      <div class="ivi-pair">
+        <figure>
+          <img src="/work/ivi/assets/timing-vibilagare.jpg" width="907" height="605" alt="차량 조작 시간을 스마트폰 스톱워치로 재고 기록하는 모습" loading="lazy" decoding="async"/>
+          <figcaption><strong>과제별 시간 측정</strong><span>네 가지 조작의 소요 시간을 각각 측정했습니다.</span></figcaption>
+        </figure>
+        <figure>
+          <img src="/work/ivi/assets/bmw-ix-vibilagare.jpg" width="907" height="605" alt="시험 운전자가 BMW iX의 중앙 디스플레이에서 기능을 조작하는 모습" loading="lazy" decoding="async"/>
+          <figcaption><strong>BMW iX · 30.4초</strong><span>Vi Bilägare는 기능이 많고 원하는 조작을 찾기 어렵다고 평가했습니다.</span><small>사진 4장 · Glenn Lindberg/Vi Bilägare</small></figcaption>
+        </figure>
+      </div>
+      <p class="ivi-lead ivi-comparison-summary">조작 구성이 단순하다고 평가된 Dacia Sandero(<strong>13.5초</strong>)와 Volvo C40(<strong>13.7초</strong>)에 비해, 메뉴와 조작 구성이 복잡하다고 평가된 Seat Leon(<strong>29.3초</strong>)과 BMW iX(<strong>30.4초</strong>)는 같은 네 가지 과제에 더 오래 걸렸습니다.</p>
+      <p class="ivi-source">출처: Vi Bilägare (2022), Physical buttons outperform touchscreens in new cars, test finds.</p>
+    </section>
+  </article>
+  <div class="ivi-takeaway"><p>운전 중 조작 부담을 줄이기 위해서는 기능의 통합뿐 아니라, <strong>사용 목적에 적합한 레이아웃 설계</strong>가 중요합니다.</p></div>
+</section>
+<section class="case-section unified-chapter ivi-chapter" id="goal" aria-labelledby="goal-title" tabindex="-1">
+  <header class="ivi-heading"><p class="ivi-label">GOAL &amp; PROCESS</p><h2 id="goal-title">운전자의 조작 부담을 줄이는 IVI 레이아웃은 무엇일까?</h2><p class="ivi-lead">네 가지 IVI 레이아웃을 동일한 과제로 비교해 운전자 수행도와 주관적 작업부하의 차이를 확인합니다.</p></header>
+  <div class="ivi-process"><article><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h18v18H3z M12 3v18 M3 10h18"/></svg><h3>LAYOUT STUDY</h3><p>네 가지 IVI 레이아웃 구성 및 비교 조건 설정</p></article>
+<article><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4H5v17h14V4h-3 M8 3h8v4H8z M8 12h2m3 0h3m-8 4h2m3 0h3"/></svg><h3>EXPERIMENT DESIGN</h3><p>실험 과제와 평가 항목 및 진행 절차 설계</p></article>
+<article><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z M4 21v-2a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v2"/></svg><h3>USER TEST</h3><p>참여자 실험 진행 및 수행 데이터 수집</p></article>
+<article><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3v17h17 M8 16v-4m5 4V8m5 8V5"/></svg><h3>DATA ANALYSIS</h3><p>수행시간과 주관적 작업부하 분석</p></article></div>
+</section>
+<section class="case-section unified-chapter ivi-chapter" id="research" aria-labelledby="research-title" tabindex="-1">
+  <header class="ivi-heading"><p class="ivi-label">RESEARCH</p><h2 id="research-title">네 가지 레이아웃을 같은 기준으로 비교했습니다.</h2></header>
+  <section class="ivi-block" id="study">
+    <header class="ivi-heading"><p class="ivi-label">LAYOUT STUDY</p><h3>15개 사례를 분석해 네 가지 메뉴 구조를 도출했습니다.</h3></header>
+    <div class="ivi-archive"><article><header><h4>통합 메뉴형</h4><span>6 CASES</span></header><div class="ivi-archive-media"><img alt="하단에 메뉴와 공조가 모인 통합 메뉴형 참고 사례 1" height="173" loading="lazy" src="/work/ivi/assets/references/unified-01.jpg" width="235"/><img alt="통합 메뉴형 참고 사례 2" height="176" loading="lazy" src="/work/ivi/assets/references/unified-02.jpg" width="274"/><img alt="통합 메뉴형 참고 사례 3" height="176" loading="lazy" src="/work/ivi/assets/references/unified-03.jpg" width="304"/><img alt="통합 메뉴형 참고 사례 4" height="168" loading="lazy" src="/work/ivi/assets/references/unified-04.jpg" width="261"/><img alt="통합 메뉴형 참고 사례 5" height="169" loading="lazy" src="/work/ivi/assets/references/unified-05.jpg" width="278"/><img alt="통합 메뉴형 참고 사례 6" height="169" loading="lazy" src="/work/ivi/assets/references/unified-06.jpg" width="212"/></div></article>
+<article><header><h4>더블 탭 메뉴형</h4><span>4 CASES</span></header><div class="ivi-archive-media"><img alt="추가 탭으로 접근하는 더블 탭 메뉴형 참고 사례 1" height="161" loading="lazy" src="/work/ivi/assets/references/double-01.jpg" width="385"/><img alt="더블 탭 메뉴형 참고 사례 2" height="218" loading="lazy" src="/work/ivi/assets/references/double-02.jpg" width="150"/><img alt="더블 탭 메뉴형 참고 사례 3" height="218" loading="lazy" src="/work/ivi/assets/references/double-03.jpg" width="142"/><img alt="더블 탭 메뉴형 참고 사례 4" height="218" loading="lazy" src="/work/ivi/assets/references/double-04.jpg" width="206"/></div></article>
+
+<article><header><h4>상단 메뉴형</h4><span>1 CASE</span></header><div class="ivi-archive-media"><img alt="상단에 메뉴를 배치한 참고 사례" height="182" loading="lazy" src="/work/ivi/assets/references/top-01.jpg" width="279"/></div></article>
+<article><header><h4>측면 메뉴형</h4><span>4 CASES</span></header><div class="ivi-archive-media"><img alt="측면에 메뉴를 고정한 참고 사례 1" height="190" loading="lazy" src="/work/ivi/assets/references/side-01.jpg" width="395"/><img alt="측면 메뉴형 참고 사례 2" height="190" loading="lazy" src="/work/ivi/assets/references/side-02.jpg" width="283"/><img alt="측면 메뉴형 참고 사례 3" height="180" loading="lazy" src="/work/ivi/assets/references/side-03.jpg" width="546"/><img alt="측면 메뉴형 참고 사례 4" height="180" loading="lazy" src="/work/ivi/assets/references/side-04.jpg" width="280"/></div></article></div>
+    <div class="ivi-pair ivi-prototypes"><figure><figcaption><strong>통합 메뉴형</strong><span>메뉴와 공조가 같은 하단 바에 놓입니다.</span></figcaption><div class="ivi-interface"><img src="/work/ivi/assets/latest/unified.webp" width="1308" height="800" alt="통합 메뉴형 IVI 프로토타입" loading="lazy" decoding="async"/><span class="ivi-region" style="--x:35.5%;--y:94%;--w:35%;--h:6%" aria-hidden="true"></span><span class="ivi-region ivi-region--climate" style="--x:13.8%;--y:94%;--w:17%;--h:6%" aria-hidden="true"></span><span class="ivi-region ivi-region--climate" style="--x:72.5%;--y:94%;--w:19%;--h:6%" aria-hidden="true"></span></div><ul class="ivi-legend"><li>MENU ENTRY</li><li>CLIMATE CONTROL</li></ul></figure>
+<figure><figcaption><strong>더블 탭 메뉴형</strong><span>메뉴와 공조를 하단의 두 줄로 구분합니다.</span></figcaption><div class="ivi-interface"><img src="/work/ivi/assets/latest/double.webp" width="1308" height="800" alt="더블 탭 메뉴형 IVI 프로토타입" loading="lazy" decoding="async"/><span class="ivi-region" style="--x:8.5%;--y:87%;--w:84%;--h:6.4%" aria-hidden="true"></span><span class="ivi-region ivi-region--climate" style="--x:8.5%;--y:94%;--w:81%;--h:6%" aria-hidden="true"></span></div><ul class="ivi-legend"><li>MENU ENTRY</li><li>CLIMATE CONTROL</li></ul></figure>
+
+<figure><figcaption><strong>상단 메뉴형</strong><span>메뉴는 화면 위에, 공조는 아래에 둡니다.</span></figcaption><div class="ivi-interface"><img src="/work/ivi/assets/latest/top.webp" width="1308" height="800" alt="상단 메뉴형 IVI 프로토타입" loading="lazy" decoding="async"/><span class="ivi-region" style="--x:14.5%;--y:0.4%;--w:73%;--h:6%" aria-hidden="true"></span><span class="ivi-region ivi-region--climate" style="--x:8.5%;--y:94%;--w:81%;--h:6%" aria-hidden="true"></span></div><ul class="ivi-legend"><li>MENU ENTRY</li><li>CLIMATE CONTROL</li></ul></figure>
+<figure><figcaption><strong>측면 메뉴형</strong><span>왼쪽에 메뉴를 고정하고 아래에 공조를 배치합니다.</span></figcaption><div class="ivi-interface"><img src="/work/ivi/assets/latest/side.webp" width="1308" height="800" alt="측면 메뉴형 IVI 프로토타입" loading="lazy" decoding="async"/><span class="ivi-region" style="--x:0.3%;--y:3.8%;--w:3.6%;--h:78%" aria-hidden="true"></span><span class="ivi-region ivi-region--climate" style="--x:8.5%;--y:94%;--w:81%;--h:6%" aria-hidden="true"></span></div><ul class="ivi-legend"><li>MENU ENTRY</li><li>CLIMATE CONTROL</li></ul></figure></div>
+    <div class="ivi-takeaway"><p>도출한 네 가지 레이아웃을 동일한 조작 과제에 적용해 <strong>운전자 수행도와 주관적 작업부하</strong>를 비교했습니다.</p></div>
+  </section>
+  <section class="ivi-block" id="method">
+    <header class="ivi-heading"><p class="ivi-label">TASKS &amp; USER TEST</p><h3>실제 주행 상황에서 발생하는 세 가지 조작 과제를 구성했습니다.</h3><p class="ivi-lead">공조 조절, 앱 탐색, 전화 걸기 과제를 수행하며 레이아웃에 따른 조작 차이를 비교했습니다.</p></header>
+    <div class="ivi-task-list"><figure><figcaption><strong>CLIMATE CONTROL</strong><span>온도와 풍량 조절, 열선 및 김서림 방지 기능 조작</span></figcaption><img src="/work/ivi/assets/latest/climate.webp" width="1308" height="800" alt="공조 조절 실험 프로토타입 화면" loading="lazy" decoding="async"/></figure>
+<figure><figcaption><strong>APP MENU</strong><span>앱 배치 설정에서 아이콘을 이동해 퀵 버튼으로 변경</span></figcaption><img src="/work/ivi/assets/latest/menu.webp" width="1308" height="800" alt="앱 탐색 실험 프로토타입 화면" loading="lazy" decoding="async"/></figure>
+<figure><figcaption><strong>CALL</strong><span>연락처를 탐색해 지정된 인물에게 전화 걸기</span></figcaption><img src="/work/ivi/assets/latest/phone.webp" width="1308" height="800" alt="선택한 연락처로 통화를 연결하는 IVI 화면" loading="lazy" decoding="async"/></figure></div>
+    <div class="ivi-subsection">
+      <header class="ivi-heading"><p class="ivi-label">TEST ENVIRONMENT</p><h3>동일한 주행 시뮬레이션 환경에서 실험을 진행했습니다.</h3></header>
+      <div class="ivi-environment">
+        <div class="ivi-test-details">
+          <dl class="ivi-test-metrics"><div><dt>참여자</dt><dd>15<small>명</small></dd></div><div><dt>실험 시간</dt><dd>40<small>분 내외</small></dd></div></dl>
+          <p>20~30대 · 운전 경력 1년 이상</p>
+          <ul><li>BeamNG.drive · Thrustmaster T300RS 휠·페달</li><li>Samsung Flex 2 터치스크린 · Figma · Maze</li></ul>
+        </div>
+        <img src="/work/ivi/assets/figma/724-88-imgIllustrationSimulatorConfiguration.png" width="1536" height="1024" alt="주행 시뮬레이터의 모니터, 휠, 페달 및 보조 터치스크린 배치 일러스트" loading="lazy" decoding="async"/>
+      </div>
+    </div>
+    <div class="ivi-subsection">
+      <header class="ivi-heading"><p class="ivi-label">EVALUATION</p><h3>수행 결과와 조작 행동, 주관적 부담을 함께 평가했습니다.</h3></header>
+      <section class="ivi-timeline" aria-labelledby="ivi-timeline-title">
+        <h4 id="ivi-timeline-title">실험 진행 순서 <span>약 40분</span></h4>
+        <div class="ivi-timeline-axis" aria-hidden="true"><div>
+          <span>0</span><span>5</span><span>10</span><span>20</span><span>30</span><span>40분</span>
+        </div></div>
+        <ol class="ivi-timeline-steps">
+          <li><div><h5>사전 설명</h5><span>0–5분</span></div><div class="ivi-timeline-track" aria-hidden="true"><i style="--phase: 1 / span 1"></i></div><p>실험 목적과 진행 방법을 안내하고 사전 설문을 작성했습니다.</p></li>
+          <li><div><h5>연습 주행</h5><span>5–10분</span></div><div class="ivi-timeline-track" aria-hidden="true"><i style="--phase: 2 / span 1"></i></div><p>시뮬레이터에서 휠과 페달을 조작하며 주행에 익숙해졌습니다.</p></li>
+          <li><div><h5>레이아웃별 과제</h5><span>10–30분</span></div><div class="ivi-timeline-track" aria-hidden="true"><i style="--phase: 3 / span 4"></i></div><p>학습 효과를 줄이기 위해 레이아웃과 과제의 제시 순서를 무작위로 정했습니다. 참여자는 정차 상태에서 과제를 읽고 30초간 주행한 뒤 조작을 시작했습니다.</p></li>
+          <li><div><h5>사후 인터뷰 및 설문</h5><span>30–40분</span></div><div class="ivi-timeline-track" aria-hidden="true"><i style="--phase: 7 / span 2"></i></div><p>레이아웃별 작업부하와 만족도를 평가하고 주행 중 터치스크린 조작 경험을 들었습니다.</p></li>
+        </ol>
+      </section>
+      <section class="ivi-assessment" aria-labelledby="ivi-objective-evaluation">
+        <h4 id="ivi-objective-evaluation">OBJECTIVE EVALUATION</h4>
+        <dl class="ivi-evaluation ivi-evaluation--objective">
+          <div><dt>과제 수행시간</dt><dd>과제 시작부터 완료까지 걸린 시간으로 조작 속도를 비교했습니다.</dd></div>
+          <div><dt>총 클릭 수</dt><dd>전체 클릭 수를 세어 과제에 필요한 조작량을 비교했습니다.</dd></div>
+          <div><dt>클릭 오류율</dt><dd>조작 정확도를 비교하기 위해 잘못된 버튼이나 영역을 누른 클릭의 비율을 확인했습니다.</dd></div>
+          <div><dt>클릭 히트맵</dt><dd>사용자가 어떤 영역을 눌렀는지 살펴보기 위해 클릭 위치와 빈도를 시각화했습니다.</dd></div>
+        </dl>
+        <figure class="ivi-assessment-art ivi-assessment-art--heatmap" id="click-patterns">
+          <img src="/work/ivi/assets/latest/heat-side.webp" width="2616" height="1600" alt="앱 메뉴 과제에서 측면 메뉴형의 클릭 위치를 색으로 표시한 히트맵" loading="lazy" decoding="async"/>
+        </figure>
+      </section>
+      <section class="ivi-assessment" aria-labelledby="ivi-subjective-evaluation">
+        <h4 id="ivi-subjective-evaluation">SUBJECTIVE EVALUATION</h4>
+        <dl class="ivi-evaluation">
+          <div><dt>작업부하 · 7점 척도</dt><dd>조작에 필요한 집중과 노력의 정도를 알아보기 위해 NASA-TLX 기반 6개 항목을 평가했습니다.</dd></div>
+          <div><dt>만족도 · 5점 척도</dt><dd>각 레이아웃에서 조작이 쉽고 정보를 찾기 편했는지 알아보기 위해 조작 용이성, 정보 가독성, 시선 분산 정도, 기능 접근성을 평가했습니다.</dd></div>
+          <div><dt>주관식 응답</dt><dd>수치로 드러나기 어려운 주행 중 사용 습관과 불편을 파악하기 위해 자주 쓰는 기능, 주의 분산 경험, 배치·크기·색상의 영향을 물었습니다.</dd></div>
+        </dl>
+        <figure class="ivi-assessment-art ivi-assessment-art--survey">
+          <img src="/work/ivi/assets/ivi-google-form-capture.png" width="645" height="969" alt="운전자 경험을 고려한 차량 IVI 콘텐츠 레이아웃 사용성 연구의 Google Forms 설문 첫 화면. 연구 목적과 사전 설명을 안내합니다." loading="lazy" decoding="async"/>
+        </figure>
+      </section>
+    </div>
+  </section>
+  <section class="ivi-block" id="results">
+    <header class="ivi-heading"><p class="ivi-label">RESULTS</p><h3>과제에 따라 효율적인 레이아웃은 달랐습니다.</h3><p class="ivi-lead">공조에서는 통합형이, 앱 탐색과 전화 걸기에서는 측면형이 가장 짧은 평균 수행시간을 보였습니다.</p></header>
+    <div class="ivi-results-strip"><figure id="task-result-climate"><img src="/work/ivi/assets/latest/unified.webp" width="1308" height="800" alt="통합 메뉴형 IVI 프로토타입" loading="lazy" decoding="async"/><figcaption><span>CLIMATE CONTROL</span><strong>15.15<small>초</small></strong><b>통합 메뉴형 · 최단 평균</b></figcaption></figure>
+<figure id="task-result-menu"><img src="/work/ivi/assets/latest/side.webp" width="1308" height="800" alt="측면 메뉴형 IVI 프로토타입" loading="lazy" decoding="async"/><figcaption><span>APP MENU</span><strong>19.49<small>초</small></strong><b>측면 메뉴형 · 최단 평균</b></figcaption></figure>
+<figure id="task-result-phone"><img src="/work/ivi/assets/latest/side.webp" width="1308" height="800" alt="측면 메뉴형 IVI 프로토타입" loading="lazy" decoding="async"/><figcaption><span>CALL</span><strong>13.87<small>초</small></strong><b>측면 메뉴형 · 최단 평균</b></figcaption></figure></div>
+    <section class="ivi-subsection" id="objective">
+      <header class="ivi-heading"><p class="ivi-label">OBJECTIVE PERFORMANCE</p><h3>수행시간과 조작 오류에서 레이아웃별 차이가 나타났습니다.</h3><p class="ivi-lead">세 과제에서 레이아웃에 따라 걸린 시간이 달랐습니다. 앱 메뉴 과제에서는 클릭 수와 오류율에서도 차이가 확인됐습니다.</p></header>
+      <h4 class="ivi-metric-heading">과제 수행시간 <span>짧을수록 빠름 · 평균 0–30초</span></h4>
+      <div class="ivi-time-charts"><article><h5>공조</h5><ul><li class="ivi-best"><span>통합형</span><strong>15.15초</strong><div class="ivi-meter" aria-hidden="true"><span style="--value:50.5%"></span></div></li><li><span>더블 탭형</span><strong>19.14초</strong><div class="ivi-meter" aria-hidden="true"><span style="--value:63.8%"></span></div></li><li class="ivi-worst"><span>상단형</span><strong>22.32초</strong><div class="ivi-meter" aria-hidden="true"><span style="--value:74.4%"></span></div></li><li><span>측면형</span><strong>17.96초</strong><div class="ivi-meter" aria-hidden="true"><span style="--value:59.86666666666667%"></span></div></li></ul></article>
+<article><h5>앱 메뉴</h5><ul><li><span>통합형</span><strong>22.15초</strong><div class="ivi-meter" aria-hidden="true"><span style="--value:73.83333333333333%"></span></div></li><li><span>더블 탭형</span><strong>24.74초</strong><div class="ivi-meter" aria-hidden="true"><span style="--value:82.46666666666667%"></span></div></li><li class="ivi-worst"><span>상단형</span><strong>28.71초</strong><div class="ivi-meter" aria-hidden="true"><span style="--value:95.7%"></span></div></li><li class="ivi-best"><span>측면형</span><strong>19.49초</strong><div class="ivi-meter" aria-hidden="true"><span style="--value:64.96666666666665%"></span></div></li></ul></article>
+<article><h5>전화 걸기</h5><ul><li><span>통합형</span><strong>15.35초</strong><div class="ivi-meter" aria-hidden="true"><span style="--value:51.166666666666664%"></span></div></li><li class="ivi-worst"><span>더블 탭형</span><strong>20.14초</strong><div class="ivi-meter" aria-hidden="true"><span style="--value:67.13333333333334%"></span></div></li><li><span>상단형</span><strong>16.05초</strong><div class="ivi-meter" aria-hidden="true"><span style="--value:53.5%"></span></div></li><li class="ivi-best"><span>측면형</span><strong>13.87초</strong><div class="ivi-meter" aria-hidden="true"><span style="--value:46.233333333333334%"></span></div></li></ul></article></div>
+      <p class="ivi-result-insight">평균 수행시간은 <strong>공조에서 통합형</strong>, <strong>앱 메뉴와 전화 걸기에서 측면형</strong>이 가장 짧았습니다.</p>
+      <h4 class="ivi-metric-heading">총 클릭 수 <span>적을수록 조작이 간단함 · 평균 횟수</span></h4>
+      <div class="ivi-click-matrix"><article><h5>통합형</h5><dl><div class="ivi-best"><dt>공조</dt><dd>8.33</dd></div><div><dt>앱 메뉴</dt><dd>5.87</dd></div><div><dt>전화 걸기</dt><dd>6.40</dd></div></dl></article>
+<article><h5>더블 탭형</h5><dl><div><dt>공조</dt><dd>11.20</dd></div><div class="ivi-worst"><dt>앱 메뉴</dt><dd>11.20</dd></div><div class="ivi-worst"><dt>전화 걸기</dt><dd>7.80</dd></div></dl></article>
+<article><h5>상단형</h5><dl><div class="ivi-worst"><dt>공조</dt><dd>14.20</dd></div><div><dt>앱 메뉴</dt><dd>7.40</dd></div><div><dt>전화 걸기</dt><dd>7.07</dd></div></dl></article>
+<article><h5>측면형</h5><dl><div><dt>공조</dt><dd>11.33</dd></div><div class="ivi-best"><dt>앱 메뉴</dt><dd>5.67</dd></div><div class="ivi-best"><dt>전화 걸기</dt><dd>6.13</dd></div></dl></article></div>
+      <p class="ivi-result-insight">앱 메뉴 과제에 필요한 클릭 수는 <strong>측면형 평균 5.67회</strong>로, <strong>더블 탭형 평균 11.20회</strong>의 절반 수준이었습니다.</p>
+      <div class="ivi-table" role="region" aria-labelledby="ivi-errors" tabindex="0"><table>
+  <caption id="ivi-errors">클릭 오류율<span>낮을수록 오류가 적음 · 평균 %</span></caption>
+  <thead><tr><th scope="col">항목</th><th scope="col">통합형</th><th scope="col">더블 탭형</th><th scope="col">상단형</th><th scope="col">측면형</th></tr></thead>
+  <tbody><tr><th scope="row">공조</th><td class="ivi-best">41%</td><td>52%</td><td class="ivi-worst">58%</td><td>54%</td></tr>
+<tr><th scope="row">앱 메뉴</th><td>28%</td><td class="ivi-worst">52%</td><td>36%</td><td class="ivi-best">24%</td></tr>
+<tr><th scope="row">전화 걸기</th><td>27%</td><td class="ivi-worst">32%</td><td class="ivi-worst">32%</td><td class="ivi-best">19%</td></tr></tbody>
+</table></div>
+      <p class="ivi-result-insight">앱 메뉴에서 <strong>측면형의 클릭 오류율은 24%</strong>로, 더블 탭형의 52%보다 낮았습니다.</p>
+    </section>
+    <section class="ivi-subsection" id="voices">
+      <header class="ivi-heading"><p class="ivi-label">SUBJECTIVE EXPERIENCE</p><h3>사용자가 느끼는 작업부하와 만족도도 달랐습니다.</h3><p class="ivi-lead">운전자는 레이아웃마다 조작에 들이는 노력과 사용 편의성을 다르게 평가했습니다.</p></header>
+      <div class="ivi-pair ivi-subjective-stats">
+        <div class="ivi-score-panel ivi-score-panel--workload">
+          <h4>작업부하 · NASA-TLX</h4>
+          <p>낮을수록 부담이 적음 · 7점 척도</p>
+          <dl>
+            <div class="ivi-best"><dt>측면형 · 최저</dt><dd>2.90<span>점</span></dd></div>
+            <div class="ivi-worst"><dt>상단형 · 최고</dt><dd>4.75<span>점</span></dd></div>
+          </dl>
+        </div>
+        <div class="ivi-score-panel ivi-score-panel--satisfaction">
+          <h4>만족도</h4>
+          <p>높을수록 만족도가 높음 · 5점 척도</p>
+          <dl>
+            <div class="ivi-best"><dt>측면형 · 최고</dt><dd>4.25<span>점</span></dd></div>
+            <div class="ivi-worst"><dt>상단형 · 최저</dt><dd>2.70<span>점</span></dd></div>
+          </dl>
+        </div>
+      </div>
+      <p class="ivi-result-insight">네 레이아웃 중 측면형은 <strong>작업부하 평균이 가장 낮고</strong> <strong>만족도 평균이 가장 높았습니다.</strong></p>
+      <details class="ivi-disclosure"><summary>NASA-TLX와 만족도 전체 항목 보기</summary>
+        <div class="ivi-table" role="region" aria-labelledby="ivi-nasa" tabindex="0"><table>
+  <caption id="ivi-nasa">NASA-TLX<span>7점 척도</span></caption>
+  <thead><tr><th scope="col">항목</th><th scope="col">통합형</th><th scope="col">더블 탭형</th><th scope="col">상단형</th><th scope="col">측면형</th></tr></thead>
+  <tbody><tr><th scope="row">정신적 요구도</th><td>4.07</td><td>4.07</td><td>5.27</td><td>2.80</td></tr>
+<tr><th scope="row">신체적 요구도</th><td>3.33</td><td>3.20</td><td>5.07</td><td>2.33</td></tr>
+<tr><th scope="row">시간적 요구도</th><td>3.93</td><td>3.67</td><td>4.60</td><td>3.13</td></tr>
+<tr><th scope="row">작업 수행도</th><td>4.53</td><td>4.47</td><td>4.20</td><td>4.00</td></tr>
+<tr><th scope="row">노력도</th><td>3.73</td><td>4.07</td><td>4.53</td><td>2.87</td></tr>
+<tr><th scope="row">좌절감</th><td>3.40</td><td>4.00</td><td>4.80</td><td>2.27</td></tr></tbody>
+</table></div>
+        <p class="ivi-note">작업 수행도는 원하는 대로 정확히 수행했다고 느낀 정도를 묻는 항목입니다.</p>
+        <div class="ivi-table" role="region" aria-labelledby="ivi-satisfaction" tabindex="0"><table>
+  <caption id="ivi-satisfaction">SATISFACTION<span>5점 척도</span></caption>
+  <thead><tr><th scope="col">항목</th><th scope="col">통합형</th><th scope="col">더블 탭형</th><th scope="col">상단형</th><th scope="col">측면형</th></tr></thead>
+  <tbody><tr><th scope="row">조작의 용이성</th><td>3.73</td><td>3.60</td><td>2.87</td><td>4.40</td></tr>
+<tr><th scope="row">정보 가독성</th><td>3.73</td><td>3.40</td><td>2.60</td><td>4.33</td></tr>
+<tr><th scope="row">시선 분산 정도</th><td>3.67</td><td>3.13</td><td>2.67</td><td>4.00</td></tr>
+<tr><th scope="row">기능 접근성</th><td>3.67</td><td>3.33</td><td>2.67</td><td>4.27</td></tr></tbody>
+</table></div>
+        <p class="ivi-note">시선 분산 정도는 화면 확인에 대한 자기보고 평가입니다.</p>
+      </details>
+      <div class="ivi-user-voices"><h4>USER VOICES <span>주관식 응답 15건 요약</span></h4><dl>
+        <div><dt>가장 자주 언급된 기능</dt><dd>15명 중 11명이 음악을 언급했습니다. 내비게이션·통화·공조도 자주 쓰는 기능으로 나왔습니다.</dd></div>
+        <div><dt>터치 실패와 조작 회피</dt><dd>터치가 잘되지 않아 화면을 오래 봤다는 응답이 있었습니다. 한 응답자는 주의가 분산된 경험 이후 주행 중 터치스크린을 쓰지 않는다고 했습니다. 불편한 경험이 없었다는 응답도 있었습니다.</dd></div>
+        <div><dt>조작 대상의 크기·간격·대비</dt><dd>크기와 간격이 특히 중요하다는 의견이 있었고, 앱 배치 과제에서는 배치 확인과 완료 버튼의 색 대비가 낮아 찾기 어려웠다는 응답이 있었습니다.</dd></div>
+      </dl>
+        <p class="ivi-result-insight">주관식 응답에서도 <strong>버튼의 크기와 간격, 낮은 색 대비</strong>가 터치와 기능 탐색을 어렵게 하는 지점임을 확인할 수 있었습니다.</p>
+      </div>
+    </section>
+    <section class="ivi-subsection" id="findings">
+      <header class="ivi-heading"><p class="ivi-label">KEY FINDINGS</p><h3>하나의 레이아웃이 모든 기능에 적합하지는 않았습니다.</h3></header>
+      <div class="ivi-findings">
+        <article>
+          <h4>객관적 수행 결과</h4>
+          <p>반복 조절이 필요한 <strong>공조는 통합형</strong>에서, 메뉴 진입과 탐색이 필요한 <strong>앱 메뉴와 전화 걸기는 측면형</strong>에서 평균 수행시간이 가장 짧았습니다.</p>
+        </article>
+        <article>
+          <h4>주관적 사용 경험</h4>
+          <p>측면형은 <strong>부담이 낮고 만족도가 높았으며</strong>, 주관식 응답에서는 버튼의 크기와 간격, 색 대비가 조작과 탐색을 어렵게 하는 지점으로 드러났습니다.</p>
+        </article>
+      </div>
+      <p class="ivi-close">기능을 <strong>찾는 과정</strong>과 기능을 <strong>반복해 조절하는 과정</strong>에는 서로 다른 배치 원칙이 필요합니다.</p>
+    </section>
+  </section>
+</section>
+<section class="case-section unified-chapter ivi-chapter" id="direction" aria-labelledby="direction-title" tabindex="-1">
+  <header class="ivi-heading"><p class="ivi-label">DIRECTION</p><h2 id="direction-title">탐색은 고정된 위치에서, 조절은 바로 접근하도록.</h2><p class="ivi-lead">실험에서 확인한 기능별 수행 차이를 바탕으로 메뉴 탐색과 반복 조절에 서로 다른 배치 원칙을 적용했습니다.</p></header>
+  <div class="ivi-pair ivi-directions">
+    <article>
+      <div class="ivi-gestalt">
+        <svg viewBox="0 0 80 64" aria-hidden="true">
+          <g class="ivi-gestalt-mark"><circle cx="15" cy="19" r="4"/><circle cx="27" cy="19" r="4"/><circle cx="15" cy="32" r="4"/><circle cx="27" cy="32" r="4"/><circle cx="15" cy="45" r="4"/><circle cx="27" cy="45" r="4"/></g>
+          <circle cx="58" cy="19" r="4"/><circle cx="68" cy="32" r="4"/><circle cx="53" cy="46" r="4"/>
+        </svg>
+        <h3>근접성의 법칙</h3>
+        <p>관련 진입 아이콘을 화면 왼쪽에 가깝게 모았습니다. 메뉴와 인포테인먼트 기능이 하나의 탐색 그룹으로 읽혀, 어디서 탐색을 시작해야 하는지 예측하기 쉽습니다.</p>
+      </div>
+    </article>
+    <article>
+      <div class="ivi-gestalt">
+        <svg viewBox="0 0 80 64" aria-hidden="true">
+          <circle cx="20" cy="15" r="4"/><circle cx="40" cy="15" r="4"/><circle cx="60" cy="15" r="4"/>
+          <g class="ivi-gestalt-mark"><rect x="9" y="29" width="62" height="23" rx="5"/><circle cx="20" cy="40.5" r="4"/><circle cx="40" cy="40.5" r="4"/><circle cx="60" cy="40.5" r="4"/></g>
+        </svg>
+        <h3>공통 영역의 법칙</h3>
+        <p>온도·풍량·열선 조작을 같은 하단 바에 묶어 공조 기능의 범위를 한눈에 구분할 수 있게 했습니다. 반복 조절은 이 영역 안에서 바로 할 수 있습니다.</p>
+      </div>
+    </article>
+  </div>
+</section>
+<span id="concept" class="chapter-alias"></span><span id="design-system" class="chapter-alias"></span>
+<section class="case-section unified-chapter ivi-chapter" id="final-design" aria-labelledby="final-design-title" tabindex="-1">
+  <header class="ivi-heading"><p class="ivi-label">PROPOSED LAYOUT</p><h2 id="final-design-title">기능별 사용 맥락을 반영한 하이브리드 레이아웃</h2><p class="ivi-lead">탐색은 왼쪽에 고정하고 반복 조절은 하단에 배치해, 서로 다른 사용 목적을 하나의 화면에 통합했습니다.</p></header>
+  <figure class="ivi-proposal"><img class="ivi-proposal-image" src="/work/ivi/assets/figma/concept-clean.png" width="1942" height="810" alt="왼쪽 고정 메뉴와 하단 공조 바를 결합한 IVI 하이브리드 레이아웃 디자인 제안" loading="lazy" decoding="async"/><figcaption class="ivi-pair"><div><strong>SIDEBAR</strong><p>왼쪽에서 메뉴와 인포테인먼트 기능을 찾습니다.</p></div><div><strong>CLIMATE BAR</strong><p>하단에서 온도와 풍량을 바로 조절합니다.</p></div></figcaption></figure>
+  <p class="ivi-note">네 가지 실험 레이아웃의 관찰 결과를 바탕으로 도출한 설계 제안입니다. 결합형 레이아웃의 실차 검증은 후속 연구 과제입니다.</p>
+</section>
+<section class="case-section unified-chapter ivi-chapter" id="retrospective" aria-labelledby="retrospective-title" tabindex="-1">
+  <header class="ivi-heading"><p class="ivi-label">REVIEW</p><h2 id="retrospective-title">기능을 이해하는 것에서 시작해, 운전자의 조작 부담을 줄이는 설계로 연결했습니다.</h2><p class="ivi-lead">같은 화면에서도 메뉴를 찾을 때와 공조를 반복해서 조절할 때 필요한 접근 방식은 달랐습니다. 과제마다 달랐던 수행 결과를 바탕으로 두 조작 방식을 하나의 레이아웃에 담았습니다.</p></header>
+  <span class="chapter-alias" id="reflection"></span>
+  <div class="ivi-pair ivi-review">
+    <article><h3>KEY LEARNINGS</h3><p>공조는 통합형에서, 앱 탐색과 전화는 측면형에서 평균 수행시간이 가장 짧았습니다. 이 결과를 왼쪽 고정 메뉴와 하단 공조 바로 연결했습니다.</p><p><strong>수행시간, 클릭 오류, 주관적 작업부하</strong>를 함께 살피면서, 빠르게 끝냈는지와 조작하기 편했는지를 구분해 해석했습니다.</p></article>
+    <article><h3>LIMITATIONS &amp; NEXT STEPS</h3><p>시뮬레이터에서 20~30대 운전자 15명과 진행한 연구입니다. 다음 단계는 이 설계 제안이 실제 주행에서도 부담을 줄이는지 확인하는 것입니다.</p><ul><li>연령과 운전 경력이 다양한 운전자 대상으로 검증</li><li>실차에서 하이브리드 레이아웃의 과제 수행과 시선 이동 비교</li><li>음성 조작을 포함한 멀티모달 조작 방식 검토</li></ul></article>
+  </div>
+</section>
+<nav aria-label="다음 프로젝트" class="next-projects case-next">
+  <a class="case-next-card" href="/work/cafekok/" data-next-project="cafekok">
+          <div class="case-next-card__media"><img class="case-next-card__image" src="/assets/archive-covers/cafekok-next-1600.jpg" width="1600" height="1200" alt="" loading="lazy" decoding="async"/></div>
+    <div class="case-next-card__copy">
+      <span>NEXT PROJECT</span>
+      <h2>CAFÉKOK</h2>
+      <p>취향과 방문 목적을 연결해 나에게 맞는 카페를 발견하는 경험</p>
+    </div>
+    <span class="case-next-card__arrow"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+  </a>
+</nav></main>
+<footer class="site-footer case-footer">
+  <canvas class="hero-wave-canvas case-footer__wave" aria-hidden="true"></canvas>
+  <a class="case-footer__logo" href="/" aria-label="김성원 포트폴리오 홈"><img src="/assets/brand/symbol.svg" alt="" width="32" height="32"/></a>
+  <a class="case-footer__contact" href="mailto:ksw11205@gmail.com">ksw11205@gmail.com</a>
+  <small>© 2026 KIM SEONGWON</small>
+</footer>
+<a data-case-prototype class="prototype-float" data-prototype-float="" hidden="" href="https://www.figma.com/proto/FF8CphVdOl1e6iASFM4ef2/IVIS?page-id=0%3A1&amp;node-id=103-936&amp;starting-point-node-id=103%3A936&amp;scaling=scale-down" rel="noopener noreferrer" target="_blank"><span>VIEW PROTOTYPE</span><span class="case-prototype-arrow" aria-hidden="true">↗</span><span class="sr-only">새 탭에서 열기</span></a>
+</body></html>

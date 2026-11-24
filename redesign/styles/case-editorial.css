@@ -1,0 +1,885 @@
+/* Case-study design system. Source: Emil Kowalski skills, applied to existing product identities. */
+body[data-page=case]{
+ --reading-title:clamp(1.75rem,2.8vw,2.75rem);--reading-subtitle:clamp(1.25rem,1.9vw,1.75rem);
+ --reading-body:1.0625rem;--reading-label:1rem;--reading-radius:20px;--reading-space:clamp(48px,5vw,80px);
+ --bg:#101015;--ink:#f0edf2;--case-muted:#b8b0bf;--case-accent:#d58ebd;
+ --presentation-bg:#211a29;--presentation-ink:var(--ink);--presentation-muted:var(--case-muted);--presentation-accent:var(--case-accent);
+ font-family:PortfolioText,Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:17px;line-height:1.7;
+ background:var(--bg);color:var(--ink);overflow-wrap:break-word
+}
+@font-face{font-family:PortfolioText;src:url('/assets/fonts/PretendardVariable.woff2') format('woff2');font-weight:100 900;font-display:swap}
+body[data-project=ivi]{--bg:#10191d;--ink:#eef2f3;--case-muted:#b0c0c5;--case-accent:#83cbd6;--presentation-bg:#1b2b31}
+body[data-project=cafekok]{--bg:#f8f3eb;--ink:#382e26;--case-muted:#6d5d4e;--case-accent:#8b5939;--presentation-bg:#ecddc9;--product-bg:var(--bg);--product-ink:var(--ink);--product-muted:var(--case-muted)}
+body[data-project=offer]{--bg:#f6f5f0;--ink:#262622;--case-muted:#626057;--case-accent:#b84622;--presentation-bg:#e8e5dc;--product-bg:var(--bg);--product-ink:var(--ink);--product-muted:var(--case-muted)}
+body[data-page=case] #main :is(h1,h2,h3,h4,p,li,dt,dd,figcaption,caption){text-align:left}
+body[data-page=case] #main :is(p,li,td,th,dd,button,label){font:400 var(--reading-body)/1.7 PortfolioText,Pretendard,sans-serif;letter-spacing:0}
+body[data-page=case] #main :is(span,b,em){font-size:inherit;letter-spacing:inherit}
+body[data-page=case] #main :is(h1,h2,h3,h4){font-family:inherit;font-weight:600;letter-spacing:-.025em;text-wrap:pretty;color:var(--ink)}
+body[data-page=case] #main h1{font-size:clamp(2.25rem,3.6vw,4rem);line-height:1.1;letter-spacing:-.04em}
+body[data-page=case] #main :is(h2,.case-heading){font-size:var(--reading-title);line-height:1.25;max-width:none;margin:0}
+body[data-page=case] #main :is(h3,.tool-story-head h3){font-size:var(--reading-subtitle);line-height:1.35;max-width:none}
+body[data-page=case] #main h4{font-size:1.125rem;line-height:1.5}
+body[data-page=case] #main :is(h1,h2,h3,h4)>:is(span,strong,em){font:inherit;color:inherit}
+body[data-page=case] #main :is(.section-kicker,.case-type,dt,small,code,caption,.screen-caption,.original-caption,.research-note,.product-note,.decision-number,.model-values span,.research-process span,.time-label strong,.time-axis,.tool-story-head>span){font-size:var(--reading-label)!important;line-height:1.6;letter-spacing:0;font-weight:500}
+body[data-page=case] #main :is(.case-lead,.product-story .case-lead){font-size:1.125rem;line-height:1.75;font-weight:400;margin-top:20px;max-width:64ch}
+body[data-page=case] #main :is(.screen-caption,.original-caption){display:block;margin-top:16px;color:var(--case-muted)}
+body[data-page=case] #main :is(.screen-caption,.original-caption)>span{font-size:1rem;line-height:1.6;max-width:none;text-align:left;margin:4px 0 0}
+body[data-page=case] #main .section-kicker{margin:0 0 16px;color:var(--case-accent)}
+body[data-page=case] #main :is(.research-section-head,.product-section-intro,.offer-section-head){margin-bottom:32px;max-width:1080px}
+body[data-page=case] #main .research-summary{gap:32px 48px}
+body[data-page=case] #main .research-summary-copy p{margin:0 0 18px}
+body[data-page=case] #main .case-section{padding:var(--reading-space) clamp(24px,4vw,64px);border:0;scroll-margin-top:110px}
+body[data-page=case] #main .product-story>.case-section{max-width:1440px;margin:0 auto;padding:var(--reading-space) clamp(24px,4vw,64px)}
+body[data-page=case] #main .research-split{gap:40px;align-items:start}
+body[data-page=case] #main .decision{background:none;border:0;padding:0}
+body[data-page=case] #main .decision h3{margin-bottom:12px}
+body[data-page=case] #main .decision p{color:var(--case-muted)}
+body[data-page=case] #main :is(.metric-strip,.model-values){border-radius:var(--reading-radius);border:0}
+body[data-page=case] #main :is(.metric-strip strong,.model-values strong){font-size:clamp(2rem,3.6vw,3.5rem);font-weight:600;line-height:1.15}
+body[data-page=case] #main .tool-flow{display:flex;flex-wrap:wrap;gap:12px 24px;margin:24px 0 8px}
+body[data-page=case] #main .tool-flow li{flex:0 1 auto;border:0;color:var(--case-accent);padding:0;font-size:1rem}
+body[data-page=case] #main .tool-story{padding:48px 0 0;margin:0}
+body[data-page=case] #main .tool-story+.tool-story{padding-top:64px}
+body[data-page=case] #main .tool-story-head{display:grid;grid-template-columns:180px minmax(0,1fr);gap:32px;margin-bottom:28px}
+body[data-page=case] #main .tool-story-head p{max-width:64ch;margin-top:14px;color:var(--case-muted)}
+body[data-page=case] #main :is(.data-table){font-size:1rem;max-width:100%}
+body[data-page=case] #main .table-scroll{max-width:100%;overflow:auto}
+body[data-page=case] #main :is(.data-table td,.data-table th){font-size:1rem;padding:16px;white-space:normal}
+body[data-page=case] #main :is(.research-reflection-qa,.reflection-qa){margin-top:32px;border:0}
+body[data-page=case] #main :is(.research-reflection-qa>article,.reflection-qa>article){display:grid;grid-template-columns:52px minmax(180px,.7fr) minmax(0,1.3fr);gap:24px;padding:28px 0;border:0;border-bottom:1px solid var(--line)}
+body[data-page=case] #main :is(.research-reflection-qa h3,.reflection-qa h3){font-size:1.25rem;line-height:1.5}
+body[data-page=case] #main :is(.reflection-q-number,.reflection-answer-label){font-size:1rem;color:var(--case-accent)}
+/* The shell's single glass navigation, with immediately visible links. */
+body[data-page=case] .header{position:fixed;left:50%;top:20px;transform:translateX(-50%);z-index:80;display:flex;align-items:center;gap:32px;padding:8px 12px 8px 24px;background:#11141bf2;border:1px solid #ffffff24;border-radius:999px;color:#fff;backdrop-filter:blur(18px)}
+body[data-page=case] .header .monogram{display:flex;align-items:center}
+body[data-page=case] .header .brand-mark{display:block;width:38px;height:38px;max-width:none}
+body[data-page=case] .header nav{display:flex;align-items:center;gap:4px}
+body[data-page=case] .header nav a{display:flex;align-items:center;min-height:44px;padding:10px 14px;font-size:16px;white-space:nowrap;color:#d5d9e0;border-radius:24px;line-height:1.5}
+body[data-page=case] .header a[data-nav=work]{color:white;text-decoration:underline;text-decoration-color:var(--case-accent);text-underline-offset:8px}
+body[data-page=case] .header a:focus-visible{outline:2px solid var(--case-accent);outline-offset:2px}
+body[data-page=case] .header .menu{display:none}
+/* Cover: full-height art flush with the right side, structured copy on the left. */
+body[data-page=case] #main .archive-hero{--cover-ink:#fff;--cover-muted:#e0d7e1;display:block;position:relative;isolation:isolate;min-height:100svh;height:auto;padding:0;background:#241a26;color:var(--cover-ink);overflow:hidden}
+body[data-project=ivi] #main .archive-hero{background:#14252e}
+body[data-project=cafekok] #main .archive-hero{background:#574335}
+body[data-project=offer] #main .archive-hero{background:#efede5;--cover-ink:#262622;--cover-muted:#625b50}
+body[data-page=case] #main .archive-hero::after{display:none}
+body[data-page=case] #main .archive-hero-art{position:absolute;inset:0 0 0 34%;width:66%;height:100%;margin:0;padding:0}
+body[data-page=case] #main .archive-hero-art>.mockup-preview{display:block;width:100%;height:100%;padding:0;margin:0}
+body[data-page=case] #main .archive-hero-art img{display:block;position:static;width:100%;height:100%;max-width:none;object-fit:cover;object-position:55% 50%;transform:none;border-radius:0}
+body[data-project=lg] #main .archive-hero-art img{object-position:51% 50%}
+body[data-project=cafekok] #main .archive-hero-art img{object-position:56% 50%}
+body[data-page=case] #main .archive-hero-intro{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:24px;width:34%;min-height:100svh;height:auto;padding:128px clamp(28px,3vw,56px) 56px}
+body[data-page=case] #main .archive-hero-intro h1{color:var(--cover-ink);font-size:clamp(36px,3.3vw,60px);font-weight:600;letter-spacing:-.04em}
+body[data-page=case] #main .archive-summary{font-size:1.125rem;line-height:1.75;color:var(--cover-muted);margin:0;max-width:28ch}
+body[data-page=case] #main .archive-meta{display:grid;gap:20px;width:100%;margin:0}
+body[data-page=case] #main .archive-meta dt{font-size:1rem;color:var(--cover-muted);margin-bottom:6px}
+body[data-page=case] #main .archive-meta dd{font-size:1rem;color:var(--cover-ink);margin:0}
+body[data-page=case] #main .archive-hero .case-type{color:var(--cover-muted);margin:0}
+body[data-page=case] #main .prototype-link{display:inline-flex;align-items:center;justify-content:space-between;gap:24px;min-height:48px;padding:12px 18px;font-size:1rem;font-weight:600;margin:4px 0 0;border:1px solid currentColor;border-radius:8px;background:transparent;color:inherit;transition:background-color 180ms ease,color 180ms ease}
+body[data-page=case] #main .archive-hero .prototype-link{color:var(--cover-ink)}
+.prototype-float{font-family:PortfolioText,Pretendard,sans-serif;font-size:16px;border-radius:10px}
+/* One reading rail. No disclosure button or hidden navigation. */
+.case-toc{position:fixed;left:24px;top:136px;width:156px;max-height:calc(100svh - 160px);overflow:auto;z-index:35}
+body[data-page=case] #main .case-nav{position:static;display:flex;flex-direction:column;align-items:flex-start;gap:4px;min-height:0;padding:0;margin:0;overflow:visible;border:0;background:none;backdrop-filter:none;white-space:normal}
+body[data-page=case] #main .case-nav a{font-size:1rem;line-height:1.5;font-weight:500;padding:8px 0;max-width:100%;color:var(--case-muted);transition:color 160ms ease}
+body[data-page=case] #main .case-nav a[aria-current=location]{color:var(--case-accent);font-weight:600;text-decoration:underline;text-underline-offset:7px}
+body[data-page=case] #main .case-nav a::after{display:none}
+@media(min-width:1101px){
+ .case-toc.is-cover-visible{visibility:hidden;pointer-events:none}
+ body[data-page=case] #main>:is(.case-section,.ui-showcase,.next-projects),body[data-page=case] #main>.product-story{margin-left:200px;margin-right:24px;width:calc(100% - 224px)}
+}
+/* The actual screen, annotations, and explanation form one consistent board. */
+body[data-page=case] #main .annotated-interface{margin:32px 0 48px!important}
+body[data-page=case] #main .annotation-stage{padding:40px 28px;min-height:0;grid-template-columns:minmax(168px,20%) minmax(0,1fr) minmax(168px,20%);column-gap:28px;border:0;border-radius:var(--reading-radius);background:var(--presentation-bg);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--ink) 8%,transparent)}
+body[data-page=case] #main .interface-device{border-radius:10px;max-width:100%}
+body[data-page=case] #main .feature-label{width:calc(20% - 28px);min-width:150px;gap:8px;cursor:default}
+body[data-page=case] #main .feature-label[data-side=left]{left:28px}
+body[data-page=case] #main .feature-label[data-side=right]{right:28px}
+body[data-page=case] #main .feature-label strong{font:600 1rem/1.5 PortfolioText,Pretendard,sans-serif;letter-spacing:.02em;color:var(--case-accent)}
+body[data-page=case] #main .feature-label>span{font:400 1.0625rem/1.65 PortfolioText,Pretendard,sans-serif;letter-spacing:0;color:var(--case-muted)}
+body[data-page=case] #main .presentation-evidence{display:block;margin-top:24px;padding:28px 0 0;border:0;background:transparent}
+body[data-page=case] #main .reading-evidence-heading{margin:0 0 16px;font-size:1rem;color:var(--case-accent)}
+body[data-page=case] #main .presentation-reasoning{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px;padding:0}
+body[data-page=case] #main .presentation-reasoning h4{font-size:1.125rem;margin:0 0 10px}
+body[data-page=case] #main .presentation-reasoning p{font-size:1rem;line-height:1.75;margin:0;color:var(--case-muted)}
+body[data-page=case] #main .study-archive{border:0;margin-top:40px;padding:28px;border-radius:var(--reading-radius);background:var(--presentation-bg)}
+body[data-page=case] #main .archive-content{padding:0}
+body[data-page=case] #main .archive-content .research-note{font-size:1rem}
+body[data-project=lg] #main :is(.interface-device,.showcase-device){position:relative;padding-bottom:26px;background:#19191c}
+body[data-project=lg] #main :is(.interface-device,.showcase-device)::after{content:"";position:absolute;bottom:5px;left:50%;transform:translateX(-50%);width:28px;height:13px;background:url('/assets/brand/lg-bezel-white.svg') center/contain no-repeat;pointer-events:none}
+body[data-page=case] #main .ui-showcase{padding:56px clamp(24px,4vw,64px) 40px;background:var(--presentation-bg)}
+body[data-page=case] #main .showcase-heading h2{font-size:var(--reading-title);line-height:1.2}
+body[data-page=case] #main .showcase-heading>p{font-size:1rem;letter-spacing:0;margin-bottom:16px}
+body[data-page=case] #main .showcase-heading>span{font-size:1.125rem;line-height:1.7;margin-top:18px;color:var(--case-muted)}
+body[data-page=case] #main .showcase-device{transform:none!important}
+body[data-page=case] #main .is-mobile-ui .interface-device{width:min(100%,340px)!important}
+/* Key evidence uses a single project-toned surface, not a new visual system. */
+body[data-page=case] #main :is(.model-section,.findings-section,.offer-compare,.cafe-purpose){background:var(--presentation-bg);border-radius:var(--reading-radius)}
+body[data-project=cafekok] .cafe-purpose-photo,body[data-project=cafekok] .cafe-purpose::after{inset-inline:0}
+body[data-page=case] #main .results-collection{display:grid;gap:24px}
+body[data-page=case] #main .task-result{padding:28px;display:grid;grid-template-columns:minmax(220px,.75fr) minmax(0,1.25fr);gap:32px;background:#16272d;border:0;border-radius:var(--reading-radius)}
+body[data-page=case] #main .result-heading{font-size:1.5rem}
+body[data-page=case] #main .result-number{font-size:3rem;line-height:1.2}
+body[data-page=case] #main .time-label{gap:16px;align-items:baseline}
+body[data-page=case] #main .time-label strong{font-size:1rem;font-weight:600;white-space:nowrap}
+body[data-page=case] #main .time-label span{font-size:1rem}
+body[data-page=case] #main .heatmap-pair{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:32px}
+body[data-page=case] #main .heatmap-pair .screen{padding:20px;background:var(--presentation-bg);border-radius:var(--reading-radius);border:1px solid var(--line)}
+body[data-page=case] #main .heatmap-pair .screen:first-child{border-color:var(--case-accent)}
+body[data-page=case] #main .heatmap-pair img{width:100%;height:auto;object-fit:contain}
+body[data-page=case] #main .heatmap-numbers dd{font-size:2rem;font-weight:600}
+.heatmap-comparison-result{display:flex;flex-wrap:wrap;gap:24px 40px;padding:24px 28px;margin-top:28px;border-radius:16px;background:#243e46}
+.heatmap-comparison-result strong{display:block;font-size:1.75rem;font-weight:600;color:var(--case-accent)}
+/* Common icon explanations follow the complete primary workflow. */
+.tool-component-details{margin-top:64px}
+.component-detail-panel{margin-top:28px;padding:32px;border-radius:var(--reading-radius);background:var(--presentation-bg)}
+.component-detail-panel h4{margin-bottom:20px;color:var(--case-accent)}
+.component-detail-panel dl{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:28px}
+.component-detail-panel dt{font-size:1rem;font-weight:600;color:var(--case-accent)}
+.component-detail-panel dd{margin:8px 0 0}
+.component-crop{background:#101013;border-radius:10px;overflow:hidden}
+.header-crop{position:relative;height:130px}
+.header-crop img{position:absolute;width:2400px!important;max-width:none;height:auto;right:20px;top:24px}
+.sidebar-detail{display:grid;grid-template-columns:220px 1fr;gap:40px;align-items:start}
+.sidebar-crop{width:220px;max-height:620px}.sidebar-crop img{width:100%;height:auto;display:block}
+body[data-page=case] .site-footer,body[data-page=case] .site-footer :is(a,span){font-size:1rem;line-height:1.6}
+body[data-page=case] #main .next-project h2{color:#fff}
+.case-image-tooltip{display:none!important}
+/* Shell cover: occupy the entire left half, with a readable image-overlay title. */
+.work-fullbleed.is-pinned .work-gallery{width:100%!important;height:100%!important;aspect-ratio:auto!important;margin:0!important;align-self:stretch!important}
+.work-fullbleed.is-pinned .project-visual .mockup-preview{padding:0!important;width:100%!important;height:100%!important;display:block!important}
+.work-fullbleed.is-pinned .project-visual .mockup-preview>img{width:100%!important;height:100%!important;object-fit:cover!important;transform:none!important}
+.work-fullbleed.is-pinned .project-visual.lg img{object-position:48% 50%!important}
+.work-fullbleed.is-pinned .project-visual.cafekok img{object-position:58% 50%!important}
+.work-fullbleed.is-pinned .work-gallery::after{display:block!important;background:linear-gradient(180deg,#0008,transparent 44%,transparent)!important}
+.work-fullbleed.is-pinned .work-heading{left:clamp(32px,3.35vw,64px)!important;top:112px!important;width:calc(50% - 64px)!important;color:white;z-index:35;text-shadow:0 2px 4px #000c,0 6px 24px #0009}
+.work-fullbleed.is-pinned .work-heading h2{color:white!important;font-size:clamp(42px,3.65vw,64px)!important;line-height:1.02!important}
+.work-fullbleed.is-pinned .work-heading .eyebrow{color:white!important}
+.profile-research>h4{font-size:16px;margin:16px 0}
+@media(hover:hover) and (pointer:fine){body[data-page=case] .header nav a:hover{color:#fff;background:#ffffff12}body[data-page=case] #main .prototype-link:hover{background:var(--case-accent);border-color:var(--case-accent);color:var(--bg)}}
+@media(max-width:1400px){
+ body[data-page=case] #main .annotation-stage{display:flex;flex-direction:column;gap:0;padding:32px 24px}
+ body[data-page=case] #main .annotation-labels{position:relative;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;width:100%;padding-top:32px}
+ body[data-page=case] #main .feature-label{position:relative;inset:auto!important;min-width:0;width:100%;padding-left:14px}
+ body[data-page=case] #main .feature-label::before{content:"";position:absolute;left:0;top:8px;width:5px;height:5px;border-radius:50%;background:var(--case-accent)}
+ body[data-page=case] #main .interface-device{width:100%}
+}
+@media(max-width:1100px){
+ .case-toc{position:relative;inset:auto;width:100%;max-height:none;padding:24px;margin:0;border-bottom:1px solid var(--line);z-index:1}
+ body[data-page=case] #main .case-nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px 24px}
+ body[data-page=case] #main .archive-hero-intro{width:38%;padding-inline:28px}
+ body[data-page=case] #main .archive-hero-art{left:38%;width:62%}
+ body[data-page=case] #main .research-split{gap:28px}
+ body[data-page=case] #main .task-result{grid-template-columns:1fr;gap:28px}
+}
+@media(max-width:800px){
+ body[data-page=case] #main .archive-hero{display:flex;flex-direction:column;min-height:0;height:auto}
+ body[data-page=case] #main .archive-hero-intro{width:100%;min-height:0;height:auto;padding:120px 24px 36px;gap:20px}
+ body[data-page=case] #main .archive-hero-art{position:relative;inset:auto;width:100%;height:auto;aspect-ratio:auto}
+ body[data-page=case] #main .archive-hero-art>.mockup-preview{height:auto}
+ body[data-page=case] #main .archive-hero-art img{width:100%;height:auto;object-fit:contain}
+ body[data-page=case] #main .archive-meta{grid-template-columns:1fr 1fr;gap:20px}
+ body[data-page=case] #main .tool-story-head{grid-template-columns:1fr;gap:12px}
+ body[data-page=case] #main .heatmap-pair{grid-template-columns:1fr}
+ body[data-page=case] #main .annotation-labels{grid-template-columns:1fr}
+ body[data-page=case] #main .presentation-reasoning{grid-template-columns:1fr;gap:24px}
+ body[data-page=case] #main :is(.research-reflection-qa>article,.reflection-qa>article){grid-template-columns:1fr;gap:12px}
+ .component-detail-panel{padding:24px}.component-detail-panel dl{grid-template-columns:1fr}
+ .sidebar-detail{grid-template-columns:1fr;gap:28px}.sidebar-crop{margin:auto}
+}
+@media(max-width:700px){
+ .header,body[data-page=case] .header{left:50%;top:12px;width:calc(100% - 24px);padding:6px 10px;gap:10px;justify-content:space-between;border-radius:32px}
+ .header .brand-mark,body[data-page=case] .header .brand-mark{width:28px;height:28px}
+ .header nav,body[data-page=case] .header nav{position:static!important;display:flex!important;flex-direction:row!important;align-items:center;gap:0!important;inset:auto!important;width:auto;padding:0!important;opacity:1!important;visibility:visible!important;transform:none!important;background:transparent!important;border:0!important}
+ .header nav a,body[data-page=case] .header nav a{font-size:16px!important;line-height:1.4;padding:10px 6px;min-height:44px;letter-spacing:-.02em}
+ body[data-page=case] #main .case-section{padding:48px 24px}
+ body[data-page=case] #main .case-nav{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 20px}
+ body[data-page=case] #main .annotation-stage{padding:24px 16px;border-radius:16px}
+ body[data-page=case] #main .study-archive{padding:24px 16px}
+ body[data-page=case] #main .presentation-evidence{padding-top:20px}
+ body[data-page=case] #main .header-crop{height:80px}.header-crop img{width:950px!important;right:6px;top:18px}
+ body[data-page=case] #main .original-caption{font-size:1rem}
+}
+@media(max-width:360px){
+ .header nav,body[data-page=case] .header nav{display:grid!important;grid-template-columns:1fr 1fr;gap:0 8px!important}
+ .header,body[data-page=case] .header{border-radius:22px}
+ .header nav a,body[data-page=case] .header nav a{padding:4px 6px;min-height:32px}
+ body[data-page=case] #main .archive-hero-intro{padding-top:132px}
+}
+@media(prefers-reduced-transparency:reduce){.header,body[data-page=case] .header{background:#11141b;backdrop-filter:none}}
+@media(prefers-contrast:more){body[data-page=case]{--case-muted:var(--ink)}.header,body[data-page=case] .header{border-color:#fff9}}
+@media print{.header,.case-toc,.prototype-float{display:none!important}}
+
+
+/* Small factual labels remain readable despite older product rules. */
+body[data-page=case] #main :is(.all-work-link,.next-projects header a,.chart-heading,.chart-heading>span,.palette-board span,.cafe-equation p,.offer-principles p,.offer-system-line p){font-size:1rem!important;line-height:1.7}
+body[data-page=case] #main :is(.all-work-link span,.all-work-link i,.next-projects header a span){font-size:inherit!important}
+@media(max-width:800px){
+ body[data-page=case] #main .archive-hero{display:flex;flex-direction:column}
+ body[data-page=case] #main .archive-hero-intro{order:0;min-height:0;padding:112px 24px 32px;gap:20px}
+ body[data-page=case] #main .archive-hero-art{order:1}
+}
+
+body[data-page=case] #main :is(.next-projects-heading a,.next-projects-heading a span,.offer-interest-grid p,.tool-flow i){font-size:1rem!important;line-height:1.7}
+
+body[data-page=case] #main .archive-content{display:block!important}
+body[data-page=case] #main .factor-funnel i{font-size:1rem!important}
+
+body[data-page=case] #main .archive-content :is(figcaption,p,td,th){font-size:1rem!important;line-height:1.7}
+
+
+/* ===== 2026-11-16 · Four-case navigation and editorial alignment ===== */
+/* The shell navigation is already 12px. Reduce the four case pages from 16px to match. */
+body[data-page="case"] .header nav a,
+body[data-page="case"] .header nav a:is(:hover,:focus-visible){
+  font-size:12px!important;
+  letter-spacing:.015em;
+}
+/* Case-specific colors are scoped to interactions, not the global portfolio header. */
+body[data-project="lg"]{--case-action-ink:#1a101a}
+body[data-project="ivi"]{--case-action-ink:#0d1b20}
+body[data-project="cafekok"]{--case-action-ink:#fffaf4}
+body[data-project="offer"]{--case-action-ink:#fffaf5}
+
+/* Match the shell header's rising fill on hover and focus, rather than a hard swap. */
+body[data-page="case"] .header nav a{position:relative;isolation:isolate;overflow:hidden;background:transparent!important;transition:color .24s ease}
+body[data-page="case"] .header nav a::before{
+  content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;
+  background:var(--case-accent);transform:translateY(102%);
+  transition:transform .42s cubic-bezier(.22,1,.36,1)
+}
+body[data-page="case"] .header nav a:is(:hover,:focus-visible){color:var(--case-action-ink)!important}
+body[data-page="case"] .header nav a:is(:hover,:focus-visible)::before{transform:translateY(0)}
+body[data-page="case"] .header a[data-nav=work]{text-decoration-color:var(--case-accent)}
+
+/* The live prototype action belongs beneath the intro, on the same left text edge. */
+body[data-page="case"] #main .archive-hero-intro .prototype-link{
+  position:relative;isolation:isolate;overflow:hidden;
+  align-self:flex-start;justify-self:start;flex:0 0 auto;
+  margin:12px 0 0!important;max-width:100%;
+  border:1px solid var(--cover-ink);background:transparent!important;
+  color:var(--cover-ink)!important;transition:color .3s ease,border-color .3s ease;
+}
+body[data-page="case"] #main .archive-hero-intro .prototype-link::before{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:var(--case-accent);transform:translateY(102%);
+  transition:transform .46s cubic-bezier(.22,1,.36,1)
+}
+body[data-page="case"] #main .archive-hero-intro .prototype-link:is(:hover,:focus-visible){
+  background:transparent!important;border-color:var(--case-accent);color:var(--case-action-ink)!important
+}
+body[data-page="case"] #main .archive-hero-intro .prototype-link:is(:hover,:focus-visible)::before{transform:translateY(0)}
+body[data-page="case"] #main .archive-hero-intro .prototype-link:focus-visible{outline:2px solid var(--case-accent);outline-offset:4px}
+
+/* The later floating action uses the same rising accent treatment. */
+body[data-page="case"] .prototype-float[hidden]{display:none!important}
+body[data-page="case"] .prototype-float{
+  position:fixed;isolation:isolate;overflow:hidden;
+  transform:none;background:#11141be6;color:#f2f2ef;
+  border-color:#ffffff5a;transition:color .25s ease,border-color .25s ease;
+}
+body[data-page="case"] .prototype-float::before{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:var(--case-accent);transform:translateY(102%);
+  transition:transform .46s cubic-bezier(.22,1,.36,1)
+}
+body[data-page="case"] .prototype-float:is(:hover,:focus-visible){
+  background:#11141be6;color:var(--case-action-ink);border-color:var(--case-accent);transform:none;
+}
+body[data-page="case"] .prototype-float:is(:hover,:focus-visible)::before{transform:translateY(0)}
+body[data-page="case"] .prototype-float:focus-visible{outline:2px solid var(--case-accent);outline-offset:3px}
+
+/* A generous, legible chapter rail; nothing is exposed over the cover. */
+body[data-page="case"] .case-toc{top:132px;width:174px;max-height:calc(100svh - 158px);scrollbar-width:thin}
+body[data-page="case"] #main .case-nav{
+  display:flex;flex-direction:column;align-items:flex-start;gap:10px;
+}
+body[data-page="case"] #main .case-nav a{
+  display:block;padding:10px 0;font-size:16px;line-height:1.65;
+}
+body[data-page="case"].case-toc-ready .case-toc{
+  opacity:0;visibility:hidden;pointer-events:none;
+  transform:translate3d(0,10px,0);
+  transition:opacity .35s ease,transform .35s ease,visibility 0s linear .35s
+}
+body[data-page="case"].case-toc-ready .case-toc.is-after-cover{
+  opacity:1;visibility:visible;pointer-events:auto;transform:none;
+  transition:opacity .35s ease,transform .35s ease,visibility 0s
+}
+/* Stage labels, chapter titles, then the description: a single vertical reading order. */
+body[data-page="case"] #main :is(.research-section-head,.product-section-intro,.offer-section-head){
+  display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;
+  gap:0;max-width:1050px;
+}
+body[data-page="case"] #main :is(.research-section-head,.product-section-intro,.offer-section-head)>.case-lead{
+  align-self:flex-start;max-width:68ch;margin:18px 0 0;
+}
+body[data-project="offer"] #main .offer-section-head{grid-template-columns:none!important}
+body[data-project="offer"] #main .offer-intro-grid,
+body[data-project="cafekok"] #main .product-opening-copy{
+  display:flex;flex-direction:column;align-items:flex-start;gap:18px;
+  max-width:68ch;margin-top:24px;
+}
+body[data-project="offer"] #main .offer-intro-grid .case-lead,
+body[data-project="cafekok"] #main .product-opening-copy .case-lead{margin:0;grid-row:auto;max-width:100%}
+body[data-project="lg"] #main .research-summary,
+body[data-project="ivi"] #main .research-summary{
+  display:grid;grid-template-columns:minmax(0,1fr)!important;gap:24px;
+}
+body[data-page="case"] #main .research-summary-heading,
+body[data-page="case"] #main .research-summary-copy{grid-column:1/-1}
+body[data-page="case"] #main .research-summary-copy{
+  padding-top:0!important;max-width:68ch;margin-top:0;
+}
+/* Only change the lead research rows that contain a chapter heading, not experiment comparisons. */
+body[data-page="case"] #main .case-section>.research-split:has(.case-heading){
+  display:flex;flex-direction:column;align-items:flex-start;gap:14px;max-width:1080px;
+}
+body[data-page="case"] #main .case-section>.research-split:has(.case-heading)>:is(div,.case-lead){
+  max-width:100%;width:100%;margin:0;
+}
+body[data-page="case"] #main .case-section>.research-split:has(.case-heading)>.case-lead{max-width:68ch;margin-top:4px}
+/* Captions are attached to the center of their own visual, rather than a text column. */
+body[data-page="case"] #main :is(.screen-caption,.original-caption){
+  display:block!important;text-align:center!important;margin:16px auto 0;
+  max-width:100%;line-height:1.65;
+}
+body[data-page="case"] #main :is(.screen-caption,.original-caption)>span{
+  display:block!important;max-width:100%;text-align:center!important;margin:4px auto 0;
+}
+/* Only the outer edge is softened: the central reading canvas stays perfectly sharp. */
+body[data-page="case"]::before,body[data-page="case"]::after{
+  content:"";position:fixed;left:0;right:0;pointer-events:none;z-index:22;
+  height:44px;backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);
+}
+body[data-page="case"]::before{
+  top:0;background:linear-gradient(to bottom,color-mix(in srgb,var(--bg) 38%,transparent),transparent);
+  mask-image:linear-gradient(to bottom,#000 8%,transparent 100%);
+}
+body[data-page="case"]::after{
+  bottom:0;background:linear-gradient(to top,color-mix(in srgb,var(--bg) 38%,transparent),transparent);
+  mask-image:linear-gradient(to top,#000 8%,transparent 100%);
+}
+@media(max-width:1100px){
+  body[data-page="case"] .case-toc{
+    position:relative;inset:auto;top:auto;width:auto;max-height:none;
+    margin:0 24px;padding:22px 0;overflow:visible;border:0;
+  }
+  body[data-page="case"] #main .case-nav{
+    display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 22px;
+  }
+  body[data-page="case"] #main .case-nav a{padding:8px 0}
+}
+@media(max-width:700px){
+  body[data-page="case"] .case-toc{margin-inline:24px;padding:18px 0}
+  body[data-page="case"] #main .case-nav{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 18px}
+  body[data-page="case"] .header nav a{font-size:12px!important}
+  body[data-page="case"] #main .archive-hero-intro .prototype-link{margin-top:10px!important}
+  body[data-page="case"] #main :is(.research-section-head,.product-section-intro,.offer-section-head)>.case-lead{margin-top:16px}
+  body[data-page="case"]::before,body[data-page="case"]::after{height:30px;backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
+}
+@media(prefers-reduced-motion:reduce){
+  body[data-page="case"] .case-toc,body[data-page="case"] #main .prototype-link::before,
+  body[data-page="case"] .header nav a::before{transition:none!important}
+}
+@media(prefers-reduced-transparency:reduce){
+  body[data-page="case"]::before,body[data-page="case"]::after{backdrop-filter:none;-webkit-backdrop-filter:none}
+}
+@media print{body[data-page="case"]::before,body[data-page="case"]::after{display:none!important}}
+
+
+/* ===== 2026-11-16 · Header, cover CTA and viewport edge final correction ===== */
+/* Shell and case headers now use the same readable navigation typography. */
+body:not([data-page="case"]) .header nav a {
+  font-size:12px!important;
+  line-height:1.4;
+  letter-spacing:.045em;
+}
+@media(max-width:700px){
+  body:not([data-page="case"]) .header nav a{
+    font-size:12px!important;
+  }
+}
+/* Keep 44px navigation hit areas even with compact 12px labels. */
+body:not([data-page="case"]) .header nav a{min-height:44px}
+
+/* 2026-11-16 · Same dimensions for shell / case header at all widths.
+   Preserve existing per-project hover accents and existing navigation destinations. */
+@media (min-width:701px){
+  body:not([data-page="case"]) .header{
+    gap:32px;
+    padding:8px 12px 8px 24px;
+  }
+  body:not([data-page="case"]) .header nav{gap:4px}
+  body:not([data-page="case"]) .header nav a{
+    padding:10px 14px;
+    font-size:12px!important;
+    line-height:1.5;
+    letter-spacing:.015em;
+  }
+}
+@media (max-width:700px){
+  /* Match case-study mobile typography, width and tap-target sizing. */
+  body:not([data-page="case"]) .header nav a{
+    font-size:12px!important;
+    line-height:1.4;
+    letter-spacing:-.02em;
+    padding:10px 6px;
+  }
+}
+
+/* In the first pass the cover action could fall below the visible canvas
+   because of excessive vertical padding and loose gaps. Let the actual content
+   determine hero height and reserve the button's own bottom space. */
+body[data-page="case"] #main .archive-hero{
+  height:auto!important;
+  min-height:100svh;
+}
+body[data-page="case"] #main .archive-hero-intro{
+  height:auto!important;
+  min-height:100svh;
+  box-sizing:border-box;
+  width:38%;
+  min-width:0;
+  gap:clamp(12px,1.7vh,18px);
+  padding:clamp(90px,11vh,124px) clamp(24px,2.7vw,50px) clamp(40px,5.5vh,62px);
+  justify-content:center;
+  align-items:flex-start;
+}
+body[data-page="case"] #main .archive-hero-intro h1{
+  font-size:clamp(32px,3vw,52px);
+  line-height:1.08;
+  overflow-wrap:normal;
+}
+body[data-page="case"] #main .archive-hero-intro .archive-meta{
+  gap:clamp(9px,1.5vh,16px);
+  min-width:0;
+}
+body[data-page="case"] #main .archive-hero-intro .prototype-link{
+  position:relative!important;
+  inset:auto!important;
+  display:inline-flex;
+  flex:0 0 auto;
+  align-self:flex-start!important;
+  justify-self:start;
+  width:max-content;
+  max-width:100%;
+  min-height:48px;
+  margin:12px 0 0!important;
+  padding:11px 16px;
+  gap:14px;
+  white-space:normal;
+  text-align:left;
+  box-sizing:border-box;
+}
+/* Keep the action above the bottom edge veil as the user scrolls. */
+body[data-page="case"] .prototype-float{z-index:62}
+@media(min-width:801px) and (max-width:1100px){
+  body[data-page="case"] #main .archive-hero-intro{
+    width:43%;
+    gap:13px;
+    padding:94px 24px 38px;
+  }
+  body[data-page="case"] #main .archive-hero-art{left:43%;right:0;width:57%}
+  body[data-page="case"] #main .archive-hero-intro h1{font-size:clamp(31px,3.3vw,42px)}
+}
+@media(max-height:760px) and (min-width:801px){
+  body[data-page="case"] #main .archive-hero-intro{
+    gap:10px;
+    padding-top:85px;
+    padding-bottom:30px;
+  }
+  body[data-page="case"] #main .archive-hero-intro h1{font-size:clamp(30px,2.8vw,44px)}
+  body[data-page="case"] #main .archive-hero-intro .prototype-link{margin-top:8px!important}
+}
+@media(max-width:800px){
+  body[data-page="case"] #main .archive-hero{
+    min-height:0;
+    height:auto!important;
+  }
+  body[data-page="case"] #main .archive-hero-intro{
+    min-height:0;
+    height:auto!important;
+    width:100%;
+    gap:16px;
+    padding:104px 24px 36px;
+  }
+  body[data-page="case"] #main .archive-hero-intro h1{font-size:clamp(32px,7vw,44px)}
+  body[data-page="case"] #main .archive-hero-intro .prototype-link{margin-top:12px!important}
+}
+
+/* 2026-11-16 · Slightly stronger frosted top/bottom edge veil.
+   Only affects the outer ~40–60px; no opaque panel, interaction blocking, or
+   sharp blur seam. The actual reading area remains unaffected. */
+body::before,body::after,
+body[data-page="case"]::before,body[data-page="case"]::after{
+  content:"";
+  position:fixed;
+  left:0;right:0;
+  height:clamp(38px,5.5vh,60px);
+  z-index:44;
+  pointer-events:none;
+  -webkit-backdrop-filter:blur(18px) saturate(1.12);
+  backdrop-filter:blur(18px) saturate(1.12);
+}
+body::before,body[data-page="case"]::before{
+  top:0;
+  background:linear-gradient(to bottom,
+    color-mix(in srgb,var(--bg) 65%,transparent) 0%,
+    color-mix(in srgb,var(--bg) 32%,transparent) 48%,transparent 100%);
+  -webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 20%,transparent 100%);
+  mask-image:linear-gradient(to bottom,#000 0%,#000 20%,transparent 100%);
+}
+body::after,body[data-page="case"]::after{
+  bottom:0;
+  background:linear-gradient(to top,
+    color-mix(in srgb,var(--bg) 65%,transparent) 0%,
+    color-mix(in srgb,var(--bg) 32%,transparent) 48%,transparent 100%);
+  -webkit-mask-image:linear-gradient(to top,#000 0%,#000 20%,transparent 100%);
+  mask-image:linear-gradient(to top,#000 0%,#000 20%,transparent 100%);
+}
+@media(max-width:700px){
+  body::before,body::after,
+  body[data-page="case"]::before,body[data-page="case"]::after{
+    height:clamp(32px,4.5vh,44px);
+  }
+}
+
+/* Lower-left floating prototype link (the cover's left-aligned CTA is unchanged).
+   The old base stylesheet places the floating link at the lower right,
+   so explicitly reset right on both desktop and mobile. */
+body[data-page="case"] .prototype-float{
+  left:max(20px,env(safe-area-inset-left))!important;
+  right:auto!important;
+  bottom:max(20px,env(safe-area-inset-bottom))!important;
+  width:max-content;
+  max-width:calc(100vw - 40px);
+  min-height:40px;
+  padding:9px 13px;
+  gap:10px;
+  font-size:12px;
+  line-height:1.2;
+  letter-spacing:.01em;
+  font-weight:600;
+  border-radius:6px;
+  box-sizing:border-box;
+  justify-content:center;
+}
+body[data-page="case"] .prototype-float>span[aria-hidden="true"]{
+  font-size:14px;
+  line-height:1;
+}
+@media(max-width:700px){
+  body[data-page="case"] .prototype-float{
+    left:max(16px,env(safe-area-inset-left))!important;
+    right:auto!important;
+    bottom:max(16px,env(safe-area-inset-bottom))!important;
+    min-height:40px;
+    padding:9px 12px;
+    font-size:12px;
+    gap:9px;
+  }
+}
+
+@media(prefers-reduced-transparency:reduce){
+  body::before,body::after,
+  body[data-page="case"]::before,body[data-page="case"]::after{
+    -webkit-backdrop-filter:none;
+    backdrop-filter:none;
+  }
+}
+@media print{
+  body::before,body::after{display:none!important}
+}
+
+
+
+/* 2026-11-16 OFFER supplied cover · translucent edge fade, no frosted glass */
+/* Flat opacity gradient only: never refract, blur or increase saturation. */
+body::before,body::after,
+body[data-page="case"]::before,body[data-page="case"]::after{
+  height:clamp(32px,4.5svh,50px)!important;
+  -webkit-backdrop-filter:none!important;
+  backdrop-filter:none!important;
+  -webkit-mask-image:none!important;
+  mask-image:none!important;
+  filter:none!important;
+  box-shadow:none!important;
+  opacity:1!important;
+  pointer-events:none!important;
+}
+body::before,body[data-page="case"]::before{
+  top:0!important;
+  bottom:auto!important;
+  background:linear-gradient(to bottom,rgba(0,0,0,.28) 0%,rgba(0,0,0,.10) 45%,rgba(0,0,0,0) 100%)!important;
+}
+body::after,body[data-page="case"]::after{
+  top:auto!important;
+  bottom:0!important;
+  background:linear-gradient(to top,rgba(0,0,0,.28) 0%,rgba(0,0,0,.10) 45%,rgba(0,0,0,0) 100%)!important;
+}
+@media(prefers-reduced-transparency:reduce){
+  body::before,body::after,body[data-page="case"]::before,body[data-page="case"]::after{
+    -webkit-backdrop-filter:none!important;backdrop-filter:none!important;
+  }
+}
+@media print{
+  body::before,body::after{display:none!important}
+}
+
+/* OFFER detail: strong left brand panel; owner's untouched device mockup on right. */
+body[data-project="offer"] #main .archive-hero{
+  --cover-ink:#fff;
+  --cover-muted:rgba(255,255,255,.83);
+  background:#ff4d22!important;
+  min-height:100svh;
+  isolation:isolate;
+}
+body[data-project="offer"] #main .archive-hero::after{display:none!important}
+body[data-project="offer"] #main .archive-hero-intro{
+  position:relative;
+  z-index:3;
+  width:35%!important;
+  max-width:none;
+  min-height:100svh;
+  padding:clamp(112px,12vh,140px) clamp(28px,3.9vw,72px) 76px!important;
+  align-items:flex-start;
+  justify-content:center;
+  background:#ff4d22;
+  color:#fff;
+}
+body[data-project="offer"] #main .archive-hero-intro :is(h1,.case-type,.archive-summary,.archive-meta dt,.archive-meta dd){
+  color:#fff!important;
+}
+body[data-project="offer"] #main .archive-hero-intro h1{
+  font-size:clamp(52px,5.2vw,92px);
+  line-height:1.01;
+  font-weight:700;
+  letter-spacing:-.055em;
+}
+body[data-project="offer"] #main .archive-hero-intro .case-type{
+  max-width:28ch;
+  font-size:clamp(15px,1.1vw,17px)!important;
+  font-weight:600;
+  line-height:1.5;
+  opacity:.9;
+}
+body[data-project="offer"] #main .archive-hero-intro .archive-summary{
+  max-width:26ch;
+  margin-top:6px;
+  font-size:clamp(18px,1.3vw,21px)!important;
+  line-height:1.6;
+  font-weight:500;
+  word-break:keep-all;
+}
+body[data-project="offer"] #main .archive-hero-intro .archive-meta{
+  border-top:1px solid rgba(255,255,255,.38);
+  padding-top:22px;
+  margin-top:10px;
+}
+body[data-project="offer"] #main .archive-hero-intro .archive-meta dt{opacity:.72}
+body[data-project="offer"] #main .archive-hero-art{
+  position:absolute!important;
+  inset:0 0 0 35%!important;
+  width:65%!important;
+  height:100%!important;
+  z-index:1;
+  background:linear-gradient(103deg,#ff6249 0%,#ffaf9e 57%,#f7ece9 100%);
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+}
+body[data-project="offer"] #main .archive-hero-art>.mockup-preview{
+  display:flex!important;
+  align-items:center;
+  justify-content:center;
+  width:100%!important;
+  height:100%!important;
+  padding:0!important;
+  margin:0!important;
+  overflow:hidden;
+}
+body[data-project="offer"] #main .archive-hero-art img{
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  max-width:none!important;
+  object-fit:contain!important;  /* No phone/tablet/laptop cropping. */
+  object-position:center!important;
+  transform:none!important;
+  border:0;
+  border-radius:0;
+}
+body[data-project="offer"] #main .archive-hero-intro .prototype-link{
+  color:#fff!important;
+  border-color:rgba(255,255,255,.72)!important;
+  background:transparent!important;
+  text-align:left;
+}
+@media(hover:hover) and (pointer:fine){
+  body[data-project="offer"] #main .archive-hero-intro .prototype-link:hover{
+    background:#fff!important;border-color:#fff!important;color:#ff4d22!important;
+  }
+}
+body[data-project="offer"] #main .archive-hero-intro .prototype-link:focus-visible{
+  outline:2px solid #fff;outline-offset:4px;
+}
+
+/* Shell, scroll-pinned project: left text and accent, supplied mockup at right. */
+.work-fullbleed.is-pinned:has(.project-offer.is-current) .work-stage{
+  background:#ff4d22;
+}
+.work-fullbleed.is-pinned:has(.project-offer.is-current) :is(.work-heading,.work-heading h2,.work-heading .eyebrow,.project-offer .project-number,.project-offer .project-info h3,.project-offer .project-info p,.project-offer .project-info dt,.project-offer .project-info dd){
+  color:#fff!important;
+  text-shadow:none!important;
+}
+.work-fullbleed.is-pinned:has(.project-offer.is-current) .work-gallery::after{
+  background:none!important;
+}
+.work-fullbleed.is-pinned .project-visual.offer{
+  background:linear-gradient(102deg,#ff6249 0%,#ffad9c 58%,#f8ede9 100%)!important;
+}
+.work-fullbleed.is-pinned .project-visual.offer .mockup-preview{
+  width:100%!important;
+  height:100%!important;
+  padding:0!important;
+  display:flex!important;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+}
+.work-fullbleed.is-pinned .project-visual.offer .mockup-preview img{
+  display:block;
+  width:100%!important;
+  height:100%!important;
+  max-height:none!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  transform:none!important;
+}
+/* Shell without sticky JS: keep an explicit orange-left / imagery-right composition. */
+@media(min-width:801px){
+  .work:not(.is-pinned) .project-offer{
+    display:grid;
+    grid-template-columns:minmax(0,35%) minmax(0,65%);
+    min-height:500px;
+    background:#ff4d22;
+    overflow:hidden;
+  }
+  .work:not(.is-pinned) .project-offer .project-info{
+    grid-column:1;grid-row:1;
+    align-self:center;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:24px;
+    margin:0;
+    padding:clamp(30px,4vw,72px);
+    color:#fff;
+  }
+  .work:not(.is-pinned) .project-offer .project-info :is(h3,p,dt,dd,.project-number){color:#fff!important}
+  .work:not(.is-pinned) .project-offer .project-visual{
+    grid-column:2;grid-row:1;
+    min-height:500px;
+    height:100%;
+    aspect-ratio:auto;
+    background:linear-gradient(100deg,#ff6349,#ffb5a4,#f8ede9)!important;
+  }
+  .work:not(.is-pinned) .project-offer .mockup-preview{
+    display:flex;align-items:center;justify-content:center;
+    width:100%;height:100%;padding:0!important;
+  }
+  .work:not(.is-pinned) .project-offer .mockup-preview>img{
+    width:100%;height:100%;object-fit:contain;transform:none;
+  }
+}
+@media(max-width:800px){
+  /* Detail: text first, then complete artwork. No overflow or overlapping CTA. */
+  body[data-project="offer"] #main .archive-hero{
+    display:flex!important;
+    flex-direction:column;
+    min-height:0!important;
+  }
+  body[data-project="offer"] #main .archive-hero-intro{
+    order:0;
+    width:100%!important;
+    min-height:0!important;
+    height:auto!important;
+    padding:112px 24px 42px!important;
+    gap:16px;
+  }
+  body[data-project="offer"] #main .archive-hero-intro h1{font-size:clamp(46px,11vw,70px)}
+  body[data-project="offer"] #main .archive-hero-intro .archive-meta{
+    display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;
+  }
+  body[data-project="offer"] #main .archive-hero-art{
+    order:1;
+    position:relative!important;
+    inset:auto!important;
+    width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+    aspect-ratio:6000/4171;
+  }
+  body[data-project="offer"] #main .archive-hero-art>.mockup-preview{height:100%!important}
+  body[data-project="offer"] #main .archive-hero-art img{width:100%!important;height:100%!important;object-fit:contain!important}
+  .work:not(.is-pinned) .project-offer{
+    display:flex;flex-direction:column-reverse;
+    background:#ff4d22;
+  }
+  .work:not(.is-pinned) .project-offer .project-info{padding:28px 24px;display:block;color:#fff}
+  .work:not(.is-pinned) .project-offer .project-info :is(h3,p,dt,dd,.project-number){color:#fff!important}
+  .work:not(.is-pinned) .project-offer .project-visual{width:100%;background:#ff6b56;aspect-ratio:6000/4171}
+  .work:not(.is-pinned) .project-offer .mockup-preview{padding:0!important}
+  .work:not(.is-pinned) .project-offer .mockup-preview img{width:100%;height:auto;object-fit:contain}
+}
+
+/* Fine-tune the pure transparency veil and soften the image's letterbox edge.
+   Only the background margin fades: devices stay outside the masked bands. */
+body::before,body[data-page="case"]::before{
+  background:linear-gradient(to bottom,rgba(0,0,0,.18),rgba(0,0,0,.05) 50%,transparent 100%)!important;
+}
+body::after,body[data-page="case"]::after{
+  background:linear-gradient(to top,rgba(0,0,0,.18),rgba(0,0,0,.05) 50%,transparent 100%)!important;
+}
+@media(min-width:801px){
+  body[data-project="offer"] #main .archive-hero-art img,
+  .work-fullbleed.is-pinned .project-visual.offer .mockup-preview img,
+  .work:not(.is-pinned) .project-offer .mockup-preview img{
+    -webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 12%,#000 88%,transparent 100%);
+    mask-image:linear-gradient(to bottom,transparent 0%,#000 12%,#000 88%,transparent 100%);
+  }
+}
+@media(max-width:800px){
+  body[data-project="offer"] #main .archive-hero-art img,
+  .work:not(.is-pinned) .project-offer .mockup-preview img{
+    -webkit-mask-image:none;
+    mask-image:none;
+  }
+}
+@media(min-width:801px){
+  /* Actual image box follows its native ratio, so the alpha fade hides the edge
+     of the asset rather than masking empty object-fit letterboxing. */
+  body[data-project="offer"] #main .archive-hero-art img,
+  .work-fullbleed.is-pinned .project-visual.offer .mockup-preview img,
+  .work:not(.is-pinned) .project-offer .mockup-preview img{
+    height:auto!important;
+    max-height:100%!important;
+    max-width:100%!important;
+  }
+}
+
+/* Keep Korean line breaks between words across the portfolio. */
+html[lang="ko"] body:is(:not([data-page]), [data-page="home"], [data-page="case"]) main :is(h1, h2, h3, h4, p) {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+html[lang="ko"] body:is(:not([data-page]), [data-page="home"], [data-page="case"]) main :is(h1, h2, h3, h4, .project-summary, .chapter-heading .lead) {
+  text-wrap: balance;
+}
+
+html[lang="ko"] body:is(:not([data-page]), [data-page="home"], [data-page="case"]) main p:not(.project-summary, .chapter-heading .lead) {
+  text-wrap: pretty;
+}

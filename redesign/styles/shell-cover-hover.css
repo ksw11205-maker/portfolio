@@ -1,0 +1,7 @@
+/* Same 1.04 image zoom as OFFER, applied above legacy transform overrides. */
+body:not([data-page=case]) .work .project-visual .mockup-preview>img{transform:scale(var(--cover-zoom,1))!important;transform-origin:center;transition:transform .45s cubic-bezier(.22,1,.36,1)!important}
+body:not([data-page=case]) .work .project-visual.offer>.art{transform:none!important}
+body:not([data-page=case]) #work .project-visual .mockup-preview>img{transform:scale(var(--cover-zoom,1))!important;transition:transform .45s cubic-bezier(.22,1,.36,1)!important}
+@media(hover:hover) and (pointer:fine){body:not([data-page=case]) .project-visual:hover,body:not([data-page=case]) .work-gallery:has(.work-current-link:hover) .project-visual.is-active{--cover-zoom:1.04}}
+body:not([data-page=case]) .project-visual:focus-visible,body:not([data-page=case]) .work-gallery:has(.work-current-link:focus-visible) .project-visual.is-active{--cover-zoom:1.04}
+@media(prefers-reduced-motion:reduce),(hover:none),(pointer:coarse){body:not([data-page=case]) #work .project-visual .mockup-preview>img{transform:none!important;transition:none!important}}

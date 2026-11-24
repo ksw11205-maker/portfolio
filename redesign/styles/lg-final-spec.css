@@ -1,0 +1,377 @@
+/* Final supplied specification. Scoped to the LG case study. */
+body.lg-final-spec{background:var(--bg)}
+body.lg-final-spec #main #overview .role-note p+p{margin-top:16px}
+body.lg-final-spec #main #background::before,body.lg-final-spec #main #direction::before{display:none!important}
+body.lg-final-spec #main .usage-context{display:grid;grid-template-columns:minmax(0,2.1fr) minmax(230px,1fr);gap:40px;align-items:center}
+body.lg-final-spec #main .context-image{background:#000;padding:0}
+body.lg-final-spec #main .context-image img{width:100%;border:0!important}
+body.lg-final-spec #main #background .context-image img{display:block;clip-path:inset(8.3% 9.2% 10.4% 9.25%)}
+body.lg-final-spec .observations{display:grid;gap:24px}
+body.lg-final-spec .observations article+article{border-top:1px solid var(--line);padding-top:24px}
+body.lg-final-spec .observations h3{font-size:20px;line-height:1.4;margin-bottom:12px}
+body.lg-final-spec .observations p,body.lg-final-spec .research-source p{color:var(--case-muted);font-size:16px;line-height:1.8}
+body.lg-final-spec #goal-process em{color:#ef527c;font-family:inherit;font-style:normal}
+body.lg-final-spec .research-timeline{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;list-style:none;padding:0}
+body.lg-final-spec .research-timeline li{border-top:2px solid var(--case-accent);padding-top:16px}
+body.lg-final-spec .research-timeline h3{font-size:19px;line-height:1.5;margin:12px 0}
+body.lg-final-spec .research-timeline p{font-size:16px;color:var(--case-muted);line-height:1.8}
+body.lg-final-spec .legacy-research{padding-block:40px;border-top:1px solid var(--line)}
+body.lg-final-spec .research-subtitle{font-size:28px;color:#f0f0f4;margin-bottom:32px}
+body.lg-final-spec .research-source{margin-top:32px;min-width:0}
+body.lg-final-spec .research-source .chapter-heading h4{font-size:26px;line-height:1.4;margin:0 0 16px}
+body.lg-final-spec .research-source .subsection{margin-top:36px}
+body.lg-final-spec .research-source .sub-label{font-size:20px;margin-block:24px}
+body.lg-final-spec .research-source :is(.screen-columns,.steps-three,.steps-four,.variable-grid,.two-columns,.mapping-row){display:grid;gap:24px}
+body.lg-final-spec .research-source :is(.screen-columns,.steps-three){grid-template-columns:repeat(3,minmax(0,1fr))}
+body.lg-final-spec .research-source :is(.two-columns,.mapping-row){grid-template-columns:repeat(2,minmax(0,1fr))}
+body.lg-final-spec .research-source .steps-four{grid-template-columns:repeat(4,minmax(0,1fr))}
+body.lg-final-spec .research-source .variable-grid{grid-template-columns:repeat(3,minmax(0,1fr));list-style:none;padding:0}
+body.lg-final-spec .variable-grid li{padding:16px;background:#15151a}
+body.lg-final-spec .variable-grid li span{display:block}
+body.lg-final-spec .research-source .research-steps{grid-template-columns:1fr 1fr;list-style:none;padding:0}
+body.lg-final-spec .research-source :is(.model-card,.surface){padding:24px;background:#141419;min-width:0}
+body.lg-final-spec .research-source .metric{font-size:64px!important;line-height:1.1;color:#ef527c!important;margin:20px 0}
+body.lg-final-spec .research-source .equation{overflow-wrap:anywhere;font-family:monospace;font-size:14px}
+body.lg-final-spec .research-source img{max-width:100%;height:auto;border:0!important}
+body.lg-final-spec .research-source .mapping-row{margin-top:32px;align-items:center}
+body.lg-final-spec .research-source table{width:100%;border-collapse:collapse;font-size:15px}
+body.lg-final-spec .research-source td,body.lg-final-spec .research-source th{padding:12px;border-bottom:1px solid var(--line);text-align:left}
+body.lg-final-spec .direction-columns{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+body.lg-final-spec .direction-columns h3{font-size:26px;line-height:1.5;margin:16px 0 24px}
+body.lg-final-spec .direction-columns p+p{margin-top:16px}
+body.lg-final-spec .direction-columns p,body.lg-final-spec .ai-bridge p{color:var(--case-muted);font-size:17px}
+body.lg-final-spec .ai-bridge{margin-top:48px;padding:32px;background:#141218}
+body.lg-final-spec .ai-bridge ol{display:flex;gap:32px;flex-wrap:wrap;padding:24px 0 0;list-style:none;color:#e8e4f0}
+body.lg-final-spec .workflow-screens{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-block:24px 48px}
+body.lg-final-spec .workflow-screens img{aspect-ratio:16/10;object-fit:contain;background:#15151a;width:100%}
+body.lg-final-spec .workflow-screens figcaption span{display:block;font-size:14px;margin-top:8px}
+body.lg-final-spec .design-ia img{max-width:100%;height:auto}
+@media(min-width:1100px){body.lg-final-spec #main>.unified-chapter{max-width:1360px;width:calc(100% - 200px);margin-left:200px;margin-right:auto}body.lg-final-spec #main .case-toc{position:fixed;top:150px;left:0;width:190px;max-width:190px;padding:24px;z-index:20;border:0;background:var(--bg)}body.lg-final-spec #main .case-nav{display:flex;flex-direction:column;align-items:stretch;gap:12px;padding:0;white-space:normal;border:0}body.lg-final-spec #main .case-nav a{font-size:13px;line-height:1.5}}
+@media(max-width:1000px){body.lg-final-spec .research-timeline{grid-template-columns:1fr 1fr}body.lg-final-spec #main .usage-context{grid-template-columns:1fr}body.lg-final-spec .observations{grid-template-columns:repeat(3,minmax(0,1fr))}body.lg-final-spec .direction-columns{grid-template-columns:1fr}body.lg-final-spec .workflow-screens{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){body.lg-final-spec .observations,body.lg-final-spec .research-source :is(.screen-columns,.steps-three,.steps-four,.variable-grid,.two-columns,.mapping-row,.research-steps){grid-template-columns:1fr}body.lg-final-spec .research-timeline{grid-template-columns:1fr}body.lg-final-spec .research-source table{font-size:13px}body.lg-final-spec .research-source th,body.lg-final-spec .research-source td{padding:8px}body.lg-final-spec .research-source .metric{font-size:48px!important}body.lg-final-spec .workflow-screens{grid-template-columns:1fr 1fr;gap:16px}}
+/* Keep the contribution paragraphs in one reading column. */
+body.lg-final-spec[data-unified-case] #main #overview.contribution-only{display:grid;grid-template-columns:180px minmax(0,1fr);gap:40px;align-items:start}
+body.lg-final-spec[data-unified-case] #main #overview .role-note{display:block!important;grid-template-columns:none!important;width:100%;max-width:none!important;min-width:0}
+body.lg-final-spec[data-unified-case] #main #overview .role-note p{display:block;width:100%;max-width:none;font-size:17px;line-height:1.85;white-space:normal;word-break:keep-all;overflow-wrap:break-word;text-wrap:pretty}
+body.lg-final-spec[data-unified-case] #main #overview .role-note p+p{margin:20px 0 0}
+@media(max-width:767px){body.lg-final-spec[data-unified-case] #main #overview.contribution-only{grid-template-columns:1fr;gap:20px}}
+/* Design walkthrough and component labels. */
+body.lg-final-spec[data-unified-case] #main :is(h2,h3,h4,p,dd){word-break:keep-all;overflow-wrap:break-word;text-wrap:pretty}
+body.lg-final-spec[data-unified-case] #main .component-notes>div+div{margin-top:24px}
+body.lg-final-spec[data-unified-case] #main .component-notes dd{max-width:none;margin-top:10px;font-size:15px;line-height:1.8}
+body.lg-final-spec[data-unified-case] #main .final-screen-group{grid-template-columns:minmax(250px,.42fr) minmax(0,1fr);gap:40px;align-items:start}
+body.lg-final-spec #review.review-technical{position:relative;isolation:isolate;overflow:hidden;background:#0a0a0c}
+body.lg-final-spec #review .review-ui-backdrop{position:absolute;inset:0;z-index:-2;display:grid;grid-template-columns:1fr 1fr;gap:24px;opacity:.07;filter:blur(3px);pointer-events:none;transform:scale(1.2)}
+body.lg-final-spec #review:after{content:'';position:absolute;z-index:-1;inset:0;pointer-events:none;background:radial-gradient(ellipse at 95% 5%,#c8003b20,transparent 40%),linear-gradient(90deg,#000e,#0002)}
+body.lg-final-spec #review .review-watermark{position:absolute;right:3%;top:4%;z-index:-1;font-size:clamp(80px,12vw,190px);font-weight:700;letter-spacing:-.06em;color:#fff;opacity:.04;pointer-events:none}
+
+body.lg-final-spec #review .research-reflection-qa>article{border-bottom:1px solid var(--line)}
+body.lg-final-spec #review .research-reflection-qa p+p{margin-top:16px}
+body.lg-final-spec #review .research-reflection-qa h3{color:#f0f0f4}
+body.lg-final-spec #review .research-reflection-qa p{color:#a6a6b9}
+body.lg-final-spec #main .project-cover__heading h1{font-family:inherit;font-size:clamp(30px,3vw,48px)}
+body.lg-final-spec #main .project-cover__action{display:inline-flex;align-items:center;gap:16px;min-height:48px;padding:12px 20px;border:1px solid #ffffff66;color:#fff}
+body.lg-final-spec #main .project-cover__action svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.5}
+@media(max-width:1000px){body.lg-final-spec[data-unified-case] #main .final-screen-group{grid-template-columns:1fr;gap:28px}body.lg-final-spec[data-unified-case] #main .screen-summary{max-width:none}body.lg-final-spec[data-unified-case] #main .screen-description{max-width:none}body.lg-final-spec[data-unified-case] #main .component-notes{display:grid;grid-template-columns:1fr 1fr;gap:20px}body.lg-final-spec[data-unified-case] #main .component-notes>div+div{margin:0}}
+@media(max-width:600px){body.lg-final-spec[data-unified-case] #main .component-notes{grid-template-columns:1fr}body.lg-final-spec #review .research-reflection-qa>article{display:block}body.lg-final-spec #review .research-reflection-qa h3{margin:12px 0 20px}body.lg-final-spec #main .project-cover{min-height:0;height:auto}body.lg-final-spec #main .project-cover__intro{position:relative;width:100%;padding:32px 24px;background:#0a0a0c}body.lg-final-spec #main .project-cover__art{position:relative;width:100%;aspect-ratio:16/9;height:auto}body.lg-final-spec #main .project-cover__art>img{height:100%;object-fit:cover}body.lg-final-spec #main .project-cover:after{display:none}}
+@media(prefers-reduced-motion:reduce){body.lg-final-spec *{scroll-behavior:auto!important}}
+
+/* Research and tool walkthrough */
+
+.lg-final-spec #main #goal-process .case-heading em {
+  display: block;
+  color: var(--case-accent);
+}
+
+body.lg-final-spec[data-unified-case] #main #overview.contribution-only {
+  grid-template-columns: minmax(0, 1fr) minmax(10rem, .32fr);
+  column-gap: clamp(1.5rem, 4vw, 3.5rem);
+  row-gap: 1rem;
+  align-items: center;
+}
+
+.lg-final-spec #main #overview.contribution-only > h2 {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+
+.lg-final-spec #main #overview .role-note {
+  margin: 0;
+}
+
+.lg-final-spec #main #overview .role-note p {
+  max-inline-size: 68ch;
+}
+
+.lg-final-spec .research-partners {
+  display: flex;
+  align-items: center;
+  gap: clamp(.5rem, 1.2vw, 1rem);
+  padding-block: 1rem;
+  color: var(--lg-secondary);
+}
+
+.lg-final-spec #main .research-partners img {
+  display: block;
+  inline-size: min(42%, 8rem);
+  min-inline-size: 0;
+  block-size: auto;
+  border: 0;
+}
+
+.lg-final-spec .observations article {
+  border-block-start: 1px solid var(--line);
+  padding-block-start: .875rem;
+}
+
+.lg-final-spec .observations article + article {
+  padding-block-start: .875rem;
+}
+
+.lg-final-spec .factor-effects {
+  display: grid;
+  gap: .65rem;
+  padding: 0;
+  list-style: none;
+}
+
+.lg-final-spec .factor-results {
+  align-items: start;
+}
+
+.lg-final-spec .factor-effects li {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(1.5rem, 1fr) 5ch;
+  align-items: center;
+  gap: .5rem;
+  color: var(--ink);
+  line-height: 1.35;
+}
+
+.lg-final-spec .factor-effects li > span:first-child {
+  overflow-wrap: anywhere;
+}
+
+.lg-final-spec .factor-effects small {
+  display: inline-block;
+  color: var(--lg-accent-text);
+}
+
+.lg-final-spec .factor-effects strong {
+  font-variant-numeric: tabular-nums;
+  text-align: end;
+  white-space: nowrap;
+}
+
+.lg-final-spec .effect-track {
+  position: relative;
+  background: linear-gradient(90deg, transparent calc(50% - .5px), #ffffff40 calc(50% - .5px) calc(50% + .5px), transparent calc(50% + .5px)), #19191f;
+  block-size: .55rem;
+}
+
+.lg-final-spec .effect-track i {
+  position: absolute;
+  inset-block: 0;
+  inline-size: var(--effect);
+}
+
+.lg-final-spec .effect-positive {
+  inset-inline-start: 50%;
+  background: var(--lg-violet);
+}
+
+.lg-final-spec .effect-negative {
+  inset-inline-end: 50%;
+  background: var(--lg-secondary);
+}
+
+.lg-final-spec .factor-effects li:first-child .effect-positive {
+  background: var(--case-accent);
+}
+
+.lg-final-spec .ai-bridge {
+  padding: clamp(1rem, 3vw, 2rem);
+  border: 1px solid var(--line);
+  background: #101016;
+}
+
+.lg-final-spec .ai-bridge h3 {
+  margin-block-end: .65rem;
+}
+
+.lg-final-spec .ai-bridge p + p {
+  margin-block-start: .4rem;
+}
+
+.lg-final-spec .ai-bridge ol {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+}
+
+.lg-final-spec .ai-bridge li {
+  padding: .75rem 1rem;
+  border-block-start: 1px solid #b9a5de55;
+  background: #17151d;
+}
+
+.lg-final-spec #main .workflow-screens {
+  list-style: none;
+  padding: 0;
+}
+
+.lg-final-spec .workflow-screens li {
+  min-inline-size: 0;
+  border-block-start: 1px solid #b9a5de55;
+  padding-block-start: .75rem;
+}
+
+.lg-final-spec #main .workflow-screens figure {
+  margin: 0;
+}
+
+.lg-final-spec #main .workflow-screens img {
+  display: block;
+  aspect-ratio: 1440 / 1120;
+  block-size: auto;
+  border: 1px solid var(--line);
+}
+
+.lg-final-spec #main .workflow-screens figcaption {
+  margin-block-start: .75rem;
+  text-align: start;
+}
+
+.lg-final-spec #main .tool-heading {
+  margin-block: clamp(2.5rem, 6vw, 5rem) 0;
+  padding-block-start: 1.5rem;
+  border-block-start: 1px solid var(--line);
+}
+
+.lg-final-spec[data-page][data-unified-case] #main .final-screen-group {
+  display: grid;
+  grid-template-columns: minmax(14.5rem, .36fr) minmax(0, 1fr);
+  gap: clamp(1.25rem, 3vw, 2.75rem);
+  padding-block: clamp(2rem, 4vw, 3.75rem);
+}
+
+.lg-final-spec[data-unified-case] #main .component-notes {
+  margin-block-start: 1.2rem;
+  padding-block-start: 1rem;
+  border-block-start: 1px solid var(--line);
+}
+
+.lg-final-spec #main .tool-screen {
+  margin: 0;
+  inline-size: 100%;
+  min-inline-size: 0;
+}
+
+.lg-final-spec #main .tool-screen img {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+  max-block-size: none;
+  border: 1px solid #ffffff1a;
+  border-radius: 0;
+  object-fit: contain;
+}
+
+.lg-final-spec #main [data-capture="sidebar"] img {
+  inline-size: min(100%, 20rem);
+}
+
+.lg-final-spec .tool-screen figcaption,
+.lg-final-spec .screen-settings-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25rem 1.1rem;
+  margin: .5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lg-final-spec .screen-settings-links {
+  margin: 0;
+}
+
+.lg-final-spec .tool-screen a {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  min-block-size: 2.75rem;
+  color: var(--lg-violet);
+  font-size: .875rem;
+  text-underline-offset: .2em;
+  transition: color 150ms ease-out;
+}
+
+.lg-final-spec .tool-screen a:is(:hover, :focus-visible) {
+  color: var(--ink);
+  text-decoration: underline;
+}
+
+.lg-final-spec .tool-screen a:focus-visible {
+  outline: 2px solid var(--lg-violet);
+  outline-offset: 3px;
+}
+
+.lg-final-spec #review .review-ui-backdrop img {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+}
+
+.lg-final-spec #main #review .research-reflection-qa > article > div {
+  display: block;
+  min-inline-size: 0;
+}
+
+@media (max-width: 1000px) {
+  .lg-final-spec[data-page][data-unified-case] #main .final-screen-group {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: .875rem;
+  }
+
+  .lg-final-spec #main .screen-summary {
+    display: contents;
+  }
+
+  .lg-final-spec[data-page][data-unified-case] #main .screen-summary :is(.screen-group-title, .screen-description) {
+    margin: 0;
+  }
+
+  .lg-final-spec #main .tool-screen {
+    grid-row: 3;
+  }
+
+  .lg-final-spec[data-unified-case] #main .component-notes {
+    margin-block-start: .5rem;
+  }
+}
+
+@media (max-width: 680px) {
+  body.lg-final-spec[data-unified-case] #main #overview.contribution-only,
+  .lg-final-spec .ai-bridge ol {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .lg-final-spec #main .research-partners img {
+    inline-size: 6.5rem;
+  }
+
+  .lg-final-spec #main .workflow-screens {
+    gap: 1.25rem .875rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lg-final-spec .tool-screen a {
+    transition: none;
+  }
+}
+
+.lg-final-spec[data-unified-case] #main .case-nav a[aria-current="location"] {
+  color: var(--lg-accent-text) !important;
+}
+
