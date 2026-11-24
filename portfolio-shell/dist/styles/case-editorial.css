@@ -869,3 +869,17 @@ body::after,body[data-page="case"]::after{
     max-width:100%!important;
   }
 }
+
+/* Keep Korean line breaks between words across the portfolio. */
+html[lang="ko"] body:is(:not([data-page]), [data-page="home"], [data-page="case"]) main :is(h1, h2, h3, h4, p) {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+html[lang="ko"] body:is(:not([data-page]), [data-page="home"], [data-page="case"]) main :is(h1, h2, h3, h4, .project-summary, .chapter-heading .lead) {
+  text-wrap: balance;
+}
+
+html[lang="ko"] body:is(:not([data-page]), [data-page="home"], [data-page="case"]) main p:not(.project-summary, .chapter-heading .lead) {
+  text-wrap: pretty;
+}

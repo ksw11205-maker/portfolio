@@ -21,7 +21,6 @@ body[data-project="cafekok"] {
 
 body[data-project="cafekok"] #main .ck-story {
   color: var(--ck-ink);
-  background: var(--ck-paper);
 }
 
 .ck-story :is(h2, h3, p, figure, ol, ul, dl, dd) { margin: 0; }
@@ -215,7 +214,7 @@ body[data-project="cafekok"] #main .ck-story {
 .ck-flow .ck-phone { border-width: 3px; border-radius: 13px; }
 
 .ck-system-intro { display: grid; grid-template-columns: .7fr 1fr 1.5fr; gap: 24px; }
-.ck-system-intro > section, .ck-system-bottom > section { min-inline-size: 0; border-top: 1px solid var(--ck-line); padding-top: 14px; }
+.ck-system-intro > section { min-inline-size: 0; border-top: 1px solid var(--ck-line); padding-top: 14px; }
 .ck-system-intro h3, .ck-system-bottom h3 { margin-block-end: 15px; }
 .ck-brand-img { inline-size: min(100%, 160px); mix-blend-mode: multiply; }
 .ck-story .ck-type-name { font: 750 1.65rem/1.2 "CAFÉKOK Pretendard", sans-serif; margin-block-end: 9px; }
@@ -226,38 +225,131 @@ body[data-project="cafekok"] #main .ck-story {
 .ck-swatches li span { block-size: 31px; border-radius: 4px; background: var(--swatch); border: 1px solid #30251f1c; }
 .ck-swatches li b { font-size: .69rem; font-weight: 640; }
 .ck-swatches code { font-size: .67rem; color: var(--ck-muted); }
-.ck-system-bottom { display: grid; grid-template-columns: minmax(0, 2.4fr) minmax(0, 1fr); gap: 24px; margin-block-start: 30px; }
-.ck-components { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; }
-.ck-component { display: grid; grid-template-rows: 1fr auto; justify-items: center; gap: 16px; min-inline-size: 0; min-block-size: 115px; padding: clamp(10px, 1.35vw, 20px); background: #f7f5f0; border: 1px solid #ded9d0; border-radius: 8px; }
-.ck-component img { align-self: center; max-block-size: 100px; object-fit: contain; }
-.ck-component img:is([src*="bookmark-"], [src$="component-match.png"]) { inline-size: 48px; }
-.ck-component img[src$="component-purpose.png"] { inline-size: 82px; }
-.ck-component img[src*="component-filter-"] { max-inline-size: min(100%, 100px); }
-.ck-component:has(img[src$="component-navigation.png"]) { grid-column: span 2; }
-.ck-component img[src$="component-navigation.png"] { inline-size: min(100%, 358px); }
-.ck-component:has(img[src$="component-recommendation.png"]) { grid-row: span 2; }
-.ck-component img[src$="component-recommendation.png"] { max-block-size: 220px; }
-.ck-component figcaption { justify-self: stretch; padding-block-start: 8px; border-top: 1px solid #e1dbd1; color: var(--ck-muted); text-align: start; font-size: .76rem; line-height: 1.35; }
-.ck-icons { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); justify-items: center; gap: 18px 4px; }
+.ck-system-bottom {
+  margin-block-start: clamp(2rem, 5vw, 3.5rem);
+  padding-block-start: 1.35rem;
+  border-block-start: 1px solid var(--ck-line);
+}
+
+.ck-components {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr) minmax(0, .68fr);
+  gap: clamp(1.5rem, 3vw, 3.5rem);
+}
+
+.ck-component-column {
+  display: grid;
+  align-content: start;
+  gap: clamp(1.25rem, 2.5vw, 2rem);
+  min-inline-size: 0;
+}
+
+.ck-component {
+  display: grid;
+  justify-items: start;
+  align-content: start;
+  gap: .65rem;
+  min-inline-size: 0;
+}
+
+body[data-page="case"][data-unified-case] #main .ck-components .ck-component :is(h4, figcaption) {
+  margin: 0 !important;
+  color: var(--ck-ink);
+  font-size: .85rem !important;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: start !important;
+}
+
+.ck-component-buttons { display: grid; justify-items: start; gap: .55rem; }
+.ck-component-buttons img + img { inline-size: min(100%, 8.25rem); }
+.ck-component img[src$="component-recommendation.png"] { inline-size: min(100%, 8.875rem); }
+.ck-component img[src$="component-purpose.png"] { inline-size: min(100%, 5.125rem); }
+
+.ck-component-states {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  gap: 1rem 1.5rem;
+}
+
+.ck-component-pair { display: flex; align-items: center; gap: .5rem; }
+.ck-component-pair img { min-inline-size: 0; }
+.ck-component-pair--filters img { inline-size: 5rem; }
+.ck-component-pair--bookmarks img { inline-size: 2.75rem; }
+
+.ck-story .ck-icons {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  justify-items: center;
+  gap: .9rem .35rem;
+  inline-size: 100%;
+  padding: .9rem .55rem;
+  background: #fff9;
+  border-radius: .5rem;
+}
+
+@media (min-width: 681px) and (max-width: 1023px) {
+  .ck-components { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ck-component-samples {
+    grid-column: 1 / -1;
+    grid-template-columns: max-content minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  .ck-components { grid-template-columns: minmax(0, 1fr); }
+  .ck-component-samples { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
 .ck-icons li { display: grid; justify-items: center; gap: 3px; font-size: .65rem; line-height: 1.25; text-align: center; }
 
 .ck-app-heading h2 { font-family: "Inter Tight", SUIT, Arial, sans-serif; font-size: clamp(2.35rem, 5.1vw, 5rem); letter-spacing: -.04em; }
 .ck-story .ck-app-intro {
-  --ck-daylight: radial-gradient(ellipse 28% 11% at 72% 86%, #85664929, transparent), linear-gradient(137deg, #fffcf1 22%, transparent 49%, #d8bfa354 76%, transparent);
-  --ck-light: #fffdf8;
-  --ck-light-origin: 73% 37%;
-  --ck-surface-start: #f8f2e9;
-  --ck-surface-end: #faf5ed;
   display: grid;
-  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
-  align-items: center;
-  gap: clamp(24px, 5vw, 72px);
+  place-items: center;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 0;
+  background: #f8f0e6;
 }
-.ck-app-intro .ck-heading { margin-block-end: 0; }
-.ck-story .ck-app-intro-mockup {
-  justify-self: center;
-  inline-size: min(100%, clamp(240px, 23vw, 288px));
+
+.ck-story .ck-app-intro-background {
+  grid-area: 1 / 1;
+  inline-size: 100%;
+  block-size: auto;
+  align-self: center;
+  filter: blur(5px);
+  opacity: .22;
 }
+
+.ck-app-intro-copy {
+  grid-area: 1 / 1;
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: .75rem;
+  inline-size: min(100%, 43rem);
+  padding: clamp(2rem, 5vw, 4rem) clamp(1.5rem, 4vw, 2rem);
+  text-align: center;
+}
+
+body[data-project="cafekok"] #main .ck-app-intro-copy h2 {
+  color: var(--ck-accent-text);
+  font-size: .8rem;
+  letter-spacing: .1em;
+}
+
+.ck-app-intro-copy .ck-brand-img {
+  inline-size: min(75%, 14rem);
+  margin-block: .15rem .65rem;
+}
+
+.ck-app-intro-copy p {
+  color: var(--ck-ink);
+  line-height: 1.7;
+}
+
 #home > .ck-app-heading { margin-inline: auto; }
 .ck-story #home > .ck-app-heading > * { text-align: center; }
 #home > .ck-app-heading .ck-lead { margin-inline: auto; }
@@ -314,7 +406,7 @@ body[data-project="cafekok"] #main :is(.case-overview-links a, .case-nav a, .ck-
   .ck-story .ck-flow.ck-entered > li {
     animation: ck-settle 540ms var(--ck-ease-out) var(--ck-delay, 0ms) backwards;
   }
-  .ck-story :is(.ck-overview-visual, .ck-venn, .ck-phone-pair, .ck-annotated, .ck-app-intro-mockup, .ck-components) { --ck-delay: 80ms; }
+  .ck-story :is(.ck-overview-visual, .ck-venn, .ck-phone-pair, .ck-annotated, .ck-components) { --ck-delay: 80ms; }
   .ck-story .ck-flow > li:nth-child(2) { --ck-delay: 65ms; }
   .ck-story .ck-flow > li:nth-child(3) { --ck-delay: 130ms; }
   .ck-story .ck-flow > li:nth-child(4) { --ck-delay: 195ms; }
@@ -340,21 +432,21 @@ body[data-project="cafekok"] #main :is(.case-overview-links a, .case-nav a, .ck-
   .ck-caption--trail { left: calc(100% + 22px); }
   .ck-phone-pair .ck-caption::before, .ck-phone-pair .ck-caption::after { content: ""; position: absolute; z-index: 2; background: var(--ck-wire); }
   .ck-phone-pair .ck-caption::before { top: .52rem; inline-size: 5px; block-size: 5px; border-radius: 50%; }
-  .ck-phone-pair .ck-caption::after { top: .65rem; inline-size: calc(18px + var(--caption-reach)); block-size: 1px; }
-  .ck-caption--lead::before { left: calc(100% + 20px + var(--caption-reach)); }
-  .ck-caption--trail::before { right: calc(100% + 20px + var(--caption-reach)); }
+  .ck-phone-pair .ck-caption::after { top: .65rem; inline-size: calc(27px + var(--caption-reach)); block-size: 2px; }
+  .ck-caption--lead::before { left: calc(100% + 30px + var(--caption-reach)); }
+  .ck-caption--trail::before { right: calc(100% + 30px + var(--caption-reach)); }
   .ck-caption--lead::after { left: calc(100% + 4px); }
   .ck-caption--trail::after { right: calc(100% + 4px); }
   .ck-explore { max-inline-size: 1015px; }
-  .ck-explore-main { --search-notes-width: clamp(115px, 10vw, 145px); container-type: inline-size; margin-inline-start: var(--search-notes-width); }
-  .ck-explore-notes { position: absolute; inset: 0 auto 0 calc(-1 * var(--search-notes-width)); width: calc(var(--search-notes-width) - 24px); margin: 0; }
+  .ck-explore-main { --search-notes-width: clamp(195px, 16vw, 230px); container-type: inline-size; margin-inline-start: var(--search-notes-width); }
+  .ck-explore-notes { position: absolute; inset: 0 auto 0 calc(-1 * var(--search-notes-width)); width: calc(var(--search-notes-width) - 20px); margin: 0; z-index: 3; }
   .ck-explore-notes > div { position: absolute; width: 100%; }
   .ck-explore-notes > div:first-child { top: calc(180 / 390 * 100cqw); }
   .ck-explore-notes > div:nth-child(2) { top: calc(430 / 390 * 100cqw); }
   .ck-explore-notes h3 { font-size: 1rem; }
   .ck-explore-notes p { font-size: .84rem; }
-  .ck-explore-notes > div::after { content: ""; position: absolute; top: 9px; left: calc(100% + 6px); width: calc(18px + 5cqw); height: 1px; background: var(--ck-wire); }
-  .ck-explore-notes > div::before { content: ""; position: absolute; top: 7px; left: calc(100% + 22px + 5cqw); width: 5px; height: 5px; border-radius: 50%; background: var(--ck-wire); z-index: 2; }
+  .ck-explore-notes > div::after { content: ""; position: absolute; top: 9px; left: calc(100% + 6px); width: calc(27px + 5cqw); height: 2px; background: var(--ck-wire); }
+  .ck-explore-notes > div::before { content: ""; position: absolute; top: 7px; left: calc(100% + 32px + 5cqw); width: 5px; height: 5px; border-radius: 50%; background: var(--ck-wire); z-index: 2; }
 }
 @media (min-width: 1024px) {
   .ck-story .ck-notes { position: absolute; inset: 0; pointer-events: none; }
@@ -362,22 +454,21 @@ body[data-project="cafekok"] #main :is(.case-overview-links a, .case-nav a, .ck-
   .ck-note--left { right: calc(50% + var(--phone) / 2 + var(--annotation-gap)); }
   .ck-note--right { left: calc(50% + var(--phone) / 2 + var(--annotation-gap)); }
   .ck-note::after, .ck-note::before { content: ""; position: absolute; z-index: 1; background: var(--ck-wire); }
-  .ck-note::after { top: .63rem; height: 1px; width: calc(var(--annotation-gap) + var(--phone) * var(--reach) / 100 - 8px); }
+  .ck-note::after { top: .63rem; height: 2px; width: calc(var(--annotation-gap) + var(--phone) * var(--reach) / 100); }
   .ck-note::before { top: calc(.63rem - 2px); width: 5px; height: 5px; border-radius: 50%; }
   .ck-note--left::after { left: calc(100% + 8px); }
   .ck-note--right::after { right: calc(100% + 8px); }
-  .ck-note--left::before { left: calc(100% + var(--annotation-gap) + var(--phone) * var(--reach) / 100 - 2px); }
-  .ck-note--right::before { right: calc(100% + var(--annotation-gap) + var(--phone) * var(--reach) / 100 - 2px); }
+  .ck-note--left::before { left: calc(100% + var(--annotation-gap) + var(--phone) * var(--reach) / 100 + 7px); }
+  .ck-note--right::before { right: calc(100% + var(--annotation-gap) + var(--phone) * var(--reach) / 100 + 7px); }
 }
 @media (min-width: 1440px) {
   .ck-saved-ready { position: relative; container-type: inline-size; inline-size: min(100%, 355px); }
   .ck-saved-bookmark { position: absolute; inset: calc(301 / 390 * 100cqw - .56rem) auto auto calc(100% + 21px); width: 112px; margin: 0; }
   .ck-saved-bookmark::before, .ck-saved-bookmark::after { content: ""; position: absolute; z-index: 2; background: var(--ck-wire); }
-  .ck-saved-bookmark::before { inset: .48rem calc(100% + 18px + 6.67cqw) auto auto; width: 5px; height: 5px; border-radius: 50%; }
-  .ck-saved-bookmark::after { inset: .62rem calc(100% + 5px) auto auto; width: calc(16px + 6.67cqw); height: 1px; }
+  .ck-saved-bookmark::before { inset: .48rem calc(100% + 28px + 6.67cqw) auto auto; width: 5px; height: 5px; border-radius: 50%; }
+  .ck-saved-bookmark::after { inset: .62rem calc(100% + 5px) auto auto; width: calc(24px + 6.67cqw); height: 2px; }
 }
 @media (max-width: 1023px) {
-  .ck-system-bottom { grid-template-columns: minmax(0, 1fr); }
   .ck-annotated { --phone: min(100%, 390px); }
   .ck-story .ck-notes { grid-template-columns: repeat(2, minmax(0,1fr)); border-block-start: 1px solid var(--ck-line); padding-block-start: 16px; margin-block-start: 22px; }
   .ck-pair-section { grid-template-columns: 1fr; gap: 0; }
@@ -388,7 +479,7 @@ body[data-project="cafekok"] #main :is(.case-overview-links a, .case-nav a, .ck-
 }
 @media (max-width: 767px) {
   .ck-story .ck-app-intro { grid-template-columns: minmax(0, 1fr); }
-  .ck-contribution, .ck-overview, .ck-concept, .ck-explore, .ck-system-bottom { grid-template-columns: minmax(0,1fr); }
+  .ck-contribution, .ck-overview, .ck-concept, .ck-explore { grid-template-columns: minmax(0,1fr); }
   .ck-stats, .ck-rule-columns { grid-template-columns: 1fr; }
   .ck-stats > figure, .ck-stats > figure + figure, .ck-rule-columns > div, .ck-rule-columns > div + div { border-inline-start: 0; padding-inline: 0; }
   .ck-stats > figure + figure, .ck-rule-columns > div + div { border-block-start: 1px solid var(--ck-line); margin-block-start: 20px; padding-block-start: 20px; }
@@ -396,7 +487,6 @@ body[data-project="cafekok"] #main :is(.case-overview-links a, .case-nav a, .ck-
   .ck-flow { grid-template-columns: repeat(2,minmax(0, 1fr)); row-gap: 20px; }
   .ck-flow li:nth-child(even)::after { display: none; }
   .ck-swatches { grid-template-columns: repeat(3, minmax(0,1fr)); }
-  .ck-system-bottom { gap: 23px; }
   .ck-phone-pair, .ck-saved { grid-template-columns: minmax(0,1fr); }
   .ck-phone-pair > div { inline-size: min(100%, 355px); }
   .ck-phone-pair > div:nth-child(2) { padding-block-start: 0; }
@@ -407,9 +497,6 @@ body[data-project="cafekok"] #main :is(.case-overview-links a, .case-nav a, .ck-
 }
 @media (max-width: 480px) {
   .ck-story .ck-notes, .ck-system-intro { grid-template-columns: minmax(0,1fr); }
-  .ck-components { grid-template-columns: repeat(2,minmax(0,1fr)); }
-  .ck-component:nth-child(-n+4) { grid-column: 1 / -1; min-block-size: 0; }
-  .ck-component img[src$="component-secondary.png"] { inline-size: 132px; }
   .ck-flow .ck-phone { border-width: 2px; }
   .ck-story #home > .ck-app-heading > * { text-align: start; }
 }
@@ -638,4 +725,70 @@ body[data-project="cafekok"] #main .archive-hero-intro {
     mask-image: linear-gradient(#0000, #000 14%);
   }
   .ck-flow li:nth-child(even)::after { display: none; }
+}
+
+
+body[data-project="cafekok"][data-case-entry] { background: #fff; }
+
+body[data-project="cafekok"][data-case-entry] #main .case-toc {
+  background: #fff !important;
+}
+
+body[data-project="cafekok"][data-case-entry] #main .archive-meta dt {
+  white-space: nowrap;
+}
+
+
+@media (min-width: 1024px) {
+  .ck-story :is(.ck-phone-pair .ck-caption, .ck-explore-notes > div, .ck-note, .ck-saved-bookmark)::before {
+    box-sizing: border-box;
+    inline-size: 9px;
+    block-size: 9px;
+    border: 2px solid var(--ck-accent-text);
+    background: #fff;
+    inset-block-start: .65rem;
+    translate: 0 -50%;
+    z-index: 3;
+  }
+
+  .ck-story :is(.ck-phone-pair .ck-caption, .ck-explore-notes > div, .ck-note, .ck-saved-bookmark)::after {
+    inset-block-start: .65rem;
+    translate: 0 -50%;
+    background: var(--ck-accent-text);
+  }
+
+  .ck-story .ck-connectors { color: var(--ck-accent-text); }
+}
+
+body[data-project="cafekok"] #main .ck-story :is(.ck-caption, .ck-note, .ck-explore-notes > div, .ck-saved-bookmark) {
+  text-align: start;
+}
+
+body[data-project="cafekok"] #main .ck-story :is(.ck-caption, .ck-note, .ck-explore-notes > div, .ck-saved-bookmark) h3 {
+  margin: 0 0 .35rem;
+  line-height: 1.35;
+  text-align: start;
+  word-break: keep-all;
+}
+
+body[data-project="cafekok"] #main .ck-story :is(.ck-caption, .ck-note, .ck-explore-notes > div, .ck-saved-bookmark) p {
+  margin: 0;
+  line-height: 1.65;
+  text-align: start;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+body[data-project="cafekok"] #main .ck-app-intro-copy p {
+  line-height: 1.7;
+  text-align: center;
+  text-wrap: pretty;
+  word-break: keep-all;
+}
+
+.ck-story .ck-filter-panel[src$="explore-filter-modal.png"] {
+  inline-size: 100%;
+  aspect-ratio: 440 / 953;
+  object-fit: cover;
+  object-position: center;
 }

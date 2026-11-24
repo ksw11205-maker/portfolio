@@ -686,7 +686,22 @@ body.lg-final-spec[data-unified-case] #main .component-study .component-notes fi
   block-size: auto;
 }
 
-.lg-final-spec .component-study .component-closeup--icon img { inline-size: 4rem; }
+body.lg-final-spec[data-unified-case] #main [data-screen="topbar"] .component-closeup--icon {
+  display: grid;
+  place-items: center;
+  inline-size: 4rem;
+  block-size: 4rem;
+  background: #0a0a0c;
+  border: 2px solid rgba(255, 255, 255, .07);
+  border-radius: 1rem;
+  color: #9090a8;
+  box-sizing: border-box;
+}
+
+.lg-final-spec .component-closeup--icon svg {
+  inline-size: 1.875rem;
+  block-size: 1.875rem;
+}
 
 .lg-final-spec .settings-previews {
   grid-column: 1 / -1;

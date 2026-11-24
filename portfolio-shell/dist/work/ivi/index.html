@@ -17,6 +17,7 @@
 <link href="/cafekok-cover.css" rel="stylesheet"/><script src="/scripts/portfolio-reading.js" type="module"></script><link href="/styles/case-editorial.css" rel="stylesheet"/><link href="/styles/master-editorial.css" rel="stylesheet"/><link href="/styles/unified-cases.css" rel="stylesheet"/><link href="/styles/art-directed-sections.css" rel="stylesheet"/><link href="/styles/research-editorial-2026.css" rel="stylesheet"/><link href="/styles/premium-case-editorial.css" rel="stylesheet"/><link href="/styles/flagship-refinement.css" rel="stylesheet"/><link href="/styles/annotation-revisions.css" rel="stylesheet"/><link rel="stylesheet" href="/styles/case-entry.css"/>
 <script type="module" src="/scripts/case-footer-wave.js"></script>
 <link rel="stylesheet" href="/styles/ivi-final.css"/>
+<link rel="stylesheet" href="/styles/case-cover-actions.css"/>
 </head>
 <body data-page="case" data-project="ivi" data-theme="dark" data-unified-case="" data-case-entry>
 <a class="skip-link" href="#main">본문으로 이동</a>
@@ -33,7 +34,7 @@
   <div class="ivi-cover-intro">
     <div><p class="ivi-label">AUTOMOTIVE UX RESEARCH</p><h1 id="project-title">IVI<br/>USABILITY RESEARCH</h1><p>운전자의 주행 맥락을 고려해<br/>차량 터치스크린의 사용성을 분석하다</p></div>
     <dl><div><dt>ROLE</dt><dd>UX Research · Usability Testing</dd></div><div><dt>PRESENTATION</dt><dd>2025 대한인간공학회 춘계학술대회</dd></div><div><dt>TOOLS</dt><dd><img src="/assets/tools/figma.svg" width="22" height="22" alt="Figma"/> <img src="/assets/tools/maze.svg" width="22" height="22" alt="Maze"/></dd></div></dl>
-    <a class="prototype-link" data-prototype-cover="" href="https://www.figma.com/proto/FF8CphVdOl1e6iASFM4ef2/IVIS?page-id=0%3A1&amp;node-id=103-936&amp;starting-point-node-id=103%3A936&amp;scaling=scale-down" rel="noopener noreferrer" target="_blank">VIEW PROTOTYPE <span aria-hidden="true">↗</span><span class="sr-only">새 탭에서 열기</span></a>
+    <a data-case-prototype class="prototype-link" data-prototype-cover="" href="https://www.figma.com/proto/FF8CphVdOl1e6iASFM4ef2/IVIS?page-id=0%3A1&amp;node-id=103-936&amp;starting-point-node-id=103%3A936&amp;scaling=scale-down" rel="noopener noreferrer" target="_blank"><span>VIEW PROTOTYPE</span><span class="case-prototype-arrow" aria-hidden="true">↗</span><span class="sr-only">새 탭에서 열기</span></a>
   </div>
   <a class="case-cover-cue" href="#case-overview" aria-label="스크롤하여 프로젝트 목차 보기"><span class="case-cover-cue__mouse" aria-hidden="true"></span><span>SCROLL</span></a>
 </section>
@@ -59,7 +60,7 @@
     <a href="#direction">DIRECTION</a>
     <a href="#final-design">PROPOSED LAYOUT</a>
     <a href="#retrospective">REVIEW</a>
-  </nav><a class="mobile-prototype-link" data-prototype-mobile="" href="https://www.figma.com/proto/FF8CphVdOl1e6iASFM4ef2/IVIS?page-id=0%3A1&amp;node-id=103-936&amp;starting-point-node-id=103%3A936&amp;scaling=scale-down" rel="noopener noreferrer" target="_blank">VIEW PROTOTYPE <span aria-hidden="true">↗</span><span class="sr-only">새 탭에서 열기</span></a></aside>
+  </nav><a data-case-prototype class="mobile-prototype-link" data-prototype-mobile="" href="https://www.figma.com/proto/FF8CphVdOl1e6iASFM4ef2/IVIS?page-id=0%3A1&amp;node-id=103-936&amp;starting-point-node-id=103%3A936&amp;scaling=scale-down" rel="noopener noreferrer" target="_blank"><span>VIEW PROTOTYPE</span><span class="case-prototype-arrow" aria-hidden="true">↗</span><span class="sr-only">새 탭에서 열기</span></a></aside>
 <section class="case-section unified-chapter ivi-chapter" id="background" aria-labelledby="background-title" tabindex="-1">
   <header class="ivi-heading"><p class="ivi-label">BACKGROUND</p><h2 id="background-title">화면에 기능이 모여도 조작 방식은 다릅니다.</h2><p class="ivi-lead">물리 버튼으로 분리되어 있던 기능이 통합 터치스크린으로 이동하면서 운전자의 조작 방식도 달라지고 있습니다.</p></header>
   <div class="ivi-pair ivi-context">
@@ -154,9 +155,8 @@
           <div><dt>클릭 오류율</dt><dd>조작 정확도를 비교하기 위해 잘못된 버튼이나 영역을 누른 클릭의 비율을 확인했습니다.</dd></div>
           <div><dt>클릭 히트맵</dt><dd>사용자가 어떤 영역을 눌렀는지 살펴보기 위해 클릭 위치와 빈도를 시각화했습니다.</dd></div>
         </dl>
-        <figure class="ivi-click-evidence" id="click-patterns">
+        <figure class="ivi-assessment-art ivi-assessment-art--heatmap" id="click-patterns">
           <img src="/work/ivi/assets/latest/heat-side.webp" width="2616" height="1600" alt="앱 메뉴 과제에서 측면 메뉴형의 클릭 위치를 색으로 표시한 히트맵" loading="lazy" decoding="async"/>
-          <figcaption><strong>클릭 히트맵 예시</strong><span>APP MENU · 측면 메뉴형</span></figcaption>
         </figure>
       </section>
       <section class="ivi-assessment" aria-labelledby="ivi-subjective-evaluation">
@@ -166,9 +166,8 @@
           <div><dt>만족도 · 5점 척도</dt><dd>각 레이아웃에서 조작이 쉽고 정보를 찾기 편했는지 알아보기 위해 조작 용이성, 정보 가독성, 시선 분산 정도, 기능 접근성을 평가했습니다.</dd></div>
           <div><dt>주관식 응답</dt><dd>수치로 드러나기 어려운 주행 중 사용 습관과 불편을 파악하기 위해 자주 쓰는 기능, 주의 분산 경험, 배치·크기·색상의 영향을 물었습니다.</dd></div>
         </dl>
-        <figure class="ivi-survey-capture">
-          <img src="/work/ivi/assets/ivi-google-form-overview.png" width="1585" height="911" alt="운전자 경험을 고려한 차량 IVI 콘텐츠 레이아웃 사용성 연구의 Google Forms 설문 첫 화면. 연구 목적과 사전 설명을 안내합니다." loading="lazy" decoding="async"/>
-          <figcaption><strong>Google Forms 설문지</strong><span>연구 목적과 사전 설명</span></figcaption>
+        <figure class="ivi-assessment-art ivi-assessment-art--survey">
+          <img src="/work/ivi/assets/ivi-google-form-capture.png" width="645" height="969" alt="운전자 경험을 고려한 차량 IVI 콘텐츠 레이아웃 사용성 연구의 Google Forms 설문 첫 화면. 연구 목적과 사전 설명을 안내합니다." loading="lazy" decoding="async"/>
         </figure>
       </section>
     </div>
@@ -179,39 +178,48 @@
 <figure id="task-result-menu"><img src="/work/ivi/assets/latest/side.webp" width="1308" height="800" alt="측면 메뉴형 IVI 프로토타입" loading="lazy" decoding="async"/><figcaption><span>APP MENU</span><strong>19.49<small>초</small></strong><b>측면 메뉴형 · 최단 평균</b></figcaption></figure>
 <figure id="task-result-phone"><img src="/work/ivi/assets/latest/side.webp" width="1308" height="800" alt="측면 메뉴형 IVI 프로토타입" loading="lazy" decoding="async"/><figcaption><span>CALL</span><strong>13.87<small>초</small></strong><b>측면 메뉴형 · 최단 평균</b></figcaption></figure></div>
     <section class="ivi-subsection" id="objective">
-      <header class="ivi-heading"><p class="ivi-label">OBJECTIVE PERFORMANCE</p><h3>수행시간과 조작 오류에서 레이아웃별 차이가 나타났습니다.</h3><p class="ivi-lead">세 과제 모두 수행시간에서 레이아웃 효과가 확인됐습니다. 클릭 수와 오류율에서 유의한 차이가 확인된 과제는 APP MENU였습니다.</p></header>
-      <h4 class="ivi-metric-heading">TASK COMPLETION TIME <span>평균 · 초 · 공통 축 0–30</span></h4>
-      <div class="ivi-time-charts"><article><h5>CLIMATE CONTROL</h5><ul><li class="ivi-best"><span>통합형</span><strong>15.15<span class="sr-only">초 · 최단 평균</span></strong><div class="ivi-meter" aria-hidden="true"><span style="--value:50.5%"></span></div></li><li><span>더블 탭형</span><strong>19.14<span class="sr-only">초</span></strong><div class="ivi-meter" aria-hidden="true"><span style="--value:63.8%"></span></div></li><li><span>상단형</span><strong>22.32<span class="sr-only">초</span></strong><div class="ivi-meter" aria-hidden="true"><span style="--value:74.4%"></span></div></li><li><span>측면형</span><strong>17.96<span class="sr-only">초</span></strong><div class="ivi-meter" aria-hidden="true"><span style="--value:59.86666666666667%"></span></div></li></ul><p>ANOVA p=.018 · Tukey HSD<br/>통합형 15.15초 ↔ 상단형 22.32초</p></article>
-<article><h5>APP MENU</h5><ul><li><span>통합형</span><strong>22.15<span class="sr-only">초</span></strong><div class="ivi-meter" aria-hidden="true"><span style="--value:73.83333333333333%"></span></div></li><li><span>더블 탭형</span><strong>24.74<span class="sr-only">초</span></strong><div class="ivi-meter" aria-hidden="true"><span style="--value:82.46666666666667%"></span></div></li><li><span>상단형</span><strong>28.71<span class="sr-only">초</span></strong><div class="ivi-meter" aria-hidden="true"><span style="--value:95.7%"></span></div></li><li class="ivi-best"><span>측면형</span><strong>19.49<span class="sr-only">초 · 최단 평균</span></strong><div class="ivi-meter" aria-hidden="true"><span style="--value:64.96666666666665%"></span></div></li></ul><p>ANOVA p=.016 · Tukey HSD<br/>측면형 19.49초 ↔ 상단형 28.71초</p></article>
-<article><h5>CALL</h5><ul><li><span>통합형</span><strong>15.35<span class="sr-only">초</span></strong><div class="ivi-meter" aria-hidden="true"><span style="--value:51.166666666666664%"></span></div></li><li><span>더블 탭형</span><strong>20.14<span class="sr-only">초</span></strong><div class="ivi-meter" aria-hidden="true"><span style="--value:67.13333333333334%"></span></div></li><li><span>상단형</span><strong>16.05<span class="sr-only">초</span></strong><div class="ivi-meter" aria-hidden="true"><span style="--value:53.5%"></span></div></li><li class="ivi-best"><span>측면형</span><strong>13.87<span class="sr-only">초 · 최단 평균</span></strong><div class="ivi-meter" aria-hidden="true"><span style="--value:46.233333333333334%"></span></div></li></ul><p>ANOVA p=.042 · Tukey HSD<br/>측면형 13.87초 ↔ 더블 탭형 20.14초</p></article></div>
-      <h4 class="ivi-metric-heading">TOTAL CLICKS <span>레이아웃별 평균 · 회</span></h4>
-      <div class="ivi-click-matrix"><article><h5>통합형</h5><dl><div><dt>CLIMATE CONTROL</dt><dd>8.33</dd></div><div><dt>APP MENU</dt><dd>5.87</dd></div><div><dt>CALL</dt><dd>6.40</dd></div></dl></article>
-<article><h5>더블 탭형</h5><dl><div><dt>CLIMATE CONTROL</dt><dd>11.20</dd></div><div class="ivi-significant"><dt>APP MENU</dt><dd>11.20</dd></div><div><dt>CALL</dt><dd>7.80</dd></div></dl></article>
-<article><h5>상단형</h5><dl><div><dt>CLIMATE CONTROL</dt><dd>14.20</dd></div><div><dt>APP MENU</dt><dd>7.40</dd></div><div><dt>CALL</dt><dd>7.07</dd></div></dl></article>
-<article><h5>측면형</h5><dl><div><dt>CLIMATE CONTROL</dt><dd>11.33</dd></div><div><dt>APP MENU</dt><dd>5.67</dd></div><div><dt>CALL</dt><dd>6.13</dd></div></dl></article></div>
-      <p class="ivi-note">APP MENU에서 더블 탭형은 평균 11.20회로, 나머지 세 레이아웃보다 클릭 수가 유의하게 많았습니다.</p>
+      <header class="ivi-heading"><p class="ivi-label">OBJECTIVE PERFORMANCE</p><h3>수행시간과 조작 오류에서 레이아웃별 차이가 나타났습니다.</h3><p class="ivi-lead">세 과제에서 레이아웃에 따라 걸린 시간이 달랐습니다. 앱 메뉴 과제에서는 클릭 수와 오류율에서도 차이가 확인됐습니다.</p></header>
+      <h4 class="ivi-metric-heading">과제 수행시간 <span>짧을수록 빠름 · 평균 0–30초</span></h4>
+      <div class="ivi-time-charts"><article><h5>공조</h5><ul><li class="ivi-best"><span>통합형</span><strong>15.15초</strong><div class="ivi-meter" aria-hidden="true"><span style="--value:50.5%"></span></div></li><li><span>더블 탭형</span><strong>19.14초</strong><div class="ivi-meter" aria-hidden="true"><span style="--value:63.8%"></span></div></li><li class="ivi-worst"><span>상단형</span><strong>22.32초</strong><div class="ivi-meter" aria-hidden="true"><span style="--value:74.4%"></span></div></li><li><span>측면형</span><strong>17.96초</strong><div class="ivi-meter" aria-hidden="true"><span style="--value:59.86666666666667%"></span></div></li></ul></article>
+<article><h5>앱 메뉴</h5><ul><li><span>통합형</span><strong>22.15초</strong><div class="ivi-meter" aria-hidden="true"><span style="--value:73.83333333333333%"></span></div></li><li><span>더블 탭형</span><strong>24.74초</strong><div class="ivi-meter" aria-hidden="true"><span style="--value:82.46666666666667%"></span></div></li><li class="ivi-worst"><span>상단형</span><strong>28.71초</strong><div class="ivi-meter" aria-hidden="true"><span style="--value:95.7%"></span></div></li><li class="ivi-best"><span>측면형</span><strong>19.49초</strong><div class="ivi-meter" aria-hidden="true"><span style="--value:64.96666666666665%"></span></div></li></ul></article>
+<article><h5>전화 걸기</h5><ul><li><span>통합형</span><strong>15.35초</strong><div class="ivi-meter" aria-hidden="true"><span style="--value:51.166666666666664%"></span></div></li><li class="ivi-worst"><span>더블 탭형</span><strong>20.14초</strong><div class="ivi-meter" aria-hidden="true"><span style="--value:67.13333333333334%"></span></div></li><li><span>상단형</span><strong>16.05초</strong><div class="ivi-meter" aria-hidden="true"><span style="--value:53.5%"></span></div></li><li class="ivi-best"><span>측면형</span><strong>13.87초</strong><div class="ivi-meter" aria-hidden="true"><span style="--value:46.233333333333334%"></span></div></li></ul></article></div>
+      <p class="ivi-result-insight">평균 수행시간은 <strong>공조에서 통합형</strong>, <strong>앱 메뉴와 전화 걸기에서 측면형</strong>이 가장 짧았습니다.</p>
+      <h4 class="ivi-metric-heading">총 클릭 수 <span>적을수록 조작이 간단함 · 평균 횟수</span></h4>
+      <div class="ivi-click-matrix"><article><h5>통합형</h5><dl><div class="ivi-best"><dt>공조</dt><dd>8.33</dd></div><div><dt>앱 메뉴</dt><dd>5.87</dd></div><div><dt>전화 걸기</dt><dd>6.40</dd></div></dl></article>
+<article><h5>더블 탭형</h5><dl><div><dt>공조</dt><dd>11.20</dd></div><div class="ivi-worst"><dt>앱 메뉴</dt><dd>11.20</dd></div><div class="ivi-worst"><dt>전화 걸기</dt><dd>7.80</dd></div></dl></article>
+<article><h5>상단형</h5><dl><div class="ivi-worst"><dt>공조</dt><dd>14.20</dd></div><div><dt>앱 메뉴</dt><dd>7.40</dd></div><div><dt>전화 걸기</dt><dd>7.07</dd></div></dl></article>
+<article><h5>측면형</h5><dl><div><dt>공조</dt><dd>11.33</dd></div><div class="ivi-best"><dt>앱 메뉴</dt><dd>5.67</dd></div><div class="ivi-best"><dt>전화 걸기</dt><dd>6.13</dd></div></dl></article></div>
+      <p class="ivi-result-insight">앱 메뉴 과제에 필요한 클릭 수는 <strong>측면형 평균 5.67회</strong>로, <strong>더블 탭형 평균 11.20회</strong>의 절반 수준이었습니다.</p>
       <div class="ivi-table" role="region" aria-labelledby="ivi-errors" tabindex="0"><table>
-  <caption id="ivi-errors">CLICK ERROR RATE<span>레이아웃별 평균</span></caption>
+  <caption id="ivi-errors">클릭 오류율<span>낮을수록 오류가 적음 · 평균 %</span></caption>
   <thead><tr><th scope="col">항목</th><th scope="col">통합형</th><th scope="col">더블 탭형</th><th scope="col">상단형</th><th scope="col">측면형</th></tr></thead>
-  <tbody><tr><th scope="row">CLIMATE CONTROL</th><td>41%</td><td>52%</td><td>58%</td><td>54%</td></tr>
-<tr><th scope="row">APP MENU</th><td>28%</td><td>52%</td><td>36%</td><td>24%</td></tr>
-<tr><th scope="row">CALL</th><td>27%</td><td>32%</td><td>32%</td><td>19%</td></tr></tbody>
+  <tbody><tr><th scope="row">공조</th><td class="ivi-best">41%</td><td>52%</td><td class="ivi-worst">58%</td><td>54%</td></tr>
+<tr><th scope="row">앱 메뉴</th><td>28%</td><td class="ivi-worst">52%</td><td>36%</td><td class="ivi-best">24%</td></tr>
+<tr><th scope="row">전화 걸기</th><td>27%</td><td class="ivi-worst">32%</td><td class="ivi-worst">32%</td><td class="ivi-best">19%</td></tr></tbody>
 </table></div>
-      <p class="ivi-note">APP MENU 오류율 사후검정에서 더블 탭형은 측면형·통합형과 차이가 확인됐습니다. 상단형의 사후검정 그룹은 양쪽과 겹쳤습니다.</p>
-      <details class="ivi-disclosure"><summary>일원배치 분산분석 결과 보기</summary><div class="ivi-table" role="region" aria-labelledby="ivi-anova" tabindex="0"><table>
-  <caption id="ivi-anova">ONE-WAY ANOVA<span>유의수준 .05</span></caption>
-  <thead><tr><th scope="col">항목</th><th scope="col">수행시간</th><th scope="col">클릭 수</th><th scope="col">오류율</th></tr></thead>
-  <tbody><tr><th scope="row">CLIMATE CONTROL</th><td><span class="ivi-significant">F=3.647<br/>p=.018 · 유의</span></td><td><span>F=1.466<br/>p=.234 · 비유의</span></td><td><span>F=1.347<br/>p=.268 · 비유의</span></td></tr>
-<tr><th scope="row">APP MENU</th><td><span class="ivi-significant">F=3.720<br/>p=.016 · 유의</span></td><td><span class="ivi-significant">F=6.384<br/>p&lt;.001 · 유의</span></td><td><span class="ivi-significant">F=6.170<br/>p=.001 · 유의</span></td></tr>
-<tr><th scope="row">CALL</th><td><span class="ivi-significant">F=2.915<br/>p=.042 · 유의</span></td><td><span>F=1.325<br/>p=.275 · 비유의</span></td><td><span>F=1.812<br/>p=.156 · 비유의</span></td></tr></tbody>
-</table></div></details>
+      <p class="ivi-result-insight">앱 메뉴에서 <strong>측면형의 클릭 오류율은 24%</strong>로, 더블 탭형의 52%보다 낮았습니다.</p>
     </section>
     <section class="ivi-subsection" id="voices">
-      <header class="ivi-heading"><p class="ivi-label">SUBJECTIVE EXPERIENCE</p><h3>사용자가 느끼는 작업부하와 만족도도 달랐습니다.</h3><p class="ivi-lead">측면형은 정신적 요구도 평균이 가장 낮았고, 발표자료의 네 가지 만족도 항목에서 가장 높은 평균을 기록했습니다.</p></header>
+      <header class="ivi-heading"><p class="ivi-label">SUBJECTIVE EXPERIENCE</p><h3>사용자가 느끼는 작업부하와 만족도도 달랐습니다.</h3><p class="ivi-lead">운전자는 레이아웃마다 조작에 들이는 노력과 사용 편의성을 다르게 평가했습니다.</p></header>
       <div class="ivi-pair ivi-subjective-stats">
-        <div><span>정신적 요구도 · 7점 척도</span><p><span><strong>2.80</strong>측면형</span><span><b>5.27</b>상단형</span></p></div>
-        <div><span>조작의 용이성 · 5점 척도</span><p><span><strong>4.40</strong>측면형</span><span><b>2.87</b>상단형</span></p></div>
+        <div class="ivi-score-panel ivi-score-panel--workload">
+          <h4>작업부하 · NASA-TLX</h4>
+          <p>낮을수록 부담이 적음 · 7점 척도</p>
+          <dl>
+            <div class="ivi-best"><dt>측면형 · 최저</dt><dd>2.90<span>점</span></dd></div>
+            <div class="ivi-worst"><dt>상단형 · 최고</dt><dd>4.75<span>점</span></dd></div>
+          </dl>
+        </div>
+        <div class="ivi-score-panel ivi-score-panel--satisfaction">
+          <h4>만족도</h4>
+          <p>높을수록 만족도가 높음 · 5점 척도</p>
+          <dl>
+            <div class="ivi-best"><dt>측면형 · 최고</dt><dd>4.25<span>점</span></dd></div>
+            <div class="ivi-worst"><dt>상단형 · 최저</dt><dd>2.70<span>점</span></dd></div>
+          </dl>
+        </div>
       </div>
+      <p class="ivi-result-insight">네 레이아웃 중 측면형은 <strong>작업부하 평균이 가장 낮고</strong> <strong>만족도 평균이 가장 높았습니다.</strong></p>
       <details class="ivi-disclosure"><summary>NASA-TLX와 만족도 전체 항목 보기</summary>
         <div class="ivi-table" role="region" aria-labelledby="ivi-nasa" tabindex="0"><table>
   <caption id="ivi-nasa">NASA-TLX<span>7점 척도</span></caption>
@@ -223,7 +231,7 @@
 <tr><th scope="row">노력도</th><td>3.73</td><td>4.07</td><td>4.53</td><td>2.87</td></tr>
 <tr><th scope="row">좌절감</th><td>3.40</td><td>4.00</td><td>4.80</td><td>2.27</td></tr></tbody>
 </table></div>
-        <p class="ivi-note">레이아웃 효과 F=7.780, p&lt;.001. 작업 수행도는 원하는 대로 정확히 수행했다고 느낀 정도를 묻는 항목입니다.</p>
+        <p class="ivi-note">작업 수행도는 원하는 대로 정확히 수행했다고 느낀 정도를 묻는 항목입니다.</p>
         <div class="ivi-table" role="region" aria-labelledby="ivi-satisfaction" tabindex="0"><table>
   <caption id="ivi-satisfaction">SATISFACTION<span>5점 척도</span></caption>
   <thead><tr><th scope="col">항목</th><th scope="col">통합형</th><th scope="col">더블 탭형</th><th scope="col">상단형</th><th scope="col">측면형</th></tr></thead>
@@ -238,13 +246,22 @@
         <div><dt>가장 자주 언급된 기능</dt><dd>15명 중 11명이 음악을 언급했습니다. 내비게이션·통화·공조도 자주 쓰는 기능으로 나왔습니다.</dd></div>
         <div><dt>터치 실패와 조작 회피</dt><dd>터치가 잘되지 않아 화면을 오래 봤다는 응답이 있었습니다. 한 응답자는 주의가 분산된 경험 이후 주행 중 터치스크린을 쓰지 않는다고 했습니다. 불편한 경험이 없었다는 응답도 있었습니다.</dd></div>
         <div><dt>조작 대상의 크기·간격·대비</dt><dd>크기와 간격이 특히 중요하다는 의견이 있었고, 앱 배치 과제에서는 배치 확인과 완료 버튼의 색 대비가 낮아 찾기 어려웠다는 응답이 있었습니다.</dd></div>
-      </dl></div>
+      </dl>
+        <p class="ivi-result-insight">주관식 응답에서도 <strong>버튼의 크기와 간격, 낮은 색 대비</strong>가 터치와 기능 탐색을 어렵게 하는 지점임을 확인할 수 있었습니다.</p>
+      </div>
     </section>
     <section class="ivi-subsection" id="findings">
       <header class="ivi-heading"><p class="ivi-label">KEY FINDINGS</p><h3>하나의 레이아웃이 모든 기능에 적합하지는 않았습니다.</h3></header>
-      <div class="ivi-findings"><article><h4>CLIMATE CONTROL</h4><div><strong>통합형 15.15초</strong><span> ↔ 상단형 22.32초</span><p>Tukey HSD 사후검정에서 두 조건의 수행시간 차이가 확인됐습니다.</p></div><p>반복 조절에 필요한 기능이 한 영역에 모여 있으면 조작 단계가 짧아질 수 있습니다.</p></article>
-<article><h4>APP MENU</h4><div><strong>측면형 19.49초</strong><span> ↔ 상단형 28.71초</span><p>Tukey HSD 사후검정에서 두 조건의 수행시간 차이가 확인됐습니다.</p></div><p>왼쪽에 고정된 메뉴는 앱 탐색을 시작할 위치를 예측하기 쉽게 합니다.</p></article>
-<article><h4>CALL</h4><div><strong>측면형 13.87초</strong><span> ↔ 더블 탭형 20.14초</span><p>Tukey HSD 사후검정에서 두 조건의 수행시간 차이가 확인됐습니다.</p></div><p>연락처처럼 진입 후 탐색이 이어지는 과제에서도 고정 진입점을 설계에 활용할 수 있습니다.</p></article></div>
+      <div class="ivi-findings">
+        <article>
+          <h4>객관적 수행 결과</h4>
+          <p>반복 조절이 필요한 <strong>공조는 통합형</strong>에서, 메뉴 진입과 탐색이 필요한 <strong>앱 메뉴와 전화 걸기는 측면형</strong>에서 평균 수행시간이 가장 짧았습니다.</p>
+        </article>
+        <article>
+          <h4>주관적 사용 경험</h4>
+          <p>측면형은 <strong>부담이 낮고 만족도가 높았으며</strong>, 주관식 응답에서는 버튼의 크기와 간격, 색 대비가 조작과 탐색을 어렵게 하는 지점으로 드러났습니다.</p>
+        </article>
+      </div>
       <p class="ivi-close">기능을 <strong>찾는 과정</strong>과 기능을 <strong>반복해 조절하는 과정</strong>에는 서로 다른 배치 원칙이 필요합니다.</p>
     </section>
   </section>
@@ -305,5 +322,5 @@
   <a class="case-footer__contact" href="mailto:ksw11205@gmail.com">ksw11205@gmail.com</a>
   <small>© 2026 KIM SEONGWON</small>
 </footer>
-<a class="prototype-float" data-prototype-float="" hidden="" href="https://www.figma.com/proto/FF8CphVdOl1e6iASFM4ef2/IVIS?page-id=0%3A1&amp;node-id=103-936&amp;starting-point-node-id=103%3A936&amp;scaling=scale-down" rel="noopener noreferrer" target="_blank">VIEW PROTOTYPE <span aria-hidden="true">↗</span><span class="sr-only">새 탭에서 열기</span></a>
+<a data-case-prototype class="prototype-float" data-prototype-float="" hidden="" href="https://www.figma.com/proto/FF8CphVdOl1e6iASFM4ef2/IVIS?page-id=0%3A1&amp;node-id=103-936&amp;starting-point-node-id=103%3A936&amp;scaling=scale-down" rel="noopener noreferrer" target="_blank"><span>VIEW PROTOTYPE</span><span class="case-prototype-arrow" aria-hidden="true">↗</span><span class="sr-only">새 탭에서 열기</span></a>
 </body></html>

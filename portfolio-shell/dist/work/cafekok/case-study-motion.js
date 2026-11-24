@@ -32,13 +32,18 @@ function connectScreens(layout, connections) {
     const line = document.createElementNS(svgNamespace, 'path');
     line.setAttribute('fill', 'none');
     line.setAttribute('stroke', 'currentColor');
+    line.setAttribute('stroke-width', '2');
     if (dashed) line.setAttribute('stroke-dasharray', '4 3');
     const dot = document.createElementNS(svgNamespace, 'circle');
-    dot.setAttribute('r', '2.5');
-    dot.setAttribute('fill', 'currentColor');
-    overlay.append(line, dot);
+    dot.setAttribute('r', '4');
+    dot.setAttribute('fill', '#fff');
+    dot.setAttribute('stroke', 'currentColor');
+    dot.setAttribute('stroke-width', '2');
+    overlay.append(line);
     return { source: layout.querySelector(from), target: layout.querySelector(to), line, dot, targetHeight };
   });
+
+  overlay.append(...links.map(({ dot }) => dot));
 
   const align = () => {
     const bounds = layout.getBoundingClientRect();
@@ -47,10 +52,11 @@ function connectScreens(layout, connections) {
       const end = target.getBoundingClientRect();
       const x = start.left - bounds.left;
       const y = start.top - bounds.top;
-      const targetX = end.left - bounds.left - 5;
+      const targetX = end.left - bounds.left - 2;
       const targetY = end.top - bounds.top + targetHeight * end.height;
-      const bend = targetX - 16;
-      line.setAttribute('d', `M ${x} ${y} H ${bend} V ${targetY} H ${targetX}`);
+      const bend = targetX - 28;
+      const startX = x + Math.sign(bend - x) * 4;
+      line.setAttribute('d', `M ${startX} ${y} H ${bend} V ${targetY} H ${targetX}`);
       dot.setAttribute('cx', x);
       dot.setAttribute('cy', y);
     }

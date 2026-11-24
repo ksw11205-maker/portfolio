@@ -166,7 +166,6 @@ body[data-project="ivi"][data-page="case"][data-unified-case] #main .ivi-chapter
 .ivi-pair figcaption strong, .ivi-task-list figcaption strong { font-size: 1.05rem; color: var(--ink); }
 .ivi-context img, .ivi-vehicles img { aspect-ratio: 16/10; object-fit: cover; }
 .ivi-context img, .ivi-prototypes .ivi-interface, .ivi-task-list img, .ivi-environment > img,
-.ivi-click-evidence img { border: 1px solid var(--line); border-radius: .25rem; }
 .ivi-context figcaption strong { color: var(--case-accent); }
 .ivi-vehicles figure { background: var(--case-surface); border: 1px solid var(--line); }
 .ivi-vehicles figure > figcaption { padding: 0 clamp(.9rem, 2.5vw, 1.75rem) clamp(.9rem, 2.5vw, 1.75rem); }
@@ -184,15 +183,36 @@ body[data-project="ivi"][data-page="case"][data-unified-case] #main .ivi-chapter
 .ivi-vehicles .ivi-meter { margin-block-start: .5rem; }
 .ivi-vehicles .ivi-meter > span, .ivi-best .ivi-meter > span { background: var(--case-accent); }
 
-.ivi-close {
-  margin-block: clamp(2rem, 5vw, 4rem) 0;
-  padding-block-start: clamp(1.2rem, 3vw, 2rem);
-  border-block-start: 1px solid var(--line);
+body[data-project="ivi"] #main .ivi-result-insight {
+  margin-block: 1.1rem 0;
   color: var(--ink);
-  font-size: clamp(1.05rem, 2vw, 1.4rem);
-  font-weight: 650;
-  line-height: 1.6;
+  font-size: clamp(1rem, 1.6vw, 1.18rem);
+  font-weight: 550;
+  line-height: 1.65;
+  word-break: keep-all;
 }
+
+body[data-project="ivi"] #main .ivi-result-insight strong,
+body[data-project="ivi"] #main .ivi-findings strong {
+  color: var(--case-accent);
+  font-weight: 700;
+}
+
+body[data-project="ivi"] #main .ivi-close {
+  margin-block: clamp(1.5rem, 4vw, 3rem) 0;
+  padding: clamp(1.5rem, 5vw, 4rem) clamp(1.1rem, 4vw, 3rem);
+  border-block-start: 2px solid var(--case-accent);
+  background: #142229;
+  color: var(--ink);
+  font-size: clamp(1.6rem, 3.4vw, 3.15rem);
+  font-weight: 750;
+  line-height: 1.35;
+  letter-spacing: -.035em;
+  text-align: center;
+  text-wrap: balance;
+  word-break: keep-all;
+}
+
 .ivi-close strong, .ivi-significant, .ivi-review strong { color: var(--case-accent); }
 
 .ivi-takeaway {
@@ -201,16 +221,24 @@ body[data-project="ivi"][data-page="case"][data-unified-case] #main .ivi-chapter
   border-radius: .875rem;
   background: #142229;
 }
+
 body[data-project="ivi"] #main .ivi-takeaway p {
-  max-inline-size: 34ch;
-  margin: 0;
+  max-inline-size: 42ch;
+  margin: 0 auto;
   color: var(--ink);
   font-size: clamp(1.3rem, 2.7vw, 2.8rem);
-  font-weight: 730;
+  font-weight: 500;
   line-height: 1.43;
   letter-spacing: -.035em;
+  text-align: center;
+  text-wrap: balance;
+  word-break: keep-all;
 }
-.ivi-takeaway strong { color: var(--case-accent); }
+
+body[data-project="ivi"] #main .ivi-takeaway strong {
+  color: var(--case-accent);
+  font-weight: inherit;
+}
 
 .ivi-process { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: .8rem; }
 .ivi-process article { padding: clamp(1rem,2.1vw,1.75rem); border: 1px solid var(--line); background: var(--case-surface); }
@@ -331,7 +359,7 @@ body[data-project="ivi"] #main .ivi-timeline-steps p { grid-column: 1 / -1; marg
 }
 .ivi-timeline-track i { grid-column: var(--phase); block-size: .48rem; border-radius: .12rem; background: var(--case-accent); }
 
-.ivi-assessment { margin-block-start: clamp(1.8rem, 4vw, 3rem); padding-block-start: 1.25rem; border-block-start: 1px solid var(--line); }
+.ivi-assessment { position: relative; isolation: isolate; margin-block-start: clamp(1.8rem, 4vw, 3rem); padding-block-start: 1.25rem; border-block-start: 1px solid var(--line); }
 body[data-project="ivi"] #main .ivi-assessment > h4 { margin: 0 0 1.2rem; color: var(--case-accent); font-size: 1.04rem; letter-spacing: .035em; }
 .ivi-evaluation { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: var(--ivi-gap); }
 .ivi-evaluation.ivi-evaluation--objective { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1rem var(--ivi-gap); }
@@ -339,10 +367,44 @@ body[data-project="ivi"] #main .ivi-assessment > h4 { margin: 0 0 1.2rem; color:
 .ivi-evaluation div { min-inline-size: 0; }
 body[data-project="ivi"] #main .ivi-evaluation dt { margin: 0 0 .35rem; color: var(--ink); font-weight: 720; }
 body[data-project="ivi"] #main .ivi-evaluation dd { font-size: .925rem; }
-.ivi-chapter figure.ivi-click-evidence { margin-block-start: 1.5rem; max-inline-size: 42rem; }
-#click-patterns { scroll-margin-block-start: calc(var(--case-topbar-height) + 1.25rem); }
-.ivi-chapter figure.ivi-survey-capture { margin-block-start: 1.5rem; max-inline-size: 65rem; }
-.ivi-survey-capture img { border-radius: .5rem; }
+.ivi-assessment > :is(h4, dl) {
+  position: relative;
+  z-index: 1;
+}
+
+.ivi-chapter .ivi-assessment > .ivi-assessment-art {
+  position: absolute;
+  inset: .5rem 0 0 auto;
+  inline-size: min(64%, 39rem);
+  margin: 0;
+  pointer-events: none;
+  mask-image: linear-gradient(to right, transparent, #000 65%);
+}
+
+.ivi-chapter .ivi-assessment-art#click-patterns { background: transparent; }
+.ivi-assessment-art--heatmap { opacity: .22; }
+.ivi-chapter .ivi-assessment > .ivi-assessment-art--survey {
+  inline-size: min(70%, 30rem);
+  opacity: .08;
+}
+
+.ivi-chapter .ivi-assessment-art > img {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: contain;
+  object-position: right center;
+  border: 0;
+}
+
+.ivi-chapter .ivi-assessment-art--survey > img {
+  object-fit: cover;
+  object-position: right 12%;
+}
+
+@media (max-width: 767px) {
+  .ivi-chapter .ivi-assessment > .ivi-assessment-art { inline-size: 78%; }
+  .ivi-chapter .ivi-assessment > .ivi-assessment-art--survey { inline-size: 90%; }
+}
 
 .ivi-results-strip { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: var(--ivi-gap); }
 .ivi-results-strip figure { border-block-end: 1px solid var(--line); padding-block-end: 1.2rem; }
@@ -367,16 +429,30 @@ body[data-project="ivi"] #main .ivi-evaluation dd { font-size: .925rem; }
 .ivi-time-charts article { padding: clamp(.8rem,1.8vw,1.3rem); border: 1px solid var(--line); background: var(--case-surface); }
 .ivi-chapter :is(.ivi-time-charts h5,.ivi-click-matrix h5) { margin: 0 0 .95rem; color: var(--ink); font-size: .875rem; line-height: 1.3; letter-spacing: .035em; }
 .ivi-time-charts ul { display: grid; gap: .65rem; margin: 0; padding: 0; list-style: none; }
-.ivi-time-charts li { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: .28rem .65rem; font-size: .8rem; }
+.ivi-time-charts li { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: .35rem .65rem; font-size: .9rem; }
 .ivi-time-charts .ivi-meter { grid-column: 1 / -1; }
 .ivi-time-charts li strong, .ivi-click-matrix dd, .ivi-table td { font-variant-numeric: tabular-nums; }
 .ivi-time-charts li.ivi-best { color: var(--case-accent); }
-.ivi-time-charts article p { margin: 1rem 0 0; padding-block-start: .65rem; border-block-start: 1px solid var(--line); color: var(--muted); font-size: .8rem; line-height: 1.55; }
 .ivi-click-matrix { grid-template-columns: repeat(4,minmax(0,1fr)); }
 .ivi-click-matrix article { padding: .8rem; border-block-start: 1px solid var(--line); }
 .ivi-click-matrix dl > div { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: .1rem .45rem; padding-block: .35rem; }
 .ivi-click-matrix dt { font-size: .68rem; font-weight: 650; }
 .ivi-click-matrix dd { font-size: .925rem; font-weight: 700; }
+
+#objective :is(.ivi-time-charts, .ivi-click-matrix, .ivi-table), .ivi-subjective-stats {
+  --ivi-favorable: var(--case-accent);
+  --ivi-unfavorable: #ffb59d;
+}
+
+#objective :is(.ivi-best, .ivi-worst), .ivi-subjective-stats :is(.ivi-best, .ivi-worst) {
+  color: var(--ivi-result-color);
+}
+
+.ivi-best { --ivi-result-color: var(--ivi-favorable); }
+.ivi-worst { --ivi-result-color: var(--ivi-unfavorable); }
+.ivi-time-charts .ivi-worst .ivi-meter > span { background: var(--ivi-result-color); }
+
+.ivi-click-matrix dd { text-align: end; }
 
 .ivi-table { overflow-x: auto; margin-block-start: 1.6rem; }
 .ivi-table:focus-visible, .ivi-disclosure summary:focus-visible { outline: 2px solid var(--case-accent); outline-offset: 3px; }
@@ -390,12 +466,37 @@ body[data-project="ivi"] #main .ivi-evaluation dd { font-size: .925rem; }
 .ivi-disclosure summary { font-weight: 700; padding-block: .35rem; cursor: pointer; }
 .ivi-disclosure summary::marker { color: var(--case-accent); }
 .ivi-disclosure[open] { padding-block-end: 1.2rem; }
-.ivi-subjective-stats > div { padding: 1rem 0; border-block: 1px solid var(--line); }
-.ivi-subjective-stats > div > span { color: var(--muted); font-size: .85rem; }
-.ivi-subjective-stats p { margin: .65rem 0 0; display: flex; align-items: baseline; gap: .65rem; color: var(--muted); }
-.ivi-subjective-stats p > span { display: grid; justify-items: start; gap: .25rem; font-size: .8rem; white-space: nowrap; }
-.ivi-subjective-stats :is(strong,b) { color: var(--ink); font-size: clamp(1.5rem,4vw,3.25rem); line-height: 1; font-variant-numeric: tabular-nums; }
-.ivi-subjective-stats strong { color: var(--case-accent); }
+.ivi-score-panel {
+  position: relative;
+  isolation: isolate;
+  padding: clamp(1rem, 3vw, 1.75rem);
+  border-block: 1px solid var(--line);
+}
+
+.ivi-score-panel::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset-block-start: 50%;
+  inset-inline-end: 1rem;
+  inline-size: clamp(5rem, 12vw, 9rem);
+  aspect-ratio: 1;
+  transform: translateY(-50%);
+  background: var(--case-accent);
+  mask: var(--ivi-score-icon) center / contain no-repeat;
+  opacity: .10;
+}
+
+.ivi-score-panel--workload { --ivi-score-icon: url("/work/ivi/assets/ivi-workload-brain.png"); }
+.ivi-score-panel--satisfaction { --ivi-score-icon: url("/work/ivi/assets/ivi-satisfaction-thumb.png"); }
+
+body[data-project="ivi"] #main .ivi-score-panel h4 { margin: 0; color: var(--ink); font-size: 1rem; }
+.ivi-score-panel p { margin: .35rem 0 1.15rem; color: var(--muted); font-size: .875rem; }
+.ivi-score-panel dl { display: flex; flex-wrap: wrap; gap: .85rem clamp(1rem, 4vw, 3.5rem); }
+.ivi-score-panel dt { color: var(--ivi-result-color); font-size: .8rem; font-weight: 700; }
+body[data-project="ivi"][data-page="case"][data-unified-case] #main .ivi-score-panel dl dd { color: var(--ivi-result-color); font-size: clamp(2.25rem, 4.7vw, 4rem); line-height: 1.12; font-weight: 750; font-variant-numeric: tabular-nums; }
+body[data-project="ivi"][data-page="case"][data-unified-case] #main .ivi-score-panel dl dd > span { margin-inline-start: .2rem; font-size: .85rem; }
+
 .ivi-user-voices { margin-block-start: 2.5rem; }
 .ivi-user-voices h4 { margin: 0 0 1rem; font-size: 1rem; }
 .ivi-user-voices h4 span { margin-inline-start: .6rem; color: var(--muted); font-size: .8rem; font-weight: 550; }
@@ -404,12 +505,10 @@ body[data-project="ivi"] #main .ivi-evaluation dd { font-size: .925rem; }
 .ivi-user-voices dd { color: var(--muted); }
 
 .ivi-findings { display: grid; }
-.ivi-findings article { display: grid; grid-template-columns: minmax(0,.8fr) minmax(0,1.35fr) minmax(0,1.35fr); align-items: start; padding-block: 1.35rem; gap: .6rem var(--ivi-gap); border-block-start: 1px solid var(--line); }
+.ivi-findings article { display: grid; grid-template-columns: minmax(9rem,.7fr) minmax(0,2.7fr); align-items: start; padding-block: 1.35rem; gap: .6rem var(--ivi-gap); border-block-start: 1px solid var(--line); }
 .ivi-findings h4 { margin: 0; font-size: .85rem; }
 .ivi-findings :is(p,span) { color: var(--muted); font-size: .9rem; line-height: 1.6; }
 .ivi-findings p { margin: 0; }
-.ivi-findings div > p { margin-block-start: .25rem; }
-.ivi-findings strong { color: var(--case-accent); font-size: 1.13rem; }
 
 .ivi-review > article { min-inline-size: 0; padding-block-start: 1.25rem; border-block-start: 1px solid var(--line); }
 .ivi-review p { margin: .45rem 0 0; color: var(--muted); line-height: 1.75; }
@@ -478,14 +577,13 @@ body[data-project="ivi"] #main .ivi-review h3 { margin: 0 0 .65rem; color: var(-
   .ivi-archive-media { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .ivi-archive header { display: grid; gap: .15rem; }
   .ivi-archive article:has(img:only-child) .ivi-archive-media { max-inline-size: 100%; }
-  .ivi-subjective-stats { gap: .7rem; }
+  .ivi-pair.ivi-subjective-stats { grid-template-columns: minmax(0,1fr); gap: .7rem; }
   .ivi-vehicles { gap: .5rem; }
   .ivi-cover-intro { padding-inline: 1.5rem; }
 }
 
 @media (max-width: 510px) {
   body[data-project="ivi"] #main .ivi-evaluation--objective dd { font-size: .875rem; }
-  .ivi-chapter figure.ivi-survey-capture > img { aspect-ratio: 740 / 911; object-fit: cover; }
   .ivi-table table { min-inline-size: 19rem; }
   body[data-project="ivi"] #main .ivi-table :is(th,td) {
     padding: .55rem .32rem;
