@@ -1,0 +1,94 @@
+
+/* Editorial roles. Type scales and layout stay with the owning page. */
+:root {
+  --editorial-text: PortfolioText, "Pretendard Variable", Pretendard, system-ui, sans-serif;
+  --editorial-body-leading: 1.7;
+  --editorial-body-tracking: -.007em;
+  --editorial-caption-leading: 1.48;
+  --editorial-label-tracking: .045em;
+  --editorial-title-leading: 1.24;
+  --editorial-title-tracking: -.027em;
+}
+body:not([data-project]) #main :is(.about-statement,.capability-lead) {
+  font-family: var(--editorial-text); font-weight: 770; word-break: keep-all; text-wrap: balance;
+}
+body:not([data-project]) #main :is(.statement-context,.project-summary,.qa-card-answer,.contact-note p) {
+  font-family: var(--editorial-text);
+  line-height: var(--editorial-body-leading);
+  letter-spacing: var(--editorial-body-tracking);
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+body:not([data-project]) #main .hero-name h1 { font-family: Anton,var(--editorial-text); }
+body[data-project][data-case-entry] #main :is(.chapter-heading h2,.ck-heading h2):not(#outro *,#responsive *) {
+  font-family: var(--editorial-text);
+  line-height: var(--editorial-title-leading);
+  letter-spacing: var(--editorial-title-tracking);
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  text-wrap: balance;
+}
+body[data-project][data-case-entry] #main :is(.case-lead,.ck-lead,.role-note p,.case-page-lead,.of-background-copy p):not(#outro *,#responsive *) {
+  font-family: var(--editorial-text);
+  font-weight: 450;
+  line-height: var(--editorial-body-leading);
+  letter-spacing: var(--editorial-body-tracking);
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  text-wrap: pretty;
+}
+body[data-project][data-case-entry] #main .role-note p + p { margin-block-start: .85em; }
+body[data-project][data-case-entry] #main :is(.case-hero h1,.project-cover h1,.section-kicker,.ck-kicker,.ck-app-heading h2,.case-page-head h3):not(#outro *,#responsive *) {
+  font-family: var(--editorial-display,PortfolioText), var(--editorial-text) !important;
+  font-weight: var(--editorial-display-weight,700) !important;
+  font-synthesis: none;
+}
+body[data-project][data-case-entry] #main :is(.section-kicker,.ck-kicker):not(#outro *,#responsive *) {
+  line-height: 1.35;
+  letter-spacing: var(--editorial-label-tracking);
+}
+body[data-project][data-case-entry] #main figcaption:not(#outro *,#responsive *,.film-signature) {
+  line-height: var(--editorial-caption-leading);
+  letter-spacing: -.003em;
+}
+body[data-project="lg"][data-case-entry] #main :is(.project-cover h1,.case-hero h1) { letter-spacing: -.046em; line-height: 1.02; }
+body[data-project="ivi"][data-case-entry] #main :is(.project-cover h1,.case-hero h1) { letter-spacing: -.025em; line-height: 1; }
+body[data-project="ivi"][data-case-entry] #main :is(.ivi-test-metrics dd,.ivi-results-strip strong,.ivi-subjective-stats dd) {
+  font-family: var(--editorial-display), var(--editorial-text);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+body[data-project="ivi"][data-case-entry] #main .ivi-test-metrics dd small { font-family: var(--editorial-text); }
+body[data-project="cafekok"][data-case-entry] #main .ck-heading h2.editorial-emotional {
+  font-family: "Maru Buri",var(--editorial-text) !important;
+  font-weight: 600 !important;
+  line-height: 1.32;
+  letter-spacing: -.028em;
+}
+body[data-project="cafekok"][data-case-entry] #main .editorial-emotional em { font: inherit; }
+body[data-project="cafekok"][data-case-entry] #main .case-hero h1 { letter-spacing: -.055em; line-height: 1.05; }
+body[data-project="offer"][data-case-entry] #main :is(.chapter-heading h2,.case-page-summary):not(#outro *,#responsive *) {
+  font-family: var(--editorial-text); font-weight: 800;
+}
+body[data-project="offer"][data-case-entry] #main .case-page-head h3 {
+  font-size: clamp(1.9rem,5.7vw,5.5rem);
+  letter-spacing: -.065em;
+  line-height: 1;
+  overflow-wrap: normal;
+  text-wrap: balance;
+}
+body[data-project="offer"][data-case-entry] #main .case-page-head::after { font-family: var(--editorial-display); font-weight: 400; }
+body[data-project][data-case-entry] #main :is(.chapter-heading h2,.case-page-summary,.of-background h2) em:not(#outro *,#responsive *) {
+  font-family: inherit; font-size: inherit; line-height: inherit;
+}
+@media (max-width: 600px) {
+  body:not([data-project]) #main .statement-context br { display: none; }
+  body[data-project="offer"][data-case-entry] #main .case-page-head h3 { font-size:clamp(1.9rem,7.1vw,2.7rem); }
+  body[data-project="cafekok"][data-case-entry] #main .editorial-emotional br { display: none; }
+}
+
+body[data-project][data-case-entry] #main :is(.case-page-notes p,.ck-subhead,.ck-app-note p,.screen-group-copy p,.of-refinement dd):not(#outro *,#responsive *) {
+  font-family: var(--editorial-text);
+  letter-spacing: var(--editorial-body-tracking);
+  line-height: 1.6;
+}

@@ -4,7 +4,7 @@ export const projects = [
 {slug:'lg',role:'UX Research · UI Design',period:'2025.03–2025.09',tools:['Figma','HTML','CSS','JavaScript'],summary:"TV 화면의 사용성을 예측하고, 디자인 개선으로 연결하다",number:'01',title:'TV USABILITY\nAI DESIGN TOOL',category:'Smart TV UX/UI',label:'SMART TV',word:'A clearer view.',tone:'lg',cover:'lg-cover',coverAlt:'마젠타 조명의 거실에서 노트북의 TV UI 분석 도구와 TV 평가 화면을 함께 보여주는 목업',coverHeight:1081},
 {slug:'ivi',role:'UX Research · Usability Testing',period:'2025.03–2026.04',tools:['Figma','Maze'],summary:"운전자의 주행 맥락을 고려해 차량 터치스크린의 사용성을 분석하다",number:'02',title:'IVI\nUSABILITY RESEARCH',category:'Automotive UX Research',label:'IN-VEHICLE EXPERIENCE',word:'In context.',tone:'ivi',cover:'ivi-cover-clean',coverAlt:'차량 중앙 디스플레이에 표시된 차량 제어와 내비게이션 화면 목업',coverHeight:1081},
 {slug:'cafekok',role:'Planning · UX/UI Design',period:'2026.07–2026.10',tools:['Figma'],summary:"취향과 방문 목적을 연결해 나에게 맞는 카페를 발견하다",number:'03',title:'CAFÉKOK',category:'Cafe Recommendation UX/UI',label:'CAFE DISCOVERY',word:'Find your place.',tone:'cafekok'},
-{slug:'offer',role:'Planning · UX/UI Design',period:'2026.09–2026.10',tools:['HTML','CSS','JavaScript'],summary:"흩어진 브랜드 혜택을 한곳에서 빠르게 발견하고 비교하다",number:'04',title:'OFFER',category:'Brand Promotion Discovery Platform',label:'BRAND DISCOVERY',word:'Worth a look.',tone:'offer',cover:'offer-cover',coverAlt:'희미한 브랜드 로고 배경 앞에 OFFER의 데스크톱·태블릿·모바일 화면을 배치한 목업',coverHeight:1081}
+{slug:'offer',role:'Planning · UX/UI Design',period:'2026.09–2026.10',tools:['HTML','CSS','JavaScript'],summary:"흩어진 브랜드 혜택을 한곳에서 찾고 비교하다",number:'04',title:'OFFER',category:'Brand Promotion Discovery Platform',label:'BRAND DISCOVERY',word:'Worth a look.',tone:'offer',cover:'offer-cover',coverAlt:'희미한 브랜드 로고 배경 앞에 OFFER의 데스크톱·태블릿·모바일 화면을 배치한 목업',coverHeight:1081}
 ];
 export const questions = [
   [
@@ -17,11 +17,11 @@ export const questions = [
   ],
   [
     "화면의 완성도는 어디에서 갈리나요?",
-    "위계와 간격, 문장, 선택 상태 같은 세부에서 차이가 난다고 생각합니다. 장식보다 사용자가 다음 행동을 이해할 수 있는지를 기준으로 다듬습니다."
+    "정보 위계와 여백, 문구와 선택 상태를 다듬습니다. 사용자가 지금 상태와 다음 행동을 쉽게 이해하는지가 기준입니다."
   ],
   [
     "AI에게는 어디까지 맡기나요?",
-    "탐색과 구현의 속도를 높이는 데 활용합니다. 문제를 정의하고 근거를 확인하며 결과를 선택하는 판단은 직접 맡습니다."
+    "AI는 아이디어를 탐색하고 시안을 구현하는 데 활용합니다. 문제를 정의하고, 근거를 확인하고, 결과를 선택하는 일은 직접 합니다."
   ],
   [
     "팀에서는 어떻게 함께 완성하나요?",

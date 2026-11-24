@@ -6,3 +6,8 @@
 - `PretendardVariable.woff2` SHA-256: `9599f12fd42fc0bce1cd50b47a0c022e108d7aa64dd0d1bb0ed44f3282d900b4`.
 
 Only the portfolio typography uses these shared files. Product UI fonts and text baked into artwork are preserved. CSS and HTML preload URLs refer to local files; system sans-serif remains the failure fallback.
+
+Editorial display assets
+
+- Space Grotesk 600–700, Barlow Condensed 600 and 700, Fraunces 500–600, and Archivo Black 400 use unmodified Latin WOFF2 subsets served by the Google Fonts CSS API. Corresponding upstream SIL OFL 1.1 notices are included in this directory.
+- MaruBuri SemiBold uses the unmodified [NAVER WOFF2](https://hangeul.pstatic.net/0/hangeul/2023/fonts/MaruBuri-SemiBold.woff2). See the [publisher’s license notice](https://help.naver.com/service/30016/contents/18088) and `MaruBuri-OFL.txt`.
