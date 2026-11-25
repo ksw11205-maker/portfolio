@@ -77,7 +77,9 @@ const coverCTA = document.querySelector('[data-prototype-cover]');
 const floatingCTA = document.querySelector('[data-prototype-float]');
 if (coverCTA && floatingCTA && 'IntersectionObserver' in window) {
   const hero = coverCTA.closest('.case-hero, .project-cover');
-  const end = document.querySelector('.next-projects');
+  const end = floatingCTA.hasAttribute('data-prototype-persistent')
+    ? null
+    : document.querySelector('.next-projects');
   let heroVisible = true, endVisible = false;
   const syncCTA = () => {
     const hide = heroVisible || endVisible;

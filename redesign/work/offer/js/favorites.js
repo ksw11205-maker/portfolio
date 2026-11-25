@@ -11,7 +11,7 @@ offerReady.then(({ brands, promotions }) => {
 
   main.innerHTML = `<div class="container page-content">
     <div class="page-intro collection-heading">
-      <div><h1>Following Brands<span class="heading-dot">.</span></h1>
+      <div><h1>Follow<span class="heading-dot">.</span></h1>
       <p>관심 브랜드의 새로운 혜택과 진행 중인 프로모션을 한곳에서 확인하세요.</p></div>
       <p class="collection-count" id="favorite-count" aria-live="polite"></p>
     </div>

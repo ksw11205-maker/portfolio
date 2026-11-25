@@ -187,3 +187,10 @@ body[data-case-entry] #main .archive-hero-intro:has(> .archive-hero-copy) {
     background: linear-gradient(to bottom, transparent, var(--cover-paper) 2.5rem), var(--cover-bottom) !important;
   }
 }
+body[data-case-entry][data-page="case"][data-project] > [data-prototype-persistent][data-case-prototype]:not(#main) {
+  --prototype-fill: #fff;
+}
+
+body[data-case-entry]:has(> [data-prototype-persistent]) > .case-footer {
+  padding-block-end: 5.25rem;
+}

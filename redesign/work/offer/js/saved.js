@@ -10,7 +10,7 @@ offerReady.then(() => {
 
   main.innerHTML = `<div class="container page-content saved-page">
     <div class="page-intro collection-heading">
-      <div><h1>Saved Offers<span class="heading-dot">.</span></h1><p>저장한 혜택과 프로모션 일정을 한곳에서 관리하세요.</p></div>
+      <div><h1>Saved<span class="heading-dot">.</span></h1><p>저장한 혜택과 프로모션 일정을 한곳에서 관리하세요.</p></div>
     </div>
     <div class="saved-toolbar">
       <p id="saved-count" aria-live="polite"></p>
