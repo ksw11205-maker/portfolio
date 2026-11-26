@@ -115,3 +115,5 @@
 @media(prefers-reduced-motion:reduce){
  [data-line-state] .statement-underline path{opacity:1;stroke-dashoffset:0;transform:none}
 }
+
+.about .profile-certifications{margin-top:32px}

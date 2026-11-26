@@ -32,8 +32,25 @@ syncMotionPreference();reducedMotion.addEventListener('change',syncMotionPrefere
 if('IntersectionObserver' in window){const observer=new IntersectionObserver(([entry])=>brandPanel.classList.toggle('is-offscreen',!entry.isIntersecting));observer.observe(brandPanel);}
 document.addEventListener('visibilitychange',()=>brandPanel.classList.toggle('is-document-hidden',document.hidden));
 hero.querySelectorAll('.brand-marquee').forEach(row=>row.addEventListener('focusout',()=>requestAnimationFrame(()=>{if(!row.matches(':focus-within'))row.scrollLeft=0;})));
-const mobile=matchMedia('(max-width: 767px)');
-function arrangeSections(){const focused=document.activeElement;const order=mobile.matches?['hero','popular','ending','categories','new','following']:['hero','popular','new','ending','categories','following'];order.forEach(name=>main.appendChild(document.getElementById('home-'+name)));if(focused&&main.contains(focused))focused.focus({preventScroll:true});}
-arrangeSections();mobile.addEventListener('change',arrangeSections);
-renderFollowing();document.addEventListener('offer:storage',e=>{if(e.detail.key==='favoriteBrands')renderFollowing();});document.addEventListener('offer:external-storage',renderFollowing);
+mountHomeCalendar(main);
+function refreshFollowing() {
+  const section = document.getElementById('home-following');
+  const content = document.getElementById('following-content');
+  const before = document.activeElement;
+  const restoreFocus = content.contains(before);
+  renderFollowing();
+  if (restoreFocus) {
+    const href = before.getAttribute('href');
+    const key = before.dataset.follow || before.dataset.save;
+    const next = [...content.querySelectorAll('a, button')].find(element =>
+      (href && element.getAttribute('href') === href) ||
+      (key && (element.dataset.follow === key || element.dataset.save === key)));
+    (next || section.querySelector('.section-heading .text-link')).focus({ preventScroll: true });
+  }
+}
+renderFollowing();
+document.addEventListener('offer:storage', event => {
+  if (event.detail.key === 'favoriteBrands') refreshFollowing();
+});
+document.addEventListener('offer:external-storage', refreshFollowing);
 });

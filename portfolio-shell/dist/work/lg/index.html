@@ -19,6 +19,19 @@
 <script src="/scripts/lg-ia.js" type="module"></script>
 <script type="module" src="/scripts/case-footer-wave.js"></script>
 <link rel="stylesheet" href="/styles/case-cover-actions.css"/>
+<style>
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 600 700;
+  font-display: swap;
+  src: url(/assets/fonts/spacegrotesk-600-700.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+body[data-project='lg']{--editorial-display:'Space Grotesk';--editorial-display-weight:700;}
+</style>
+<link rel="stylesheet" href="/styles/editorial-type.css">
+<link rel="stylesheet" href="/styles/case-contribution.css">
 </head>
 <body class="lg-final-spec" data-page="case" data-project="lg" data-theme="dark" data-unified-case="" data-case-entry>
 <a class="skip-link" href="#main">본문으로 이동</a>
@@ -29,7 +42,7 @@
     <a class="case-shared__next" href="/work/ivi/" aria-label="Next to project · IVI Usability Research"><span class="case-shared__full">NEXT TO PROJECT</span><span class="case-shared__short" aria-hidden="true">NEXT</span><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
   </nav>
 </header>
-<main id="main"><section aria-labelledby="project-title" class="hero project-cover" data-cover-project="lg"><figure class="project-cover__art"><img alt="마젠타 거실의 노트북 LG TV 사용성 분석 툴과 TV 화면" decoding="async" fetchpriority="high" height="1081" sizes="100vw" src="/assets/projects/lg-cover-1920.jpg" srcset="/assets/projects/lg-cover-960.jpg 960w, /assets/projects/lg-cover-1920.jpg 1920w" width="1920"/></figure><div class="project-cover__intro"><div class="project-cover__heading"><p class="project-cover__category">LG · TV USABILITY / AI DESIGN TOOL</p><h1 id="project-title">TV USABILITY<br/>AI DESIGN TOOL</h1><p class="project-cover__description">TV 화면의 사용성을 예측하고,<br/>디자인 개선으로 연결하다</p></div><div class="project-cover__footer"><dl class="cover-details">
+<main id="main"><section aria-labelledby="project-title" class="hero project-cover" data-cover-project="lg"><figure class="project-cover__art"><img alt="마젠타 거실의 노트북 LG TV 사용성 분석 툴과 TV 화면" decoding="async" fetchpriority="high" height="1081" sizes="100vw" src="/assets/projects/lg-cover-1920.jpg" srcset="/assets/projects/lg-cover-960.jpg 960w, /assets/projects/lg-cover-1920.jpg 1920w" width="1920"/></figure><div class="project-cover__intro"><div class="project-cover__heading"><p class="project-cover__category">LG · TV USABILITY / AI DESIGN TOOL</p><h1 id="project-title">TV USABILITY<br/>AI DESIGN TOOL</h1><p class="project-cover__description">TV 화면의 사용성을 예측하고<br/> 디자인 개선으로 연결하다</p></div><div class="project-cover__footer"><dl class="cover-details">
 <div><dt>ROLE</dt><dd>UX Research · UI Design</dd></div>
 <div><dt>PERIOD</dt><dd>2025.03–2025.09</dd></div>
 <div><dt>TOOL</dt><dd class="meta-tools"><img alt="Figma" height="24" src="/assets/tools/figma.svg" title="Figma" width="24"/><img alt="HTML" height="24" src="/assets/tools/html5.svg" title="HTML" width="24"/><img alt="CSS" height="24" src="/assets/tools/css3.svg" title="CSS" width="24"/><img alt="JavaScript" height="24" src="/assets/tools/javascript.svg" title="JavaScript" width="24"/></dd></div>
@@ -47,14 +60,19 @@
     <a href="#review"><span aria-hidden="true">06</span> REVIEW</a>
   </nav>
 </div>
-<section aria-labelledby="overview-title" class="case-section unified-chapter contribution-only" data-chapter="01" id="overview"><h2 class="section-kicker" id="overview-title">MY CONTRIBUTION</h2><div class="role-note">
-  <p>예측 모델과 AI Design Tool의 핵심 개발은 연구팀에서 공동으로 진행했습니다. 저는 연구 결과를 실제 화면에 반영하기 위해 실험 조건에 맞는 TV UI 대안을 제작하고 프로토타입을 수정했습니다. 연구 과정과 결과는 보고·발표 자료에서 이해하기 쉽도록 시각화했습니다.</p>
-  <p>프로젝트 이후에는 실제 연구에 사용된 AI Design Tool을 다시 살펴보고, 연구자의 작업 흐름을 사용자 관점에서 재구성해 UI를 개인적으로 리디자인했습니다. 화면 입력부터 분석과 대안 비교까지 정보 구조를 정리하며 복잡한 연구 내용과 기능을 직관적인 UI로 풀어내는 역량을 키웠습니다.</p>
-</div>
-<div class="research-partners"><img src="/work/lg/assets/research-partner-lg.png" alt="LG전자" width="388" height="112"/><span aria-hidden="true">×</span><img src="/work/lg/assets/research-partner-uxu.png" alt="UXU LAB" width="392" height="86"/></div></section><aside aria-label="프로젝트 목차" class="case-toc"><span class="case-toc-label" aria-hidden="true">INDEX</span><nav aria-label="프로젝트 목차" class="case-nav"><a href="#background">BACKGROUND</a><a href="#goal-process">GOAL &amp; PROCESS</a><a href="#research">RESEARCH</a><a href="#direction">DIRECTION</a><a href="#design">DESIGN</a><a href="#review">REVIEW</a></nav><a data-case-prototype class="mobile-prototype-link" data-prototype-mobile="" href="/work/lg/prototype/" rel="noopener noreferrer" target="_blank"><span>VIEW PROTOTYPE</span><span class="case-prototype-arrow" aria-hidden="true">↗</span><span class="sr-only">새 탭에서 열기</span></a></aside><section class="case-section unified-chapter" id="background" tabindex="-1"><header class="chapter-heading"><p class="section-kicker">BACKGROUND</p><h2 class="case-heading">멀리서 조작하는 TV, 판단 기준이 필요했습니다.</h2><p class="case-lead">TV는 원거리에서 리모컨으로 조작되며, 다양한 콘텐츠와 기능이 하나의 화면에 모입니다. 이러한 환경에서 UI의 사용성을 정량적으로 설명하고 설계에 활용할 기준이 필요했습니다.</p></header><div class="usage-context">
+<section aria-labelledby="overview-title" class="case-section unified-chapter contribution-section" data-chapter="01" id="overview">
+  <div class="contribution-grid">
+    <h2 class="contribution-label" id="overview-title">MY CONTRIBUTION</h2>
+    <div class="contribution-copy">
+      <p>예측 모델과 AI Design Tool의 핵심 개발은 연구팀이 공동으로 진행했습니다. 저는 연구 결과를 실제 화면에 반영하기 위해 실험 조건에 맞는 TV UI 대안을 제작하고 프로토타입을 수정했습니다. 연구 과정과 결과는 보고·발표 자료에서 이해하기 쉽도록 시각화했습니다.</p>
+      <p>프로젝트 이후에는 연구팀이 사용한 AI Design Tool의 UI를 개인 작업으로 다시 설계했습니다. 연구자가 화면을 입력하고, 분석 결과를 확인하고, 대안을 비교하는 흐름에 맞춰 정보 구조와 인터페이스를 재구성했습니다.</p>
+    </div>
+    <div class="contribution-logos"><img src="/work/lg/assets/research-partner-lg.png" alt="LG전자" width="388" height="112"><span aria-hidden="true">×</span><img src="/work/lg/assets/research-partner-uxu.png" alt="UXU LAB" width="392" height="86"></div>
+  </div>
+</section><aside aria-label="프로젝트 목차" class="case-toc"><span class="case-toc-label" aria-hidden="true">INDEX</span><nav aria-label="프로젝트 목차" class="case-nav"><a href="#background">BACKGROUND</a><a href="#goal-process">GOAL &amp; PROCESS</a><a href="#research">RESEARCH</a><a href="#direction">DIRECTION</a><a href="#design">DESIGN</a><a href="#review">REVIEW</a></nav><a data-case-prototype class="mobile-prototype-link" data-prototype-mobile="" href="/work/lg/prototype/" rel="noopener noreferrer" target="_blank"><span>VIEW PROTOTYPE</span><span class="case-prototype-arrow" aria-hidden="true">↗</span><span class="sr-only">새 탭에서 열기</span></a></aside><section class="case-section unified-chapter" id="background" tabindex="-1"><header class="chapter-heading"><p class="section-kicker">BACKGROUND</p><h2 class="case-heading">멀리서 조작하는 TV, 판단 기준이 필요했습니다.</h2><p class="case-lead">TV는 원거리에서 리모컨으로 조작되며, 다양한 콘텐츠와 기능이 하나의 화면에 모입니다. 이러한 환경에서 UI의 사용성을 정량적으로 설명하고 설계에 활용할 기준이 필요했습니다.</p></header><div class="usage-context">
 <figure class="context-image"><img alt="콘텐츠, 앱, 설정 기능이 함께 배치된 webOS 홈 화면" decoding="async" height="664" loading="lazy" src="/work/lg/assets/tv-context.webp" width="1180"/></figure>
 <div class="observations">
-<article><h3>원거리 조작</h3><p>화면과 떨어진 거리에서 리모컨으로 조작합니다.</p></article>
+<article><h3>원거리 조작</h3><p>시청 위치에서 리모컨으로 화면을 조작합니다.</p></article>
 <article><h3>콘텐츠와 기능의 복잡화</h3><p>다양한 콘텐츠와 설정 기능이 하나의 화면에 모입니다.</p></article>
 <article><h3>정량적 평가 기준의 필요성</h3><p>화면 요소와 사용성의 관계를 실험을 통해 확인할 필요가 있습니다.</p></article>
 </div>
@@ -64,7 +82,7 @@
 <div class="lg-goal-sequence"><div class="lg-goal-canvas"><ol class="research-timeline">
 <li><span class="number">01</span><h3 class="">대표 시퀀스 선정</h3><p>webOS의 주요 기능과 사용자 목적을 분석하고 사용성 평가에 적합한 대표 시퀀스를 선정했습니다.</p></li>
 <li><span class="number">02</span><h3 class="">1차 실험 · 영향 요인 도출</h3><p>선정한 시퀀스를 바탕으로 실험을 진행하고 TV UI의 사용성에 영향을 미치는 주요 요인을 확인했습니다.</p></li>
-<li><span class="number">03</span><h3 class="">2차 실험 · 예측 모델 개발</h3><p>도출된 요인을 바탕으로 추가 실험을 진행하고 사용성을 예측하기 위한 모델 개발로 연결했습니다.</p></li>
+<li><span class="number">03</span><h3 class="">2차 실험 · 예측 모델 개발</h3><p>앞선 실험에서 확인한 요인을 바탕으로 추가 실험을 진행하고, 그 결과를 사용성 예측 모델 개발에 활용했습니다.</p></li>
 <li><span class="number">04</span><h3 class="">AI Design Tool</h3><p>예측 모델과 연구 결과를 실제 설계 과정에서 활용할 수 있도록 평가와 대안 비교를 지원하는 AI Design Tool로 구체화했습니다.</p></li>
 </ol>
 </div></div></section>
@@ -355,14 +373,14 @@
     <figure class="tool-screen" data-capture="sidebar"><img src="/work/lg/assets/tool-screens/sidebar-hd.png" width="660" height="1818" alt="AI Design Tool 전체 사이드바" loading="lazy" decoding="async"/></figure>
     <dl class="component-notes">
       <div><dt>NEW EVALUATION</dt><dd><figure><img src="/work/lg/assets/tool-screens/sidebar-new.png" width="585" height="111" alt="새 평가 시작하기" loading="lazy" decoding="async"/></figure><p>새 평가를 시작하며 기존 입력 상태를 초기화하고 새로운 TV UI 분석을 진행합니다.</p></dd></div>
-      <div><dt>WORK HISTORY</dt><dd><figure><img src="/work/lg/assets/tool-screens/sidebar-history.png" width="621" height="99" alt="작업 내역" loading="lazy" decoding="async"/></figure><p>이전에 진행한 평가 기록과 분석 결과를 찾아보고 기존 작업을 이어갑니다.</p></dd></div>
-      <div><dt>FAVORITES</dt><dd><figure><img src="/work/lg/assets/tool-screens/sidebar-favorites.png" width="621" height="99" alt="즐겨찾기 메뉴" loading="lazy" decoding="async"/></figure><p>즐겨찾기 메뉴의 진입 위치를 표시합니다. 제공된 프로토타입에는 목록을 여는 동작이 연결되지 않았습니다.</p></dd></div>
+      <div><dt>WORK HISTORY</dt><dd><figure><img src="/work/lg/assets/tool-screens/sidebar-history.png" width="621" height="99" alt="작업 내역" loading="lazy" decoding="async"/></figure><p>이전에 진행한 평가 기록과 분석 결과를 찾아보고 기존 평가 작업을 이어갑니다.</p></dd></div>
+      <div><dt>FAVORITES</dt><dd><figure><img src="/work/lg/assets/tool-screens/sidebar-favorites.png" width="621" height="99" alt="즐겨찾기 메뉴" loading="lazy" decoding="async"/></figure><p>프로토타입에 즐겨찾기 메뉴의 위치를 표시했습니다. 목록 열기는 연결되지 않은 상태입니다.</p></dd></div>
       <div><dt>RECENT WORK</dt><dd><figure><img src="/work/lg/assets/tool-screens/sidebar-recent.png" width="660" height="813" alt="최근 작업 목록" loading="lazy" decoding="async"/></figure><p>최근 작업 목록을 살펴보고 항목을 눌러 샘플 분석을 엽니다.</p></dd></div>
     </dl>
   </div>
 </article></section>
 <section aria-labelledby="review-title" class="case-section unified-chapter review-technical" data-chapter="08" id="review" tabindex="-1"><div aria-hidden="true" class="review-ui-backdrop"><img src="/work/lg/assets/tool-screens/analysis.png" alt="" width="1440" height="1619" loading="lazy" decoding="async"/><img src="/work/lg/assets/tool-screens/comparison.png" alt="" width="1440" height="1120" loading="lazy" decoding="async"/></div><span aria-hidden="true" class="review-watermark">REVIEW</span><span class="chapter-alias" id="reflection"></span><header class="chapter-heading"><p class="section-kicker">REVIEW</p><h2 class="case-heading" id="review-title">화면의 이유를 설명하는 디자이너로 성장했습니다.</h2><p class="case-lead">산학 연구에서 경험한 협업과 설계 판단을 돌아봅니다.</p></header><article class="evidence-block"><div class="research-reflection-qa"><article><span class="reflection-q-number">Q01</span><h3>무엇을 배웠나요?</h3><div><p>LG전자 UI/UX 부서와 소통하는 산학 연구에 참여하며, 실험 결과가 실제 디자인 판단과 도구 화면으로 연결되는 과정을 경험했습니다.</p><p>실험 조건을 반영한 TV UI 대안 제작과 프로토타입 수정, 보고·발표 자료 시각화에 참여하며 복잡한 연구 내용을 이해하기 쉽게 전달하는 방법을 배웠습니다.</p></div></article>
-<article><span class="reflection-q-number">Q02</span><h3>무엇이 아쉬웠나요?</h3><div><p>학부연구생으로 참여하며 방대한 연구 내용과 분석 과정을 짧은 일정 안에 이해하고 결과물로 정리하는 데 어려움이 있었습니다.</p><p>주어진 작업을 완성하는 데 집중하다 보니 연구의 전체 맥락을 깊이 이해하고 제 관점에서 개선 의견을 제안할 시간이 부족했던 점이 아쉬웠습니다.</p></div></article>
+<article><span class="reflection-q-number">Q02</span><h3>무엇이 아쉬웠나요?</h3><div><p>학부연구생으로 참여하며 방대한 연구 내용과 분석 과정을 짧은 일정 안에 이해하고 결과물로 정리하는 데 어려움이 있었습니다.</p><p>주어진 작업을 완성하는 데 집중하다 보니 연구의 맥락을 더 깊이 살펴보고 제 관점에서 개선안을 제안할 시간을 충분히 확보하지 못했습니다.</p></div></article>
 <article><span class="reflection-q-number">Q03</span><h3>다음에는 어떻게 바꾸고 싶나요?</h3><div><p>작업을 시작하기 전에 프로젝트의 목적과 핵심 근거를 먼저 파악하고, 중간 과정에서도 적극적으로 질문하고 의견을 제안하고 싶습니다.</p><p>단순히 요구사항을 화면으로 구현하는 것을 넘어, 문제를 이해하고 설계 방향과 선택의 이유까지 설명할 수 있는 디자이너로 성장하고자 합니다.</p></div></article></div></article></section><nav aria-label="다음 프로젝트" class="next-projects case-next">
   <a class="case-next-card" href="/work/ivi/" data-next-project="ivi">
     <div class="case-next-card__media"><img class="case-next-card__image" src="/assets/archive-covers/ivi-cover-clean-1920.jpg" width="1920" height="1081" alt="" loading="lazy" decoding="async"/></div>

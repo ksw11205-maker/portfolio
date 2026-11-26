@@ -19,6 +19,20 @@
 <link rel="stylesheet" href="case-study.css"/>
 <script type="module" src="case-study-motion.js"></script>
 <link rel="stylesheet" href="/styles/case-cover-actions.css"/>
+<link rel="stylesheet" href="/styles/case-films.css"><script defer src="/scripts/case-films.js"></script><style>
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 500 600;
+  font-display: swap;
+  src: url(/assets/fonts/fraunces-500-600.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face{font-family:'Maru Buri';src:url('/assets/fonts/MaruBuri-SemiBold.woff2') format('woff2');font-display:swap;font-weight:600;}
+body[data-project='cafekok']{--editorial-display:'Fraunces';--editorial-display-weight:600;}
+</style>
+<link rel="stylesheet" href="/styles/editorial-type.css">
+<link rel="stylesheet" href="/styles/case-contribution.css">
 </head>
 <body data-page="case" data-project="cafekok" data-unified-case="" data-case-entry>
 <a class="skip-link" href="#main">본문 바로가기</a>
@@ -29,7 +43,7 @@
     <a class="case-shared__next" href="/work/offer/case-study.html" aria-label="Next to project · OFFER"><span class="case-shared__full">NEXT TO PROJECT</span><span class="case-shared__short" aria-hidden="true">NEXT</span><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
   </nav>
 </header>
-<main id="main"><div aria-labelledby="case-title" class="case-hero archive-hero"><div class="archive-hero-art"><div class="art mockup-preview"><img alt="직접 제작한 CAFÉKOK 목업 표지" height="3000" src="/assets/archive-covers/cafekok-owner.webp" width="4000" fetchpriority="high"/></div></div><div class="archive-hero-intro"><div class="archive-hero-copy"><p class="case-type">Cafe Recommendation UX/UI</p><h1 id="case-title">CAFÉKOK</h1><p class="archive-summary">취향과 방문 목적을 연결해 나에게 맞는 카페를 발견합니다.</p><dl class="archive-meta"><div><dt>ROLE</dt><dd>Planning · UX/UI Design</dd></div><div><dt>PERIOD</dt><dd>2026.07–2026.10</dd></div><div><dt>TOOLS</dt><dd>Figma</dd></div></dl><a data-case-prototype class="prototype-link" data-prototype-cover="" href="/work/cafekok/prototype/" rel="noopener noreferrer" target="_blank"><span>VIEW PROTOTYPE</span><span class="case-prototype-arrow" aria-hidden="true">↗</span><span class="sr-only">새 탭에서 열기</span></a></div></div>
+<main id="main"><div aria-labelledby="case-title" class="case-hero archive-hero"><div class="archive-hero-art"><div class="art mockup-preview"><video class="case-film" src="films/cover.mp4" aria-label="카페콕 표지 영상" muted playsinline loop preload="metadata"></video></div></div><div class="archive-hero-intro"><div class="archive-hero-copy"><p class="case-type">Cafe Recommendation UX/UI</p><h1 id="case-title">CAFÉKOK</h1><p class="archive-summary">취향과 방문 목적을 연결해 나에게 맞는 카페를 발견합니다.</p><dl class="archive-meta"><div><dt>ROLE</dt><dd>Planning · UX/UI Design</dd></div><div><dt>PERIOD</dt><dd>2026.07–2026.10</dd></div><div><dt>TOOLS</dt><dd>Figma</dd></div></dl><a data-case-prototype class="prototype-link" data-prototype-cover="" href="/work/cafekok/prototype/" rel="noopener noreferrer" target="_blank"><span>VIEW PROTOTYPE</span><span class="case-prototype-arrow" aria-hidden="true">↗</span><span class="sr-only">새 탭에서 열기</span></a></div></div>
 <a class="case-cover-cue" href="#case-overview" aria-label="스크롤하여 프로젝트 목차 보기"><span class="case-cover-cue__mouse" aria-hidden="true"></span><span>SCROLL</span></a>
 </div>
 <div class="case-overview-bar" id="case-overview" tabindex="-1">
@@ -51,24 +65,28 @@
 <a href="#design-system">DESIGN SYSTEM</a>
 <a href="#app-ui-design">APP UI DESIGN</a>
 <a href="#retrospective">REVIEW</a></nav>
-  <a data-case-prototype class="cafe-mobile-prototype" data-prototype-mobile="" href="/work/cafekok/prototype/" rel="noopener noreferrer" target="_blank"><span>VIEW PROTOTYPE</span><span class="case-prototype-arrow" aria-hidden="true">↗</span><span class="sr-only">새 탭에서 열기</span></a>
+
 </aside>
 <div class="ck-story">
-<section id="contribution" class="ck-section " tabindex="-1">
-<div class="ck-contribution"><h2 class="ck-kicker">MY CONTRIBUTION</h2><p><strong>서비스 기획부터 UX/UI 디자인까지</strong> 전 과정을 직접 수행했습니다. 사용자의 취향 설정과 방문 목적을 바탕으로 카페 추천부터 상세 정보 확인, 저장까지 이어지는 핵심 이용 흐름을 설계했습니다.</p></div>
+<section id="contribution" class="ck-section contribution-section" aria-labelledby="contribution-title" tabindex="-1">
+  <div class="contribution-grid">
+    <h2 class="contribution-label" id="contribution-title">MY CONTRIBUTION</h2>
+    <div class="contribution-copy">
+      <p>서비스 기획부터 UX/UI 디자인까지 전 과정을 직접 수행했습니다. 사용자의 평소 취향과 방문 목적을 바탕으로 카페 추천부터 상세 정보 확인, 저장까지 이어지는 핵심 이용 흐름을 설계했습니다.</p>
+      <p>취향 설정과 목적별 추천이 자연스럽게 연결되도록 정보 구조를 구성하고, 온보딩부터 홈, 카페 상세, 탐색, 저장까지 주요 화면의 UX/UI를 디자인했습니다.</p>
+    </div>
+    <div class="contribution-logos"><img src="assets/prototype-captures/component-logo.png" alt="CAFÉKOK"></div>
+  </div>
 </section>
 <section id="overview" class="ck-section ck-overview-section" tabindex="-1">
 <div class="ck-overview">
-  <div><header class="ck-heading"><p class="ck-kicker">OVERVIEW</p><h2>오늘은 어떤 카페가<br>나와 잘 맞을까요?</h2><p class="ck-lead">평소 좋아하는 카페의 분위기는 같아도, 오늘 방문하는 목적은 달라집니다. 카페콕은 개인의 취향과 오늘의 방문 목적을 함께 고려해 카페를 찾고 비교하고 선택하도록 돕는 모바일 서비스입니다.</p></header>
+  <div><header class="ck-heading"><p class="ck-kicker">OVERVIEW</p><h2 class="editorial-emotional">오늘은 어떤 카페가<br> 나와 잘 맞을까요?</h2><p class="ck-lead">평소 좋아하는 카페의 분위기는 같아도, 오늘 방문하는 목적은 달라집니다. 카페콕은 개인의 취향과 오늘의 방문 목적을 함께 고려해 후보 카페를 찾고 비교해 방문할 곳을 고르는 모바일 서비스입니다.</p></header>
   <ul class="ck-keywords"><li><img src="prototype/icons/heart.svg" width="24" height="24" alt="" loading="lazy"><b>나의 취향</b><span>MY PREFERENCE</span></li><li><img src="prototype/icons/book-open.svg" width="24" height="24" alt="" loading="lazy"><b>오늘의 목적</b><span>TODAY’S PURPOSE</span></li><li><img src="prototype/icons/coffee.svg" width="24" height="24" alt="" loading="lazy"><b>맞춤 카페 추천</b><span>PERSONALIZED CAFE</span></li></ul></div>
-  <figure class="ck-overview-visual">
-    <img class="ck-overview-screen" src="assets/prototype-captures/home-viewport.png" width="780" height="1688" alt="공부·작업 목적을 선택한 실제 카페콕 홈 화면" loading="lazy" decoding="async">
-    <img class="ck-overview-frame" src="assets/overview-handheld-frame.png" width="900" height="1120" alt="" loading="lazy" decoding="async">
-  </figure>
+  <figure class="ck-owner-overview"><img src="/assets/archive-covers/cafekok-owner.webp" width="4000" height="3000" alt="카페콕 모바일 서비스 목업" loading="lazy"></figure>
 </div>
 </section>
 <section id="background" class="ck-section " tabindex="-1">
-<header class="ck-heading"><p class="ck-kicker">BACKGROUND</p><h2>많은 카페 중, 나에게 맞는 곳은?</h2><p class="ck-lead">카페를 고를 때는 가격, 분위기, 위치, 좌석을 함께 고려합니다. 방문 전 확인해야 할 정보가 여러 곳에 흩어져 있으면 선택이 어려워집니다.</p></header>
+<header class="ck-heading"><p class="ck-kicker">BACKGROUND</p><h2>많은 카페 중, 나에게 맞는 곳은?</h2><p class="ck-lead">카페를 고를 때는 가격과 분위기, 위치와 좌석을 함께 봅니다. 방문 전에 필요한 정보가 여러 곳에 흩어져 있으면 후보를 비교하기 어렵습니다.</p></header>
 <div class="ck-stats"><figure><figcaption>카페 선택 기준</figcaption><div class="ck-stat-body"><div class="ck-donut ck-donut-mix" aria-hidden="true"></div><dl class="ck-legend"><div><dt>가격·가성비</dt><dd>28.5%</dd></div><div><dt>분위기·인테리어</dt><dd>27.7%</dd></div><div><dt>위치·접근성</dt><dd>26.8%</dd></div><div><dt>좌석 편의성</dt><dd>17.0%</dd></div></dl></div><p class="ck-source">출처 N-Survey</p></figure>
 <figure><figcaption>방문 전 정보 확인</figcaption><div class="ck-stat-body"><div class="ck-donut ck-donut-icon" style="--portion:57%"><span class="ck-stat-icon" aria-hidden="true">☆</span><span>57%</span></div><p>지도 앱 리뷰·별점 우선 확인</p></div><p class="ck-source">출처 한국경제·진학사 캐치</p></figure>
 <figure><figcaption>카페 이용 시 불편함</figcaption><div class="ck-stat-body"><div class="ck-donut ck-donut-icon" style="--portion:53.4%"><span class="ck-stat-icon ck-stat-price" aria-hidden="true">₩</span><span>53.4%</span></div><p>높은 가격</p></div><p class="ck-source">출처 N-Survey</p></figure></div>
@@ -77,7 +95,7 @@
 <section id="concept" class="ck-section " tabindex="-1">
 <p class="ck-kicker ck-concept-label">SERVICE CONCEPT</p>
 <div class="ck-concept">
-<header class="ck-heading"><h2>취향과 목적을 더해,<br><em>나에게 맞는 카페</em>를.</h2><p class="ck-lead">카페콕은 평소의 취향과 그날의 목적을 함께 고려해 상황에 맞는 카페를 제안합니다.</p></header>
+<header class="ck-heading"><h2 class="editorial-emotional">취향과 목적을 더해,<br> <em>나에게 맞는 카페</em>를.</h2><p class="ck-lead">카페콕은 평소의 취향과 그날의 목적을 함께 고려해 상황에 맞는 카페를 제안합니다.</p></header>
 <figure class="ck-venn"><img src="assets/service-concept-reference.png" width="1670" height="941" alt="변하지 않는 나의 취향과 달라지는 오늘의 목적이 겹치는 지점에서 CAFÉKOK이 맞춤 카페를 추천합니다." loading="lazy" decoding="async"></figure></div>
 <div class="ck-rule-columns"><div><h3>더 정확한 추천</h3><p>나의 취향과 오늘의 목적을 함께 반영합니다.</p></div><div><h3>선택 시간 단축</h3><p>상황에 맞는 후보를 먼저 보여주도록 설계했습니다.</p></div><div><h3>나만의 카페 경험</h3><p>같은 취향으로도 목적에 따라 새로운 공간을 둘러볼 수 있습니다.</p></div></div>
 </section>
@@ -162,10 +180,9 @@
 </section>
 </section>
 <section id="app-ui-design" class="ck-section ck-app-intro" aria-labelledby="app-ui-design-title" tabindex="-1">
-  <img class="ck-app-intro-background" src="assets/app-ui-design-mockups.png" width="3000" height="2250" alt="" loading="lazy" decoding="async">
+  <figure class="ui-film"><video class="case-film" src="films/ui.mp4" aria-label="카페콕 UI 디자인 영상" muted playsinline loop preload="metadata"></video><figcaption class="film-signature"><img class="ck-video-logo" src="assets/prototype-captures/component-logo.png" width="376" height="98" alt="CAFÉKOK"><span>오늘의 목적에 맞는 카페 추천</span></figcaption></figure>
   <div class="ck-app-intro-copy">
     <h2 id="app-ui-design-title">APP UI DESIGN</h2>
-    <img class="ck-brand-img" src="assets/prototype-captures/component-logo.png" width="376" height="98" alt="CAFÉKOK" loading="lazy" decoding="async">
     <p>카페콕은 평소의 취향과 오늘의 방문 목적을 함께 고려하는 맞춤형 카페 추천 서비스입니다.</p>
     <p>6가지 취향 설정을 기반으로 상황에 맞는 카페를 추천하고, 취향 일치율과 추천 이유를 통해 사용자의 선택을 돕습니다.</p>
     <p>카페 추천부터 탐색, 상세 정보 확인, 저장까지 하나의 흐름으로 연결하여 나만의 카페를 발견하는 경험을 제공합니다.</p>
@@ -188,7 +205,7 @@
 <li class="ck-note ck-note--left" style="--capture-y:1492;--reach:11.282"><h3>다양한 카페 탐색</h3><p>인기순·저장순·최근 오픈 탐색 선택지를 홈에 배치했습니다.</p><img class="ck-note-image" src="assets/prototype-captures/component-popular.png" width="192" height="166" alt="다양한 카페 탐색 실제 컴포넌트" loading="lazy" decoding="async"></li></ol></div>
 </section>
 <section id="cafe-detail" class="ck-section ck-app" tabindex="-1">
-<header class="ck-heading ck-app-heading"><p class="ck-kicker">APP UI DESIGN</p><h2>CAFE DETAIL</h2><p class="ck-subhead">추천받은 카페, 선택에 필요한 정보까지.</p><p class="ck-lead">카페 사진과 취향 매칭 이유를 확인하고, 메뉴와 위치 정보를 살펴본 뒤 마음에 드는 카페를 저장할 수 있습니다.</p></header>
+<header class="ck-heading ck-app-heading"><p class="ck-kicker">APP UI DESIGN</p><h2>CAFE DETAIL</h2><p class="ck-subhead">추천받은 카페를 고르는 데 필요한 정보.</p><p class="ck-lead">카페 사진과 취향 매칭 이유를 확인하고, 메뉴와 위치 정보를 살펴본 뒤 마음에 드는 카페를 저장할 수 있습니다.</p></header>
 <div class="ck-annotated"><figure class="ck-long"><img src="assets/prototype-captures/detail-full.png" width="780" height="3882" alt="모서리 서재 상세 전체 화면. 취향 매칭 이유, 내부 사진, 메뉴와 가격, 네이버 지도와 영업시간이 표시됩니다." loading="lazy" decoding="async"></figure>
 <ol class="ck-notes"><li class="ck-note ck-note--left" style="--capture-y:642;--reach:5.128"><h3>취향 매칭 이유</h3><p>일치율과 취향 키워드를 통해 추천 이유를 확인합니다.</p></li>
 <li class="ck-note ck-note--right" style="--capture-y:989;--reach:5.128"><h3>카페 내부 사진</h3><p>사진으로 공간 분위기와 좌석 구성을 미리 살펴봅니다.</p></li>
@@ -210,9 +227,9 @@
 </div>
 </section>
 <section id="saved" class="ck-section ck-app" tabindex="-1">
-<header class="ck-heading ck-app-heading"><p class="ck-kicker">APP UI DESIGN</p><h2>SAVED</h2><p class="ck-subhead">마음에 드는 카페를 저장하고, 다시 찾아보세요.</p><p class="ck-lead">관심 있는 카페를 한곳에 모아 비교하고, 북마크 버튼으로 저장 상태를 바꿀 수 있습니다.</p></header>
+<header class="ck-heading ck-app-heading"><p class="ck-kicker">APP UI DESIGN</p><h2>SAVED</h2><p class="ck-subhead">마음에 드는 카페를 저장해 다시 찾아보세요.</p><p class="ck-lead">관심 있는 카페를 한곳에 모아 비교하고, 북마크 버튼으로 저장 상태를 바꿀 수 있습니다.</p></header>
 <div class="ck-saved">
- <div><figure class="ck-phone"><img src="assets/prototype-captures/saved-empty.png" width="780" height="1688" alt="저장된 카페가 없을 때 안내와 탐색 버튼을 보여주는 화면" loading="lazy" decoding="async"></figure><div class="ck-caption"><h3>비어 있는 저장함</h3><p>안내 메시지와 ‘카페 둘러보기’ 버튼으로 다음 행동을 이어줍니다.</p></div></div>
+ <div><figure class="ck-phone"><img src="assets/prototype-captures/saved-empty.png" width="780" height="1688" alt="저장된 카페가 없을 때 안내와 탐색 버튼을 보여주는 화면" loading="lazy" decoding="async"></figure><div class="ck-caption"><h3>비어 있는 저장함</h3><p>저장한 카페가 없을 때는 ‘카페 둘러보기’ 버튼으로 탐색을 다시 시작할 수 있습니다.</p></div></div>
  <span class="ck-saved-arrow" aria-hidden="true">→</span>
  <div class="ck-saved-ready"><figure class="ck-long"><img src="assets/prototype-captures/saved-four-full.png" width="780" height="2212" alt="북마크를 눌러 카페 4곳을 저장한 실제 목록" loading="lazy" decoding="async"></figure><div class="ck-caption"><h3>저장한 카페 확인</h3><p>관심 있는 카페를 한곳에 모아 카드로 확인합니다.</p></div><div class="ck-caption ck-saved-bookmark"><h3>편리한 관리</h3><p>북마크를 다시 눌러 원하는 카페의 저장을 해제합니다.</p></div></div>
 </div>
@@ -220,11 +237,10 @@
 <section id="retrospective" class="ck-section ck-retro" tabindex="-1">
 <header class="ck-heading"><p class="ck-kicker">REVIEW</p><h2>취향을 이해하는 것에서,<br>선택을 돕는 경험으로.</h2><p class="ck-lead">카페콕은 개인마다 다른 취향과 그날의 방문 목적을 함께 고려하면 카페 선택이 더 편리해질 것이라는 생각에서 시작했습니다. 막연한 취향을 6가지 기준으로 구체화하고, 추천부터 탐색과 저장까지 하나의 이용 흐름으로 설계했습니다.</p></header>
 <div class="ck-rule-columns ck-reflection">
- <div><p class="ck-kicker">LEARNED</p><h3>좋은 추천은 사용자의 선택 기준을 이해하는 데서 시작됩니다.</h3><p>사용자가 어떤 기준으로 카페를 선택하는지 정의하고 이를 직관적인 기능과 화면으로 연결하는 과정의 중요성을 배웠습니다.</p></div>
+ <div><p class="ck-kicker">LEARNED</p><h3>좋은 추천은 사용자의 선택 기준을 이해하는 데서 시작됩니다.</h3><p>카페를 고르는 기준을 취향 질문과 방문 목적 선택으로 옮겨, 추천의 근거를 화면에 드러내는 과정을 배웠습니다.</p></div>
  <div><p class="ck-kicker">LIMITATION</p><h3>설계한 추천 경험이 실제 사용자에게도 유용한지는 확인이 필요합니다.</h3><p>취향 매칭과 탐색을 프로토타입으로 구현했고, 추천 결과의 만족도와 사용성은 후속 사용자 테스트에서 검증할 과제로 남았습니다.</p></div>
  <div><p class="ck-kicker">NEXT STEP</p><h3>사용자 검증을 통해 추천 기준과 탐색 경험을 개선하고자 합니다.</h3><p>취향 질문의 이해도와 추천 결과의 적합성, 카페 선택 과정에서의 불편함을 관찰하겠습니다.</p></div>
 </div>
-<a data-case-prototype class="ck-prototype" href="prototype/" target="_blank" rel="noopener"><span>VIEW PROTOTYPE</span><span class="case-prototype-arrow" aria-hidden="true">↗</span><span class="sr-only">새 탭에서 열기</span></a>
 </section>
 </div>
 <nav aria-label="다음 프로젝트" class="next-projects case-next">
@@ -244,5 +260,5 @@
   <a class="case-footer__contact" href="mailto:ksw11205@gmail.com">ksw11205@gmail.com</a>
   <small>© 2026 KIM SEONGWON</small>
 </footer>
-<a data-case-prototype class="prototype-float" data-prototype-float="" hidden="" href="/work/cafekok/prototype/" rel="noopener noreferrer" target="_blank"><span>VIEW PROTOTYPE</span><span class="case-prototype-arrow" aria-hidden="true">↗</span><span class="sr-only">새 탭에서 열기</span></a>
+<a data-case-prototype class="prototype-float" data-prototype-float="" data-prototype-persistent hidden="" href="/work/cafekok/prototype/" rel="noopener noreferrer" target="_blank"><span>VIEW PROTOTYPE</span><span class="case-prototype-arrow" aria-hidden="true">↗</span><span class="sr-only">새 탭에서 열기</span></a>
 </body></html>

@@ -403,3 +403,67 @@ a:active, button:active, .offer-card .card-title a:active, .brand-row h3 a:activ
   .footer-contact a { gap:4px; }
   .footer-bottom { flex-direction:row; justify-content:space-between; gap:0 12px; }
 }
+
+/* Brand follows and promotion saves share a pressed-state treatment. */
+:is([data-follow], [data-save])[aria-pressed="true"] .icon { fill: currentColor; }
+:is([data-follow], [data-save]) .icon { flex-shrink: 0; }
+:is([data-follow], [data-save]):active .icon { scale: .91; }
+@media (prefers-reduced-motion: no-preference) {
+  :is([data-follow], [data-save]) .icon { transition: scale 160ms var(--ease); }
+}
+@media (prefers-reduced-motion: reduce) {
+  :is([data-follow], [data-save]):active .icon { scale: 1; }
+}
+
+/* Personal collections */
+.follow-collection + .follow-collection { margin-top: 44px; }
+.follow-collection > .brand-row { padding-inline: 0; }
+.follow-collection > .offer-grid { margin-top: 20px; }
+.follow-no-offers { margin: 14px 0 0; color: var(--color-text-muted); }
+.saved-toolbar, .saved-list-tools {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 20px;
+  flex-wrap: wrap;
+}
+.saved-toolbar { padding-block: 14px; border-block: 1px solid var(--color-border); margin-bottom: 24px; }
+.saved-toolbar p { font-size: .9375rem; font-weight: 670; color: var(--color-text-muted); }
+.saved-switch {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3px;
+  padding: 3px;
+  border-radius: var(--radius-control);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+}
+.saved-switch button {
+  min-height: 44px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: inherit;
+  background: transparent;
+  font-weight: 680;
+}
+.saved-switch button[aria-pressed="true"] { background: #171717; color: #fff; }
+.saved-list-tools { margin-bottom: 24px; }
+.saved-list-tools .state-filters { margin: 0; }
+.saved-sort select {
+  min-height: 44px;
+  padding-inline: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  font: inherit;
+  font-size: .875rem;
+}
+.saved-page .collection-heading { align-items: flex-start; }
+.saved-card-state { color: var(--color-text-muted); font-size: .8125rem; margin-top: 5px; }
+@media (max-width: 767px) {
+  body[data-page="favorites"] .collection-heading { align-items: flex-start; gap: 10px; }
+  body[data-page="favorites"] .collection-heading .collection-count { margin-top: 0; }
+  .follow-collection .brand-row-actions { flex-wrap: wrap; }
+  .follow-collection .brand-row { gap: 12px; }
+}

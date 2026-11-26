@@ -138,11 +138,17 @@ body[data-project="offer"][data-case-entry] #main > .unified-chapter {
 }
 
 body[data-project="cafekok"][data-case-entry] #main .archive-hero-intro {
-  background: radial-gradient(ellipse at 0% 100%, #f3e4d7, #fff 75%) !important;
+    --cover-paper: #f6ece1;
+  --cover-edge: linear-gradient(#d5bdaa, #b28e76 25%, #915f44 50%, #71381d 75%, #592c17);
+  --cover-bottom: linear-gradient(90deg, #5a2c17, #351b11, #130806);
+  background: linear-gradient(90deg, var(--cover-paper) 12%, #f6ece1f5 55%, transparent), var(--cover-edge) !important;
 }
 
 body[data-project="offer"][data-case-entry] #main .archive-hero-intro {
-  background: radial-gradient(ellipse at 0% 100%, #ffebe3, #fff 75%) !important;
+    --cover-paper: #fff6ef;
+  --cover-edge: linear-gradient(#faf6f3, #f8efeb, #f6eae4);
+  --cover-bottom: linear-gradient(90deg, #f5ebe4, #f9d1c1, #fdae90);
+  background: linear-gradient(90deg, var(--cover-paper), transparent), var(--cover-edge) !important;
 }
 
 body[data-project="cafekok"][data-case-entry] #main .case-overview-links a[aria-current="location"] {
@@ -175,4 +181,16 @@ body[data-case-entry] #main .archive-hero-copy {
 body[data-case-entry] #main .archive-hero-intro:has(> .archive-hero-copy) {
   justify-content: center;
   padding-block: clamp(2rem, 5vh, 3.25rem) !important;
+}
+@media (max-width:767px) {
+  body[data-project][data-case-entry] #main .archive-hero-intro:has(> .archive-hero-copy) {
+    background: linear-gradient(to bottom, transparent, var(--cover-paper) 2.5rem), var(--cover-bottom) !important;
+  }
+}
+body[data-case-entry][data-page="case"][data-project] > [data-prototype-persistent][data-case-prototype]:not(#main) {
+  --prototype-fill: #fff;
+}
+
+body[data-case-entry]:has(> [data-prototype-persistent]) > .case-footer {
+  padding-block-end: 5.25rem;
 }
