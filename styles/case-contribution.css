@@ -1,0 +1,121 @@
+@font-face {
+  font-family: "OFFER Wordmark";
+  src: url("/portfolio/work/offer/assets/fonts/PretendardVariable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+body[data-project] #main .contribution-section {
+  padding-block: clamp(1.75rem, 4vw, 3.5rem);
+}
+
+.contribution-grid {
+  display: grid;
+  grid-template-columns: 9.75rem minmax(0, 1fr) clamp(9rem, 14vw, 12rem);
+  align-items: start;
+  gap: clamp(1rem, 2.5vw, 2.25rem);
+  max-inline-size: 72rem;
+  margin-inline: auto;
+  padding: clamp(1.25rem, 3.5vw, 3rem);
+  border: 1px solid var(--contribution-border);
+  border-radius: .5rem;
+  background: var(--contribution-surface);
+  color: var(--contribution-ink);
+}
+
+body[data-project="lg"] .contribution-grid {
+  --contribution-surface: #191220;
+  --contribution-border: #49344e;
+  --contribution-accent: #f6a8e2;
+  --contribution-ink: #f2e9f3;
+}
+
+body[data-project="ivi"] .contribution-grid {
+  --contribution-surface: #152126;
+  --contribution-border: #344a52;
+  --contribution-accent: #94e4ee;
+  --contribution-ink: #e4eff1;
+}
+
+body[data-project="cafekok"] .contribution-grid {
+  --contribution-surface: #f7eee4;
+  --contribution-border: #decab8;
+  --contribution-accent: #8c442a;
+  --contribution-ink: #3c2b23;
+}
+
+body[data-project="offer"] .contribution-grid {
+  --contribution-surface: #faf6f3;
+  --contribution-border: #e8d8cf;
+  --contribution-accent: #be3516;
+  --contribution-ink: #2a2523;
+}
+
+body[data-project] #main .contribution-grid .contribution-label {
+  margin: 0;
+  color: var(--contribution-accent);
+  font-family: inherit;
+  font-size: .8125rem;
+  font-weight: 800;
+  line-height: 1.75;
+  letter-spacing: .07em;
+}
+
+body[data-project] #main .contribution-grid .contribution-copy p {
+  margin: 0;
+  max-inline-size: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.75;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+body[data-project] #main .contribution-grid .contribution-copy p + p {
+  margin-block-start: 1rem;
+}
+
+.contribution-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  justify-self: end;
+  inline-size: 100%;
+  max-inline-size: 12rem;
+  min-block-size: 3.5rem;
+}
+
+body[data-project] #main .contribution-logos img {
+  display: block;
+  inline-size: min(100%, 8.25rem);
+  block-size: auto;
+  min-inline-size: 0;
+  max-block-size: 3.5rem;
+  object-fit: contain;
+}
+
+body[data-project="lg"] #main .contribution-logos img {
+  inline-size: min(42%, 5rem);
+}
+
+body[data-project="offer"] #main .contribution-grid .contribution-wordmark {
+  font-family: "OFFER Wordmark", sans-serif;
+  font-size: 1.875rem;
+  font-weight: 850;
+  letter-spacing: -.075em;
+  line-height: 1;
+  color: #171717;
+}
+
+@media (max-width: 900px) {
+  .contribution-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .contribution-logos {
+    justify-self: start;
+    justify-content: start;
+  }
+}

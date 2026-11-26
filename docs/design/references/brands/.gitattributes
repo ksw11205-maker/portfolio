@@ -1,3 +1,0 @@
-# Preserve downloaded originals and license bytes on every platform.
-*.md -text
-LICENSE -text

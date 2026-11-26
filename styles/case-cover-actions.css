@@ -1,0 +1,196 @@
+@font-face {
+  font-family: "Archivo Black";
+  src: url("/portfolio/assets/fonts/ArchivoBlack-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+body[data-project="lg"] #main .project-cover #project-title {
+  font-family: SUIT, sans-serif;
+  font-weight: 900;
+  letter-spacing: -.04em;
+  line-height: 1.1;
+}
+
+body[data-project="ivi"] #main .ivi-cover #project-title {
+  font-family: "IVI Cover", sans-serif;
+  letter-spacing: 0;
+}
+
+body[data-project="cafekok"] #main .archive-hero #case-title {
+  font-family: "Source Serif", Georgia, serif;
+  font-size: clamp(2.65rem, 4.5vw, 4.5rem);
+  font-weight: 850;
+  letter-spacing: -.045em;
+  line-height: 1.05;
+}
+
+body[data-project="offer"] #main .archive-hero #case-title {
+  font-family: "Archivo Black", sans-serif;
+  font-size: clamp(2.75rem, 5vw, 5rem);
+  font-weight: 400;
+  letter-spacing: -.04em;
+  line-height: 1;
+}
+
+body[data-page="case"][data-project="lg"] { --prototype-accent: var(--flagship-accent); }
+body[data-page="case"][data-project="ivi"] { --prototype-accent: var(--case-accent); }
+body[data-page="case"][data-project="cafekok"] { --prototype-accent: #75462d; --prototype-on-accent: #fff; --case-accent: #75462d; }
+body[data-page="case"][data-project="offer"] { --prototype-accent: var(--case-accent); }
+
+/* Existing placement and visibility rules govern each action. */
+body[data-case-entry][data-page="case"][data-project] :is(#main [data-case-prototype], [data-case-prototype]) {
+  --prototype-fill: transparent;
+  box-sizing: border-box;
+  min-block-size: 48px;
+  max-inline-size: 100%;
+  padding: 0 16px !important;
+  gap: 16px !important;
+  align-items: center;
+  justify-content: space-between;
+  isolation: isolate;
+  overflow: hidden;
+  border: 1px solid var(--prototype-accent) !important;
+  border-radius: 4px !important;
+  background: var(--prototype-fill) !important;
+  color: var(--prototype-current-ink, var(--prototype-ink, #242421)) !important;
+  font: 700 .8125rem/1.2 SUIT, sans-serif !important;
+  letter-spacing: .025em;
+  text-decoration: none;
+  white-space: nowrap;
+  backdrop-filter: none;
+  transition: color .25s ease !important;
+}
+
+body[data-case-entry] #main :is([data-prototype-cover], [data-prototype-mobile], .ck-prototype)[data-case-prototype] {
+  position: relative;
+}
+
+body[data-case-entry] #main :is([data-prototype-cover], .ck-prototype)[data-case-prototype] {
+  display: inline-flex;
+}
+
+body[data-case-entry]:is([data-project="lg"], [data-project="ivi"]) {
+  --prototype-ink: #fff;
+}
+
+body[data-case-entry] > [data-prototype-float][data-case-prototype] {
+  --prototype-fill: #fff;
+}
+
+body[data-case-entry]:is([data-project="lg"], [data-project="ivi"]) > [data-prototype-float][data-case-prototype] {
+  --prototype-fill: #11141b;
+}
+
+body[data-case-entry][data-page="case"][data-project] :is(#main [data-case-prototype], [data-case-prototype])::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--prototype-accent);
+  border-radius: 0;
+  transform: translateY(102%);
+  transition: transform .46s cubic-bezier(.22, 1, .36, 1);
+  pointer-events: none;
+}
+
+body[data-case-entry][data-page="case"][data-project] :is(#main [data-case-prototype], [data-case-prototype]):is(:hover, :focus-visible) {
+  --prototype-current-ink: var(--prototype-on-accent, #141418);
+}
+
+body[data-case-entry][data-page="case"][data-project] :is(#main [data-case-prototype], [data-case-prototype]):is(:hover, :focus-visible)::before {
+  transform: translateY(0);
+}
+
+body[data-case-entry][data-page="case"][data-project] :is(#main [data-case-prototype], [data-case-prototype]):focus-visible {
+  outline: 2px solid var(--prototype-accent) !important;
+  outline-offset: 4px;
+}
+
+body[data-case-entry][data-page="case"][data-project] :is(#main [data-case-prototype], [data-case-prototype]) > span {
+  color: var(--prototype-current-ink, var(--prototype-ink, #242421)) !important;
+}
+
+.case-prototype-arrow { font-size: 1rem; line-height: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  body[data-case-entry][data-page="case"][data-project] :is(#main [data-case-prototype], [data-case-prototype]),
+  body[data-case-entry][data-page="case"][data-project] :is(#main [data-case-prototype], [data-case-prototype])::before {
+    transition: none !important;
+  }
+}
+
+body[data-project="ivi"][data-case-entry] #main .ivi-cover-intro > [data-prototype-cover] {
+  inset: auto;
+  margin: 0 !important;
+  justify-self: start;
+  align-self: start;
+}
+
+body[data-project="offer"][data-case-entry] {
+  --bg: #fff;
+  --product-bg: #fff;
+  background: #fff;
+}
+
+body[data-project="offer"][data-case-entry] #main > .unified-chapter {
+  background: #fff;
+}
+
+body[data-project="cafekok"][data-case-entry] #main .archive-hero-intro {
+    --cover-paper: #f6ece1;
+  --cover-edge: linear-gradient(#d5bdaa, #b28e76 25%, #915f44 50%, #71381d 75%, #592c17);
+  --cover-bottom: linear-gradient(90deg, #5a2c17, #351b11, #130806);
+  background: linear-gradient(90deg, var(--cover-paper) 12%, #f6ece1f5 55%, transparent), var(--cover-edge) !important;
+}
+
+body[data-project="offer"][data-case-entry] #main .archive-hero-intro {
+    --cover-paper: #fff6ef;
+  --cover-edge: linear-gradient(#faf6f3, #f8efeb, #f6eae4);
+  --cover-bottom: linear-gradient(90deg, #f5ebe4, #f9d1c1, #fdae90);
+  background: linear-gradient(90deg, var(--cover-paper), transparent), var(--cover-edge) !important;
+}
+
+body[data-project="cafekok"][data-case-entry] #main .case-overview-links a[aria-current="location"] {
+  color: var(--case-accent);
+}
+
+.ck-match-samples { display: flex; flex-wrap: wrap; gap: .4rem; }
+.ck-match-samples span {
+  display: grid;
+  place-items: center;
+  inline-size: 3rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--match-tone);
+  color: #fff;
+  font: 600 .875rem/1 SUIT, sans-serif;
+}
+
+body[data-case-entry] #main .archive-hero-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: inherit;
+  inline-size: min(100%, 22rem);
+  min-inline-size: 0;
+  margin-inline: auto;
+  text-align: start;
+}
+
+body[data-case-entry] #main .archive-hero-intro:has(> .archive-hero-copy) {
+  justify-content: center;
+  padding-block: clamp(2rem, 5vh, 3.25rem) !important;
+}
+@media (max-width:767px) {
+  body[data-project][data-case-entry] #main .archive-hero-intro:has(> .archive-hero-copy) {
+    background: linear-gradient(to bottom, transparent, var(--cover-paper) 2.5rem), var(--cover-bottom) !important;
+  }
+}
+body[data-case-entry][data-page="case"][data-project] > [data-prototype-persistent][data-case-prototype]:not(#main) {
+  --prototype-fill: #fff;
+}
+
+body[data-case-entry]:has(> [data-prototype-persistent]) > .case-footer {
+  padding-block-end: 5.25rem;
+}

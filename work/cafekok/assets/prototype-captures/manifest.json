@@ -1,0 +1,315 @@
+{
+  "route": "/portfolio/work/cafekok/prototype/",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "deviceScaleFactor": 2,
+  "assets": {
+    "onboarding-start": {
+      "width": 780,
+      "height": 1688,
+      "anchors": {
+        "start": {
+          "left": 24,
+          "right": 366,
+          "top": 752,
+          "height": 52
+        }
+      }
+    },
+    "component-logo": {
+      "width": 376,
+      "height": 98
+    },
+    "component-primary": {
+      "width": 684,
+      "height": 104
+    },
+    "onboarding-quiz": {
+      "width": 780,
+      "height": 1688,
+      "anchors": {
+        "choice": {
+          "left": 24,
+          "right": 366,
+          "top": 262,
+          "height": 66
+        }
+      }
+    },
+    "component-quiz-choice": {
+      "width": 684,
+      "height": 134
+    },
+    "flow-preferences": {
+      "width": 780,
+      "height": 1688
+    },
+    "component-secondary": {
+      "width": 264,
+      "height": 96
+    },
+    "my-taste": {
+      "width": 780,
+      "height": 1688,
+      "anchors": {
+        "board": {
+          "left": 0,
+          "right": 390,
+          "top": 114,
+          "height": 211
+        },
+        "edit": {
+          "left": 332,
+          "right": 348,
+          "top": 360,
+          "height": 16
+        }
+      }
+    },
+    "my-taste-edit": {
+      "width": 780,
+      "height": 1688,
+      "anchors": {
+        "modal": {
+          "left": 0,
+          "right": 390,
+          "top": 450,
+          "height": 394
+        }
+      }
+    },
+    "component-taste-modal": {
+      "width": 780,
+      "height": 788
+    },
+    "flow-purpose": {
+      "width": 780,
+      "height": 1688
+    },
+    "home-viewport": {
+      "width": 780,
+      "height": 1688
+    },
+    "home-full": {
+      "width": 780,
+      "height": 3386,
+      "pageHeight": 1693,
+      "anchors": {
+        "purpose": {
+          "left": 20,
+          "right": 102,
+          "top": 509,
+          "height": 88
+        },
+        "recommendation": {
+          "left": 20,
+          "right": 162,
+          "top": 689,
+          "height": 285
+        },
+        "contrast": {
+          "left": 0,
+          "right": 390,
+          "top": 1030,
+          "height": 313
+        },
+        "popularity": {
+          "left": 44,
+          "right": 139,
+          "top": 1451,
+          "height": 82
+        }
+      }
+    },
+    "component-purpose": {
+      "width": 164,
+      "height": 178
+    },
+    "component-recommendation": {
+      "width": 284,
+      "height": 572
+    },
+    "component-match": {
+      "width": 96,
+      "height": 98
+    },
+    "flow-recommendation": {
+      "width": 780,
+      "height": 1688
+    },
+    "home-contrast": {
+      "width": 780,
+      "height": 628
+    },
+    "component-popular": {
+      "width": 192,
+      "height": 166
+    },
+    "component-navigation": {
+      "width": 716,
+      "height": 148
+    },
+    "saved-empty": {
+      "width": 780,
+      "height": 1688
+    },
+    "explore-viewport": {
+      "width": 780,
+      "height": 1688
+    },
+    "explore-full": {
+      "width": 780,
+      "height": 4528,
+      "pageHeight": 2264,
+      "anchors": {
+        "search": {
+          "left": 20,
+          "right": 370,
+          "top": 170,
+          "height": 52
+        },
+        "filter": {
+          "left": 318,
+          "right": 362,
+          "top": 174,
+          "height": 44
+        },
+        "map": {
+          "left": 205,
+          "right": 268,
+          "top": 362,
+          "height": 44
+        },
+        "list": {
+          "left": 20,
+          "right": 188,
+          "top": 422,
+          "height": 316
+        }
+      }
+    },
+    "component-search": {
+      "width": 700,
+      "height": 104
+    },
+    "explore-filter": {
+      "width": 780,
+      "height": 1688
+    },
+    "explore-filter-panel": {
+      "width": 780,
+      "height": 1486
+    },
+    "component-filter-selected": {
+      "width": 200,
+      "height": 90
+    },
+    "component-filter-idle": {
+      "width": 180,
+      "height": 90
+    },
+    "explore-map": {
+      "width": 780,
+      "height": 1688
+    },
+    "explore-map-full": {
+      "width": 780,
+      "height": 3952,
+      "pageHeight": 1976,
+      "anchors": {
+        "map": {
+          "left": 20,
+          "right": 370,
+          "top": 422,
+          "height": 360
+        },
+        "results": {
+          "left": 20,
+          "right": 370,
+          "top": 798,
+          "height": 970
+        }
+      }
+    },
+    "detail-full": {
+      "width": 780,
+      "height": 3882,
+      "pageHeight": 1941,
+      "anchors": {
+        "reason": {
+          "left": 20,
+          "right": 370,
+          "top": 594,
+          "height": 275
+        },
+        "interior": {
+          "left": 20,
+          "right": 370,
+          "top": 941,
+          "height": 263
+        },
+        "menu": {
+          "left": 20,
+          "right": 370,
+          "top": 1299,
+          "height": 195
+        },
+        "location": {
+          "left": 20,
+          "right": 370,
+          "top": 1633,
+          "height": 250
+        }
+      }
+    },
+    "detail-reason": {
+      "width": 700,
+      "height": 552
+    },
+    "detail-interior": {
+      "width": 700,
+      "height": 526
+    },
+    "detail-menu": {
+      "width": 700,
+      "height": 640
+    },
+    "detail-map": {
+      "width": 700,
+      "height": 502
+    },
+    "component-bookmark-idle": {
+      "width": 88,
+      "height": 88
+    },
+    "component-bookmark-saved": {
+      "width": 88,
+      "height": 88
+    },
+    "saved-four": {
+      "width": 780,
+      "height": 1688
+    },
+    "saved-four-full": {
+      "width": 780,
+      "height": 2212,
+      "pageHeight": 1106,
+      "anchors": {
+        "list": {
+          "left": 20,
+          "right": 188,
+          "top": 273,
+          "height": 316
+        },
+        "bookmark": {
+          "left": 320,
+          "right": 364,
+          "top": 279,
+          "height": 44
+        }
+      }
+    }
+  }
+}
