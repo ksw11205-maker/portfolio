@@ -14,7 +14,7 @@ for(const node of document.querySelectorAll('.ed-intro,.ed-columns>article,.ed-f
 // The fixed chapter context becomes the current screen's own explanation.
 const screens=document.querySelector('#screens .chapter-step-heading');
 if(screens){const copy=document.createElement('div');copy.className='ed-active-copy';screens.prepend(copy);let previous=-1;
- motion.subscribe(()=>{const parent=screens.closest('.chapter-step-layout');if(!parent.classList.contains('chapter-step-pinned'))return;const number=Number(screens.querySelector('.chapter-step-nav span')?.textContent.split('/portfolio/')[0])-1;if(number===previous||number<0)return;const source=parent.querySelectorAll('.ed-screen-copy')[number];if(!source)return;previous=number;copy.replaceChildren(...[...source.childNodes].map(n=>n.cloneNode(true)));const title=copy.querySelector('h3');if(title){const h=document.createElement('h2');h.innerHTML=title.innerHTML;title.replaceWith(h);}});
+ motion.subscribe(()=>{const parent=screens.closest('.chapter-step-layout');if(!parent.classList.contains('chapter-step-pinned'))return;const number=Number(screens.querySelector('.chapter-step-nav span')?.textContent.split('/')[0])-1;if(number===previous||number<0)return;const source=parent.querySelectorAll('.ed-screen-copy')[number];if(!source)return;previous=number;copy.replaceChildren(...[...source.childNodes].map(n=>n.cloneNode(true)));const title=copy.querySelector('h3');if(title){const h=document.createElement('h2');h.innerHTML=title.innerHTML;title.replaceWith(h);}});
 }
 for(const button of document.querySelectorAll('[data-capture]'))button.addEventListener('click',()=>{
  const image=document.querySelector('.ed-comparison-preview>img');if(!image)return;

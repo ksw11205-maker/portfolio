@@ -1,27 +1,128 @@
-/* A luminous moving colour mesh, inside the existing Q&A → CONTACT wave. */
-#contact .contact-atmosphere{position:absolute;inset:0;overflow:hidden;pointer-events:none;isolation:isolate;contain:paint;background:linear-gradient(125deg,#e4eff6 0%,#ecedf5 44%,#f6eee6 100%)}
-#contact .contact-atmosphere__field{position:absolute;pointer-events:none;border-radius:50%;animation-play-state:paused;animation-timing-function:cubic-bezier(.45,0,.55,1);animation-iteration-count:infinite;transform-origin:center;will-change:auto;backface-visibility:hidden}
-/* Broad pastel centres retain a light canvas behind dark copy. */
-#contact .contact-atmosphere__field--blue{left:-30%;top:4%;width:112%;height:138%;background:radial-gradient(ellipse at 48% 50%,#83b4f8ba 0%,#9fcbf690 23%,#aacff34f 44%,#aacff300 69%);animation:contact-cobalt-current 18s cubic-bezier(.45,0,.55,1) -3s infinite paused;transform:translate3d(-10%,9%,0) rotate(-16deg) scale(1.02)}
-#contact .contact-atmosphere__field--lilac{left:26%;top:-48%;width:110%;height:145%;background:radial-gradient(ellipse at center,#c3a1e8b3 0%,#c8b0ed82 25%,#cebce944 43%,#d3c5ec00 70%);animation:contact-lilac-current 22s cubic-bezier(.45,0,.55,1) -9s infinite paused;transform:translate3d(8%,-4%,0) rotate(18deg) scale(1.04)}
-#contact .contact-atmosphere__field--apricot{left:42%;top:32%;width:100%;height:125%;background:radial-gradient(ellipse at center,#f0b18ca1 0%,#f6c5a97a 28%,#f3d7c73d 48%,#f6decb00 70%);animation:contact-apricot-current 20s cubic-bezier(.45,0,.55,1) -5s infinite paused;transform:translate3d(10%,8%,0) rotate(-14deg)}
-/* A soft curved band makes the direction of flow legible, without sharp edges. */
-#contact .contact-atmosphere__field--ribbon{left:-45%;top:-40%;width:170%;height:160%;background:radial-gradient(ellipse 57% 37% at center,#b1ddf100 36%,#d7eff76b 47%,#8ac4e875 53%,#aec7f346 60%,#b9c5ee00 70%);animation:contact-ribbon-current 25s cubic-bezier(.45,0,.55,1) -13s infinite paused;transform:translate3d(-8%,3%,0) rotate(-28deg)}
-#contact .contact-atmosphere__field--pearl{left:-9%;top:-47%;width:98%;height:132%;background:radial-gradient(ellipse at center,#fffdf4c9 0%,#fffff591 30%,#fffef53d 50%,#fffef500 72%);animation:contact-pearl-current 16s cubic-bezier(.45,0,.55,1) -6s infinite paused;transform:translate3d(-8%,-6%,0) rotate(-8deg)}
-/* The veil protects heading and card contrast while retaining flowing colour. */
-#contact .contact-atmosphere::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,#f5f8fa20 0%,#ffffff0a 56%,#f9f4ee14 100%)}
-#contact[data-atmosphere-active="true"] .contact-atmosphere__field{animation-play-state:running;will-change:transform}
-@keyframes contact-cobalt-current{0%,100%{transform:translate3d(-10%,9%,0) rotate(-16deg) scale(1.02)}35%{transform:translate3d(27%,-13%,0) rotate(13deg) scale(1.16)}70%{transform:translate3d(5%,-24%,0) rotate(31deg) scale(.96)}}
-@keyframes contact-lilac-current{0%,100%{transform:translate3d(8%,-4%,0) rotate(18deg) scale(1.04)}40%{transform:translate3d(-36%,24%,0) rotate(-19deg) scale(1.12)}72%{transform:translate3d(-14%,36%,0) rotate(-34deg) scale(.94)}}
-@keyframes contact-apricot-current{0%,100%{transform:translate3d(10%,8%,0) rotate(-14deg)}40%{transform:translate3d(-28%,-32%,0) rotate(12deg) scale(1.18)}75%{transform:translate3d(-53%,-9%,0) rotate(27deg) scale(.96)}}
-@keyframes contact-ribbon-current{0%,100%{transform:translate3d(-8%,3%,0) rotate(-28deg)}50%{transform:translate3d(17%,17%,0) rotate(28deg) scale(1.14)}}
-@keyframes contact-pearl-current{0%,100%{transform:translate3d(-8%,-6%,0) rotate(-8deg)}45%{transform:translate3d(42%,29%,0) rotate(22deg) scale(1.05)}76%{transform:translate3d(14%,47%,0) rotate(-12deg) scale(1.14)}}
-@media(max-width:600px){
- #contact .contact-atmosphere__field--blue{left:-58%;width:175%;height:110%}
- #contact .contact-atmosphere__field--lilac{left:5%;width:170%;height:120%;top:-28%}
- #contact .contact-atmosphere__field--apricot{left:0%;width:165%;height:105%;top:40%}
- #contact .contact-atmosphere__field--ribbon{left:-75%;width:235%;height:140%;opacity:.8}
- #contact .contact-atmosphere__field--pearl{left:-35%;width:180%;height:115%}
+/* Angular blue and silver surfaces continue the wave transition into the sign-off. */
+#contact.contact-finale {
+  --text: #102346;
+  --secondary: #284b8d;
+  --muted: #425778;
+  background: #edf3ff;
+  overflow: clip;
+  padding-block: clamp(116px, 15vh, 168px) clamp(82px, 12vh, 136px);
 }
-.motion-paused #contact .contact-atmosphere__field{animation-play-state:paused!important;will-change:auto}
-@media(prefers-reduced-motion:reduce){#contact .contact-atmosphere__field{animation:none!important;will-change:auto!important}}
+
+#contact.contact-finale.has-wave-transition { background: var(--bg); }
+.section-entry-shell.has-entry-pin:has(> #contact) { background: #edf3ff; }
+
+#contact .contact-background {
+  background: linear-gradient(139deg, #f4f7fe 0%, #e8f0ff 53%, #b6cdff 100%);
+}
+
+#contact .contact-background::before,
+#contact .contact-background::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+#contact .contact-background::before {
+  background: linear-gradient(143deg, #a8c6ff 4%, #2461e7 39%, #1748be 70%, #0b286f 100%);
+  clip-path: polygon(100% 4%, 100% 89%, 61% 100%, 39% 69%, 54% 27%);
+}
+
+#contact .contact-background::after {
+  background: linear-gradient(151deg, #e0ecff 18%, #b4cefd 55%, #f0f5ff 91%);
+  clip-path: polygon(100% 91%, 100% 100%, 32% 100%, 52% 87%, 63% 99%);
+}
+
+#contact h2 { font-size: clamp(3.25rem, 6.2vw, 6rem); }
+#contact .contact-title-end { color: #1747ac; }
+
+#contact .contact-card-stage {
+  --card-width: min(100%, 530px);
+  isolation: isolate;
+  padding: 0;
+  width: min(100%, 590px);
+  margin-inline: auto;
+  filter: none;
+}
+
+#contact .contact-card-stage::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  width: var(--card-width);
+  aspect-ratio: 9 / 5;
+  border-radius: 12px;
+  background: linear-gradient(158deg, #427eff, #113782 75%);
+  box-shadow: 0 16px 34px #091c524a;
+  transform: translate(-48%, -47%) rotate(8deg);
+}
+
+#contact .contact-card {
+  width: var(--card-width);
+  max-width: none;
+  padding: clamp(24px, 3.1vw, 44px);
+  border: 0;
+  border-radius: 12px;
+  background: linear-gradient(128deg, #fafcff 5%, #e6edf8 34%, #fbfdff 56%, #bfcadd 100%);
+  box-shadow: 0 15px 32px #0a1c5540;
+  transform: translate3d(var(--card-x, 0px), var(--card-y, 0px), 0) rotate(-5deg)
+    rotateX(var(--card-rx, 0deg)) rotateY(var(--card-ry, 0deg));
+}
+
+#contact .contact-card::after {
+  background: linear-gradient(146deg, transparent 0 60%, #698abc26 60% 61%, transparent 61%);
+}
+#contact .contact-card-identity { padding-inline-end: 52px; }
+#contact .contact-card-name { color: #132952; filter: none; text-shadow: none; }
+#contact .contact-card-role { color: #334b73; text-shadow: none; }
+
+.contact-card-mark {
+  position: absolute;
+  top: clamp(20px, 3vw, 40px);
+  right: clamp(20px, 3vw, 40px);
+  width: clamp(30px, 4vw, 48px);
+  height: auto;
+}
+
+#contact .contact-card-link {
+  color: #163764;
+  width: 100%;
+  border-top: 1px solid #284b8d42;
+}
+
+#contact .contact-card-arrow { color: #1747ac; text-shadow: none; }
+body:has(#contact) > #app > .site-footer.is-light {
+  background: #edf3ff;
+  color: #435778;
+}
+
+@media (max-width: 800px) {
+  #contact.contact-finale { padding-block: 108px 88px; gap: 20px; }
+  #contact h2 { font-size: clamp(2.75rem, 9vw, 4.75rem); margin-block-start: 20px; }
+  #contact .contact-card-stage { width: min(100% - 24px, 480px); margin-block-start: 40px; }
+  #contact .contact-background::before { clip-path: polygon(100% 46%, 100% 89%, 68% 100%, 0 83%, 0 69%); }
+  #contact .contact-background::after { clip-path: polygon(100% 89%, 100% 100%, 46% 100%, 55% 88%, 68% 100%); }
+}
+
+@media (max-width: 480px) {
+  #contact .contact-card { aspect-ratio: auto; min-height: 174px; gap: 24px; padding: 19px; }
+  #contact .contact-card-stage::before { aspect-ratio: auto; height: 100%; }
+  #contact .contact-card-identity { padding-inline-end: 34px; }
+  #contact .contact-card-role { margin-block-start: 6px; }
+  #contact .contact-card-arrow { width: 26px; font-size: 22px; }
+  #contact .contact-email { font-size: .875rem; }
+}
+
+@media (prefers-reduced-motion: reduce), (hover: none), (pointer: coarse) {
+  #contact .contact-card { transform: rotate(-4deg) !important; }
+}
+
+body:has(.header [data-nav="contact"][aria-current]) .scroll-guide {
+  color: #123068;
+  background: #eff4ff;
+  border-radius: 24px;
+  min-height: 70px;
+}
+
+body:has(.header [data-nav="contact"][aria-current]) .scroll-guide-track { height: 38px; }

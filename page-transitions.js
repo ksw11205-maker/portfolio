@@ -26,6 +26,8 @@
     }
     root.dataset.pageDirection=back?'back':'forward';
     if(reduced.matches||document.body?.classList.contains('motion-paused'))event.viewTransition?.skipTransition();
-    event.viewTransition?.finished.finally(()=>delete root.dataset.pageDirection);
+    const clearDirection=()=>delete root.dataset.pageDirection;
+    if(event.viewTransition)event.viewTransition.finished.then(clearDirection,clearDirection);
+    else clearDirection();
   });
 })();

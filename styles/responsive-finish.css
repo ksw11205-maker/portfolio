@@ -1,0 +1,293 @@
+/* Keep the shell navigation on one line while preserving full link targets. */
+body:not([data-project]) #app > .header {
+  max-inline-size: calc(100% - 24px);
+}
+
+@media (max-width: 900px) {
+  body:not([data-project]) #app > .header {
+    inline-size: min(100% - 24px, 372px);
+    block-size: auto;
+    min-block-size: 52px;
+    padding: 3px 7px;
+    gap: 2px;
+  }
+
+  body:not([data-project]) #app > .header .monogram {
+    inline-size: 42px;
+    min-block-size: 44px;
+    justify-content: center;
+  }
+
+  body:not([data-project]) #app > .header nav {
+    display: flex !important;
+    position: static;
+    flex: 1;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    justify-content: space-between;
+    gap: 0;
+    min-inline-size: 0;
+  }
+
+  body:not([data-project]) #app > .header nav a {
+    min-block-size: 44px;
+    padding-inline: clamp(5px, 1.75vw, 9px);
+    letter-spacing: .015em;
+    white-space: nowrap;
+  }
+
+  body:not([data-project]) #app > .header nav a[aria-current]::after { left: 50%; translate: -50% 0; }
+}
+
+body[data-case-entry] .case-shared__links {
+  grid-template-columns: minmax(max-content, 1fr) minmax(0, 2fr) minmax(max-content, 1fr);
+}
+
+body[data-case-entry] .case-shared__title { min-inline-size: 0; }
+body[data-case-entry] .case-shared :is(.case-shared__back, .case-shared__next) { padding-inline: 3px; }
+
+@media (max-width: 767px) {
+  body[data-case-entry] .case-shared__links {
+    grid-template-columns: minmax(62px, 1fr) minmax(0, 2fr) minmax(62px, 1fr);
+  }
+
+  body[data-case-entry] .case-shared__full { display: none; }
+  body[data-case-entry] .case-shared__short { display: inline; }
+  body[data-case-entry] .case-shared__title { line-height: 1.25; }
+  body[data-case-entry] .case-overview-links a { padding-block: 8px; }
+}
+
+/* Treat full UI captures as boards, with the captions anchored to their edges. */
+body[data-case-entry] #main :is(.ivi-proposal-image, .case-page-image, .ck-owner-overview) {
+  min-inline-size: 0;
+  max-inline-size: 100%;
+}
+
+body[data-case-entry] #main .case-film {
+  background: var(--film-surface, #211b17);
+  object-fit: contain;
+}
+
+body[data-project="offer"] #main .case-film { --film-surface: #f6ddd1; }
+
+body[data-case-entry] #main .archive-hero-art .case-film {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: contain;
+}
+
+body[data-project="cafekok"] #main .archive-hero-art .case-film { --film-surface: #6b4a37; }
+
+body[data-case-entry] #main :is(.ui-film, .archive-hero-art) { min-inline-size: 0; }
+
+@media (max-width: 1023px) {
+  body[data-case-entry] #main .case-toc { display: none; }
+
+  body[data-project="ivi"] #main :is(.ivi-task-list figure, .ivi-environment) {
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
+  }
+
+  body[data-project="ivi"] #main :is(.ivi-task-list, .ivi-pair, .ivi-proposal) figcaption {
+    text-align: start !important;
+  }
+}
+
+/* Each text-led transition uses its own project's material and accent. */
+body[data-project="lg"][data-case-entry] #main #direction {
+  background: linear-gradient(105deg, #0d0b10 28%, #180f19e0 73%, #230e1bd6), url('/portfolio/assets/moods/living-room.jpg') center 61% / cover;
+}
+
+body[data-project="lg"][data-case-entry] #main #direction .direction-columns > article {
+  background: #19131b;
+  border-block-start: 1px solid #be5a7d80;
+}
+
+body[data-project="ivi"][data-case-entry] #main #goal {
+  background: linear-gradient(110deg, #101820 28%, #101b24ed 70%, #101b24bd), url('/portfolio/assets/moods/night-drive.jpg') center 58% / cover;
+}
+
+body[data-project="ivi"][data-case-entry] #main #goal .ivi-process article {
+  background: #16242b;
+  border-block-start: 1px solid #78cbda6b;
+}
+
+body[data-project="cafekok"][data-case-entry] #main #concept {
+  background: linear-gradient(145deg, #fdf6ed 46%, #f2ddc8 100%);
+}
+
+body[data-project="cafekok"][data-case-entry] #main #concept .ck-rule-columns {
+  border-block: 1px solid #9d6d4f4a;
+  background: #fff8efb0;
+}
+
+body[data-project="offer"][data-case-entry] #main #direction {
+  background: linear-gradient(146deg, #fff 52%, #fff0e9 100%);
+}
+
+body[data-project="offer"][data-case-entry] #main #direction .of-goals {
+  background: none;
+}
+
+body[data-project="offer"][data-case-entry] #main #direction .of-goals > div {
+  border-block-start: 1px solid #fb714c;
+  background: #fffaf7;
+}
+
+@media (max-width: 767px) {
+  body[data-project="lg"][data-case-entry] #main #direction {
+    background-image: linear-gradient(140deg, #0d0b10 35%, #261422);
+  }
+
+  body[data-project="ivi"][data-case-entry] #main #goal {
+    background-image: linear-gradient(140deg, #101820 35%, #132b36);
+  }
+}
+
+/* Keep the entire TV and IVI artwork in view on portrait tablets. */
+@media (min-width: 601px) and (max-width: 1023px) {
+  body:is([data-project="ivi"], [data-project="lg"])[data-case-entry] #main > .project-cover {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: auto;
+    min-height: 0;
+  }
+
+  body:is([data-project="ivi"], [data-project="lg"])[data-case-entry] #main > .project-cover::after {
+    display: none;
+  }
+
+  body[data-case-entry] #main .project-cover :is(.ivi-cover-intro, .project-cover__intro) {
+    order: 0;
+    width: 100%;
+    min-height: 0;
+    height: auto;
+    margin: 0;
+    padding: 30px clamp(24px, 4vw, 40px) 26px;
+    gap: 22px;
+  }
+
+  body[data-project="lg"] #main .project-cover__intro { background: #160f19; }
+  body[data-project="ivi"] #main .ivi-cover-intro { background: #14252e; }
+
+  body[data-case-entry] #main .project-cover :is(.ivi-cover-intro dl, .cover-details) {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
+    width: min(100%, 595px);
+    gap: 14px 24px;
+  }
+
+  body[data-case-entry] #main .project-cover :is(.ivi-cover-art, .project-cover__art) {
+    order: 1;
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1920 / 1081;
+    mask-image: none;
+  }
+
+  body[data-case-entry] #main .project-cover :is(.ivi-cover-art, .project-cover__art) img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  body[data-case-entry] #main .project-cover .case-cover-cue {
+    order: 2;
+    position: relative;
+    inset: auto;
+    align-self: center;
+    margin-block: 12px;
+    transform: none;
+  }
+}
+
+/* Normal-flow project cards size to the artwork, including touch and reduced motion. */
+body:not([data-project]) #work:not(.is-pinned) .project-visual {
+  display: block;
+  position: relative;
+  height: auto !important;
+  min-height: 0 !important;
+  aspect-ratio: auto !important;
+}
+
+body:not([data-project]) #work:not(.is-pinned) .project-visual > .mockup-preview {
+  position: static !important;
+  display: block !important;
+  width: 100%;
+  height: auto !important;
+  padding: 0 !important;
+  aspect-ratio: auto;
+}
+
+body:not([data-project]) #work:not(.is-pinned) .project-visual > .mockup-preview > img {
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+}
+
+/* Shared reading column for the table of contents, chapters and final card. */
+body[data-case-entry][data-project] #main {
+  --case-reading-rail: 0px;
+}
+
+body[data-case-entry][data-project] #main > :is(.unified-chapter, .case-overview-bar, .ck-story, .case-next) {
+  inline-size: min(calc(100% - var(--case-reading-rail)), var(--master-width));
+  max-inline-size: var(--master-width);
+  margin-inline: max(var(--case-reading-rail), calc((100% - var(--master-width) + var(--case-reading-rail)) / 2)) auto;
+}
+
+body[data-case-entry][data-project] #main > :is(.unified-chapter, .case-overview-bar, .case-next),
+body[data-case-entry][data-project] #main .ck-story > .ck-section {
+  padding-inline: var(--master-gutter);
+}
+
+@media (min-width: 1100px) {
+  body[data-case-entry][data-project] #main { --case-reading-rail: 200px; }
+}
+
+body[data-case-entry][data-project] #main .ck-story { --ck-gutter: var(--master-gutter); }
+
+body[data-project="offer"][data-case-entry] #main #web-ui > .ui-film {
+  width: 100%;
+  margin-inline: 0;
+}
+
+/* Chapter changes use spacing and background instead of paired rules. */
+body[data-case-entry][data-project] #main > :is(.unified-chapter, .case-overview-bar),
+body[data-case-entry][data-project] #main .ck-story > .ck-section,
+body[data-case-entry][data-project] #main .of-feature,
+body[data-case-entry][data-project] #main :is(.ivi-block + .ivi-block, .ivi-subsection, .ivi-assessment, .ivi-results-strip figure),
+body.lg-final-spec[data-case-entry][data-unified-case] #main :is(.legacy-research, .core-workflow, .tool-heading, .inventory-section .factor-inventory + .inventory-title) {
+  border-block: 0;
+}
+
+body[data-project="ivi"] #main :is(.ivi-block + .ivi-block, .ivi-subsection, .ivi-assessment) {
+  padding-block-start: 0;
+}
+
+body.lg-final-spec[data-case-entry][data-unified-case] #main :is(.legacy-research, .core-workflow, .tool-heading, .inventory-section .factor-inventory + .inventory-title) {
+  padding-block-start: 0;
+}
+
+body[data-project="cafekok"][data-case-entry] #main #concept .ck-rule-columns,
+body[data-project="cafekok"][data-case-entry] #main .ck-story .ck-notes,
+body[data-project="cafekok"][data-case-entry] #main .ck-story :is(.ck-insight, .ck-stats > figure + figure),
+body[data-project="offer"][data-case-entry] #main :is(.case-page-notes li, .of-background-question) {
+  border-block: 0;
+}
+
+body[data-project="cafekok"][data-case-entry] #main .ck-stats > figure + figure {
+  border-inline-start: 0;
+}
+
+body[data-project="offer"][data-case-entry] #main .case-page-explore {
+  --page-field: linear-gradient(170deg, #fafaf7 0 42%, #eeeee8);
+}

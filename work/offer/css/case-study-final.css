@@ -209,24 +209,6 @@ body[data-project="offer"][data-case-entry] #main .of-editorial .of-label {
   padding: clamp(.8rem, 2vw, 1.5rem);
 }
 .of-calendar-feature .of-caption-wide { margin-block: clamp(1rem, 2.5vw, 1.7rem) 0; }
-.of-refinement {
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-  gap: var(--of-gap);
-  margin-block-start: var(--of-scene-gap);
-  padding-block-start: var(--of-gap);
-  border-block-start: 1px solid var(--of-rule);
-}
-.of-refinement dl { display: grid; margin: 0; }
-.of-refinement dl > div {
-  display: grid;
-  grid-template-columns: minmax(6rem,max-content) minmax(0,1fr);
-  gap: .5rem;
-  padding-block: .75rem;
-  border-block-end: 1px solid var(--of-rule);
-}
-.of-refinement dt { font-size: .8rem; font-weight: 750; color: var(--of-text-accent); }
-.of-refinement dd { margin: 0; font-size: .96rem; color: var(--of-muted); word-break: keep-all; }
 @media (min-width: 1100px) {
   body[data-project="offer"][data-case-entry] #main > .case-next {
     inline-size: calc(100% - 200px);
@@ -239,7 +221,7 @@ body[data-project="offer"][data-case-entry] #main .of-editorial .of-label {
   .of-concepts { gap: .75rem; }
 }
 @media (max-width: 700px) {
-  .of-background, .of-split, .of-component-study, .of-component-row, .of-refinement { grid-template-columns: minmax(0,1fr); }
+  .of-background, .of-split, .of-component-study, .of-component-row { grid-template-columns: minmax(0,1fr); }
   .of-split-wide > .of-note, #web-follow .of-split-wide > .of-stack { order: -1; }
   .of-split, .of-component-row { gap: 1.25rem; }
   .of-concepts { grid-template-columns: minmax(0,1fr); }
@@ -250,7 +232,6 @@ body[data-project="offer"][data-case-entry] #main .of-editorial .of-label {
   .of-web-links { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); }
 }
 @media (max-width: 390px) {
-  .of-refinement dl > div { grid-template-columns: minmax(0,1fr); }
 }
 .of-inline-link {
   display: inline-block;
@@ -401,11 +382,10 @@ body[data-project="offer"] #main .case-page-summary { font-size: clamp(1.05rem,1
 .case-page-notes strong { display: block; font-size: .75rem; letter-spacing:.035em; line-height:1.2; font-weight: 780; }
 body[data-project="offer"] #main .case-page-notes p { font-size: clamp(.72rem,.9vw,.9rem); line-height: 1.5; color: inherit; margin: .45rem 0 0; word-break: keep-all; overflow-wrap:anywhere; }
 .case-view-name { margin: 2rem 0 1rem; font-size: clamp(1.1rem,2.9vw,2rem); letter-spacing: -.04em; }
-.case-calendar-linkage { margin-top: 1.5rem; }
 body[data-project="offer"] #main #direction .offer-principles { background:linear-gradient(157deg, transparent 75%,#ff4d221c 75%); }
 body[data-project="offer"] #main #design-system .type-spec h3 { font-size:clamp(2rem,5vw,4.8rem); letter-spacing:-.075em; line-height:1; }
 body[data-project="offer"] #main #concept .of-concept:nth-child(2) img { object-position: 55% center; }
-@media (max-width: 1099px) {
+@media (max-width: 1199px) {
   .case-page-board { display: block; }
   .case-page-arrows { display: none; }
   .case-page-notes { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .8rem 1rem; margin-top: 1rem; }
@@ -473,6 +453,7 @@ body[data-project="offer"] #main :is(#web-ui,.case-page):focus-visible { outline
 
 .of-responsive-stage {
   position: relative;
+  container-type: inline-size;
   background: #efebe8;
 }
 
@@ -515,46 +496,36 @@ body[data-project="offer"] #main .of-responsive-heading p:first-child {
 }
 
 .of-responsive-breakpoints {
+  position: absolute;
+  inset: auto 3% 2.7%;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  margin: clamp(1rem, 3vw, 2rem) 0 0;
-  text-align: center;
+  align-items: end;
+  margin: 0;
 }
 
 .of-responsive-breakpoints > div {
   display: grid;
-  grid-template: auto 1rem auto / minmax(0, 1fr);
-  align-items: center;
-  gap: .4rem;
+  gap: clamp(1px, .35cqw, 4px);
 }
 
-.of-responsive-breakpoints > div::before {
-  content: "";
-  grid-row: 2;
-  align-self: center;
-  block-size: 1rem;
-  background:
-    radial-gradient(circle, #ff4d22 0 3px, transparent 3.5px) center / 100% 100% no-repeat,
-    linear-gradient(#171717, #171717) center / 100% 1px no-repeat;
+body[data-project="offer"] #main #responsive .of-responsive-breakpoints :is(dt, dd) {
+  text-align: center;
+  margin: 0;
+  color: #25211f;
+  line-height: 1.2;
+  white-space: nowrap;
 }
 
 body[data-project="offer"] #main #responsive .of-responsive-breakpoints dt {
-  grid-row: 3;
-  text-align: center;
-  color: #514944;
-  font-size: .72rem;
-  font-weight: 750;
-  letter-spacing: .06em;
+  font-size: clamp(.5rem, 1.15cqw, .85rem) !important;
+  font-weight: 700;
+  letter-spacing: .04em;
 }
 
 body[data-project="offer"] #main #responsive .of-responsive-breakpoints dd {
-  grid-row: 1;
-  text-align: center;
-  margin: 0;
-  color: #171717;
-  font-size: clamp(.625rem, 1.5vw, 1.1rem);
+  font-size: clamp(.5625rem, 1.45cqw, 1.125rem) !important;
   font-weight: 800;
-  white-space: nowrap;
   font-variant-numeric: tabular-nums;
 }
 
@@ -566,10 +537,18 @@ body[data-project="offer"] #main #responsive .of-responsive-breakpoints dd {
   }
 }
 
-body[data-project="offer"][data-case-entry] #main .of-outro {
+body[data-project="offer"][data-case-entry] #main #web-ui {
+  padding-block-end: 0 !important;
+}
+
+body[data-project="offer"] #main :is(#responsive, #outro) {
+  border: 0;
+  padding-block-end: 0;
+}
+
+body[data-project="offer"] #main #outro {
   margin-block-start: 0;
-  padding-block: clamp(1rem, 2.5vw, 2.25rem);
-  border-block-end: 0;
+  padding-block-start: 0;
 }
 
 .of-outro-image {

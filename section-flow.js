@@ -245,6 +245,7 @@ export function initSectionFlow({reduced,scrollMotion}){
       const progress=clamp((y-qaEntry.start-qaEntry.intro)/qaEntry.run),shift=progress*qaEntry.travel;
       if(progress!==qaEntry.qaProgress){
         qaEntry.qaProgress=progress;
+        qa.toggleAttribute('data-at-reading-end', progress >= .999);
         property(qa,'--qa-x',-shift+'px');
         cards.forEach((card,index)=>{
           const center=qaGeometry[index].center-shift;
@@ -253,6 +254,7 @@ export function initSectionFlow({reduced,scrollMotion}){
         });
       }
     }else{
+      qa.removeAttribute('data-at-reading-end');
       qa.style.removeProperty('--qa-x');
       cards.forEach(card=>{card.style.removeProperty('--qa-angle');card.style.removeProperty('--qa-lift');});
     }

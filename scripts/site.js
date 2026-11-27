@@ -77,27 +77,43 @@ const coverCTA = document.querySelector('[data-prototype-cover]');
 const floatingCTA = document.querySelector('[data-prototype-float]');
 if (coverCTA && floatingCTA && 'IntersectionObserver' in window) {
   const hero = coverCTA.closest('.case-hero, .project-cover');
-  const end = floatingCTA.hasAttribute('data-prototype-persistent')
+  const dock = document.querySelector('body[data-case-entry] #main .case-next-card');
+  const header = document.querySelector('.case-shared');
+  const end = dock || floatingCTA.hasAttribute('data-prototype-persistent')
     ? null
     : document.querySelector('.next-projects');
-  let heroVisible = true, endVisible = false;
+  let heroVisible = true, endVisible = false, frame = 0;
   const syncCTA = () => {
-    const hide = heroVisible || endVisible;
+    frame = 0;
+    const dockBottom = dock?.getBoundingClientRect().bottom;
+    const aboveHeader = dockBottom !== undefined && dockBottom <= (header?.getBoundingClientRect().bottom || 0) + 48;
+    if (dockBottom !== undefined) {
+      floatingCTA.style.setProperty('--prototype-dock-inset', (innerHeight - dockBottom) + 'px');
+    }
+    const hide = heroVisible || endVisible || aboveHeader;
     if (hide && document.activeElement === floatingCTA) {
       if (heroVisible) coverCTA.focus({ preventScroll: true });
+      else if (aboveHeader) document.querySelector('.case-footer a')?.focus({ preventScroll: true });
       else end?.querySelector('a')?.focus({ preventScroll: true });
     }
     floatingCTA.hidden = hide;
   };
+  const requestCTA = () => { if (!frame) frame = requestAnimationFrame(syncCTA); };
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.target === hero) heroVisible = entry.isIntersecting;
       if (entry.target === end) endVisible = entry.isIntersecting;
     });
-    syncCTA();
+    requestCTA();
   }, { threshold: 0, rootMargin: '0px 0px -15px 0px' });
   if (hero) observer.observe(hero);
   if (end) observer.observe(end);
+  if (dock) {
+    addEventListener('scroll', requestCTA, { passive: true });
+    addEventListener('resize', requestCTA);
+    addEventListener('pageshow', requestCTA);
+    if ('ResizeObserver' in window) new ResizeObserver(requestCTA).observe(dock.closest('main'));
+  }
 }
 
 const track = document.querySelector('[data-qa-track]');

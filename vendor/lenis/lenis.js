@@ -563,14 +563,14 @@ var Lenis = class {
   onClick = (event) => {
     const path = event.composedPath();
     const anchor = path.find(
-      (node) => node instanceof HTMLAnchorElement && (node.getAttribute("href")?.startsWith("#") || node.getAttribute("href")?.startsWith("/#") || node.getAttribute("href")?.startsWith("./#"))
+      (node) => node instanceof HTMLAnchorElement && (node.getAttribute("href")?.startsWith("#") || node.getAttribute("href")?.startsWith("/portfolio/#") || node.getAttribute("href")?.startsWith("./#"))
     );
     if (anchor) {
       const id = anchor.getAttribute("href");
       if (id) {
         const options = typeof this.options.anchors === "object" && this.options.anchors ? this.options.anchors : void 0;
         let target = `#${id.split("#")[1]}`;
-        if (["#", "/#", "./#", "#top", "/#top", "./#top"].includes(id)) {
+        if (["#", "/portfolio/#", "./#", "#top", "/portfolio/#top", "./#top"].includes(id)) {
           target = 0;
         }
         this.scrollTo(target, options);

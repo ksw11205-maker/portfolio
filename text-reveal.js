@@ -65,7 +65,7 @@ export function createTextReveal(entries,{requestUpdate=()=>{}}={}){
       if(p===1)state.finished=true;
       // Once reading starts, neither the body nor its settled title rewind.
       // The original entrance still plays on the first visit.
-      if(state.contentStart===null&&(progress<.86||p<.9)){
+      if(state.contentStart===null&&(progress<.86||(entry.id!=='contact'&&p<.9))){
         entry.section.dataset.revealState='title';
         if(p<1)requestUpdate();
         return {title:p,content:0,settled:false};

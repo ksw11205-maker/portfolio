@@ -427,14 +427,14 @@ body[data-project="cafekok"] #main :is(.case-overview-links a, .case-nav a, .ck-
   .ck-phone-pair { --pair-gap: clamp(18px, 3.5vw, 47px); gap: var(--pair-gap); padding-inline-end: clamp(115px, 11vw, 150px); }
   .ck-phone-pair > div { position: relative; container-type: inline-size; }
   .ck-phone-pair > div:nth-child(2) { margin-block-start: 46px; padding-block-start: 0; }
-  .ck-phone-pair .ck-caption { position: absolute; inline-size: min(145px, 11vw); margin: 0; transform: translateY(-.55rem); }
+  .ck-phone-pair .ck-caption { position: absolute; inline-size: min(145px, 11vw); margin: 0; transform: translateY(-.65rem); }
   .ck-caption--lead { right: calc(100% + 22px); }
   .ck-caption--trail { left: calc(100% + 22px); }
   .ck-phone-pair .ck-caption::before, .ck-phone-pair .ck-caption::after { content: ""; position: absolute; z-index: 2; background: var(--ck-wire); }
   .ck-phone-pair .ck-caption::before { top: .52rem; inline-size: 5px; block-size: 5px; border-radius: 50%; }
-  .ck-phone-pair .ck-caption::after { top: .65rem; inline-size: calc(27px + var(--caption-reach)); block-size: 2px; }
-  .ck-caption--lead::before { left: calc(100% + 30px + var(--caption-reach)); }
-  .ck-caption--trail::before { right: calc(100% + 30px + var(--caption-reach)); }
+  .ck-phone-pair .ck-caption::after { top: .65rem; inline-size: calc(18px + var(--caption-reach)); block-size: 2px; }
+  .ck-caption--lead::before { left: calc(100% + 17.5px + var(--caption-reach)); }
+  .ck-caption--trail::before { right: calc(100% + 17.5px + var(--caption-reach)); }
   .ck-caption--lead::after { left: calc(100% + 4px); }
   .ck-caption--trail::after { right: calc(100% + 4px); }
   .ck-explore { max-inline-size: 1015px; }
@@ -445,28 +445,28 @@ body[data-project="cafekok"] #main :is(.case-overview-links a, .case-nav a, .ck-
   .ck-explore-notes > div:nth-child(2) { top: calc(430 / 390 * 100cqw); }
   .ck-explore-notes h3 { font-size: 1rem; }
   .ck-explore-notes p { font-size: .84rem; }
-  .ck-explore-notes > div::after { content: ""; position: absolute; top: 9px; left: calc(100% + 6px); width: calc(27px + 5cqw); height: 2px; background: var(--ck-wire); }
-  .ck-explore-notes > div::before { content: ""; position: absolute; top: 7px; left: calc(100% + 32px + 5cqw); width: 5px; height: 5px; border-radius: 50%; background: var(--ck-wire); z-index: 2; }
+  .ck-explore-notes > div::after { content: ""; position: absolute; top: 9px; left: calc(100% + 6px); width: calc(14px + 5cqw); height: 2px; background: var(--ck-wire); }
+  .ck-explore-notes > div::before { content: ""; position: absolute; top: 7px; left: calc(100% + 15.5px + 5cqw); width: 5px; height: 5px; border-radius: 50%; background: var(--ck-wire); z-index: 2; }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .ck-story .ck-notes { position: absolute; inset: 0; pointer-events: none; }
-  .ck-note { position: absolute; inline-size: min(207px, calc((100% - var(--phone)) / 2 - var(--annotation-gap) - 5px)); transform: translateY(-.55rem); }
+  .ck-note { position: absolute; inline-size: min(207px, calc((100% - var(--phone)) / 2 - var(--annotation-gap) - 5px)); transform: translateY(-.65rem); }
   .ck-note--left { right: calc(50% + var(--phone) / 2 + var(--annotation-gap)); }
   .ck-note--right { left: calc(50% + var(--phone) / 2 + var(--annotation-gap)); }
   .ck-note::after, .ck-note::before { content: ""; position: absolute; z-index: 1; background: var(--ck-wire); }
-  .ck-note::after { top: .63rem; height: 2px; width: calc(var(--annotation-gap) + var(--phone) * var(--reach) / 100); }
+  .ck-note::after { top: .63rem; height: 2px; width: calc(var(--annotation-gap) + var(--phone) * var(--reach) / 100 - 8px); }
   .ck-note::before { top: calc(.63rem - 2px); width: 5px; height: 5px; border-radius: 50%; }
   .ck-note--left::after { left: calc(100% + 8px); }
   .ck-note--right::after { right: calc(100% + 8px); }
-  .ck-note--left::before { left: calc(100% + var(--annotation-gap) + var(--phone) * var(--reach) / 100 + 7px); }
-  .ck-note--right::before { right: calc(100% + var(--annotation-gap) + var(--phone) * var(--reach) / 100 + 7px); }
+  .ck-note--left::before { left: calc(100% + var(--annotation-gap) + var(--phone) * var(--reach) / 100 - 4.5px); }
+  .ck-note--right::before { right: calc(100% + var(--annotation-gap) + var(--phone) * var(--reach) / 100 - 4.5px); }
 }
 @media (min-width: 1440px) {
   .ck-saved-ready { position: relative; container-type: inline-size; inline-size: min(100%, 355px); }
-  .ck-saved-bookmark { position: absolute; inset: calc(301 / 390 * 100cqw - .56rem) auto auto calc(100% + 21px); width: 112px; margin: 0; }
+  .ck-saved-bookmark { position: absolute; inset: calc(301 / 390 * 100cqw - .65rem) auto auto calc(100% + 21px); width: 112px; margin: 0; }
   .ck-saved-bookmark::before, .ck-saved-bookmark::after { content: ""; position: absolute; z-index: 2; background: var(--ck-wire); }
-  .ck-saved-bookmark::before { inset: .48rem calc(100% + 28px + 6.67cqw) auto auto; width: 5px; height: 5px; border-radius: 50%; }
-  .ck-saved-bookmark::after { inset: .62rem calc(100% + 5px) auto auto; width: calc(24px + 6.67cqw); height: 2px; }
+  .ck-saved-bookmark::before { inset: .48rem calc(100% + 16.5px + 6.67cqw) auto auto; width: 5px; height: 5px; border-radius: 50%; }
+  .ck-saved-bookmark::after { inset: .62rem calc(100% + 5px) auto auto; width: calc(16px + 6.67cqw); height: 2px; }
 }
 @media (max-width: 1023px) {
   .ck-annotated { --phone: min(100%, 390px); }
@@ -664,10 +664,9 @@ body[data-project="cafekok"] #main .archive-hero-intro {
   mask-composite: intersect;
 }
 .ck-story .ck-venn img {
-  position: absolute;
-  inset: -8.9% auto auto -52.68%;
-  inline-size: 159.96%;
-  max-inline-size: none;
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
 }
 #concept .ck-rule-columns {
   padding: clamp(16px, 2.6vw, 34px);
@@ -791,4 +790,12 @@ body[data-project="cafekok"] #main .ck-app-intro-copy p {
   aspect-ratio: 440 / 953;
   object-fit: cover;
   object-position: center;
+}
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .ck-story .ck-notes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-block-start: 22px;
+    padding-block-start: 16px;
+    border-block-start: 1px solid var(--ck-line);
+  }
 }

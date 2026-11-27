@@ -1,13 +1,59 @@
-// Highlight the question most visible in the viewport without controlling scroll.
-(()=>{
- const deck=document.querySelector('#qa .qa-deck'),viewport=document.querySelector('#qa .qa-viewport');
- const cards=[...document.querySelectorAll('#qa .qa-card')];if(!deck||!viewport||!cards.length)return;
- let current=null,frame=0;
- function update(){frame=0;const v=viewport.getBoundingClientRect();const left=Math.max(0,v.left),right=Math.min(innerWidth,v.right),top=Math.max(0,v.top),bottom=Math.min(innerHeight,v.bottom);let best=null,bestScore=0;
-  for(const card of cards){const r=card.getBoundingClientRect();const w=Math.max(0,Math.min(right,r.right)-Math.max(left,r.left)),h=Math.max(0,Math.min(bottom,r.bottom)-Math.max(top,r.top));const score=w*h/Math.max(1,r.width*r.height);if(score>bestScore){bestScore=score;best=card}}
-  if(best===current)return;current?.classList.remove('shell-qa-current');current=best;current?.classList.add('shell-qa-current');
- }
- const schedule=()=>{if(!frame)frame=requestAnimationFrame(update)};
- addEventListener('scroll',schedule,{passive:true});addEventListener('resize',schedule);deck.addEventListener('scroll',schedule,{passive:true});addEventListener('pageshow',schedule);
- addEventListener('pagehide',event=>{if(event.persisted)return;cancelAnimationFrame(frame);removeEventListener('scroll',schedule);removeEventListener('resize',schedule);deck.removeEventListener('scroll',schedule)},{once:true});schedule();
-})();
+// The blue rule follows the reading position and remains on the end card.
+document.addEventListener('DOMContentLoaded', () => {
+  const deck = document.querySelector('#qa .qa-deck');
+  const viewport = document.querySelector('#qa .qa-viewport');
+  if (!deck || !viewport) return;
+  const qa = deck.closest('#qa');
+  const cards = [...deck.querySelectorAll('.qa-card')];
+  if (!cards.length) return;
+  let current;
+  let frame = 0;
+
+  function update() {
+    frame = 0;
+    const pinned = qa.classList.contains('is-scroll-driven');
+    const nativeRange = deck.scrollWidth - deck.clientWidth;
+    const horizontal = pinned || nativeRange > 2;
+    const clip = (pinned ? viewport : deck).getBoundingClientRect();
+    const top = Math.max(0, clip.top);
+    const bottom = Math.min(innerHeight, clip.bottom);
+    const left = Math.max(0, clip.left);
+    const right = Math.min(document.documentElement.clientWidth, clip.right);
+    if (bottom <= top || right <= left) return;
+
+    let next;
+    if (pinned && (qa.hasAttribute('data-at-reading-end') || deck.getBoundingClientRect().right <= right + 2)) {
+      next = cards.at(-1);
+    } else if (!pinned && horizontal && deck.scrollLeft >= nativeRange - 2) {
+      next = cards.at(-1);
+    } else if (!pinned && horizontal && deck.scrollLeft <= 2) {
+      next = cards[0];
+    } else {
+      let closest = Infinity;
+      for (const card of cards) {
+        const rect = card.getBoundingClientRect();
+        if (rect.right <= left || rect.left >= right || rect.bottom <= top || rect.top >= bottom) continue;
+        const distance = horizontal
+          ? Math.abs((rect.left + rect.right - left - right) / 2)
+          : Math.abs((rect.top + rect.bottom - top - bottom) / 2);
+        if (distance <= closest) {
+          next = card;
+          closest = distance;
+        }
+      }
+    }
+
+    if (!next || next === current) return;
+    current?.classList.remove('shell-qa-current');
+    current = next;
+    current.classList.add('shell-qa-current');
+  }
+
+  const schedule = () => { if (!frame) frame = requestAnimationFrame(update); };
+  addEventListener('scroll', schedule, { passive: true });
+  addEventListener('resize', schedule);
+  addEventListener('pageshow', schedule);
+  deck.addEventListener('scroll', schedule, { passive: true });
+  if ('ResizeObserver' in window) new ResizeObserver(schedule).observe(deck);
+  schedule();
+}, { once: true });

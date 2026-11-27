@@ -44,9 +44,15 @@ function connectScreens(layout, connections) {
   });
 
   overlay.append(...links.map(({ dot }) => dot));
+  const desktop = matchMedia('(min-width: 1200px)');
+  let frame = 0;
 
   const align = () => {
+    frame = 0;
+    if (!desktop.matches) return;
     const bounds = layout.getBoundingClientRect();
+    if (!bounds.width || !bounds.height) return;
+    overlay.setAttribute('viewBox', `0 0 ${bounds.width} ${bounds.height}`);
     for (const { source, target, line, dot, targetHeight } of links) {
       const start = source.getBoundingClientRect();
       const end = target.getBoundingClientRect();
@@ -62,10 +68,14 @@ function connectScreens(layout, connections) {
     }
   };
 
-  const observer = new ResizeObserver(align);
+  const request = () => { if (!frame) frame = requestAnimationFrame(align); };
+  const observer = new ResizeObserver(request);
   observer.observe(layout);
   for (const { target } of links) observer.observe(target);
-  document.fonts.ready.then(align);
+  for (const image of layout.querySelectorAll('img')) observer.observe(image);
+  desktop.addEventListener('change', request);
+  document.fonts.ready.then(request);
+  request();
 }
 
 const explore = story?.querySelector('.ck-explore');

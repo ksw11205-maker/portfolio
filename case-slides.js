@@ -1,6 +1,6 @@
 /* Adapted from GSAP's Slides Pinning – Overscroll Solution (MIT).
  * https://codepen.io/GreenSock/pen/bGRdvMy
- * License: /vendor/slides-pinning/LICENSE.txt
+ * License: /portfolio/vendor/slides-pinning/LICENSE.txt
  * Keep tall chapters in native document flow; only pin their exit transition.
  */
 import { initReadingSnap } from '/portfolio/reading-snap.js';
